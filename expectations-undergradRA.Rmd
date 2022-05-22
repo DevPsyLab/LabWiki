@@ -56,9 +56,9 @@ C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expecta
 D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
 F: <=50 attendance, or never on time, or generally failing to meet the lab expectations
 
-# Signature Page
+# Signature
 
 I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](https://devpsylab.github.io/LabWiki/manual.html#scheduling)" (including "[Scheduling Expectations](https://devpsylab.github.io/LabWiki/manual.html#schedulingExpectations)", "[Scheduling System Overview](https://devpsylab.github.io/LabWiki/manual.html#schedulingOverview)", and "[Weekend On-Call Schedule](https://devpsylab.github.io/LabWiki/manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](https://devpsylab.github.io/LabWiki/manual.html).
 I agree to meet these expectations, and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
-RA Signature _____________	RA Printed Name _____________ Date __________
+RA Signature ________________	RA Printed Name ________________ Date __________
