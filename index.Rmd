@@ -2,6 +2,11 @@
 title: "Lab Wiki for the Developmental Psychopathology Lab"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 # Lab Contacts
 
 **Principal Investigator**\
