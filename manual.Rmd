@@ -208,7 +208,7 @@ It is important to do this to make sure you have the latest version locally befo
 1. Edit the relevant `.Rmd` files using `RStudio` or `Visual Studio Code`,
 1. Commit the changes.
 1. Push the changes to the `GitHub` repo.
-After pushing the changes to the `GitHub` repo, GitHub Actions will automatically re-run the code and deploy the updated website, assuming there were no errors.
+After pushing the changes to the `GitHub` repo, `GitHub Actions` will automatically re-run the code and deploy the updated website, assuming there were no errors.
 You can track the workflow for errors here: https://github.com/DevPsyLab/LabWiki/actions.
 
 For more information about the `rmarkdown` package that was used to generate the site, see the following links:
