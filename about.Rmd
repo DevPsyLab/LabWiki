@@ -2,7 +2,9 @@
 title: "About This Website"
 ---
 
-More about this website.
+# Contact
+
+If you have questions about the lab and are not sure who to contact, please contact devpsy-lab@uiowa.edu.
 
 # Session Info
 

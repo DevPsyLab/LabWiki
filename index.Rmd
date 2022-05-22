@@ -19,27 +19,19 @@ Jordan Harris, B.S.\
 Office: 109 Spence Labs (SLP)\
 Email: jordan-l-harris@uiowa.edu
 
-Alexis Hosch, B.S.
-Office: 109 Spence Labs (SLP)
+Alexis Hosch, B.S.\
+Office: 109 Spence Labs (SLP)\
 Email: alexis-hosch@uiowa.edu
 
 **Location**: Developmental Psychopathology Lab, Spence Labs 109-119\
 **Website**: [https://psychology.uiowa.edu/developmental-psychopathology-lab](https://psychology.uiowa.edu/developmental-psychopathology-lab)\
 **Social Media**:
 
-- Facebook: https://www.facebook.com/DevPsyLab/
-- Twitter: https://twitter.com/devpsylab
-- Instagram: https://instagram.com/dev_psy_lab
+    - Facebook: https://www.facebook.com/DevPsyLab
+    - Twitter: https://twitter.com/devpsylab
+    - Instagram: https://instagram.com/dev_psy_lab
 
-# Heading One
-
-## Subheading One
-
-## Subheading Two
-
-### Subsubheading One
-
-# Heading Two
+# Development Info
 
 Hello, Website!
 
