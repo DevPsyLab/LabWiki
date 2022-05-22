@@ -62,14 +62,14 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 # Grading Scale
 
 Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A-F] for their performance in the lab on the tasks assigned to them.
-(*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.
-See Section [INSERT] for a description of course options).
+(*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.)
+See the section of the Lab Manual that describes course options and how to register (click [here](https://devpsylab.github.io/LabWiki/manual.html#courseRegistration))).
 
 A: 100% attendance, consistently on time, and meeting all of the lab expectations\
 B: < 100% attendance, or inconsistently on time, or mostly meeting the lab expectations\
 C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expectations\
 D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
-F: <=50 attendance, or never on time, or generally failing to meet the lab expectations
+F: <= 50 attendance, or never on time, or generally failing to meet the lab expectations
 
 # Signature
 

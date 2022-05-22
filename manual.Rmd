@@ -34,7 +34,7 @@ Date drafted: October 2020
 
 # Confidentiality
 
-# How to Register Lab for Credit
+# How to Register Lab for Credit {#courseRegistration}
 
 ## Regular Credit
 
