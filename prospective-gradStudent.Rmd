@@ -2,6 +2,11 @@
 title: "Application Guidelines for Prospective Graduate Students"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 # What graduate training areas can I apply to in order to join the Developmental Psychopathology Lab?
 
 Prospective graduate students interested in joining the lab can apply to <ins>***any***</ins> of the [graduate training areas](https://psychology.uiowa.edu/graduate-program) of the Department:

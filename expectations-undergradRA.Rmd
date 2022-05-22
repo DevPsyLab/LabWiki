@@ -2,6 +2,11 @@
 title: "Lab Expectations for Undergraduate Research Assistants"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 # What does it mean to be an RA?
 
 The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.

@@ -2,6 +2,13 @@
 title: "About This Website"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+The lab wiki was generated with `[rmarkdown](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)`.
+
 # Contact
 
 If you have questions about the lab and are not sure who to contact, please contact devpsy-lab@uiowa.edu.

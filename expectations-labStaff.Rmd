@@ -2,6 +2,11 @@
 title: "Lab Expectations for Lab Staff"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 # Duties
 
 Duties for all lab staff include the following:

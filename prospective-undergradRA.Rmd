@@ -2,6 +2,11 @@
 title: "Application Guidelines for Prospective Undergraduate Research Assistants"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 We invite you to apply to join the Developmental Psychopathology Lab!
 
 # About Being a Research Assistant in Our Lab

@@ -2,6 +2,11 @@
 title: "Lab Expectations for Graduate Students"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 Please read the whole document of lab expectations[^1] carefully.
 If you have questions or concerns, please talk with me about them; the document, like my research style, is a work in progress.
 I hope this document conveys the care and thoughtfulness I bring to the work we do together.

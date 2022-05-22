@@ -2,6 +2,11 @@
 title: "Lab Expectations for Everyone"
 ---
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
 Everyone is expected to follow our [mission statements](https://devpsylab.github.io/LabWiki/manual.html#missionStatement), including our [internal](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-internal) and [external](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-external) mission statement, in addition to our our [diversity statement](https://devpsylab.github.io/LabWiki/manual.html#diversityStatement).
 
 # Professionalism

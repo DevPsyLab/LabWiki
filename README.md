@@ -1,6 +1,7 @@
 # Lab Wiki
 
 This is the code that creates the Wiki for the Developmental Psychopathology Lab.
+The Lab Wiki is located here: **https://devpsylab.github.io/LabWiki**
 
 # License
 
