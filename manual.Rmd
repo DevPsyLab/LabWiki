@@ -30,6 +30,8 @@ We aim to provide a welcoming and respectful environment for people of all backg
 
 Date drafted: October 2020
 
+[Note: I moved the section on Dress Code  to the `expectations-everyone.Rmd` file. We will also move the summerwear section there.]: # 
+
 # CITI Certification
 
 # Confidentiality
