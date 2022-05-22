@@ -4,12 +4,12 @@ title: "Lab Wiki for the Developmental Psychopathology Lab"
 
 # Lab Contacts
 
-**Principal Investigator**
+**Principal Investigator**\
 Dr. Isaac Petersen, Ph.D.\
 Office: 175 Psychological and Brain Sciences Building (PBSB)\
 Email: isaac-t-petersen@uiowa.edu
 
-**Lab Coordinator**
+**Lab Coordinator**\
 Ben Swanson\
 Office: 111 Spence Labs (SLP)\
 Email: devpsy-lab@uiowa.edu
@@ -27,13 +27,11 @@ Email: alexis-hosch@uiowa.edu
 **Website**: [https://psychology.uiowa.edu/developmental-psychopathology-lab](https://psychology.uiowa.edu/developmental-psychopathology-lab)\
 **Social Media**:
 
-    - Facebook: https://www.facebook.com/DevPsyLab
-    - Twitter: https://twitter.com/devpsylab
-    - Instagram: https://instagram.com/dev_psy_lab
+- Facebook: https://www.facebook.com/DevPsyLab
+- Twitter: https://twitter.com/devpsylab
+- Instagram: https://instagram.com/dev_psy_lab
 
 # Development Info
-
-Hello, Website!
 
 For more information about simple R Markdown websites, please read the documentation at https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html.
 
