@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-The lab wiki was generated with `[rmarkdown](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html)`.
+The lab wiki was generated with [`rmarkdown`](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
 
 # Contact
 
