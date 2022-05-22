@@ -10,23 +10,20 @@ knitr::opts_chunk$set(echo = TRUE,
 # Lab Contacts
 
 **Principal Investigator**\
-Dr. Isaac Petersen, Ph.D.\
-Office: 175 Psychological and Brain Sciences Building (PBSB)\
-Email: isaac-t-petersen@uiowa.edu
+[Dr. Isaac Petersen, Ph.D.](https://psychology.uiowa.edu/people/isaac-petersen)\
+Office: 175 Psychological and Brain Sciences Building (PBSB)
 
 **Lab Coordinator**\
-Ben Swanson\
+[Benjamin Swanson, B.A.](https://developmental-psychopathology.lab.uiowa.edu/people/benjamin-swanson)\
 Office: 111 Spence Labs (SLP)\
-Email: devpsy-lab@uiowa.edu
+Lab Email: devpsy-lab@uiowa.edu
 
 **Graduate Students**\
-Jordan Harris, B.S.\
+[Jordan Harris, B.S.](https://developmental-psychopathology.lab.uiowa.edu/people/jordan-harris)\
 Office: 109 Spence Labs (SLP)\
-Email: jordan-l-harris@uiowa.edu
 
-Alexis Hosch, B.S.\
+[Alexis Hosch, B.S.](https://developmental-psychopathology.lab.uiowa.edu/people/alexis-hosch)\
 Office: 109 Spence Labs (SLP)\
-Email: alexis-hosch@uiowa.edu
 
 **Location**: Developmental Psychopathology Lab, Spence Labs 109–119\
 **Website**: [https://psychology.uiowa.edu/developmental-psychopathology-lab](https://psychology.uiowa.edu/developmental-psychopathology-lab)\
