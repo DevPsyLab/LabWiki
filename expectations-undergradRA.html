@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Lab Expectations for Undergraduate Research Assistants</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-postdoc.html">Postdoctoral Scholars</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+<li>
+  <a href="https://github.com/DevPsyLab">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/devpsylab">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.facebook.com/DevPsyLab">
+    <span class="fa fa-facebook"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.instagram.com/dev_psy_lab">
+    <span class="fa fa-instagram"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Lab Expectations for Undergraduate Research Assistants</h1>
+
+</div>
+
+
+<div id="what-does-it-mean-to-be-an-ra" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> What does it mean to be an RA?</h1>
+<p>The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab. The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting). Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices. Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments. Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have. Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible. The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.</p>
+</div>
+<div id="lab-expectations" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Lab Expectations</h1>
+<p>We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits. Any changes to an RA’s weekly lab schedule need to be arranged with the Lab Coordinator in advance. We expect RAs to let us know, in advance, if they need to reschedule lab hours, and to let us know, as soon as possible, if they will be late to a scheduled shift or visit. If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours. If the RA works more than their scheduled hours in a given week, they may cut down their hours in later weeks. We expect the RA to have flexibility to accommodate participants’ schedules for lab visits. For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on Scheduling Expectations below). We will do our best to fairly distribute the evening and weekend hours across the team.</p>
+<p>We expect RAs to regularly communicate with the team, using the appropriate methods of communication (outlined in the Lab Communication checklist). Methods for resolving conflicts and personnel issues are described in the Lab Communication checklist. We expect the RA to take personal responsibility for the work they are assigned. Assigned work will always coincide with the 10 hours the RA is already scheduled for. With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours. We expect the RA to ask the PI or Lab Coordinator if they have questions about their assigned work or expectations. Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.</p>
+<p>We expect the RA to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research. After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr. Petersen to discuss the possibility of doing an honor’s thesis in conjunction with lab participation.</p>
+<p>We expect RAs to contribute to each weekly lab meeting discussion. We expect RAs to submit their lab report by the deadline and in the correct location.</p>
+<p>We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.</p>
+</div>
+<div id="grading-scale" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Grading Scale</h1>
+<p>Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A-F] for their performance in the lab on the tasks assigned to them. (*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade. See Section [INSERT] for a description of course options).</p>
+<p>A: 100% attendance, consistently on time, and meeting all of the lab expectations<br />
+B: &lt; 100% attendance, or inconsistently on time, or mostly meeting the lab expectations<br />
+C: &lt; 80% attendance, or mostly not on time, or sometimes meeting the lab expectations<br />
+D: &lt; 70% attendance, or rarely on time, or only occasionally meeting the lab expectations<br />
+F: &lt;=50 attendance, or never on time, or generally failing to meet the lab expectations</p>
+</div>
+<div id="signature-page" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Signature Page</h1>
+<p>I have read and understand the above expectations, in addition to the section on <a href="https://devpsylab.github.io/LabWiki/expectations-everyone.html">expectations for everyone in the lab</a> and the expectations and systems outlined in the “<a href="https://devpsylab.github.io/LabWiki/manual.html#scheduling">Scheduling</a>” (including “<a href="https://devpsylab.github.io/LabWiki/manual.html#schedulingExpectations">Scheduling Expectations</a>”, “<a href="https://devpsylab.github.io/LabWiki/manual.html#schedulingOverview">Scheduling System Overview</a>”, and “<a href="https://devpsylab.github.io/LabWiki/manual.html#schedulingWeekend">Weekend On-Call Schedule</a>”) sections of the <a href="https://devpsylab.github.io/LabWiki/manual.html">Developmental Psychopathology Lab Manual</a>. I agree to meet these expectations, and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.</p>
+<p>RA Signature _____________ RA Printed Name _____________ Date __________</p>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIEV4cGVjdGF0aW9ucyBmb3IgVW5kZXJncmFkdWF0ZSBSZXNlYXJjaCBBc3Npc3RhbnRzIgotLS0KCiMgV2hhdCBkb2VzIGl0IG1lYW4gdG8gYmUgYW4gUkE/CgpUaGUgdW5kZXJncmFkdWF0ZSByZXNlYXJjaCBhc3Npc3RhbnQgKFJBKSB3aWxsIHBhcnRpY2lwYXRlIGluIG9uZ29pbmcgcmVzZWFyY2ggd2l0aGluIHRoZSBEZXZlbG9wbWVudGFsIFBzeWNob3BhdGhvbG9neSBMYWIuClRoZSBSQSB3aWxsIHdvcmsgaW4gbGFiIGZvciAxMCBob3VycyBwZXIgd2VlayBkdXJpbmcgdGhlIHNlbWVzdGVyICg5IGhvdXJzIG9mIHdvcmsgaW4gdGhlIGxhYiBwbHVzIGEgb25lLWhvdXIgd2Vla2x5IGxhYiBtZWV0aW5nKS4KV29yayBhc3NpZ25lZCBtYXkgaW5jbHVkZSAoYnV0IGlzIG5vdCBsaW1pdGVkIHRvKTogbWFraW5nIHRoZSBsYWIgc3BhY2UgY2hpbGQgYW5kIGZhbWlseSBmcmllbmRseSwgaGVscGluZyB3aXRoIHJlY3J1aXRtZW50LCBydW5uaW5nIHBhcnRpY2lwYW50cywgdmlkZW8gY29kaW5nLCBkYXRhYmFzZSBtYW5hZ2VtZW50LCBkYXRhIGVudHJ5LCBhbmQgZGV2ZWxvcGluZyBuZXcgcHJvY2VkdXJlcy9kZXZpY2VzLgpFYWNoIHdlZWssIHRoZSBSQSBpcyBleHBlY3RlZCB0byByZWFkIGNyaXRpY2FsbHkgYW4gZW1waXJpY2FsIHJlc2VhcmNoIGFydGljbGUgZm9yIGxhYiBtZWV0aW5nIGFuZCBjb21lIHByZXBhcmVkIHRvIGNvbnRyaWJ1dGUgdG8gdGhlIGRpc2N1c3Npb24gd2l0aCBxdWVzdGlvbnMgYW5kIGNvbW1lbnRzLgpFdmVyeSBvdGhlciB3ZWVrLCB0aGUgUkEgd2lsbCBzdWJtaXQgYSByZXBvcnQgb2YgdGhlaXIgcHJvZ3Jlc3MgaW4gbGFiLCB0YXNrcyB0aGV5IGZvdW5kIGludGVyZXN0aW5nLCBhbmQgYW55IHF1ZXN0aW9ucyBvciBzdWdnZXN0aW9ucyB0aGV5IGhhdmUuClRocm91Z2hvdXQgdGhlIGNvdXJzZSBvZiB0aGVpciB0aW1lIGluIGxhYiwgdGhlIFJBIHdpbGwgaGF2ZSBtZWV0aW5ncyB3aXRoIGFuZCB3b3JrIGNsb3NlbHkgd2l0aCB0aGUgUHJpbmNpcGFsIEludmVzdGlnYXRvciAoUEkpLCBMYWIgQ29vcmRpbmF0b3IsIGdyYWR1YXRlIHN0dWRlbnRzLCBhbmQvb3IgdW5kZXJncmFkdWF0ZSBzdHVkZW50cyB0byBlbnN1cmUgYXNzaWduZWQgd29yayBpcyBjb21wbGV0ZWQgYXMgcmVxdWVzdGVkIHdpdGggdGhlIGhpZ2hlc3QgcXVhbGl0eSBwZXJmb3JtYW5jZSBwb3NzaWJsZS4KVGhlIFJBIHdpbGwgYmUgZW5jb3VyYWdlZCB0byBjb250cmlidXRlIHRvIGJvdGggdGhlIGZvcm11bGF0aW9uIG9mIHJlc2VhcmNoIHF1ZXN0aW9ucyBhcyB3ZWxsIGFzIHJlc2VhcmNoIGltcGxlbWVudGF0aW9uLgoKIyBMYWIgRXhwZWN0YXRpb25zCgpXZSBleHBlY3QgdGhlIFJBIHRvIGJlIHJlbGlhYmxlIGFuZCBjb25zaXN0ZW50bHkgYXJyaXZlIG9uIHRpbWUgZm9yIHNjaGVkdWxlZCBsYWIgaG91cnMgYW5kIHZpc2l0cy4KQW55IGNoYW5nZXMgdG8gYW4gUkEncyB3ZWVrbHkgbGFiIHNjaGVkdWxlIG5lZWQgdG8gYmUgYXJyYW5nZWQgd2l0aCB0aGUgTGFiIENvb3JkaW5hdG9yIGluIGFkdmFuY2UuCldlIGV4cGVjdCBSQXMgdG8gbGV0IHVzIGtub3csIGluIGFkdmFuY2UsIGlmIHRoZXkgbmVlZCB0byByZXNjaGVkdWxlIGxhYiBob3VycywgYW5kIHRvIGxldCB1cyBrbm93LCBhcyBzb29uIGFzIHBvc3NpYmxlLCBpZiB0aGV5IHdpbGwgYmUgbGF0ZSB0byBhIHNjaGVkdWxlZCBzaGlmdCBvciB2aXNpdC4KSWYgdGhlIFJBIGRvZXMgbm90IGNvbXBsZXRlIHRoZWlyIDEwIHNjaGVkdWxlZCBob3VycyBpbiBhbnkgZ2l2ZW4gd2VlaywgdGhleSBhcmUgZXhwZWN0ZWQgdG8gbWFrZSB1cCBtaXNzZWQgaG91cnMgbGF0ZXIgaW4gdGhlIHNlbWVzdGVyIGluIGFycmFuZ2VtZW50IHdpdGggdGhlIExhYiBDb29yZGluYXRvciwgYW5kIHdpbGwgbm90IGJlIGdpdmVuIGEgcGFzc2luZyBncmFkZSB1bnRpbCB0aGV5IGhhdmUgZnVsbHkgbWFkZSB1cCB0aGVpciBob3Vycy4KSWYgdGhlIFJBIHdvcmtzIG1vcmUgdGhhbiB0aGVpciBzY2hlZHVsZWQgaG91cnMgaW4gYSBnaXZlbiB3ZWVrLCB0aGV5IG1heSBjdXQgZG93biB0aGVpciBob3VycyBpbiBsYXRlciB3ZWVrcy4KV2UgZXhwZWN0IHRoZSBSQSB0byBoYXZlIGZsZXhpYmlsaXR5IHRvIGFjY29tbW9kYXRlIHBhcnRpY2lwYW50cycgc2NoZWR1bGVzIGZvciBsYWIgdmlzaXRzLgpGb3IgaW5zdGFuY2UsIHRoZSBSQSBpcyBleHBlY3RlZCB0byBiZSBhdmFpbGFibGUgdG8gcnVuIGxhYiB2aXNpdHMgb24gZXZlbmluZ3MgYW5kIHdlZWtlbmRzIChzZWUgdGhlIHNlY3Rpb24gb24gU2NoZWR1bGluZyBFeHBlY3RhdGlvbnMgYmVsb3cpLgpXZSB3aWxsIGRvIG91ciBiZXN0IHRvIGZhaXJseSBkaXN0cmlidXRlIHRoZSBldmVuaW5nIGFuZCB3ZWVrZW5kIGhvdXJzIGFjcm9zcyB0aGUgdGVhbS4KCldlIGV4cGVjdCBSQXMgdG8gcmVndWxhcmx5IGNvbW11bmljYXRlIHdpdGggdGhlIHRlYW0sIHVzaW5nIHRoZSBhcHByb3ByaWF0ZSBtZXRob2RzIG9mIGNvbW11bmljYXRpb24gKG91dGxpbmVkIGluIHRoZSBMYWIgQ29tbXVuaWNhdGlvbiBjaGVja2xpc3QpLgpNZXRob2RzIGZvciByZXNvbHZpbmcgY29uZmxpY3RzIGFuZCBwZXJzb25uZWwgaXNzdWVzIGFyZSBkZXNjcmliZWQgaW4gdGhlIExhYiBDb21tdW5pY2F0aW9uIGNoZWNrbGlzdC4KV2UgZXhwZWN0IHRoZSBSQSB0byB0YWtlIHBlcnNvbmFsIHJlc3BvbnNpYmlsaXR5IGZvciB0aGUgd29yayB0aGV5IGFyZSBhc3NpZ25lZC4KQXNzaWduZWQgd29yayB3aWxsIGFsd2F5cyBjb2luY2lkZSB3aXRoIHRoZSAxMCBob3VycyB0aGUgUkEgaXMgYWxyZWFkeSBzY2hlZHVsZWQgZm9yLgpXaXRoIHRoZSBleGNlcHRpb24gb2YgbGFiIHZpc2l0cywgd2Ugd2lsbCBub3QgYXNzaWduIHdvcmsgYmV5b25kIHRoZSAxMCBob3VycyBwZXIgd2VlayBleHBlY3RhdGlvbiBhcyBsb25nIGFzIHRoZSBSQSBpcyBtZWV0aW5nIHRoZWlyIGV4cGVjdGF0aW9uIGZvciBsYWIgaG91cnMuCldlIGV4cGVjdCB0aGUgUkEgdG8gYXNrIHRoZSBQSSBvciBMYWIgQ29vcmRpbmF0b3IgaWYgdGhleSBoYXZlIHF1ZXN0aW9ucyBhYm91dCB0aGVpciBhc3NpZ25lZCB3b3JrIG9yIGV4cGVjdGF0aW9ucy4KQW55IG5vbi1hc3NpZ25lZCB3b3JrIChlLmcuLCBpbmRlcGVuZGVudCByZXNlYXJjaCBwcm9qZWN0cywgSG9ub3JzIHByb2plY3RzLCBldGMuKSBpcyBleHBlY3RlZCB0byB0YWtlIHBsYWNlIG91dHNpZGUgb2Ygc2NoZWR1bGVkIGhvdXJzLCB1bmxlc3MgZ2l2ZW4gZXhwbGljaXQgcGVybWlzc2lvbiBmcm9tIHRoZSBQSS4KCldlIGV4cGVjdCB0aGUgUkEgdG8gc2hvdyBhbiBpbnRlcmVzdCBpbiB0aGUgd29yayBhbmQgdG8sIHRocm91Z2hvdXQgdGhlIGNvdXJzZSBvZiB0aGUgc2VtZXN0ZXIsIGdhaW4gZ3JlYXRlciBpbmRlcGVuZGVuY2UgaW4gdGhlIGxhYm9yYXRvcnksIHRvIHRha2Ugb24gYSBncmVhdGVyIGxlYWRlcnNoaXAgcm9sZSwgYW5kIHRvIGNvbnRyaWJ1dGUgdG8gdGhlIG92ZXJhbGwgaW1wcm92ZW1lbnQgb2YgdGhlIGxhYiBhbmQgaXRzIHJlc2VhcmNoLgpBZnRlciBhbiBleHRlbmRlZCBkaXNwbGF5IG9mIGNvbW1pdG1lbnQgYW5kIGRlZGljYXRpb24gdG8gdGhlIGxhYiwgUkFzIGFyZSB3ZWxjb21lIHRvIG1lZXQgd2l0aCBEci4KUGV0ZXJzZW4gdG8gZGlzY3VzcyB0aGUgcG9zc2liaWxpdHkgb2YgZG9pbmcgYW4gaG9ub3IncyB0aGVzaXMgaW4gY29uanVuY3Rpb24gd2l0aCBsYWIgcGFydGljaXBhdGlvbi4KCldlIGV4cGVjdCBSQXMgdG8gY29udHJpYnV0ZSB0byBlYWNoIHdlZWtseSBsYWIgbWVldGluZyBkaXNjdXNzaW9uLiBXZSBleHBlY3QgUkFzIHRvIHN1Ym1pdCB0aGVpciBsYWIgcmVwb3J0IGJ5IHRoZSBkZWFkbGluZSBhbmQgaW4gdGhlIGNvcnJlY3QgbG9jYXRpb24uCgpXZSBleHBlY3QgUkFzIHRvIHJlZ2lzdGVyIGZvciB0aGUgUmVzZWFyY2ggUHJhY3RpY3VtIGluIFBzeWNob2xvZ3kgY291cnNlIChQU1k6Mzk5NCBvciBIT05SOjM5OTQpIHRvIGFjY291bnQgZm9yIHRoZSB0aW1lIGRlbWFuZHMgb2YgbGFiIHBhcnRpY2lwYXRpb24gaW4gdGhlaXIgc2NoZWR1bGUuCgojIEdyYWRpbmcgU2NhbGUKCkJhc2VkIG9uIHRoZSBleHBlY3RhdGlvbnMgYWJvdmUgYW5kIHRoZSBncmFkaW5nIHNjYWxlIGJlbG93LCBSQXMgd2lsbCBiZSBhc3NpZ25lZCBhIGxldHRlciBncmFkZSBbQS1GXSBmb3IgdGhlaXIgcGVyZm9ybWFuY2UgaW4gdGhlIGxhYiBvbiB0aGUgdGFza3MgYXNzaWduZWQgdG8gdGhlbS4KKCpOb3RlOiBFbnJvbGxpbmcgaW4gY2VydGFpbiBjb3Vyc2VzIHdpbGwgcmVzdWx0IGluIGEgUGFzcy9GYWlsIGdyYWRlIHJhdGhlciB0aGFuIGEgbGV0dGVyIGdyYWRlLgpTZWUgU2VjdGlvbiBbSU5TRVJUXSBmb3IgYSBkZXNjcmlwdGlvbiBvZiBjb3Vyc2Ugb3B0aW9ucykuCgpBOiAxMDAlIGF0dGVuZGFuY2UsIGNvbnNpc3RlbnRseSBvbiB0aW1lLCBhbmQgbWVldGluZyBhbGwgb2YgdGhlIGxhYiBleHBlY3RhdGlvbnNcCkI6IDwgMTAwJSBhdHRlbmRhbmNlLCBvciBpbmNvbnNpc3RlbnRseSBvbiB0aW1lLCBvciBtb3N0bHkgbWVldGluZyB0aGUgbGFiIGV4cGVjdGF0aW9uc1wKQzogPCA4MCUgYXR0ZW5kYW5jZSwgb3IgbW9zdGx5IG5vdCBvbiB0aW1lLCBvciBzb21ldGltZXMgbWVldGluZyB0aGUgbGFiIGV4cGVjdGF0aW9uc1wKRDogPCA3MCUgYXR0ZW5kYW5jZSwgb3IgcmFyZWx5IG9uIHRpbWUsIG9yIG9ubHkgb2NjYXNpb25hbGx5IG1lZXRpbmcgdGhlIGxhYiBleHBlY3RhdGlvbnNcCkY6IDw9NTAgYXR0ZW5kYW5jZSwgb3IgbmV2ZXIgb24gdGltZSwgb3IgZ2VuZXJhbGx5IGZhaWxpbmcgdG8gbWVldCB0aGUgbGFiIGV4cGVjdGF0aW9ucwoKIyBTaWduYXR1cmUgUGFnZQoKSSBoYXZlIHJlYWQgYW5kIHVuZGVyc3RhbmQgdGhlIGFib3ZlIGV4cGVjdGF0aW9ucywgaW4gYWRkaXRpb24gdG8gdGhlIHNlY3Rpb24gb24gW2V4cGVjdGF0aW9ucyBmb3IgZXZlcnlvbmUgaW4gdGhlIGxhYl0oaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0xhYldpa2kvZXhwZWN0YXRpb25zLWV2ZXJ5b25lLmh0bWwpIGFuZCB0aGUgZXhwZWN0YXRpb25zIGFuZCBzeXN0ZW1zIG91dGxpbmVkIGluIHRoZSAiW1NjaGVkdWxpbmddKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9MYWJXaWtpL21hbnVhbC5odG1sI3NjaGVkdWxpbmcpIiAoaW5jbHVkaW5nICJbU2NoZWR1bGluZyBFeHBlY3RhdGlvbnNdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9MYWJXaWtpL21hbnVhbC5odG1sI3NjaGVkdWxpbmdFeHBlY3RhdGlvbnMpIiwgIltTY2hlZHVsaW5nIFN5c3RlbSBPdmVydmlld10oaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0xhYldpa2kvbWFudWFsLmh0bWwjc2NoZWR1bGluZ092ZXJ2aWV3KSIsIGFuZCAiW1dlZWtlbmQgT24tQ2FsbCBTY2hlZHVsZV0oaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0xhYldpa2kvbWFudWFsLmh0bWwjc2NoZWR1bGluZ1dlZWtlbmQpIikgc2VjdGlvbnMgb2YgdGhlIFtEZXZlbG9wbWVudGFsIFBzeWNob3BhdGhvbG9neSBMYWIgTWFudWFsXShodHRwczovL2RldnBzeWxhYi5naXRodWIuaW8vTGFiV2lraS9tYW51YWwuaHRtbCkuCkkgYWdyZWUgdG8gbWVldCB0aGVzZSBleHBlY3RhdGlvbnMsIGFuZCB0byBhc2sgdGhlIExhYiBDb29yZGluYXRvciBvciBEci4gUGV0ZXJzZW4gaWYgSSBuZWVkIGNsYXJpZmljYXRpb24gb24gYW55IG9mIHRoZSBleHBlY3RhdGlvbnMgYW5kIHN5c3RlbXMgb2YgbGFiLgoKUkEgU2lnbmF0dXJlIF9fX19fX19fX19fX18JUkEgUHJpbnRlZCBOYW1lIF9fX19fX19fX19fX18gRGF0ZSBfX19fX19fX19fCg==</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("expectations-undergradRA.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Lab Manual</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-postdoc.html">Postdoctoral Scholars</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+<li>
+  <a href="https://github.com/DevPsyLab">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/devpsylab">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.facebook.com/DevPsyLab">
+    <span class="fa fa-facebook"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.instagram.com/dev_psy_lab">
+    <span class="fa fa-instagram"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Lab Manual</h1>
+
+</div>
+
+
+<div id="missionStatement" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Mission Statement</h1>
+<div id="missionStatement-external" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> External Mission Statement</h2>
+<p>We are striving to improve the health and well-being of families and communities by conducting research to advance the understanding of human development.</p>
+<p>Date drafted: May 2018</p>
+</div>
+<div id="missionStatement-internal" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Internal Mission Statement</h2>
+<p>As members of the Developmental Psychopathology Lab, we strive to create, maintain, and improve a fun and collaborative culture. We commit to bettering ourselves and others through respect, hard work, ethical practices, support, and meaningful, lasting relationships. As a team, we cultivate a supportive environment for a free exchange of ideas and embrace the value of failure to foster personal and professional growth.</p>
+<p>Date drafted: August 2018</p>
+</div>
+<div id="diversityStatement" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Diversity Statement</h2>
+<p>We seek to include members of various cultural, ethnic, and socioeconomic backgrounds so that our research might best represent the families which make up our diverse communities. We aim to provide a welcoming and respectful environment for people of all backgrounds.</p>
+<p>Date drafted: October 2020</p>
+</div>
+</div>
+<div id="citi-certification" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> CITI Certification</h1>
+</div>
+<div id="confidentiality" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Confidentiality</h1>
+</div>
+<div id="how-to-register-lab-for-credit" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> How to Register Lab for Credit</h1>
+<div id="regular-credit" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Regular Credit</h2>
+</div>
+<div id="honors-credit" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Honors Credit</h2>
+<div id="how-to-fulfill-the-experiential-learning-requirement-for-honors-credit" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> How to Fulfill the Experiential Learning Requirement for Honors Credit</h3>
+</div>
+</div>
+</div>
+<div id="ra-roles" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> RA Roles</h1>
+<div id="specialized-roles" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Specialized Roles</h2>
+</div>
+</div>
+<div id="ra-advancement-in-lab" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> RA Advancement in Lab</h1>
+</div>
+<div id="lab-buddy-system" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Lab Buddy System</h1>
+</div>
+<div id="scheduling" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Scheduling</h1>
+<div id="schedulingExpectations" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Scheduling Expectations</h2>
+<div id="your-responsibilities-as-an-ra" class="section level3" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Your responsibilities as an RA</h3>
+</div>
+<div id="our-responsibilities-to-you" class="section level3" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Our responsibilities to you</h3>
+</div>
+</div>
+<div id="schedulingOverview" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Scheduling System Overview</h2>
+</div>
+<div id="schedulingWeekend" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Weekend On-Call Schedule</h2>
+<div id="introduction" class="section level3" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Introduction</h3>
+</div>
+<div id="preparation" class="section level3" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Preparation</h3>
+</div>
+<div id="procedure" class="section level3" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Procedure</h3>
+</div>
+</div>
+<div id="shared-calendars" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Shared Calendars</h2>
+</div>
+<div id="timeclock" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> TimeClock</h2>
+</div>
+</div>
+<div id="the-basics-of-lab" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> The Basics of Lab</h1>
+<div id="lab-meetings" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Lab Meetings</h2>
+</div>
+<div id="article-discussion" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Article Discussion</h2>
+</div>
+<div id="lab-meeting-scribe" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Lab Meeting Scribe</h2>
+</div>
+<div id="attendance-and-absence-policies" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Attendance and Absence Policies</h2>
+</div>
+<div id="lab-communication" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> Lab Communication</h2>
+<div id="resolving-conflicts-and-personnel-issues" class="section level3" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Resolving Conflicts and Personnel Issues</h3>
+</div>
+<div id="slack" class="section level3" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Slack</h3>
+<div id="getting-started" class="section level4" number="9.5.2.1">
+<h4><span class="header-section-number">9.5.2.1</span> Getting Started</h4>
+</div>
+<div id="howwhen-to-use" class="section level4" number="9.5.2.2">
+<h4><span class="header-section-number">9.5.2.2</span> How/When to Use</h4>
+</div>
+</div>
+<div id="trello" class="section level3" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> Trello</h3>
+</div>
+<div id="social-media" class="section level3" number="9.5.4">
+<h3><span class="header-section-number">9.5.4</span> Social Media</h3>
+<div id="facebook" class="section level4" number="9.5.4.1">
+<h4><span class="header-section-number">9.5.4.1</span> Facebook</h4>
+</div>
+<div id="twitter" class="section level4" number="9.5.4.2">
+<h4><span class="header-section-number">9.5.4.2</span> Twitter</h4>
+</div>
+<div id="instagram" class="section level4" number="9.5.4.3">
+<h4><span class="header-section-number">9.5.4.3</span> Instagram</h4>
+</div>
+</div>
+</div>
+<div id="lab-onedrive" class="section level2" number="9.6">
+<h2><span class="header-section-number">9.6</span> Lab OneDrive</h2>
+</div>
+<div id="lab-drive" class="section level2" number="9.7">
+<h2><span class="header-section-number">9.7</span> Lab Drive</h2>
+<div id="rule" class="section level3" number="9.7.1">
+<h3><span class="header-section-number">9.7.1</span> #1 Rule:</h3>
+</div>
+<div id="file-naming-conventions" class="section level3" number="9.7.2">
+<h3><span class="header-section-number">9.7.2</span> File Naming Conventions</h3>
+</div>
+<div id="folder-designations" class="section level3" number="9.7.3">
+<h3><span class="header-section-number">9.7.3</span> Folder Designations</h3>
+</div>
+<div id="ra-folders" class="section level3" number="9.7.4">
+<h3><span class="header-section-number">9.7.4</span> RA Folders</h3>
+</div>
+<div id="member-folders" class="section level3" number="9.7.5">
+<h3><span class="header-section-number">9.7.5</span> Member Folders</h3>
+</div>
+<div id="lab-report-folders" class="section level3" number="9.7.6">
+<h3><span class="header-section-number">9.7.6</span> Lab Report Folders</h3>
+</div>
+<div id="lab-drive-directoryfrequently-used-folders" class="section level3" number="9.7.7">
+<h3><span class="header-section-number">9.7.7</span> Lab Drive Directory—Frequently Used Folders</h3>
+</div>
+</div>
+<div id="lab-access-keys" class="section level2" number="9.8">
+<h2><span class="header-section-number">9.8</span> Lab Access / Keys</h2>
+</div>
+<div id="phone-procedures" class="section level2" number="9.9">
+<h2><span class="header-section-number">9.9</span> Phone Procedures</h2>
+</div>
+<div id="bi-weekly-lab-reports" class="section level2" number="9.10">
+<h2><span class="header-section-number">9.10</span> Bi-Weekly Lab Reports</h2>
+</div>
+<div id="tips-and-tricks-for-interacting-with-children-in-lab" class="section level2" number="9.11">
+<h2><span class="header-section-number">9.11</span> Tips and Tricks for Interacting with Children in Lab</h2>
+<div id="when-interacting-with-families-in-the-lab" class="section level3" number="9.11.1">
+<h3><span class="header-section-number">9.11.1</span> When Interacting With Families in the Lab</h3>
+</div>
+<div id="how-to-give-praise" class="section level3" number="9.11.2">
+<h3><span class="header-section-number">9.11.2</span> How to Give Praise</h3>
+</div>
+<div id="how-to-guide-children-through-difficult-tasks" class="section level3" number="9.11.3">
+<h3><span class="header-section-number">9.11.3</span> How to Guide Children Through Difficult Tasks</h3>
+<div id="dos" class="section level4" number="9.11.3.1">
+<h4><span class="header-section-number">9.11.3.1</span> DOs</h4>
+</div>
+<div id="donts" class="section level4" number="9.11.3.2">
+<h4><span class="header-section-number">9.11.3.2</span> DON’Ts</h4>
+</div>
+</div>
+</div>
+<div id="participant-payment" class="section level2" number="9.12">
+<h2><span class="header-section-number">9.12</span> Participant Payment</h2>
+<div id="rules" class="section level3" number="9.12.1">
+<h3><span class="header-section-number">9.12.1</span> Rules</h3>
+</div>
+<div id="payment-in-cash-issued-to-pcparticipant-in-the-laboratory" class="section level3" number="9.12.2">
+<h3><span class="header-section-number">9.12.2</span> Payment in Cash Issued to PC/Participant in the Laboratory</h3>
+</div>
+</div>
+</div>
+<div id="visit-videos" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Visit Videos</h1>
+<div id="video-recording" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Video Recording</h2>
+</div>
+<div id="no-media-release-nmrvideo-flagging" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> No Media Release (NMR)—Video Flagging</h2>
+</div>
+<div id="backing-up-data-to-dvds" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Backing up Data to DVDs</h2>
+<p><strong>[XXX]NOTE: THIS SECTION SEEMS STUDY-SPECIFIC. CAN WE MOVE IT OUT OF THE GENERAL LAB MANUAL?</strong></p>
+<div id="lv1-videos" class="section level3" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> LV1 Videos</h3>
+</div>
+<div id="lv2-files" class="section level3" number="10.3.2">
+<h3><span class="header-section-number">10.3.2</span> LV2 Files</h3>
+</div>
+</div>
+<div id="cute-moments-videos" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> Cute Moments Videos</h2>
+<div id="procedure-1" class="section level3" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Procedure</h3>
+</div>
+</div>
+<div id="combining-videos" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Combining Videos</h2>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIE1hbnVhbCIKLS0tCgojIE1pc3Npb24gU3RhdGVtZW50IHsjbWlzc2lvblN0YXRlbWVudH0KCiMjIEV4dGVybmFsIE1pc3Npb24gU3RhdGVtZW50IHsjbWlzc2lvblN0YXRlbWVudC1leHRlcm5hbH0KCldlIGFyZSBzdHJpdmluZyB0byBpbXByb3ZlIHRoZSBoZWFsdGggYW5kIHdlbGwtYmVpbmcgb2YgZmFtaWxpZXMgYW5kIGNvbW11bml0aWVzIGJ5IGNvbmR1Y3RpbmcgcmVzZWFyY2ggdG8gYWR2YW5jZSB0aGUgdW5kZXJzdGFuZGluZyBvZiBodW1hbiBkZXZlbG9wbWVudC4KCkRhdGUgZHJhZnRlZDogTWF5IDIwMTgKCiMjIEludGVybmFsIE1pc3Npb24gU3RhdGVtZW50IHsjbWlzc2lvblN0YXRlbWVudC1pbnRlcm5hbH0KCkFzIG1lbWJlcnMgb2YgdGhlIERldmVsb3BtZW50YWwgUHN5Y2hvcGF0aG9sb2d5IExhYiwgd2Ugc3RyaXZlIHRvIGNyZWF0ZSwgbWFpbnRhaW4sIGFuZCBpbXByb3ZlIGEgZnVuIGFuZCBjb2xsYWJvcmF0aXZlIGN1bHR1cmUuCldlIGNvbW1pdCB0byBiZXR0ZXJpbmcgb3Vyc2VsdmVzIGFuZCBvdGhlcnMgdGhyb3VnaCByZXNwZWN0LCBoYXJkIHdvcmssIGV0aGljYWwgcHJhY3RpY2VzLCBzdXBwb3J0LCBhbmQgbWVhbmluZ2Z1bCwgbGFzdGluZyByZWxhdGlvbnNoaXBzLgpBcyBhIHRlYW0sIHdlIGN1bHRpdmF0ZSBhIHN1cHBvcnRpdmUgZW52aXJvbm1lbnQgZm9yIGEgZnJlZSBleGNoYW5nZSBvZiBpZGVhcyBhbmQgZW1icmFjZSB0aGUgdmFsdWUgb2YgZmFpbHVyZSB0byBmb3N0ZXIgcGVyc29uYWwgYW5kIHByb2Zlc3Npb25hbCBncm93dGguCgpEYXRlIGRyYWZ0ZWQ6IEF1Z3VzdCAyMDE4CgojIyBEaXZlcnNpdHkgU3RhdGVtZW50IHsjZGl2ZXJzaXR5U3RhdGVtZW50fQoKV2Ugc2VlayB0byBpbmNsdWRlIG1lbWJlcnMgb2YgdmFyaW91cyBjdWx0dXJhbCwgZXRobmljLCBhbmQgc29jaW9lY29ub21pYyBiYWNrZ3JvdW5kcyBzbyB0aGF0IG91ciByZXNlYXJjaCBtaWdodCBiZXN0IHJlcHJlc2VudCB0aGUgZmFtaWxpZXMgd2hpY2ggbWFrZSB1cCBvdXIgZGl2ZXJzZSBjb21tdW5pdGllcy4KV2UgYWltIHRvIHByb3ZpZGUgYSB3ZWxjb21pbmcgYW5kIHJlc3BlY3RmdWwgZW52aXJvbm1lbnQgZm9yIHBlb3BsZSBvZiBhbGwgYmFja2dyb3VuZHMuCgpEYXRlIGRyYWZ0ZWQ6IE9jdG9iZXIgMjAyMAoKIyBDSVRJIENlcnRpZmljYXRpb24KCiMgQ29uZmlkZW50aWFsaXR5CgojIEhvdyB0byBSZWdpc3RlciBMYWIgZm9yIENyZWRpdAoKIyMgUmVndWxhciBDcmVkaXQKCiMjIEhvbm9ycyBDcmVkaXQKCiMjIyBIb3cgdG8gRnVsZmlsbCB0aGUgRXhwZXJpZW50aWFsIExlYXJuaW5nIFJlcXVpcmVtZW50IGZvciBIb25vcnMgQ3JlZGl0CgojIFJBIFJvbGVzCgojIyBTcGVjaWFsaXplZCBSb2xlcwoKIyBSQSBBZHZhbmNlbWVudCBpbiBMYWIKCiMgTGFiIEJ1ZGR5IFN5c3RlbQoKIyBTY2hlZHVsaW5nIHsjc2NoZWR1bGluZ30KCiMjIFNjaGVkdWxpbmcgRXhwZWN0YXRpb25zIHsjc2NoZWR1bGluZ0V4cGVjdGF0aW9uc30KCiMjIyBZb3VyIHJlc3BvbnNpYmlsaXRpZXMgYXMgYW4gUkEKCiMjIyBPdXIgcmVzcG9uc2liaWxpdGllcyB0byB5b3UKCiMjIFNjaGVkdWxpbmcgU3lzdGVtIE92ZXJ2aWV3IHsjc2NoZWR1bGluZ092ZXJ2aWV3fQoKIyMgV2Vla2VuZCBPbi1DYWxsIFNjaGVkdWxlIHsjc2NoZWR1bGluZ1dlZWtlbmR9CgojIyMgSW50cm9kdWN0aW9uCgojIyMgUHJlcGFyYXRpb24KCiMjIyBQcm9jZWR1cmUKCiMjIFNoYXJlZCBDYWxlbmRhcnMKCiMjIFRpbWVDbG9jawoKIyBUaGUgQmFzaWNzIG9mIExhYgoKIyMgTGFiIE1lZXRpbmdzCgojIyBBcnRpY2xlIERpc2N1c3Npb24KCiMjIExhYiBNZWV0aW5nIFNjcmliZQoKIyMgQXR0ZW5kYW5jZSBhbmQgQWJzZW5jZSBQb2xpY2llcwoKIyMgTGFiIENvbW11bmljYXRpb24KCiMjIyBSZXNvbHZpbmcgQ29uZmxpY3RzIGFuZCBQZXJzb25uZWwgSXNzdWVzCgojIyMgU2xhY2sKCiMjIyMgR2V0dGluZyBTdGFydGVkCgojIyMjIEhvdy9XaGVuIHRvIFVzZQoKIyMjIFRyZWxsbwoKIyMjIFNvY2lhbCBNZWRpYQoKIyMjIyBGYWNlYm9vawoKIyMjIyBUd2l0dGVyCgojIyMjIEluc3RhZ3JhbQoKIyMgTGFiIE9uZURyaXZlCgojIyBMYWIgRHJpdmUKCiMjIyAjMSBSdWxlOgoKIyMjIEZpbGUgTmFtaW5nIENvbnZlbnRpb25zCgojIyMgRm9sZGVyIERlc2lnbmF0aW9ucwoKIyMjIFJBIEZvbGRlcnMKCiMjIyBNZW1iZXIgRm9sZGVycwoKIyMjIExhYiBSZXBvcnQgRm9sZGVycwoKIyMjIExhYiBEcml2ZSBEaXJlY3RvcnnigJRGcmVxdWVudGx5IFVzZWQgRm9sZGVycwoKIyMgTGFiIEFjY2VzcyAvIEtleXMKCiMjIFBob25lIFByb2NlZHVyZXMKCiMjIEJpLVdlZWtseSBMYWIgUmVwb3J0cwoKIyMgVGlwcyBhbmQgVHJpY2tzIGZvciBJbnRlcmFjdGluZyB3aXRoIENoaWxkcmVuIGluIExhYgoKIyMjIFdoZW4gSW50ZXJhY3RpbmcgV2l0aCBGYW1pbGllcyBpbiB0aGUgTGFiCgojIyMgSG93IHRvIEdpdmUgUHJhaXNlCgojIyMgSG93IHRvIEd1aWRlIENoaWxkcmVuIFRocm91Z2ggRGlmZmljdWx0IFRhc2tzCgojIyMjIERPcwoKIyMjIyBET04nVHMKCiMjIFBhcnRpY2lwYW50IFBheW1lbnQKCiMjIyBSdWxlcwoKIyMjIFBheW1lbnQgaW4gQ2FzaCBJc3N1ZWQgdG8gUEMvUGFydGljaXBhbnQgaW4gdGhlIExhYm9yYXRvcnkKCiMgVmlzaXQgVmlkZW9zCgojIyBWaWRlbyBSZWNvcmRpbmcKCiMjIE5vIE1lZGlhIFJlbGVhc2UgKE5NUinigJRWaWRlbyBGbGFnZ2luZwoKIyMgQmFja2luZyB1cCBEYXRhIHRvIERWRHMKCioqW1hYWF1OT1RFOiBUSElTIFNFQ1RJT04gU0VFTVMgU1RVRFktU1BFQ0lGSUMuIENBTiBXRSBNT1ZFIElUIE9VVCBPRiBUSEUgR0VORVJBTCBMQUIgTUFOVUFMPyoqCgojIyMgTFYxIFZpZGVvcwoKIyMjIExWMiBGaWxlcwoKIyMgQ3V0ZSBNb21lbnRzIFZpZGVvcwoKIyMjIFByb2NlZHVyZQoKIyMgQ29tYmluaW5nIFZpZGVvcwo=</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("manual.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

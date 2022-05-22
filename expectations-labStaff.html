@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Lab Expectations for Lab Staff</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-postdoc.html">Postdoctoral Scholars</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+<li>
+  <a href="https://github.com/DevPsyLab">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/devpsylab">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.facebook.com/DevPsyLab">
+    <span class="fa fa-facebook"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.instagram.com/dev_psy_lab">
+    <span class="fa fa-instagram"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Lab Expectations for Lab Staff</h1>
+
+</div>
+
+
+<div id="duties" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Duties</h1>
+<p>Duties for all lab staff include the following:</p>
+<ul>
+<li>Participant recruitment</li>
+<li>Participant scheduling</li>
+<li>Longitudinal tracking and retention of participants</li>
+<li>Data collection</li>
+<li>Data management</li>
+<li>Supervision of research assistants</li>
+<li>Making lab space warm, welcoming, and child and family friendly</li>
+<li>Quality control and ensuring high-quality and efficient procedures</li>
+<li>Attending and contributing at lab meeting</li>
+</ul>
+<p>Additional duties for the Lab Coordinator include:</p>
+<ul>
+<li>Leading lab meeting</li>
+<li>Lab report</li>
+</ul>
+</div>
+<div id="your-schedule" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Your Schedule</h1>
+<p>Here are the expectations regarding your schedule:</p>
+<ul>
+<li>You are in the office for your designated hours per week that are regularly scheduled between 9am–5pm Monday through Friday.</li>
+<li>You may have to work outside those hours (early mornings/evenings/weekends) for the purpose of running participants.</li>
+<li>If you are full-time, do not work more than 40 hours/week.</li>
+<li>You get approval from me for any deviations from this schedule (working outside those hours, working more than 40 hours or your designated hours, etc.), and update your schedule accordingly in the online calendar.</li>
+<li>The position involves fully in-person work.</li>
+<li>You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.</li>
+<li>You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).</li>
+<li>You keep your schedule in the online calendar up-to-date with any changes.</li>
+</ul>
+</div>
+<div id="dress-code" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Dress Code</h1>
+<p>In terms of dress code, Business Casual is permitted which includes blue jeans on days that you don’t have meetings outside of the department.</p>
+</div>
+<div id="lab-coordinator" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Lab Coordinator</h1>
+<p>The following are additional expectations for the Lab Coordinator:</p>
+<ul>
+<li>We will have a weekly scheduled one-on-one meeting (in addition to other times I meet with you in the lab).</li>
+<li>You will submit a report no later than the day before so I can review it before our meeting and come prepared.</li>
+<li>The report should include:
+<ol style="list-style-type: decimal">
+<li>What you have accomplished since last week</li>
+<li>What you plan to accomplish in the next week</li>
+<li>Items to discuss, including problems, recommended solutions, and questions</li>
+</ol></li>
+</ul>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIEV4cGVjdGF0aW9ucyBmb3IgTGFiIFN0YWZmIgotLS0KCiMgRHV0aWVzCgpEdXRpZXMgZm9yIGFsbCBsYWIgc3RhZmYgaW5jbHVkZSB0aGUgZm9sbG93aW5nOgoKLSBQYXJ0aWNpcGFudCByZWNydWl0bWVudAotIFBhcnRpY2lwYW50IHNjaGVkdWxpbmcKLSBMb25naXR1ZGluYWwgdHJhY2tpbmcgYW5kIHJldGVudGlvbiBvZiBwYXJ0aWNpcGFudHMKLSBEYXRhIGNvbGxlY3Rpb24KLSBEYXRhIG1hbmFnZW1lbnQKLSBTdXBlcnZpc2lvbiBvZiByZXNlYXJjaCBhc3Npc3RhbnRzCi0gTWFraW5nIGxhYiBzcGFjZSB3YXJtLCB3ZWxjb21pbmcsIGFuZCBjaGlsZCBhbmQgZmFtaWx5IGZyaWVuZGx5Ci0gUXVhbGl0eSBjb250cm9sIGFuZCBlbnN1cmluZyBoaWdoLXF1YWxpdHkgYW5kIGVmZmljaWVudCBwcm9jZWR1cmVzCi0gQXR0ZW5kaW5nIGFuZCBjb250cmlidXRpbmcgYXQgbGFiIG1lZXRpbmcKCkFkZGl0aW9uYWwgZHV0aWVzIGZvciB0aGUgTGFiIENvb3JkaW5hdG9yIGluY2x1ZGU6CgotIExlYWRpbmcgbGFiIG1lZXRpbmcKLSBMYWIgcmVwb3J0CgojIFlvdXIgU2NoZWR1bGUKCkhlcmUgYXJlIHRoZSBleHBlY3RhdGlvbnMgcmVnYXJkaW5nIHlvdXIgc2NoZWR1bGU6CgotIFlvdSBhcmUgaW4gdGhlIG9mZmljZSBmb3IgeW91ciBkZXNpZ25hdGVkIGhvdXJzIHBlciB3ZWVrIHRoYXQgYXJlIHJlZ3VsYXJseSBzY2hlZHVsZWQgYmV0d2VlbiA5YW3igJM1cG0gTW9uZGF5IHRocm91Z2ggRnJpZGF5LgotIFlvdSBtYXkgaGF2ZSB0byB3b3JrIG91dHNpZGUgdGhvc2UgaG91cnMgKGVhcmx5IG1vcm5pbmdzL2V2ZW5pbmdzL3dlZWtlbmRzKSBmb3IgdGhlIHB1cnBvc2Ugb2YgcnVubmluZyBwYXJ0aWNpcGFudHMuCi0gSWYgeW91IGFyZSBmdWxsLXRpbWUsIGRvIG5vdCB3b3JrIG1vcmUgdGhhbiA0MCBob3Vycy93ZWVrLgotIFlvdSBnZXQgYXBwcm92YWwgZnJvbSBtZSBmb3IgYW55IGRldmlhdGlvbnMgZnJvbSB0aGlzIHNjaGVkdWxlICh3b3JraW5nIG91dHNpZGUgdGhvc2UgaG91cnMsIHdvcmtpbmcgbW9yZSB0aGFuIDQwIGhvdXJzIG9yIHlvdXIgZGVzaWduYXRlZCBob3VycywgZXRjLiksIGFuZCB1cGRhdGUgeW91ciBzY2hlZHVsZSBhY2NvcmRpbmdseSBpbiB0aGUgb25saW5lIGNhbGVuZGFyLgotIFRoZSBwb3NpdGlvbiBpbnZvbHZlcyBmdWxseSBpbi1wZXJzb24gd29yay4KLSBZb3UgbGV0IG1lIGFuZCB0aGUgcmVsZXZhbnQgdGVhbSBtZW1iZXJzIGtub3cgYnkgU2xhY2sgaWYgeW91IHdpbGwgbm90IGJlIGFibGUgdG8gbWFrZSBpdCBpbiBmb3IgeW91ciByZWd1bGFybHkgc2NoZWR1bGVkIGhvdXJzLgotIFlvdSBsZXQgbWUgYW5kIHRoZSByZWxldmFudCB0ZWFtIG1lbWJlcnMga25vdyBpbiBwZXJzb24gb3IgYnkgU2xhY2sgaWYgeW91IGFyZSBsZWF2aW5nIHRoZSBvZmZpY2UgKHJ1bm5pbmcgbGFiIGVycmFuZHMsIGV0Yy4pLgotIFlvdSBrZWVwIHlvdXIgc2NoZWR1bGUgaW4gdGhlIG9ubGluZSBjYWxlbmRhciB1cC10by1kYXRlIHdpdGggYW55IGNoYW5nZXMuCgojIERyZXNzIENvZGUKCkluIHRlcm1zIG9mIGRyZXNzIGNvZGUsIEJ1c2luZXNzIENhc3VhbCBpcyBwZXJtaXR0ZWQgd2hpY2ggaW5jbHVkZXMgYmx1ZSBqZWFucyBvbiBkYXlzIHRoYXQgeW91IGRvbuKAmXQgaGF2ZSBtZWV0aW5ncyBvdXRzaWRlIG9mIHRoZSBkZXBhcnRtZW50LgoKIyBMYWIgQ29vcmRpbmF0b3IKClRoZSBmb2xsb3dpbmcgYXJlIGFkZGl0aW9uYWwgZXhwZWN0YXRpb25zIGZvciB0aGUgTGFiIENvb3JkaW5hdG9yOgoKLSBXZSB3aWxsIGhhdmUgYSB3ZWVrbHkgc2NoZWR1bGVkIG9uZS1vbi1vbmUgbWVldGluZyAoaW4gYWRkaXRpb24gdG8gb3RoZXIgdGltZXMgSSBtZWV0IHdpdGggeW91IGluIHRoZSBsYWIpLgotIFlvdSB3aWxsIHN1Ym1pdCBhIHJlcG9ydCBubyBsYXRlciB0aGFuIHRoZSBkYXkgYmVmb3JlIHNvIEkgY2FuIHJldmlldyBpdCBiZWZvcmUgb3VyIG1lZXRpbmcgYW5kIGNvbWUgcHJlcGFyZWQuCi0gVGhlIHJlcG9ydCBzaG91bGQgaW5jbHVkZToKICAgIDEuIFdoYXQgeW91IGhhdmUgYWNjb21wbGlzaGVkIHNpbmNlIGxhc3Qgd2VlawogICAgMS4gV2hhdCB5b3UgcGxhbiB0byBhY2NvbXBsaXNoIGluIHRoZSBuZXh0IHdlZWsKICAgIDEuIEl0ZW1zIHRvIGRpc2N1c3MsIGluY2x1ZGluZyBwcm9ibGVtcywgcmVjb21tZW5kZWQgc29sdXRpb25zLCBhbmQgcXVlc3Rpb25zCg==</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("expectations-labStaff.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
