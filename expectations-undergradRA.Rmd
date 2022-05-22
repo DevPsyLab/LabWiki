@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE,
 The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.
 The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
 Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
+We also ask the RA commit to keeping eight weekend days open per semester for the purposes of working with families. 
+In addition, we ask each RA keep two weekday evenings available for the purposes of working with families. 
 Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
 Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
 Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
@@ -24,6 +26,7 @@ Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coor
 We expect RAs to let us know, in advance, if they need to reschedule lab hours, and to let us know, as soon as possible, if they will be late to a scheduled shift or visit.
 If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
 If the RA works more than their scheduled hours in a given week, they may cut down their hours in later weeks.
+The RA is expected to cut back on their scheduled hours if they work during a weekend or evening (in accordance with the availability described above). 
 We expect the RA to have flexibility to accommodate participants' schedules for lab visits.
 For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on Scheduling Expectations below).
 We will do our best to fairly distribute the evening and weekend hours across the team.
