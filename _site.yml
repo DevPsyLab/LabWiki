@@ -12,6 +12,9 @@ output:
     df_print: paged
     code_download: true
     theme: readable
+    includes:
+      in_header:
+      - "includes/google_analytics.html"
 navbar:
   title: "Lab Wiki for the Developmental Psychopathology Lab"
   left:
