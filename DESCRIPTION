@@ -1,0 +1,6 @@
+Package: placeholder
+Title: LabWiki
+Version: 1.0.0
+Imports:
+  rmarkdown,
+  blogdown

@@ -1,0 +1,24 @@
+---
+title: "Lab Expectations for Everyone"
+---
+
+Everyone is expected to follow our [mission statements](https://devpsylab.github.io/LabWiki/manual.html#missionStatement), including our [internal](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-internal) and [external](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-external) mission statement, in addition to our our [diversity statement](https://devpsylab.github.io/LabWiki/manual.html#diversityStatement).
+
+# Dress Code {#dressCode}
+
+Everyone is expected to follow a "casual professional" dress code while in lab. Jeans and denim capris are acceptable, as long as they are not ripped or frayed. T-shirts without inappropriate graphics, text, cut-outs, etc. are acceptable. Leggings are permitted if they are worn as tights (i.e., under a skirt, dress, shorts, or long shirt that fully covers the bottom). Shorts are permitted if they are twill or chino material and reach *at least* to your mid-thigh (Bermuda-length shorts, however, are more appropriate). The following are NOT allowed: open-toed shoes, short-shorts, low-cut shirts, visible undergarments (including bralettes and sports bras), or workout/gym clothes (e.g., sweatpants, yoga pants). For guidance on shorts guidelines, see the [DevPsy Lab Summerwear Guide](#summerwear) (below).
+
+## DevPsy Lab Summerwear Guide {#summerwear}
+
+# Professionalism
+
+Everyone is expected to act professionally.
+This is especially critical when participants are in the lab.
+When a participant is in the lab, they should not be able to hear anyone in either the observation room or the lab offices.
+In longitudinal research, each visit is exponentially more important than the last.
+Treating participants like royalty is not only the right thing to do, but significantly increases the likelihood of retention.
+
+# Role-Specific Expectations
+
+In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](https://devpsylab.github.io/LabWiki/expectations-undergradRA.html), [graduate students](https://devpsylab.github.io/LabWiki/expectations-gradStudent.html), [postdoctoral scholars](https://devpsylab.github.io/LabWiki/expectations-postdoc.html), and [lab staff](https://devpsylab.github.io/LabWiki/expectations-labStaff.html).
+

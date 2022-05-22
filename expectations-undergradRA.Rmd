@@ -1,0 +1,59 @@
+---
+title: "Lab Expectations for Undergraduate Research Assistants"
+---
+
+# What does it mean to be an RA?
+
+The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.
+The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
+Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
+Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
+Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
+Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
+The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
+
+# Lab Expectations
+
+We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
+Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator in advance.
+We expect RAs to let us know, in advance, if they need to reschedule lab hours, and to let us know, as soon as possible, if they will be late to a scheduled shift or visit.
+If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
+If the RA works more than their scheduled hours in a given week, they may cut down their hours in later weeks.
+We expect the RA to have flexibility to accommodate participants' schedules for lab visits.
+For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on Scheduling Expectations below).
+We will do our best to fairly distribute the evening and weekend hours across the team.
+
+We expect RAs to regularly communicate with the team, using the appropriate methods of communication (outlined in the Lab Communication checklist).
+Methods for resolving conflicts and personnel issues are described in the Lab Communication checklist.
+We expect the RA to take personal responsibility for the work they are assigned.
+Assigned work will always coincide with the 10 hours the RA is already scheduled for.
+With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours.
+We expect the RA to ask the PI or Lab Coordinator if they have questions about their assigned work or expectations.
+Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.
+
+We expect the RA to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research.
+After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr.
+Petersen to discuss the possibility of doing an honor's thesis in conjunction with lab participation.
+
+We expect RAs to contribute to each weekly lab meeting discussion. We expect RAs to submit their lab report by the deadline and in the correct location.
+
+We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.
+
+# Grading Scale
+
+Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A-F] for their performance in the lab on the tasks assigned to them.
+(*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.
+See Section [INSERT] for a description of course options).
+
+A: 100% attendance, consistently on time, and meeting all of the lab expectations\
+B: < 100% attendance, or inconsistently on time, or mostly meeting the lab expectations\
+C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expectations\
+D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
+F: <=50 attendance, or never on time, or generally failing to meet the lab expectations
+
+# Signature Page
+
+I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](https://devpsylab.github.io/LabWiki/manual.html#scheduling)" (including "[Scheduling Expectations](https://devpsylab.github.io/LabWiki/manual.html#schedulingExpectations)", "[Scheduling System Overview](https://devpsylab.github.io/LabWiki/manual.html#schedulingOverview)", and "[Weekend On-Call Schedule](https://devpsylab.github.io/LabWiki/manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](https://devpsylab.github.io/LabWiki/manual.html).
+I agree to meet these expectations, and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
+
+RA Signature _____________	RA Printed Name _____________ Date __________

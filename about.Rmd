@@ -1,0 +1,11 @@
+---
+title: "About This Website"
+---
+
+More about this website.
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
