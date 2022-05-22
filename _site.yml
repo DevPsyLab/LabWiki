@@ -12,6 +12,7 @@ output:
     df_print: paged
     code_download: true
     theme: readable
+    css: custom.css
     includes:
       in_header:
       - "includes/google_analytics.html"
