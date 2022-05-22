@@ -1,22 +1,22 @@
 ---
-title: "Lab Documentation for the Developmental Psychopathology Lab"
+title: "Lab Wiki for the Developmental Psychopathology Lab"
 ---
 
 # Lab Contacts
 
 **Principal Investigator**
-Dr. Isaac Petersen, Ph.D.
-Office: 175 Psychological and Brain Sciences Building (PBSB)
+Dr. Isaac Petersen, Ph.D.\
+Office: 175 Psychological and Brain Sciences Building (PBSB)\
 Email: isaac-t-petersen@uiowa.edu
 
 **Lab Coordinator**
-Ben Swanson
-Office: 111 Spence Labs (SLP)
+Ben Swanson\
+Office: 111 Spence Labs (SLP)\
 Email: devpsy-lab@uiowa.edu
 
 **Graduate Students**\
-Jordan Harris, B.S.
-Office: 109 Spence Labs (SLP)
+Jordan Harris, B.S.\
+Office: 109 Spence Labs (SLP)\
 Email: jordan-l-harris@uiowa.edu
 
 Alexis Hosch, B.S.
@@ -24,12 +24,12 @@ Office: 109 Spence Labs (SLP)
 Email: alexis-hosch@uiowa.edu
 
 **Location**: Developmental Psychopathology Lab, Spence Labs 109-119\
-**Website**: https://psychology.uiowa.edu/developmental-psychopathology-lab\
+**Website**: [https://psychology.uiowa.edu/developmental-psychopathology-lab](https://psychology.uiowa.edu/developmental-psychopathology-lab)\
 **Social Media**:
 
-    - Facebook: https://www.facebook.com/DevPsyLab/
-    - Twitter: https://twitter.com/devpsylab
-    - Instagram: https://instagram.com/dev_psy_lab
+- Facebook: https://www.facebook.com/DevPsyLab/
+- Twitter: https://twitter.com/devpsylab
+- Instagram: https://instagram.com/dev_psy_lab
 
 # Heading One
 

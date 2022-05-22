@@ -34,10 +34,6 @@ Here are the expectations regarding your schedule:
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
 
-# Dress Code
-
-In terms of dress code, Business Casual is permitted which includes blue jeans on days that you don’t have meetings outside of the department.
-
 # Lab Coordinator
 
 The following are additional expectations for the Lab Coordinator:
