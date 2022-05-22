@@ -14,7 +14,7 @@ The RA will work in lab for 10 hours per week during the semester (9 hours of wo
 Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
 Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
 Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
-Instructions for lab reports are described in Section [**INSERT**.]
+Instructions for lab reports are described in the lab manual (click [here](https://devpsylab.github.io/LabWiki/manual.html#resolvingConflicts)).
 Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
 The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
 

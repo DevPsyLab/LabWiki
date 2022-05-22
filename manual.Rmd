@@ -126,7 +126,7 @@ Date drafted: October 2020
 
 ## Phone Procedures
 
-## Bi-Weekly Lab Reports
+## Bi-Weekly Lab Reports {#labReport}
 
 ## Tips and Tricks for Interacting with Children in Lab
 
