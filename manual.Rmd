@@ -54,6 +54,8 @@ Date drafted: October 2020
 
 ## Scheduling Expectations {#schedulingExpectations}
 
+[Note: Move this section to the `expectations-undergrad.Rmd` file]: # 
+
 ### Your responsibilities as an RA
 
 ### Our responsibilities to you
@@ -82,9 +84,9 @@ Date drafted: October 2020
 
 ## Attendance and Absence Policies
 
-## Lab Communication
+## Lab Communication {#labCommunication}
 
-### Resolving Conflicts and Personnel Issues
+### Resolving Conflicts and Personnel Issues {#resolvingConflicts}
 
 ### Slack
 

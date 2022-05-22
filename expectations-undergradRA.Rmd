@@ -7,32 +7,34 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-# What does it mean to be an RA?
+# RA Duties: What Does Work as a Research Assistant Entail?
 
 The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.
 The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
 Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
-We also ask the RA commit to keeping eight weekend days open per semester for the purposes of working with families. 
-In addition, we ask each RA keep two weekday evenings available for the purposes of working with families. 
 Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
 Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
+Instructions for lab reports are described in Section [**INSERT**.]
 Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
 The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
 
 # Lab Expectations
 
+With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
 We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
 Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator in advance.
 We expect RAs to let us know, in advance, if they need to reschedule lab hours, and to let us know, as soon as possible, if they will be late to a scheduled shift or visit.
 If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
-If the RA works more than their scheduled hours in a given week, they may cut down their hours in later weeks.
-The RA is expected to cut back on their scheduled hours if they work during a weekend or evening (in accordance with the availability described above). 
+If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.
+
 We expect the RA to have flexibility to accommodate participants' schedules for lab visits.
-For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on Scheduling Expectations below).
+For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on [Scheduling Expectations](#schedulingExpectations) below).
+We expect that the RA keeps eight weekend days available per semester (three weekend days per month) for the purposes of working with families. 
+In addition, we expect that each RA keeps two weekday evenings available for the purposes of working with families.
 We will do our best to fairly distribute the evening and weekend hours across the team.
 
-We expect RAs to regularly communicate with the team, using the appropriate methods of communication (outlined in the Lab Communication checklist).
-Methods for resolving conflicts and personnel issues are described in the Lab Communication checklist.
+We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](https://devpsylab.github.io/LabWiki/manual.html#labCommunication) section of the Lab Manual.
+Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](https://devpsylab.github.io/LabWiki/manual.html#resolvingConflicts)).
 We expect the RA to take personal responsibility for the work they are assigned.
 Assigned work will always coincide with the 10 hours the RA is already scheduled for.
 With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours.
@@ -46,6 +48,16 @@ Petersen to discuss the possibility of doing an honor's thesis in conjunction wi
 We expect RAs to contribute to each weekly lab meeting discussion. We expect RAs to submit their lab report by the deadline and in the correct location.
 
 We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.
+
+# Scheduling Expectations {#schedulingExpectations}
+
+[**INSERT FROM LAB MANUAL**]
+
+[**CONSIDER MOVING SCHEDULING INFO FROM ABOVE SECTION TO HERE, TO CONSOLIDATE SCHEDULING EXPECTATIONS IN ONE PLACE**]
+
+### Your responsibilities as an RA
+
+### Our responsibilities to you
 
 # Grading Scale
 
