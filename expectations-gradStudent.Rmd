@@ -470,7 +470,7 @@ The APA Code of Ethics advises that this is a first step toward resolution.
 If that is not possible, appropriate, or proves ineffective (i.e., does not change behavior), please speak to me about the problem immediately.
 Please also speak to me if you think you have an interpersonal issue with me.
 If, after having talked with me, you feel the issue will not be resolved and you want to speak to someone else to address the issue, follow the chain of command and talk to the Area Coordinator, the Director of Graduate Studies, and/or the Departmental Executive Officer.
-An overview of the [lab organizational chart](#organizationalChart) is in the Appendix below.
+The chain of command is depicted in the [lab organizational chart](https://devpsylab.github.io/LabWiki/manual.html#organizationalChart).
 
 ## Consequences of non-compliance
 
@@ -520,10 +520,6 @@ Mentee's Signature _________________________________	Date ____________
 Mentor's Signature _________________________________	Date ____________
 
 # Appendix
-
-## Lab Organizational Chart {#organizationalChart}
-
-![Lab Organizational Chart](images/labOrgChart.png)
 
 ## Approximate Expected Timelines {#timelines}
 
