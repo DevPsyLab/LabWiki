@@ -61,11 +61,12 @@ Please note, however, that it must be Group 1 – Biomedical Research – IRB-01
 This is because it is uncommon for psychology labs to complete the IRB-01 training instead of the IRB-02 training.
 IT IS CRUCIALLY IMPORTANT THAT YOU RESPOND TO THIS EMAIL.
 If you do not, it will delay our ability to add you to the IRB project, and thus delay your ability continue RA training.
+
 The basic information they may ask you to confirm is:
 
-    *Department*: Psychological and Brain Sciences
-    *PI*: Dr. Isaac Petersen
-    *Which study or training*: the IRB-01 study 
+*Department*: Psychological and Brain Sciences
+*PI*: Dr. Isaac Petersen
+*Which study or training*: the IRB-01 study 
 
 # Confidentiality
 
@@ -73,10 +74,10 @@ As part of every participant's consent process, we promise that we will protect 
 Therefore, it is imperative that all identifying information related to our participants remains confidential.
 Below are some guidelines on how to handle study data and participant information in various contexts.
 
-**Talking About Participants Outside of Lab**
+**No Talking About Participants Outside of Lab**
 
-While it may be tempting to share lab-related information outside of lab, it is important that you are careful about what you share.
-Even if you are talking to other RAs or people on our IRB project, you never know who else might be able to hear your conversation.
+While it may be tempting to share lab-related information outside of lab, it is important that not talk about participants outside of lab.
+Even if you are talking to other RAs or people on our IRB project, you never know who else might hear your conversation.
 Therefore, you should never use participant names, addresses, physical descriptions, or any other personally identifying information outside of the lab space.
 
 **Photos and Social Media**
@@ -121,7 +122,7 @@ There are several advantages to registering for course credit:
 ## Honors Credit
 
 Students who wish to receive Honors credit for participation in lab may register for HONR:3994:01IND – Honors Research Practicum.
-In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\Lab\Miscellaneous\Course Syllabi\`
+In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
 
 If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for PSY:4990 – Honors Thesis Research.
 Advantages for registering for honors course credit are:
@@ -176,11 +177,23 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 
 **Necessary Characteristics:**
 
-works well with 3-7-year-old children and parents; positive and cheerful attitude; mature; able to quickly and easily soothe upset children; able to stay calm and composed in the face of pressure; able to follow a script with adherence yet flexibility to tailor it to the individual child (age, interests, intellectual capacity, etc.); able to take feedback non-defensively and learn from feedback; confidence to remain in control of a chaotic environment
+- works well with 3-7-year-old children and parents
+- positive and cheerful attitude
+- mature
+- able to quickly and easily soothe upset children
+- able to stay calm and composed in the face of pressure
+- able to follow a script with adherence yet flexibility to tailor it to the individual child (age, interests, intellectual capacity, etc.)
+- able to take feedback non-defensively and learn from feedback
+- confidence to remain in control of a chaotic environment
 
 **Responsibilities Could Include:**
 
-E for LV1 visits; train new LV1 Es; assuring procedural adherence for LV1 (including coaching RA and Camera roles, collaborating with other Es to ensure consistent administration); editing/updating LV1 manual procedures and scripts as needed; keeping LV1 observation room stocked and prepped for visits; lighter focus on coding
+- E for LV1 visits
+- train new LV1 Es
+- assuring procedural adherence for LV1 (including coaching RA and Camera roles, collaborating with other Es to ensure consistent administration)
+- editing/updating LV1 manual procedures and scripts as needed
+- keeping LV1 observation room stocked and prepped for visits
+- lighter focus on coding
 
 ### EEG Specialist
 
@@ -680,6 +693,7 @@ Once you have permission, you can access the folder here:
 https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive
 
 This folder contains two subfolders:
+
 1. "For RA Edit": The documents in this folder allow for editing by all team members.
 This folder includes:
     - Lab Meeting Agendas – Team: This is the running agenda for our weekly lab meetings.
@@ -692,8 +706,6 @@ This folder includes:
     - RA Remote Participation:  This document outlines procedures for remote lab work, including how to setup access to the lab drive, how to remote into a lab computer, etc.
 
 ## Lab Drive
-
-### #1 Rule
 
 **&#35;1 Rule: Never delete any documents or data without explicit permission from the Lab Coordinator, graduate students, or Dr. Petersen first.**
 
