@@ -7,7 +7,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-# Lab Contacts
+<Ins>Lab Contacts</ins>
 
 **Principal Investigator**\
 [Dr. Isaac Petersen, Ph.D.](https://psychology.uiowa.edu/people/isaac-petersen)\
