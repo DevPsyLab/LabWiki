@@ -1,5 +1,5 @@
 ---
-title: "Lab Expectations for Lab Staff"
+title: "Lab Expectations for Lab Coordinator"
 ---
 
 ```{r setup, include = FALSE}
@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Duties
 
-Duties for all lab staff include the following:
+Duties for the Lab Coordinator include the following:
 
 - Participant recruitment
 - Participant scheduling
