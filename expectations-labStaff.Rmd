@@ -39,6 +39,7 @@ Here are the expectations regarding your schedule:
 - You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
+- You respond to team members promptly by email, Slack, or in person (within one business day).
 
 # Lab Coordinator
 
