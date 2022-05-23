@@ -33,6 +33,8 @@ navbar:
         href: expectations-gradStudent.html
       #- text: Postdoctoral Scholars
       #  href: expectations-postdoc.html
+      - text: Lab Coordinator
+        href: expectations-labCoordinator.html
       - text: Lab Staff
         href: expectations-labStaff.html
     - text: "Prospective Applicants"

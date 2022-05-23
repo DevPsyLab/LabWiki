@@ -79,5 +79,5 @@ But Clinton Kelly, co-host of TLC's "What Not to Wear" reality series, says, "Re
 
 # Role-Specific Expectations
 
-In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](https://devpsylab.github.io/LabWiki/expectations-undergradRA.html), [graduate students](https://devpsylab.github.io/LabWiki/expectations-gradStudent.html), [postdoctoral scholars](https://devpsylab.github.io/LabWiki/expectations-postdoc.html), and [lab staff](https://devpsylab.github.io/LabWiki/expectations-labStaff.html).
+In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](https://devpsylab.github.io/LabWiki/expectations-undergradRA.html), [graduate students](https://devpsylab.github.io/LabWiki/expectations-gradStudent.html), [postdoctoral scholars](https://devpsylab.github.io/LabWiki/expectations-postdoc.html), the [Lab Coordinator](https://devpsylab.github.io/LabWiki/expectations-lacCoordinator.html), and [lab staff](https://devpsylab.github.io/LabWiki/expectations-labStaff.html).
 

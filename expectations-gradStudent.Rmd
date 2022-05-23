@@ -519,7 +519,7 @@ In operational terms, some Friday nights should be spent having fun out in the w
 
 # Signature
 
-I have read and understand the above expectations, in addition to the [lab manual](https://devpsylab.github.io/LabWiki/manual.html) and the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html).
+I have read and understand the above expectations, in addition to the expectations outlined in the [lab manual](https://devpsylab.github.io/LabWiki/manual.html) and the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html).
 I agree to meet these expectations and to ask Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
 Mentee's Signature _________________________________	Date ____________
