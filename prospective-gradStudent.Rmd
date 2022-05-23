@@ -43,25 +43,25 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 # The current focus of the Developmental Psychopathology Lab {#currentFocus}
 
 The broader mission of the Developmental Psychopathology Lab is to advance understanding of how self-regulation develops so that we as a society can better treat or even prevent the development of externalizing problems.
-To this aim, the focal project of the lab’s work is an ongoing longitudinal study, the School Readiness Study, that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+To this aim, the focal project of the lab's work is an ongoing longitudinal study, the School Readiness Study, that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
 
 # Am I a good fit for the Developmental Psychopathology Lab?
 
-Our program does not look for “mini-me”s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s).
+Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s).
 Different labs have different structures.
 In some labs, graduate students conduct separate independent research projects.
 My lab has a different structure.
 We are conducting a large longitudinal project funded by the National Institutes of Health.
 Work of this scope takes a village.
-Thus, my lab’s structure is “all hands on deck”—everyone (including research assistants, graduate students, lab staff, and me) contributes to the same large project.
+Thus, my lab's structure is "all hands on deck"—everyone (including research assistants, graduate students, lab staff, and me) contributes to the same large project.
 This leads to a highly collaborative environment in which we can be more productive together.
 Within the broader umbrella of our large longitudinal study, graduate students carve out their unique niche.
 Graduate students in my lab lead projects that are part of the broader study.
 As a result, to be a good fit for my lab, it is important that your interests align with our current study and work.
-In general, I look for graduate students who will “hit the ground running” in my lab, in terms of data analysis and writing papers, and whose interests closely align with the lab’s current study and focus (as described [above](#currentFocus)).
+In general, I look for graduate students who will "hit the ground running" in my lab, in terms of data analysis and writing papers, and whose interests closely align with the lab's current study and focus (as described [above](#currentFocus)).
  
 # What to do before applying
 
@@ -82,7 +82,7 @@ It is preferable for the writing sample to be an example of scientific writing (
 
 I find it helpful when applicants include the following in their professional statements[^1]:
 
-1. A clear statement of your general research interests and how they relate to our lab’s mission and work
+1. A clear statement of your general research interests and how they relate to our lab's mission and work
 1. A clear statement of why you are interested in this lab, in particular, versus other labs that study the development of self-regulation and externalizing problems
 1. A statement about your career goals (even if they are approximate/might change, it is helpful to see your thinking!), including the activities and context(s) of interest
 1. Discussions of your independent research experience(s) and what you learned from them.
