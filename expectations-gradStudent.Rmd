@@ -578,7 +578,8 @@ Mentor's Signature _________________________________	Date ____________
 | Year 6: Spring | Internship                                                                   |
 | Year 7: Summer | Graduate with Ph.D.!                                                         |
 
-These are guideposts toward completing program requirements within a 5-year timeframe. As we have discussed, my expectation is that you will be engaged in research activities beyond those required by the program.
+These are guideposts toward completing program requirements within a 5-year timeframe.
+As we have discussed, my expectation is that you will be engaged in research activities *beyond* those required by the program.
 
 ### Coursework Timeline {#timeline-coursework}
 
