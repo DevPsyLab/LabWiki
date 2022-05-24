@@ -585,53 +585,52 @@ As we have discussed, my expectation is that you will be engaged in research act
 
 | **Semester**   | **Coursework Goal(s)**                                                             |
 |----------------|------------------------------------------------------------------------------------|
-| Year 1: Fall   | Orientation to Clinical Research (with DCT)                                        |
-|                | Quantitative Methods Course                                                        |
-|                | Descriptive Psychopathology OR Psychological Therapies                             |
-|                | Introductory Practicum                                                             |
-|                | Research                                                                           |
-| Year 1: Spring | Quantitative Course                                                                |
-|                | Principles of Psychological Assessment                                             |
-|                | Ethics OR Breadth Course (History, Cognitive, Social, Biological, Developmental)   |
-|                | Assessment Practicum                                                               |
-|                | Research                                                                           |
-| Year 2: Summer | Assessment Practicum/Ethics 3-week course possibility                              |
-| Year 2: Fall   | Descriptive Psychopathology OR Psychological Therapies                             |
-|                | Ethics OR Breadth Course                                                           |
-|                | Assessment Practicum                                                               |
-|                | Research                                                                           |
-| Year 2: Spring | Ethics OR Breadth/BBIP Course                                                      |
-|                | Breadth Course                                                                     |
-|                | Therapy practicum                                                                  |
-|                | Research                                                                           |
-| Year 3: Summer | Therapy Practicum                                                                  |
-| Year 3: Fall   | Breadth Course                                                                     |
-|                | Research                                                                           |
-|                | Therapy practicum                                                                  |
-| Year 3: Spring | Breadth Course                                                                     |
-|                | Research                                                                           |
-|                | Therapy practicum                                                                  |
-| Year 4: Summer | Therapy Practicum                                                                  |
-| Year 4: Fall   | Breadth Course (if needed)                                                         |
-|                | Research                                                                           |
-|                | Therapy practicum                                                                  |
-| Year 4: Spring | Breadth Course (if needed)                                                         |
-|                | Research                                                                           |
-|                | Therapy practicum                                                                  |
-| Year 5: Summer | Therapy Practicum                                                                  |
-| Year 5: Fall   | Dissertation Research                                                              |
-|                | Therapy/External Practicum                                                         |
-| Year 5: Spring | Dissertation Research                                                              |
-|                | Therapy/External Practicum                                                         |
-| Year 6         | Internship                                                                         |
+| Year 1: Fall   | Orientation to Clinical Research (with DCT)                              |
+|                | Quantitative Methods Course                                              |
+|                | Descriptive Psychopathology OR Psychological Therapies                   |
+|                | Introductory Practicum                                                   |
+|                | Research                                                                 |
+| Year 1: Spring | Quantitative Course                                                      |
+|                | Principles of Psychological Assessment                                   |
+|                | Breadth Course (History, Cognitive, Social, Biological, Developmental)   |
+|                | Assessment Practicum                                                     |
+|                | Research                                                                 |
+| Year 2: Summer | Assessment Practicum                                                     |
+| Year 2: Fall   | Descriptive Psychopathology OR Psychological Therapies                   |
+|                | Breadth Course                                                           |
+|                | Assessment Practicum                                                     |
+|                | Research                                                                 |
+| Year 2: Spring | Breadth/BBIP Course                                                      |
+|                | Breadth Course                                                           |
+|                | Therapy practicum                                                        |
+|                | Research                                                                 |
+| Year 3: Summer | Therapy Practicum                                                        |
+| Year 3: Fall   | Breadth Course                                                           |
+|                | Research                                                                 |
+|                | Therapy practicum                                                        |
+| Year 3: Spring | Breadth Course                                                           |
+|                | Research                                                                 |
+|                | Therapy practicum                                                        |
+| Year 4: Summer | Therapy Practicum                                                        |
+| Year 4: Fall   | Breadth Course (if needed)                                               |
+|                | Research                                                                 |
+|                | Therapy practicum                                                        |
+| Year 4: Spring | Breadth Course (if needed)                                               |
+|                | Research                                                                 |
+|                | Therapy practicum                                                        |
+| Year 5: Summer | Therapy Practicum                                                        |
+| Year 5: Fall   | Dissertation Research                                                    |
+|                | Therapy/External Practicum                                               |
+| Year 5: Spring | Dissertation Research                                                    |
+|                | Therapy/External Practicum                                               |
+| Year 6         | Internship                                                               |
 
 **Clinical Science Area Course Requirements**
 
 - 3 Clinical Core Courses (Psychopathology, Therapies, Assessment)
 - 2 Quantitative Courses
 - 4 Breadth Courses (Biological, Cognitive, Developmental, and Social Bases of Behavior)
-- History & Systems
-- Ethics
+- History and Systems
 - \*Behavioral-Biomedical Interface Training Program (BBIP) required course (if you are part of BBIP)
 
 Note: Breadth courses can be completed with directed readings.
