@@ -117,7 +117,7 @@ There are several advantages to registering for course credit:
     - Not only is this helpful to have officially listed among your other university courses every semester, but (if you meet the hours and expectations) it can also help your GPA
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 
-[**INSERT SCREENSHOTS**]
+[XXX][**INSERT SCREENSHOTS**]
 
 ## Honors Credit
 
@@ -299,10 +299,10 @@ Advanced projects are given priority to RAs who have shown reliability and commi
 Our buddy system is a knowledge-sharing method that we use when onboarding new RAs into the lab.
 Each new RA is paired up with an existing RA who will guide them through their first weeks in their new role.
 The exchange of information goes both ways.
-New RAs are encouraged to share tips, knowledge and techniques from previous experiences, while the existing RAs makes sure that new lab members feel welcome. 
+New RAs are encouraged to share tips, knowledge, and techniques from previous experiences, while the existing RAs makes sure that new lab members feel welcome. 
 
 During their first weeks, new RAs can feel very overwhelmed and lost, as they need to acquire many new skills in a short amount of time.
-While new RAs typically have the essential skills and interests to succeed in the lab, they are unfamiliar with the work culture, the lab processes and "unspoken rules."
+Although new RAs typically have the essential skills and interests to succeed in the lab, they are unfamiliar with the work culture, the lab processes, and "unspoken rules[^1]."
 While the coding team teaches the RA the coding and entry skills, a lab buddy helps a new RA to ease their transition during the orientation phase and provides guidance and advice in a more informal setting.
 The goal of the buddy system is that new RAs feel welcome and have someone in the lab they can connect with.
 New RAs should be introduced to their buddy at the end of their orientation session.
@@ -551,7 +551,7 @@ Keeping lab-related communication on Slack helps our team work most effectively 
 
 1. Non-private lab-related communication (almost all communication)
     - Use Slack
-        - See "Slack Checklist"
+        - See the [Slack Checklist](#slack)
         - Feel free to send messages and you can notify particular people if the message is for particular people (@isaac-petersen).
         - You can send pictures and attachments in Slack by using the plus sign next to the message.
         - Slack communication can be informal!
@@ -564,10 +564,10 @@ Keeping lab-related communication on Slack helps our team work most effectively 
     - Send email to [Dr. Petersen](https://psychology.uiowa.edu/people/isaac-petersen)
 1. Communication directed to the past members of the lab (e.g., to setup a social gathering)
     - Use Facebook
-        - See "Social Media Checklist"
+        - See the [Social Media Checklist](#socialMedia)
 1. Communication directed to the public (e.g., to communicate results from a published study)
     - Use Twitter and Instagram
-        - See "Social Media Checklist"
+        - See the [Social Media Checklist](#socialMedia)
 
 ### Resolving Conflicts and Personnel Issues {#resolvingConflicts}
 
@@ -581,7 +581,7 @@ Please express personnel concerns directly (in person or by email).
 Do not put personnel grievances in lab reports.
 We encourage you to express concerns to the chain of command if you feel the issues impair your or the team's functioning.
 
-### Slack
+### Slack {#slack}
 
 #### Getting Started
 
@@ -646,7 +646,7 @@ We are all collaborating on the same project, on the same team, and working towa
     f. 1st assigns final reviewer (member 3 icon shows on card)
     g. Final reviewer makes additional comments and removes icon (signaling member 1 that changes have been reviewed and is ready for final updates) OR determines that task is complete and moves card to <ins>**DONE**</ins> column.
 
-### Social Media
+### Social Media {#socialMedia}
 
 The purpose of our social media pages is to inform the outside world of our research.
 One to two members of the data specialist team are responsible for creating posts.
@@ -686,6 +686,18 @@ We invite everyone to follow us on this platform, so we can get the word out abo
 
 1. Log on to https://www.instagram.com using your personal credentials
 2. Follow @dev_psy_lab
+
+## Lab Documentation
+
+We strive to maintain accurate, detailed, and step-by-step manuals or checklists for all lab procedures.
+Written documentation is important for many reasons, including that it facilitates training, reduces the likelihood of human error, allows us to share our processes with others, and increases replicability.
+If we are missing written documentation for something, please let us know and help us create a manual or checklist!
+
+Just as important as creating written documentation is using it!
+[Checklists to remind surgeons to wash their hands significantly reduce infection rates](https://www.newyorker.com/magazine/2007/12/10/the-checklist); we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists.
+When you are training in a new procedure, do not rely just on what other RAs tell you.
+Despite their best efforts to help you, RAs may sometimes describe procedures incorrectly to you, and it is important to follow what is in the manual.
+If something is missing, incorrect, or out-of-date in the manual, please let us know so we can fix it.
 
 ## Lab OneDrive
 
@@ -766,7 +778,7 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 
 ### Lab Drive Directory—Frequently Used Folders
 
-[**INSERT**]
+[XXX][**INSERT**]
 
 ## Lab Access / Keys
 
@@ -952,7 +964,7 @@ This envelope will only include compensation for the lab session in which they p
 This money will be designated for parking compensation.
 If this cash is added to the participant's compensation on a given day, the TCID, date, and amount needs to be written on the extra cash envelope, and this amount should be reflected on payment receipts.
 - After payment has been made, relevant data will be entered in the Excel spreadsheet ledger (in the payments folder in on the lab drive).
-[**Insert note about Lab Coordinator's responsibility**]
+[XXX][**Insert note about Lab Coordinator's responsibility**]
 - Each participant and the RA will sign a payment receipt form confirming that they received payment.
 Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.
 
@@ -978,7 +990,7 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
             1. Must be on 'speaker/headphones' NOT 'DELL'
         ii. Check for camera angles
             1. 2 cameras: side-by-side display
-            1. To select camera: Click [**INSERT**] icon (upper RH corner of each **camera** screen)
+            1. To select camera: Click [XXX][**INSERT**] icon (upper RH corner of each **camera** screen)
                 a. Click LH mouse button and drag in direction you want the camera to move
                 b. Roll mouse scroll wheel forward to zoom in, and backward to zoom out
 1. Naming Video File:
@@ -1041,7 +1053,7 @@ Select the 'burn to disc' option from the menu that appears.
 
 ### LV2 Files
 
-See LV2 Procedures manual for information regarding [**INSERT**]
+See LV2 Procedures Manual for information regarding [XXX][**INSERT**]
 
 Data backup is a responsibility that is assigned to select RAs by the Lab Coordinator and should be done as time allows during lab hours on a rolling basis.
 
@@ -1161,3 +1173,7 @@ For more information about the `rmarkdown` package that was used to generate the
 # Lab Organizational Chart {#organizationalChart}
 
 ![Lab Organizational Chart](images/labOrgChart.png)
+
+[^1]: Let us know if you perceive any "unwritten rules."
+  We try to limit implicit ("unspoken") rules to the extent possible.
+  So-called "unspoken rules" should either be made explicit or they should be removed entirely.
