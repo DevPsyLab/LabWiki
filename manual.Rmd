@@ -445,6 +445,7 @@ However, at the end of the one week, everyone should still be signed up for a to
 ## Shared Calendars
 
 How to add the shared calendars:
+
 1. Open your personal Office 365 Outlook calendar 
 1. Select "Add Calendar" towards the top of the screen
     a. Select "From directory"
@@ -457,6 +458,7 @@ How to add the shared calendars:
     a. Select "Open"
 
 Here is a description of the different calendars and instructions how to use them:
+
 1. RES-RA-LC-Sched
     - This calendar has your individual schedule in the lab.
     It is color-coded by RA.
