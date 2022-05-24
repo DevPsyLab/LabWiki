@@ -583,8 +583,8 @@ As we have discussed, my expectation is that you will be engaged in research act
 
 ### Coursework Timeline {#timeline-coursework}
 
-| **Semester**   | **Coursework Goal(s)**                                                             |
-|----------------|------------------------------------------------------------------------------------|
+| **Semester**   | **Coursework Goal(s)**                                                   |
+|----------------|--------------------------------------------------------------------------|
 | Year 1: Fall   | Orientation to Clinical Research (with DCT)                              |
 |                | Quantitative Methods Course                                              |
 |                | Descriptive Psychopathology OR Psychological Therapies                   |
