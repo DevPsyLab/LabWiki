@@ -131,7 +131,7 @@ Advantages for registering for honors course credit are:
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
-[**INSERT SCREENSHOTS**]
+[XXX][**INSERT SCREENSHOTS**]
 
 ### How to Fulfill the Experiential Learning Requirement for Honors Credit
 
@@ -1037,7 +1037,8 @@ Check the burned DVD case folder to be sure.
 
 Full-length visit video, found in TC folders in `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\`
 
-1. Open the DVD compartment of the CPU of your computer by clicking the button on it. Insert the DVD.
+1. Open the DVD compartment of the CPU of your computer by clicking the button on it.
+Insert the DVD.
 1. A window that says, 'How do you want to use this disc?' should pop up.
 Select the 'With a CD/DVD player' option.
 1. Rename the DVD to 'TCID_wave_LV1' and click next.
