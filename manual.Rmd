@@ -909,6 +909,8 @@ We just ask you act normally."
 
 #### DOs
 
+The following are "Do"s when working with children in the lab:
+
 - Build rapport early
     - Use comments and compliments more than questions; questions can be perceived as commands
     - Comment on things they like (e.g., their shoes, hair, shirt, favorite superhero)
@@ -934,9 +936,11 @@ We just ask you act normally."
 
 #### DON'Ts
 
+The following are "Don't"s when working with children in the lab:
+
 - Ask commands in the form of a question ("Can you sit up in your chair?")
     - Instead: Be polite but firm.
-	("Sit up in your chair" or "Please sit up in your chair" or "Let's sit up in your chair.")
+    ("Sit up in your chair" or "Please sit up in your chair" or "Let's sit up in your chair.")
 - Frame things in the negative (or the absence of negative)—i.e., don't provide reassurance ("It's going to be okay" or "It's not going to hurt.")
     - Instead: frame things in the positive ("Let's put on the special ocean cap to be just like Jamie so we can play the fun games!")
 - Ask yes/no questions to "no birds"
