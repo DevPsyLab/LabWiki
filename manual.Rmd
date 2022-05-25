@@ -1120,7 +1120,7 @@ See [Cute Moments Videos](#cuteMoments) above for a description of how to use th
 To combine two videos from a visit with interrupted recordings, follow these steps:
 
 1. Open the computer program Avidemux
-1. Open the first visit video for a given TC (File  Open  Find files on lab drive)
+1. Open the first visit video for a given TC (File &rarr; Open &rarr; Find files on lab drive)
 1. Open File Explorer and locate the video files
 1. Drag the second video from the File Explorer Window straight into the Avidemux window, dropping it over the first video—you should see the video duration increase when it is added, indicating it is appending to the end of the previous video
 1. Save the new video in the TC's folder as TCID_Wave_LV1 (`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\`)
