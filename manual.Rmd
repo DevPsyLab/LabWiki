@@ -113,6 +113,7 @@ Keep in mind that some courses differ in the way that they are graded.
 - Students receive a Pass/Fail grade for PSY:3994.
 
 There are several advantages to registering for course credit:
+
 - Your participation in lab will be accounted for on your transcript
     - Not only is this helpful to have officially listed among your other university courses every semester, but (if you meet the hours and expectations) it can also help your GPA
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
