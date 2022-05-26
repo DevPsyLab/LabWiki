@@ -72,11 +72,18 @@ The basic information they may ask you to confirm is:
 
 As part of every participant's consent process, we promise that we will protect their information.
 Therefore, it is imperative that all identifying information related to our participants remains confidential.
-Below are some guidelines on how to handle study data and participant information in various contexts.
+Below are guidelines on how to handle study data and participant information.
+
+**Handling Data**
+
+All hard-copy physical research data must remain in the lab.
+All electronic data should be accessed from the lab, on university computers, or secure private computers.
+Electronic data should not be accessed on public computers.
+Identifiable electronic data (including visit videos) should be stored only on the lab's RDSS share and should not be saved onto your computer.
 
 **No Talking About Participants Outside of Lab**
 
-While it may be tempting to share lab-related information outside of lab, it is important that not talk about participants outside of lab.
+It is important that you *not* talk about participants outside of lab.
 Even if you are talking to other RAs or people on our IRB project, you never know who else might hear your conversation.
 Therefore, you should never use participant names, addresses, physical descriptions, or any other personally identifying information outside of the lab space.
 
