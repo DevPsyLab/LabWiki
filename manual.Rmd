@@ -638,7 +638,7 @@ We are all collaborating on the same project, on the same team, and working towa
 1. When working on a card, move the specific card to the 'Doing' category, so that others know you are working on that task
 1. When the task is completed, and doesn't need to be followed up by another person, move the card from 'Doing' to 'Done'
 1. When you are assigned a task in Trello that requires another labmate to follow-up:
-    a. The 1st person is assigned task (member 1 icon shows on card) 
+    a. The 1st person is assigned task (member 1 icon shows on card)
     b. 1st (member 1) completes task (i.e., enters questionnaire)
     c. 1st assigns a reviewer (member 2 icon shows on card) 
     d.	Reviewer makes comments and removes their icon—signaling to 1st that task is ready for updates 
@@ -955,7 +955,7 @@ The following are "Don't"s when working with children in the lab:
 1. Cash is preferred method of payment (lab participants/PC only)
 1. Checks will be arranged as compensation for PP and SC when they complete the online questionnaire
 1. Participants will be compensated according to the escalating payment schedule
-1. Participants/PCs may be compensated for parking 
+1. Participants/PCs may be compensated for parking
 1. Payment to PP and SC only processed after the questionnaire is verified as completed
 1. All payment documents must include TCID, Wave, and date of service.
 1. No documents should ever contain participant SSN's (unnecessary for our level of compensation)
