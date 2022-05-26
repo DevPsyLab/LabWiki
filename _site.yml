@@ -12,7 +12,7 @@ output:
     df_print: paged
     code_download: true
     theme: readable
-    css: custom.css
+    css: ["custom.css", "./font/css/roboto.css"]
     includes:
       in_header:
       - "includes/google_analytics.html"
@@ -56,4 +56,3 @@ navbar:
       icon: fa-facebook
     - href: https://www.instagram.com/dev_psy_lab
       icon: fa-instagram
-
