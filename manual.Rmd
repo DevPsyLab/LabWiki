@@ -995,7 +995,7 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
         ii. Check for camera angles
             1. 2 cameras: side-by-side display
             1. To select camera: Click
-            ![Visual Studio Code](images/fourArrowCross.png)
+            ![Visual Studio Code](images/fourArrowCross.png){width=10%}
             icon (upper RH corner of each **camera** screen)
                 a. Click LH mouse button and drag in direction you want the camera to move
                 b. Roll mouse scroll wheel forward to zoom in, and backward to zoom out
