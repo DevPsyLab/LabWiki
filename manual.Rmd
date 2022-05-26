@@ -64,9 +64,9 @@ If you do not, it will delay our ability to add you to the IRB project, and thus
 
 The basic information they may ask you to confirm is:
 
-*Department*: Psychological and Brain Sciences
-*PI*: Dr. Isaac Petersen
-*Which study or training*: the IRB-01 study 
+*Department*: Psychological and Brain Sciences\
+*PI*: Dr. Isaac Petersen\
+*Which study or training*: the IRB-01 study
 
 # Confidentiality
 
