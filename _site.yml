@@ -45,7 +45,7 @@ navbar:
         href: honors-expectations.html
       - text: How To
         href: honors-howTo.html
-      - text: "Studies"
+    - text: "Studies"
       menu:
       - text: School Readiness Study
         href: study-schoolReadinessStudy.html
