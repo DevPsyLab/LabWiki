@@ -149,6 +149,7 @@ We have example conference posters at the following location on the lab drive: `
 You must send your draft to Dr. Petersen before you submit it because (1) he is a co-author and is signing off on it by allowing it to be submitted, and (2) he wants to give helpful feedback to give it the best chance of being accepted.
 
 Below is a list of potentially relevant conferences:
+
 - Society for Research in Child Development (SRCD): This international conference is the most commonly attended conference by members of the lab.
 - International Society for Research in Child and Adolescent Psychopathology (ISRCAP)
 - International Society for the Study of Behavioral Development (ISSBD)
