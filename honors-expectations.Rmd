@@ -7,6 +7,8 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
+# Expectations
+
 The Honor's Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
 If you are interested in conducting an Honor's thesis, it is your responsibility to contact Dr. Petersen to set up a meeting (see below).
@@ -38,6 +40,8 @@ Read the Cover Page Instructions for how to create your cover page, what you nee
 UI Undergraduate Research Festival:
 https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals
 
+# Resources
+
 Must-Have Resources:
 
 1. "Writing Empirical Research Reports: A Basic Guide for Students of the Social and Behavioral Sciences", 8th Edition (Fred Pyrczak)\
@@ -54,6 +58,8 @@ https://www.zotero.org
 Please note that we do not want these resources to be financial barriers to completing an Honors thesis.
 You may be able to find many of these at the library, and Dr. Petersen may be able to lend you a copy, as well.
 Please talk with Dr. Petersen if these resources would be a financial barrier.
+
+# Steps to Get Started
 
 Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you'd like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
 

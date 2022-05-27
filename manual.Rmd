@@ -33,24 +33,30 @@ Date drafted: October 2020
 # Lab Glossary
 
 DevPsy Lab
-: shorthand for Developmental Psychopathology Lab\
+: shorthand for Developmental Psychopathology Lab
+
 
 RA
-: research assistant\
+: research assistant
+
 
 E
-: experimenter\
+: experimenter
+
 
 TC
-: target child, or the child participant\
+: target child, or the child participant
+
 
 coding
 : the term means different things depending on the context.
 In our lab, we use "coding" as a shorthand to refer to "behavioral coding from video," which involves assessing a construct from video observation to turn the video segment into numbers that can be analyzed.
-This is distinct from computer programming, which is another type of coding.\
+This is distinct from computer programming, which is another type of coding.
+
 
 RTFM
-: Read the ******* manual\
+: Read the ******* manual
+
 
 RTFC
 : Read the ******* checklist

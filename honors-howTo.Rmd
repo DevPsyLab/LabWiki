@@ -30,8 +30,8 @@ https://its.uiowa.edu/support/article/1876
 
 The full drive path to our lab drive is:
 
-- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab`
-- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab`
+- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
+- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
 # Access List of Measures
 
@@ -80,8 +80,8 @@ https://its.uiowa.edu/support/article/1876
 
 The full drive path to our lab drive is: 
 
-- PC: \\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab
-- Mac: smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab
+- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
+- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
 # Remote Access to a Lab Computer
 
