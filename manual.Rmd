@@ -185,10 +185,14 @@ More information on the Honors experiential learning process for research involv
 
 # RA Roles
 
-The Developmental Psychopathology Lab uses a "generalist with specialization" approach—we have three specialized tracks or roles that RAs can train in after completing basic lab training.
-**Every role is important**.
-Placement in these roles is dependent upon each RA's (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team's needs.
+The Developmental Psychopathology Lab uses a "generalist with specialization" approach—there are some tasks that all RAs are trained to perform, and there are other tasks that RAs specialize in.
+We have three specialized tracks or roles that RAs can train in after completing basic lab training: [Behavioral Testing Specialist](#behavioralTestingSpecialist), [Electroencephalography (EEG)
+ Specialist](eegSpecialist), and [Data Specialist](dataSpecialist).
+ **Every role is important**.
+Placement in these roles depends on each RA's (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team's needs.
 We take into consideration the desired placement of every RA, but ultimately Dr. Petersen and the Lab Coordinator make this determination based on a, b, c, and d from above.
+
+Below are cross-cutting responsibilities that all RAs are expected to contribute to.
 
 **Cross-Cutting Responsibilities**
 
@@ -203,7 +207,9 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 
 ## Specialized Roles
 
-### Behavioral Testing Specialist
+### Behavioral Testing Specialist {#behavioralTestingSpecialist}
+
+Below are necessary characteristics and potential responsibilities for Behavioral Testing Specialists:
 
 **Necessary Characteristics:**
 
@@ -212,20 +218,22 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 - mature
 - able to quickly and easily soothe upset children
 - able to stay calm and composed in the face of pressure
-- able to follow a script with adherence yet flexibility to tailor it to the individual child (age, interests, intellectual capacity, etc.)
+- able to follow a script with adherence yet flexibility to tailor it to the individual child (based on the child's age, interests, intellectual capacity, etc.)
 - able to take feedback non-defensively and learn from feedback
 - confidence to remain in control of a chaotic environment
 
 **Responsibilities Could Include:**
 
-- Experimenter (E) for LV1 visits
-- train new LV1 Es
+- serving as an experimenter (E) for behavioral testing (lab visit 1; LV1) visits
+- training new LV1 Es
 - assuring procedural adherence for LV1 (including coaching RA and Camera roles, collaborating with other Es to ensure consistent administration)
 - editing/updating LV1 manual procedures and scripts as needed
 - keeping LV1 observation room stocked and prepped for visits
-- lighter focus on coding
+- having a lighter focus on coding
 
-### EEG Specialist
+### EEG Specialist {#eegSpecialist}
+
+Below are necessary characteristics and potential responsibilities for EEG Specialists:
 
 **Necessary Characteristics:**
 
@@ -233,24 +241,27 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 - attention to detail
 - confidence to remain in control of a chaotic environment
 - comfortable trouble-shooting issues with technical equipment (after receiving extensive training); ability to follow strict procedures and guidelines
-- works well with 3-7-year-old children and parents
+- works well with 3–7-year-old children and parents
 - mature
 
 **Responsibilities Could Include:**
 
-- E for LV2 visits
-- train new LV2 Es
+- serving as an E for EEG (lab visit 2; LV2) visits
+- training new LV2 Es
 - assuring procedural adherence for LV2 (including coaching RA roles, collaborating with other Es to trouble-shoot technical issues and assure procedural adherence)
 - editing/updating LV2 manual procedures and scripts as needed
 
-### Data Specialist
+### Data Specialist {#dataSpecialist}
+
+Below are necessary characteristics and potential responsibilities for Data Specialists:
 
 **Necessary Characteristics:**
 
 - professional communication skills
 - knows the study well (able to describe the study and consent form thoroughly, can answer questions about the study)
 - able to interact well with people in the community for purposes of making connections with schools/preschools/daycares for recruitment
-- highly organized; attention to detail
+- highly organized
+- attention to detail
 - technical skills
 - creative for developing recruitment and retention tools and discovering recruitment sources
 - comfortable in connecting with diverse people in diverse places
