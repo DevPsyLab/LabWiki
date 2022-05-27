@@ -1165,7 +1165,7 @@ In the event that they save separately and result in two separate video files of
     a. NOTE: You enter the entire file name, including the extension (e.g., `1001video2.mp4`)
 1. If the file is large, the program may take over an hour to combine, but do not close out of the window until it has finished running.
 When it is done, there will be a saved video file named "Combined.mp4" in the same folder.
-1. Rename the "Combined.mp4" file with `TCID_Wave_LV1` and move it to the TC's LV1 video folder on the drive (Z:\Studies\School Readiness Study\Videos\Lab Visit 1)
+1. Rename the "Combined.mp4" file with `TCID_Wave_LV1` and move it to the TC's LV1 video folder on the drive (`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\`)
 
 NOTE: This script will only work if you open the Lab Drive directly from the Desktop to navigate to the Side by Side folder.
 *You cannot open it from the Quick Access menu in File Explorer.*

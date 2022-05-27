@@ -1,0 +1,43 @@
+---
+title: "School Readiness Study"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+The School Readiness Study is a longitudinal study that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
+
+# Open Science Framework
+
+For more information on the study, including papers from the project, the available measures, the Data Dictionary, and the pre-registered hypotheses, see the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8
+
+# Papers
+
+A bibliography of papers from the study is located here:
+https://docs.google.com/document/d/1yfNcWqayX5DdA5bdI9rk8fEB6M9Y-T8GxVvejqHZGF8/edit
+
+# Available Measures
+
+To see a list of measures available for the School Readiness Study (organized by domain), see here:
+https://docs.google.com/spreadsheets/d/1ptL0GdSHAjAA7zpZGABYuUy9U6eR3XJZI0mzB1wDPn8/edit?usp=sharing
+
+# Data Dictionary
+
+A Data Dictionary is a file that describes the meaning of variables that are in a data file.
+To access the Data Dictionary for the composite/summary variables in the School Readiness Study, see here:
+https://docs.google.com/spreadsheets/d/1N5fALfKQQsw4frQxlPoG19MakvzA2HwKs9hSgt2Yax0/edit?usp=sharing
+
+To access the Data Dictionary for the School Readiness Study Project in REDCap, see here[^1]:
+https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4941
+
+To access the data dictionary for the School Readiness Study Screening Project in REDCap, see here:
+https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4958
+
+# Pre-registered Hypotheses
+
+To see the pre-registered hypotheses for the study, see here: https://osf.io/gpn5y
+
+[^1]: Only accessible by team members.
