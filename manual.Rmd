@@ -35,28 +35,22 @@ Date drafted: October 2020
 DevPsy Lab
 : shorthand for Developmental Psychopathology Lab
 
-
 RA
 : research assistant
-
 
 E
 : experimenter
 
-
 TC
 : target child, or the child participant
-
 
 coding
 : the term means different things depending on the context.
 In our lab, we use "coding" as a shorthand to refer to "behavioral coding from video," which involves assessing a construct from video observation to turn the video segment into numbers that can be analyzed.
 This is distinct from computer programming, which is another type of coding.
 
-
 RTFM
 : Read the ******* manual
-
 
 RTFC
 : Read the ******* checklist
@@ -360,7 +354,7 @@ Each new RA is paired up with an existing RA who will guide them through their f
 The exchange of information goes both ways.
 New RAs are encouraged to share tips, knowledge, and techniques from previous experiences, while the existing RAs makes sure that new lab members feel welcome. 
 
-During their first weeks, new RAs can feel very overwhelmed and lost, as they need to acquire many new skills in a short amount of time.
+During their first weeks, new RAs can feel very overwhelmed and lost, because they are presented with considerable new information in a short amount of time.
 Although new RAs typically have the essential skills and interests to succeed in the lab, they are unfamiliar with the work culture, the lab processes, and "unspoken rules[^1]."
 While the coding team teaches the RA the coding and entry skills, a lab buddy helps a new RA to ease their transition during the orientation phase and provides guidance and advice in a more informal setting.
 The goal of the buddy system is that new RAs feel welcome and have someone in the lab they can connect with.
@@ -374,7 +368,7 @@ New RAs should be introduced to their buddy at the end of their orientation sess
 
 ### Your responsibilities as an RA
 
-ou are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
+You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
 If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks.
 
 Unless otherwise stated, running lab visits is always the top priority.
