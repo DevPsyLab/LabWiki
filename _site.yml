@@ -19,8 +19,8 @@ output:
 navbar:
   title: "Lab Wiki for the Developmental Psychopathology Lab"
   left:
-    - text: "Home"
-      href: index.html
+    #- text: "Home"
+    #  href: index.html
     - text: "Lab Manual"
       href: manual.html
     - text: "Expectations"
