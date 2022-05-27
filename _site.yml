@@ -29,6 +29,8 @@ navbar:
         href: expectations-everyone.html
       - text: Undergraduate Research Assistants
         href: expectations-undergradRA.html
+      - text: SROP Students
+        href: expectations-SROP.html
       - text: Graduate Students
         href: expectations-gradStudent.html
       #- text: Postdoctoral Scholars
