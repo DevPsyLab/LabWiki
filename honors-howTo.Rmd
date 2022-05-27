@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Access the Lab Drive
 
-Your member folder on the lab drive (\Lab\Members) should be used for all thesis-related work.
+Your member folder on the lab drive (`\Lab\Members\`) should be used for all thesis-related work.
 This is where you will find your data file(s), and where you should save all writing and analysis files.
 Please organize all thesis-related files into subfolders within your member folder using this structure:
 
