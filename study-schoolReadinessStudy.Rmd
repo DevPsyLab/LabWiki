@@ -33,7 +33,7 @@ https://docs.google.com/spreadsheets/d/1N5fALfKQQsw4frQxlPoG19MakvzA2HwKs9hSgt2Y
 To access the Data Dictionary for the School Readiness Study Project in REDCap, see here[^1]:
 https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4941
 
-To access the data dictionary for the School Readiness Study Screening Project in REDCap, see here:
+To access the data dictionary for the School Readiness Study Screening Project in REDCap, see here[^1]:
 https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4958
 
 # Pre-registered Hypotheses
