@@ -39,8 +39,6 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
 <script>
@@ -414,30 +412,6 @@ div.tocify {
         <li>
   <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
 </li>
-<li>
-  <a href="https://github.com/DevPsyLab">
-    <span class="fa fa-github"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://twitter.com/devpsylab">
-    <span class="fa fa-twitter"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.facebook.com/DevPsyLab">
-    <span class="fa fa-facebook"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="https://www.instagram.com/dev_psy_lab">
-    <span class="fa fa-instagram"></span>
-     
-  </a>
-</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -499,6 +473,16 @@ div.tocify {
 </div>
 
 <div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIEV4cGVjdGF0aW9ucyBmb3IgTGFiIFN0YWZmIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGVycm9yID0gVFJVRSkKYGBgCgojIER1dGllcwoKRHV0aWVzIGZvciBsYWIgc3RhZmYgaW5jbHVkZSB0aGUgZm9sbG93aW5nOgoKLSBQYXJ0aWNpcGFudCByZWNydWl0bWVudAotIFBhcnRpY2lwYW50IHNjaGVkdWxpbmcKLSBMb25naXR1ZGluYWwgdHJhY2tpbmcgYW5kIHJldGVudGlvbiBvZiBwYXJ0aWNpcGFudHMKLSBEYXRhIGNvbGxlY3Rpb24KLSBEYXRhIG1hbmFnZW1lbnQKLSBCZWhhdmlvcmFsIGNvZGluZyBmcm9tIHZpZGVvCi0gU3VwZXJ2aXNpb24gb2YgcmVzZWFyY2ggYXNzaXN0YW50cwotIE1ha2luZyBsYWIgc3BhY2Ugd2FybSwgd2VsY29taW5nLCBhbmQgY2hpbGQgYW5kIGZhbWlseSBmcmllbmRseQotIFF1YWxpdHkgY29udHJvbCBhbmQgZW5zdXJpbmcgaGlnaC1xdWFsaXR5IGFuZCBlZmZpY2llbnQgcHJvY2VkdXJlcwotIEF0dGVuZGluZyBhbmQgY29udHJpYnV0aW5nIGF0IGxhYiBtZWV0aW5nCgojIFlvdXIgU2NoZWR1bGUKCkhlcmUgYXJlIHRoZSBleHBlY3RhdGlvbnMgcmVnYXJkaW5nIHlvdXIgc2NoZWR1bGU6CgotIFlvdSBhcmUgaW4gdGhlIG9mZmljZSBmb3IgeW91ciBkZXNpZ25hdGVkIGhvdXJzIHBlciB3ZWVrIHRoYXQgYXJlIHJlZ3VsYXJseSBzY2hlZHVsZWQgYmV0d2VlbiA5YW3igJM1cG0gTW9uZGF5IHRocm91Z2ggRnJpZGF5LgotIFlvdSBtYXkgaGF2ZSB0byB3b3JrIG91dHNpZGUgdGhvc2UgaG91cnMgKGVhcmx5IG1vcm5pbmdzL2V2ZW5pbmdzL3dlZWtlbmRzKSBmb3IgdGhlIHB1cnBvc2Ugb2YgcnVubmluZyBwYXJ0aWNpcGFudHMuCi0gWW91IGdldCBhcHByb3ZhbCBmcm9tIG1lIGZvciBhbnkgZGV2aWF0aW9ucyBmcm9tIHRoaXMgc2NoZWR1bGUgKHdvcmtpbmcgb3V0c2lkZSB0aG9zZSBob3Vycywgd29ya2luZyBtb3JlIHRoYW4geW91ciBkZXNpZ25hdGVkIGhvdXJzLCBldGMuKSwgYW5kIHVwZGF0ZSB5b3VyIHNjaGVkdWxlIGFjY29yZGluZ2x5IGluIHRoZSBvbmxpbmUgY2FsZW5kYXIuCi0gVGhlIHBvc2l0aW9uIGludm9sdmVzIGZ1bGx5IGluLXBlcnNvbiB3b3JrLgotIFlvdSBsZXQgbWUgYW5kIHRoZSByZWxldmFudCB0ZWFtIG1lbWJlcnMga25vdyBieSBTbGFjayBpZiB5b3Ugd2lsbCBub3QgYmUgYWJsZSB0byBtYWtlIGl0IGluIGZvciB5b3VyIHJlZ3VsYXJseSBzY2hlZHVsZWQgaG91cnMuCi0gWW91IGxldCBtZSBhbmQgdGhlIHJlbGV2YW50IHRlYW0gbWVtYmVycyBrbm93IGluIHBlcnNvbiBvciBieSBTbGFjayBpZiB5b3UgYXJlIGxlYXZpbmcgdGhlIG9mZmljZSAocnVubmluZyBsYWIgZXJyYW5kcywgZXRjLikuCi0gWW91IGtlZXAgeW91ciBzY2hlZHVsZSBpbiB0aGUgb25saW5lIGNhbGVuZGFyIHVwLXRvLWRhdGUgd2l0aCBhbnkgY2hhbmdlcy4KLSBZb3UgcmVzcG9uZCB0byB0ZWFtIG1lbWJlcnMgcHJvbXB0bHkgYnkgZW1haWwsIFNsYWNrLCBvciBpbiBwZXJzb24gKHdpdGhpbiBvbmUgYnVzaW5lc3MgZGF5KS4KCiMgU2lnbmF0dXJlCgpJIGhhdmUgcmVhZCBhbmQgdW5kZXJzdGFuZCB0aGUgYWJvdmUgZXhwZWN0YXRpb25zLCBpbiBhZGRpdGlvbiB0byB0aGUgZXhwZWN0YXRpb25zIG91dGxpbmVkIGluIHRoZSBbbGFiIG1hbnVhbF0oaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0xhYldpa2kvbWFudWFsLmh0bWwpIGFuZCB0aGUgc2VjdGlvbiBvbiBbZXhwZWN0YXRpb25zIGZvciBldmVyeW9uZSBpbiB0aGUgbGFiXShodHRwczovL2RldnBzeWxhYi5naXRodWIuaW8vTGFiV2lraS9leHBlY3RhdGlvbnMtZXZlcnlvbmUuaHRtbCkuCkkgYWdyZWUgdG8gbWVldCB0aGVzZSBleHBlY3RhdGlvbnMgYW5kIHRvIGFzayBEci4gUGV0ZXJzZW4gaWYgSSBuZWVkIGNsYXJpZmljYXRpb24gb24gYW55IG9mIHRoZSBleHBlY3RhdGlvbnMgYW5kIHN5c3RlbXMgb2YgbGFiLgoKU3RhZmYgTWVtYmVyJ3MgU2lnbmF0dXJlIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwlEYXRlIF9fX19fX19fX19fXwo=</div>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/DevPsyLab" class="fa fa-github fa-fw fa-3x"></a>
+    <a href="https://twitter.com/devpsylab" class="fa fa-twitter fa-fw fa-3x"></a>
+    <a href="https://www.facebook.com/DevPsyLab" class="fa fa-facebook fa-fw fa-3x"></a>
+	<a href="https://www.instagram.com/dev_psy_lab" class="fa fa-instagram fa-fw fa-3x"></a>
+</p>
 
 
 </div>
