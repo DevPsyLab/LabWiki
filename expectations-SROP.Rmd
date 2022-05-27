@@ -1,0 +1,32 @@
+---
+title: "Lab Expectations for SROP Students"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# What Does SROP Entail?
+
+The University of Iowa's Summer Research Opportunities Program (SROP) is an eight-week program designed to provide underrepresented undergraduate students with in-depth research experiences.
+As part of the SROP program, you will conduct an independent research project and will present your findings at a university undergraduate research conference.
+To help you accomplish this, our goal is to get you set up as quickly as possible with our data so that you can formulate a research question and hypothesis, identify and extract the relevant data available, learn and perform the data analysis to test your question, and put together an abstract and poster for the SROP presentation—all on the eight-week timeline.
+
+For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/dei/srop
+
+# Lab Expectations
+
+The following are lab expectations for SROP students:
+
+- You and Dr. Petersen will have a weekly one-on-one meeting to ensure you are making progress on your independent research progress
+- You will attend weekly lab meeting
+- Whenever you are not in a SROP program meeting, you will be working in the lab (during regular business hours; 9am–5pm)
+- You will let us know, in advance, if you will be late to your scheduled shift or will not be able to make your scheduled shift
+
+# Signature
+
+I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html).
+I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
+
+Student Signature ________________	Student Printed Name ________________ Date __________

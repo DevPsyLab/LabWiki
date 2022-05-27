@@ -93,7 +93,7 @@ The basic information they may ask you to confirm is:
 *PI*: Dr. Isaac Petersen\
 *Which study or training*: the IRB-01 study
 
-# Confidentiality
+# Confidentiality {#confidentiality}
 
 As part of every participant's consent process, we promise that we will protect their information.
 Therefore, it is imperative that all identifying information related to our participants remains confidential.
