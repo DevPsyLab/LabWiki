@@ -1,0 +1,167 @@
+---
+title: "Honors Thesis: How To"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Access the Lab Drive
+
+Your member folder on the lab drive (\Lab\Members) should be used for all thesis-related work.
+This is where you will find your data file(s), and where you should save all writing and analysis files.
+Please organize all thesis-related files into subfolders within your member folder using this structure:
+
+	\Lab\Members\[Your HawkID]\Thesis\...subfolders below…
+					          \Analysis\  -- put analysis scripts (`SPSS`, `R`, etc.) here
+					          \Conference Abstract\ -- put your conference abstract here
+					          \Data\ -- put data files here
+					          \Figures\ -- put figures here
+					          \Output\ -- put saved output files here
+					          \Poster\ -- put your poster here
+					          \Presentation\ -- put your presentation here
+					          \Tables\ -- put your tables here
+					          \Thesis\ -- put your Thesis document here (i.e., your paper)
+					
+To access the lab drive off-campus, you will need to set up VPN.
+Visit this website to learn how to set up VPN access to the lab drive:
+https://its.uiowa.edu/support/article/1876
+
+The full drive path to our lab drive is:
+
+- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab`
+- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab`
+
+# Access List of Measures
+
+To see a list of measures available for the School Readiness Study (organized by domain), see here:
+https://docs.google.com/spreadsheets/d/1ptL0GdSHAjAA7zpZGABYuUy9U6eR3XJZI0mzB1wDPn8/edit?usp=sharing
+
+# Access Data Dictionaries
+
+A data dictionary is a file that describes the meaning of variables that are in a data file.
+To access the data dictionary for the composite/summary variables in the School Readiness Study, see here:
+https://docs.google.com/spreadsheets/d/1N5fALfKQQsw4frQxlPoG19MakvzA2HwKs9hSgt2Yax0/edit?usp=sharing
+
+To access the data dictionary for the School Readiness Study Project in REDCap, see here:
+https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4941
+
+To access the data dictionary for the School Readiness Study Screening Project in REDCap, see here:
+https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4958
+
+# Access Helpful Resources for Theses
+
+There are lots of helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
+You can find these resources at the following location on the lab drive:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
+
+# Accessing Articles through the UI Libraries
+You should be able to obtain the PDF of any article, even if it is not freely available online and the university does not provide access to the journal.
+Even if the PDF of article is not available on Google Scholar, you can easily get it through the university library system.
+First, see if the university has access to the electronic/online version of the journal by searching the name in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
+For instance, here is a search for the journal 'Developmental Neuropsychology':\
+https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&search_scope=default_scope&vid=01IOWA
+
+If the university does not have access to the journal, then you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
+
+# Working on Your Thesis
+
+The easiest way to work on your thesis is to work on it in the lab.
+If you must work on your thesis outside of the lab, you may either 1) VPN into the lab drive or 2) "remote in" to a lab computer.
+For instructions how to do each, see below, or see the RA Remote Participation Document here:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Training\RA Remote Participation.docx`
+
+# VPN Access to the Lab Drive {#vpn}
+
+To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
+Visit this website to learn how to set up VPN access to the lab drive:
+https://its.uiowa.edu/support/article/1876
+
+The full drive path to our lab drive is: 
+
+- PC: \\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab
+- Mac: smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab
+
+# Remote Access to a Lab Computer
+
+A possibility may be to "remote in" to a lab computer.
+This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.
+Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).
+However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.
+You can remote in to a lab computer using a program called "Remote Desktop."
+Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
+
+- Before gaining remote access to a lab computer, you will first have to VPN into the lab drive
+- When prompted for the computer's name in the Remote Desktop client, follow this format: 
+PSYC-S###.iowa.uiowa.edu
+- Then, enter your username using this format: iowa\HawkID
+
+# Access SPSS/R for Data Analysis
+
+You can access SPSS and R through an online platform called UI Virtual Desktop.
+You can use Virtual Desktop on campus or from home, but if you are off-campus VPN is required.
+See the the section above for information on [how to set up VPN](#vpn).
+Follow the steps below to set up Virtual Desktop for the first time.
+
+1. Connect to VPN using Cisco AnyConnect.
+1. Go to: https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb
+1. If this is your first time accessing Virtual Desktop on your computer, you will need to install an application called Citrix Receiver.
+In the process of logging into Virtual Desktop, you will encounter a window that prompts you to install Citrix Receiver.
+Follow the prompts on the screen to install the application.
+    a. Note: You must finish the installation before you can progress to the next window
+1. Follow the prompts on the screen to finish logging into Virtual Desktop.
+1. Once you are logged in, click the "Apps" tab at the top of the screen.
+Scroll down and click "Map Network Drive."
+This will prompt a new window.
+1. In the empty "Folder" textbox type the lab drive path:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab`
+1. Click the "Finish" button at the bottom of the window.
+1. Now, navigate back through the "Apps" section of Virtual Desktop to find `SPSS` or `R`, and click it to open.
+1. To open your data file in `SPSS`, click "Open another file…" under "Recent Files."
+1. In the new window, click the drop-down menu under "Look in:" and click the lab drive.
+1. Click the "Members" folder and open your member folder to find your data files.
+Once you have selected your data file, click "Open."
+1. Then, you are ready to analyze your data!
+
+# Important
+
+Lab data must remain on the lab drive.
+Please make sure NOT to move lab data off the lab drive or onto a personal computer.
+It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
+
+# Presenting Work at Conferences
+
+You are expected to present a research poster on your thesis findings at the UI Undergraduate Research Festival.
+You are encouraged (but not required) to additionally present your research at other conferences, as well.
+There are regional, national, and international conferences.
+Presenting your work at conferences provides important importunities for professional development.
+First, it helps people get important experiences in how to communicate research (visually and in conversation).
+Second, it helps people network with other researchers who are interested in similar questions.
+Third, it makes people more competitive for graduate school.
+
+If you would you like to put together a conference submission (abstract), it is your responsibility to put together a draft of the abstract.
+We have example conference abstracts at the following location on the lab drive: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Conference Abstracts\`.
+Feel free to let Dr. Petersen, the Lab Coordinator, and graduate students know what you need (e.g., data, help with analysis, etc.) to help you put together your abstract.
+We are happy to help you in the process.
+If your conference submission is accepted, you will need to put together a poster.
+We have example conference posters at the following location on the lab drive: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Posters\`.
+You must send your draft to Dr. Petersen before you submit it because (1) he is a co-author and is signing off on it by allowing it to be submitted, and (2) he wants to give helpful feedback to give it the best chance of being accepted.
+
+Below is a list of potentially relevant conferences:
+- Society for Research in Child Development (SRCD): This international conference is the most commonly attended conference by members of the lab.
+- International Society for Research in Child and Adolescent Psychopathology (ISRCAP)
+- International Society for the Study of Behavioral Development (ISSBD)
+- Occasional Temperament Conference (OTC)
+- Flux: a conference that deals with developmental cognitive neuroscience
+- Society for Research in Psychopathology (SRP)
+- International Congress of Infant Studies (ICIS)
+- Society for Research on Adolescence (SRA)
+- American Academy of Child and Adolescent Psychiatry (AACAP)
+- Association for Psychological Science (APS)
+- American Psychological Association (APA)
+- Midwestern Psychological Association (MPA)
+- Society for Psychophysiological Research (SPR)
+- National Council for Undergraduate Research (NCUR)
+- Social and Affective Neuroscience Society (SANS)
+- Society for Neuroscience (SFN)

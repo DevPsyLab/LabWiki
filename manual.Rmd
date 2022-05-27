@@ -164,6 +164,10 @@ Advantages for registering for honors course credit are:
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
+Interested students may be able to conduct an Honors project.
+For information on conducting an Honors thesis/project, see [here](https://devpsylab.github.io/LabWiki/honors-expectations.html).
+Note that conducting an Honors project is not a requirement for enrolling in HONR:3994.
+
 [XXX][**INSERT SCREENSHOTS**]
 
 ### How to Fulfill the Experiential Learning Requirement for Honors Credit
@@ -338,6 +342,10 @@ If you are interested in gaining experience in a certain area of lab work, takin
 There may be opportunities available for RAs to gain experience in specialized areas of lab work (e.g., recruitment of participants, data processing) or even to earn authorship on a paper or poster for an ongoing project.
 If you are motivated to gain these kinds of opportunities, you are welcome to ask and see what may be available.
 Advanced projects are given priority to RAs who have shown reliability and commitment.
+
+## Honors Theses/Projects
+
+For information on conducting an Honors Thesis/Project, see [here](https://devpsylab.github.io/LabWiki/honors-expectations.html).
 
 # Lab Buddy System
 

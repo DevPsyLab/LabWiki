@@ -37,6 +37,12 @@ navbar:
         href: expectations-labCoordinator.html
       - text: Lab Staff
         href: expectations-labStaff.html
+    - text: "Honors Projects"
+      menu:
+      - text: Expectations and Resources
+        href: honors-expectations.html
+      - text: How To
+        href: honors-howTo.html
     - text: "Prospective Applicants"
       menu:
       - text: Prospective Undergraduate Research Assistants
