@@ -16,11 +16,11 @@ output:
     includes:
       in_header:
       - "includes/google_analytics.html"
+      after_body:
+      - "includes/footer.html"
 navbar:
   title: "Lab Wiki for the Developmental Psychopathology Lab"
   left:
-    #- text: "Home"
-    #  href: index.html
     - text: "Lab Manual"
       href: manual.html
     - text: "Expectations"
@@ -56,11 +56,3 @@ navbar:
   right:
     - text: "Lab Website"
       href: https://developmental-psychopathology.lab.uiowa.edu
-    - href: https://github.com/DevPsyLab
-      icon: fa-github
-    - href: https://twitter.com/devpsylab
-      icon: fa-twitter
-    - href: https://www.facebook.com/DevPsyLab
-      icon: fa-facebook
-    - href: https://www.instagram.com/dev_psy_lab
-      icon: fa-instagram
