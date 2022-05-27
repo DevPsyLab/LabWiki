@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE,
 # What Does SROP Entail?
 
 The University of Iowa's Summer Research Opportunities Program (SROP) is an eight-week program designed to provide underrepresented undergraduate students with in-depth research experiences.
-As part of the SROP program, you will conduct an independent research project and will present your findings at a university undergraduate research conference.
+As part of the SROP program, you will conduct an independent research project and will present your findings at a University of Iowa undergraduate research conference.
 To help you accomplish this, our goal is to get you set up as quickly as possible with our data so that you can formulate a research question and hypothesis, identify and extract the relevant data available, learn and perform the data analysis to test your question, and put together an abstract and poster for the SROP presentation—all on the eight-week timeline.
 
 For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/dei/srop
@@ -19,10 +19,15 @@ For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/dei
 
 The following are lab expectations for SROP students:
 
-- You and Dr. Petersen will have a weekly one-on-one meeting to ensure you are making progress on your independent research progress
+- You and Dr. Petersen will have a weekly one-on-one meeting to ensure you are making progress on your independent research project
 - You will attend weekly lab meeting
 - Whenever you are not in a SROP program meeting, you will be working in the lab (during regular business hours; 9am–5pm)
 - You will let us know, in advance, if you will be late to your scheduled shift or will not be able to make your scheduled shift
+
+# Resources
+
+For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
+These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
 
 # Signature
 
