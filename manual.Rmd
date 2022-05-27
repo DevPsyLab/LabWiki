@@ -91,11 +91,11 @@ Therefore, you should never use participant names, addresses, physical descripti
 
 No one should ever take photos, screenshots, Snapchats, or any other kind of video recording of lab data, including visit videos.
 Additionally, no data or identifying information should be shared on social media, through email, etc.
-Even when using Slack to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves to refer to specific participants/videos.
+Even when using Slack to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.
 
 **Remote Access**
 
-RAs should never access lab data without permission or direction from the lab coordinator, a graduate student, or the PI.
+RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
 This is to ensure that the RA has received all of the requisite training, instructions, and resources to properly access data remotely.
 After receiving permission or direction to work on lab tasks remotely, it is critical that all team members follow these basic guidelines:
 
@@ -107,35 +107,35 @@ Therefore, if your parents/roommates/friends/etc. are in the room with you and c
 
 ## Regular Credit
 
-Students who wish to receive credit for time spent in the lab may register for PSY:3994:01IND – Research Practicum in Psychology or URES:3992.
-Generally, students enroll in PSY:3994.
+Students who wish to receive credit for time spent in the lab may register for "PSY:3994:01IND – Research Practicum in Psychology" or "URES:3992".
+Generally, students enroll in "PSY:3994".
 
 URES:3992 is 0-hour and has no tuition or fees associated.
-It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if don't have the ability to maintain a regular schedule, etc.).
+It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you don't have the ability to maintain a regular schedule, etc.).
 URES:3992 is also useful for students in the summer so you don't have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see section 4.2) for PSY:4990 and HONR:3994.
+- Students receive a letter grade (see Section \@ref(honorsCredit)) for PSY:4990 and HONR:3994.
 - Students receive a Pass/Fail grade for PSY:3994.
 
 There are several advantages to registering for course credit:
 
-- Your participation in lab will be accounted for on your transcript
-    - Not only is this helpful to have officially listed among your other university courses every semester, but (if you meet the hours and expectations) it can also help your GPA
+- Your participation in lab will be included on your transcript, which can look good when you apply to graduate/professional school and jobs
+- If you meet the hours and expectations, it can also help your GPA
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 
 [XXX][**INSERT SCREENSHOTS**]
 
-## Honors Credit
+## Honors Credit {#honorsCredit}
 
-Students who wish to receive Honors credit for participation in lab may register for HONR:3994:01IND – Honors Research Practicum.
+Students who wish to receive Honors credit for participation in lab may register for "HONR:3994:01IND – Honors Research Practicum".
 In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
 
-If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for PSY:4990 – Honors Thesis Research.
+If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for "PSY:4990 – Honors Thesis Research".
 Advantages for registering for honors course credit are:
 
-- Your work within the lab will be accounted for on your transcript (letter graded)
+- Your work in the lab will be included on your transcript (letter graded), which can look good when apply to graduate/professional school and jobs
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
