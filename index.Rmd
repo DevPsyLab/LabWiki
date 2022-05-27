@@ -11,12 +11,14 @@ knitr::opts_chunk$set(echo = TRUE,
 
 **Principal Investigator**\
 [Dr. Isaac Petersen, Ph.D.](https://psychology.uiowa.edu/people/isaac-petersen)\
-Office: 175 Psychological and Brain Sciences Building (PBSB)
+Office: 175 Psychological and Brain Sciences Building (PBSB)\
+Email: isaac-t-petersen@uiowa.edu
 
 **Lab Coordinator**\
 [Benjamin Swanson, B.A.](https://developmental-psychopathology.lab.uiowa.edu/people/benjamin-swanson)\
 Office: 111 Spence Labs (SLP)\
-Lab Email: devpsy-lab@uiowa.edu
+Lab Email (preferred for lab-relevant communication): devpsy-lab@uiowa.edu\
+Personal Email: benjamin-m-swanson@uiowa.edu
 
 **Lab Staff**\
 Laxmi Annapureddy\
@@ -26,9 +28,11 @@ Email: laxmi-annapureddy@uiowa.edu
 **Graduate Students**\
 [Jordan Harris, B.S.](https://developmental-psychopathology.lab.uiowa.edu/people/jordan-harris)\
 Office: 109 Spence Labs (SLP)\
+Email: jordan-l-harris@uiowa.edu
 
 [Alexis Hosch, B.S.](https://developmental-psychopathology.lab.uiowa.edu/people/alexis-hosch)\
 Office: 109 Spence Labs (SLP)\
+Email: alexis-hosch@uiowa.edu
 
 **Location**:
 

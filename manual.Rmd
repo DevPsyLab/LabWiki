@@ -30,6 +30,28 @@ We aim to provide a welcoming and respectful environment for people of all backg
 
 Date drafted: October 2020
 
+# Lab Glossary
+
+RA
+: research assistant
+
+E
+: experimenter
+
+TC
+: target child, or the child participant
+
+coding
+: the term means different things depending on the context.
+In our lab, we use "coding" as a shorthand to refer to "behavioral coding from video," which involves assessing a construct from video observation to turn the video segment into numbers that can be analyzed.
+This is distinct from computer programming, which is another type of coding.
+
+RTFM:
+Read the ******* manual
+
+RTFC:
+Read the ******* checklist
+
 [Note: I moved the section on Dress Code  to the `expectations-everyone.Rmd` file. We will also move the summerwear section there.]: # 
 
 # CITI Certification
@@ -116,7 +138,7 @@ URES:3992 is also useful for students in the summer so you don't have to pay the
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see Section \@ref(honorsCredit)) for PSY:4990 and HONR:3994.
+- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for PSY:4990 and HONR:3994.
 - Students receive a Pass/Fail grade for PSY:3994.
 
 There are several advantages to registering for course credit:
@@ -163,15 +185,15 @@ More information on the Honors experiential learning process for research involv
 
 # RA Roles
 
-The Developmental Psychopathology Lab utilizes a "generalist with specialization" approach—we have three specialized tracks or roles that RAs can train in after completing basic lab training.
+The Developmental Psychopathology Lab uses a "generalist with specialization" approach—we have three specialized tracks or roles that RAs can train in after completing basic lab training.
 **Every role is important**.
 Placement in these roles is dependent upon each RA's (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team's needs.
 We take into consideration the desired placement of every RA, but ultimately Dr. Petersen and the Lab Coordinator make this determination based on a, b, c, and d from above.
 
 **Cross-Cutting Responsibilities**
 
-- Data entry
-- video coding for behavioral tasks
+- data entry
+- coding behavioral tasks from video
 - keeping lab clean and family- and child-friendly
 - quality control and improvement
 - helping run visits
@@ -185,7 +207,7 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 
 **Necessary Characteristics:**
 
-- works well with 3-7-year-old children and parents
+- works well with 3–7-year-old children and parents
 - positive and cheerful attitude
 - mature
 - able to quickly and easily soothe upset children
@@ -196,7 +218,7 @@ We take into consideration the desired placement of every RA, but ultimately Dr.
 
 **Responsibilities Could Include:**
 
-- E for LV1 visits
+- Experimenter (E) for LV1 visits
 - train new LV1 Es
 - assuring procedural adherence for LV1 (including coaching RA and Camera roles, collaborating with other Es to ensure consistent administration)
 - editing/updating LV1 manual procedures and scripts as needed
