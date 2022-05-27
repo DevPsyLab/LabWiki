@@ -52,7 +52,7 @@ https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/
 1.	"Discovering Statistics using SPSS", 5th Edition (Andy Field)\
 https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566
 1.	EndNote or Zotero—software for organizing your articles and for writing your References section\
-https://its.uiowa.edu/endnote\
+[https://its.uiowa.edu/endnote](https://its.uiowa.edu/endnote)\
 https://www.zotero.org
 
 Please note that we do not want these resources to be financial barriers to completing an Honors thesis.
