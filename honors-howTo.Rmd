@@ -14,7 +14,7 @@ This is where you will find your data file(s), and where you should save all wri
 Please organize all thesis-related files into subfolders within your member folder using this structure:
 
 	\Lab\Members\[Your HawkID]\Thesis\...subfolders below…
-					          \Analysis\  -- put analysis scripts (`SPSS`, `R`, etc.) here
+					          \Analysis\  -- put analysis scripts (SPSS, R, etc.) here
 					          \Conference Abstract\ -- put your conference abstract here
 					          \Data\ -- put data files here
 					          \Figures\ -- put figures here
