@@ -639,40 +639,40 @@ Note: Breadth courses can be completed with directed readings.
 
 | **Semester**   | **Clinical Task Goal(s)**                                                                       |
 |----------------|-------------------------------------------------------------------------------------------------|
-| Year 1: Fall   | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+| Year 1: Fall   | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Work with advanced graduate students on assessment skills                                       |
 |                | Interviewing practicum with Clinic Director                                                     |
-| Year 1: Spring | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+| Year 1: Spring | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Work with advanced graduate students on assessment                                              |
 |                | Begin completing ID assessments in clinic                                                       |
 |                | Interviewing practicum with Clinic Director                                                     |
 | Year 2: Summer | Continue ID assessments, begin SDS assessments                                                  |
 | Year 2: Fall   | Complete SDS and DHS assessments in Seashore Clinic                                             |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Weekly 2nd year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 2: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Begin taking therapy cases in Seashore Clinic                                                   |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Weekly 2nd year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 3: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 3: Fall   | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Weekly 3rd year seminar (Exposure Therapy and other approaches)                                 |
 | Year 3: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Weekly 3rd year seminar (Exposure Therapy and other approaches)                                 |
 | Year 4: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 4: Fall   | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 | Year 4: Spring | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 | Year 5: Summer | Seashore Clinic work and/or External Practicum                                                  |
 | Year 5: Fall   | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30-1:20)                                                |
+|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Apply for internship                                                                            |
 | Year 5: Spring | Interview for Internship                                                                        |
 | Year 6         | APA-Accredited Internship                                                                       |
