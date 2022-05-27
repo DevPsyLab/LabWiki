@@ -23,7 +23,7 @@ Please organize all thesis-related files into subfolders within your member fold
 					          \Presentation\ -- put your presentation here
 					          \Tables\ -- put your tables here
 					          \Thesis\ -- put your Thesis document here (i.e., your paper)
-					
+
 To access the lab drive off-campus, you will need to set up VPN.
 Visit this website to learn how to set up VPN access to the lab drive:
 https://its.uiowa.edu/support/article/1876
