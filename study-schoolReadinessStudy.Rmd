@@ -13,13 +13,13 @@ EEG is a method of measuring meaningful differences in children's self-regulatio
 
 # Study Glossary
 
-Timepoint
+timepoint
 : each 9-month interval when the target child (TC) comes in for Lab Visit 1 (LV1), Lab Visit 2 (LV2), etc.; 4 time points total per TC (T1–T4)
 
-Wave
+wave
 : expected age of target child (TC) in months (36, 45, 54, 63, 72, 81, 90)
 
-Cohort
+cohort
 : subgroup of participants that reflects the age at which the participant was recruited
 
 Cohort | Age Recruited | TCIDs
@@ -35,19 +35,19 @@ LV1
 LV2
 : Second lab visit (EEG)
 
-TC
-: target child, or the child participant
+Target Child (TC)
+: the child participant
 
 TCID
 : the participant ID of the target child
 
-PC
-: the Primary Caregiver, or the parent/caregiver of the target child
+Primary Caregiver (PC)
+: the parent/caregiver of the target child
 
-PP
+Parenting Partner (PP)
 : the Parenting Partner of the child's Primary Caregiver
 
-SC
+Secondary Caregiver (SC)
 : the Secondary Caregiver of the child; could be a teacher, babysitter, nanny, grandparent, other relative, or another caregiver who knows the child well
 
 # Sample
