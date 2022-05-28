@@ -14,7 +14,7 @@ The RA will work in lab for 10 hours per week during the semester (9 hours of wo
 Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
 Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
 Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
-Instructions for lab reports are described in the lab manual (click [here](https://devpsylab.github.io/LabWiki/manual.html#resolvingConflicts)).
+Instructions for lab reports are described in the lab manual (click [here](manual.html#resolvingConflicts)).
 Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
 The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
 
@@ -33,8 +33,8 @@ We expect that the RA keeps eight weekend days available per semester (three wee
 In addition, we expect that each RA keeps two weekday evenings available for the purposes of working with families.
 We will do our best to fairly distribute the evening and weekend hours across the team.
 
-We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](https://devpsylab.github.io/LabWiki/manual.html#labCommunication) section of the Lab Manual.
-Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](https://devpsylab.github.io/LabWiki/manual.html#resolvingConflicts)).
+We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](manual.html#labCommunication) section of the Lab Manual.
+Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](manual.html#resolvingConflicts)).
 We expect the RA to take personal responsibility for the work they are assigned.
 Assigned work will always coincide with the 10 hours the RA is already scheduled for.
 With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours.
@@ -64,7 +64,7 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A-F] for their performance in the lab on the tasks assigned to them.
 (*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.
-See the section of the Lab Manual that describes course options and how to register (click [here](https://devpsylab.github.io/LabWiki/manual.html#courseRegistration))).
+See the section of the Lab Manual that describes course options and how to register (click [here](manual.html#courseRegistration))).
 
 A: 100% attendance, consistently on time, and meeting all of the lab expectations\
 B: < 100% attendance, or inconsistently on time, or mostly meeting the lab expectations\
@@ -74,7 +74,7 @@ F: <= 50 attendance, or never on time, or generally failing to meet the lab expe
 
 # Signature
 
-I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](https://devpsylab.github.io/LabWiki/manual.html#scheduling)" (including "[Scheduling Expectations](https://devpsylab.github.io/LabWiki/manual.html#schedulingExpectations)", "[Scheduling System Overview](https://devpsylab.github.io/LabWiki/manual.html#schedulingOverview)", and "[Weekend On-Call Schedule](https://devpsylab.github.io/LabWiki/manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](https://devpsylab.github.io/LabWiki/manual.html).
+I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](manual.html#scheduling)" (including "[Scheduling Expectations](manual.html#schedulingExpectations)", "[Scheduling System Overview](manual.html#schedulingOverview)", and "[Weekend On-Call Schedule](manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](manual.html).
 I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
 RA Signature ________________	RA Printed Name ________________ Date __________

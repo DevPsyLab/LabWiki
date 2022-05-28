@@ -72,4 +72,4 @@ f) what your hypotheses are
 
 Don't spend too much time on the preliminary document, as you'll want to be flexible to the possibility that you may end up examining a different question, but this will help structure your conversation with Dr. Petersen in the most efficient way.
 
-For information on how to conduct an Honors project, see [here](https://devpsylab.github.io/LabWiki/honors-howTo.html).
+For information on how to conduct an Honors project, see [here](honors-howTo.html).

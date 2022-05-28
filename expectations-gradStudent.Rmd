@@ -475,7 +475,7 @@ The APA Code of Ethics advises that this is a first step toward resolution.
 If that is not possible, appropriate, or proves ineffective (i.e., does not change behavior), please speak to me about the problem immediately.
 Please also speak to me if you think you have an interpersonal issue with me.
 If, after having talked with me, you feel the issue will not be resolved and you want to speak to someone else to address the issue, follow the chain of command and talk to the Area Coordinator, the Director of Graduate Studies, and/or the Departmental Executive Officer.
-The chain of command is depicted in the [lab organizational chart](https://devpsylab.github.io/LabWiki/manual.html#organizationalChart).
+The chain of command is depicted in the [lab organizational chart](manual.html#organizationalChart).
 
 ## Consequences of non-compliance
 
@@ -519,7 +519,7 @@ In operational terms, some Friday nights should be spent having fun out in the w
 
 # Signature
 
-I have read and understand the above expectations, in addition to the expectations outlined in the [lab manual](https://devpsylab.github.io/LabWiki/manual.html) and the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html).
+I have read and understand the above expectations, in addition to the expectations outlined in the [lab manual](manual.html) and the section on [expectations for everyone in the lab](expectations-everyone.html).
 I agree to meet these expectations and to ask Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
 Mentee's Signature _________________________________	Date ____________

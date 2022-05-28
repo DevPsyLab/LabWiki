@@ -26,13 +26,13 @@ The following are lab expectations for SROP students:
 
 # Resources
 
-The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](https://devpsylab.github.io/LabWiki/schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
 
 # Signature
 
-I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](https://devpsylab.github.io/LabWiki/expectations-everyone.html).
+I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html).
 I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
 Student Signature ________________	Student Printed Name ________________ Date __________

@@ -9,11 +9,11 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Working Together Toward Our Mission
 
-Everyone is expected to follow our [mission statements](https://devpsylab.github.io/LabWiki/manual.html#missionStatement), including our [internal](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-internal) and [external](https://devpsylab.github.io/LabWiki/manual.html#missionStatement-external) mission statement, in addition to our [diversity statement](https://devpsylab.github.io/LabWiki/manual.html#diversityStatement).
+Everyone is expected to follow our [mission statements](manual.html#missionStatement), including our [internal](manual.html#missionStatement-internal) and [external](manual.html#missionStatement-external) mission statement, in addition to our [diversity statement](manual.html#diversityStatement).
 
 # Confidentiality
 
-Everyone is expected to treat data confidentially, as described in the [Confidentiality](https://devpsylab.github.io/LabWiki/manual.html#confidentiality) section of the Lab Manual.
+Everyone is expected to treat data confidentially, as described in the [Confidentiality](manual.html#confidentiality) section of the Lab Manual.
 
 # Professionalism
 
@@ -25,7 +25,7 @@ Treating participants like royalty is not only the right thing to do, but signif
 
 # Communication
 
-Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](https://devpsylab.github.io/LabWiki/manual.html#labCommunication) section of the Lab Manual.
+Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](manual.html#labCommunication) section of the Lab Manual.
 
 # Dress Code {#dressCode}
 
@@ -90,5 +90,5 @@ But Clinton Kelly, co-host of TLC's "What Not to Wear" reality series, says, "Re
 
 # Role-Specific Expectations
 
-In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](https://devpsylab.github.io/LabWiki/expectations-undergradRA.html), [SROP students](https://devpsylab.github.io/LabWiki/expectations-SROP.html), [graduate students](https://devpsylab.github.io/LabWiki/expectations-gradStudent.html), [postdoctoral scholars](https://devpsylab.github.io/LabWiki/expectations-postdoc.html), the [Lab Coordinator](https://devpsylab.github.io/LabWiki/expectations-labCoordinator.html), and [lab staff](https://devpsylab.github.io/LabWiki/expectations-labStaff.html).
+In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.html), [SROP students](expectations-SROP.html), [graduate students](expectations-gradStudent.html), [postdoctoral scholars](expectations-postdoc.html), the [Lab Coordinator](expectations-labCoordinator.html), and [lab staff](expectations-labStaff.html).
 

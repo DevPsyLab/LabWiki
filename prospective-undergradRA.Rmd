@@ -17,7 +17,7 @@ There are also opportunities to complete honors theses for students who are inte
 Positions in our laboratory may be particularly interesting and greatly beneficial for those who plan to enter graduate programs in clinical psychology or developmental psychology.
 Experience with young children is highly desirable.
 Completion of introductory courses in research methods and statistics is desirable but not required.
-Expectations for undergraduate RAs are described [here](https://devpsylab.github.io/LabWiki/expectations-undergradRA.html).
+Expectations for undergraduate RAs are described [here](expectations-undergradRA.html).
 
 # How Long Am I Expected to Stay in Lab?
 

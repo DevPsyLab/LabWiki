@@ -165,7 +165,7 @@ Advantages for registering for honors course credit are:
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
 Interested students may be able to conduct an Honors project.
-For information on conducting an Honors thesis/project, see [here](https://devpsylab.github.io/LabWiki/honors-expectations.html).
+For information on conducting an Honors thesis/project, see [here](honors-expectations.html).
 Note that conducting an Honors project is not a requirement for enrolling in HONR:3994.
 
 [XXX][**INSERT SCREENSHOTS**]
@@ -345,7 +345,7 @@ Advanced projects are given priority to RAs who have shown reliability and commi
 
 ## Honors Theses/Projects
 
-For information on conducting an Honors Thesis/Project, see [here](https://devpsylab.github.io/LabWiki/honors-expectations.html).
+For information on conducting an Honors Thesis/Project, see [here](honors-expectations.html).
 
 # Lab Buddy System
 

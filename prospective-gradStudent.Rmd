@@ -43,7 +43,7 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 # The current focus of the Developmental Psychopathology Lab {#currentFocus}
 
 The broader mission of the Developmental Psychopathology Lab is to advance understanding of how self-regulation develops so that we as a society can better treat or even prevent the development of externalizing problems.
-To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](https://devpsylab.github.io/LabWiki/schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
@@ -67,7 +67,7 @@ In general, I look for graduate students who will "hit the ground running" in my
 
 Before applying, I encourage you to:
 
-1. Read the [lab expectations for graduate students](https://devpsylab.github.io/LabWiki/expectations-gradStudent.html) to make sure the lab would be a good fit for you.
+1. Read the [lab expectations for graduate students](expectations-gradStudent.html) to make sure the lab would be a good fit for you.
 1. Contact Dr. Petersen by email at isaac-t-petersen@uiowa.edu for more information about the lab; express your interests and send your CV to see if the lab would be a good fit for your interests.
 
 # What to do when applying
