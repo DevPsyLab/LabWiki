@@ -26,7 +26,7 @@ The following are lab expectations for SROP students:
 
 # Resources
 
-The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
 
