@@ -535,7 +535,7 @@ Each RA is expected to clock in before beginning lab-related work (including run
 The Lab Coordinator will add you to the system using your HawkID.
 To set up your profile the first time you use the program, follow the steps below:
 
-1. Click the TimeClock shortcut on your lab computer desktop (or go to www.opentimeclock.com/2008/free.html).
+1. Click the TimeClock shortcut on your lab computer desktop (or go to https://www.opentimeclock.com/2008/free.html).
 1. In the "Company Name" textbox, type "devpsylab" and click the blue "Sign In" button
 1. Enter your `HawkID` in the "Username" field and click the "Login" button.
 1. Go to "My settings" at the top of the page.
