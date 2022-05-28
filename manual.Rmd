@@ -479,18 +479,18 @@ Bring a written list of the weekend days you cannot be on-call for that semester
 
 ### Procedure
 
-1. The LC will set up separate meetings with behavioral testing specialists, EEG testing specialists, and data specialists/new RAs during the first week of the semester.
-At these meetings, the LC will conduct the weekend scheduling.
+1. The Lab Coordinator will set up separate meetings with behavioral testing specialists, EEG testing specialists, and data specialists/new RAs during the first week of the semester.
+At these meetings, the Lab Coordinator will conduct the weekend scheduling.
 1. Everyone draws a number.
 1. Pass the sign-up sheet around your group once, starting with the person who drew the lowest number, and continuing in order from lowest to highest number, each person cross their name off of every weekend day they CANNOT be on-call (i.e., family engagement, work, doctor appointment, etc.). 
-1. Once the sheet has gone around the group once and everyone has had the opportunity to remove their name from days they cannot work, pass the sheet around, from lowest number to highest number, and every RA sign up for one day per turn.
+1. Once the sheet has gone around the group once and everyone has had the opportunity to remove their name from days they cannot work, pass the sheet around, from lowest number to highest number, and every RA signs up for one day per turn.
 Each round, the order reverses (i.e., snake order).
 That is, whoever gets the first pick in round 1 gets the last pick in round 2.
 Continue this process to sign up for days until everyone has signed up for at least 8 days each.
 Note that this may mean signing up for a day that you are unavailable (in order to sign up for 8 days).
-    a. Data Specialists and new RAs should sign up for Camera or RA slots—the lab coordinator may schedule these interchangeably (i.e., if your name is listed for either a Camera or RA slot, you may be scheduled in a Camera or an RA role for a visit, at the discretion of the lab coordinator).
+    a. Data Specialists and new RAs should sign up for Camera or RA slots—the Lab Coordinator may schedule these interchangeably (i.e., if your name is listed for either a Camera or RA slot, you may be scheduled in a Camera or an RA role for a visit, at the discretion of the Lab Coordinator).
     b. Trained returning RAs (Behavioral Testing Specialists, EEG Specialists, and Data Specialists) should prioritize signing up for visits earlier in the semester first, if possible.
-    As the new RAs complete training for visit roles, they will be able to help with visits later in the semester.
+    When the new RAs complete training for visit roles, they will be able to help with visits later in the semester.
     c. To help ensure that RAs are available during the days they sign up, you are encouraged to sign up for days when your peers cannot be on-call.
     Then, after everyone has signed up for 8 days, RAs will have an opportunity to trade days with each other (see below).
 1. Once this process is complete, the sign-up form will be left in the RA office and remain there for one week.
@@ -534,11 +534,11 @@ Here is a description of the different calendars and instructions how to use the
 
 `OpenTimeClock2008` is the program we use for keeping track of RA lab hours.
 Each RA is expected to clock in before beginning lab-related work (including running visits, but if you come in early to each lunch, visit with other RAs, or anything else NOT lab work-related, then do not clock in until you are ready to work), and to clock out when they have stopped lab-related work (e.g., if you leave to get lunch, please clock out then clock back in again when you return to work).
-The Lab Coordinator will add you to the system using your HawkID.
+The Lab Coordinator will add you to the system using your `HawkID`.
 To set up your profile the first time you use the program, follow the steps below:
 
 1. Click the TimeClock shortcut on your lab computer desktop (or go to https://www.opentimeclock.com/2008/free.html).
-1. In the "Company Name" textbox, type "devpsylab" and click the blue "Sign In" button
+1. In the "Company Name" textbox, type `devpsylab` and click the blue "Sign In" button
 1. Enter your `HawkID` in the "Username" field and click the "Login" button.
 1. Go to "My settings" at the top of the page.
 1. Check the "Change password" box, and create a new password in the subsequent boxes (i.e., "Current password" which can be left blank as you will not have a password until you set one up for yourself, "New password," and "Confirm new password").
@@ -566,11 +566,11 @@ Attending lab meeting is <ins>**mandatory**</ins>.
 
 The lab meeting is generally divided into two sections:
 
-1. The first 15-30 minutes of the meeting is reserved for lab announcements, as well as any updates or questions about the study.
+1. The first 15–30 minutes of the meeting is reserved for lab announcements, as well as any updates or questions about the study.
 If you have questions or suggestions, please raise them.
 1. The second half of the meeting is reserved for an article presentation or a professional development workshop. 
 
-## Article Discussion
+### Article Discussion
 
 Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a peer-reviewed, empirical research article of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
 RAs will sign up to lead discussion of an article on the Lab Meeting Article Sign-Up Sheet (shared via OneDrive or during lab meeting) during the first week of classes.
@@ -584,25 +584,26 @@ The RA who is leading the discussion of the article should structure the discuss
 You can also mention critiques you have, but keep it as question-oriented as possible to elicit discussion.
 1. Save time (~10 minutes) for big-picture questions pertaining to the implications of the findings for science/practice/policy/life, etc.
 
-## Lab Meeting Scribe
+### Lab Meeting Scribe {#labScribe}
 
 An RA will be designated (usually on a volunteer basis) each semester to be the lab meeting scribe.
 The scribe is responsible for taking notes throughout the meeting.
-The scribe also sends a brief summary of the important information from the meeting to the entire team via Slack after it has ended.
+The scribe also sends a brief summary of the important information from the meeting to the entire team via the `#lab-meetings` channel in Slack after the lab meeting has ended.
+The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [lab's OneDrive](#onedrive).
 
-## Attendance and Absence Policies
+### Attendance and Absence Policies
 
 All members of the team are expected to attend every lab meeting.
-If an RA is not able to attend a meeting, they are responsible for letting the lab coordinator know as far in advance as possible so that the lab coordinator can work with the RA to arrange how they will make up the time.
+If an RA is not able to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time.
 They are also responsible for sending several detailed questions or comments on the article to the Lab Coordinator by the day before the meeting to help contribute to the discussion.
-If advanced notice is not possible, contact the lab coordinator as soon as you are able to and explain the absence.
+If advanced notice is not possible, contact the Lab Coordinator as soon as you are able to and explain the absence.
 The RA is also responsible for reading the lab meeting agenda and summary notes after the meeting to learn what they missed.
 
 ## Lab Communication {#labCommunication}
 
 Forms of lab communication are described below.
 **Please use Slack for as much communication as possible!**
-Keeping lab-related communication on Slack helps our team work most effectively and efficiently, and it saves time for the lab coordinator, Dr. Petersen, and your team members because it allows other RAs to answer questions and allows people to jump in to provide corrective feedback, as necessary.
+Keeping lab-related communication on Slack helps our team work most effectively and efficiently, and it saves time for the Lab Coordinator, Dr. Petersen, and your team members because it allows other RAs to answer questions and allows people to jump in to provide corrective feedback, as necessary.
 
 1. Non-private lab-related communication (almost all communication)
     - Use Slack
@@ -614,7 +615,7 @@ Keeping lab-related communication on Slack helps our team work most effectively 
         Feel free to post memes, set up lab-wide social gatherings, etc.
 1. Private lab-related communication 
     - Send to: devpsy-lab@uiowa.edu
-        - Examples: Sending your course schedule for the upcoming semester, notifying lab coordinator of an absence due to personal reasons/illness, asking lab coordinator for a reference, responding to an email that the lab coordinator sent to you.
+        - Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
 1. Communication directed specifically to Dr. Petersen rather than to the lab (e.g., to set up a meeting to discuss career goals, honors projects, etc.)
     - Send email to [Dr. Petersen](https://psychology.uiowa.edu/people/isaac-petersen)
 1. Communication directed to the past members of the lab (e.g., to setup a social gathering)
@@ -642,7 +643,7 @@ We encourage you to express concerns to the chain of command if you feel the iss
 
 1. Download the "Slack" App to your mobile phone (it's free!)
 1. You can also access Slack on any internet browser (https://slack.com) 
-1. Create account with university e-mail and a password you will remember 
+1. Create an account with your university e-mail and a password you will remember 
 1. Enter the workspace URL "devpsy-lab.slack.com" (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding) 
 1. Make sure to add yourself to all the following "Channels"
  
@@ -672,7 +673,7 @@ We encourage you to express concerns to the chain of command if you feel the iss
     b. `#random`: Use this channel if you are running late to lab, or if you have a question or comment that does not fall within the other channel categories; can also put memes or random funny things here!
 1. Attachments: Send pictures and attachments by clicking the plus sign next to the message
 1. Direct Messages: Do not use direct messaging in Slack.
-If you need to communicate privately with the lab coordinator or Dr. Petersen, please use email (see "Lab Communication" for more information)
+If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#labCommunication) for more information)
 
 Slack channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic.
 For example, the `#coding` channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between.
@@ -683,12 +684,12 @@ We are all collaborating on the same project, on the same team, and working towa
 
 ### Trello
 
-1. Log on to trello.com using your username and password
-1. On the RAs Board, there are categories of items that are done in our lab
+1. Log on to https://trello.com using your username and password
+1. On the "RAs" Board, there are categories of items that are performed in our lab
     a. Each of these categories has a list of cards with a title
         i. Within these cards, you can comment on what needs to be done, ideas for the titled item, etc. 
         ii. Members, due dates, attachments can also be added; to assign a person to work on a card, add them to members 
-        iii. To notify specific people in comments, use @username
+        iii. To notify specific people in comments, use `@username`
     b. If you would like to add a card to the desired category, you can go to the bottom of the column and click on 'Add a card…' 
 1. When working on a card, move the specific card to the 'Doing' category, so that others know you are working on that task
 1. When the task is completed, and doesn't need to be followed up by another person, move the card from 'Doing' to 'Done'
@@ -704,7 +705,7 @@ We are all collaborating on the same project, on the same team, and working towa
 ### Social Media {#socialMedia}
 
 The purpose of our social media pages is to inform the outside world of our research.
-One to two members of the data specialist team are responsible for creating posts.
+One to two members of the [Data Specialist team](#dataSpecialist) are responsible for creating posts.
 All posts must be approved by the Lab Coordinator.
 
 #### Facebook
@@ -728,11 +729,11 @@ The purpose of this page is to inform the outside world about the research, info
 
 #### Twitter
 
-The purpose of this twitter account is to post updates with the outside world about things we are working on in the lab.
+The purpose of this Twitter account is to post updates with the outside world about things we are working on in the lab.
 We invite everyone to follow us on this platform, so we can get the word out about what we do! 
 
 1. Log on to https://twitter.com using your personal credentials
-2. Follow @devpsylab
+2. Follow `@devpsylab`
 
 #### Instagram
 
@@ -740,7 +741,7 @@ The purpose of this Instagram account is to post updates with the outside world 
 We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
 1. Log on to https://www.instagram.com using your personal credentials
-2. Follow @dev_psy_lab
+2. Follow `@dev_psy_lab`
 
 ## Lab Documentation
 
@@ -754,9 +755,9 @@ When you are training in a new procedure, do not rely just on what other RAs tel
 Despite their best efforts to help you, RAs may sometimes describe procedures incorrectly to you, and it is important to follow what is in the manual.
 If something is missing, incorrect, or out-of-date in the manual, please let us know so we can fix it.
 
-## Lab OneDrive
+## Lab OneDrive {#onedrive}
 
-We also have an online folder shared with the team through Office 365 OneDrive.
+We have an online folder shared with the team through Office 365 OneDrive.
 In order to access this folder, you have to first be granted permission by Dr. Petersen or the Lab Coordinator (which should happen as part of your onboarding when you first join the lab).
 Once you have permission, you can access the folder here: 
 https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive
@@ -766,7 +767,7 @@ This folder contains two subfolders:
 1. "For RA Edit": The documents in this folder allow for editing by all team members.
 This folder includes:
     - Lab Meeting Agendas – Team: This is the running agenda for our weekly lab meetings.
-    Every week, the "lab scribe" will add detailed meeting notes to this document
+    Every week, the [lab scribe](#labScribe) will add detailed meeting notes to this document
     - Lab Meeting Article Sign-Up: This document is used by every RA at the beginning of every semester to sign up for their article presentation day.
     RAs can then access it throughout the semester to check which day they are scheduled to present on, but should not alter their sign-up day without first obtaining permission from the Lab Coordinator
     - Task Timing Sheet: This Excel document is used by all RAs to record their coding progress (see `Coding Manual` for more information)
@@ -838,13 +839,13 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 ## Lab Access / Keys
 
 Sometimes when visits occur outside of normal lab hours (M–F, 9AM–5PM), the Lab Coordinator is unable to be present to open lab or lock up.
-In these situations, it is permissible for RAs to open or close the lab on their own (provided the lab coordinator has requested/ approved this).
+In these situations, it is permissible for RAs to open or close the lab on their own (provided the Lab Coordinator has requested/approved this).
 When this happens, the RA can retrieve the lab key from the lockbox or from the Department.
 If the RA is unable to retrieve the key from the lockbox, follow the steps below:
 
 1. WHERE to get keys to open the lab:
-    a. The RA can access the key lockbox on the lab's entry door so that all RAs assigned to help with a visit during the lab coordinator's absence can access the lab
-        i. If the LC or graduate students are in the lab and their door is open, they are more than happy to borrow their key to open lab doors. 
+    a. The RA can access the key lockbox on the lab's entry door so that all RAs assigned to help with a visit during the Lab Coordinator's absence can access the lab
+        i. If the Lab Coordinator or graduate students are in the lab and their door is open, they are more than happy to lend their key to open lab doors.
             1. The key lockbox passcode is changed every semester—the Lab Coordinator will provide RAs with the current passcode as needed
             1.	If the key lockbox was used, the spare lab key should be returned to the key lockbox after the lab is fully locked up (see below) so that RAs on other visits can access the lab as well
     b. If the RA cannot retrieve the lab key from the lockbox (for whatever reason), you can retrieve the key from Carrie Whittaker, who sits at the front desk in the PBS department main office (G60 Psychological and Brain Sciences Building)
@@ -865,9 +866,9 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
 1. When the phone rings, and the Lab Coordinator is unavailable, it is the RA's job to answer the phone.
 1. Upon answering the phone, say, "Developmental Psychopathology Lab, this is _____".
 1. If the person has any questions, answer them to the best of your ability
-    a. If you do not know the answer, ask one of the other RAs, the lab coordinator, or Dr. Petersen
+    a. If you do not know the answer, ask one of the other RAs, the Lab Coordinator, or Dr. Petersen
     b. If you still don't know the answer, write down their question on the "While you were out" cards, and let them know that we will call them back as soon as possible
-1. If the person is looking for the lab coordinator or Dr. Petersen, let them know that they are unavailable, but you can take a message if they would like.
+1. If the person is looking for the Lab Coordinator or Dr. Petersen, let them know that they are unavailable, but you can take a message if they would like.
     a. Write who called, and their message, on the "While you were out" cards that are next to the phone in the RA room.
     b. If they would like to call back later, and you know when they (the Lab Coordinator and Dr. P) will be back, let them know when would be a good time for them to call back
 
