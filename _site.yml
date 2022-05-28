@@ -12,7 +12,7 @@ output:
     df_print: paged
     code_download: true
     theme: readable
-    css: ["includes/custom.css", "./font/css/roboto.css"]
+    css: ["includes/custom.css", "font/css/roboto.css"]
     includes:
       in_header:
       - "includes/google_analytics.html"
