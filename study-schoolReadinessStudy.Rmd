@@ -20,7 +20,7 @@ Wave
 : expected age of target child (TC) in months (36, 45, 54, 63, 72, 81, 90)
 
 Cohort
-: subgroup of participants that reflects the age at which the participant was recruited.
+: subgroup of participants that reflects the age at which the participant was recruited
 
 Cohort | Age Recruited | TCIDs
 -------|---------------|------
@@ -48,7 +48,7 @@ PP
 : the Parenting Partner of the child's Primary Caregiver
 
 SC
-: the Second Caregiver of the child; could be a teacher, babysitter, nanny, grandparent, other relative, or another caregiver who knows the child well
+: the Secondary Caregiver of the child; could be a teacher, babysitter, nanny, grandparent, other relative, or another caregiver who knows the child well
 
 # Sample
 
