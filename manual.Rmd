@@ -194,7 +194,7 @@ More information on the Honors experiential learning process for research involv
 
 The Developmental Psychopathology Lab uses a "generalist with specialization" approach—there are some tasks that all RAs are trained to perform, and there are other tasks that RAs specialize in.
 We have three specialized tracks or roles that RAs can train in after completing basic lab training: [Behavioral Testing Specialist](#behavioralTestingSpecialist), [Electroencephalography (EEG)
- Specialist](eegSpecialist), and [Data Specialist](dataSpecialist).
+ Specialist](#eegSpecialist), and [Data Specialist](#dataSpecialist).
  **Every role is important**.
 Placement in these roles depends on each RA's (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team's needs.
 We take into consideration the desired placement of every RA, but ultimately Dr. Petersen and the Lab Coordinator make this determination based on a, b, c, and d from above.
@@ -282,7 +282,7 @@ Below are necessary characteristics and potential responsibilities for Data Spec
 - recruitment and retention, including helping to develop/improve current recruitment and retention systems and devising new recruitment and retention possibilities, updating social media pages
 - helping to develop new coding systems
 
-# RA Advancement in Lab
+# RA Advancement in Lab {#advancement}
 
 The DevPsy lab is happy to offer exceptional RAs the opportunity to gain advanced research experience in the form of leadership roles within the lab.
 Eligibility is at the discretion of the Lab Coordinator and Dr. Petersen.
@@ -427,8 +427,9 @@ We will work with you to help you identify when you can "cut back" when you let 
 ## Scheduling System Overview {#schedulingOverview}
 
 After course registration at the end of each semester, RAs are to submit their course schedules for the following semester to the Lab Coordinator.
-If an RA has a strict, set work schedule, this should be included with the course schedule.
-The Lab Coordinator will review everyone's individual schedules and create a lab schedule that best allows visits to be scheduled, while respecting RA course schedules and responsibilities.
+If an RA has a strict, set work schedule, this can be included with the course schedule.
+We will do our best to accommodate work schedules; however, classes (including lab) take precedence over work schedules.
+The Lab Coordinator will review everyone's individual schedules and create a lab schedule that best allows visits to be scheduled, while respecting RA course schedules and—as best as possible—other responsibilities.
 Once the Lab Coordinator has finalized the lab schedule for the semester, they will email each RA their weekly lab schedule.
 This weekly lab schedule consists of 10 total hours per week.
 This includes 9 weekly hours of lab time, during which RAs may run visits, help with recruitment, complete data entry and coding tasks, assist the Lab Coordinator with assigned tasks, etc.
@@ -437,7 +438,7 @@ Once the semester schedules have been sent out to all RAs, it is expected that R
 
 By the first day of the new semester, RAs are expected to submit to the Lab Coordinator their standard weekly availability.
 This should include all normally occurring weekly availability during which the Lab Coordinator can schedule them to run visits that occur outside of an RA's normal lab hours.
-This availability schedule should include at least two available weekday evenings (M-F) per week.
+This availability schedule should include at least two available weekday evenings (M–F) per week.
 The Lab Coordinator will keep a composite schedule of RA weekly availability to use in scheduling visits when additional coverage is needed beyond RA lab schedules.
 If an RA is scheduled to run a visit during their availability but outside of their normal lab hours, the RA will be notified of the visit details via an invitation to the Outlook calendar event, but the Lab Coordinator will not reach out to them before scheduling to confirm their availability.
 The RA is expected to accept the invitation to the calendar event in Outlook.
@@ -446,13 +447,14 @@ If scheduling commitments come up throughout the semester during any time that a
 It is acceptable for an RA's available evenings to vary week to week, but all RAs are expected to maintain at least two available evenings every week.
 RAs are responsible for any visit they may be scheduled to run during the availability they provide at the beginning of the semester.
 Therefore, it is imperative that all appointments and events that occur during their normal weekly availability are shared with the Lab Coordinator via the "Busy Calendar" as soon as possible.
-If an RA has been scheduled for a visit during their availability (including available time on weekdays, available evenings, and chosen weekend days), has been notified of this visit, and cannot run the visit due to an unexpected conflict, the RA is responsible for posting on the "Scheduling" channel on Slack to ask for a cover.
+
+If an RA has been scheduled for a visit during their availability (including available time on weekdays, available evenings, and chosen weekend days), has been notified of this visit, and cannot run the visit due to an unexpected conflict, the RA is responsible for posting on the `#scheduling` channel on Slack to ask for a cover.
 It is the RA's responsibility to let the Lab Coordinator know who will cover the visit.
 If unable to find a cover, it is the RA's responsibility to let the Lab Coordinator know by at least 48 hours before the visit.
 
-For information regarding weekend visits, please refer to the "Weekend On-Call Schedule" document.
+For information regarding weekend visits, please refer to the section regarding the [Weekend On-Call Schedule](#schedulingWeekend).
 
-For general information regarding the scheduling expectations of the Developmental Psychopathology Lab, please refer to the "Scheduling Expectations" document (subsection within the "RA Orientation" packet).
+For general information regarding the scheduling expectations of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](#schedulingExpectations).
 
 ## Weekend On-Call Schedule {#schedulingWeekend}
 
@@ -468,7 +470,7 @@ The Lab Coordinator may request volunteers to run visits that are scheduled "las
 If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Slack with the details of the visit.
 
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
-Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on RA Advancement).
+Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#advancement)).
 
 ### Preparation
 
