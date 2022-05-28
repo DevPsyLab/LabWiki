@@ -52,13 +52,7 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-[**INSERT FROM LAB MANUAL**]
-
-[**CONSIDER MOVING SCHEDULING INFO FROM ABOVE SECTION TO HERE, TO CONSOLIDATE SCHEDULING EXPECTATIONS IN ONE PLACE**]
-
-## Your responsibilities as an RA
-
-## Our responsibilities to you
+Scheduling expectations for RAs are outlined in the lab manual [here](manual.html#schedulingExpectations).
 
 # Grading Scale
 

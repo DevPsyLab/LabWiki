@@ -639,7 +639,7 @@ We encourage you to express concerns to the chain of command if you feel the iss
 #### Getting Started
 
 1. Download the "Slack" App to your mobile phone (it's free!)
-1. You can also access Slack on any internet browser (slack.com) 
+1. You can also access Slack on any internet browser (https://slack.com) 
 1. Create account with university e-mail and a password you will remember 
 1. Enter the workspace URL "devpsy-lab.slack.com" (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding) 
 1. Make sure to add yourself to all the following "Channels"
