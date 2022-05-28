@@ -8,7 +8,11 @@ knitr::opts_chunk$set(echo = TRUE,
 ```
 
 The School Readiness Study is a longitudinal study that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
-In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
+In this project, we place special emphasis on the development of neural functioning, as measured by electroencephalography/event-related potentials (EEG/ERP), and how neural development influences the development of children's self-regulation and externalizing problems.
+
+# Research Design
+
+![Lab Organizational Chart](images/schoolReadinessStudy.png)
 
 # Open Science Framework
 
