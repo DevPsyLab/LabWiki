@@ -328,7 +328,7 @@ Some advanced roles that can be pursued include (but are not limited to):
 **Research works for your CV:** One of the major perks of this role is that you may be able to pursue a written piece of research (paper, poster, conference presentation, etc.) that can be a great boost for your CV!
 
 **Collaborative research projects in the lab:** This can take many forms (e.g., poster, paper).
-You are encouraged to ask a current advanced RA, a graduate student in the lab, the Lab Coordinator, and/or Dr. P about what this may entail.
+You are encouraged to ask a current advanced RA, a graduate student in the lab, the Lab Coordinator, and/or Dr. Petersen about what this may entail.
 
 **Reduced availability expectation:** advanced RAs are expected to make themselves available 1 night per week & 5 weekend days per semester to train/coach new experimenters/run visits (when needed).
 
@@ -568,7 +568,7 @@ The lab meeting is generally divided into two sections:
 
 1. The first 15–30 minutes of the meeting is reserved for lab announcements, as well as any updates or questions about the study.
 If you have questions or suggestions, please raise them.
-1. The second half of the meeting is reserved for an article presentation or a professional development workshop. 
+1. The second half of the meeting is reserved for an article discussion or a professional development workshop. 
 
 ### Article Discussion
 
@@ -766,14 +766,14 @@ This folder contains two subfolders:
 
 1. "For RA Edit": The documents in this folder allow for editing by all team members.
 This folder includes:
-    - Lab Meeting Agendas – Team: This is the running agenda for our weekly lab meetings.
+    - `Lab Meeting Agendas – Team.docx`: This is the running agenda for our weekly lab meetings.
     Every week, the [lab scribe](#labScribe) will add detailed meeting notes to this document
-    - Lab Meeting Article Sign-Up: This document is used by every RA at the beginning of every semester to sign up for their article presentation day.
+    - `Lab Meeting Article Sign-Up.docx`: This document is used by every RA at the beginning of every semester to sign up for the day they lead the article discussion.
     RAs can then access it throughout the semester to check which day they are scheduled to present on, but should not alter their sign-up day without first obtaining permission from the Lab Coordinator
-    - Task Timing Sheet: This Excel document is used by all RAs to record their coding progress (see `Coding Manual` for more information)
+    - `Task Timing Sheet.xlsx`: This Excel document is used by all RAs to record their coding progress (see `Coding Manual` for more information)
 1. "For RA View": The documents in this folder allow for read-only access by all team members.
 This folder includes:
-    - RA Remote Participation:  This document outlines procedures for remote lab work, including how to setup access to the lab drive, how to remote into a lab computer, etc.
+    - `RA Remote Participation.docx`: This document outlines procedures for remote lab work, including how to setup access to the lab drive, how to remote into a lab computer, etc.
 
 ## Lab Drive
 
@@ -805,7 +805,7 @@ If a new folder needs to be created, contact the Lab Coordinator.
 
 **A Note About Creating New Folders:**
 
-The RA should ask the Lab Coordinator, Dr.Petersen, and graduate students before creating a new folder within the Lab Drive.
+The RA should ask the Lab Coordinator, Dr. Petersen, and graduate students before creating a new folder within the Lab Drive.
 RAs are able to create new TCID folders in their check data folders of their coding or entry task, as well as any new folders within their personal folder on the drive.
 
 ### RA Folders
@@ -859,18 +859,18 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
             3.	Kitchen space 
             4.	Waiting room
             5.	Exterior door in the hallway
-    b.	Return keys to appropriate location (lockbox, to the Lab Coordinator, or to Carrie (wherever it was taken from) and be sure to lock the lockbox.
+    b.	Return keys to appropriate location—e.g., to the lockbox, to the Lab Coordinator, or to Carrie (wherever it was taken from)—and be sure to lock the lockbox.
 
 ## Phone Procedures
 
 1. When the phone rings, and the Lab Coordinator is unavailable, it is the RA's job to answer the phone.
-1. Upon answering the phone, say, "Developmental Psychopathology Lab, this is _____".
+1. Upon answering the phone, say, "Developmental Psychopathology Lab, this is _____ [your name]".
 1. If the person has any questions, answer them to the best of your ability
     a. If you do not know the answer, ask one of the other RAs, the Lab Coordinator, or Dr. Petersen
     b. If you still don't know the answer, write down their question on the "While you were out" cards, and let them know that we will call them back as soon as possible
 1. If the person is looking for the Lab Coordinator or Dr. Petersen, let them know that they are unavailable, but you can take a message if they would like.
     a. Write who called, and their message, on the "While you were out" cards that are next to the phone in the RA room.
-    b. If they would like to call back later, and you know when they (the Lab Coordinator and Dr. P) will be back, let them know when would be a good time for them to call back
+    b. If they would like to call back later, and you know when they (the Lab Coordinator and Dr. Petersen) will be back, let them know when would be a good time for them to call back
 
 ## Bi-Weekly Lab Reports {#labReport}
 
@@ -880,11 +880,11 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
     b. Name the lab reports so that they are ordered by date (e.g., `Lab Report_2017-12-31.docx`).
     c. When saving lab reports, please only leave the newest lab report in the main folder—your old lab reports should be moved to the "Past Lab Reports_hawkID" folder within your personal lab reports folder.
 1. Bi-weekly reports include:
-    a. A brief description of what you've worked on the last two weeks
-    b. What you've found interesting and why
+    a. A brief description of what you worked on the last two weeks
+    b. What you have found interesting and why
     c. Questions you have
     d. Suggestions you have
-1. In general, you don't need much discussion of what specifically you've worked on (2–3 sentences is fine).
+1. In general, you don't need much discussion of what specifically you worked on (2–3 sentences is fine).
 Dr. Petersen is most interested in what you've found interesting (and why), and any questions or suggestions you have.
 1. Reports should be about 1-page, double-spaced.
 1. Dr. Petersen will read and comment on your reports.
@@ -974,9 +974,9 @@ The following are "Do"s when working with children in the lab:
 - Make sure the chair isn't too big for the child (i.e., their feet solidly reach the floor)
 - Make it into a game!
 - Use high positivity and energy: be like a "preschool teacher on crack" (in EEG especially)
-    - Both verbal AND nonverbal
+    - Both in terms of verbal AND nonverbal techniques
 - Focus on the child rather than the script in the EEG visit
-    - What you say matters less than how you say it (as long as you correctly explain the rules)
+    - What you say matters less than *how* you say it (as long as you correctly explain the rules)
 - If the child isn't doing what you want, focus on what you expect them to do instead of what you don't want them to do
     - "Here, hold this toy" or "Keep your hands on the table" instead of "Don't touch the…"
 - Use specific praise ("Nice job sitting so still!") rather than general praise ("Nice job!")
@@ -1008,7 +1008,7 @@ The following are "Don't"s when working with children in the lab:
 
 ### Rules
 
-1. Cash is preferred method of payment (lab participants/PC only)
+1. Cash is the preferred method of payment (lab participants/PC only)
 1. Checks will be arranged as compensation for PP and SC when they complete the online questionnaire
 1. Participants will be compensated according to the escalating payment schedule
 1. Participants/PCs may be compensated for parking
