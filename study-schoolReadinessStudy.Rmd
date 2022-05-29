@@ -23,7 +23,7 @@ cohort
 : subgroup of participants that reflects the age at which the participant was recruited
 
 | Cohort | Age Recruited (months) | TCIDs     |
-|--------|------------------------|-----------|
+|:-------|:----------------------:|----------:|
 | 1      | 36                     | 1001–1199 |
 | 2      | 45                     | 1201–1399 |
 | 3      | 54                     | 1401–1599 |
