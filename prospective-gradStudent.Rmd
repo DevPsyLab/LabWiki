@@ -46,7 +46,7 @@ The broader mission of the Developmental Psychopathology Lab is to advance under
 To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
-These resources are available on the School Readiness Study project page of the Open Science Framework (OSF): https://osf.io/jzxb8.
+These resources are available on the [School Readiness Study](study-schoolReadinessStudy.html) project page.
 
 # Am I a good fit for the Developmental Psychopathology Lab?
 

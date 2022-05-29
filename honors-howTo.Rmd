@@ -33,6 +33,11 @@ The full drive path to our lab drive is:
 - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
 - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
+# Resources
+
+For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
+These resources are available on the [School Readiness Study](study-schoolReadinessStudy.html) project page.
+
 # Access List of Measures
 
 To see a list of measures available for the School Readiness Study (organized by domain), see here:
