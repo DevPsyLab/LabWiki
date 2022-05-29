@@ -834,7 +834,27 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 
 ### Lab Drive Directory—Frequently Used Folders
 
-[XXX][**INSERT**]
+| <!-- -->      | <!-- -->                         | <!-- -->                                                    | <!-- -->                                                                                                        |
+|:--------------|:---------------------------------|:------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| Members       | 01-Lab Reports                   | _Individual RA files, by HawkID_                            |                                                                                                                 |
+|               | _Individual RA files, by HawkID_ |                                                             |                                                                                                                 |
+| Miscellaneous | Professional Development         |                                                             |                                                                                                                 |
+|               | RAs                              | RA Lab Hours                                                | _Folders are broken down by Semester and Year, and include RA Lab, Availability, and Weekend On-Call Schedules_ |
+|               |                                  | RA Task Assignments                                         | _Folders are broken down by Semester and Year, and include Coding, EntryCheck, and Lab Cleaning Schedules_      |
+| Studies       | School Readiness Study           | Coding                                                      |                                                                                                                 |
+|               |                                  | Data                                                        |                                                                                                                 |
+|               |                                  | IRB                                                         |                                                                                                                 |
+|               |                                  | Payment                                                     |                                                                                                                 |
+|               |                                  | Procedures                                                  |                                                                                                                 |
+|               |                                  | Recruitment                                                 |                                                                                                                 |
+|               |                                  | Scoring                                                     |                                                                                                                 |
+|               |                                  | Videos                                                      |                                                                                                                 |
+| Training      | Orientation                      | Checklists                                                  |                                                                                                                 |
+|               | REDCap                           | Videos                                                      |                                                                                                                 |
+|               |                                  | _PDF text versions of video training information, by topic_ |                                                                                                                 |
+| Website       | Photos                           | Banner                                                      |                                                                                                                 |
+|               |                                  | Pictures                                                    |                                                                                                                 |
+|               |                                  | Tabs                                                        |                                                                                                                 |
 
 ## Lab Access / Keys
 
