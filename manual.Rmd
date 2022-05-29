@@ -1089,12 +1089,15 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
     a. Click **RED** recording button after Gift Delay or at end of task 
     b. Recording automatically saves when stopped (**\*\*NAME PRIOR TO RECORDING\*\***)
         i. Press folder icon to check for proper save
-    c. **Copy** LV1 video from `C:` drive to LV1 videos folder on lab drive  `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School_Readiness_Study\Videos\Lab Visit 1\Cohort #\T#`
+    c. **Copy** LV1 video from `C:` drive to the relevant folder on the lab drive.
+        i. LV1 videos:
+        `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School_Readiness_Study\Videos\Lab Visit 1\Cohort #\T#`
 
 ## No Media Release (NMR)—Video Flagging
 
 When parents refuse media release permission, we are not allowed to use those videos for any reasons other than for coding purposes.
 Because of that, we have established a procedure to identify those videos so that we do not open, view, or use them for any purposes aside from internal purposes (e.g., training, coding, etc.).
+When saving videos for participants for whom we do not have a signed media release, append `_NMR` to the filename (e.g., `VideoName_NMR.mp4`).
 
 **Procedure**
 
@@ -1111,12 +1114,13 @@ Because of that, we have established a procedure to identify those videos so tha
 
 Visit data is backed up in several different places to ensure its safety—there's nothing worse than losing data!
 Beyond saving hardcopy forms and saving videos and data to the Lab Drive, we also burn data to DVDs to store as hardcopy backups of our electronic data.
+
+**[XXX]NOTE: THIS SECTION (BELOW) SEEMS STUDY-SPECIFIC. CAN WE MOVE IT OUT OF THE GENERAL LAB MANUAL?**
+
 For LV1, we save the LV1 visit videos.
 For LV2, we save all data and video files except for the visit video from the camcorder.
 Find which video to burn through the task timing sheet, but do not blindly trust it, sometimes 'yes' is not written along a TCID but a DVD is already there.
 Check the burned DVD case folder to be sure.
-
-**[XXX]NOTE: THIS SECTION SEEMS STUDY-SPECIFIC. CAN WE MOVE IT OUT OF THE GENERAL LAB MANUAL?**
 
 ### LV1 Videos
 
@@ -1153,6 +1157,8 @@ There are column sections for each of the four time points.
 
 ## Cute Moments Videos {#cuteMoments}
 
+**[XXX]NOTE: THIS SECTION SEEMS STUDY-SPECIFIC. CAN WE MOVE IT OUT OF THE GENERAL LAB MANUAL?**
+
 **Procedure**
 
 1. Before every LV1, camera person pulls the "Cute Moments Video Clips" sheet from the blue LV1 RA folder.
@@ -1178,6 +1184,8 @@ Once it becomes a coding pair's turn, they are responsible for creating a video 
 1. Approximately three months before a TC ages into the next window of eligibility, the Lab Coordinator or Data Specialists will email the video to PC.
 
 ## Combining Videos
+
+**[XXX]NOTE: <ins>PARTS</ins> OF THIS SECTION SEEM STUDY-SPECIFIC. CAN WE MOVE IT OUT OF THE GENERAL LAB MANUAL?**
 
 LV1 videos should be a side-by-side combination of recordings from Cameras 1 and 2 in the LV1 Experimenter Room.
 The Observation Room computer has been set up to combine these recordings into one video file when it saves.
