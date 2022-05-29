@@ -150,7 +150,8 @@ There are several advantages to registering for course credit:
 - If you meet the hours and expectations, it can also help your GPA
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 
-[XXX][**INSERT SCREENSHOTS**]
+![PSY:3994 Step 1](images/psy3994_1.png)
+![PSY:3994 Step 2](images/psy3994_2.png)
 
 ## Honors Credit {#honorsCredit}
 
@@ -168,7 +169,8 @@ Interested students may be able to conduct an Honors project.
 For information on conducting an Honors thesis/project, see [here](honors-expectations.html).
 Note that conducting an Honors project is not a requirement for enrolling in HONR:3994.
 
-[XXX][**INSERT SCREENSHOTS**]
+![HONR:3994 Step 1](images/honr3994_1.png)
+![HONR:3994 Step 2](images/honr3994_2.png)
 
 ### How to Fulfill the Experiential Learning Requirement for Honors Credit
 
