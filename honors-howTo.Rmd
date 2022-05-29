@@ -38,9 +38,7 @@ The full drive path to our lab drive is:
 For general honors thesis resources, see the [Honors Thesis Expectations and Resources](honors-expectations.html#resources) page. For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the [School Readiness Study](study-schoolReadinessStudy.html) project page.
 
-# Access Helpful Resources for Theses
-
-There are lots of helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
+There are many helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
 You can find these resources at the following location on the lab drive:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
 
