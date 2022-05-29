@@ -35,25 +35,8 @@ The full drive path to our lab drive is:
 
 # Resources
 
-For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
+For general honors thesis resources, see the [Honors Thesis Expectations and Resources](honors-expectations.html#resources) page. For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the [School Readiness Study](study-schoolReadinessStudy.html) project page.
-
-# Access List of Measures
-
-To see a list of measures available for the School Readiness Study (organized by domain), see here:
-https://docs.google.com/spreadsheets/d/1ptL0GdSHAjAA7zpZGABYuUy9U6eR3XJZI0mzB1wDPn8/edit?usp=sharing
-
-# Access Data Dictionaries
-
-A data dictionary is a file that describes the meaning of variables that are in a data file.
-To access the data dictionary for the composite/summary variables in the School Readiness Study, see here:
-https://docs.google.com/spreadsheets/d/1N5fALfKQQsw4frQxlPoG19MakvzA2HwKs9hSgt2Yax0/edit?usp=sharing
-
-To access the data dictionary for the School Readiness Study Project in REDCap, see here:
-https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4941
-
-To access the data dictionary for the School Readiness Study Screening Project in REDCap, see here:
-https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebook.php?pid=4958
 
 # Access Helpful Resources for Theses
 

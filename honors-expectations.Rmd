@@ -40,7 +40,7 @@ Read the Cover Page Instructions for how to create your cover page, what you nee
 UI Undergraduate Research Festival:
 https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals
 
-# Resources
+# Resources {#resources}
 
 Must-Have Resources:
 
