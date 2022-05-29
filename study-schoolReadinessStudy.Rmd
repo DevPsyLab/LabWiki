@@ -22,12 +22,12 @@ wave
 cohort
 : subgroup of participants that reflects the age at which the participant was recruited
 
-Cohort | Age Recruited (months) | TCIDs     |
--------|------------------------|-----------|
-1      | 36                     | 1001–1199 |
-2      | 45                     | 1201–1399 |
-3      | 54                     | 1401–1599 |
-4      | 63                     | 1601–1799 |
+| Cohort | Age Recruited (months) | TCIDs     |
+|--------|------------------------|-----------|
+| 1      | 36                     | 1001–1199 |
+| 2      | 45                     | 1201–1399 |
+| 3      | 54                     | 1401–1599 |
+| 4      | 63                     | 1601–1799 |
 
 LV1
 : First lab visit (behavioral tasks, parent–child interaction tasks)
