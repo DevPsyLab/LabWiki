@@ -14,7 +14,7 @@ This is where you will find your data file(s), and where you should save all wri
 Please organize all thesis-related files into subfolders within your member folder using this structure:
 
 	\Lab\Members\[Your HawkID]\Thesis\...subfolders below…
-					          \Analysis\  -- put analysis scripts (SPSS, R, etc.) here
+					          \Analysis\ -- put analysis scripts (SPSS, R, etc.) here
 					          \Conference Abstract\ -- put your conference abstract here
 					          \Data\ -- put data files here
 					          \Figures\ -- put figures here
@@ -94,8 +94,8 @@ Visit this website to learn how to set up Remote Desktop access on your computer
 
 - Before gaining remote access to a lab computer, you will first have to VPN into the lab drive
 - When prompted for the computer's name in the Remote Desktop client, follow this format: 
-PSYC-S###.iowa.uiowa.edu
-- Then, enter your username using this format: iowa\HawkID
+`PSYC-S###.iowa.uiowa.edu`
+- Then, enter your username using this format: `iowa\HawkID`
 
 # Access SPSS/R for Data Analysis
 
