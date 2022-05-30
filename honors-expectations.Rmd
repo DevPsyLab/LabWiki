@@ -9,9 +9,9 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Expectations
 
-The Honor's Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
+The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
-If you are interested in conducting an Honor's thesis, it is your responsibility to contact Dr. Petersen to set up a meeting (see below).
+If you are interested in conducting an Honors thesis, it is your responsibility to contact Dr. Petersen to set up a meeting (see below).
 Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, the quality of your research question and hypotheses, your motivation, and whether you have the skills and aptitude necessary for successfully completing the project.
 To help keep you on track to finish your project and thesis on this timeline, Dr. Petersen expects you to meet with him once per month.
 It is your responsibility to schedule the monthly meetings.
@@ -42,16 +42,15 @@ https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research
 
 # Resources {#resources}
 
-Must-Have Resources:
+In conducting your Honors thesis, you are expected to obtain and use the following must-have resources:
 
 1. "Writing Empirical Research Reports: A Basic Guide for Students of the Social and Behavioral Sciences", 8th Edition (Fred Pyrczak)\
 https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361
-
 1. "Publication Manual of the American Psychological Association", 7th Edition\
 https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X
-1.	"Discovering Statistics using SPSS", 5th Edition (Andy Field)\
+1. "Discovering Statistics using SPSS", 5th Edition (Andy Field)\
 https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566
-1.	EndNote or Zotero—software for organizing your articles and for writing your References section\
+1. EndNote or Zotero—software for organizing your articles and for writing your References section\
 [https://its.uiowa.edu/endnote](https://its.uiowa.edu/endnote)\
 https://www.zotero.org
 
@@ -61,15 +60,16 @@ Please talk with Dr. Petersen if these resources would be a financial barrier.
 
 # Steps to Get Started
 
-Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you'd like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
+Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
 
-a) what you're interested in studying
-b) why you're interested in studying it
-c) what you've learned in doing reading on the topic (provide citations)
+a) what you are interested in studying
+b) why you are interested in studying it
+c) what you have learned in doing reading on the topic (provide citations)
 d) what specific research question(s) you have
-e) what measure(s) in our lab's study you're interested in using for each construct
+e) what measure(s) in our lab's study you are interested in using for each construct
 f) what your hypotheses are
 
-Don't spend too much time on the preliminary document, as you'll want to be flexible to the possibility that you may end up examining a different question, but this will help structure your conversation with Dr. Petersen in the most efficient way.
+Do not spend too much time on the preliminary document, because it will important for you to be flexible to the possibility that you may end up examining a different question.
+Following the steps above will help structure your conversation with Dr. Petersen in the most efficient way.
 
 For information on how to conduct an Honors project, see [here](honors-howTo.html).
