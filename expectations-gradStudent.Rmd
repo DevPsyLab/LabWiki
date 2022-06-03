@@ -92,7 +92,7 @@ I also expect you to go to Departmental colloquia series by speakers who are out
 We will have meetings to discuss the research project(s) you find interesting that also advance the lab's interests.
 I always welcome new ideas and project proposals, so please come to me if you want to discuss new projects.
 A piece of advice that was given to me as a graduate student that I pass onto you is to find a question or problem that excites you and "date" it.
-You'll know you've found an idea that truly excites you when you find yourself thinking about it while brushing your teeth, going for walks, etc.
+You will know that you have found an idea that truly excites you when you find yourself thinking about it while brushing your teeth, going for walks, etc.
 Much of the important and exciting work in science happens at the ideas stage.
 
 ## Data and research materials
@@ -226,7 +226,7 @@ I expect you to discuss order of authorship with me early on when there are pote
 
 Trainees are expected to read foundational articles relating to the lab and to their research interests.
 Examples of foundational articles are on the lab's Google Drive folder of primer articles[^2].
-I also expect you to read one of the primer articles by Schwartz (2008) titled, "The Importance of Stupidity in Scientific Research." It is important to feel comfortable feeling stupid in science; if you (and any of us) don't feel stupid, we're not doing science right! It is also important to read background information and protocols about our projects.
+I also expect you to read one of the primer articles by Schwartz (2008) titled, "The Importance of Stupidity in Scientific Research." It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right! It is also important to read background information and protocols about our projects.
 
 We have a list of lab resources for graduate students on our Lab's Trello board called "Grad Students"[^2]: https://trello.com/b/WjqbgpW9/grad-students.
 The Trello board includes items for onboarding, important foundational skills for scientific training, useful software, and relevant journals, organizations, conferences, and listservs.
@@ -313,9 +313,7 @@ You should not spend more than 10 hours per week doing teaching-related work for
 
 You should talk with me and get my approval before doing or adding any external practica.
 You should not spend more than 1.5 full days (i.e., 12 hours) doing clinic-related work per week.
-Don't focus too much on clinical hours; Ph.D.
-students from non-clinical science programs and Psy.D.
-students will have way more clinical hours than you—you are not competing with them for the same types of sites.
+Do not focus too much on clinical hours; Ph.D. students from non-clinical science programs and Psy.D. students will have way more clinical hours than you—you are not competing with them for the same types of sites.
 You will be most competitive at [clinical science internship sites](https://www.acadpsychclinicalscience.org/internship-programs.html), which care much more about the *quality* of training than the *quantity* of training.
 And UI has top-notch clinical training.
 Internship sites also care heavily about scientific productivity including publications ([Lund et al., 2016](https://psycnet.apa.org/record/2015-57073-001)), and this is even more true for clinical science internship sites.
@@ -324,7 +322,7 @@ I am happy to share my preparation, application, and interview materials etc.
 for internships, jobs, etc.
 and to work with you to make them as strong as possible.
 
-Please don't hide in your office; get out and meet people at group and departmental events.
+Please do not hide in your office; get out and meet people at group and departmental events.
 If a colloquium is given in an area in which you have a research interest, sign up to meet with the speaker.
 Go up to speakers after talks, introduce yourself, and express interest in their work by asking questions.
 Networking skills are important and can often lead to job opportunities.
@@ -344,11 +342,10 @@ You are welcome to get the training you need, provided that you maintain good pr
 Seek the experience of faculty, professionals, post-docs, and other students to help you out.
 
 If you want an academic job, I know what it takes to get one (in terms of publications, grants, etc.), so just ask.
-I'm also happy to talk with you about what an R1 academic job is like (e.g., setting up and running a lab, teaching)—I love my job and have a passion for the work we do.
+I am also happy to talk with you about what an R1 academic job is like (e.g., setting up and running a lab, teaching)—I love my job and have a passion for the work we do.
 I get to be part of an invigorating intellectual environment in which I get to learn every day, get to be around exciting ideas and world-renowned experts conducting cutting-edge research, and have the intellectual freedom to get paid to study whatever I want to study.
-I can't imagine anything better.
-That said, there aren't enough faculty positions for all Ph.D.
-graduates and it's not the best fit for everyone.
+I cannot imagine anything better.
+That said, there are not enough faculty positions for all Ph.D. graduates and it is not the best fit for everyone.
 I will work with you to find the career that is the right fit for you.
 
 ## My approach to mentorship
@@ -362,7 +359,7 @@ I view my role as fostering your professional confidence and encouraging your cr
 
 Do not hesitate to ask questions if I am around; it is often better to ask questions than to make a mistake that could have been easily avoided.
 I am periodically away, and I expect you to get things done well without me.
-You are encouraged to be independent; don't be afraid to try to do detective work on your own if I am not around.
+You are encouraged to be independent; do not be afraid to try to do detective work on your own if I am not around.
 There is also a benefit to learning by trial and error.
 We have a helpful, experienced lab, so know that people other than me may be excellent resources.
 
@@ -389,7 +386,7 @@ For longer communication, please call or stop by my office.
 I find this much more efficient and pleasant than writing and reading lengthy communication.
 For sending manuscripts, personal information, and messages that do not need an urgent response, you may email me.
 Please limit your use of email as much as possible.
-[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid); we get way too much of it, it is impersonal, it doesn't communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
+[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
 I encourage you to stop by my office or to call my office phone instead of relying on email, whenever possible.
 
 When you contact me or send me materials, you can expect me to respond promptly.
@@ -405,7 +402,7 @@ Please do not assume I can read materials within a day or two, especially when I
 Please only send drafts of manuscripts, grant proposals, dissertations, etc.
 when they are your <ins>best possible work</ins> (the Henry Kissinger criterion).
 That means going through multiple revisions, reading it out loud to yourself, etc.
-Here's an excerpt about Dr. Kissinger ([Krausman, 2021](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.21992)):
+Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.21992)):
 
 > "Henry Kissinger, a former Secretary of State under President Nixon, understood the importance of continually improving writing skills.
 > Winston Lord was Kissinger's speech writer and during the late 1960s and early 1970s, Lord had been tasked with writing a speech about three important foreign policy projects: the opening of China to the West, bringing the Vietnam War to a close, and an attempt to improve relations with the Russians.
@@ -439,7 +436,7 @@ This lab is not a place for competition, but collaboration.
 We are a group of researchers working toward a common goal, and all members are encouraged to work together collaboratively.
 A rising tide lifts all boats.
 Competitive behavior is not conducive to a productive laboratory, and this sort of behavior will strictly not be tolerated.
-Don't compare yourself to others.
+Do not compare yourself to others.
 You are on your own path.
 Each mentee needs different things, and I will do my best to get to know you as an individual, and your individual skills, preferences, and goals.
 Cultivating a common value of humility is important in research, because we are always asking questions to which we inherently do not know the answer.
@@ -512,7 +509,7 @@ Take a look at the [CV of Failures](https://www.uni-goettingen.de/de/document/do
 Persistence pays off.
 I have found it helpful to have a ["feelgood" email folder](https://blogs.scientificamerican.com/guest-blog/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/) that I can refer back to when things are difficult.
 
-Don't forget to laugh and have fun! Graduate school is a challenging job with very high expectations, but it should also be fun.
+Do not forget to laugh and have fun! Graduate school is a challenging job with very high expectations, but it should also be fun.
 You get to study something that is exciting to you and get paid to do it! To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cloudfront.net/wp-content/uploads/sites/163/2016/11/Ramsey-Guide-for-Research-Students.pdf), "To sustain yourself through difficult times, find research that means a lot to you.
 Successful researchers find interesting problems and fall in love with them.
 In operational terms, some Friday nights should be spent having fun out in the world, but if you aren't also spending some Friday nights having fun with your research, you're not doing the right research."

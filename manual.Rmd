@@ -136,8 +136,8 @@ Students who wish to receive credit for time spent in the lab may register for "
 Generally, students enroll in "PSY:3994".
 
 URES:3992 is 0-hour and has no tuition or fees associated.
-It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you don't have the ability to maintain a regular schedule, etc.).
-URES:3992 is also useful for students in the summer so you don't have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
+It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
+URES:3992 is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
 
 Keep in mind that some courses differ in the way that they are graded.
 
@@ -583,7 +583,7 @@ The RA who is leading the discussion of the article should structure the discuss
 
 1. Provide a brief explanation of why you chose the article.
 1. Present a brief summary (~2–3 minutes) of the article's main points (it is not a book report!), in which you describe the study and its key findings.
-1. Spend the majority of the time (~20–25 minutes) posing questions to elicit discussion. The questions shouldn't be too vague (e.g., don't ask "What did you think of the methods?"), but instead should be specific and aim to elicit an interesting and critical discussion.
+1. Spend the majority of the time (~20–25 minutes) posing questions to elicit discussion. The questions should not be too vague (e.g., do not ask "What did you think of the methods?"), but instead should be specific and aim to elicit an interesting and critical discussion.
 You can also mention critiques you have, but keep it as question-oriented as possible to elicit discussion.
 1. Save time (~10 minutes) for big-picture questions pertaining to the implications of the findings for science/practice/policy/life, etc.
 
@@ -644,7 +644,7 @@ We encourage you to express concerns to the chain of command if you feel the iss
 
 #### Getting Started
 
-1. Download the "Slack" App to your mobile phone (it's free!)
+1. Download the "Slack" App to your mobile phone (it is free!)
 1. You can also access Slack on any internet browser (https://slack.com) 
 1. Create an account with your university e-mail and a password you will remember 
 1. Enter the workspace URL "devpsy-lab.slack.com" (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding) 
@@ -695,7 +695,7 @@ We are all collaborating on the same project, on the same team, and working towa
         iii. To notify specific people in comments, use `@username`
     b. If you would like to add a card to the desired category, you can go to the bottom of the column and click on 'Add a card…' 
 1. When working on a card, move the specific card to the 'Doing' category, so that others know you are working on that task
-1. When the task is completed, and doesn't need to be followed up by another person, move the card from 'Doing' to 'Done'
+1. When the task is completed, and does not need to be followed up by another person, move the card from 'Doing' to 'Done'
 1. When you are assigned a task in Trello that requires another labmate to follow-up:
     a. The 1st person is assigned task (member 1 icon shows on card)
     b. 1st (member 1) completes task (i.e., enters questionnaire)
@@ -890,7 +890,7 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
 1. Upon answering the phone, say, "Developmental Psychopathology Lab, this is _____ [your name]".
 1. If the person has any questions, answer them to the best of your ability
     a. If you do not know the answer, ask one of the other RAs, the Lab Coordinator, or Dr. Petersen
-    b. If you still don't know the answer, write down their question on the "While you were out" cards, and let them know that we will call them back as soon as possible
+    b. If you still do not know the answer, write down their question on the "While you were out" cards, and let them know that we will call them back as soon as possible
 1. If the person is looking for the Lab Coordinator or Dr. Petersen, let them know that they are unavailable, but you can take a message if they would like.
     a. Write who called, and their message, on the "While you were out" cards that are next to the phone in the RA room.
     b. If they would like to call back later, and you know when they (the Lab Coordinator and Dr. Petersen) will be back, let them know when would be a good time for them to call back
@@ -907,7 +907,7 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
     b. What you have found interesting and why
     c. Questions you have
     d. Suggestions you have
-1. In general, you don't need much discussion of what specifically you worked on (2–3 sentences is fine).
+1. In general, you do not need much discussion of what specifically you worked on (2–3 sentences is fine).
 Dr. Petersen is most interested in what you've found interesting (and why), and any questions or suggestions you have.
 1. Reports should be about 1-page, double-spaced.
 1. Dr. Petersen will read and comment on your reports.
@@ -994,13 +994,13 @@ The following are "Do"s when working with children in the lab:
     - Use comments and compliments more than questions; questions can be perceived as commands
     - Comment on things they like (e.g., their shoes, hair, shirt, favorite superhero)
     - For anxious children: they will know you are safe by judging their parents' cues, so for an anxious/clingy child, first build rapport with parent and then it will be easier to build rapport with child after they know you're safe
-- Make sure the chair isn't too big for the child (i.e., their feet solidly reach the floor)
+- Make sure the chair is not too big for the child (i.e., their feet solidly reach the floor)
 - Make it into a game!
 - Use high positivity and energy: be like a "preschool teacher on crack" (in EEG especially)
     - Both in terms of verbal AND nonverbal techniques
 - Focus on the child rather than the script in the EEG visit
     - What you say matters less than *how* you say it (as long as you correctly explain the rules)
-- If the child isn't doing what you want, focus on what you expect them to do instead of what you don't want them to do
+- If the child is not doing what you want, focus on what you expect them to do instead of what you do not want them to do
     - "Here, hold this toy" or "Keep your hands on the table" instead of "Don't touch the…"
 - Use specific praise ("Nice job sitting so still!") rather than general praise ("Nice job!")
 - Praise effort, not outcome
@@ -1020,7 +1020,7 @@ The following are "Don't"s when working with children in the lab:
 - Ask commands in the form of a question ("Can you sit up in your chair?")
     - Instead: Be polite but firm.
     ("Sit up in your chair" or "Please sit up in your chair" or "Let's sit up in your chair.")
-- Frame things in the negative (or the absence of negative)—i.e., don't provide reassurance ("It's going to be okay" or "It's not going to hurt.")
+- Frame things in the negative (or the absence of negative)—i.e., do not provide reassurance ("It's going to be okay" or "It's not going to hurt.")
     - Instead: frame things in the positive ("Let's put on the special ocean cap to be just like Jamie so we can play the fun games!")
 - Ask yes/no questions to "no birds"
     - Instead: Give them choices we're okay with (see above)
@@ -1068,7 +1068,7 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
     c. Click Media Recorder 4 shortcut on desktop 
     d. Checks:
         i. Check for good volume 
-            1. As quiet as it can be (so parent and child can't hear) while still being able to hear with good quality (**volume 28 or lower on computer**)
+            1. As quiet as it can be (so parent and child cannot hear) while still being able to hear with good quality (**volume 28 or lower on computer**)
             1. Click on Volume icon (bottom RH corner of **monitor** screen)
             1. Must be on 'speaker/headphones' NOT 'DELL'
         ii. Check for camera angles
@@ -1176,7 +1176,7 @@ Once it becomes a coding pair's turn, they are responsible for creating a video 
     b. Open the visit video(s) for a given TC (File &rarr; Open &rarr; Find files on lab drive)
     c. On the bottom left-hand side of the window, drag the blue tab on the video duration bar to the desired start time then press the A button to set it
     d. Once the clip start time is selected, again drag the same blue tab on the duration bar to the desired end time then press the B button to set it
-    e. Once the accurate clip time window is selected, go to File &rarr; Save, and save the clip to the computer desktop with a new name (e.g., clip1, clip2, etc., so that you don't overwrite the new clips you create) 
+    e. Once the accurate clip time window is selected, go to File &rarr; Save, and save the clip to the computer desktop with a new name (e.g., clip1, clip2, etc., so that you do not overwrite the new clips you create) 
     f. Continue steps (a) through (e) until all cute moment clips have been selected and saved
     g. Clear program workspace (make sure no clips are opened), then in the program open the clip you want as the first of the video (you will build on it to create the final video)
     h. Drag the clip files from the desktop straight into the Avidemux window, dropping them over the video—you should see the video duration increase as clips are added, indicating that they are being appended to the end of the previous clip
