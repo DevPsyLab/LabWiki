@@ -1,0 +1,20 @@
+---
+title: "Data Analysis Guides"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Overview
+
+https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html
+
+# Analysis examples
+
+https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#semModel-sem
+
+# Power analysis
+
+https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#power-analysis-using-monte-carlo-simulation

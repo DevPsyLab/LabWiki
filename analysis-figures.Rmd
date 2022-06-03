@@ -1,0 +1,153 @@
+---
+title: "Data Analysis Guides"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Figures in R
+
+## Picking a Chart Type
+
+https://www.data-to-viz.com
+
+## Gallery
+
+https://www.r-graph-gallery.com
+
+## Resources for Learning R Syntax for Figures
+
+https://www.statmethods.net/graphs/index.html
+
+http://www.cookbook-r.com/Graphs/
+
+## Petersen Lab Examples
+
+https://research-git.uiowa.edu/PetersenLab/R-Plotting/-/tree/main/Analyses
+
+## Graphic Design Principles for Data Visualization
+
+https://www.data-to-viz.com/caveats.html
+
+## Types of Plots
+
+### Univariate Distribution
+
+Used for: distribution of one numeric variable
+
+#### Gallery
+
+- Violin chart: https://r-graph-gallery.com/violin.html
+- Density chart: https://r-graph-gallery.com/density-plot.html
+- Histogram: https://r-graph-gallery.com/histogram.html
+- Boxplot: https://r-graph-gallery.com/boxplot.html
+- Ridgeline chart: https://r-graph-gallery.com/ridgeline-plot.html
+
+### Bivariate Scatterplots
+
+Used for: association between two numeric variables
+
+#### Base R
+
+plot(x, y)
+
+#### ggplot2 package
+
+http://www.cookbook-r.com/Graphs/Scatterplots_(ggplot2)/
+
+ggplot(data, aes(x, y)) +
+    geom_point()
+
+#### Gallery
+
+- Scatterplot: https://r-graph-gallery.com/scatterplot.html
+- Bubble plot: https://r-graph-gallery.com/bubble-chart.html
+- 2D density chart: https://r-graph-gallery.com/2d-density-chart.html
+- Heatmap: https://r-graph-gallery.com/heatmap.html
+
+#### Add lines
+
+- Line chart: https://r-graph-gallery.com/line-plot.html
+- Connected scatterplot: https://r-graph-gallery.com/connected-scatterplot.html
+- Visually-weighted regression: http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote
+- Use the `vwReg()` function from the `petersenlab` package: https://research-git.uiowa.edu/PetersenLab/petersenlab/-/blob/master/R/vwReg.R
+
+#### Area
+
+- Area chart: https://r-graph-gallery.com/area-chart.html
+- Stacked area chart: https://r-graph-gallery.com/stacked-area-graph.html
+- Streamgraph: https://r-graph-gallery.com/streamgraph.html
+
+## Bivariate Barplots
+
+Used for: association between one categorical variable and one numeric variable (or for depicting the frequency of categories of a categorical variable)
+
+### Gallery
+
+- Barplot: https://r-graph-gallery.com/barplot.html
+- Lollipop plot: https://r-graph-gallery.com/lollipop-plot.html
+
+## Multivariate Correlation Matrices
+
+Used for: association between multiple numeric variables
+
+For correlation matrices, I do the following:
+
+1. I use the lab's `cor.table()` function (with `type = "manuscript"`) from the `petersenlab` package to create a correlation matrix.
+1. I save the correlation matrix to a `.csv` file.
+    a. For example: https://research-git.uiowa.edu/PetersenLab/SRS/SRS-SelfRegulationDevelopment/-/blob/master/Analyses/selfRegulationDevelopment.Rmd#self-regulation-measures
+1. I open the .csv file in Excel and create the table in Excel that can be copied and pasted to Word/Powerpoint/etc.
+
+### Correlograms
+
+- `corrplot` package: https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html
+- `corrgram` package: https://cran.r-project.org/web/packages/corrgram/vignettes/corrgram_examples.html
+
+#### Gallery
+
+https://r-graph-gallery.com/correlogram.html
+
+### Pairs panels
+
+`psych` package: https://personality-project.org/r/psych/help/pairs.panels.html
+
+I depict examples of correlograms and pairs panels here: https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#correlations
+
+## Path Diagrams
+
+Used for: SEM/CFA/path analysis
+
+If you are just trying to visualize the results of a SEM model fitted using the lavaan package, I recommend the `semPlot` package (http://sachaepskamp.com/semPlot/examples) in `R`.
+You can see examples of my implementation here: https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#path-diagram-1
+
+If you are trying to create a figure for a paper or poster, you might want something that you can draw and customize yourself.
+I use Adobe Illustrator for hand-drawn figures.
+
+You can look at various options below:
+
+- `semPlot` package
+- `Adobe Illustrator`
+- `Onyx`: https://onyx-sem.com
+- `yworks`: https://www.yworks.com
+- `Microsoft Visio`: https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software
+- `AMOS`
+- `Warppls`
+- `Graphviz`: https://graphviz.org
+    - has an R port—this is what we use for our study flowchart via the DiagrammeR package: https://rich-iannone.github.io/DiagrammeR/index.html
+- https://app.diagrams.net
+- https://github.com/jgraph/drawio-desktop/releases
+
+## Interactive
+
+Gallery: https://r-graph-gallery.com/interactive-charts.html
+
+## Animation
+
+Gallery: https://r-graph-gallery.com/animation.html
+
+## 3D
+
+Gallery: https://r-graph-gallery.com/3d.html
+

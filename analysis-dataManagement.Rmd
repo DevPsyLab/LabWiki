@@ -1,0 +1,36 @@
+---
+title: "Data Management"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Importing data
+
+# Saving data
+
+# Using lab functions
+
+# Look at variable names
+
+# Subset
+
+## One variable
+
+## Multiple variables
+
+## Particular rows
+
+# View/print data
+
+# Creating new variables
+
+# Recoding variables
+
+# Merging
+
+# Long to wide
+
+# Wide to long

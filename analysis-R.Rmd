@@ -1,0 +1,83 @@
+---
+title: "R"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+R
+
+ > "*R will always be arcane to those who do not make a serious effort to learn it. It is not meant to be intuitive and easy for casual users to just plunge into. It is far too complex and powerful for that. But the rewards are great for serious data analysts who put in the effort.*"
+
+— [Berton Gunter R-help August 2007](https://www.brodrigues.co/blog/2022-06-02-arcane/)
+
+R
+- Download R: https://cran.r-project.org/
+- Download RStudio: https://www.rstudio.com/products/rstudio/download/
+
+# Getting Started
+
+Follow the initial setup steps:
+https://research-git.uiowa.edu/PetersenLab/R-InitialSetup
+
+For antialiased plots in `RStudio`, change the Graphics backend to `Cairo`:
+Tools → Global Options → Graphics
+
+# Learning R
+
+See this list of resources for Learning `R`: https://docs.google.com/document/d/1KaMKSoBKaSlQFilshyKhhN5wmNI6r0TF8igMnqwlGuo/edit?usp=sharing
+
+# Style Guide
+
+## Use R Notebooks for "Computational Notebooks"
+
+Using R Notebooks for "Computational Notebooks" is helpful for reproducible code that can be shared with others.
+See links below for more info about how to create R Notebooks:
+- https://garrettgman.github.io/rmarkdown/r_notebooks
+- https://bookdown.org/yihui/rmarkdown/notebook.html
+
+## Separate sections in code
+
+- In R scripts, use sections.
+    - To insert a section in Rstudio, use CTRL-Shift-R or "Code" - "Insert Section"
+- In R Notebooks/Markdown, use Headers and code chunks.
+    - Headers: 1, 2, or 3 pound signs
+    - Code Chunks: Ctrl+Alt+I; or click "Insert" button then "R"
+- Variable names
+    - Use meaningful variable names; we want to know what a variable represents without having to consult an external codebook for every variable
+    - Variable names should include the prefix for the measure followed by an underscore
+        - e.g., "cbcl_" for the Child Behavior Checklist variables
+    - Use lower camel case for variable naming
+        - e.g., "prefix_thisIsTheVariableName"
+- Comment code frequently and clearly!
+    - You want you (and others) to easily be able to understand your code if you come back to it several years later!
+
+# Data Management
+
+Tidyverse: https://www.tidyverse.org
+
+University of Iowa Workshops
+
+# Saving Plots
+png(); dev.off()
+
+# Saving Output
+
+R Markdown
+
+- https://rmarkdown.rstudio.com/lesson-1.html
+- https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+- https://bookdown.org/yihui/rmarkdown/
+
+# Shortcuts
+
+- Run selected line(s) of code: Ctrl + Enter
+- Comment/uncomment code: Ctrl + Shift + C
+- Pipe: Ctrl + Shift + M
+- Insert Code Chunk: Ctrl + Alt + I
+- Assignment operator: Alt + - (alt-dash)
+- Select multiple lines: Ctrl + Alt, up or down; or Alt + drag mouse
+- Search: Ctrl + Shift + F
+- Show all keyboard shortcuts: Alt + Shift + K
