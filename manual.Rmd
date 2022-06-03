@@ -819,7 +819,7 @@ Member folders and lab report folders are named using the RA's `HawkID`.
 ### Member Folders
 
 Member folders can be found on the lab drive here:
-`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members`
+`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\`
 
 Member folders should be used for any lab-related work (excluding lab reports).
 They can be accessed by anyone in lab, including other RAs, so it is not advisable to save any personal or confidential documents within a member folder.
@@ -829,7 +829,7 @@ When RAs graduate from the lab, these folders are archived so if we ever need to
 ### Lab Report Folders
 
 Lab report folders can be found on the lab drive here:
-`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports`
+`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\`
 
 Lab report folders can only be accessed by the RA who owns it, the Lab Coordinator, and Dr. Petersen.
 This is where you should save your bi-weekly lab reports throughout the semester.
@@ -1091,7 +1091,7 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
         i. Press folder icon to check for proper save
     c. **Copy** LV1 video from `C:` drive to the relevant folder on the lab drive.
         i. LV1 videos:
-        `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School_Readiness_Study\Videos\Lab Visit 1\Cohort #\T#`
+        `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School_Readiness_Study\Videos\Lab Visit 1\Cohort #\T#\`
 
 ## No Media Release (NMR)—Video Flagging
 

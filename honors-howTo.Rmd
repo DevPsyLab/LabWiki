@@ -101,7 +101,7 @@ Follow the prompts on the screen to install the application.
 Scroll down and click "Map Network Drive."
 This will prompt a new window.
 1. In the empty "Folder" textbox type the lab drive path:
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab`
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
 1. Click the "Finish" button at the bottom of the window.
 1. Now, navigate back through the "Apps" section of Virtual Desktop to find `SPSS` or `R`, and click it to open.
 1. To open your data file in `SPSS`, click "Open another file…" under "Recent Files."

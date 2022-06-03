@@ -267,7 +267,7 @@ If you are getting all As in classes, you are spending too much time on coursewo
 Instead of focusing your learning on coursework, learn by doing.
 Take what you need from classes to advance your research program.
 
-Please refer to the Clinic Manual for guidelines regarding face-to-face hours (on the clinic drive[^3]: `\\iowa.uiowa.edu\shared\CLAS\Departmental\PBS\Clinic\Clinic Manual`).
+Please refer to the Clinic Manual for guidelines regarding face-to-face hours (on the clinic drive[^3]: `\\iowa.uiowa.edu\shared\CLAS\Departmental\PBS\Clinic\Clinic Manual\`).
 For clinical students, it is important to regularly track your clinical experiences and hours to ensure that you are meeting appropriate milestones in your training.
 I highly recommend using Time2Track or PsyKey to track clinical hours.
 We will discuss your plans for clinical training and practicum opportunities during our regular individual meetings.
