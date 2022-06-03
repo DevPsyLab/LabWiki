@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>R</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8JSDTYMH7P');
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="includes/custom.css" type="text/css" />
+<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-SROP.html">SROP Students</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Honors Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="honors-expectations.html">Expectations and Resources</a>
+    </li>
+    <li>
+      <a href="honors-howTo.html">How To</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Studies
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">R</h1>
+
+</div>
+
+
+<p>R</p>
+<blockquote>
+<p>“<em>R will always be arcane to those who do not make a serious effort to learn it. It is not meant to be intuitive and easy for casual users to just plunge into. It is far too complex and powerful for that. But the rewards are great for serious data analysts who put in the effort.</em>”</p>
+</blockquote>
+<p>— <a href="https://www.brodrigues.co/blog/2022-06-02-arcane/">Berton Gunter R-help August 2007</a></p>
+<p>R - Download R: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> - Download RStudio: <a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a></p>
+<div id="getting-started" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Getting Started</h1>
+<p>Follow the initial setup steps: <a href="https://research-git.uiowa.edu/PetersenLab/R-InitialSetup" class="uri">https://research-git.uiowa.edu/PetersenLab/R-InitialSetup</a></p>
+<p>For antialiased plots in <code>RStudio</code>, change the Graphics backend to <code>Cairo</code>: Tools → Global Options → Graphics</p>
+</div>
+<div id="learning-r" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Learning R</h1>
+<p>See this list of resources for Learning <code>R</code>: <a href="https://docs.google.com/document/d/1KaMKSoBKaSlQFilshyKhhN5wmNI6r0TF8igMnqwlGuo/edit?usp=sharing" class="uri">https://docs.google.com/document/d/1KaMKSoBKaSlQFilshyKhhN5wmNI6r0TF8igMnqwlGuo/edit?usp=sharing</a></p>
+</div>
+<div id="style-guide" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Style Guide</h1>
+<div id="use-r-notebooks-for-computational-notebooks" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Use R Notebooks for “Computational Notebooks”</h2>
+<p>Using R Notebooks for “Computational Notebooks” is helpful for reproducible code that can be shared with others. See links below for more info about how to create R Notebooks: - <a href="https://garrettgman.github.io/rmarkdown/r_notebooks" class="uri">https://garrettgman.github.io/rmarkdown/r_notebooks</a> - <a href="https://bookdown.org/yihui/rmarkdown/notebook.html" class="uri">https://bookdown.org/yihui/rmarkdown/notebook.html</a></p>
+</div>
+<div id="separate-sections-in-code" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Separate sections in code</h2>
+<ul>
+<li>In R scripts, use sections.
+<ul>
+<li>To insert a section in Rstudio, use CTRL-Shift-R or “Code” - “Insert Section”</li>
+</ul></li>
+<li>In R Notebooks/Markdown, use Headers and code chunks.
+<ul>
+<li>Headers: 1, 2, or 3 pound signs</li>
+<li>Code Chunks: Ctrl+Alt+I; or click “Insert” button then “R”</li>
+</ul></li>
+<li>Variable names
+<ul>
+<li>Use meaningful variable names; we want to know what a variable represents without having to consult an external codebook for every variable</li>
+<li>Variable names should include the prefix for the measure followed by an underscore
+<ul>
+<li>e.g., “cbcl_” for the Child Behavior Checklist variables</li>
+</ul></li>
+<li>Use lower camel case for variable naming
+<ul>
+<li>e.g., “prefix_thisIsTheVariableName”</li>
+</ul></li>
+</ul></li>
+<li>Comment code frequently and clearly!
+<ul>
+<li>You want you (and others) to easily be able to understand your code if you come back to it several years later!</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="data-management" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Data Management</h1>
+<p>Tidyverse: <a href="https://www.tidyverse.org" class="uri">https://www.tidyverse.org</a></p>
+<p>University of Iowa Workshops</p>
+</div>
+<div id="saving-plots" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Saving Plots</h1>
+<p>png(); dev.off()</p>
+</div>
+<div id="saving-output" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Saving Output</h1>
+<p>R Markdown</p>
+<ul>
+<li><a href="https://rmarkdown.rstudio.com/lesson-1.html" class="uri">https://rmarkdown.rstudio.com/lesson-1.html</a></li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></li>
+</ul>
+</div>
+<div id="shortcuts" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Shortcuts</h1>
+<ul>
+<li>Run selected line(s) of code: Ctrl + Enter</li>
+<li>Comment/uncomment code: Ctrl + Shift + C</li>
+<li>Pipe: Ctrl + Shift + M</li>
+<li>Insert Code Chunk: Ctrl + Alt + I</li>
+<li>Assignment operator: Alt + - (alt-dash)</li>
+<li>Select multiple lines: Ctrl + Alt, up or down; or Alt + drag mouse</li>
+<li>Search: Ctrl + Shift + F</li>
+<li>Show all keyboard shortcuts: Alt + Shift + K</li>
+</ul>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKUgoKID4gIipSIHdpbGwgYWx3YXlzIGJlIGFyY2FuZSB0byB0aG9zZSB3aG8gZG8gbm90IG1ha2UgYSBzZXJpb3VzIGVmZm9ydCB0byBsZWFybiBpdC4gSXQgaXMgbm90IG1lYW50IHRvIGJlIGludHVpdGl2ZSBhbmQgZWFzeSBmb3IgY2FzdWFsIHVzZXJzIHRvIGp1c3QgcGx1bmdlIGludG8uIEl0IGlzIGZhciB0b28gY29tcGxleCBhbmQgcG93ZXJmdWwgZm9yIHRoYXQuIEJ1dCB0aGUgcmV3YXJkcyBhcmUgZ3JlYXQgZm9yIHNlcmlvdXMgZGF0YSBhbmFseXN0cyB3aG8gcHV0IGluIHRoZSBlZmZvcnQuKiIKCuKAlCBbQmVydG9uIEd1bnRlciBSLWhlbHAgQXVndXN0IDIwMDddKGh0dHBzOi8vd3d3LmJyb2RyaWd1ZXMuY28vYmxvZy8yMDIyLTA2LTAyLWFyY2FuZS8pCgpSCi0gRG93bmxvYWQgUjogaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvCi0gRG93bmxvYWQgUlN0dWRpbzogaHR0cHM6Ly93d3cucnN0dWRpby5jb20vcHJvZHVjdHMvcnN0dWRpby9kb3dubG9hZC8KCiMgR2V0dGluZyBTdGFydGVkCgpGb2xsb3cgdGhlIGluaXRpYWwgc2V0dXAgc3RlcHM6Cmh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9SLUluaXRpYWxTZXR1cAoKRm9yIGFudGlhbGlhc2VkIHBsb3RzIGluIGBSU3R1ZGlvYCwgY2hhbmdlIHRoZSBHcmFwaGljcyBiYWNrZW5kIHRvIGBDYWlyb2A6ClRvb2xzIOKGkiBHbG9iYWwgT3B0aW9ucyDihpIgR3JhcGhpY3MKCiMgTGVhcm5pbmcgUgoKU2VlIHRoaXMgbGlzdCBvZiByZXNvdXJjZXMgZm9yIExlYXJuaW5nIGBSYDogaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZG9jdW1lbnQvZC8xS2FNS1NvQkthU2xRRmlsc2h5S2hoTjV3bU5JNnIwVEY4aWdNbnF3bEd1by9lZGl0P3VzcD1zaGFyaW5nCgojIFN0eWxlIEd1aWRlCgojIyBVc2UgUiBOb3RlYm9va3MgZm9yICJDb21wdXRhdGlvbmFsIE5vdGVib29rcyIKClVzaW5nIFIgTm90ZWJvb2tzIGZvciAiQ29tcHV0YXRpb25hbCBOb3RlYm9va3MiIGlzIGhlbHBmdWwgZm9yIHJlcHJvZHVjaWJsZSBjb2RlIHRoYXQgY2FuIGJlIHNoYXJlZCB3aXRoIG90aGVycy4KU2VlIGxpbmtzIGJlbG93IGZvciBtb3JlIGluZm8gYWJvdXQgaG93IHRvIGNyZWF0ZSBSIE5vdGVib29rczoKLSBodHRwczovL2dhcnJldHRnbWFuLmdpdGh1Yi5pby9ybWFya2Rvd24vcl9ub3RlYm9va3MKLSBodHRwczovL2Jvb2tkb3duLm9yZy95aWh1aS9ybWFya2Rvd24vbm90ZWJvb2suaHRtbAoKIyMgU2VwYXJhdGUgc2VjdGlvbnMgaW4gY29kZQoKLSBJbiBSIHNjcmlwdHMsIHVzZSBzZWN0aW9ucy4KICAgIC0gVG8gaW5zZXJ0IGEgc2VjdGlvbiBpbiBSc3R1ZGlvLCB1c2UgQ1RSTC1TaGlmdC1SIG9yICJDb2RlIiAtICJJbnNlcnQgU2VjdGlvbiIKLSBJbiBSIE5vdGVib29rcy9NYXJrZG93biwgdXNlIEhlYWRlcnMgYW5kIGNvZGUgY2h1bmtzLgogICAgLSBIZWFkZXJzOiAxLCAyLCBvciAzIHBvdW5kIHNpZ25zCiAgICAtIENvZGUgQ2h1bmtzOiBDdHJsK0FsdCtJOyBvciBjbGljayAiSW5zZXJ0IiBidXR0b24gdGhlbiAiUiIKLSBWYXJpYWJsZSBuYW1lcwogICAgLSBVc2UgbWVhbmluZ2Z1bCB2YXJpYWJsZSBuYW1lczsgd2Ugd2FudCB0byBrbm93IHdoYXQgYSB2YXJpYWJsZSByZXByZXNlbnRzIHdpdGhvdXQgaGF2aW5nIHRvIGNvbnN1bHQgYW4gZXh0ZXJuYWwgY29kZWJvb2sgZm9yIGV2ZXJ5IHZhcmlhYmxlCiAgICAtIFZhcmlhYmxlIG5hbWVzIHNob3VsZCBpbmNsdWRlIHRoZSBwcmVmaXggZm9yIHRoZSBtZWFzdXJlIGZvbGxvd2VkIGJ5IGFuIHVuZGVyc2NvcmUKICAgICAgICAtIGUuZy4sICJjYmNsXyIgZm9yIHRoZSBDaGlsZCBCZWhhdmlvciBDaGVja2xpc3QgdmFyaWFibGVzCiAgICAtIFVzZSBsb3dlciBjYW1lbCBjYXNlIGZvciB2YXJpYWJsZSBuYW1pbmcKICAgICAgICAtIGUuZy4sICJwcmVmaXhfdGhpc0lzVGhlVmFyaWFibGVOYW1lIgotIENvbW1lbnQgY29kZSBmcmVxdWVudGx5IGFuZCBjbGVhcmx5IQogICAgLSBZb3Ugd2FudCB5b3UgKGFuZCBvdGhlcnMpIHRvIGVhc2lseSBiZSBhYmxlIHRvIHVuZGVyc3RhbmQgeW91ciBjb2RlIGlmIHlvdSBjb21lIGJhY2sgdG8gaXQgc2V2ZXJhbCB5ZWFycyBsYXRlciEKCiMgRGF0YSBNYW5hZ2VtZW50CgpUaWR5dmVyc2U6IGh0dHBzOi8vd3d3LnRpZHl2ZXJzZS5vcmcKClVuaXZlcnNpdHkgb2YgSW93YSBXb3Jrc2hvcHMKCiMgU2F2aW5nIFBsb3RzCnBuZygpOyBkZXYub2ZmKCkKCiMgU2F2aW5nIE91dHB1dAoKUiBNYXJrZG93bgoKLSBodHRwczovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbS9sZXNzb24tMS5odG1sCi0gaHR0cHM6Ly93d3cucnN0dWRpby5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMTUvMDIvcm1hcmtkb3duLWNoZWF0c2hlZXQucGRmCi0gaHR0cHM6Ly9ib29rZG93bi5vcmcveWlodWkvcm1hcmtkb3duLwoKIyBTaG9ydGN1dHMKCi0gUnVuIHNlbGVjdGVkIGxpbmUocykgb2YgY29kZTogQ3RybCArIEVudGVyCi0gQ29tbWVudC91bmNvbW1lbnQgY29kZTogQ3RybCArIFNoaWZ0ICsgQwotIFBpcGU6IEN0cmwgKyBTaGlmdCArIE0KLSBJbnNlcnQgQ29kZSBDaHVuazogQ3RybCArIEFsdCArIEkKLSBBc3NpZ25tZW50IG9wZXJhdG9yOiBBbHQgKyAtIChhbHQtZGFzaCkKLSBTZWxlY3QgbXVsdGlwbGUgbGluZXM6IEN0cmwgKyBBbHQsIHVwIG9yIGRvd247IG9yIEFsdCArIGRyYWcgbW91c2UKLSBTZWFyY2g6IEN0cmwgKyBTaGlmdCArIEYKLSBTaG93IGFsbCBrZXlib2FyZCBzaG9ydGN1dHM6IEFsdCArIFNoaWZ0ICsgSwo=</div>
+<script type="text/javascript" src="includes/external-links.js"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/DevPsyLab" target="_blank" class="fa fa-github fa-fw fa-3x"></a>
+    <a href="https://twitter.com/devpsylab" target="_blank" class="fa fa-twitter fa-fw fa-3x"></a>
+    <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
+	<a href="https://www.instagram.com/dev_psy_lab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("analysis-R.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Data Analysis Guides</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8JSDTYMH7P');
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="includes/custom.css" type="text/css" />
+<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-SROP.html">SROP Students</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Honors Projects
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="honors-expectations.html">Expectations and Resources</a>
+    </li>
+    <li>
+      <a href="honors-howTo.html">How To</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Studies
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Data Analysis Guides</h1>
+
+</div>
+
+
+<div id="figures-in-r" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Figures in R</h1>
+<div id="picking-a-chart-type" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Picking a Chart Type</h2>
+<p><a href="https://www.data-to-viz.com" class="uri">https://www.data-to-viz.com</a></p>
+</div>
+<div id="gallery" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Gallery</h2>
+<p><a href="https://www.r-graph-gallery.com" class="uri">https://www.r-graph-gallery.com</a></p>
+</div>
+<div id="resources-for-learning-r-syntax-for-figures" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Resources for Learning R Syntax for Figures</h2>
+<p><a href="https://www.statmethods.net/graphs/index.html" class="uri">https://www.statmethods.net/graphs/index.html</a></p>
+<p><a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a></p>
+</div>
+<div id="petersen-lab-examples" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Petersen Lab Examples</h2>
+<p><a href="https://research-git.uiowa.edu/PetersenLab/R-Plotting/-/tree/main/Analyses" class="uri">https://research-git.uiowa.edu/PetersenLab/R-Plotting/-/tree/main/Analyses</a></p>
+</div>
+<div id="graphic-design-principles-for-data-visualization" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Graphic Design Principles for Data Visualization</h2>
+<p><a href="https://www.data-to-viz.com/caveats.html" class="uri">https://www.data-to-viz.com/caveats.html</a></p>
+</div>
+<div id="types-of-plots" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> Types of Plots</h2>
+<div id="univariate-distribution" class="section level3" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Univariate Distribution</h3>
+<p>Used for: distribution of one numeric variable</p>
+<div id="gallery-1" class="section level4" number="1.6.1.1">
+<h4><span class="header-section-number">1.6.1.1</span> Gallery</h4>
+<ul>
+<li>Violin chart: <a href="https://r-graph-gallery.com/violin.html" class="uri">https://r-graph-gallery.com/violin.html</a></li>
+<li>Density chart: <a href="https://r-graph-gallery.com/density-plot.html" class="uri">https://r-graph-gallery.com/density-plot.html</a></li>
+<li>Histogram: <a href="https://r-graph-gallery.com/histogram.html" class="uri">https://r-graph-gallery.com/histogram.html</a></li>
+<li>Boxplot: <a href="https://r-graph-gallery.com/boxplot.html" class="uri">https://r-graph-gallery.com/boxplot.html</a></li>
+<li>Ridgeline chart: <a href="https://r-graph-gallery.com/ridgeline-plot.html" class="uri">https://r-graph-gallery.com/ridgeline-plot.html</a></li>
+</ul>
+</div>
+</div>
+<div id="bivariate-scatterplots" class="section level3" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Bivariate Scatterplots</h3>
+<p>Used for: association between two numeric variables</p>
+<div id="base-r" class="section level4" number="1.6.2.1">
+<h4><span class="header-section-number">1.6.2.1</span> Base R</h4>
+<p>plot(x, y)</p>
+</div>
+<div id="ggplot2-package" class="section level4" number="1.6.2.2">
+<h4><span class="header-section-number">1.6.2.2</span> ggplot2 package</h4>
+<p><a href="http://www.cookbook-r.com/Graphs/Scatterplots_(ggplot2)/" class="uri">http://www.cookbook-r.com/Graphs/Scatterplots_(ggplot2)/</a></p>
+<p>ggplot(data, aes(x, y)) + geom_point()</p>
+</div>
+<div id="gallery-2" class="section level4" number="1.6.2.3">
+<h4><span class="header-section-number">1.6.2.3</span> Gallery</h4>
+<ul>
+<li>Scatterplot: <a href="https://r-graph-gallery.com/scatterplot.html" class="uri">https://r-graph-gallery.com/scatterplot.html</a></li>
+<li>Bubble plot: <a href="https://r-graph-gallery.com/bubble-chart.html" class="uri">https://r-graph-gallery.com/bubble-chart.html</a></li>
+<li>2D density chart: <a href="https://r-graph-gallery.com/2d-density-chart.html" class="uri">https://r-graph-gallery.com/2d-density-chart.html</a></li>
+<li>Heatmap: <a href="https://r-graph-gallery.com/heatmap.html" class="uri">https://r-graph-gallery.com/heatmap.html</a></li>
+</ul>
+</div>
+<div id="add-lines" class="section level4" number="1.6.2.4">
+<h4><span class="header-section-number">1.6.2.4</span> Add lines</h4>
+<ul>
+<li>Line chart: <a href="https://r-graph-gallery.com/line-plot.html" class="uri">https://r-graph-gallery.com/line-plot.html</a></li>
+<li>Connected scatterplot: <a href="https://r-graph-gallery.com/connected-scatterplot.html" class="uri">https://r-graph-gallery.com/connected-scatterplot.html</a></li>
+<li>Visually-weighted regression: <a href="http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote" class="uri">http://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote</a></li>
+<li>Use the <code>vwReg()</code> function from the <code>petersenlab</code> package: <a href="https://research-git.uiowa.edu/PetersenLab/petersenlab/-/blob/master/R/vwReg.R" class="uri">https://research-git.uiowa.edu/PetersenLab/petersenlab/-/blob/master/R/vwReg.R</a></li>
+</ul>
+</div>
+<div id="area" class="section level4" number="1.6.2.5">
+<h4><span class="header-section-number">1.6.2.5</span> Area</h4>
+<ul>
+<li>Area chart: <a href="https://r-graph-gallery.com/area-chart.html" class="uri">https://r-graph-gallery.com/area-chart.html</a></li>
+<li>Stacked area chart: <a href="https://r-graph-gallery.com/stacked-area-graph.html" class="uri">https://r-graph-gallery.com/stacked-area-graph.html</a></li>
+<li>Streamgraph: <a href="https://r-graph-gallery.com/streamgraph.html" class="uri">https://r-graph-gallery.com/streamgraph.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="bivariate-barplots" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> Bivariate Barplots</h2>
+<p>Used for: association between one categorical variable and one numeric variable (or for depicting the frequency of categories of a categorical variable)</p>
+<div id="gallery-3" class="section level3" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> Gallery</h3>
+<ul>
+<li>Barplot: <a href="https://r-graph-gallery.com/barplot.html" class="uri">https://r-graph-gallery.com/barplot.html</a></li>
+<li>Lollipop plot: <a href="https://r-graph-gallery.com/lollipop-plot.html" class="uri">https://r-graph-gallery.com/lollipop-plot.html</a></li>
+</ul>
+</div>
+</div>
+<div id="multivariate-correlation-matrices" class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> Multivariate Correlation Matrices</h2>
+<p>Used for: association between multiple numeric variables</p>
+<p>For correlation matrices, I do the following:</p>
+<ol style="list-style-type: decimal">
+<li>I use the lab’s <code>cor.table()</code> function (with <code>type = "manuscript"</code>) from the <code>petersenlab</code> package to create a correlation matrix.</li>
+<li>I save the correlation matrix to a <code>.csv</code> file.
+<ol style="list-style-type: lower-alpha">
+<li>For example: <a href="https://research-git.uiowa.edu/PetersenLab/SRS/SRS-SelfRegulationDevelopment/-/blob/master/Analyses/selfRegulationDevelopment.Rmd#self-regulation-measures" class="uri">https://research-git.uiowa.edu/PetersenLab/SRS/SRS-SelfRegulationDevelopment/-/blob/master/Analyses/selfRegulationDevelopment.Rmd#self-regulation-measures</a></li>
+</ol></li>
+<li>I open the .csv file in Excel and create the table in Excel that can be copied and pasted to Word/Powerpoint/etc.</li>
+</ol>
+<div id="correlograms" class="section level3" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Correlograms</h3>
+<ul>
+<li><code>corrplot</code> package: <a href="https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html" class="uri">https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html</a></li>
+<li><code>corrgram</code> package: <a href="https://cran.r-project.org/web/packages/corrgram/vignettes/corrgram_examples.html" class="uri">https://cran.r-project.org/web/packages/corrgram/vignettes/corrgram_examples.html</a></li>
+</ul>
+<div id="gallery-4" class="section level4" number="1.8.1.1">
+<h4><span class="header-section-number">1.8.1.1</span> Gallery</h4>
+<p><a href="https://r-graph-gallery.com/correlogram.html" class="uri">https://r-graph-gallery.com/correlogram.html</a></p>
+</div>
+</div>
+<div id="pairs-panels" class="section level3" number="1.8.2">
+<h3><span class="header-section-number">1.8.2</span> Pairs panels</h3>
+<p><code>psych</code> package: <a href="https://personality-project.org/r/psych/help/pairs.panels.html" class="uri">https://personality-project.org/r/psych/help/pairs.panels.html</a></p>
+<p>I depict examples of correlograms and pairs panels here: <a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#correlations" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#correlations</a></p>
+</div>
+</div>
+<div id="path-diagrams" class="section level2" number="1.9">
+<h2><span class="header-section-number">1.9</span> Path Diagrams</h2>
+<p>Used for: SEM/CFA/path analysis</p>
+<p>If you are just trying to visualize the results of a SEM model fitted using the lavaan package, I recommend the <code>semPlot</code> package (<a href="http://sachaepskamp.com/semPlot/examples" class="uri">http://sachaepskamp.com/semPlot/examples</a>) in <code>R</code>. You can see examples of my implementation here: <a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#path-diagram-1" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#path-diagram-1</a></p>
+<p>If you are trying to create a figure for a paper or poster, you might want something that you can draw and customize yourself. I use Adobe Illustrator for hand-drawn figures.</p>
+<p>You can look at various options below:</p>
+<ul>
+<li><code>semPlot</code> package</li>
+<li><code>Adobe Illustrator</code></li>
+<li><code>Onyx</code>: <a href="https://onyx-sem.com" class="uri">https://onyx-sem.com</a></li>
+<li><code>yworks</code>: <a href="https://www.yworks.com" class="uri">https://www.yworks.com</a></li>
+<li><code>Microsoft Visio</code>: <a href="https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software" class="uri">https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software</a></li>
+<li><code>AMOS</code></li>
+<li><code>Warppls</code></li>
+<li><code>Graphviz</code>: <a href="https://graphviz.org" class="uri">https://graphviz.org</a>
+<ul>
+<li>has an R port—this is what we use for our study flowchart via the DiagrammeR package: <a href="https://rich-iannone.github.io/DiagrammeR/index.html" class="uri">https://rich-iannone.github.io/DiagrammeR/index.html</a></li>
+</ul></li>
+<li><a href="https://app.diagrams.net" class="uri">https://app.diagrams.net</a></li>
+<li><a href="https://github.com/jgraph/drawio-desktop/releases" class="uri">https://github.com/jgraph/drawio-desktop/releases</a></li>
+</ul>
+</div>
+<div id="interactive" class="section level2" number="1.10">
+<h2><span class="header-section-number">1.10</span> Interactive</h2>
+<p>Gallery: <a href="https://r-graph-gallery.com/interactive-charts.html" class="uri">https://r-graph-gallery.com/interactive-charts.html</a></p>
+</div>
+<div id="animation" class="section level2" number="1.11">
+<h2><span class="header-section-number">1.11</span> Animation</h2>
+<p>Gallery: <a href="https://r-graph-gallery.com/animation.html" class="uri">https://r-graph-gallery.com/animation.html</a></p>
+</div>
+<div id="d" class="section level2" number="1.12">
+<h2><span class="header-section-number">1.12</span> 3D</h2>
+<p>Gallery: <a href="https://r-graph-gallery.com/3d.html" class="uri">https://r-graph-gallery.com/3d.html</a></p>
+</div>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRGF0YSBBbmFseXNpcyBHdWlkZXMiCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGUgPSBGQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgZXJyb3IgPSBUUlVFKQpgYGAKCiMgRmlndXJlcyBpbiBSCgojIyBQaWNraW5nIGEgQ2hhcnQgVHlwZQoKaHR0cHM6Ly93d3cuZGF0YS10by12aXouY29tCgojIyBHYWxsZXJ5CgpodHRwczovL3d3dy5yLWdyYXBoLWdhbGxlcnkuY29tCgojIyBSZXNvdXJjZXMgZm9yIExlYXJuaW5nIFIgU3ludGF4IGZvciBGaWd1cmVzCgpodHRwczovL3d3dy5zdGF0bWV0aG9kcy5uZXQvZ3JhcGhzL2luZGV4Lmh0bWwKCmh0dHA6Ly93d3cuY29va2Jvb2stci5jb20vR3JhcGhzLwoKIyMgUGV0ZXJzZW4gTGFiIEV4YW1wbGVzCgpodHRwczovL3Jlc2VhcmNoLWdpdC51aW93YS5lZHUvUGV0ZXJzZW5MYWIvUi1QbG90dGluZy8tL3RyZWUvbWFpbi9BbmFseXNlcwoKIyMgR3JhcGhpYyBEZXNpZ24gUHJpbmNpcGxlcyBmb3IgRGF0YSBWaXN1YWxpemF0aW9uCgpodHRwczovL3d3dy5kYXRhLXRvLXZpei5jb20vY2F2ZWF0cy5odG1sCgojIyBUeXBlcyBvZiBQbG90cwoKIyMjIFVuaXZhcmlhdGUgRGlzdHJpYnV0aW9uCgpVc2VkIGZvcjogZGlzdHJpYnV0aW9uIG9mIG9uZSBudW1lcmljIHZhcmlhYmxlCgojIyMjIEdhbGxlcnkKCi0gVmlvbGluIGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vdmlvbGluLmh0bWwKLSBEZW5zaXR5IGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vZGVuc2l0eS1wbG90Lmh0bWwKLSBIaXN0b2dyYW06IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9oaXN0b2dyYW0uaHRtbAotIEJveHBsb3Q6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9ib3hwbG90Lmh0bWwKLSBSaWRnZWxpbmUgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9yaWRnZWxpbmUtcGxvdC5odG1sCgojIyMgQml2YXJpYXRlIFNjYXR0ZXJwbG90cwoKVXNlZCBmb3I6IGFzc29jaWF0aW9uIGJldHdlZW4gdHdvIG51bWVyaWMgdmFyaWFibGVzCgojIyMjIEJhc2UgUgoKcGxvdCh4LCB5KQoKIyMjIyBnZ3Bsb3QyIHBhY2thZ2UKCmh0dHA6Ly93d3cuY29va2Jvb2stci5jb20vR3JhcGhzL1NjYXR0ZXJwbG90c18oZ2dwbG90MikvCgpnZ3Bsb3QoZGF0YSwgYWVzKHgsIHkpKSArCiAgICBnZW9tX3BvaW50KCkKCiMjIyMgR2FsbGVyeQoKLSBTY2F0dGVycGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL3NjYXR0ZXJwbG90Lmh0bWwKLSBCdWJibGUgcGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2J1YmJsZS1jaGFydC5odG1sCi0gMkQgZGVuc2l0eSBjaGFydDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tLzJkLWRlbnNpdHktY2hhcnQuaHRtbAotIEhlYXRtYXA6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9oZWF0bWFwLmh0bWwKCiMjIyMgQWRkIGxpbmVzCgotIExpbmUgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9saW5lLXBsb3QuaHRtbAotIENvbm5lY3RlZCBzY2F0dGVycGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2Nvbm5lY3RlZC1zY2F0dGVycGxvdC5odG1sCi0gVmlzdWFsbHktd2VpZ2h0ZWQgcmVncmVzc2lvbjogaHR0cDovL3d3dy5uaWNlYnJlYWQuZGUvdmlzdWFsbHktd2VpZ2h0ZWQtd2F0ZXJjb2xvci1wbG90cy1uZXctdmFyaWFudHMtcGxlYXNlLXZvdGUKLSBVc2UgdGhlIGB2d1JlZygpYCBmdW5jdGlvbiBmcm9tIHRoZSBgcGV0ZXJzZW5sYWJgIHBhY2thZ2U6IGh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi8tL2Jsb2IvbWFzdGVyL1IvdndSZWcuUgoKIyMjIyBBcmVhCgotIEFyZWEgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9hcmVhLWNoYXJ0Lmh0bWwKLSBTdGFja2VkIGFyZWEgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9zdGFja2VkLWFyZWEtZ3JhcGguaHRtbAotIFN0cmVhbWdyYXBoOiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vc3RyZWFtZ3JhcGguaHRtbAoKIyMgQml2YXJpYXRlIEJhcnBsb3RzCgpVc2VkIGZvcjogYXNzb2NpYXRpb24gYmV0d2VlbiBvbmUgY2F0ZWdvcmljYWwgdmFyaWFibGUgYW5kIG9uZSBudW1lcmljIHZhcmlhYmxlIChvciBmb3IgZGVwaWN0aW5nIHRoZSBmcmVxdWVuY3kgb2YgY2F0ZWdvcmllcyBvZiBhIGNhdGVnb3JpY2FsIHZhcmlhYmxlKQoKIyMjIEdhbGxlcnkKCi0gQmFycGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2JhcnBsb3QuaHRtbAotIExvbGxpcG9wIHBsb3Q6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9sb2xsaXBvcC1wbG90Lmh0bWwKCiMjIE11bHRpdmFyaWF0ZSBDb3JyZWxhdGlvbiBNYXRyaWNlcwoKVXNlZCBmb3I6IGFzc29jaWF0aW9uIGJldHdlZW4gbXVsdGlwbGUgbnVtZXJpYyB2YXJpYWJsZXMKCkZvciBjb3JyZWxhdGlvbiBtYXRyaWNlcywgSSBkbyB0aGUgZm9sbG93aW5nOgoKMS4gSSB1c2UgdGhlIGxhYidzIGBjb3IudGFibGUoKWAgZnVuY3Rpb24gKHdpdGggYHR5cGUgPSAibWFudXNjcmlwdCJgKSBmcm9tIHRoZSBgcGV0ZXJzZW5sYWJgIHBhY2thZ2UgdG8gY3JlYXRlIGEgY29ycmVsYXRpb24gbWF0cml4LgoxLiBJIHNhdmUgdGhlIGNvcnJlbGF0aW9uIG1hdHJpeCB0byBhIGAuY3N2YCBmaWxlLgogICAgYS4gRm9yIGV4YW1wbGU6IGh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9TUlMvU1JTLVNlbGZSZWd1bGF0aW9uRGV2ZWxvcG1lbnQvLS9ibG9iL21hc3Rlci9BbmFseXNlcy9zZWxmUmVndWxhdGlvbkRldmVsb3BtZW50LlJtZCNzZWxmLXJlZ3VsYXRpb24tbWVhc3VyZXMKMS4gSSBvcGVuIHRoZSAuY3N2IGZpbGUgaW4gRXhjZWwgYW5kIGNyZWF0ZSB0aGUgdGFibGUgaW4gRXhjZWwgdGhhdCBjYW4gYmUgY29waWVkIGFuZCBwYXN0ZWQgdG8gV29yZC9Qb3dlcnBvaW50L2V0Yy4KCiMjIyBDb3JyZWxvZ3JhbXMKCi0gYGNvcnJwbG90YCBwYWNrYWdlOiBodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvY29ycnBsb3QvdmlnbmV0dGVzL2NvcnJwbG90LWludHJvLmh0bWwKLSBgY29ycmdyYW1gIHBhY2thZ2U6IGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL3dlYi9wYWNrYWdlcy9jb3JyZ3JhbS92aWduZXR0ZXMvY29ycmdyYW1fZXhhbXBsZXMuaHRtbAoKIyMjIyBHYWxsZXJ5CgpodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vY29ycmVsb2dyYW0uaHRtbAoKIyMjIFBhaXJzIHBhbmVscwoKYHBzeWNoYCBwYWNrYWdlOiBodHRwczovL3BlcnNvbmFsaXR5LXByb2plY3Qub3JnL3IvcHN5Y2gvaGVscC9wYWlycy5wYW5lbHMuaHRtbAoKSSBkZXBpY3QgZXhhbXBsZXMgb2YgY29ycmVsb2dyYW1zIGFuZCBwYWlycyBwYW5lbHMgaGVyZTogaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvZmFjdG9yLWFuYWx5c2lzLVBDQS5odG1sI2NvcnJlbGF0aW9ucwoKIyMgUGF0aCBEaWFncmFtcwoKVXNlZCBmb3I6IFNFTS9DRkEvcGF0aCBhbmFseXNpcwoKSWYgeW91IGFyZSBqdXN0IHRyeWluZyB0byB2aXN1YWxpemUgdGhlIHJlc3VsdHMgb2YgYSBTRU0gbW9kZWwgZml0dGVkIHVzaW5nIHRoZSBsYXZhYW4gcGFja2FnZSwgSSByZWNvbW1lbmQgdGhlIGBzZW1QbG90YCBwYWNrYWdlIChodHRwOi8vc2FjaGFlcHNrYW1wLmNvbS9zZW1QbG90L2V4YW1wbGVzKSBpbiBgUmAuCllvdSBjYW4gc2VlIGV4YW1wbGVzIG9mIG15IGltcGxlbWVudGF0aW9uIGhlcmU6IGh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI3BhdGgtZGlhZ3JhbS0xCgpJZiB5b3UgYXJlIHRyeWluZyB0byBjcmVhdGUgYSBmaWd1cmUgZm9yIGEgcGFwZXIgb3IgcG9zdGVyLCB5b3UgbWlnaHQgd2FudCBzb21ldGhpbmcgdGhhdCB5b3UgY2FuIGRyYXcgYW5kIGN1c3RvbWl6ZSB5b3Vyc2VsZi4KSSB1c2UgQWRvYmUgSWxsdXN0cmF0b3IgZm9yIGhhbmQtZHJhd24gZmlndXJlcy4KCllvdSBjYW4gbG9vayBhdCB2YXJpb3VzIG9wdGlvbnMgYmVsb3c6CgotIGBzZW1QbG90YCBwYWNrYWdlCi0gYEFkb2JlIElsbHVzdHJhdG9yYAotIGBPbnl4YDogaHR0cHM6Ly9vbnl4LXNlbS5jb20KLSBgeXdvcmtzYDogaHR0cHM6Ly93d3cueXdvcmtzLmNvbQotIGBNaWNyb3NvZnQgVmlzaW9gOiBodHRwczovL3d3dy5taWNyb3NvZnQuY29tL2VuLXVzL21pY3Jvc29mdC0zNjUvdmlzaW8vZmxvd2NoYXJ0LXNvZnR3YXJlCi0gYEFNT1NgCi0gYFdhcnBwbHNgCi0gYEdyYXBodml6YDogaHR0cHM6Ly9ncmFwaHZpei5vcmcKICAgIC0gaGFzIGFuIFIgcG9ydOKAlHRoaXMgaXMgd2hhdCB3ZSB1c2UgZm9yIG91ciBzdHVkeSBmbG93Y2hhcnQgdmlhIHRoZSBEaWFncmFtbWVSIHBhY2thZ2U6IGh0dHBzOi8vcmljaC1pYW5ub25lLmdpdGh1Yi5pby9EaWFncmFtbWVSL2luZGV4Lmh0bWwKLSBodHRwczovL2FwcC5kaWFncmFtcy5uZXQKLSBodHRwczovL2dpdGh1Yi5jb20vamdyYXBoL2RyYXdpby1kZXNrdG9wL3JlbGVhc2VzCgojIyBJbnRlcmFjdGl2ZQoKR2FsbGVyeTogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2ludGVyYWN0aXZlLWNoYXJ0cy5odG1sCgojIyBBbmltYXRpb24KCkdhbGxlcnk6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9hbmltYXRpb24uaHRtbAoKIyMgM0QKCkdhbGxlcnk6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS8zZC5odG1sCgo=</div>
+<script type="text/javascript" src="includes/external-links.js"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/DevPsyLab" target="_blank" class="fa fa-github fa-fw fa-3x"></a>
+    <a href="https://twitter.com/devpsylab" target="_blank" class="fa fa-twitter fa-fw fa-3x"></a>
+    <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
+	<a href="https://www.instagram.com/dev_psy_lab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("analysis-figures.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
