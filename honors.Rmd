@@ -1,5 +1,5 @@
 ---
-title: "Honors Thesis: How To"
+title: "Honors Thesis: Expectations and Resources"
 ---
 
 ```{r setup, include = FALSE}
@@ -7,7 +7,79 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-# Access the Lab Drive
+# Expectations
+
+The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
+During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
+If you are interested in conducting an Honors thesis, it is your responsibility to contact Dr. Petersen to set up a meeting (see below).
+Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, the quality of your research question and hypotheses, your motivation, and whether you have the skills and aptitude necessary for successfully completing the project.
+To help keep you on track to finish your project and thesis on this timeline, Dr. Petersen expects you to meet with him once per month.
+It is your responsibility to schedule the monthly meetings.
+
+The first half of the year is spent formulating a research question and hypotheses (based on the research literature), and writing the Introduction and Method sections of the thesis.
+The second half of the year is spent performing the data analysis to answer the research question, writing the Results and Discussion sections of the thesis, and presenting the findings at a poster conference (see below).
+The more reading you do, before the "thesis year" begins, and the more you think about what you are interested in, what questions you have, and what gaps are in the literature that you can address with the lab's data, the more prepared you will be to complete your thesis on this timeline.
+Note: work related to Honors theses is expected to take place \*outside\* of your regular 10 hours in the lab.
+You can get academic credit for your thesis research via the course entitled "Honors Thesis Research" (PSY:4990).
+
+Dr. Petersen expects you to present a research poster on your thesis findings at the UI ICRU Undergraduate Research Festival during the final semester in which you complete your thesis.
+It is your responsibility to keep track of the registration deadlines for the Undergraduate Research Festival so you do not miss it!
+
+You are expected to follow the Department requirements for Honors theses and for Honors in Psychology, including meeting all deadlines:
+https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major
+
+You must have two readers of the thesis who are familiar with the topic.
+One reader will be Dr. Petersen.
+You will work with Dr. Petersen to identify a second reader.
+The reader should be in the Department of Psychological and Brain Sciences.
+You should work with your readers to schedule your thesis defense.
+Your defense should take place no later than Finals week so you can get Honors credit when you graduate etc.
+You must send the completed final draft of your thesis to both Dr. Petersen and the second reader at least one week prior to your defense.
+Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.
+
+UI Undergraduate Research Festival:
+https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals
+
+# Resources {#resources}
+
+For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
+These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
+
+There are many helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
+You can find these resources at the following location on the lab drive:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
+
+In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:
+
+1. "Writing Empirical Research Reports: A Basic Guide for Students of the Social and Behavioral Sciences", 8th Edition (Fred Pyrczak)\
+https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361
+1. "Publication Manual of the American Psychological Association", 7th Edition\
+https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X
+1. "Discovering Statistics using SPSS", 5th Edition (Andy Field)\
+https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566
+1. EndNote or Zotero—software for organizing your articles and for writing your References section\
+[https://its.uiowa.edu/endnote](https://its.uiowa.edu/endnote)\
+https://www.zotero.org
+
+Please note that we do not want these resources to be financial barriers to completing an Honors thesis.
+You may be able to find many of these at the library, and Dr. Petersen may be able to lend you a copy, as well.
+Please talk with Dr. Petersen if these resources would be a financial barrier.
+
+# Steps to Get Started
+
+Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
+
+a) what you are interested in studying
+b) why you are interested in studying it
+c) what you have learned in doing reading on the topic (provide citations)
+d) what specific research question(s) you have
+e) what measure(s) in our lab's study you are interested in using for each construct
+f) what your hypotheses are
+
+Do not spend too much time on the preliminary document, because it will important for you to be flexible to the possibility that you may end up examining a different question.
+Following the steps above will help structure your conversation with Dr. Petersen in the most efficient way.
+
+# Accessing the Lab Drive
 
 Your member folder on the lab drive (`\Lab\Members\`) should be used for all thesis-related work.
 This is where you will find your data file(s), and where you should save all writing and analysis files.
@@ -33,15 +105,6 @@ The full drive path to our lab drive is:
 - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
 - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
-# Resources
-
-For general honors thesis resources that you are expected to use for your thesis, see the [Honors Thesis Expectations and Resources](honors-expectations.html#resources) page. For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
-These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
-
-There are many helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
-You can find these resources at the following location on the lab drive:
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
-
 # Accessing Articles through the UI Libraries
 You should be able to obtain the PDF of any article, even if it is not freely available online and the university does not provide access to the journal.
 Even if the PDF of article is not available on Google Scholar, you can easily get it through the university library system.
@@ -58,7 +121,7 @@ If you must work on your thesis outside of the lab, you may either 1) VPN into t
 For instructions how to do each, see below, or see the RA Remote Participation Document here:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Training\RA Remote Participation.docx`
 
-# VPN Access to the Lab Drive {#vpn}
+## VPN Access to the Lab Drive {#vpn}
 
 To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
 Visit this website to learn how to set up VPN access to the lab drive:
@@ -69,7 +132,7 @@ The full drive path to our lab drive is:
 - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
 - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
-# Remote Access to a Lab Computer
+## Remote Access to a Lab Computer
 
 A possibility may be to "remote in" to a lab computer.
 This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.

@@ -39,12 +39,12 @@ navbar:
         href: expectations-labCoordinator.html
       - text: Lab Staff
         href: expectations-labStaff.html
-    - text: "Honors Projects"
+    - text: "Documentation"
       menu:
-      - text: Expectations and Resources
-        href: honors-expectations.html
-      - text: How To
-        href: honors-howTo.html
+      - text: Data Analysis Guides
+        href: analysis.html
+      - text: Honors Projects
+        href: honors.html
     - text: "Studies"
       menu:
       - text: School Readiness Study

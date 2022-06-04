@@ -6,3 +6,16 @@ title: "Data Analysis Guides"
 knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
+
+- [Data Management](analysis-dataManagement.html)
+- [Developmental Scaling](analysis-developmentalScaling.html)
+- [Exploratory Data Analysis](analysis-eda.html)
+- [Factor Analysis](analysis-factorAnalysis.html)
+- [Figures](analysis-figures.html)
+- [Git, GitLab, and GitHub](analysis-git.html)
+- [Hierarchical Linear Modeling](analysis-hlm.html)
+- [Item Response Theory](analysis-irt.html)
+- [Markdown](analysis-markdown.html)
+- [Principal Component Analysis](analysis-pca.html)
+- [R](analysis-R.html)
+- [Structural Equation Modeling](analysis-sem.html)
