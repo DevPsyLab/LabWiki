@@ -108,7 +108,7 @@ ggplot(df, aes(x = predictor, y = outcome)) +
 #### Best-fit line
 
 ```{r}
-ggplot(df, aes(x = predictor, y = outcomeOverplot)) +
+ggplot(df, aes(x = predictor, y = outcome)) +
   geom_point() +
   stat_smooth(method = "lm", formula = y ~ x) +
   theme_classic()
@@ -117,7 +117,7 @@ ggplot(df, aes(x = predictor, y = outcomeOverplot)) +
 #### Loess line
 
 ```{r}
-ggplot(df, aes(x = predictor, y = outcomeOverplot)) +
+ggplot(df, aes(x = predictor, y = outcome)) +
   geom_point() +
   stat_smooth(method = "loess", formula = y ~ x) +
   theme_classic()
@@ -156,11 +156,20 @@ scatterplot <- ggplot(df, aes(x = predictor, y = outcome)) +
   theme_classic() +
   theme(text = element_text(family = "Gotham"))
 
-ggMarginal(scatterplot, type = "density", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-ggMarginal(scatterplot, type = "histogram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-ggMarginal(scatterplot, type = "boxplot", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-ggMarginal(scatterplot, type = "violin", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-ggMarginal(scatterplot, type = "densigram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+densityMarginal <- ggMarginal(scatterplot, type = "density", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+densityMarginal
+
+histogramMarginal <- ggMarginal(scatterplot, type = "histogram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+histogramMarginal
+
+boxplotMarginal <- ggMarginal(scatterplot, type = "boxplot", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+boxplotMarginal
+
+violinMarginal <- ggMarginal(scatterplot, type = "violin", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+violinMarginal
+
+densigramMarginal <- ggMarginal(scatterplot, type = "densigram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+densigramMarginal
 ```
 
 ## Ellipse
