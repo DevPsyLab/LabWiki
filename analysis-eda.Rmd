@@ -26,7 +26,6 @@ LOOK AT YOUR DATA—most overlooked step in data analysis!
 
 ```{r, message = FALSE, warning = FALSE}
 library("petersenlab")
-library("psych")
 library("car")
 library("vioplot")
 library("ellipse")
@@ -34,6 +33,7 @@ library("nlme")
 library("effects")
 library("corrplot")
 library("ggplot2")
+library("psych")
 ```
 
 # Simulate Data
