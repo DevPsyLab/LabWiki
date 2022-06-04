@@ -24,9 +24,9 @@ Nevertheless, students who are conducting [Honors Projects](honors.html) may nee
 - You should be muted by default when you first enter the meeting
 - If you are unable to "attend" this week's lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the devpsy-lab@uiowa.edu email.
 
-# VPN Access to the Lab Drive
+# VPN Access to the Lab Drive {#vpn}
 
-- To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
+- To access the lab drive, connect to the university's VPN using Cisco AnyConnect (https://its.uiowa.edu/vpn).
 Visit this website to learn how to set up VPN access to the lab drive: https://its.uiowa.edu/support/article/1876
 - The full drive path to our lab drive is: 
     - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
@@ -34,9 +34,19 @@ Visit this website to learn how to set up VPN access to the lab drive: https://i
 
 # Map the Lab Drive Onto a Mac Computer
 
-- In the upper task bar, click "Go", then select "Connect to Server" from the drop-down menu
-- Type `smb://iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen/Lab/` in the search bar
-- This should create a shortcut for the drive on the desktop
+1. [VPN](#vpn) into the university network
+1. In the upper task bar, click "Go"
+1. Select "Connect to Server" from the drop-down menu
+1. In the "Server Address" bar, type: `smb://iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen/Lab/`
+1. Click on Connect.
+1. This should create a shortcut for the drive on the desktop
+1. Click on the + sign to add the address in permanently in your list of "Favorite Servers".
+1. To create an alias of the volume so that you can easily reconnect without repeating steps 2–6 above:
+    1. Select the volume icon
+    1. Go to the Finder menu bar and click "File" then "Make Alias".
+    1. A volume alias appears on your desktop.
+    In the future, you can reconnect to the shared volume by double-clicking this alias.
+1. Then, you should be able to access the scripts on the lab share with `R` at the following location: `/Volumes/rdss_itpetersen`
 
 # Remote Access to a Lab Computer
 
