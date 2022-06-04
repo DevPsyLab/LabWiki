@@ -10,16 +10,16 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
+# Restart R Session
+
+```{r}
+#.rs.restartR()
+```
+
 # Install Libraries
 
 ```{r}
 #remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")
-```
-
-# Unload Libraries
-
-```{r}
-detach("package:Hmisc", unload = TRUE)
 ```
 
 # Load Libraries
@@ -45,6 +45,13 @@ df <- data.frame(ID = ID,
 
 df[sample(1:n, size = 10), "predictor"] <- NA
 df[sample(1:n, size = 10), "outcome"] <- NA
+```
+
+# Unload Libraries
+
+```{r}
+unloadNamespace("Hmisc")
+detach("package:Hmisc", unload = TRUE)
 ```
 
 # Descriptive statistics

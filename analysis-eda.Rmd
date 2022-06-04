@@ -33,6 +33,8 @@ library("nlme")
 library("effects")
 library("corrplot")
 library("ggplot2")
+unloadNamespace("Hmisc")
+detach("package:Hmisc", unload = TRUE)
 library("psych")
 ```
 
