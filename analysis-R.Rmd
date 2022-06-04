@@ -142,7 +142,7 @@ Use the syntax: `install.packages("name_of_package")` to install a single packag
 Instructions adapted from: [https://mirror.las.iastate.edu/CRAN/bin/windows/base/rw-FAQ.html#What_0027s-the-best-way-to-upgrade_003f](https://mirror.las.iastate.edu/CRAN/bin/windows/base/rw-FAQ.html#What_0027s-the-best-way-to-upgrade_003f)
 
 1. Uninstall `R`
-1. Install the new `R` version into a directory that contains no spaces (see Step 2 [above](#setup))
+1. Install the new `R` version into a directory that contains no spaces (see Step 2 in the [Initial Set Up](#setup) section above)
 1. [You only need to do this step if you installed packages in the R-version-specific "Library" folder rather than the common/shared "Packages" folder—that is, you don't need to do this step if you used the lab's `Rprofile.site` file, as described above, which installs packages to the common/shared "Packages" folder]:
     - Copy installed packages in the "Library" folder to the "Library" folder in the new installation
 1. In new `R` version folder, copy the current `Rprofile.site` file as a backup (`Rprofile_BACKUP.site`) and overwrite the original file with the lab's version of `Rprofile.site` from here: https://research-git.uiowa.edu/PetersenLab/R-InitialSetup/-/blob/master/R%20Setup%20Files/Rprofile.site
