@@ -19,7 +19,9 @@ knitr::opts_chunk$set(echo = TRUE,
 # Unload Libraries
 
 ```{r}
-detach("Hmisc", unload = TRUE)
+detach("ggplot2", unload = TRUE)
+detach("plyr", unload = TRUE)
+detach("reshape", unload = TRUE)
 ```
 
 # Load Libraries
