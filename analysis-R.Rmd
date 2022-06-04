@@ -174,14 +174,19 @@ See links below for more info about how to create `R` Notebooks:
 - In `R` Notebooks/Markdown, use Headers and code chunks.
     - Headers: 1, 2, or 3 pound signs
     - Code Chunks: Ctrl+Alt+I; or click "Insert" button then "R"
-- Variable names
-    - Use meaningful variable names; we want to know what a variable represents without having to consult an external codebook for every variable
-    - Variable names should include the prefix for the measure followed by an underscore
-        - e.g., `cbcl_` for the Child Behavior Checklist variables
-    - Use lower camel case for variable naming
-        - e.g., `prefix_thisIsTheVariableName`
-- Comment code frequently and clearly!
-    - You want you (and others) to easily be able to understand your code if you come back to it several years later!
+
+## Naming variables
+
+- Use meaningful variable names; we want to know what a variable represents without having to consult an external codebook for every variable
+- Variable names should include the prefix for the measure followed by an underscore
+    - e.g., `cbcl_` for the Child Behavior Checklist variables
+- Use lower camel case for variable naming
+    - e.g., `prefix_thisIsTheVariableName`
+
+## Comment code frequently and clearly!
+
+It is important to comment code frequently and clearly.
+You want you (and others) to easily be able to understand your code if you come back to it several years later!
 
 # Data Management
 
