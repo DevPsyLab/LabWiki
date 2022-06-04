@@ -16,6 +16,12 @@ knitr::opts_chunk$set(echo = TRUE,
 #remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")
 ```
 
+# Unload Libraries
+
+```{r}
+detach("package:Hmisc", unload = TRUE)
+```
+
 # Load Libraries
 
 ```{r}
