@@ -134,16 +134,16 @@ git remote -v
 git lfs install                       # initialize the Git LFS project
 git lfs track "*.Rdata"               # select the file extensions that you want to treat as large files
 ```
-1. This should have created a `.gitattributes` file in the repo. In GitHub Desktop, commit and push the `.gitattributes` file to the cloud version of the repo.
-1. Copy the large files into the repo.
-1. In GitHub Desktop, commit and push the large file to the cloud version of the repo.
-1. (Or, if not using GitHub Desktop, can commit in the command prompt (https://docs.gitlab.com/ee/topics/git/lfs/):
-    ```
-    git add .                                               # add the large file to the project
-    git commit -am "insert name of commit message here"     # commit the file meta data
-    git push origin master                                  # sync the git repo and large file to the GitLab server
-    ```
-1. When asked for credentials, use your HawkID as your username and your personal access token as your password
+5. This should have created a `.gitattributes` file in the repo. In GitHub Desktop, commit and push the `.gitattributes` file to the cloud version of the repo.
+6. Copy the large files into the repo.
+7. In GitHub Desktop, commit and push the large file to the cloud version of the repo.
+8. (Or, if not using GitHub Desktop, can commit in the command prompt (https://docs.gitlab.com/ee/topics/git/lfs/):
+```
+git add .                                               # add the large file to the project
+git commit -am "insert name of commit message here"     # commit the file meta data
+git push origin master                                  # sync the git repo and large file to the GitLab server
+```
+9. When asked for credentials, use your HawkID as your username and your personal access token as your password
 
 # Troubleshooting
 
@@ -151,7 +151,9 @@ git lfs track "*.Rdata"               # select the file extensions that you want
 
 Windows and Mac use different line endings (https://github.com/Microsoft/WSL/issues/184):
 
-1. `git config --global core.autocrlf true`
+```
+git config --global core.autocrlf true
+```
   
 ## Error: `You are not allowed to push code to protected branches on this project`
 
@@ -161,20 +163,26 @@ Windows and Mac use different line endings (https://github.com/Microsoft/WSL/iss
 
 ## Error creating commit
 
-1. `git add -A`
-1. `git status`
-1. `git commit -m "Message"` (where "Message" is the summary message of the commit)
-1. `git push`
-1. `git status`
+```
+git add -A
+git status
+git commit -m "Message"` (where "Message" is the summary message of the commit)
+git push
+git status
+```
 
 ## Undo commit (but retain file changes)
 
-1. `git reset --soft HEAD^`
+```
+git reset --soft HEAD^
+```
 
 ## Error: "Sync failed"
 
-1. `git status`
-1. `git push`
+```
+git status
+git push
+```
 
 ## Error: "Sync failed -- Syncing would overwrite your uncommitted changes"
 
@@ -200,50 +208,50 @@ https://docs.gitlab.com/ee/topics/autodevops/#at-the-project-level
 1. Create Repo on GitHub
 1. Don't add README yet
 1. Open Git Shell, navigate to directory, and type:
-    ```
-    git init
-    git remote add origin https://research-git.uiowa.edu/itpetersen/PetersenLab.git
-    git remote -v
-    ```
-1. Drag and drop the folder with the repository into the GUI app
-1. Add .gitignore file with .Rhistory
+```
+git init
+git remote add origin https://research-git.uiowa.edu/itpetersen/PetersenLab.git
+git remote -v
+```
+4. Drag and drop the folder with the repository into the GUI app
+5. Add .gitignore file with .Rhistory
 
 ## Creating Repo on Local Directory (if Directory is *not* empty)
 
 1. Create Repo on GitHub
 1. Don't add README yet
 1. Open Git Shell, navigate to directory, and type:
-    ```
-    git init
-    git add .
-    git commit -m 'First commit'
-    git remote add origin https://research-git.uiowa.edu/itpetersen/PetersenLab.git
-    git remote -v
-    git push -u origin master
-    ```
-1. Drag and drop the folder with the repository into the GUI app
-1. Add .gitignore file with .Rhistory
+```
+git init
+git add .
+git commit -m 'First commit'
+git remote add origin https://research-git.uiowa.edu/itpetersen/PetersenLab.git
+git remote -v
+git push -u origin master
+```
+4. Drag and drop the folder with the repository into the GUI app
+5. Add .gitignore file with .Rhistory
 
 ## Creating R Scripts Repo on Lab Server
 
 1. Create R Scripts Repo
 1. Open R Scripts folder and delete .git folder
 1. Open Git Shell and type:
-    ```
-    git init
-    git add .
-    git commit -m 'First commit'
-    git remote add origin https://research-git.uiowa.edu/PetersenLab/R-Scripts.git
-    git remote -v
-    git push -u origin master
-    ```
-1. Move R Scripts folder to another location
-1. Clone repo into folder:
+```
+git init
+git add .
+git commit -m 'First commit'
+git remote add origin https://research-git.uiowa.edu/PetersenLab/R-Scripts.git
+git remote -v
+git push -u origin master
+```
+4. Move R Scripts folder to another location
+5. Clone repo into folder:
     - open Git Shell
     - navigate to `Z:\TDS II\Data\R Scripts\`
     ```
     git clone https://research-git.uiowa.edu/PetersenLab/R-Scripts.git .
     ```
     The dot on the end of the git clone command means "the current directory"
-1. Drag and drop the folder with the repository into the GUI app
-1. Add `.gitignore` file with `.Rhistory`
+6. Drag and drop the folder with the repository into the GUI app
+7. Add `.gitignore` file with `.Rhistory`
