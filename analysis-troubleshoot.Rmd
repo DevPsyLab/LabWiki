@@ -20,12 +20,12 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```{r, message = FALSE, warning = FALSE}
 #library("petersenlab")
-library("car")
-library("vioplot")
-library("ellipse")
-library("nlme")
-library("effects")
-library("corrplot")
+#library("car")
+#library("vioplot")
+#library("ellipse")
+#library("nlme")
+#library("effects")
+#library("corrplot")
 library("ggplot2")
 library("psych")
 ```
@@ -42,19 +42,12 @@ predictor <- rbeta(n, 1.5, 5) * 100
 outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
 number <- sample(1:1000, replace = TRUE)
 
-predictorOverplot <- sample(1:50, n, replace = TRUE)
-outcomeOverplot <- predictorOverplot + sample(1:75, n, replace = TRUE)
-
 df <- data.frame(ID = ID,
                  predictor = predictor,
-                 outcome = outcome,
-                 predictorOverplot = predictorOverplot,
-                 outcomeOverplot = outcomeOverplot)
+                 outcome = outcome)
 
 df[sample(1:n, size = 10), "predictor"] <- NA
 df[sample(1:n, size = 10), "outcome"] <- NA
-df[sample(1:n, size = 10), "predictorOverplot"] <- NA
-df[sample(1:n, size = 10), "outcomeOverplot"] <- NA
 ```
 
 # Descriptive statistics
