@@ -5,7 +5,6 @@ Imports:
   rmarkdown,
   blogdown,
   remotes,
-  psych,
   car,
   vioplot,
   ellipse,
@@ -20,4 +19,5 @@ Imports:
   reshape2,
   ggExtra,
   viridis,
-  ggthemes
+  ggthemes,
+  psych
