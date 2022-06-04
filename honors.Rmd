@@ -118,8 +118,7 @@ If the university does not have access to the journal, then you can access the P
 
 The easiest way to work on your thesis is to work on it in the lab.
 If you must work on your thesis outside of the lab, you may either 1) VPN into the lab drive or 2) "remote in" to a lab computer.
-For instructions how to do each, see below, or see the RA Remote Participation Document here:
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Training\RA Remote Participation.docx`
+For instructions how to do each, see below, or see the [RA Remote Participation page](documentation-remote.html).
 
 ## VPN Access to the Lab Drive {#vpn}
 

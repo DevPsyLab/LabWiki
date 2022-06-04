@@ -99,26 +99,26 @@ As part of every participant's consent process, we promise that we will protect 
 Therefore, it is imperative that all identifying information related to our participants remains confidential.
 Below are guidelines on how to handle study data and participant information.
 
-**Handling Data**
+## Handling Data
 
 All hard-copy physical research data must remain in the lab.
 All electronic data should be accessed from the lab, on university computers, or secure private computers.
 Electronic data should not be accessed on public computers.
 Identifiable electronic data (including visit videos) should be stored only on the lab's RDSS share and should not be saved onto your computer.
 
-**No Talking About Participants Outside of Lab**
+## No Talking About Participants Outside of Lab
 
 It is important that you *not* talk about participants outside of lab.
 Even if you are talking to other RAs or people on our IRB project, you never know who else might hear your conversation.
 Therefore, you should never use participant names, addresses, physical descriptions, or any other personally identifying information outside of the lab space.
 
-**Photos and Social Media**
+## Photos and Social Media
 
 No one should ever take photos, screenshots, Snapchats, or any other kind of video recording of lab data, including visit videos.
 Additionally, no data or identifying information should be shared on social media, through email, etc.
 Even when using Slack to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.
 
-**Remote Access**
+## Remote Access {#remote}
 
 RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
 This is to ensure that the RA has received all of the requisite training, instructions, and resources to properly access data remotely.
@@ -775,8 +775,6 @@ This folder includes:
     RAs can then access it throughout the semester to check which day they are scheduled to present on, but should not alter their sign-up day without first obtaining permission from the Lab Coordinator
     - `Task Timing Sheet.xlsx`: This Excel document is used by all RAs to record their coding progress (see `Coding Manual` for more information)
 1. "For RA View": The documents in this folder allow for read-only access by all team members.
-This folder includes:
-    - `RA Remote Participation.docx`: This document outlines procedures for remote lab work, including how to setup access to the lab drive, how to remote into a lab computer, etc.
 
 ## Lab Drive
 

@@ -1,0 +1,116 @@
+---
+title: "Remote Participation"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+The following sections provide instructions for how to participate in the lab remotely.
+As described in the [lab manual](manual.html#remote), RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
+These instructions applied mainly during the earlier parts of the COVID-19 pandemic.
+We are now working fully in-person.
+
+How To…
+
+# Join the Weekly Lab Meeting
+
+- Open the lab calendar in Outlook (see the lab manual for how to do this)
+- Click on the link in the lab meeting event on the calendar
+    1. Alternatively, go to: https://uiowa.zoom.us/join
+    1. Enter the meeting ID (as shown in the calendar)
+- You should be muted by default when you first enter the meeting
+- If you are unable to "attend" this week's lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the devpsy-lab@uiowa.edu email.
+
+# VPN Access to the Lab Drive
+
+- To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
+Visit this website to learn how to set up VPN access to the lab drive: https://its.uiowa.edu/support/article/1876
+- The full drive path to our lab drive is: 
+    - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
+    - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+
+# Map the Lab Drive Onto a Mac Computer
+
+- In the upper task bar, click "Go", then select "Connect to Server" from the drop-down menu
+- Type `smb://iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen/Lab/` in the search bar
+- This should create a shortcut for the drive on the desktop
+
+# Remote Access to a Lab Computer
+
+- A possibility may be to "remote in" to a lab computer.
+This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.
+Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).
+However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.
+You can remote in to a lab computer using a program called "Remote Desktop." Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
+- Before gaining remote access to a lab computer, you will first have to VPN into the lab drive
+- When prompted for the computer's name in the Remote Desktop client, follow this format: 
+    - `PSYC-S###.iowa.uiowa.edu`
+    - Then, enter your username using this format: `iowa\HawkID`
+
+# Code from Home
+
+## Remote Access Changes
+
+Task Timing Sheet: can be accessed through your student Office 365 OneDrive—the Lab Coordinator will share a link so everyone has access
+
+Visit Videos: can be accessed on the lab drive using VPN and should be watched using VLC media player.
+You can download VLC for free here: https://www.videolan.org/vlc/index.html
+
+Coding Forms: editable PDFs have been created for easier electronic completion—you can find your tasks' PDF coding forms on the lab drive here: 
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\`
+
+Coding forms should always be opened and edited using Adobe Acrobat.
+Adobe Acrobat Reader is available to download for free from the Adobe website: https://get.adobe.com/reader/
+
+Coding Folders: have been re-created as folders on the lab drive, which can be found here:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\`
+
+## Confidentiality Consideration
+
+Because it is imperative that we maintain participant confidentiality, regardless of our current working situation, you must ALWAYS ensure that you are in a private space when you open visit videos.
+Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM.
+It is also important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
+The University's IT department only provides protection to data and files saved on University equipment or within University programs (like the Office 365 OneDrive associated with your HawkID).
+
+## Remote Coding System for Coding Pairs
+
+1. Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete
+1. Coder 1 opens the editable PDF coding form for their task, then follows these steps to save a copy of the form BEFORE BEGINNING TO EDIT THE FORM:
+    a. Click "File" in the upper left-hand corner of the screen, then click "Save As"
+    b. Navigate to your coding folder (i.e., Remote Coding → Coding Folders → Your Task → Coder 1/2, and save the form with the appropriate name for the video you're about to code (i.e., TCID_wave_coder#)
+    c. Then you can begin to code your new copy of the coding form without making changes to the original templates in the Coding Forms folder!
+1. Coder 1 puts own form in the "Reliability Check" folder (this is in Coder 1's folder)
+1. Coder 2 verifies the start/stop and total task time identified by Coder 1 on Task Timing Sheet, then codes video; initials Task Timing Sheet when complete
+1. Coder 2 puts completed coding form into the "Reliability Check" folder (in Coder 1's folder)
+1. When both coding forms are complete and in the "Reliability Check" folder, Coder 1 checks forms against each other for interrater reliability
+1. Coder 1 moves Coder 1's form to Coder 2's "Enter" folder 
+1. Coder 1 enters Coder 2's form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 2's form back to Coder 2's "Check" folder for final data entry check
+1. Coder 2 enters Coder 1's form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check
+1. Coder 1 and Coder 2 compare their coding forms against the data entered in REDCap to ensure accurate data entry, then initial and date the top corner of their paper coding form to confirm they have checked it against their partner's data entry
+1. After you have completed a coding form, it can be saved here: Lab → School Readiness Study → Coding → Coded Data → select the appropriate task → select the appropriate cohort (Cohort 1, Cohort 2, Cohort 3, Cohort 4) → select the appropriate TCID → Save as `TCID_Wave_taskinitials_coder#` (e.g., `1001_36_bd_coder1`).
+ 
+## Remote Coding System for 3 Coders
+
+1. Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete.
+1. Coder 1 codes video.
+1. Coder 1 puts own form in the Reliability Check folder (this is in Coder 1's folder).
+1. Coder 2 and Coder 3 check the task timing sheet to determine which videos they should code.
+Coder 2 will be the second coder for all even numbered TCID videos, and Coder 3 will be the second coder for all odd numbered TCID videos.
+1. After determining which videos they each should code, Coder 2 and Coder 3 verify the start/stop times and total task time for their respective videos.
+Coder 2 and Coder 3 code these respective videos.
+1. Once coded, Coder 2 and Coder 3 put their completed coding forms into Coder 1's Reliability Check folder.
+1. When both coding forms for a single video are complete and in the "Reliability Check" folder, Coder 1 checks forms against each other for interrater reliability.
+1. Coder 1 moves Coder 1's even numbered forms into Coder 2's "Enter" folder, and Coder 1 moves Coder 1's odd numbered forms into Coder 3's "Enter" folder.
+1. Coder 1 moves Coder 2's even numbered forms into Coder 3's "Enter" folder, and Coder 1 moves Coder 3's odd numbered forms into Coder 2's "Enter" folder.
+1. Entry of Coded Data
+    a. Coder 2
+        i. Coder 2 enters Coder 1's even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check.
+        ii.	Coder 2 enters Coder 3's odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 3's form back to Coder 3's "Check" folder for final data entry check.
+    b. Coder 3
+        i. Coder 3 enters Coder 1's odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check.
+        ii.	Coder 3 enters Coder 2's even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 2's form back to Coder 2's "Check" folder for final data entry check.
+1. All coders compare their own forms against the data that was entered in REDCap to ensure accurate data entry (see Checking REDCap Coding Entries below), then initial and date the top corner of their coding form to confirm they have checked it against their partner's data entry.
+1. Each coder can put their forms into their "To Be Scanned" folder to scan their own form onto the Lab Drive (see Saving the Form below), then file the form in TC's permanent folder under the appropriate wave.
+1. For remote coding: Each coder saves their completed form in the appropriate TCID folder with the file name: TCID_wave_taskabbreviation_coder1/2/3 (save as the correct coder number).
