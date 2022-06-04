@@ -457,12 +457,17 @@ div.tocify {
 <h1><span class="header-section-number">1</span> Install Libraries</h1>
 <pre class="r"><code>#remotes::install_git(&quot;https://research-git.uiowa.edu/PetersenLab/petersenlab.git&quot;)</code></pre>
 </div>
-<div id="load-libraries" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Load Libraries</h1>
+<div id="unload-libraries" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Unload Libraries</h1>
+<pre class="r"><code>detach(&quot;package:Hmisc&quot;, unload = TRUE)</code></pre>
+<pre><code>## Error in detach(&quot;package:Hmisc&quot;, unload = TRUE): invalid &#39;name&#39; argument</code></pre>
+</div>
+<div id="load-libraries" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Load Libraries</h1>
 <pre class="r"><code>library(&quot;psych&quot;)</code></pre>
 </div>
-<div id="simulate-data" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Simulate Data</h1>
+<div id="simulate-data" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Simulate Data</h1>
 <pre class="r"><code>set.seed(52242)
 
 n &lt;- 1000
@@ -478,8 +483,8 @@ df &lt;- data.frame(ID = ID,
 df[sample(1:n, size = 10), &quot;predictor&quot;] &lt;- NA
 df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 </div>
-<div id="descriptive-statistics" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Descriptive statistics</h1>
+<div id="descriptive-statistics" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Descriptive statistics</h1>
 <pre class="r"><code>class(df)</code></pre>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
 <pre class="r"><code>psych::describe(df)</code></pre>
@@ -487,8 +492,8 @@ df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 <pre class="r"><code>traceback()</code></pre>
 <pre><code>## No traceback available</code></pre>
 </div>
-<div id="session-info" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Session Info</h1>
+<div id="session-info" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Session Info</h1>
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>## R version 4.2.0 (2022-04-22)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
@@ -551,7 +556,7 @@ df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 ## [91] tibble_3.1.7        cluster_2.1.3       ellipsis_0.3.2</code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBJbnN0YWxsIExpYnJhcmllcwoKYGBge3J9CiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyBMb2FkIExpYnJhcmllcwoKYGBge3J9CmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKCmRmIDwtIGRhdGEuZnJhbWUoSUQgPSBJRCwKICAgICAgICAgICAgICAgICBwcmVkaWN0b3IgPSBwcmVkaWN0b3IsCiAgICAgICAgICAgICAgICAgb3V0Y29tZSA9IG91dGNvbWUpCgpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAicHJlZGljdG9yIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWUiXSA8LSBOQQpgYGAKCiMgRGVzY3JpcHRpdmUgc3RhdGlzdGljcwoKYGBge3J9CmNsYXNzKGRmKQpwc3ljaDo6ZGVzY3JpYmUoZGYpCnRyYWNlYmFjaygpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBgYHtyfQpzZXNzaW9uSW5mbygpCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBJbnN0YWxsIExpYnJhcmllcwoKYGBge3J9CiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyBVbmxvYWQgTGlicmFyaWVzCgpgYGB7cn0KZGV0YWNoKCJwYWNrYWdlOkhtaXNjIiwgdW5sb2FkID0gVFJVRSkKYGBgCgojIExvYWQgTGlicmFyaWVzCgpgYGB7cn0KbGlicmFyeSgicHN5Y2giKQpgYGAKCiMgU2ltdWxhdGUgRGF0YQoKYGBge3J9CnNldC5zZWVkKDUyMjQyKQoKbiA8LSAxMDAwCgpJRCA8LSByZXAoMToxMDAsIGVhY2ggPSAxMCkKcHJlZGljdG9yIDwtIHJiZXRhKG4sIDEuNSwgNSkgKiAxMDAKb3V0Y29tZSA8LSBwcmVkaWN0b3IgKyBybm9ybShuLCBtZWFuID0gMCwgc2QgPSAyMCkgKyA1MAoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3IiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAib3V0Y29tZSJdIDwtIE5BCmBgYAoKIyBEZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCgpgYGB7cn0KY2xhc3MoZGYpCnBzeWNoOjpkZXNjcmliZShkZikKdHJhY2ViYWNrKCkKYGBgCgojIFNlc3Npb24gSW5mbwoKYGBge3J9CnNlc3Npb25JbmZvKCkKYGBgCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
