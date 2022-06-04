@@ -90,7 +90,7 @@ The University's IT department only provides protection to data and files saved 
 1. Coder 2 enters Coder 1's form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check
 1. Coder 1 and Coder 2 compare their coding forms against the data entered in REDCap to ensure accurate data entry, then initial and date the top corner of their paper coding form to confirm they have checked it against their partner's data entry
 1. After you have completed a coding form, it can be saved here: Lab → School Readiness Study → Coding → Coded Data → select the appropriate task → select the appropriate cohort (Cohort 1, Cohort 2, Cohort 3, Cohort 4) → select the appropriate TCID → Save as `TCID_Wave_taskinitials_coder#` (e.g., `1001_36_bd_coder1`).
- 
+
 ## Remote Coding System for 3 Coders
 
 1. Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete.
