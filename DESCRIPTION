@@ -4,6 +4,7 @@ Version: 1.0.0
 Imports:
   rmarkdown,
   blogdown,
+  remotes,
   psych,
   car,
   vioplot,
@@ -12,4 +13,11 @@ Imports:
   effects,
   corrplot,
   ggplot2,
-  remotes
+  grid,
+  reshape,
+  plyr,
+  RColorBrewer,
+  reshape2,
+  ggExtra,
+  viridis,
+  ggthemes

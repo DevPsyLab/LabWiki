@@ -11,7 +11,7 @@
 
 
 
-<title>Figures</title>
+<title>Figures in R</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -446,41 +446,442 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Figures</h1>
+<h1 class="title toc-ignore">Figures in R</h1>
 
 </div>
 
 
-<div id="figures-in-r" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Figures in R</h1>
-<div id="picking-a-chart-type" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Picking a Chart Type</h2>
+<div id="picking-a-chart-type" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Picking a Chart Type</h1>
 <p><a href="https://www.data-to-viz.com" class="uri">https://www.data-to-viz.com</a></p>
 </div>
-<div id="gallery" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Gallery</h2>
+<div id="gallery" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Gallery</h1>
 <p><a href="https://www.r-graph-gallery.com" class="uri">https://www.r-graph-gallery.com</a></p>
 </div>
-<div id="resources-for-learning-r-syntax-for-figures" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Resources for Learning R Syntax for Figures</h2>
+<div id="resources-for-learning-r-syntax-for-figures" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Resources for Learning R Syntax for Figures</h1>
 <p><a href="https://www.statmethods.net/graphs/index.html" class="uri">https://www.statmethods.net/graphs/index.html</a></p>
 <p><a href="http://www.cookbook-r.com/Graphs/" class="uri">http://www.cookbook-r.com/Graphs/</a></p>
 </div>
-<div id="petersen-lab-examples" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Petersen Lab Examples</h2>
+<div id="petersen-lab-examples" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Petersen Lab Examples</h1>
 <p><a href="https://research-git.uiowa.edu/PetersenLab/R-Plotting/-/tree/main/Analyses" class="uri">https://research-git.uiowa.edu/PetersenLab/R-Plotting/-/tree/main/Analyses</a></p>
+<div id="preamble" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Preamble</h2>
+<div id="install-libraries" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Install Libraries</h3>
+<pre class="r"><code>#install.packages(&quot;remotes&quot;)
+#remotes::install_git(&quot;https://research-git.uiowa.edu/PetersenLab/petersenlab.git&quot;)</code></pre>
 </div>
-<div id="graphic-design-principles-for-data-visualization" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Graphic Design Principles for Data Visualization</h2>
+<div id="load-libraries" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Load Libraries</h3>
+<pre class="r"><code>library(&quot;petersenlab&quot;)
+library(&quot;ellipse&quot;)
+library(&quot;ggplot2&quot;)
+library(&quot;grid&quot;)
+library(&quot;reshape&quot;)
+library(&quot;plyr&quot;)
+library(&quot;RColorBrewer&quot;)
+library(&quot;reshape2&quot;)
+library(&quot;ggExtra&quot;)
+library(&quot;viridis&quot;)
+library(&quot;ggthemes&quot;)</code></pre>
+</div>
+</div>
+<div id="simulate-data" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Simulate Data</h2>
+<pre class="r"><code>set.seed(52242)
+
+n &lt;- 1000
+
+predictor &lt;- rbeta(n, 1.5, 5) * 100
+outcome &lt;- predictor + rnorm(n, mean = 0, sd = 20) + 50
+number &lt;- sample(1:1000, replace = TRUE)
+
+predictorOverplot &lt;- sample(1:50, n, replace = TRUE)
+outcomeOverplot &lt;- predictorOverplot + sample(1:75, n, replace = TRUE)
+
+df &lt;- data.frame(predictor = predictor,
+                 outcome = outcome,
+                 predictorOverplot = predictorOverplot,
+                 outcomeOverplot = outcomeOverplot)
+
+df[sample(1:n, size = 10), &quot;predictor&quot;] &lt;- NA
+df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA
+df[sample(1:n, size = 10), &quot;predictorOverplot&quot;] &lt;- NA
+df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
+</div>
+<div id="basic-scatterplot" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Basic Scatterplot</h2>
+<div id="base-r" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Base R</h3>
+<pre class="r"><code>plot(outcome ~ predictor, data = df)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>plot(df$predictor, df$outcome)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<div id="best-fit-line" class="section level4" number="4.3.1.1">
+<h4><span class="header-section-number">4.3.1.1</span> Best-fit line</h4>
+<pre class="r"><code>plot(outcome ~ predictor, data = df)
+abline(lm(outcome ~ predictor, data = df), col = &quot;red&quot;) #regression line (y~x)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="loess-line" class="section level4" number="4.3.1.2">
+<h4><span class="header-section-number">4.3.1.2</span> Loess line</h4>
+<pre class="r"><code>plot(outcome ~ predictor, data = df)
+lines(loess.smooth(df$predictor, df$outcome)) #loess line (x,y)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>
+<div id="ggplot2" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> <code>ggplot2</code></h3>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point() +
+  theme_classic()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div id="best-fit-line-1" class="section level4" number="4.3.2.1">
+<h4><span class="header-section-number">4.3.2.1</span> Best-fit line</h4>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcomeOverplot)) +
+  geom_point() +
+  stat_smooth(method = &quot;lm&quot;, formula = y ~ x) +
+  theme_classic()</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="loess-line-1" class="section level4" number="4.3.2.2">
+<h4><span class="header-section-number">4.3.2.2</span> Loess line</h4>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcomeOverplot)) +
+  geom_point() +
+  stat_smooth(method = &quot;loess&quot;, formula = y ~ x) +
+  theme_classic()</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="change-plot-style" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Change Plot Style</h2>
+<div id="change-theme" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Change Theme</h3>
+<pre class="r"><code>basePlot &lt;- ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point()
+
+basePlot</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_gray() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_bw() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-3.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_linedraw() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-4.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_light() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-5.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_dark() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-6.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_minimal() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-7.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_classic() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-8.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_void() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-9.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_test() + theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-10.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_tufte()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-11.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_wsj()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-12.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_fivethirtyeight()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-13.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_economist()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-14.png" width="672" /></p>
+<pre class="r"><code>basePlot + theme_few()</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-10-15.png" width="672" /></p>
+</div>
+</div>
+<div id="add-marginal-distributions" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Add Marginal Distributions</h2>
+<pre class="r"><code>scatterplot &lt;- ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point() +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))
+
+ggMarginal(scatterplot, type = &quot;density&quot;, xparams = list(fill = &quot;gray&quot;), yparams = list(fill = &quot;gray&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<pre class="r"><code>ggMarginal(scatterplot, type = &quot;histogram&quot;, xparams = list(fill = &quot;gray&quot;), yparams = list(fill = &quot;gray&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<pre class="r"><code>ggMarginal(scatterplot, type = &quot;boxplot&quot;, xparams = list(fill = &quot;gray&quot;), yparams = list(fill = &quot;gray&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<pre class="r"><code>ggMarginal(scatterplot, type = &quot;violin&quot;, xparams = list(fill = &quot;gray&quot;), yparams = list(fill = &quot;gray&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<pre class="r"><code>ggMarginal(scatterplot, type = &quot;densigram&quot;, xparams = list(fill = &quot;gray&quot;), yparams = list(fill = &quot;gray&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="ellipse" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Ellipse</h2>
+<div id="basic-ellipse" class="section level3" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> Basic Ellipse</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point() +
+  stat_ellipse(alpha = 0.4, level = 0.95, geom = &quot;polygon&quot;, fill = &quot;red&quot;, color = &quot;red&quot;) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing non-finite values (stat_ellipse).</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="align-coordinates" class="section level3" number="4.6.2">
+<h3><span class="header-section-number">4.6.2</span> Align Coordinates</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point() +
+  stat_ellipse(alpha = 0.4, level = 0.95, geom = &quot;polygon&quot;, fill = &quot;red&quot;, color = &quot;red&quot;) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_fixed(ratio = (max(predictor, na.rm = TRUE) - min(predictor, na.rm = TRUE))/(max(outcome, na.rm = TRUE) - min(outcome, na.rm = TRUE)),
+              xlim = c(0, max(predictor, na.rm = TRUE)), 
+              ylim = c(0, max(outcome, na.rm = TRUE))) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing non-finite values (stat_ellipse).</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="reduce-dot-size" class="section level3" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> Reduce Dot Size</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point(size = 0.5) +
+  stat_ellipse(alpha = 0.4, level = 0.95, geom = &quot;polygon&quot;, fill = &quot;red&quot;, color = &quot;red&quot;) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_fixed(ratio = (max(predictor, na.rm = TRUE) - min(predictor, na.rm = TRUE))/(max(outcome, na.rm = TRUE) - min(outcome, na.rm = TRUE)),
+              xlim = c(0, max(predictor, na.rm = TRUE)), 
+              ylim = c(0, max(outcome, na.rm = TRUE))) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing non-finite values (stat_ellipse).</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="transparency" class="section level3" number="4.6.4">
+<h3><span class="header-section-number">4.6.4</span> Transparency</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  geom_point(alpha = 0.3) +
+  stat_ellipse(alpha = 0.4, level = 0.95, geom = &quot;polygon&quot;, fill = &quot;red&quot;, color = &quot;red&quot;) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_fixed(ratio = (max(predictor, na.rm = TRUE) - min(predictor, na.rm = TRUE))/(max(outcome, na.rm = TRUE) - min(outcome, na.rm = TRUE)),
+              xlim = c(0, max(predictor, na.rm = TRUE)), 
+              ylim = c(0, max(outcome, na.rm = TRUE))) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 19 rows containing non-finite values (stat_ellipse).</code></pre>
+<pre><code>## Warning: Removed 19 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+</div>
+<div id="bubble-chart" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Bubble Chart</h2>
+<div id="basic-bubble-chart" class="section level3" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> Basic Bubble Chart</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) +
+  geom_count(aes(size = ..n..)) +
+  scale_size_area() +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_sum).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="specify-sizes" class="section level3" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> Specify Sizes</h3>
+<pre class="r"><code>ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) +
+  geom_count(aes(size = ..n..)) +
+  scale_size_continuous(breaks = c(1, 2, 3, 4), range = c(1, 7)) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_sum).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+</div>
+<div id="dimensional-density" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> 2-Dimensional Density</h2>
+<pre class="r"><code>ggplot(df, aes(x = predictor, y = outcome)) +
+  stat_density_2d(aes(fill = ..density..), geom = &quot;raster&quot;, contour = FALSE) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  scale_fill_viridis() +
+  theme(
+    legend.position = &quot;none&quot;,
+    text = element_text(family = &quot;Gotham&quot;)
+  )</code></pre>
+<pre><code>## Warning: Removed 19 rows containing non-finite values (stat_density2d).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="combined-ellipse-and-bubble-chart" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> Combined Ellipse and Bubble Chart</h2>
+<div id="ggplot2-1" class="section level3" number="4.9.1">
+<h3><span class="header-section-number">4.9.1</span> <code>ggplot2</code></h3>
+<pre class="r"><code>ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) +
+  geom_count(alpha = .6, color = rgb(0,0,.7,.5)) +
+  scale_size_continuous(breaks = c(1, 2, 3, 4), range = c(1, 7)) +
+  stat_smooth(method = &quot;loess&quot;, se = TRUE, color = &quot;green&quot;) + 
+  stat_smooth(method = &quot;lm&quot;) +
+  stat_ellipse(alpha = 0.4, level = 0.95, geom = &quot;polygon&quot;, fill = &quot;red&quot;, color = &quot;red&quot;) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_fixed(ratio = (max(predictorOverplot, na.rm = TRUE) - min(predictorOverplot, na.rm = TRUE))/(max(outcomeOverplot, na.rm = TRUE) - min(outcomeOverplot, na.rm = TRUE)),
+              xlim = c(0, max(predictorOverplot, na.rm = TRUE)), 
+              ylim = c(0, max(outcomeOverplot, na.rm = TRUE))) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_sum).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_ellipse).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) +
+  geom_count(alpha = .6, color = rgb(0,0,.7,.5)) +
+  scale_size_continuous(breaks = c(1, 2, 3, 4), range = c(1, 7)) +
+  stat_smooth(method = &quot;loess&quot;, se = TRUE, color = &quot;green&quot;) + 
+  stat_smooth(method = &quot;lm&quot;) +
+  stat_ellipse(color = &quot;red&quot;, size = 1.5) +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  coord_fixed(ratio = (max(predictorOverplot, na.rm = TRUE) - min(predictorOverplot, na.rm = TRUE))/(max(outcomeOverplot, na.rm = TRUE) - min(outcomeOverplot, na.rm = TRUE)),
+              xlim = c(0, max(predictorOverplot, na.rm = TRUE)), 
+              ylim = c(0, max(outcomeOverplot, na.rm = TRUE))) +
+  theme_classic() +
+  theme(text = element_text(family = &quot;Gotham&quot;))</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_sum).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).
+## Removed 20 rows containing non-finite values (stat_ellipse).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
+</div>
+<div id="other-implementation" class="section level3" number="4.9.2">
+<h3><span class="header-section-number">4.9.2</span> Other implementation</h3>
+<p>From: <a href="https://stats.stackexchange.com/questions/7899/complex-regression-plot-in-r" class="uri">https://stats.stackexchange.com/questions/7899/complex-regression-plot-in-r</a></p>
+<div id="ggplot2-2" class="section level4" number="4.9.2.1">
+<h4><span class="header-section-number">4.9.2.1</span> <code>ggplot2</code></h4>
+<pre class="r"><code>df$x &lt;- df$predictorOverplot
+df$y &lt;- df$outcomeOverplot
+
+xc &lt;- with(df, xyTable(x, y))
+df2 &lt;- cbind.data.frame(x=xc$x, y=xc$y, number=xc$number)
+df2$n &lt;- cut(df2$number,c(0,1.5,2.5,Inf), labels=c(1,2,4))
+df.ell &lt;- as.data.frame(with(df, ellipse(cor(df$x, df$y, use = &quot;pairwise.complete.obs&quot;),
+                                         scale = c(sd(df$x, na.rm = TRUE),sd(df$y,na.rm=T)),
+                                         centre = c(mean(df$x, na.rm = TRUE), mean(df$y, na.rm = TRUE)),
+                                         level = .95)))
+
+ggplot(data = na.omit(df2), aes(x = x, y = y)) + 
+  geom_point(aes(size = n), alpha = .6, color = rgb(0,0,.7,.5)) + 
+  stat_smooth(data = df, method = &quot;loess&quot;, se = FALSE, color = &quot;green&quot;) + 
+  stat_smooth(data = df, method = &quot;lm&quot;, col = &quot;red&quot;) +
+  geom_path(data = df.ell, colour = &quot;green&quot;, size = 1) +
+  coord_cartesian(xlim = c(-1,60), ylim = c(-1,130))</code></pre>
+<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_smooth).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+<div id="base-r-1" class="section level4" number="4.9.2.2">
+<h4><span class="header-section-number">4.9.2.2</span> Base <code>R</code></h4>
+<pre class="r"><code>do.it &lt;- function(df, type=&quot;confidence&quot;, ...) {
+  require(ellipse)
+  lm0 &lt;- lm(y ~ x, data=df)
+  xc &lt;- with(df, xyTable(x, y))
+  df.new &lt;- data.frame(x=seq(min(df$x), max(df$x), 0.1))
+  pred.ulb &lt;- predict(lm0, df.new, interval=type)
+  pred.lo &lt;- predict(loess(y ~ x, data=df), df.new)
+  plot(xc$x, xc$y, cex=xc$number*1/4, xlab=&quot;x&quot;, ylab=&quot;y&quot;, ...) #change number*X to change dot size
+  abline(lm0, col=&quot;red&quot;)
+  lines(df.new$x, pred.lo, col=&quot;green&quot;, lwd=2)
+  lines(df.new$x, pred.ulb[,&quot;lwr&quot;], lty=2, col=&quot;red&quot;)
+  lines(df.new$x, pred.ulb[,&quot;upr&quot;], lty=2, col=&quot;red&quot;)    
+  lines(ellipse(cor(df$x, df$y), scale=c(sd(df$x),sd(df$y)), 
+                centre=c(mean(df$x),mean(df$y)),level=.95), lwd=2, col=&quot;green&quot;)
+  invisible(lm0)
+}
+
+df3 &lt;- na.omit(df[sample(nrow(df), nrow(df), rep = TRUE),])
+df3$x &lt;- df3$predictorOverplot
+df3$y &lt;- df3$outcomeOverplot
+
+do.it(df3, pch = 19, col = rgb(0,0,.7,.5))</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="visually-weighted-regression" class="section level2" number="4.10">
+<h2><span class="header-section-number">4.10</span> Visually-Weighted Regression</h2>
+<div id="default" class="section level3" number="4.10.1">
+<h3><span class="header-section-number">4.10.1</span> Default</h3>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+</div>
+<div id="shade" class="section level3" number="4.10.2">
+<h3><span class="header-section-number">4.10.2</span> Shade</h3>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = TRUE, spag = FALSE, show.lm = TRUE, show.CI = TRUE, bw = FALSE, B = 1000, quantize = &quot;continuous&quot;)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = TRUE, spag = FALSE, show.lm = TRUE, show.CI = TRUE, bw = FALSE, B = 1000, quantize = &quot;SD&quot;)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-23-2.png" width="672" /></p>
+</div>
+<div id="spaghetti" class="section level3" number="4.10.3">
+<h3><span class="header-section-number">4.10.3</span> Spaghetti</h3>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = FALSE, spag = TRUE, show.lm = TRUE, show.CI = TRUE, bw = FALSE, B = 1000)</code></pre>
+<pre><code>## Warning: Removed 3586 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = FALSE, spag = TRUE, show.lm = FALSE, show.CI = FALSE, bw = FALSE, B = 1000)</code></pre>
+<pre><code>## Warning: Removed 2968 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+</div>
+<div id="blackwhite" class="section level3" number="4.10.4">
+<h3><span class="header-section-number">4.10.4</span> Black/white</h3>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = TRUE, spag = FALSE, show.lm = TRUE, show.CI = TRUE, bw = TRUE, B = 1000, quantize = &quot;continuous&quot;)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = TRUE, spag = FALSE, show.lm = TRUE, show.CI = TRUE, bw = TRUE, B = 1000, quantize = &quot;SD&quot;)</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-25-2.png" width="672" /></p>
+<pre class="r"><code>vwReg(outcome ~ predictor, data = df, shade = FALSE, spag = TRUE, show.lm = TRUE, show.CI = TRUE, bw = TRUE, B = 1000, quantize = &quot;SD&quot;)</code></pre>
+<pre><code>## Warning: Removed 3318 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="analysis-figures_files/figure-html/unnamed-chunk-25-3.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="graphic-design-principles-for-data-visualization" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Graphic Design Principles for Data Visualization</h1>
 <p><a href="https://www.data-to-viz.com/caveats.html" class="uri">https://www.data-to-viz.com/caveats.html</a></p>
 </div>
-<div id="types-of-plots" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Types of Plots</h2>
-<div id="univariate-distribution" class="section level3" number="1.6.1">
-<h3><span class="header-section-number">1.6.1</span> Univariate Distribution</h3>
+<div id="types-of-plots" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Types of Plots</h1>
+<div id="univariate-distribution" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Univariate Distribution</h2>
 <p>Used for: distribution of one numeric variable</p>
-<div id="gallery-1" class="section level4" number="1.6.1.1">
-<h4><span class="header-section-number">1.6.1.1</span> Gallery</h4>
+<div id="gallery-1" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Gallery</h3>
 <ul>
 <li>Violin chart: <a href="https://r-graph-gallery.com/violin.html" class="uri">https://r-graph-gallery.com/violin.html</a></li>
 <li>Density chart: <a href="https://r-graph-gallery.com/density-plot.html" class="uri">https://r-graph-gallery.com/density-plot.html</a></li>
@@ -490,20 +891,21 @@ div.tocify {
 </ul>
 </div>
 </div>
-<div id="bivariate-scatterplots" class="section level3" number="1.6.2">
-<h3><span class="header-section-number">1.6.2</span> Bivariate Scatterplots</h3>
+<div id="bivariate-scatterplots" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Bivariate Scatterplots</h2>
 <p>Used for: association between two numeric variables</p>
-<div id="base-r" class="section level4" number="1.6.2.1">
-<h4><span class="header-section-number">1.6.2.1</span> Base R</h4>
-<p>plot(x, y)</p>
+<div id="base-r-2" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Base <code>R</code></h3>
+<pre><code>plot(x, y)</code></pre>
 </div>
-<div id="ggplot2-package" class="section level4" number="1.6.2.2">
-<h4><span class="header-section-number">1.6.2.2</span> ggplot2 package</h4>
+<div id="ggplot2-package" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> ggplot2 package</h3>
 <p><a href="http://www.cookbook-r.com/Graphs/Scatterplots_(ggplot2)/" class="uri">http://www.cookbook-r.com/Graphs/Scatterplots_(ggplot2)/</a></p>
-<p>ggplot(data, aes(x, y)) + geom_point()</p>
+<pre><code>ggplot(data, aes(x, y)) +
+    geom_point()</code></pre>
 </div>
-<div id="gallery-2" class="section level4" number="1.6.2.3">
-<h4><span class="header-section-number">1.6.2.3</span> Gallery</h4>
+<div id="gallery-2" class="section level3" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Gallery</h3>
 <ul>
 <li>Scatterplot: <a href="https://r-graph-gallery.com/scatterplot.html" class="uri">https://r-graph-gallery.com/scatterplot.html</a></li>
 <li>Bubble plot: <a href="https://r-graph-gallery.com/bubble-chart.html" class="uri">https://r-graph-gallery.com/bubble-chart.html</a></li>
@@ -511,8 +913,8 @@ div.tocify {
 <li>Heatmap: <a href="https://r-graph-gallery.com/heatmap.html" class="uri">https://r-graph-gallery.com/heatmap.html</a></li>
 </ul>
 </div>
-<div id="add-lines" class="section level4" number="1.6.2.4">
-<h4><span class="header-section-number">1.6.2.4</span> Add lines</h4>
+<div id="add-lines" class="section level3" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Add lines</h3>
 <ul>
 <li>Line chart: <a href="https://r-graph-gallery.com/line-plot.html" class="uri">https://r-graph-gallery.com/line-plot.html</a></li>
 <li>Connected scatterplot: <a href="https://r-graph-gallery.com/connected-scatterplot.html" class="uri">https://r-graph-gallery.com/connected-scatterplot.html</a></li>
@@ -520,8 +922,8 @@ div.tocify {
 <li>Use the <code>vwReg()</code> function from the <code>petersenlab</code> package: <a href="https://research-git.uiowa.edu/PetersenLab/petersenlab/-/blob/master/R/vwReg.R" class="uri">https://research-git.uiowa.edu/PetersenLab/petersenlab/-/blob/master/R/vwReg.R</a></li>
 </ul>
 </div>
-<div id="area" class="section level4" number="1.6.2.5">
-<h4><span class="header-section-number">1.6.2.5</span> Area</h4>
+<div id="area" class="section level3" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Area</h3>
 <ul>
 <li>Area chart: <a href="https://r-graph-gallery.com/area-chart.html" class="uri">https://r-graph-gallery.com/area-chart.html</a></li>
 <li>Stacked area chart: <a href="https://r-graph-gallery.com/stacked-area-graph.html" class="uri">https://r-graph-gallery.com/stacked-area-graph.html</a></li>
@@ -529,20 +931,19 @@ div.tocify {
 </ul>
 </div>
 </div>
-</div>
-<div id="bivariate-barplots" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Bivariate Barplots</h2>
+<div id="bivariate-barplots" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Bivariate Barplots</h2>
 <p>Used for: association between one categorical variable and one numeric variable (or for depicting the frequency of categories of a categorical variable)</p>
-<div id="gallery-3" class="section level3" number="1.7.1">
-<h3><span class="header-section-number">1.7.1</span> Gallery</h3>
+<div id="gallery-3" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Gallery</h3>
 <ul>
 <li>Barplot: <a href="https://r-graph-gallery.com/barplot.html" class="uri">https://r-graph-gallery.com/barplot.html</a></li>
 <li>Lollipop plot: <a href="https://r-graph-gallery.com/lollipop-plot.html" class="uri">https://r-graph-gallery.com/lollipop-plot.html</a></li>
 </ul>
 </div>
 </div>
-<div id="multivariate-correlation-matrices" class="section level2" number="1.8">
-<h2><span class="header-section-number">1.8</span> Multivariate Correlation Matrices</h2>
+<div id="multivariate-correlation-matrices" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Multivariate Correlation Matrices</h2>
 <p>Used for: association between multiple numeric variables</p>
 <p>For correlation matrices, I do the following:</p>
 <ol style="list-style-type: decimal">
@@ -553,25 +954,25 @@ div.tocify {
 </ol></li>
 <li>I open the .csv file in Excel and create the table in Excel that can be copied and pasted to Word/Powerpoint/etc.</li>
 </ol>
-<div id="correlograms" class="section level3" number="1.8.1">
-<h3><span class="header-section-number">1.8.1</span> Correlograms</h3>
+<div id="correlograms" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Correlograms</h3>
 <ul>
 <li><code>corrplot</code> package: <a href="https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html" class="uri">https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html</a></li>
 <li><code>corrgram</code> package: <a href="https://cran.r-project.org/web/packages/corrgram/vignettes/corrgram_examples.html" class="uri">https://cran.r-project.org/web/packages/corrgram/vignettes/corrgram_examples.html</a></li>
 </ul>
-<div id="gallery-4" class="section level4" number="1.8.1.1">
-<h4><span class="header-section-number">1.8.1.1</span> Gallery</h4>
+<div id="gallery-4" class="section level4" number="6.4.1.1">
+<h4><span class="header-section-number">6.4.1.1</span> Gallery</h4>
 <p><a href="https://r-graph-gallery.com/correlogram.html" class="uri">https://r-graph-gallery.com/correlogram.html</a></p>
 </div>
 </div>
-<div id="pairs-panels" class="section level3" number="1.8.2">
-<h3><span class="header-section-number">1.8.2</span> Pairs panels</h3>
+<div id="pairs-panels" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Pairs panels</h3>
 <p><code>psych</code> package: <a href="https://personality-project.org/r/psych/help/pairs.panels.html" class="uri">https://personality-project.org/r/psych/help/pairs.panels.html</a></p>
 <p>I depict examples of correlograms and pairs panels here: <a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#correlations" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#correlations</a></p>
 </div>
 </div>
-<div id="path-diagrams" class="section level2" number="1.9">
-<h2><span class="header-section-number">1.9</span> Path Diagrams</h2>
+<div id="path-diagrams" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Path Diagrams</h2>
 <p>Used for: SEM/CFA/path analysis</p>
 <p>If you are just trying to visualize the results of a SEM model fitted using the lavaan package, I recommend the <code>semPlot</code> package (<a href="http://sachaepskamp.com/semPlot/examples" class="uri">http://sachaepskamp.com/semPlot/examples</a>) in <code>R</code>. You can see examples of my implementation here: <a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#path-diagram-1" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#path-diagram-1</a></p>
 <p>If you are trying to create a figure for a paper or poster, you might want something that you can draw and customize yourself. I use Adobe Illustrator for hand-drawn figures.</p>
@@ -592,21 +993,21 @@ div.tocify {
 <li><a href="https://github.com/jgraph/drawio-desktop/releases" class="uri">https://github.com/jgraph/drawio-desktop/releases</a></li>
 </ul>
 </div>
-<div id="interactive" class="section level2" number="1.10">
-<h2><span class="header-section-number">1.10</span> Interactive</h2>
+<div id="interactive" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Interactive</h2>
 <p>Gallery: <a href="https://r-graph-gallery.com/interactive-charts.html" class="uri">https://r-graph-gallery.com/interactive-charts.html</a></p>
 </div>
-<div id="animation" class="section level2" number="1.11">
-<h2><span class="header-section-number">1.11</span> Animation</h2>
+<div id="animation" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> Animation</h2>
 <p>Gallery: <a href="https://r-graph-gallery.com/animation.html" class="uri">https://r-graph-gallery.com/animation.html</a></p>
 </div>
-<div id="d" class="section level2" number="1.12">
-<h2><span class="header-section-number">1.12</span> 3D</h2>
+<div id="d" class="section level2" number="6.8">
+<h2><span class="header-section-number">6.8</span> 3D</h2>
 <p>Gallery: <a href="https://r-graph-gallery.com/3d.html" class="uri">https://r-graph-gallery.com/3d.html</a></p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmlndXJlcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBGaWd1cmVzIGluIFIKCiMjIFBpY2tpbmcgYSBDaGFydCBUeXBlCgpodHRwczovL3d3dy5kYXRhLXRvLXZpei5jb20KCiMjIEdhbGxlcnkKCmh0dHBzOi8vd3d3LnItZ3JhcGgtZ2FsbGVyeS5jb20KCiMjIFJlc291cmNlcyBmb3IgTGVhcm5pbmcgUiBTeW50YXggZm9yIEZpZ3VyZXMKCmh0dHBzOi8vd3d3LnN0YXRtZXRob2RzLm5ldC9ncmFwaHMvaW5kZXguaHRtbAoKaHR0cDovL3d3dy5jb29rYm9vay1yLmNvbS9HcmFwaHMvCgojIyBQZXRlcnNlbiBMYWIgRXhhbXBsZXMKCmh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9SLVBsb3R0aW5nLy0vdHJlZS9tYWluL0FuYWx5c2VzCgojIyBHcmFwaGljIERlc2lnbiBQcmluY2lwbGVzIGZvciBEYXRhIFZpc3VhbGl6YXRpb24KCmh0dHBzOi8vd3d3LmRhdGEtdG8tdml6LmNvbS9jYXZlYXRzLmh0bWwKCiMjIFR5cGVzIG9mIFBsb3RzCgojIyMgVW5pdmFyaWF0ZSBEaXN0cmlidXRpb24KClVzZWQgZm9yOiBkaXN0cmlidXRpb24gb2Ygb25lIG51bWVyaWMgdmFyaWFibGUKCiMjIyMgR2FsbGVyeQoKLSBWaW9saW4gY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS92aW9saW4uaHRtbAotIERlbnNpdHkgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9kZW5zaXR5LXBsb3QuaHRtbAotIEhpc3RvZ3JhbTogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2hpc3RvZ3JhbS5odG1sCi0gQm94cGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2JveHBsb3QuaHRtbAotIFJpZGdlbGluZSBjaGFydDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL3JpZGdlbGluZS1wbG90Lmh0bWwKCiMjIyBCaXZhcmlhdGUgU2NhdHRlcnBsb3RzCgpVc2VkIGZvcjogYXNzb2NpYXRpb24gYmV0d2VlbiB0d28gbnVtZXJpYyB2YXJpYWJsZXMKCiMjIyMgQmFzZSBSCgpwbG90KHgsIHkpCgojIyMjIGdncGxvdDIgcGFja2FnZQoKaHR0cDovL3d3dy5jb29rYm9vay1yLmNvbS9HcmFwaHMvU2NhdHRlcnBsb3RzXyhnZ3Bsb3QyKS8KCmdncGxvdChkYXRhLCBhZXMoeCwgeSkpICsKICAgIGdlb21fcG9pbnQoKQoKIyMjIyBHYWxsZXJ5CgotIFNjYXR0ZXJwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vc2NhdHRlcnBsb3QuaHRtbAotIEJ1YmJsZSBwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vYnViYmxlLWNoYXJ0Lmh0bWwKLSAyRCBkZW5zaXR5IGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vMmQtZGVuc2l0eS1jaGFydC5odG1sCi0gSGVhdG1hcDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2hlYXRtYXAuaHRtbAoKIyMjIyBBZGQgbGluZXMKCi0gTGluZSBjaGFydDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2xpbmUtcGxvdC5odG1sCi0gQ29ubmVjdGVkIHNjYXR0ZXJwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vY29ubmVjdGVkLXNjYXR0ZXJwbG90Lmh0bWwKLSBWaXN1YWxseS13ZWlnaHRlZCByZWdyZXNzaW9uOiBodHRwOi8vd3d3Lm5pY2VicmVhZC5kZS92aXN1YWxseS13ZWlnaHRlZC13YXRlcmNvbG9yLXBsb3RzLW5ldy12YXJpYW50cy1wbGVhc2Utdm90ZQotIFVzZSB0aGUgYHZ3UmVnKClgIGZ1bmN0aW9uIGZyb20gdGhlIGBwZXRlcnNlbmxhYmAgcGFja2FnZTogaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLy0vYmxvYi9tYXN0ZXIvUi92d1JlZy5SCgojIyMjIEFyZWEKCi0gQXJlYSBjaGFydDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2FyZWEtY2hhcnQuaHRtbAotIFN0YWNrZWQgYXJlYSBjaGFydDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL3N0YWNrZWQtYXJlYS1ncmFwaC5odG1sCi0gU3RyZWFtZ3JhcGg6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9zdHJlYW1ncmFwaC5odG1sCgojIyBCaXZhcmlhdGUgQmFycGxvdHMKClVzZWQgZm9yOiBhc3NvY2lhdGlvbiBiZXR3ZWVuIG9uZSBjYXRlZ29yaWNhbCB2YXJpYWJsZSBhbmQgb25lIG51bWVyaWMgdmFyaWFibGUgKG9yIGZvciBkZXBpY3RpbmcgdGhlIGZyZXF1ZW5jeSBvZiBjYXRlZ29yaWVzIG9mIGEgY2F0ZWdvcmljYWwgdmFyaWFibGUpCgojIyMgR2FsbGVyeQoKLSBCYXJwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vYmFycGxvdC5odG1sCi0gTG9sbGlwb3AgcGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2xvbGxpcG9wLXBsb3QuaHRtbAoKIyMgTXVsdGl2YXJpYXRlIENvcnJlbGF0aW9uIE1hdHJpY2VzCgpVc2VkIGZvcjogYXNzb2NpYXRpb24gYmV0d2VlbiBtdWx0aXBsZSBudW1lcmljIHZhcmlhYmxlcwoKRm9yIGNvcnJlbGF0aW9uIG1hdHJpY2VzLCBJIGRvIHRoZSBmb2xsb3dpbmc6CgoxLiBJIHVzZSB0aGUgbGFiJ3MgYGNvci50YWJsZSgpYCBmdW5jdGlvbiAod2l0aCBgdHlwZSA9ICJtYW51c2NyaXB0ImApIGZyb20gdGhlIGBwZXRlcnNlbmxhYmAgcGFja2FnZSB0byBjcmVhdGUgYSBjb3JyZWxhdGlvbiBtYXRyaXguCjEuIEkgc2F2ZSB0aGUgY29ycmVsYXRpb24gbWF0cml4IHRvIGEgYC5jc3ZgIGZpbGUuCiAgICBhLiBGb3IgZXhhbXBsZTogaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL1NSUy9TUlMtU2VsZlJlZ3VsYXRpb25EZXZlbG9wbWVudC8tL2Jsb2IvbWFzdGVyL0FuYWx5c2VzL3NlbGZSZWd1bGF0aW9uRGV2ZWxvcG1lbnQuUm1kI3NlbGYtcmVndWxhdGlvbi1tZWFzdXJlcwoxLiBJIG9wZW4gdGhlIC5jc3YgZmlsZSBpbiBFeGNlbCBhbmQgY3JlYXRlIHRoZSB0YWJsZSBpbiBFeGNlbCB0aGF0IGNhbiBiZSBjb3BpZWQgYW5kIHBhc3RlZCB0byBXb3JkL1Bvd2VycG9pbnQvZXRjLgoKIyMjIENvcnJlbG9ncmFtcwoKLSBgY29ycnBsb3RgIHBhY2thZ2U6IGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL3dlYi9wYWNrYWdlcy9jb3JycGxvdC92aWduZXR0ZXMvY29ycnBsb3QtaW50cm8uaHRtbAotIGBjb3JyZ3JhbWAgcGFja2FnZTogaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvd2ViL3BhY2thZ2VzL2NvcnJncmFtL3ZpZ25ldHRlcy9jb3JyZ3JhbV9leGFtcGxlcy5odG1sCgojIyMjIEdhbGxlcnkKCmh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9jb3JyZWxvZ3JhbS5odG1sCgojIyMgUGFpcnMgcGFuZWxzCgpgcHN5Y2hgIHBhY2thZ2U6IGh0dHBzOi8vcGVyc29uYWxpdHktcHJvamVjdC5vcmcvci9wc3ljaC9oZWxwL3BhaXJzLnBhbmVscy5odG1sCgpJIGRlcGljdCBleGFtcGxlcyBvZiBjb3JyZWxvZ3JhbXMgYW5kIHBhaXJzIHBhbmVscyBoZXJlOiBodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9mYWN0b3ItYW5hbHlzaXMtUENBLmh0bWwjY29ycmVsYXRpb25zCgojIyBQYXRoIERpYWdyYW1zCgpVc2VkIGZvcjogU0VNL0NGQS9wYXRoIGFuYWx5c2lzCgpJZiB5b3UgYXJlIGp1c3QgdHJ5aW5nIHRvIHZpc3VhbGl6ZSB0aGUgcmVzdWx0cyBvZiBhIFNFTSBtb2RlbCBmaXR0ZWQgdXNpbmcgdGhlIGxhdmFhbiBwYWNrYWdlLCBJIHJlY29tbWVuZCB0aGUgYHNlbVBsb3RgIHBhY2thZ2UgKGh0dHA6Ly9zYWNoYWVwc2thbXAuY29tL3NlbVBsb3QvZXhhbXBsZXMpIGluIGBSYC4KWW91IGNhbiBzZWUgZXhhbXBsZXMgb2YgbXkgaW1wbGVtZW50YXRpb24gaGVyZTogaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjcGF0aC1kaWFncmFtLTEKCklmIHlvdSBhcmUgdHJ5aW5nIHRvIGNyZWF0ZSBhIGZpZ3VyZSBmb3IgYSBwYXBlciBvciBwb3N0ZXIsIHlvdSBtaWdodCB3YW50IHNvbWV0aGluZyB0aGF0IHlvdSBjYW4gZHJhdyBhbmQgY3VzdG9taXplIHlvdXJzZWxmLgpJIHVzZSBBZG9iZSBJbGx1c3RyYXRvciBmb3IgaGFuZC1kcmF3biBmaWd1cmVzLgoKWW91IGNhbiBsb29rIGF0IHZhcmlvdXMgb3B0aW9ucyBiZWxvdzoKCi0gYHNlbVBsb3RgIHBhY2thZ2UKLSBgQWRvYmUgSWxsdXN0cmF0b3JgCi0gYE9ueXhgOiBodHRwczovL29ueXgtc2VtLmNvbQotIGB5d29ya3NgOiBodHRwczovL3d3dy55d29ya3MuY29tCi0gYE1pY3Jvc29mdCBWaXNpb2A6IGh0dHBzOi8vd3d3Lm1pY3Jvc29mdC5jb20vZW4tdXMvbWljcm9zb2Z0LTM2NS92aXNpby9mbG93Y2hhcnQtc29mdHdhcmUKLSBgQU1PU2AKLSBgV2FycHBsc2AKLSBgR3JhcGh2aXpgOiBodHRwczovL2dyYXBodml6Lm9yZwogICAgLSBoYXMgYW4gUiBwb3J04oCUdGhpcyBpcyB3aGF0IHdlIHVzZSBmb3Igb3VyIHN0dWR5IGZsb3djaGFydCB2aWEgdGhlIERpYWdyYW1tZVIgcGFja2FnZTogaHR0cHM6Ly9yaWNoLWlhbm5vbmUuZ2l0aHViLmlvL0RpYWdyYW1tZVIvaW5kZXguaHRtbAotIGh0dHBzOi8vYXBwLmRpYWdyYW1zLm5ldAotIGh0dHBzOi8vZ2l0aHViLmNvbS9qZ3JhcGgvZHJhd2lvLWRlc2t0b3AvcmVsZWFzZXMKCiMjIEludGVyYWN0aXZlCgpHYWxsZXJ5OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vaW50ZXJhY3RpdmUtY2hhcnRzLmh0bWwKCiMjIEFuaW1hdGlvbgoKR2FsbGVyeTogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2FuaW1hdGlvbi5odG1sCgojIyAzRAoKR2FsbGVyeTogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tLzNkLmh0bWwKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRmlndXJlcyBpbiBSIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGVycm9yID0gVFJVRSkKYGBgCgojIFBpY2tpbmcgYSBDaGFydCBUeXBlCgpodHRwczovL3d3dy5kYXRhLXRvLXZpei5jb20KCiMgR2FsbGVyeQoKaHR0cHM6Ly93d3cuci1ncmFwaC1nYWxsZXJ5LmNvbQoKIyBSZXNvdXJjZXMgZm9yIExlYXJuaW5nIFIgU3ludGF4IGZvciBGaWd1cmVzCgpodHRwczovL3d3dy5zdGF0bWV0aG9kcy5uZXQvZ3JhcGhzL2luZGV4Lmh0bWwKCmh0dHA6Ly93d3cuY29va2Jvb2stci5jb20vR3JhcGhzLwoKIyBQZXRlcnNlbiBMYWIgRXhhbXBsZXMKCmh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9SLVBsb3R0aW5nLy0vdHJlZS9tYWluL0FuYWx5c2VzCgojIyBQcmVhbWJsZQoKIyMjIEluc3RhbGwgTGlicmFyaWVzCgpgYGB7cn0KI2luc3RhbGwucGFja2FnZXMoInJlbW90ZXMiKQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMjIyBMb2FkIExpYnJhcmllcwoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgd2FybmluZyA9IEZBTFNFfQpsaWJyYXJ5KCJwZXRlcnNlbmxhYiIpCmxpYnJhcnkoImVsbGlwc2UiKQpsaWJyYXJ5KCJnZ3Bsb3QyIikKbGlicmFyeSgiZ3JpZCIpCmxpYnJhcnkoInJlc2hhcGUiKQpsaWJyYXJ5KCJwbHlyIikKbGlicmFyeSgiUkNvbG9yQnJld2VyIikKbGlicmFyeSgicmVzaGFwZTIiKQpsaWJyYXJ5KCJnZ0V4dHJhIikKbGlicmFyeSgidmlyaWRpcyIpCmxpYnJhcnkoImdndGhlbWVzIikKYGBgCgojIyBTaW11bGF0ZSBEYXRhCgpgYGB7cn0Kc2V0LnNlZWQoNTIyNDIpCgpuIDwtIDEwMDAKCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKbnVtYmVyIDwtIHNhbXBsZSgxOjEwMDAsIHJlcGxhY2UgPSBUUlVFKQoKcHJlZGljdG9yT3ZlcnBsb3QgPC0gc2FtcGxlKDE6NTAsIG4sIHJlcGxhY2UgPSBUUlVFKQpvdXRjb21lT3ZlcnBsb3QgPC0gcHJlZGljdG9yT3ZlcnBsb3QgKyBzYW1wbGUoMTo3NSwgbiwgcmVwbGFjZSA9IFRSVUUpCgpkZiA8LSBkYXRhLmZyYW1lKHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSwKICAgICAgICAgICAgICAgICBwcmVkaWN0b3JPdmVycGxvdCA9IHByZWRpY3Rvck92ZXJwbG90LAogICAgICAgICAgICAgICAgIG91dGNvbWVPdmVycGxvdCA9IG91dGNvbWVPdmVycGxvdCkKCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3IiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAib3V0Y29tZSJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3JPdmVycGxvdCJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJvdXRjb21lT3ZlcnBsb3QiXSA8LSBOQQpgYGAKCiMjIEJhc2ljIFNjYXR0ZXJwbG90CgojIyMgQmFzZSBSCgpgYGB7cn0KcGxvdChvdXRjb21lIH4gcHJlZGljdG9yLCBkYXRhID0gZGYpCnBsb3QoZGYkcHJlZGljdG9yLCBkZiRvdXRjb21lKQpgYGAKCiMjIyMgQmVzdC1maXQgbGluZQoKYGBge3J9CnBsb3Qob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmKQphYmxpbmUobG0ob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmKSwgY29sID0gInJlZCIpICNyZWdyZXNzaW9uIGxpbmUgKHl+eCkKYGBgCgojIyMjIExvZXNzIGxpbmUKYGBge3J9CnBsb3Qob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmKQpsaW5lcyhsb2Vzcy5zbW9vdGgoZGYkcHJlZGljdG9yLCBkZiRvdXRjb21lKSkgI2xvZXNzIGxpbmUgKHgseSkKYGBgCgojIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3RvciwgeSA9IG91dGNvbWUpKSArCiAgZ2VvbV9wb2ludCgpICsKICB0aGVtZV9jbGFzc2ljKCkKYGBgCgojIyMjIEJlc3QtZml0IGxpbmUKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yLCB5ID0gb3V0Y29tZU92ZXJwbG90KSkgKwogIGdlb21fcG9pbnQoKSArCiAgc3RhdF9zbW9vdGgobWV0aG9kID0gImxtIiwgZm9ybXVsYSA9IHkgfiB4KSArCiAgdGhlbWVfY2xhc3NpYygpCmBgYAoKIyMjIyBMb2VzcyBsaW5lCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3RvciwgeSA9IG91dGNvbWVPdmVycGxvdCkpICsKICBnZW9tX3BvaW50KCkgKwogIHN0YXRfc21vb3RoKG1ldGhvZCA9ICJsb2VzcyIsIGZvcm11bGEgPSB5IH4geCkgKwogIHRoZW1lX2NsYXNzaWMoKQpgYGAKCiMjIENoYW5nZSBQbG90IFN0eWxlCgojIyMgQ2hhbmdlIFRoZW1lCgpgYGB7cn0KYmFzZVBsb3QgPC0gZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3RvciwgeSA9IG91dGNvbWUpKSArCiAgZ2VvbV9wb2ludCgpCgpiYXNlUGxvdApiYXNlUGxvdCArIHRoZW1lX2dyYXkoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX2J3KCkgKyB0aGVtZSh0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseSA9ICJHb3RoYW0iKSkKYmFzZVBsb3QgKyB0aGVtZV9saW5lZHJhdygpICsgdGhlbWUodGV4dCA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR290aGFtIikpCmJhc2VQbG90ICsgdGhlbWVfbGlnaHQoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX2RhcmsoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX21pbmltYWwoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX2NsYXNzaWMoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX3ZvaWQoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX3Rlc3QoKSArIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpiYXNlUGxvdCArIHRoZW1lX3R1ZnRlKCkKYmFzZVBsb3QgKyB0aGVtZV93c2ooKQpiYXNlUGxvdCArIHRoZW1lX2ZpdmV0aGlydHllaWdodCgpCmJhc2VQbG90ICsgdGhlbWVfZWNvbm9taXN0KCkKYmFzZVBsb3QgKyB0aGVtZV9mZXcoKQpgYGAKCiMjIEFkZCBNYXJnaW5hbCBEaXN0cmlidXRpb25zCgpgYGB7cn0Kc2NhdHRlcnBsb3QgPC0gZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3RvciwgeSA9IG91dGNvbWUpKSArCiAgZ2VvbV9wb2ludCgpICsKICB0aGVtZV9jbGFzc2ljKCkgKwogIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQoKZ2dNYXJnaW5hbChzY2F0dGVycGxvdCwgdHlwZSA9ICJkZW5zaXR5IiwgeHBhcmFtcyA9IGxpc3QoZmlsbCA9ICJncmF5IiksIHlwYXJhbXMgPSBsaXN0KGZpbGwgPSAiZ3JheSIpKQpnZ01hcmdpbmFsKHNjYXR0ZXJwbG90LCB0eXBlID0gImhpc3RvZ3JhbSIsIHhwYXJhbXMgPSBsaXN0KGZpbGwgPSAiZ3JheSIpLCB5cGFyYW1zID0gbGlzdChmaWxsID0gImdyYXkiKSkKZ2dNYXJnaW5hbChzY2F0dGVycGxvdCwgdHlwZSA9ICJib3hwbG90IiwgeHBhcmFtcyA9IGxpc3QoZmlsbCA9ICJncmF5IiksIHlwYXJhbXMgPSBsaXN0KGZpbGwgPSAiZ3JheSIpKQpnZ01hcmdpbmFsKHNjYXR0ZXJwbG90LCB0eXBlID0gInZpb2xpbiIsIHhwYXJhbXMgPSBsaXN0KGZpbGwgPSAiZ3JheSIpLCB5cGFyYW1zID0gbGlzdChmaWxsID0gImdyYXkiKSkKZ2dNYXJnaW5hbChzY2F0dGVycGxvdCwgdHlwZSA9ICJkZW5zaWdyYW0iLCB4cGFyYW1zID0gbGlzdChmaWxsID0gImdyYXkiKSwgeXBhcmFtcyA9IGxpc3QoZmlsbCA9ICJncmF5IikpCmBgYAoKIyMgRWxsaXBzZQoKIyMjIEJhc2ljIEVsbGlwc2UKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yLCB5ID0gb3V0Y29tZSkpICsKICBnZW9tX3BvaW50KCkgKwogIHN0YXRfZWxsaXBzZShhbHBoYSA9IDAuNCwgbGV2ZWwgPSAwLjk1LCBnZW9tID0gInBvbHlnb24iLCBmaWxsID0gInJlZCIsIGNvbG9yID0gInJlZCIpICsKICB0aGVtZV9jbGFzc2ljKCkgKwogIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpgYGAKCiMjIyBBbGlnbiBDb29yZGluYXRlcwoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBwcmVkaWN0b3IsIHkgPSBvdXRjb21lKSkgKwogIGdlb21fcG9pbnQoKSArCiAgc3RhdF9lbGxpcHNlKGFscGhhID0gMC40LCBsZXZlbCA9IDAuOTUsIGdlb20gPSAicG9seWdvbiIsIGZpbGwgPSAicmVkIiwgY29sb3IgPSAicmVkIikgKwogIHNjYWxlX3hfY29udGludW91cyhleHBhbmQgPSBjKDAsIDApKSArCiAgc2NhbGVfeV9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBjb29yZF9maXhlZChyYXRpbyA9IChtYXgocHJlZGljdG9yLCBuYS5ybSA9IFRSVUUpIC0gbWluKHByZWRpY3RvciwgbmEucm0gPSBUUlVFKSkvKG1heChvdXRjb21lLCBuYS5ybSA9IFRSVUUpIC0gbWluKG91dGNvbWUsIG5hLnJtID0gVFJVRSkpLAogICAgICAgICAgICAgIHhsaW0gPSBjKDAsIG1heChwcmVkaWN0b3IsIG5hLnJtID0gVFJVRSkpLCAKICAgICAgICAgICAgICB5bGltID0gYygwLCBtYXgob3V0Y29tZSwgbmEucm0gPSBUUlVFKSkpICsKICB0aGVtZV9jbGFzc2ljKCkgKwogIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpgYGAKCiMjIyBSZWR1Y2UgRG90IFNpemUKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yLCB5ID0gb3V0Y29tZSkpICsKICBnZW9tX3BvaW50KHNpemUgPSAwLjUpICsKICBzdGF0X2VsbGlwc2UoYWxwaGEgPSAwLjQsIGxldmVsID0gMC45NSwgZ2VvbSA9ICJwb2x5Z29uIiwgZmlsbCA9ICJyZWQiLCBjb2xvciA9ICJyZWQiKSArCiAgc2NhbGVfeF9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBzY2FsZV95X2NvbnRpbnVvdXMoZXhwYW5kID0gYygwLCAwKSkgKwogIGNvb3JkX2ZpeGVkKHJhdGlvID0gKG1heChwcmVkaWN0b3IsIG5hLnJtID0gVFJVRSkgLSBtaW4ocHJlZGljdG9yLCBuYS5ybSA9IFRSVUUpKS8obWF4KG91dGNvbWUsIG5hLnJtID0gVFJVRSkgLSBtaW4ob3V0Y29tZSwgbmEucm0gPSBUUlVFKSksCiAgICAgICAgICAgICAgeGxpbSA9IGMoMCwgbWF4KHByZWRpY3RvciwgbmEucm0gPSBUUlVFKSksIAogICAgICAgICAgICAgIHlsaW0gPSBjKDAsIG1heChvdXRjb21lLCBuYS5ybSA9IFRSVUUpKSkgKwogIHRoZW1lX2NsYXNzaWMoKSArCiAgdGhlbWUodGV4dCA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR290aGFtIikpCmBgYAoKIyMjIFRyYW5zcGFyZW5jeQoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBwcmVkaWN0b3IsIHkgPSBvdXRjb21lKSkgKwogIGdlb21fcG9pbnQoYWxwaGEgPSAwLjMpICsKICBzdGF0X2VsbGlwc2UoYWxwaGEgPSAwLjQsIGxldmVsID0gMC45NSwgZ2VvbSA9ICJwb2x5Z29uIiwgZmlsbCA9ICJyZWQiLCBjb2xvciA9ICJyZWQiKSArCiAgc2NhbGVfeF9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBzY2FsZV95X2NvbnRpbnVvdXMoZXhwYW5kID0gYygwLCAwKSkgKwogIGNvb3JkX2ZpeGVkKHJhdGlvID0gKG1heChwcmVkaWN0b3IsIG5hLnJtID0gVFJVRSkgLSBtaW4ocHJlZGljdG9yLCBuYS5ybSA9IFRSVUUpKS8obWF4KG91dGNvbWUsIG5hLnJtID0gVFJVRSkgLSBtaW4ob3V0Y29tZSwgbmEucm0gPSBUUlVFKSksCiAgICAgICAgICAgICAgeGxpbSA9IGMoMCwgbWF4KHByZWRpY3RvciwgbmEucm0gPSBUUlVFKSksIAogICAgICAgICAgICAgIHlsaW0gPSBjKDAsIG1heChvdXRjb21lLCBuYS5ybSA9IFRSVUUpKSkgKwogIHRoZW1lX2NsYXNzaWMoKSArCiAgdGhlbWUodGV4dCA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR290aGFtIikpCmBgYAoKIyMgQnViYmxlIENoYXJ0CgojIyMgQmFzaWMgQnViYmxlIENoYXJ0CgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3Rvck92ZXJwbG90LCB5ID0gb3V0Y29tZU92ZXJwbG90KSkgKwogIGdlb21fY291bnQoYWVzKHNpemUgPSAuLm4uLikpICsKICBzY2FsZV9zaXplX2FyZWEoKSArCiAgdGhlbWVfY2xhc3NpYygpICsKICB0aGVtZSh0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseSA9ICJHb3RoYW0iKSkKYGBgCgojIyMgU3BlY2lmeSBTaXplcwoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBwcmVkaWN0b3JPdmVycGxvdCwgeSA9IG91dGNvbWVPdmVycGxvdCkpICsKICBnZW9tX2NvdW50KGFlcyhzaXplID0gLi5uLi4pKSArCiAgc2NhbGVfc2l6ZV9jb250aW51b3VzKGJyZWFrcyA9IGMoMSwgMiwgMywgNCksIHJhbmdlID0gYygxLCA3KSkgKwogIHRoZW1lX2NsYXNzaWMoKSArCiAgdGhlbWUodGV4dCA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR290aGFtIikpCmBgYAoKIyMgMi1EaW1lbnNpb25hbCBEZW5zaXR5CgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IHByZWRpY3RvciwgeSA9IG91dGNvbWUpKSArCiAgc3RhdF9kZW5zaXR5XzJkKGFlcyhmaWxsID0gLi5kZW5zaXR5Li4pLCBnZW9tID0gInJhc3RlciIsIGNvbnRvdXIgPSBGQUxTRSkgKwogIHNjYWxlX3hfY29udGludW91cyhleHBhbmQgPSBjKDAsIDApKSArCiAgc2NhbGVfeV9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBzY2FsZV9maWxsX3ZpcmlkaXMoKSArCiAgdGhlbWUoCiAgICBsZWdlbmQucG9zaXRpb24gPSAibm9uZSIsCiAgICB0ZXh0ID0gZWxlbWVudF90ZXh0KGZhbWlseSA9ICJHb3RoYW0iKQogICkKYGBgCgojIyBDb21iaW5lZCBFbGxpcHNlIGFuZCBCdWJibGUgQ2hhcnQKCiMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yT3ZlcnBsb3QsIHkgPSBvdXRjb21lT3ZlcnBsb3QpKSArCiAgZ2VvbV9jb3VudChhbHBoYSA9IC42LCBjb2xvciA9IHJnYigwLDAsLjcsLjUpKSArCiAgc2NhbGVfc2l6ZV9jb250aW51b3VzKGJyZWFrcyA9IGMoMSwgMiwgMywgNCksIHJhbmdlID0gYygxLCA3KSkgKwogIHN0YXRfc21vb3RoKG1ldGhvZCA9ICJsb2VzcyIsIHNlID0gVFJVRSwgY29sb3IgPSAiZ3JlZW4iKSArIAogIHN0YXRfc21vb3RoKG1ldGhvZCA9ICJsbSIpICsKICBzdGF0X2VsbGlwc2UoYWxwaGEgPSAwLjQsIGxldmVsID0gMC45NSwgZ2VvbSA9ICJwb2x5Z29uIiwgZmlsbCA9ICJyZWQiLCBjb2xvciA9ICJyZWQiKSArCiAgc2NhbGVfeF9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBzY2FsZV95X2NvbnRpbnVvdXMoZXhwYW5kID0gYygwLCAwKSkgKwogIGNvb3JkX2ZpeGVkKHJhdGlvID0gKG1heChwcmVkaWN0b3JPdmVycGxvdCwgbmEucm0gPSBUUlVFKSAtIG1pbihwcmVkaWN0b3JPdmVycGxvdCwgbmEucm0gPSBUUlVFKSkvKG1heChvdXRjb21lT3ZlcnBsb3QsIG5hLnJtID0gVFJVRSkgLSBtaW4ob3V0Y29tZU92ZXJwbG90LCBuYS5ybSA9IFRSVUUpKSwKICAgICAgICAgICAgICB4bGltID0gYygwLCBtYXgocHJlZGljdG9yT3ZlcnBsb3QsIG5hLnJtID0gVFJVRSkpLCAKICAgICAgICAgICAgICB5bGltID0gYygwLCBtYXgob3V0Y29tZU92ZXJwbG90LCBuYS5ybSA9IFRSVUUpKSkgKwogIHRoZW1lX2NsYXNzaWMoKSArCiAgdGhlbWUodGV4dCA9IGVsZW1lbnRfdGV4dChmYW1pbHkgPSAiR290aGFtIikpCgpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yT3ZlcnBsb3QsIHkgPSBvdXRjb21lT3ZlcnBsb3QpKSArCiAgZ2VvbV9jb3VudChhbHBoYSA9IC42LCBjb2xvciA9IHJnYigwLDAsLjcsLjUpKSArCiAgc2NhbGVfc2l6ZV9jb250aW51b3VzKGJyZWFrcyA9IGMoMSwgMiwgMywgNCksIHJhbmdlID0gYygxLCA3KSkgKwogIHN0YXRfc21vb3RoKG1ldGhvZCA9ICJsb2VzcyIsIHNlID0gVFJVRSwgY29sb3IgPSAiZ3JlZW4iKSArIAogIHN0YXRfc21vb3RoKG1ldGhvZCA9ICJsbSIpICsKICBzdGF0X2VsbGlwc2UoY29sb3IgPSAicmVkIiwgc2l6ZSA9IDEuNSkgKwogIHNjYWxlX3hfY29udGludW91cyhleHBhbmQgPSBjKDAsIDApKSArCiAgc2NhbGVfeV9jb250aW51b3VzKGV4cGFuZCA9IGMoMCwgMCkpICsKICBjb29yZF9maXhlZChyYXRpbyA9IChtYXgocHJlZGljdG9yT3ZlcnBsb3QsIG5hLnJtID0gVFJVRSkgLSBtaW4ocHJlZGljdG9yT3ZlcnBsb3QsIG5hLnJtID0gVFJVRSkpLyhtYXgob3V0Y29tZU92ZXJwbG90LCBuYS5ybSA9IFRSVUUpIC0gbWluKG91dGNvbWVPdmVycGxvdCwgbmEucm0gPSBUUlVFKSksCiAgICAgICAgICAgICAgeGxpbSA9IGMoMCwgbWF4KHByZWRpY3Rvck92ZXJwbG90LCBuYS5ybSA9IFRSVUUpKSwgCiAgICAgICAgICAgICAgeWxpbSA9IGMoMCwgbWF4KG91dGNvbWVPdmVycGxvdCwgbmEucm0gPSBUUlVFKSkpICsKICB0aGVtZV9jbGFzc2ljKCkgKwogIHRoZW1lKHRleHQgPSBlbGVtZW50X3RleHQoZmFtaWx5ID0gIkdvdGhhbSIpKQpgYGAKCiMjIyBPdGhlciBpbXBsZW1lbnRhdGlvbgoKRnJvbTogaHR0cHM6Ly9zdGF0cy5zdGFja2V4Y2hhbmdlLmNvbS9xdWVzdGlvbnMvNzg5OS9jb21wbGV4LXJlZ3Jlc3Npb24tcGxvdC1pbi1yCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmRmJHggPC0gZGYkcHJlZGljdG9yT3ZlcnBsb3QKZGYkeSA8LSBkZiRvdXRjb21lT3ZlcnBsb3QKCnhjIDwtIHdpdGgoZGYsIHh5VGFibGUoeCwgeSkpCmRmMiA8LSBjYmluZC5kYXRhLmZyYW1lKHg9eGMkeCwgeT14YyR5LCBudW1iZXI9eGMkbnVtYmVyKQpkZjIkbiA8LSBjdXQoZGYyJG51bWJlcixjKDAsMS41LDIuNSxJbmYpLCBsYWJlbHM9YygxLDIsNCkpCmRmLmVsbCA8LSBhcy5kYXRhLmZyYW1lKHdpdGgoZGYsIGVsbGlwc2UoY29yKGRmJHgsIGRmJHksIHVzZSA9ICJwYWlyd2lzZS5jb21wbGV0ZS5vYnMiKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzY2FsZSA9IGMoc2QoZGYkeCwgbmEucm0gPSBUUlVFKSxzZChkZiR5LG5hLnJtPVQpKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjZW50cmUgPSBjKG1lYW4oZGYkeCwgbmEucm0gPSBUUlVFKSwgbWVhbihkZiR5LCBuYS5ybSA9IFRSVUUpKSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZXZlbCA9IC45NSkpKQoKZ2dwbG90KGRhdGEgPSBuYS5vbWl0KGRmMiksIGFlcyh4ID0geCwgeSA9IHkpKSArIAogIGdlb21fcG9pbnQoYWVzKHNpemUgPSBuKSwgYWxwaGEgPSAuNiwgY29sb3IgPSByZ2IoMCwwLC43LC41KSkgKyAKICBzdGF0X3Ntb290aChkYXRhID0gZGYsIG1ldGhvZCA9ICJsb2VzcyIsIHNlID0gRkFMU0UsIGNvbG9yID0gImdyZWVuIikgKyAKICBzdGF0X3Ntb290aChkYXRhID0gZGYsIG1ldGhvZCA9ICJsbSIsIGNvbCA9ICJyZWQiKSArCiAgZ2VvbV9wYXRoKGRhdGEgPSBkZi5lbGwsIGNvbG91ciA9ICJncmVlbiIsIHNpemUgPSAxKSArCiAgY29vcmRfY2FydGVzaWFuKHhsaW0gPSBjKC0xLDYwKSwgeWxpbSA9IGMoLTEsMTMwKSkKYGBgCgojIyMjIEJhc2UgYFJgCgpgYGB7cn0KZG8uaXQgPC0gZnVuY3Rpb24oZGYsIHR5cGU9ImNvbmZpZGVuY2UiLCAuLi4pIHsKICByZXF1aXJlKGVsbGlwc2UpCiAgbG0wIDwtIGxtKHkgfiB4LCBkYXRhPWRmKQogIHhjIDwtIHdpdGgoZGYsIHh5VGFibGUoeCwgeSkpCiAgZGYubmV3IDwtIGRhdGEuZnJhbWUoeD1zZXEobWluKGRmJHgpLCBtYXgoZGYkeCksIDAuMSkpCiAgcHJlZC51bGIgPC0gcHJlZGljdChsbTAsIGRmLm5ldywgaW50ZXJ2YWw9dHlwZSkKICBwcmVkLmxvIDwtIHByZWRpY3QobG9lc3MoeSB+IHgsIGRhdGE9ZGYpLCBkZi5uZXcpCiAgcGxvdCh4YyR4LCB4YyR5LCBjZXg9eGMkbnVtYmVyKjEvNCwgeGxhYj0ieCIsIHlsYWI9InkiLCAuLi4pICNjaGFuZ2UgbnVtYmVyKlggdG8gY2hhbmdlIGRvdCBzaXplCiAgYWJsaW5lKGxtMCwgY29sPSJyZWQiKQogIGxpbmVzKGRmLm5ldyR4LCBwcmVkLmxvLCBjb2w9ImdyZWVuIiwgbHdkPTIpCiAgbGluZXMoZGYubmV3JHgsIHByZWQudWxiWywibHdyIl0sIGx0eT0yLCBjb2w9InJlZCIpCiAgbGluZXMoZGYubmV3JHgsIHByZWQudWxiWywidXByIl0sIGx0eT0yLCBjb2w9InJlZCIpICAgIAogIGxpbmVzKGVsbGlwc2UoY29yKGRmJHgsIGRmJHkpLCBzY2FsZT1jKHNkKGRmJHgpLHNkKGRmJHkpKSwgCiAgICAgICAgICAgICAgICBjZW50cmU9YyhtZWFuKGRmJHgpLG1lYW4oZGYkeSkpLGxldmVsPS45NSksIGx3ZD0yLCBjb2w9ImdyZWVuIikKICBpbnZpc2libGUobG0wKQp9CgpkZjMgPC0gbmEub21pdChkZltzYW1wbGUobnJvdyhkZiksIG5yb3coZGYpLCByZXAgPSBUUlVFKSxdKQpkZjMkeCA8LSBkZjMkcHJlZGljdG9yT3ZlcnBsb3QKZGYzJHkgPC0gZGYzJG91dGNvbWVPdmVycGxvdAoKZG8uaXQoZGYzLCBwY2ggPSAxOSwgY29sID0gcmdiKDAsMCwuNywuNSkpCmBgYAoKIyMgVmlzdWFsbHktV2VpZ2h0ZWQgUmVncmVzc2lvbgoKIyMjIERlZmF1bHQKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHJlc3VsdHMgPSAiaGlkZSJ9CnZ3UmVnKG91dGNvbWUgfiBwcmVkaWN0b3IsIGRhdGEgPSBkZikKYGBgCgojIyMgU2hhZGUKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHJlc3VsdHMgPSAiaGlkZSJ9CnZ3UmVnKG91dGNvbWUgfiBwcmVkaWN0b3IsIGRhdGEgPSBkZiwgc2hhZGUgPSBUUlVFLCBzcGFnID0gRkFMU0UsIHNob3cubG0gPSBUUlVFLCBzaG93LkNJID0gVFJVRSwgYncgPSBGQUxTRSwgQiA9IDEwMDAsIHF1YW50aXplID0gImNvbnRpbnVvdXMiKQp2d1JlZyhvdXRjb21lIH4gcHJlZGljdG9yLCBkYXRhID0gZGYsIHNoYWRlID0gVFJVRSwgc3BhZyA9IEZBTFNFLCBzaG93LmxtID0gVFJVRSwgc2hvdy5DSSA9IFRSVUUsIGJ3ID0gRkFMU0UsIEIgPSAxMDAwLCBxdWFudGl6ZSA9ICJTRCIpCmBgYAoKIyMjIFNwYWdoZXR0aQoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgcmVzdWx0cyA9ICJoaWRlIn0KdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmLCBzaGFkZSA9IEZBTFNFLCBzcGFnID0gVFJVRSwgc2hvdy5sbSA9IFRSVUUsIHNob3cuQ0kgPSBUUlVFLCBidyA9IEZBTFNFLCBCID0gMTAwMCkKdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmLCBzaGFkZSA9IEZBTFNFLCBzcGFnID0gVFJVRSwgc2hvdy5sbSA9IEZBTFNFLCBzaG93LkNJID0gRkFMU0UsIGJ3ID0gRkFMU0UsIEIgPSAxMDAwKQpgYGAKCiMjIyBCbGFjay93aGl0ZQoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgcmVzdWx0cyA9ICJoaWRlIn0KdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmLCBzaGFkZSA9IFRSVUUsIHNwYWcgPSBGQUxTRSwgc2hvdy5sbSA9IFRSVUUsIHNob3cuQ0kgPSBUUlVFLCBidyA9IFRSVUUsIEIgPSAxMDAwLCBxdWFudGl6ZSA9ICJjb250aW51b3VzIikKdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmLCBzaGFkZSA9IFRSVUUsIHNwYWcgPSBGQUxTRSwgc2hvdy5sbSA9IFRSVUUsIHNob3cuQ0kgPSBUUlVFLCBidyA9IFRSVUUsIEIgPSAxMDAwLCBxdWFudGl6ZSA9ICJTRCIpCnZ3UmVnKG91dGNvbWUgfiBwcmVkaWN0b3IsIGRhdGEgPSBkZiwgc2hhZGUgPSBGQUxTRSwgc3BhZyA9IFRSVUUsIHNob3cubG0gPSBUUlVFLCBzaG93LkNJID0gVFJVRSwgYncgPSBUUlVFLCBCID0gMTAwMCwgcXVhbnRpemUgPSAiU0QiKQpgYGAKCiMgR3JhcGhpYyBEZXNpZ24gUHJpbmNpcGxlcyBmb3IgRGF0YSBWaXN1YWxpemF0aW9uCgpodHRwczovL3d3dy5kYXRhLXRvLXZpei5jb20vY2F2ZWF0cy5odG1sCgojIFR5cGVzIG9mIFBsb3RzCgojIyBVbml2YXJpYXRlIERpc3RyaWJ1dGlvbgoKVXNlZCBmb3I6IGRpc3RyaWJ1dGlvbiBvZiBvbmUgbnVtZXJpYyB2YXJpYWJsZQoKIyMjIEdhbGxlcnkKCi0gVmlvbGluIGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vdmlvbGluLmh0bWwKLSBEZW5zaXR5IGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vZGVuc2l0eS1wbG90Lmh0bWwKLSBIaXN0b2dyYW06IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9oaXN0b2dyYW0uaHRtbAotIEJveHBsb3Q6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9ib3hwbG90Lmh0bWwKLSBSaWRnZWxpbmUgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9yaWRnZWxpbmUtcGxvdC5odG1sCgojIyBCaXZhcmlhdGUgU2NhdHRlcnBsb3RzCgpVc2VkIGZvcjogYXNzb2NpYXRpb24gYmV0d2VlbiB0d28gbnVtZXJpYyB2YXJpYWJsZXMKCiMjIyBCYXNlIGBSYAoKYGBgCnBsb3QoeCwgeSkKYGBgCgojIyMgZ2dwbG90MiBwYWNrYWdlCgpodHRwOi8vd3d3LmNvb2tib29rLXIuY29tL0dyYXBocy9TY2F0dGVycGxvdHNfKGdncGxvdDIpLwoKYGBgCmdncGxvdChkYXRhLCBhZXMoeCwgeSkpICsKICAgIGdlb21fcG9pbnQoKQpgYGAKCiMjIyBHYWxsZXJ5CgotIFNjYXR0ZXJwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vc2NhdHRlcnBsb3QuaHRtbAotIEJ1YmJsZSBwbG90OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vYnViYmxlLWNoYXJ0Lmh0bWwKLSAyRCBkZW5zaXR5IGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vMmQtZGVuc2l0eS1jaGFydC5odG1sCi0gSGVhdG1hcDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2hlYXRtYXAuaHRtbAoKIyMjIEFkZCBsaW5lcwoKLSBMaW5lIGNoYXJ0OiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vbGluZS1wbG90Lmh0bWwKLSBDb25uZWN0ZWQgc2NhdHRlcnBsb3Q6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9jb25uZWN0ZWQtc2NhdHRlcnBsb3QuaHRtbAotIFZpc3VhbGx5LXdlaWdodGVkIHJlZ3Jlc3Npb246IGh0dHA6Ly93d3cubmljZWJyZWFkLmRlL3Zpc3VhbGx5LXdlaWdodGVkLXdhdGVyY29sb3ItcGxvdHMtbmV3LXZhcmlhbnRzLXBsZWFzZS12b3RlCi0gVXNlIHRoZSBgdndSZWcoKWAgZnVuY3Rpb24gZnJvbSB0aGUgYHBldGVyc2VubGFiYCBwYWNrYWdlOiBodHRwczovL3Jlc2VhcmNoLWdpdC51aW93YS5lZHUvUGV0ZXJzZW5MYWIvcGV0ZXJzZW5sYWIvLS9ibG9iL21hc3Rlci9SL3Z3UmVnLlIKCiMjIyBBcmVhCgotIEFyZWEgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9hcmVhLWNoYXJ0Lmh0bWwKLSBTdGFja2VkIGFyZWEgY2hhcnQ6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9zdGFja2VkLWFyZWEtZ3JhcGguaHRtbAotIFN0cmVhbWdyYXBoOiBodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vc3RyZWFtZ3JhcGguaHRtbAoKIyMgQml2YXJpYXRlIEJhcnBsb3RzCgpVc2VkIGZvcjogYXNzb2NpYXRpb24gYmV0d2VlbiBvbmUgY2F0ZWdvcmljYWwgdmFyaWFibGUgYW5kIG9uZSBudW1lcmljIHZhcmlhYmxlIChvciBmb3IgZGVwaWN0aW5nIHRoZSBmcmVxdWVuY3kgb2YgY2F0ZWdvcmllcyBvZiBhIGNhdGVnb3JpY2FsIHZhcmlhYmxlKQoKIyMjIEdhbGxlcnkKCi0gQmFycGxvdDogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2JhcnBsb3QuaHRtbAotIExvbGxpcG9wIHBsb3Q6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9sb2xsaXBvcC1wbG90Lmh0bWwKCiMjIE11bHRpdmFyaWF0ZSBDb3JyZWxhdGlvbiBNYXRyaWNlcwoKVXNlZCBmb3I6IGFzc29jaWF0aW9uIGJldHdlZW4gbXVsdGlwbGUgbnVtZXJpYyB2YXJpYWJsZXMKCkZvciBjb3JyZWxhdGlvbiBtYXRyaWNlcywgSSBkbyB0aGUgZm9sbG93aW5nOgoKMS4gSSB1c2UgdGhlIGxhYidzIGBjb3IudGFibGUoKWAgZnVuY3Rpb24gKHdpdGggYHR5cGUgPSAibWFudXNjcmlwdCJgKSBmcm9tIHRoZSBgcGV0ZXJzZW5sYWJgIHBhY2thZ2UgdG8gY3JlYXRlIGEgY29ycmVsYXRpb24gbWF0cml4LgoxLiBJIHNhdmUgdGhlIGNvcnJlbGF0aW9uIG1hdHJpeCB0byBhIGAuY3N2YCBmaWxlLgogICAgYS4gRm9yIGV4YW1wbGU6IGh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9TUlMvU1JTLVNlbGZSZWd1bGF0aW9uRGV2ZWxvcG1lbnQvLS9ibG9iL21hc3Rlci9BbmFseXNlcy9zZWxmUmVndWxhdGlvbkRldmVsb3BtZW50LlJtZCNzZWxmLXJlZ3VsYXRpb24tbWVhc3VyZXMKMS4gSSBvcGVuIHRoZSAuY3N2IGZpbGUgaW4gRXhjZWwgYW5kIGNyZWF0ZSB0aGUgdGFibGUgaW4gRXhjZWwgdGhhdCBjYW4gYmUgY29waWVkIGFuZCBwYXN0ZWQgdG8gV29yZC9Qb3dlcnBvaW50L2V0Yy4KCiMjIyBDb3JyZWxvZ3JhbXMKCi0gYGNvcnJwbG90YCBwYWNrYWdlOiBodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy93ZWIvcGFja2FnZXMvY29ycnBsb3QvdmlnbmV0dGVzL2NvcnJwbG90LWludHJvLmh0bWwKLSBgY29ycmdyYW1gIHBhY2thZ2U6IGh0dHBzOi8vY3Jhbi5yLXByb2plY3Qub3JnL3dlYi9wYWNrYWdlcy9jb3JyZ3JhbS92aWduZXR0ZXMvY29ycmdyYW1fZXhhbXBsZXMuaHRtbAoKIyMjIyBHYWxsZXJ5CgpodHRwczovL3ItZ3JhcGgtZ2FsbGVyeS5jb20vY29ycmVsb2dyYW0uaHRtbAoKIyMjIFBhaXJzIHBhbmVscwoKYHBzeWNoYCBwYWNrYWdlOiBodHRwczovL3BlcnNvbmFsaXR5LXByb2plY3Qub3JnL3IvcHN5Y2gvaGVscC9wYWlycy5wYW5lbHMuaHRtbAoKSSBkZXBpY3QgZXhhbXBsZXMgb2YgY29ycmVsb2dyYW1zIGFuZCBwYWlycyBwYW5lbHMgaGVyZTogaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvZmFjdG9yLWFuYWx5c2lzLVBDQS5odG1sI2NvcnJlbGF0aW9ucwoKIyMgUGF0aCBEaWFncmFtcwoKVXNlZCBmb3I6IFNFTS9DRkEvcGF0aCBhbmFseXNpcwoKSWYgeW91IGFyZSBqdXN0IHRyeWluZyB0byB2aXN1YWxpemUgdGhlIHJlc3VsdHMgb2YgYSBTRU0gbW9kZWwgZml0dGVkIHVzaW5nIHRoZSBsYXZhYW4gcGFja2FnZSwgSSByZWNvbW1lbmQgdGhlIGBzZW1QbG90YCBwYWNrYWdlIChodHRwOi8vc2FjaGFlcHNrYW1wLmNvbS9zZW1QbG90L2V4YW1wbGVzKSBpbiBgUmAuCllvdSBjYW4gc2VlIGV4YW1wbGVzIG9mIG15IGltcGxlbWVudGF0aW9uIGhlcmU6IGh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI3BhdGgtZGlhZ3JhbS0xCgpJZiB5b3UgYXJlIHRyeWluZyB0byBjcmVhdGUgYSBmaWd1cmUgZm9yIGEgcGFwZXIgb3IgcG9zdGVyLCB5b3UgbWlnaHQgd2FudCBzb21ldGhpbmcgdGhhdCB5b3UgY2FuIGRyYXcgYW5kIGN1c3RvbWl6ZSB5b3Vyc2VsZi4KSSB1c2UgQWRvYmUgSWxsdXN0cmF0b3IgZm9yIGhhbmQtZHJhd24gZmlndXJlcy4KCllvdSBjYW4gbG9vayBhdCB2YXJpb3VzIG9wdGlvbnMgYmVsb3c6CgotIGBzZW1QbG90YCBwYWNrYWdlCi0gYEFkb2JlIElsbHVzdHJhdG9yYAotIGBPbnl4YDogaHR0cHM6Ly9vbnl4LXNlbS5jb20KLSBgeXdvcmtzYDogaHR0cHM6Ly93d3cueXdvcmtzLmNvbQotIGBNaWNyb3NvZnQgVmlzaW9gOiBodHRwczovL3d3dy5taWNyb3NvZnQuY29tL2VuLXVzL21pY3Jvc29mdC0zNjUvdmlzaW8vZmxvd2NoYXJ0LXNvZnR3YXJlCi0gYEFNT1NgCi0gYFdhcnBwbHNgCi0gYEdyYXBodml6YDogaHR0cHM6Ly9ncmFwaHZpei5vcmcKICAgIC0gaGFzIGFuIFIgcG9ydOKAlHRoaXMgaXMgd2hhdCB3ZSB1c2UgZm9yIG91ciBzdHVkeSBmbG93Y2hhcnQgdmlhIHRoZSBEaWFncmFtbWVSIHBhY2thZ2U6IGh0dHBzOi8vcmljaC1pYW5ub25lLmdpdGh1Yi5pby9EaWFncmFtbWVSL2luZGV4Lmh0bWwKLSBodHRwczovL2FwcC5kaWFncmFtcy5uZXQKLSBodHRwczovL2dpdGh1Yi5jb20vamdyYXBoL2RyYXdpby1kZXNrdG9wL3JlbGVhc2VzCgojIyBJbnRlcmFjdGl2ZQoKR2FsbGVyeTogaHR0cHM6Ly9yLWdyYXBoLWdhbGxlcnkuY29tL2ludGVyYWN0aXZlLWNoYXJ0cy5odG1sCgojIyBBbmltYXRpb24KCkdhbGxlcnk6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS9hbmltYXRpb24uaHRtbAoKIyMgM0QKCkdhbGxlcnk6IGh0dHBzOi8vci1ncmFwaC1nYWxsZXJ5LmNvbS8zZC5odG1sCgo=</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
