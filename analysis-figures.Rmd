@@ -510,3 +510,8 @@ Gallery: https://r-graph-gallery.com/animation.html
 
 Gallery: https://r-graph-gallery.com/3d.html
 
+# Session Info
+
+```{r}
+sessionInfo()
+```

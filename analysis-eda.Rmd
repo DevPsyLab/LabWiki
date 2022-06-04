@@ -275,3 +275,9 @@ multilevelRegressionModel <- lme(outcome ~ predictor + predictorOverplot, random
 allEffects(multilevelRegressionModel)
 plot(allEffects(multilevelRegressionModel))
 ```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
