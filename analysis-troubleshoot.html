@@ -458,12 +458,12 @@ div.tocify {
 <div id="load-libraries" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Load Libraries</h1>
 <pre class="r"><code>#library(&quot;petersenlab&quot;)
-library(&quot;car&quot;)
-library(&quot;vioplot&quot;)
-library(&quot;ellipse&quot;)
-library(&quot;nlme&quot;)
-library(&quot;effects&quot;)
-library(&quot;corrplot&quot;)
+#library(&quot;car&quot;)
+#library(&quot;vioplot&quot;)
+#library(&quot;ellipse&quot;)
+#library(&quot;nlme&quot;)
+#library(&quot;effects&quot;)
+#library(&quot;corrplot&quot;)
 library(&quot;ggplot2&quot;)
 library(&quot;psych&quot;)</code></pre>
 </div>
@@ -478,19 +478,12 @@ predictor &lt;- rbeta(n, 1.5, 5) * 100
 outcome &lt;- predictor + rnorm(n, mean = 0, sd = 20) + 50
 number &lt;- sample(1:1000, replace = TRUE)
 
-predictorOverplot &lt;- sample(1:50, n, replace = TRUE)
-outcomeOverplot &lt;- predictorOverplot + sample(1:75, n, replace = TRUE)
-
 df &lt;- data.frame(ID = ID,
                  predictor = predictor,
-                 outcome = outcome,
-                 predictorOverplot = predictorOverplot,
-                 outcomeOverplot = outcomeOverplot)
+                 outcome = outcome)
 
 df[sample(1:n, size = 10), &quot;predictor&quot;] &lt;- NA
-df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA
-df[sample(1:n, size = 10), &quot;predictorOverplot&quot;] &lt;- NA
-df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
+df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 </div>
 <div id="descriptive-statistics" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Descriptive statistics</h1>
@@ -565,7 +558,7 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 ## [91] tibble_3.1.7        cluster_2.1.3       ellipsis_0.3.2</code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKb3V0cHV0OiAKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93Ci0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGUgPSBGQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgZXJyb3IgPSBUUlVFKQpgYGAKCiMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KI2xpYnJhcnkoInBldGVyc2VubGFiIikKbGlicmFyeSgiY2FyIikKbGlicmFyeSgidmlvcGxvdCIpCmxpYnJhcnkoImVsbGlwc2UiKQpsaWJyYXJ5KCJubG1lIikKbGlicmFyeSgiZWZmZWN0cyIpCmxpYnJhcnkoImNvcnJwbG90IikKbGlicmFyeSgiZ2dwbG90MiIpCmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKbnVtYmVyIDwtIHNhbXBsZSgxOjEwMDAsIHJlcGxhY2UgPSBUUlVFKQoKcHJlZGljdG9yT3ZlcnBsb3QgPC0gc2FtcGxlKDE6NTAsIG4sIHJlcGxhY2UgPSBUUlVFKQpvdXRjb21lT3ZlcnBsb3QgPC0gcHJlZGljdG9yT3ZlcnBsb3QgKyBzYW1wbGUoMTo3NSwgbiwgcmVwbGFjZSA9IFRSVUUpCgpkZiA8LSBkYXRhLmZyYW1lKElEID0gSUQsCiAgICAgICAgICAgICAgICAgcHJlZGljdG9yID0gcHJlZGljdG9yLAogICAgICAgICAgICAgICAgIG91dGNvbWUgPSBvdXRjb21lLAogICAgICAgICAgICAgICAgIHByZWRpY3Rvck92ZXJwbG90ID0gcHJlZGljdG9yT3ZlcnBsb3QsCiAgICAgICAgICAgICAgICAgb3V0Y29tZU92ZXJwbG90ID0gb3V0Y29tZU92ZXJwbG90KQoKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3RvciJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJvdXRjb21lIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3Rvck92ZXJwbG90Il0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWVPdmVycGxvdCJdIDwtIE5BCmBgYAoKIyBEZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCgpgYGB7cn0KY2xhc3MoZGYpCnBzeWNoOjpkZXNjcmliZShkZiRvdXRjb21lKQp0cmFjZWJhY2soKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKb3V0cHV0OiAKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93Ci0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGUgPSBGQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgZXJyb3IgPSBUUlVFKQpgYGAKCiMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KI2xpYnJhcnkoInBldGVyc2VubGFiIikKI2xpYnJhcnkoImNhciIpCiNsaWJyYXJ5KCJ2aW9wbG90IikKI2xpYnJhcnkoImVsbGlwc2UiKQojbGlicmFyeSgibmxtZSIpCiNsaWJyYXJ5KCJlZmZlY3RzIikKI2xpYnJhcnkoImNvcnJwbG90IikKbGlicmFyeSgiZ2dwbG90MiIpCmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKbnVtYmVyIDwtIHNhbXBsZSgxOjEwMDAsIHJlcGxhY2UgPSBUUlVFKQoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3IiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAib3V0Y29tZSJdIDwtIE5BCmBgYAoKIyBEZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCgpgYGB7cn0KY2xhc3MoZGYpCnBzeWNoOjpkZXNjcmliZShkZiRvdXRjb21lKQp0cmFjZWJhY2soKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
