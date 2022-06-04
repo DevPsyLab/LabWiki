@@ -16,14 +16,6 @@ knitr::opts_chunk$set(echo = TRUE,
 #remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")
 ```
 
-# Unload Libraries
-
-```{r}
-detach("ggplot2", unload = TRUE)
-detach("plyr", unload = TRUE)
-detach("reshape", unload = TRUE)
-```
-
 # Load Libraries
 
 ```{r}
@@ -40,7 +32,6 @@ n <- 1000
 ID <- rep(1:100, each = 10)
 predictor <- rbeta(n, 1.5, 5) * 100
 outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
-number <- sample(1:1000, replace = TRUE)
 
 df <- data.frame(ID = ID,
                  predictor = predictor,
