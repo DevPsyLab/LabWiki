@@ -35,6 +35,10 @@ jobs:
 
       - name: Install package dependencies
         uses: r-lib/actions/setup-r-dependencies@v2 # update
+      
+      - name: Install remote packages
+        run: |
+         Rscript -e 'remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")'
 
       - name: Render blog
         run: Rscript -e 'rmarkdown::render_site()'

@@ -13,7 +13,61 @@ Important for understanding data, checking for data issues/errors, checking assu
 
 LOOK AT YOUR DATA—most overlooked step in data analysis!
 
+# Preamble
+
+## Install Libraries
+
+```{r}
+#install.packages("remotes")
+#remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")
+```
+
+## Load Libraries
+
+```{r, message = FALSE, warning = FALSE}
+library("petersenlab")
+library("psych")
+library("car")
+library("vioplot")
+library("ellipse")
+library("nlme")
+library("effects")
+library("corrplot")
+library("ggplot2")
+```
+
+# Simulate Data
+
+```{r}
+set.seed(52242)
+
+n <- 1000
+
+ID <- rep(1:100, each = 10)
+predictor <- rbeta(n, 1.5, 5) * 100
+outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
+number <- sample(1:1000, replace = TRUE)
+
+predictorOverplot <- sample(1:50, n, replace = TRUE)
+outcomeOverplot <- predictorOverplot + sample(1:75, n, replace = TRUE)
+
+df <- data.frame(ID = ID,
+                 predictor = predictor,
+                 outcome = outcome,
+                 predictorOverplot = predictorOverplot,
+                 outcomeOverplot = outcomeOverplot)
+
+df[sample(1:n, size = 10), "predictor"] <- NA
+df[sample(1:n, size = 10), "outcome"] <- NA
+df[sample(1:n, size = 10), "predictorOverplot"] <- NA
+df[sample(1:n, size = 10), "outcomeOverplot"] <- NA
+```
+
 # Descriptive statistics
+
+```{r}
+describe(df$outcome)
+```
 
 ## Sample
 
@@ -37,14 +91,112 @@ LOOK AT YOUR DATA—most overlooked step in data analysis!
 - Skewness
 - Kurtosis
 
-## Plots
+## Distribution Plots
 
 See [here](analysis-figures.html) for resources for creating figures in R.
 
-- Histogram
-- Density plot
-- Box and whisker plot
-- Violin plot
+### Histogram
+
+#### Base R
+
+```{r}
+hist(df$outcome)
+```
+
+#### `ggplot2`
+
+```{r}
+ggplot(df, aes(x = outcome)) +
+  geom_histogram(color = 1)
+```
+
+### Histogram overlaid with density plot and rug plot
+
+#### Base R
+
+```{r}
+hist(df$outcome, prob = TRUE)
+lines(density(df$outcome, na.rm = TRUE))
+rug(df$outcome)
+```
+
+#### `ggplot2`
+
+```{r}
+ggplot(df, aes(x = outcome)) +
+  geom_histogram(aes(y = ..density..), color = 1) +
+  geom_density() +
+  geom_rug()
+```
+
+### Density Plot
+
+#### Base R
+
+```{r}
+plot(density(df$outcome, na.rm = TRUE))
+```
+
+#### `ggplot2`
+
+```{r}
+ggplot(df, aes(x = outcome)) +
+  geom_density()
+```
+
+### Box and whisker plot (boxplot)
+
+#### Base R
+
+```{r}
+boxplot(df$outcome, horizontal = TRUE)
+```
+
+#### `ggplot2`
+
+```{r}
+ggplot(df, aes(x = outcome)) +
+  geom_boxplot()
+```
+### Violin plot
+
+#### Base R
+
+```{r}
+vioplot(na.omit(df$outcome), horizontal = TRUE)
+```
+
+#### `ggplot2`
+
+```{r}
+ggplot(df, aes(x = "", y = outcome)) +
+  geom_violin()
+```
+
+# Bivariate Associations
+
+## High Density Scatterplot
+
+```{r}
+ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) + 
+  geom_point(position = "jitter", alpha = 0.3) + 
+  geom_density2d()
+
+smoothScatter(df$predictorOverplot, df$outcomeOverplot)
+```
+
+## Data Ellipse
+
+```{r}
+df_nomissing <- na.omit(df[,c("predictor","outcome")])
+dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))
+```
+
+## Visually Weighted Regression
+
+```{r, message = FALSE, results = "hide"}
+vwReg(outcome ~ predictor, data = df)
+```
 
 # Basic inferential statistics
 
@@ -60,4 +212,66 @@ See [here](analysis-figures.html) for resources for creating figures in R.
     - Whether longitudinal attrition is greater in lower SES families
 - If missingness differs systematically as a function of other variables, can include that variable as a control variable in models, and/or can include that variable in multiple imputation to inform imputed scores for missing values
 
-## Correlation matrices
+## Multivariate Associations
+
+### Correlation Matrix
+
+#### Pearson Correlations
+
+```{r}
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")])
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], type = "manuscript")
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], type = "manuscriptBig")
+```
+
+#### Spearman Correlations
+
+```{r}
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], correlation = "spearman")
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], type = "manuscript", correlation = "spearman")
+cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], type = "manuscriptBig", correlation = "spearman")
+```
+
+#### Partial Correlations
+
+```{r}
+partialcor.table(df[,c("predictor","outcome","predictorOverplot")], z = df[,c("outcomeOverplot")])
+partialcor.table(df[,c("predictor","outcome","predictorOverplot")], z = df[,c("outcomeOverplot")], type = "manuscript")
+partialcor.table(df[,c("predictor","outcome","predictorOverplot")], z = df[,c("outcomeOverplot")], type = "manuscriptBig")
+```
+
+### Correlogram
+
+```{r}
+corrplot(cor(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], use = "pairwise.complete.obs"))
+```
+
+### Scatterplot matrix
+
+```{r}
+scatterplotMatrix(~ predictor + outcome + predictorOverplot + outcomeOverplot, data = df, use = "pairwise.complete.obs")
+```
+
+### Pairs panels
+
+```{r}
+pairs.panels(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")])
+```
+
+## Effect Plots
+
+### Multiple Regression Model
+
+```{r}
+multipleRegressionModel <- lm(outcome ~ predictor + predictorOverplot, data = df, na.action = "na.exclude")
+allEffects(multipleRegressionModel)
+plot(allEffects(multipleRegressionModel))
+```
+
+### Multilevel Regression Model
+
+```{r}
+multilevelRegressionModel <- lme(outcome ~ predictor + predictorOverplot, random = ~ 1|ID, method = "ML", data = df, na.action = "na.exclude")
+allEffects(multilevelRegressionModel)
+plot(allEffects(multilevelRegressionModel))
+```

@@ -3,4 +3,13 @@ Title: LabWiki
 Version: 1.0.0
 Imports:
   rmarkdown,
-  blogdown
+  blogdown,
+  psych,
+  car,
+  vioplot,
+  ellipse,
+  nlme,
+  effects,
+  corrplot,
+  ggplot2,
+  remotes
