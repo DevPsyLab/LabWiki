@@ -473,11 +473,7 @@ library(&quot;nlme&quot;)
 library(&quot;effects&quot;)
 library(&quot;corrplot&quot;)
 library(&quot;ggplot2&quot;)
-unloadNamespace(&quot;Hmisc&quot;)</code></pre>
-<pre><code>## Error in unloadNamespace(&quot;Hmisc&quot;): namespace &#39;Hmisc&#39; is imported by &#39;petersenlab&#39; so cannot be unloaded</code></pre>
-<pre class="r"><code>detach(&quot;package:Hmisc&quot;, unload = TRUE)</code></pre>
-<pre><code>## Error in detach(&quot;package:Hmisc&quot;, unload = TRUE): invalid &#39;name&#39; argument</code></pre>
-<pre class="r"><code>library(&quot;psych&quot;)</code></pre>
+library(&quot;psych&quot;)</code></pre>
 </div>
 </div>
 <div id="simulate-data" class="section level1" number="3">
@@ -547,7 +543,7 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 <div id="base-r" class="section level4" number="4.5.1.1">
 <h4><span class="header-section-number">4.5.1.1</span> Base R</h4>
 <pre class="r"><code>hist(df$outcome)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="ggplot2" class="section level4" number="4.5.1.2">
 <h4><span class="header-section-number">4.5.1.2</span> <code>ggplot2</code></h4>
@@ -555,7 +551,7 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
   geom_histogram(color = 1)</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 </div>
 <div id="histogram-overlaid-with-density-plot-and-rug-plot" class="section level3" number="4.5.2">
@@ -565,7 +561,7 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 <pre class="r"><code>hist(df$outcome, prob = TRUE)
 lines(density(df$outcome, na.rm = TRUE))
 rug(df$outcome)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-1" class="section level4" number="4.5.2.2">
 <h4><span class="header-section-number">4.5.2.2</span> <code>ggplot2</code></h4>
@@ -576,7 +572,7 @@ rug(df$outcome)</code></pre>
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 </div>
 <div id="density-plot" class="section level3" number="4.5.3">
@@ -584,14 +580,14 @@ rug(df$outcome)</code></pre>
 <div id="base-r-2" class="section level4" number="4.5.3.1">
 <h4><span class="header-section-number">4.5.3.1</span> Base R</h4>
 <pre class="r"><code>plot(density(df$outcome, na.rm = TRUE))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-2" class="section level4" number="4.5.3.2">
 <h4><span class="header-section-number">4.5.3.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = outcome)) +
   geom_density()</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 </div>
 <div id="box-and-whisker-plot-boxplot" class="section level3" number="4.5.4">
@@ -599,26 +595,26 @@ rug(df$outcome)</code></pre>
 <div id="base-r-3" class="section level4" number="4.5.4.1">
 <h4><span class="header-section-number">4.5.4.1</span> Base R</h4>
 <pre class="r"><code>boxplot(df$outcome, horizontal = TRUE)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-3" class="section level4" number="4.5.4.2">
 <h4><span class="header-section-number">4.5.4.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = outcome)) +
   geom_boxplot()</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_boxplot).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-12-1.png" width="672" /> ### Violin plot</p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-14-1.png" width="672" /> ### Violin plot</p>
 </div>
 <div id="base-r-4" class="section level4" number="4.5.4.3">
 <h4><span class="header-section-number">4.5.4.3</span> Base R</h4>
 <pre class="r"><code>vioplot(na.omit(df$outcome), horizontal = TRUE)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-4" class="section level4" number="4.5.4.4">
 <h4><span class="header-section-number">4.5.4.4</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = &quot;&quot;, y = outcome)) +
   geom_violin()</code></pre>
 <pre><code>## Warning: Removed 10 rows containing non-finite values (stat_ydensity).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -632,20 +628,20 @@ rug(df$outcome)</code></pre>
   geom_density2d()</code></pre>
 <pre><code>## Warning: Removed 20 rows containing non-finite values (stat_density2d).</code></pre>
 <pre><code>## Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <pre class="r"><code>smoothScatter(df$predictorOverplot, df$outcomeOverplot)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-17-2.png" width="672" /></p>
 </div>
 <div id="data-ellipse" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Data Ellipse</h2>
 <pre class="r"><code>df_nomissing &lt;- na.omit(df[,c(&quot;predictor&quot;,&quot;outcome&quot;)])
 dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="visually-weighted-regression" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Visually Weighted Regression</h2>
 <pre class="r"><code>vwReg(outcome ~ predictor, data = df)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 </div>
 <div id="basic-inferential-statistics" class="section level1" number="6">
@@ -759,17 +755,17 @@ dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))<
 <div id="correlogram" class="section level3" number="6.3.2">
 <h3><span class="header-section-number">6.3.2</span> Correlogram</h3>
 <pre class="r"><code>corrplot(cor(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], use = &quot;pairwise.complete.obs&quot;))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 </div>
 <div id="scatterplot-matrix" class="section level3" number="6.3.3">
 <h3><span class="header-section-number">6.3.3</span> Scatterplot matrix</h3>
 <pre class="r"><code>scatterplotMatrix(~ predictor + outcome + predictorOverplot + outcomeOverplot, data = df, use = &quot;pairwise.complete.obs&quot;)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 </div>
 <div id="pairs-panels" class="section level3" number="6.3.4">
 <h3><span class="header-section-number">6.3.4</span> Pairs panels</h3>
 <pre class="r"><code>pairs.panels(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)])</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 </div>
 </div>
 <div id="effect-plots" class="section level2" number="6.4">
@@ -790,7 +786,7 @@ allEffects(multipleRegressionModel)</code></pre>
 ##        1       10       30       40       50 
 ## 72.81957 73.01843 73.46034 73.68130 73.90226</code></pre>
 <pre class="r"><code>plot(allEffects(multipleRegressionModel))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 </div>
 <div id="multilevel-regression-model" class="section level3" number="6.4.2">
 <h3><span class="header-section-number">6.4.2</span> Multilevel Regression Model</h3>
@@ -808,7 +804,7 @@ allEffects(multilevelRegressionModel)</code></pre>
 ##        1       10       30       40       50 
 ## 72.81957 73.01843 73.46034 73.68130 73.90226</code></pre>
 <pre class="r"><code>plot(allEffects(multilevelRegressionModel))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -833,10 +829,10 @@ allEffects(multilevelRegressionModel)</code></pre>
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] psych_2.2.5            ggplot2_3.3.6          corrplot_0.92         
-##  [4] effects_4.2-1          nlme_3.1-157           ellipse_0.4.3         
-##  [7] vioplot_0.3.7          zoo_1.8-10             sm_2.2-5.7            
-## [10] car_3.0-13             carData_3.0-5          petersenlab_0.1.2-9006
+##  [1] petersenlab_0.1.2-9006 psych_2.2.5            ggplot2_3.3.6         
+##  [4] corrplot_0.92          effects_4.2-1          nlme_3.1-157          
+##  [7] ellipse_0.4.3          vioplot_0.3.7          zoo_1.8-10            
+## [10] sm_2.2-5.7             car_3.0-13             carData_3.0-5         
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] insight_0.17.1      RColorBrewer_1.1-3  tools_4.2.0        
@@ -872,7 +868,7 @@ allEffects(multilevelRegressionModel)</code></pre>
 ## [91] ellipsis_0.3.2</code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBSYXRpb25hbGUKCkltcG9ydGFudCBmb3IgdW5kZXJzdGFuZGluZyBkYXRhLCBjaGVja2luZyBmb3IgZGF0YSBpc3N1ZXMvZXJyb3JzLCBjaGVja2luZyBhc3N1bXB0aW9ucyBmb3IgZGlmZmVyZW50IHN0YXRpc3RpY2FsIG1vZGVscy4KCkxPT0sgQVQgWU9VUiBEQVRB4oCUbW9zdCBvdmVybG9va2VkIHN0ZXAgaW4gZGF0YSBhbmFseXNpcyEKCiMgUHJlYW1ibGUKCiMjIEluc3RhbGwgTGlicmFyaWVzCgpgYGB7cn0KI2luc3RhbGwucGFja2FnZXMoInJlbW90ZXMiKQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMjIExvYWQgTGlicmFyaWVzCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFLCB3YXJuaW5nID0gRkFMU0V9CmxpYnJhcnkoInBldGVyc2VubGFiIikKbGlicmFyeSgiY2FyIikKbGlicmFyeSgidmlvcGxvdCIpCmxpYnJhcnkoImVsbGlwc2UiKQpsaWJyYXJ5KCJubG1lIikKbGlicmFyeSgiZWZmZWN0cyIpCmxpYnJhcnkoImNvcnJwbG90IikKbGlicmFyeSgiZ2dwbG90MiIpCnVubG9hZE5hbWVzcGFjZSgiSG1pc2MiKQpkZXRhY2goInBhY2thZ2U6SG1pc2MiLCB1bmxvYWQgPSBUUlVFKQpsaWJyYXJ5KCJwc3ljaCIpCmBgYAoKIyBTaW11bGF0ZSBEYXRhCgpgYGB7cn0Kc2V0LnNlZWQoNTIyNDIpCgpuIDwtIDEwMDAKCklEIDwtIHJlcCgxOjEwMCwgZWFjaCA9IDEwKQpwcmVkaWN0b3IgPC0gcmJldGEobiwgMS41LCA1KSAqIDEwMApvdXRjb21lIDwtIHByZWRpY3RvciArIHJub3JtKG4sIG1lYW4gPSAwLCBzZCA9IDIwKSArIDUwCm51bWJlciA8LSBzYW1wbGUoMToxMDAwLCByZXBsYWNlID0gVFJVRSkKCnByZWRpY3Rvck92ZXJwbG90IDwtIHNhbXBsZSgxOjUwLCBuLCByZXBsYWNlID0gVFJVRSkKb3V0Y29tZU92ZXJwbG90IDwtIHByZWRpY3Rvck92ZXJwbG90ICsgc2FtcGxlKDE6NzUsIG4sIHJlcGxhY2UgPSBUUlVFKQoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSwKICAgICAgICAgICAgICAgICBwcmVkaWN0b3JPdmVycGxvdCA9IHByZWRpY3Rvck92ZXJwbG90LAogICAgICAgICAgICAgICAgIG91dGNvbWVPdmVycGxvdCA9IG91dGNvbWVPdmVycGxvdCkKCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3IiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAib3V0Y29tZSJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJwcmVkaWN0b3JPdmVycGxvdCJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJvdXRjb21lT3ZlcnBsb3QiXSA8LSBOQQpgYGAKCiMgRGVzY3JpcHRpdmUgc3RhdGlzdGljcwoKYGBge3J9CnBzeWNoOjpkZXNjcmliZShkZikKYGBgCgojIyBTYW1wbGUKCi0gTuKAlGV4cGVjdGVkPwotIEV4dGVudCBvZiBtaXNzaW5nbmVzcwoKIyMgRGlzdHJpYnV0aW9uCgotIEZyZXF1ZW5jaWVzCgojIyBDZW50cmFsIFRlbmRlbmN5CgotIE1lYW4KLSBNZWRpYW4KLSBNb2RlCgojIyBEaXNwZXJzaW9uCgotIFN0YW5kYXJkIGRldmlhdGlvbgotIE9ic2VydmVkIG1pbmltdW0gYW5kIG1heGltdW0gKHZpcy3DoC12aXMgcG9zc2libGUgbWluaW11bSBhbmQgbWF4aW11bSkKLSBTa2V3bmVzcwotIEt1cnRvc2lzCgojIyBEaXN0cmlidXRpb24gUGxvdHMKClNlZSBbaGVyZV0oYW5hbHlzaXMtZmlndXJlcy5odG1sKSBmb3IgcmVzb3VyY2VzIGZvciBjcmVhdGluZyBmaWd1cmVzIGluIFIuCgojIyMgSGlzdG9ncmFtCgojIyMjIEJhc2UgUgoKYGBge3J9Cmhpc3QoZGYkb3V0Y29tZSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21faGlzdG9ncmFtKGNvbG9yID0gMSkKYGBgCgojIyMgSGlzdG9ncmFtIG92ZXJsYWlkIHdpdGggZGVuc2l0eSBwbG90IGFuZCBydWcgcGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQpoaXN0KGRmJG91dGNvbWUsIHByb2IgPSBUUlVFKQpsaW5lcyhkZW5zaXR5KGRmJG91dGNvbWUsIG5hLnJtID0gVFJVRSkpCnJ1ZyhkZiRvdXRjb21lKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9oaXN0b2dyYW0oYWVzKHkgPSAuLmRlbnNpdHkuLiksIGNvbG9yID0gMSkgKwogIGdlb21fZGVuc2l0eSgpICsKICBnZW9tX3J1ZygpCmBgYAoKIyMjIERlbnNpdHkgUGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQpwbG90KGRlbnNpdHkoZGYkb3V0Y29tZSwgbmEucm0gPSBUUlVFKSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21fZGVuc2l0eSgpCmBgYAoKIyMjIEJveCBhbmQgd2hpc2tlciBwbG90IChib3hwbG90KQoKIyMjIyBCYXNlIFIKCmBgYHtyfQpib3hwbG90KGRmJG91dGNvbWUsIGhvcml6b250YWwgPSBUUlVFKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9ib3hwbG90KCkKYGBgCiMjIyBWaW9saW4gcGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQp2aW9wbG90KG5hLm9taXQoZGYkb3V0Y29tZSksIGhvcml6b250YWwgPSBUUlVFKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9ICIiLCB5ID0gb3V0Y29tZSkpICsKICBnZW9tX3Zpb2xpbigpCmBgYAoKIyBCaXZhcmlhdGUgQXNzb2NpYXRpb25zCgojIyBIaWdoIERlbnNpdHkgU2NhdHRlcnBsb3QKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yT3ZlcnBsb3QsIHkgPSBvdXRjb21lT3ZlcnBsb3QpKSArIAogIGdlb21fcG9pbnQocG9zaXRpb24gPSAiaml0dGVyIiwgYWxwaGEgPSAwLjMpICsgCiAgZ2VvbV9kZW5zaXR5MmQoKQoKc21vb3RoU2NhdHRlcihkZiRwcmVkaWN0b3JPdmVycGxvdCwgZGYkb3V0Y29tZU92ZXJwbG90KQpgYGAKCiMjIERhdGEgRWxsaXBzZQoKYGBge3J9CmRmX25vbWlzc2luZyA8LSBuYS5vbWl0KGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIildKQpkYXRhRWxsaXBzZShkZl9ub21pc3NpbmckcHJlZGljdG9yLCBkZl9ub21pc3Npbmckb3V0Y29tZSwgbGV2ZWxzID0gYygwLjUsIC45NSkpCmBgYAoKIyMgVmlzdWFsbHkgV2VpZ2h0ZWQgUmVncmVzc2lvbgoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgcmVzdWx0cyA9ICJoaWRlIn0KdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmKQpgYGAKCiMgQmFzaWMgaW5mZXJlbnRpYWwgc3RhdGlzdGljcwoKIyMgU3RhdGlzdGljYWwgZGVjaXNpb24gdHJlZQoKIyMgVGVzdHMgb2Ygc3lzdGVtYXRpYyBtaXNzaW5nbmVzcyAoaS5lLiwgd2hldGhlciBtaXNzaW5nbmVzcyBvbiBhIHZhcmlhYmxlIGRlcGVuZHMgb24gb3RoZXIgdmFyaWFibGVzKQoKLSBHZW5lcmFsbHkgdGVzdDoKICAgIC0gV2hldGhlciBvdXRjb21lIHZhcmlhYmxlKHMpIGRpZmZlciBhcyBhIGZ1bmN0aW9uIG9mIGFueSBtb2RlbCB2YXJpYWJsZXMgKHByZWRpY3RvcnMgYW5kIGNvdmFyaWF0ZXMpIGFuZCBhcyBhIGZ1bmN0aW9uIG9mIGFueSBrZXkgZGVtb2dyYXBoaWMgY2hhcmFjdGVyaXN0aWNzIChzZXgsIGV0aG5pY2l0eSwgU0VTKQogICAgLSBXaGV0aGVyIGZvY2FsIHByZWRpY3RvciB2YXJpYWJsZShzKSBkaWZmZXIgYXMgYSBmdW5jdGlvbiBvZiBhbnkgbW9kZWwgdmFyaWFibGVzIChpbmNsdWRpbmcgb3V0Y29tZSB2YXJpYWJsZSkgYW5kIGFzIGEgZnVuY3Rpb24gb2YgYW55IGtleSBkZW1vZ3JhcGhpYyBjaGFyYWN0ZXJpc3RpY3MKLSBGb3IgaW5zdGFuY2U6CiAgICAtIFdoZXRoZXIgbWFsZXMgYXJlIG1vcmUgbGlrZWx5IHRoYW4gZ2lybHMgdG8gYmUgbWlzc2luZyBFRUcgc2NvcmVzCiAgICAtIFdoZXRoZXIgbG9uZ2l0dWRpbmFsIGF0dHJpdGlvbiBpcyBncmVhdGVyIGluIGxvd2VyIFNFUyBmYW1pbGllcwotIElmIG1pc3NpbmduZXNzIGRpZmZlcnMgc3lzdGVtYXRpY2FsbHkgYXMgYSBmdW5jdGlvbiBvZiBvdGhlciB2YXJpYWJsZXMsIGNhbiBpbmNsdWRlIHRoYXQgdmFyaWFibGUgYXMgYSBjb250cm9sIHZhcmlhYmxlIGluIG1vZGVscywgYW5kL29yIGNhbiBpbmNsdWRlIHRoYXQgdmFyaWFibGUgaW4gbXVsdGlwbGUgaW1wdXRhdGlvbiB0byBpbmZvcm0gaW1wdXRlZCBzY29yZXMgZm9yIG1pc3NpbmcgdmFsdWVzCgojIyBNdWx0aXZhcmlhdGUgQXNzb2NpYXRpb25zCgojIyMgQ29ycmVsYXRpb24gTWF0cml4CgojIyMjIFBlYXJzb24gQ29ycmVsYXRpb25zCgpgYGB7cn0KY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0pCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0QmlnIikKYGBgCgojIyMjIFNwZWFybWFuIENvcnJlbGF0aW9ucwoKYGBge3J9CmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHRCaWciLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmBgYAoKIyMjIyBQYXJ0aWFsIENvcnJlbGF0aW9ucwoKYGBge3J9CnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0pCnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdCIpCnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdEJpZyIpCmBgYAoKIyMjIENvcnJlbG9ncmFtCgpgYGB7cn0KY29ycnBsb3QoY29yKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0sIHVzZSA9ICJwYWlyd2lzZS5jb21wbGV0ZS5vYnMiKSkKYGBgCgojIyMgU2NhdHRlcnBsb3QgbWF0cml4CgpgYGB7cn0Kc2NhdHRlcnBsb3RNYXRyaXgofiBwcmVkaWN0b3IgKyBvdXRjb21lICsgcHJlZGljdG9yT3ZlcnBsb3QgKyBvdXRjb21lT3ZlcnBsb3QsIGRhdGEgPSBkZiwgdXNlID0gInBhaXJ3aXNlLmNvbXBsZXRlLm9icyIpCmBgYAoKIyMjIFBhaXJzIHBhbmVscwoKYGBge3J9CnBhaXJzLnBhbmVscyhkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildKQpgYGAKCiMjIEVmZmVjdCBQbG90cwoKIyMjIE11bHRpcGxlIFJlZ3Jlc3Npb24gTW9kZWwKCmBgYHtyfQptdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbCA8LSBsbShvdXRjb21lIH4gcHJlZGljdG9yICsgcHJlZGljdG9yT3ZlcnBsb3QsIGRhdGEgPSBkZiwgbmEuYWN0aW9uID0gIm5hLmV4Y2x1ZGUiKQphbGxFZmZlY3RzKG11bHRpcGxlUmVncmVzc2lvbk1vZGVsKQpwbG90KGFsbEVmZmVjdHMobXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwpKQpgYGAKCiMjIyBNdWx0aWxldmVsIFJlZ3Jlc3Npb24gTW9kZWwKCmBgYHtyfQptdWx0aWxldmVsUmVncmVzc2lvbk1vZGVsIDwtIGxtZShvdXRjb21lIH4gcHJlZGljdG9yICsgcHJlZGljdG9yT3ZlcnBsb3QsIHJhbmRvbSA9IH4gMXxJRCwgbWV0aG9kID0gIk1MIiwgZGF0YSA9IGRmLCBuYS5hY3Rpb24gPSAibmEuZXhjbHVkZSIpCmFsbEVmZmVjdHMobXVsdGlsZXZlbFJlZ3Jlc3Npb25Nb2RlbCkKcGxvdChhbGxFZmZlY3RzKG11bHRpbGV2ZWxSZWdyZXNzaW9uTW9kZWwpKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBSYXRpb25hbGUKCkltcG9ydGFudCBmb3IgdW5kZXJzdGFuZGluZyBkYXRhLCBjaGVja2luZyBmb3IgZGF0YSBpc3N1ZXMvZXJyb3JzLCBjaGVja2luZyBhc3N1bXB0aW9ucyBmb3IgZGlmZmVyZW50IHN0YXRpc3RpY2FsIG1vZGVscy4KCkxPT0sgQVQgWU9VUiBEQVRB4oCUbW9zdCBvdmVybG9va2VkIHN0ZXAgaW4gZGF0YSBhbmFseXNpcyEKCiMgUHJlYW1ibGUKCiMjIEluc3RhbGwgTGlicmFyaWVzCgpgYGB7cn0KI2luc3RhbGwucGFja2FnZXMoInJlbW90ZXMiKQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMjIExvYWQgTGlicmFyaWVzCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFLCB3YXJuaW5nID0gRkFMU0V9CmxpYnJhcnkoInBldGVyc2VubGFiIikKbGlicmFyeSgiY2FyIikKbGlicmFyeSgidmlvcGxvdCIpCmxpYnJhcnkoImVsbGlwc2UiKQpsaWJyYXJ5KCJubG1lIikKbGlicmFyeSgiZWZmZWN0cyIpCmxpYnJhcnkoImNvcnJwbG90IikKbGlicmFyeSgiZ2dwbG90MiIpCmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKbnVtYmVyIDwtIHNhbXBsZSgxOjEwMDAsIHJlcGxhY2UgPSBUUlVFKQoKcHJlZGljdG9yT3ZlcnBsb3QgPC0gc2FtcGxlKDE6NTAsIG4sIHJlcGxhY2UgPSBUUlVFKQpvdXRjb21lT3ZlcnBsb3QgPC0gcHJlZGljdG9yT3ZlcnBsb3QgKyBzYW1wbGUoMTo3NSwgbiwgcmVwbGFjZSA9IFRSVUUpCgpkZiA8LSBkYXRhLmZyYW1lKElEID0gSUQsCiAgICAgICAgICAgICAgICAgcHJlZGljdG9yID0gcHJlZGljdG9yLAogICAgICAgICAgICAgICAgIG91dGNvbWUgPSBvdXRjb21lLAogICAgICAgICAgICAgICAgIHByZWRpY3Rvck92ZXJwbG90ID0gcHJlZGljdG9yT3ZlcnBsb3QsCiAgICAgICAgICAgICAgICAgb3V0Y29tZU92ZXJwbG90ID0gb3V0Y29tZU92ZXJwbG90KQoKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3RvciJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJvdXRjb21lIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3Rvck92ZXJwbG90Il0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWVPdmVycGxvdCJdIDwtIE5BCmBgYAoKIyBEZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCgpgYGB7ciwgaW5jbHVkZSA9IEZBTFNFfQpkZXRhY2goInBhY2thZ2U6cGV0ZXJzZW5sYWIiLCB1bmxvYWQgPSBUUlVFKQp1bmxvYWROYW1lc3BhY2UoIkhtaXNjIikKYGBgCgpgYGB7cn0KcHN5Y2g6OmRlc2NyaWJlKGRmKQpgYGAKCmBgYHtyLCBpbmNsdWRlID0gRkFMU0V9CmxpYnJhcnkoInBldGVyc2VubGFiIikKYGBgCgojIyBTYW1wbGUKCi0gTuKAlGV4cGVjdGVkPwotIEV4dGVudCBvZiBtaXNzaW5nbmVzcwoKIyMgRGlzdHJpYnV0aW9uCgotIEZyZXF1ZW5jaWVzCgojIyBDZW50cmFsIFRlbmRlbmN5CgotIE1lYW4KLSBNZWRpYW4KLSBNb2RlCgojIyBEaXNwZXJzaW9uCgotIFN0YW5kYXJkIGRldmlhdGlvbgotIE9ic2VydmVkIG1pbmltdW0gYW5kIG1heGltdW0gKHZpcy3DoC12aXMgcG9zc2libGUgbWluaW11bSBhbmQgbWF4aW11bSkKLSBTa2V3bmVzcwotIEt1cnRvc2lzCgojIyBEaXN0cmlidXRpb24gUGxvdHMKClNlZSBbaGVyZV0oYW5hbHlzaXMtZmlndXJlcy5odG1sKSBmb3IgcmVzb3VyY2VzIGZvciBjcmVhdGluZyBmaWd1cmVzIGluIFIuCgojIyMgSGlzdG9ncmFtCgojIyMjIEJhc2UgUgoKYGBge3J9Cmhpc3QoZGYkb3V0Y29tZSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21faGlzdG9ncmFtKGNvbG9yID0gMSkKYGBgCgojIyMgSGlzdG9ncmFtIG92ZXJsYWlkIHdpdGggZGVuc2l0eSBwbG90IGFuZCBydWcgcGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQpoaXN0KGRmJG91dGNvbWUsIHByb2IgPSBUUlVFKQpsaW5lcyhkZW5zaXR5KGRmJG91dGNvbWUsIG5hLnJtID0gVFJVRSkpCnJ1ZyhkZiRvdXRjb21lKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9oaXN0b2dyYW0oYWVzKHkgPSAuLmRlbnNpdHkuLiksIGNvbG9yID0gMSkgKwogIGdlb21fZGVuc2l0eSgpICsKICBnZW9tX3J1ZygpCmBgYAoKIyMjIERlbnNpdHkgUGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQpwbG90KGRlbnNpdHkoZGYkb3V0Y29tZSwgbmEucm0gPSBUUlVFKSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21fZGVuc2l0eSgpCmBgYAoKIyMjIEJveCBhbmQgd2hpc2tlciBwbG90IChib3hwbG90KQoKIyMjIyBCYXNlIFIKCmBgYHtyfQpib3hwbG90KGRmJG91dGNvbWUsIGhvcml6b250YWwgPSBUUlVFKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9ib3hwbG90KCkKYGBgCiMjIyBWaW9saW4gcGxvdAoKIyMjIyBCYXNlIFIKCmBgYHtyfQp2aW9wbG90KG5hLm9taXQoZGYkb3V0Y29tZSksIGhvcml6b250YWwgPSBUUlVFKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9ICIiLCB5ID0gb3V0Y29tZSkpICsKICBnZW9tX3Zpb2xpbigpCmBgYAoKIyBCaXZhcmlhdGUgQXNzb2NpYXRpb25zCgojIyBIaWdoIERlbnNpdHkgU2NhdHRlcnBsb3QKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gcHJlZGljdG9yT3ZlcnBsb3QsIHkgPSBvdXRjb21lT3ZlcnBsb3QpKSArIAogIGdlb21fcG9pbnQocG9zaXRpb24gPSAiaml0dGVyIiwgYWxwaGEgPSAwLjMpICsgCiAgZ2VvbV9kZW5zaXR5MmQoKQoKc21vb3RoU2NhdHRlcihkZiRwcmVkaWN0b3JPdmVycGxvdCwgZGYkb3V0Y29tZU92ZXJwbG90KQpgYGAKCiMjIERhdGEgRWxsaXBzZQoKYGBge3J9CmRmX25vbWlzc2luZyA8LSBuYS5vbWl0KGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIildKQpkYXRhRWxsaXBzZShkZl9ub21pc3NpbmckcHJlZGljdG9yLCBkZl9ub21pc3Npbmckb3V0Y29tZSwgbGV2ZWxzID0gYygwLjUsIC45NSkpCmBgYAoKIyMgVmlzdWFsbHkgV2VpZ2h0ZWQgUmVncmVzc2lvbgoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgcmVzdWx0cyA9ICJoaWRlIn0KdndSZWcob3V0Y29tZSB+IHByZWRpY3RvciwgZGF0YSA9IGRmKQpgYGAKCiMgQmFzaWMgaW5mZXJlbnRpYWwgc3RhdGlzdGljcwoKIyMgU3RhdGlzdGljYWwgZGVjaXNpb24gdHJlZQoKIyMgVGVzdHMgb2Ygc3lzdGVtYXRpYyBtaXNzaW5nbmVzcyAoaS5lLiwgd2hldGhlciBtaXNzaW5nbmVzcyBvbiBhIHZhcmlhYmxlIGRlcGVuZHMgb24gb3RoZXIgdmFyaWFibGVzKQoKLSBHZW5lcmFsbHkgdGVzdDoKICAgIC0gV2hldGhlciBvdXRjb21lIHZhcmlhYmxlKHMpIGRpZmZlciBhcyBhIGZ1bmN0aW9uIG9mIGFueSBtb2RlbCB2YXJpYWJsZXMgKHByZWRpY3RvcnMgYW5kIGNvdmFyaWF0ZXMpIGFuZCBhcyBhIGZ1bmN0aW9uIG9mIGFueSBrZXkgZGVtb2dyYXBoaWMgY2hhcmFjdGVyaXN0aWNzIChzZXgsIGV0aG5pY2l0eSwgU0VTKQogICAgLSBXaGV0aGVyIGZvY2FsIHByZWRpY3RvciB2YXJpYWJsZShzKSBkaWZmZXIgYXMgYSBmdW5jdGlvbiBvZiBhbnkgbW9kZWwgdmFyaWFibGVzIChpbmNsdWRpbmcgb3V0Y29tZSB2YXJpYWJsZSkgYW5kIGFzIGEgZnVuY3Rpb24gb2YgYW55IGtleSBkZW1vZ3JhcGhpYyBjaGFyYWN0ZXJpc3RpY3MKLSBGb3IgaW5zdGFuY2U6CiAgICAtIFdoZXRoZXIgbWFsZXMgYXJlIG1vcmUgbGlrZWx5IHRoYW4gZ2lybHMgdG8gYmUgbWlzc2luZyBFRUcgc2NvcmVzCiAgICAtIFdoZXRoZXIgbG9uZ2l0dWRpbmFsIGF0dHJpdGlvbiBpcyBncmVhdGVyIGluIGxvd2VyIFNFUyBmYW1pbGllcwotIElmIG1pc3NpbmduZXNzIGRpZmZlcnMgc3lzdGVtYXRpY2FsbHkgYXMgYSBmdW5jdGlvbiBvZiBvdGhlciB2YXJpYWJsZXMsIGNhbiBpbmNsdWRlIHRoYXQgdmFyaWFibGUgYXMgYSBjb250cm9sIHZhcmlhYmxlIGluIG1vZGVscywgYW5kL29yIGNhbiBpbmNsdWRlIHRoYXQgdmFyaWFibGUgaW4gbXVsdGlwbGUgaW1wdXRhdGlvbiB0byBpbmZvcm0gaW1wdXRlZCBzY29yZXMgZm9yIG1pc3NpbmcgdmFsdWVzCgojIyBNdWx0aXZhcmlhdGUgQXNzb2NpYXRpb25zCgojIyMgQ29ycmVsYXRpb24gTWF0cml4CgojIyMjIFBlYXJzb24gQ29ycmVsYXRpb25zCgpgYGB7cn0KY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0pCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0QmlnIikKYGBgCgojIyMjIFNwZWFybWFuIENvcnJlbGF0aW9ucwoKYGBge3J9CmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHRCaWciLCBjb3JyZWxhdGlvbiA9ICJzcGVhcm1hbiIpCmBgYAoKIyMjIyBQYXJ0aWFsIENvcnJlbGF0aW9ucwoKYGBge3J9CnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0pCnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdCIpCnBhcnRpYWxjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIpXSwgeiA9IGRmWyxjKCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdEJpZyIpCmBgYAoKIyMjIENvcnJlbG9ncmFtCgpgYGB7cn0KY29ycnBsb3QoY29yKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0sIHVzZSA9ICJwYWlyd2lzZS5jb21wbGV0ZS5vYnMiKSkKYGBgCgojIyMgU2NhdHRlcnBsb3QgbWF0cml4CgpgYGB7cn0Kc2NhdHRlcnBsb3RNYXRyaXgofiBwcmVkaWN0b3IgKyBvdXRjb21lICsgcHJlZGljdG9yT3ZlcnBsb3QgKyBvdXRjb21lT3ZlcnBsb3QsIGRhdGEgPSBkZiwgdXNlID0gInBhaXJ3aXNlLmNvbXBsZXRlLm9icyIpCmBgYAoKIyMjIFBhaXJzIHBhbmVscwoKYGBge3J9CnBhaXJzLnBhbmVscyhkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildKQpgYGAKCiMjIEVmZmVjdCBQbG90cwoKIyMjIE11bHRpcGxlIFJlZ3Jlc3Npb24gTW9kZWwKCmBgYHtyfQptdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbCA8LSBsbShvdXRjb21lIH4gcHJlZGljdG9yICsgcHJlZGljdG9yT3ZlcnBsb3QsIGRhdGEgPSBkZiwgbmEuYWN0aW9uID0gIm5hLmV4Y2x1ZGUiKQphbGxFZmZlY3RzKG11bHRpcGxlUmVncmVzc2lvbk1vZGVsKQpwbG90KGFsbEVmZmVjdHMobXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwpKQpgYGAKCiMjIyBNdWx0aWxldmVsIFJlZ3Jlc3Npb24gTW9kZWwKCmBgYHtyfQptdWx0aWxldmVsUmVncmVzc2lvbk1vZGVsIDwtIGxtZShvdXRjb21lIH4gcHJlZGljdG9yICsgcHJlZGljdG9yT3ZlcnBsb3QsIHJhbmRvbSA9IH4gMXxJRCwgbWV0aG9kID0gIk1MIiwgZGF0YSA9IGRmLCBuYS5hY3Rpb24gPSAibmEuZXhjbHVkZSIpCmFsbEVmZmVjdHMobXVsdGlsZXZlbFJlZ3Jlc3Npb25Nb2RlbCkKcGxvdChhbGxFZmZlY3RzKG11bHRpbGV2ZWxSZWdyZXNzaW9uTW9kZWwpKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
