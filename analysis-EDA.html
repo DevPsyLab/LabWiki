@@ -11,7 +11,7 @@
 
 
 
-<title>Hierarchical Linear Modeling</title>
+<title>Exploratory Data Analysis</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -443,14 +443,79 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Hierarchical Linear Modeling</h1>
+<h1 class="title toc-ignore">Exploratory Data Analysis</h1>
 
 </div>
 
 
+<div id="set-up" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Set up</h1>
+<p>[XXX][move this section to R page]</p>
+<ul>
+<li>R initial setup: <a href="https://research-git.uiowa.edu/PetersenLab/R-InitialSetup" class="uri">https://research-git.uiowa.edu/PetersenLab/R-InitialSetup</a></li>
+<li>Verify that you can export data from REDCap using R script: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data Processing\1. Export Data\Export Data.R</code></li>
+<li>Clone “R-DataAnalysis” GitHub repo to your local machine: <code>https://research-git.uiowa.edu/PetersenLab/R-DataAnalysis</code>
+<ul>
+<li>Follow the Petersen Lab template for how to structure your repo (folder structure, .gitignore file, etc.): <a href="https://research-git.uiowa.edu/PetersenLab/Template" class="uri">https://research-git.uiowa.edu/PetersenLab/Template</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="rationale" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Rationale</h1>
+<p>Important for understanding data, checking for data issues/errors, checking assumptions for different statistical models.</p>
+<p>LOOK AT YOUR DATA—most overlooked step in data analysis!</p>
+</div>
+<div id="descriptive-statistics" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Descriptive statistics</h1>
+<div id="sample" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Sample</h2>
+<p>N—expected? Extent of missingness</p>
+</div>
+<div id="distribution" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Distribution</h2>
+<p>Frequencies</p>
+</div>
+<div id="central-tendency" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Central Tendency</h2>
+<p>Mean Median Mode</p>
+</div>
+<div id="dispersion" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Dispersion</h2>
+<p>Standard deviation Observed minimum and maximum (vis-à-vis possible minimum and maximum) Skewness Kurtosis</p>
+</div>
+<div id="plots" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Plots</h2>
+<p>Resources <a href="https://docs.google.com/document/d/1hW2FzKcfHH3dFfbU1kN0h7D2IPYHizCYJpZi3U9Ff4s/edit" class="uri">https://docs.google.com/document/d/1hW2FzKcfHH3dFfbU1kN0h7D2IPYHizCYJpZi3U9Ff4s/edit</a></p>
+<p>Histogram Density plot Box and whisker plot Violin plot</p>
+</div>
+</div>
+<div id="basic-inferential-statistics" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Basic inferential statistics</h1>
+<div id="statistical-decision-tree" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Statistical decision tree</h2>
+</div>
+<div id="tests-of-systematic-missingness-i.e.-whether-missingness-on-a-variable-depends-on-other-variables" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Tests of systematic missingness (i.e., whether missingness on a variable depends on other variables)</h2>
+<ul>
+<li>Generally test:
+<ul>
+<li>Whether outcome variable(s) differ as a function of any model variables (predictors and covariates) and as a function of any key demographic characteristics (sex, ethnicity, SES)</li>
+<li>Whether focal predictor variable(s) differ as a function of any model variables (including outcome variable) and as a function of any key demographic characteristics</li>
+</ul></li>
+<li>For instance:
+<ul>
+<li>Whether males are more likely than girls to be missing EEG scores</li>
+<li>Whether longitudinal attrition is greater in lower SES families</li>
+</ul></li>
+<li>If missingness differs systematically as a function of other variables, can include that variable as a control variable in models, and/or can include that variable in multiple imputation to inform imputed scores for missing values</li>
+</ul>
+</div>
+<div id="correlation-matrices" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Correlation matrices</h2>
+</div>
+</div>
 
-
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGllcmFyY2hpY2FsIExpbmVhciBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBTZXQgdXAKCltYWFhdW21vdmUgdGhpcyBzZWN0aW9uIHRvIFIgcGFnZV0KCi0gUiBpbml0aWFsIHNldHVwOiBodHRwczovL3Jlc2VhcmNoLWdpdC51aW93YS5lZHUvUGV0ZXJzZW5MYWIvUi1Jbml0aWFsU2V0dXAKLSBWZXJpZnkgdGhhdCB5b3UgY2FuIGV4cG9ydCBkYXRhIGZyb20gUkVEQ2FwIHVzaW5nIFIgc2NyaXB0OiBgXFxpb3dhLnVpb3dhLmVkdVxTaGFyZWRcUmVzZWFyY2hEYXRhXHJkc3NfaXRwZXRlcnNlblxMYWJcU3R1ZGllc1xTY2hvb2wgUmVhZGluZXNzIFN0dWR5XERhdGEgUHJvY2Vzc2luZ1wxLiBFeHBvcnQgRGF0YVxFeHBvcnQgRGF0YS5SYAotIENsb25lICJSLURhdGFBbmFseXNpcyIgR2l0SHViIHJlcG8gdG8geW91ciBsb2NhbCBtYWNoaW5lOiBgaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL1ItRGF0YUFuYWx5c2lzYAogICAgLSBGb2xsb3cgdGhlIFBldGVyc2VuIExhYiB0ZW1wbGF0ZSBmb3IgaG93IHRvIHN0cnVjdHVyZSB5b3VyIHJlcG8gKGZvbGRlciBzdHJ1Y3R1cmUsIC5naXRpZ25vcmUgZmlsZSwgZXRjLik6IGh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9UZW1wbGF0ZQoKIyBSYXRpb25hbGUKCkltcG9ydGFudCBmb3IgdW5kZXJzdGFuZGluZyBkYXRhLCBjaGVja2luZyBmb3IgZGF0YSBpc3N1ZXMvZXJyb3JzLCBjaGVja2luZyBhc3N1bXB0aW9ucyBmb3IgZGlmZmVyZW50IHN0YXRpc3RpY2FsIG1vZGVscy4KCkxPT0sgQVQgWU9VUiBEQVRB4oCUbW9zdCBvdmVybG9va2VkIHN0ZXAgaW4gZGF0YSBhbmFseXNpcyEKCiMgRGVzY3JpcHRpdmUgc3RhdGlzdGljcwoKIyMgU2FtcGxlCk7igJRleHBlY3RlZD8KRXh0ZW50IG9mIG1pc3NpbmduZXNzCgojIyBEaXN0cmlidXRpb24KRnJlcXVlbmNpZXMKCiMjIENlbnRyYWwgVGVuZGVuY3kKTWVhbgpNZWRpYW4KTW9kZQoKIyMgRGlzcGVyc2lvbgpTdGFuZGFyZCBkZXZpYXRpb24KT2JzZXJ2ZWQgbWluaW11bSBhbmQgbWF4aW11bSAodmlzLcOgLXZpcyBwb3NzaWJsZSBtaW5pbXVtIGFuZCBtYXhpbXVtKQpTa2V3bmVzcwpLdXJ0b3NpcwoKIyMgUGxvdHMKUmVzb3VyY2VzCmh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RvY3VtZW50L2QvMWhXMkZ6S2NmSEgzZEZmYlUxa04waDdEMklQWUhpekNZSnBaaTNVOUZmNHMvZWRpdAoKSGlzdG9ncmFtCkRlbnNpdHkgcGxvdApCb3ggYW5kIHdoaXNrZXIgcGxvdApWaW9saW4gcGxvdAoKIyBCYXNpYyBpbmZlcmVudGlhbCBzdGF0aXN0aWNzCgojIyBTdGF0aXN0aWNhbCBkZWNpc2lvbiB0cmVlCgojIyBUZXN0cyBvZiBzeXN0ZW1hdGljIG1pc3NpbmduZXNzIChpLmUuLCB3aGV0aGVyIG1pc3NpbmduZXNzIG9uIGEgdmFyaWFibGUgZGVwZW5kcyBvbiBvdGhlciB2YXJpYWJsZXMpCgotIEdlbmVyYWxseSB0ZXN0OgogICAgLSBXaGV0aGVyIG91dGNvbWUgdmFyaWFibGUocykgZGlmZmVyIGFzIGEgZnVuY3Rpb24gb2YgYW55IG1vZGVsIHZhcmlhYmxlcyAocHJlZGljdG9ycyBhbmQgY292YXJpYXRlcykgYW5kIGFzIGEgZnVuY3Rpb24gb2YgYW55IGtleSBkZW1vZ3JhcGhpYyBjaGFyYWN0ZXJpc3RpY3MgKHNleCwgZXRobmljaXR5LCBTRVMpCiAgICAtIFdoZXRoZXIgZm9jYWwgcHJlZGljdG9yIHZhcmlhYmxlKHMpIGRpZmZlciBhcyBhIGZ1bmN0aW9uIG9mIGFueSBtb2RlbCB2YXJpYWJsZXMgKGluY2x1ZGluZyBvdXRjb21lIHZhcmlhYmxlKSBhbmQgYXMgYSBmdW5jdGlvbiBvZiBhbnkga2V5IGRlbW9ncmFwaGljIGNoYXJhY3RlcmlzdGljcwotIEZvciBpbnN0YW5jZToKICAgIC0gV2hldGhlciBtYWxlcyBhcmUgbW9yZSBsaWtlbHkgdGhhbiBnaXJscyB0byBiZSBtaXNzaW5nIEVFRyBzY29yZXMKICAgIC0gV2hldGhlciBsb25naXR1ZGluYWwgYXR0cml0aW9uIGlzIGdyZWF0ZXIgaW4gbG93ZXIgU0VTIGZhbWlsaWVzCi0gSWYgbWlzc2luZ25lc3MgZGlmZmVycyBzeXN0ZW1hdGljYWxseSBhcyBhIGZ1bmN0aW9uIG9mIG90aGVyIHZhcmlhYmxlcywgY2FuIGluY2x1ZGUgdGhhdCB2YXJpYWJsZSBhcyBhIGNvbnRyb2wgdmFyaWFibGUgaW4gbW9kZWxzLCBhbmQvb3IgY2FuIGluY2x1ZGUgdGhhdCB2YXJpYWJsZSBpbiBtdWx0aXBsZSBpbXB1dGF0aW9uIHRvIGluZm9ybSBpbXB1dGVkIHNjb3JlcyBmb3IgbWlzc2luZyB2YWx1ZXMKCiMjIENvcnJlbGF0aW9uIG1hdHJpY2VzCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
@@ -500,7 +565,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("analysis-hlm.Rmd");
+  window.initializeSourceEmbed("analysis-EDA.Rmd");
   window.initializeCodeFolding("hide" === "show");
 });
 </script>
