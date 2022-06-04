@@ -109,9 +109,11 @@ For example, the `SRS-DataProcessing` repo lives on the lab drive.
 ## How to clone a repo into local directory with a different folder name (directory must be empty)
 
 1. Git Bash into directory
-1. `git clone https://research-git.uiowa.edu/petersenlab/srs/SRS-DataProcessing.git .`
-1. `git remote set-url --add origin https://research-git.uiowa.edu/petersenlab/srs/SRS-DataProcessing.git`
-1. `git remote -v`
+```
+git clone https://research-git.uiowa.edu/petersenlab/srs/SRS-DataProcessing.git .
+git remote set-url --add origin https://research-git.uiowa.edu/petersenlab/srs/SRS-DataProcessing.git
+git remote -v
+```
 
 ## How to transfer a repo to a new location/group/subgroup
 
@@ -128,10 +130,10 @@ For example, the `SRS-DataProcessing` repo lives on the lab drive.
 1. In GitHub Desktop, open the repo you want to use LFS for
 1. In GitHub Desktop, select the `Repository` tab, then select `Command Prompt` or similar
 1. In the command prompt, type (https://docs.gitlab.com/ee/topics/git/lfs/):
-    ```
-    git lfs install                       # initialize the Git LFS project
-    git lfs track "*.Rdata"               # select the file extensions that you want to treat as large files
-    ```
+```
+git lfs install                       # initialize the Git LFS project
+git lfs track "*.Rdata"               # select the file extensions that you want to treat as large files
+```
 1. This should have created a `.gitattributes` file in the repo. In GitHub Desktop, commit and push the `.gitattributes` file to the cloud version of the repo.
 1. Copy the large files into the repo.
 1. In GitHub Desktop, commit and push the large file to the cloud version of the repo.
