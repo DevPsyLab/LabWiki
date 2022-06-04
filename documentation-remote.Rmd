@@ -11,8 +11,9 @@ The following sections provide instructions for how to participate in the lab re
 As described in the [lab manual](manual.html#remote), RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
 These instructions applied mainly during the earlier parts of the COVID-19 pandemic.
 We are now working fully in-person.
+Nevertheless, students who are conducting [Honors Projects](honors.html) may need to access their projects during off-hours.
 
-How To…
+**How To…**
 
 # Join the Weekly Lab Meeting
 
@@ -72,7 +73,7 @@ Coding Folders: have been re-created as folders on the lab drive, which can be f
 Because it is imperative that we maintain participant confidentiality, regardless of our current working situation, you must ALWAYS ensure that you are in a private space when you open visit videos.
 Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM.
 It is also important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
-The University's IT department only provides protection to data and files saved on University equipment or within University programs (like the Office 365 OneDrive associated with your HawkID).
+The University's IT department only provides protection to data and files saved on University equipment or within University programs (like the Office 365 OneDrive associated with your `HawkID`).
 
 ## Remote Coding System for Coding Pairs
 
@@ -113,4 +114,4 @@ Coder 2 and Coder 3 code these respective videos.
         ii.	Coder 3 enters Coder 2's even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 2's form back to Coder 2's "Check" folder for final data entry check.
 1. All coders compare their own forms against the data that was entered in REDCap to ensure accurate data entry (see Checking REDCap Coding Entries below), then initial and date the top corner of their coding form to confirm they have checked it against their partner's data entry.
 1. Each coder can put their forms into their "To Be Scanned" folder to scan their own form onto the Lab Drive (see Saving the Form below), then file the form in TC's permanent folder under the appropriate wave.
-1. For remote coding: Each coder saves their completed form in the appropriate TCID folder with the file name: TCID_wave_taskabbreviation_coder1/2/3 (save as the correct coder number).
+1. For remote coding: Each coder saves their completed form in the appropriate TCID folder with the file name: `TCID_wave_taskabbreviation_coder1/2/3` (save as the correct coder number).
