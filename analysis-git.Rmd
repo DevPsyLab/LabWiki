@@ -237,14 +237,14 @@ git push -u origin master
 1. Create R Scripts Repo
 1. Open R Scripts folder and delete .git folder
 1. Open Git Shell and type:
-```
-git init
-git add .
-git commit -m 'First commit'
-git remote add origin https://research-git.uiowa.edu/PetersenLab/R-Scripts.git
-git remote -v
-git push -u origin master
-```
+    ```
+    git init
+    git add .
+    git commit -m 'First commit'
+    git remote add origin https://research-git.uiowa.edu/PetersenLab/R-Scripts.git
+    git remote -v
+    git push -u origin master
+    ```
 4. Move R Scripts folder to another location
 5. Clone repo into folder:
     - open Git Shell

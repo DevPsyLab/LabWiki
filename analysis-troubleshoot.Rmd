@@ -1,5 +1,5 @@
 ---
-title: "Exploratory Data Analysis"
+title: "Reproducible Example"
 output: 
   html_document:
     code_folding: show
@@ -54,7 +54,7 @@ df[sample(1:n, size = 10), "outcome"] <- NA
 
 ```{r}
 class(df)
-psych::describe(df$outcome)
+psych::describe(df)
 traceback()
 ```
 
