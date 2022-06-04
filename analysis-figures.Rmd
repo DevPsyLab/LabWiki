@@ -157,19 +157,19 @@ scatterplot <- ggplot(df, aes(x = predictor, y = outcome)) +
   theme(text = element_text(family = "Gotham"))
 
 densityMarginal <- ggMarginal(scatterplot, type = "density", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-densityMarginal
+print(densityMarginal, newpage = TRUE)
 
 histogramMarginal <- ggMarginal(scatterplot, type = "histogram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-histogramMarginal
+print(histogramMarginal, newpage = TRUE)
 
 boxplotMarginal <- ggMarginal(scatterplot, type = "boxplot", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-boxplotMarginal
+print(boxplotMarginal, newpage = TRUE)
 
 violinMarginal <- ggMarginal(scatterplot, type = "violin", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-violinMarginal
+print(violinMarginal, newpage = TRUE)
 
 densigramMarginal <- ggMarginal(scatterplot, type = "densigram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-densigramMarginal
+print(densigramMarginal, newpage = TRUE)
 ```
 
 ## Ellipse
