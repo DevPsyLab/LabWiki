@@ -36,6 +36,7 @@ See this list of resources for Learning `R`: https://docs.google.com/document/d/
 
 Using R Notebooks for "Computational Notebooks" is helpful for reproducible code that can be shared with others.
 See links below for more info about how to create R Notebooks:
+
 - https://garrettgman.github.io/rmarkdown/r_notebooks
 - https://bookdown.org/yihui/rmarkdown/notebook.html
 
@@ -49,9 +50,9 @@ See links below for more info about how to create R Notebooks:
 - Variable names
     - Use meaningful variable names; we want to know what a variable represents without having to consult an external codebook for every variable
     - Variable names should include the prefix for the measure followed by an underscore
-        - e.g., "cbcl_" for the Child Behavior Checklist variables
+        - e.g., `cbcl_` for the Child Behavior Checklist variables
     - Use lower camel case for variable naming
-        - e.g., "prefix_thisIsTheVariableName"
+        - e.g., `prefix_thisIsTheVariableName`
 - Comment code frequently and clearly!
     - You want you (and others) to easily be able to understand your code if you come back to it several years later!
 
@@ -62,7 +63,8 @@ Tidyverse: https://www.tidyverse.org
 University of Iowa Workshops
 
 # Saving Plots
-png(); dev.off()
+
+`png(); dev.off()`
 
 # Saving Output
 
