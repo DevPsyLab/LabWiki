@@ -485,9 +485,8 @@ df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 </div>
 <div id="unload-libraries" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Unload Libraries</h1>
-<pre class="r"><code>unloadNamespace(&quot;Hmisc&quot;)</code></pre>
-<pre><code>## Error in unloadNamespace(&quot;Hmisc&quot;): namespace &#39;Hmisc&#39; is imported by &#39;petersenlab&#39; so cannot be unloaded</code></pre>
-<pre class="r"><code>detach(&quot;package:Hmisc&quot;, unload = TRUE)</code></pre>
+<pre class="r"><code>unloadNamespace(&quot;Hmisc&quot;)
+detach(&quot;package:Hmisc&quot;, unload = TRUE)</code></pre>
 <pre><code>## Error in detach(&quot;package:Hmisc&quot;, unload = TRUE): invalid &#39;name&#39; argument</code></pre>
 </div>
 <div id="descriptive-statistics" class="section level1" number="6">
@@ -495,7 +494,11 @@ df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 <pre class="r"><code>class(df)</code></pre>
 <pre><code>## [1] &quot;data.frame&quot;</code></pre>
 <pre class="r"><code>psych::describe(df)</code></pre>
-<pre><code>## Error in as.data.frame.default(utils::head(x, maxPrint)): cannot coerce class &#39;&quot;describe&quot;&#39; to a data.frame</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["vars"],"name":[1],"type":["int"],"align":["right"]},{"label":["n"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["trimmed"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["mad"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["range"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["skew"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["kurtosis"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["se"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1000","3":"50.50000","4":"28.88051","5":"50.50000","6":"50.50000","7":"37.06500","8":"1.0000000","9":"100.00000","10":"99.00000","11":"0.0000000","12":"-1.2038377","13":"0.9132820","_rn_":"ID"},{"1":"2","2":"990","3":"22.75833","4":"15.42796","5":"19.69796","6":"21.15970","7":"14.52667","8":"0.1076808","9":"81.69121","10":"81.58352","11":"0.9562688","12":"0.6819222","13":"0.4903328","_rn_":"predictor"},{"1":"3","2":"990","3":"73.31589","4":"25.75835","5":"73.10213","6":"72.94342","7":"25.76525","8":"5.8192503","9":"171.89645","10":"166.07720","11":"0.1905076","12":"0.1287410","13":"0.8186540","_rn_":"outcome"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <pre class="r"><code>traceback()</code></pre>
 <pre><code>## No traceback available</code></pre>
 </div>
@@ -517,50 +520,19 @@ df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA</code></pre>
 ## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
 ## 
 ## attached base packages:
-## [1] grid      stats     graphics  grDevices utils     datasets  methods  
-## [8] base     
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] ggthemes_4.2.4         viridis_0.6.2          viridisLite_0.4.0     
-##  [4] ggExtra_0.10.0         reshape2_1.4.4         RColorBrewer_1.1-3    
-##  [7] plyr_1.8.7             reshape_0.8.9          psych_2.2.5           
-## [10] ggplot2_3.3.6          corrplot_0.92          effects_4.2-1         
-## [13] nlme_3.1-157           ellipse_0.4.3          vioplot_0.3.7         
-## [16] zoo_1.8-10             sm_2.2-5.7             car_3.0-13            
-## [19] carData_3.0-5          petersenlab_0.1.2-9006
+## [1] psych_2.2.5
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] insight_0.17.1      tools_4.2.0         backports_1.4.1    
-##  [4] bslib_0.3.1         utf8_1.2.2          R6_2.5.1           
-##  [7] KernSmooth_2.23-20  rpart_4.1.16        mgcv_1.8-40        
-## [10] Hmisc_4.7-0         DBI_1.1.2           colorspace_2.0-3   
-## [13] nnet_7.3-17         withr_2.5.0         tidyselect_1.1.2   
-## [16] gridExtra_2.3       mnormt_2.0.2        compiler_4.2.0     
-## [19] cli_3.3.0           htmlTable_2.4.0     isoband_0.2.5      
-## [22] mix_1.0-11          labeling_0.4.2      sass_0.4.1         
-## [25] scales_1.2.0        checkmate_2.1.0     mvtnorm_1.1-3      
-## [28] stringr_1.4.0       digest_0.6.29       pbivnorm_0.6.0     
-## [31] foreign_0.8-82      minqa_1.2.4         rmarkdown_2.14     
-## [34] base64enc_0.1-3     jpeg_0.1-9          pkgconfig_2.0.3    
-## [37] htmltools_0.5.2     lme4_1.1-29         highr_0.9          
-## [40] fastmap_1.1.0       htmlwidgets_1.5.4   rlang_1.0.2        
-## [43] rstudioapi_0.13     shiny_1.7.1         farver_2.1.0       
-## [46] jquerylib_0.1.4     generics_0.1.2      jsonlite_1.8.0     
-## [49] dplyr_1.0.9         magrittr_2.0.3      Formula_1.2-4      
-## [52] Matrix_1.4-1        Rcpp_1.0.8.3        munsell_0.5.0      
-## [55] fansi_1.0.3         abind_1.4-5         lifecycle_1.0.1    
-## [58] stringi_1.7.6       yaml_2.3.5          MASS_7.3-56        
-## [61] lavaan_0.6-11       promises_1.2.0.1    parallel_4.2.0     
-## [64] crayon_1.5.1        miniUI_0.1.1.1      lattice_0.20-45    
-## [67] splines_4.2.0       tmvnsim_1.0-2       knitr_1.39         
-## [70] pillar_1.7.0        boot_1.3-28         estimability_1.3   
-## [73] stats4_4.2.0        glue_1.6.2          evaluate_0.15      
-## [76] mitools_2.4         latticeExtra_0.6-29 data.table_1.14.2  
-## [79] httpuv_1.6.5        png_0.1-7           vctrs_0.4.1        
-## [82] nloptr_2.0.3        gtable_0.3.0        purrr_0.3.4        
-## [85] xfun_0.31           mime_0.12           xtable_1.8-4       
-## [88] survey_4.1-1        later_1.3.0         survival_3.3-1     
-## [91] tibble_3.1.7        cluster_2.1.3       ellipsis_0.3.2</code></pre>
+##  [1] lattice_0.20-45 digest_0.6.29   grid_4.2.0      R6_2.5.1       
+##  [5] nlme_3.1-157    jsonlite_1.8.0  magrittr_2.0.3  evaluate_0.15  
+##  [9] stringi_1.7.6   rlang_1.0.2     cli_3.3.0       jquerylib_0.1.4
+## [13] bslib_0.3.1     vctrs_0.4.1     rmarkdown_2.14  tools_4.2.0    
+## [17] stringr_1.4.0   parallel_4.2.0  xfun_0.31       yaml_2.3.5     
+## [21] fastmap_1.1.0   compiler_4.2.0  mnormt_2.0.2    tmvnsim_1.0-2  
+## [25] htmltools_0.5.2 knitr_1.39      sass_0.4.1</code></pre>
 </div>
 
 <div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBSZXN0YXJ0IFIgU2Vzc2lvbgoKYGBge3J9Ci5ycy5yZXN0YXJ0UigpCmBgYAoKIyBJbnN0YWxsIExpYnJhcmllcwoKYGBge3J9CiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyBMb2FkIExpYnJhcmllcwoKYGBge3J9CmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKCmRmIDwtIGRhdGEuZnJhbWUoSUQgPSBJRCwKICAgICAgICAgICAgICAgICBwcmVkaWN0b3IgPSBwcmVkaWN0b3IsCiAgICAgICAgICAgICAgICAgb3V0Y29tZSA9IG91dGNvbWUpCgpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAicHJlZGljdG9yIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWUiXSA8LSBOQQpgYGAKCiMgVW5sb2FkIExpYnJhcmllcwoKYGBge3J9CnVubG9hZE5hbWVzcGFjZSgiSG1pc2MiKQpkZXRhY2goInBhY2thZ2U6SG1pc2MiLCB1bmxvYWQgPSBUUlVFKQpgYGAKCiMgRGVzY3JpcHRpdmUgc3RhdGlzdGljcwoKYGBge3J9CmNsYXNzKGRmKQpwc3ljaDo6ZGVzY3JpYmUoZGYpCnRyYWNlYmFjaygpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBgYHtyfQpzZXNzaW9uSW5mbygpCmBgYAo=</div>
