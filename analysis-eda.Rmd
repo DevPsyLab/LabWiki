@@ -33,8 +33,6 @@ library("nlme")
 library("effects")
 library("corrplot")
 library("ggplot2")
-unloadNamespace("Hmisc")
-detach("package:Hmisc", unload = TRUE)
 library("psych")
 ```
 
@@ -67,8 +65,17 @@ df[sample(1:n, size = 10), "outcomeOverplot"] <- NA
 
 # Descriptive statistics
 
+```{r, include = FALSE}
+detach("package:petersenlab", unload = TRUE)
+unloadNamespace("Hmisc")
+```
+
 ```{r}
 psych::describe(df)
+```
+
+```{r, include = FALSE}
+library("petersenlab")
 ```
 
 ## Sample
