@@ -26,7 +26,7 @@ Tools → Global Options → Graphics
 - Clone "R-DataAnalysis" GitHub repo to your local machine: `https://research-git.uiowa.edu/PetersenLab/R-DataAnalysis`
     - Follow the Petersen Lab template for how to structure your repo (folder structure, `.gitignore` file, etc.): https://research-git.uiowa.edu/PetersenLab/Template
 
-# Learning `R` {#learning}
+# Learning `R` {#learn}
 
 ## Base R
 
