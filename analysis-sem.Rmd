@@ -1,5 +1,5 @@
 ---
-title: "Data Analysis Guides"
+title: "Structural Equation Modeling"
 ---
 
 ```{r setup, include = FALSE}
