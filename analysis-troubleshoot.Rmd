@@ -1,0 +1,72 @@
+---
+title: "Exploratory Data Analysis"
+output: 
+  html_document:
+    code_folding: show
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Install Libraries
+
+```{r}
+#remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")
+```
+
+# Load Libraries
+
+```{r, message = FALSE, warning = FALSE}
+#library("petersenlab")
+library("car")
+library("vioplot")
+library("ellipse")
+library("nlme")
+library("effects")
+library("corrplot")
+library("ggplot2")
+library("psych")
+```
+
+# Simulate Data
+
+```{r}
+set.seed(52242)
+
+n <- 1000
+
+ID <- rep(1:100, each = 10)
+predictor <- rbeta(n, 1.5, 5) * 100
+outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
+number <- sample(1:1000, replace = TRUE)
+
+predictorOverplot <- sample(1:50, n, replace = TRUE)
+outcomeOverplot <- predictorOverplot + sample(1:75, n, replace = TRUE)
+
+df <- data.frame(ID = ID,
+                 predictor = predictor,
+                 outcome = outcome,
+                 predictorOverplot = predictorOverplot,
+                 outcomeOverplot = outcomeOverplot)
+
+df[sample(1:n, size = 10), "predictor"] <- NA
+df[sample(1:n, size = 10), "outcome"] <- NA
+df[sample(1:n, size = 10), "predictorOverplot"] <- NA
+df[sample(1:n, size = 10), "outcomeOverplot"] <- NA
+```
+
+# Descriptive statistics
+
+```{r}
+class(df)
+psych::describe(df$outcome)
+traceback()
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
