@@ -27,6 +27,7 @@ knitr::opts_chunk$set(echo = TRUE,
 #library("effects")
 #library("corrplot")
 library("ggplot2")
+detach("Hmisc", unload = TRUE)
 library("psych")
 ```
 
