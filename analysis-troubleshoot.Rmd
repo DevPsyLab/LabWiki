@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE,
 # Restart R Session
 
 ```{r}
-#.rs.restartR()
+.rs.restartR()
 ```
 
 # Install Libraries
