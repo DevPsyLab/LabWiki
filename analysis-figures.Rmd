@@ -155,20 +155,45 @@ scatterplot <- ggplot(df, aes(x = predictor, y = outcome)) +
   geom_point() +
   theme_classic() +
   theme(text = element_text(family = "Gotham"))
+```
 
+```{r}
 densityMarginal <- ggMarginal(scatterplot, type = "density", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+```
+
+```{r}
 print(densityMarginal, newpage = TRUE)
+```
 
+```{r}
 histogramMarginal <- ggMarginal(scatterplot, type = "histogram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+```
+
+```{r}
 print(histogramMarginal, newpage = TRUE)
+```
 
+```{r}
 boxplotMarginal <- ggMarginal(scatterplot, type = "boxplot", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+```
+
+```{r}
 print(boxplotMarginal, newpage = TRUE)
+```
 
+```{r}
 violinMarginal <- ggMarginal(scatterplot, type = "violin", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
-print(violinMarginal, newpage = TRUE)
+```
 
+```{r}
+print(violinMarginal, newpage = TRUE)
+```
+
+```{r}
 densigramMarginal <- ggMarginal(scatterplot, type = "densigram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
+```
+
+```{r}
 print(densigramMarginal, newpage = TRUE)
 ```
 
