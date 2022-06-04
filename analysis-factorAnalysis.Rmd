@@ -22,5 +22,6 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-anal
 
 Overview:
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#efa
+
 Code examples:
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#efaExamples

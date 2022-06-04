@@ -7,15 +7,6 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-# Set up
-
-[XXX][move this section to R page]
-
-- R initial setup: https://research-git.uiowa.edu/PetersenLab/R-InitialSetup
-- Verify that you can export data from REDCap using R script: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data Processing\1. Export Data\Export Data.R`
-- Clone "R-DataAnalysis" GitHub repo to your local machine: `https://research-git.uiowa.edu/PetersenLab/R-DataAnalysis`
-    - Follow the Petersen Lab template for how to structure your repo (folder structure, .gitignore file, etc.): https://research-git.uiowa.edu/PetersenLab/Template
-
 # Rationale
 
 Important for understanding data, checking for data issues/errors, checking assumptions for different statistical models.
@@ -25,31 +16,35 @@ LOOK AT YOUR DATA—most overlooked step in data analysis!
 # Descriptive statistics
 
 ## Sample
-N—expected?
-Extent of missingness
+
+- N—expected?
+- Extent of missingness
 
 ## Distribution
-Frequencies
+
+- Frequencies
 
 ## Central Tendency
-Mean
-Median
-Mode
+
+- Mean
+- Median
+- Mode
 
 ## Dispersion
-Standard deviation
-Observed minimum and maximum (vis-à-vis possible minimum and maximum)
-Skewness
-Kurtosis
+
+- Standard deviation
+- Observed minimum and maximum (vis-à-vis possible minimum and maximum)
+- Skewness
+- Kurtosis
 
 ## Plots
-Resources
-https://docs.google.com/document/d/1hW2FzKcfHH3dFfbU1kN0h7D2IPYHizCYJpZi3U9Ff4s/edit
 
-Histogram
-Density plot
-Box and whisker plot
-Violin plot
+See [here](analysis-figures.html) for resources for creating figures in R.
+
+- Histogram
+- Density plot
+- Box and whisker plot
+- Violin plot
 
 # Basic inferential statistics
 

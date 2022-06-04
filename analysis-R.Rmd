@@ -7,23 +7,24 @@ knitr::opts_chunk$set(echo = TRUE,
                       error = TRUE)
 ```
 
-R
-
  > "*R will always be arcane to those who do not make a serious effort to learn it. It is not meant to be intuitive and easy for casual users to just plunge into. It is far too complex and powerful for that. But the rewards are great for serious data analysts who put in the effort.*"
 
 — [Berton Gunter R-help August 2007](https://www.brodrigues.co/blog/2022-06-02-arcane/)
 
-R
+# Getting Started
+
 - Download R: https://cran.r-project.org/
 - Download RStudio: https://www.rstudio.com/products/rstudio/download/
-
-# Getting Started
 
 Follow the initial setup steps:
 https://research-git.uiowa.edu/PetersenLab/R-InitialSetup
 
 For antialiased plots in `RStudio`, change the Graphics backend to `Cairo`:
 Tools → Global Options → Graphics
+
+- Verify that you can export data from REDCap using R script: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data Processing\1. Export Data\Export Data.R`
+- Clone "R-DataAnalysis" GitHub repo to your local machine: `https://research-git.uiowa.edu/PetersenLab/R-DataAnalysis`
+    - Follow the Petersen Lab template for how to structure your repo (folder structure, `.gitignore` file, etc.): https://research-git.uiowa.edu/PetersenLab/Template
 
 # Learning R
 

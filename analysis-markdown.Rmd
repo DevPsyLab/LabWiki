@@ -8,4 +8,6 @@ knitr::opts_chunk$set(echo = TRUE,
 ```
 
 Software:
-- Microsoft Visual Studio Code
+
+- `Microsoft Visual Studio Code`
+- `RStudio`

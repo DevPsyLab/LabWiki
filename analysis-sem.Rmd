@@ -17,4 +17,4 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#se
 
 # Power analysis
 
-https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#power-analysis-using-monte-carlo-simulation
+https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis

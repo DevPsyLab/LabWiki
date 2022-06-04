@@ -11,7 +11,7 @@ GitLab (access via GitHub desktop app)
 
 - Download GitHub Desktop App (https://desktop.github.com/)
 - Create an account on UI GitLab Enterprise (https://research-git.uiowa.edu/)
-- Have Dr. Petersen add you to Petersen Lab GitLab group
+- Have Dr. Petersen add you to `PetersenLab` GitLab group
 
 # Why Important
 
