@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE,
 > 
 > Simon Blomberg: This is `R`. There is no if. Only how."
 
-— [Evely Hall and Simon ’Yoda’ Blomberg, R-help April 2005](https://www.brodrigues.co/blog/2022-06-02-arcane/)
+— [Evelyn Hall and Simon 'Yoda' Blomberg, R-help April 2005](https://www.brodrigues.co/blog/2022-06-02-arcane/)
 
 # Learning `R` {#learn}
 
