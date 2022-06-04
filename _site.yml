@@ -4,6 +4,7 @@ author: Isaac T. Petersen
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output: 
   html_document:
+    new_session: yes
     toc: true
     toc_depth: 2
     toc_float: true
