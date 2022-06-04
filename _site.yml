@@ -4,7 +4,6 @@ author: Isaac T. Petersen
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output: 
   html_document:
-    new_session: yes
     toc: true
     toc_depth: 2
     toc_float: true
@@ -19,6 +18,7 @@ output:
       - "includes/google_analytics.html"
       after_body:
       - "includes/footer.html"
+new_session: true
 navbar:
   title: "Lab Wiki for the Developmental Psychopathology Lab"
   left:
