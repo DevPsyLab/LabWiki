@@ -1,0 +1,92 @@
+---
+title: "Reproducible Example"
+output: 
+  html_document:
+    code_folding: show
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      error = TRUE)
+```
+
+# Methods
+
+```{r}
+methods("describe")
+```
+
+# Load Libraries
+
+```{r}
+library("Hmisc", exclude = c("describe")) 
+library("psych")
+```
+
+# Simulate Data
+
+```{r}
+set.seed(52242)
+
+n <- 1000
+
+ID <- rep(1:100, each = 10)
+predictor <- rbeta(n, 1.5, 5) * 100
+outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
+number <- sample(1:1000, replace = TRUE)
+
+predictorOverplot <- sample(1:50, n, replace = TRUE)
+outcomeOverplot <- predictorOverplot + sample(1:75, n, replace = TRUE)
+
+df <- data.frame(ID = ID,
+                 predictor = predictor,
+                 outcome = outcome)
+```
+
+# Session Info
+
+`Hmisc` is loaded:
+
+```{r}
+sessionInfo()
+```
+
+# Methods
+
+```{r}
+methods("describe")
+```
+
+# Unload `Hmisc`
+
+```{r}
+unloadNamespace("Hmisc")
+```
+
+# Session Info
+
+`Hmisc` is unloaded:
+
+```{r}
+sessionInfo()
+```
+
+# Methods
+
+```{r}
+methods("describe")
+```
+
+# Use `psych::describe()`
+
+Throws error:
+
+```{r}
+psych::describe(df)
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
