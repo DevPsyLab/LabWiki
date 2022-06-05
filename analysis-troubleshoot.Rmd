@@ -78,7 +78,7 @@ methods("describe")
 Throws error:
 
 ```{r}
-psych::describe(df)
+data.frame(psych::describe(df))
 ```
 
 # Session Info
