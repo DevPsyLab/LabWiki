@@ -610,8 +610,12 @@ df &lt;- data.frame(ID = ID,
 <div id="use-psychdescribe" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Use <code>psych::describe()</code></h1>
 <p>Throws error:</p>
-<pre class="r"><code>psych::describe(df)</code></pre>
-<pre><code>## Error in as.data.frame.default(utils::head(x, maxPrint)): cannot coerce class &#39;&quot;describe&quot;&#39; to a data.frame</code></pre>
+<pre class="r"><code>data.frame(psych::describe(df))</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["vars"],"name":[1],"type":["int"],"align":["right"]},{"label":["n"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["trimmed"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["mad"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["range"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["skew"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["kurtosis"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["se"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1000","3":"50.50000","4":"28.88051","5":"50.50000","6":"50.50000","7":"37.06500","8":"1.0000000","9":"100.00000","10":"99.00000","11":"0.0000000","12":"-1.2038377","13":"0.9132820","_rn_":"ID"},{"1":"2","2":"1000","3":"22.69169","4":"15.40215","5":"19.64555","6":"21.09483","7":"14.46737","8":"0.1076808","9":"81.69121","10":"81.58352","11":"0.9589626","12":"0.6945161","13":"0.4870588","_rn_":"predictor"},{"1":"3","2":"1000","3":"73.27289","4":"25.87198","5":"73.10213","6":"72.93543","7":"25.84832","8":"5.8192503","9":"171.89645","10":"166.07720","11":"0.1778435","12":"0.1022544","13":"0.8181437","_rn_":"outcome"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <div id="session-info-2" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Session Info</h1>
@@ -638,30 +642,30 @@ df &lt;- data.frame(ID = ID,
 ## [5] lattice_0.20-45
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] png_0.1-7           digest_0.6.29       utf8_1.2.2         
-##  [4] R6_2.5.1            backports_1.4.1     evaluate_0.15      
-##  [7] pillar_1.7.0        rlang_1.0.2         rstudioapi_0.13    
-## [10] data.table_1.14.2   jquerylib_0.1.4     rpart_4.1.16       
-## [13] Matrix_1.4-1        checkmate_2.1.0     rmarkdown_2.14     
-## [16] splines_4.2.0       stringr_1.4.0       foreign_0.8-82     
-## [19] htmlwidgets_1.5.4   munsell_0.5.0       compiler_4.2.0     
-## [22] xfun_0.31           pkgconfig_2.0.3     base64enc_0.1-3    
-## [25] mnormt_2.0.2        tmvnsim_1.0-2       htmltools_0.5.2    
-## [28] nnet_7.3-17         tidyselect_1.1.2    tibble_3.1.7       
-## [31] gridExtra_2.3       htmlTable_2.4.0     Hmisc_4.7-0        
-## [34] fansi_1.0.3         crayon_1.5.1        dplyr_1.0.9        
-## [37] withr_2.5.0         grid_4.2.0          nlme_3.1-157       
-## [40] jsonlite_1.8.0      gtable_0.3.0        lifecycle_1.0.1    
-## [43] magrittr_2.0.3      scales_1.2.0        cli_3.3.0          
-## [46] stringi_1.7.6       latticeExtra_0.6-29 bslib_0.3.1        
-## [49] ellipsis_0.3.2      generics_0.1.2      vctrs_0.4.1        
-## [52] RColorBrewer_1.1-3  tools_4.2.0         glue_1.6.2         
-## [55] purrr_0.3.4         jpeg_0.1-9          parallel_4.2.0     
-## [58] fastmap_1.1.0       yaml_2.3.5          colorspace_2.0-3   
-## [61] cluster_2.1.3       knitr_1.39          sass_0.4.1</code></pre>
+##  [1] tidyselect_1.1.2    xfun_0.31           bslib_0.3.1        
+##  [4] purrr_0.3.4         splines_4.2.0       colorspace_2.0-3   
+##  [7] vctrs_0.4.1         generics_0.1.2      htmltools_0.5.2    
+## [10] yaml_2.3.5          base64enc_0.1-3     utf8_1.2.2         
+## [13] rlang_1.0.2         jquerylib_0.1.4     pillar_1.7.0       
+## [16] foreign_0.8-82      glue_1.6.2          withr_2.5.0        
+## [19] RColorBrewer_1.1-3  jpeg_0.1-9          lifecycle_1.0.1    
+## [22] stringr_1.4.0       munsell_0.5.0       gtable_0.3.0       
+## [25] htmlwidgets_1.5.4   evaluate_0.15       latticeExtra_0.6-29
+## [28] knitr_1.39          fastmap_1.1.0       parallel_4.2.0     
+## [31] fansi_1.0.3         htmlTable_2.4.0     backports_1.4.1    
+## [34] checkmate_2.1.0     scales_1.2.0        jsonlite_1.8.0     
+## [37] tmvnsim_1.0-2       gridExtra_2.3       mnormt_2.0.2       
+## [40] png_0.1-7           digest_0.6.29       stringi_1.7.6      
+## [43] dplyr_1.0.9         grid_4.2.0          cli_3.3.0          
+## [46] tools_4.2.0         magrittr_2.0.3      sass_0.4.1         
+## [49] tibble_3.1.7        cluster_2.1.3       crayon_1.5.1       
+## [52] pkgconfig_2.0.3     ellipsis_0.3.2      Matrix_1.4-1       
+## [55] data.table_1.14.2   rstudioapi_0.13     rmarkdown_2.14     
+## [58] rpart_4.1.16        R6_2.5.1            nlme_3.1-157       
+## [61] nnet_7.3-17         compiler_4.2.0</code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBNZXRob2RzCgpgYGB7cn0KbWV0aG9kcygiZGVzY3JpYmUiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyfQpsaWJyYXJ5KCJIbWlzYyIsIGV4Y2x1ZGUgPSBjKCJkZXNjcmliZSIpKSAKbGlicmFyeSgicHN5Y2giKQpgYGAKCiMgU2ltdWxhdGUgRGF0YQoKYGBge3J9CnNldC5zZWVkKDUyMjQyKQoKbiA8LSAxMDAwCgpJRCA8LSByZXAoMToxMDAsIGVhY2ggPSAxMCkKcHJlZGljdG9yIDwtIHJiZXRhKG4sIDEuNSwgNSkgKiAxMDAKb3V0Y29tZSA8LSBwcmVkaWN0b3IgKyBybm9ybShuLCBtZWFuID0gMCwgc2QgPSAyMCkgKyA1MAoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYEhtaXNjYCBpcyBsb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVubG9hZCBgSG1pc2NgCgpgYGB7cn0KdW5sb2FkTmFtZXNwYWNlKCJIbWlzYyIpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBIbWlzY2AgaXMgdW5sb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVzZSBgcHN5Y2g6OmRlc2NyaWJlKClgCgpUaHJvd3MgZXJyb3I6CgpgYGB7cn0KcHN5Y2g6OmRlc2NyaWJlKGRmKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBNZXRob2RzCgpgYGB7cn0KbWV0aG9kcygiZGVzY3JpYmUiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyfQpsaWJyYXJ5KCJIbWlzYyIsIGV4Y2x1ZGUgPSBjKCJkZXNjcmliZSIpKSAKbGlicmFyeSgicHN5Y2giKQpgYGAKCiMgU2ltdWxhdGUgRGF0YQoKYGBge3J9CnNldC5zZWVkKDUyMjQyKQoKbiA8LSAxMDAwCgpJRCA8LSByZXAoMToxMDAsIGVhY2ggPSAxMCkKcHJlZGljdG9yIDwtIHJiZXRhKG4sIDEuNSwgNSkgKiAxMDAKb3V0Y29tZSA8LSBwcmVkaWN0b3IgKyBybm9ybShuLCBtZWFuID0gMCwgc2QgPSAyMCkgKyA1MAoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYEhtaXNjYCBpcyBsb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVubG9hZCBgSG1pc2NgCgpgYGB7cn0KdW5sb2FkTmFtZXNwYWNlKCJIbWlzYyIpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBIbWlzY2AgaXMgdW5sb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVzZSBgcHN5Y2g6OmRlc2NyaWJlKClgCgpUaHJvd3MgZXJyb3I6CgpgYGB7cn0KZGF0YS5mcmFtZShwc3ljaDo6ZGVzY3JpYmUoZGYpKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
