@@ -33,10 +33,6 @@ n <- 1000
 ID <- rep(1:100, each = 10)
 predictor <- rbeta(n, 1.5, 5) * 100
 outcome <- predictor + rnorm(n, mean = 0, sd = 20) + 50
-number <- sample(1:1000, replace = TRUE)
-
-predictorOverplot <- sample(1:50, n, replace = TRUE)
-outcomeOverplot <- predictorOverplot + sample(1:75, n, replace = TRUE)
 
 df <- data.frame(ID = ID,
                  predictor = predictor,
