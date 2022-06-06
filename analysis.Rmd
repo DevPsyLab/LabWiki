@@ -4,7 +4,8 @@ title: "Data Analysis Guides"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 - [Data Management](analysis-dataManagement.html)

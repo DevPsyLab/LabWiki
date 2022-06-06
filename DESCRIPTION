@@ -20,4 +20,6 @@ Imports:
   ggExtra,
   viridis,
   ggthemes,
-  psych
+  psych,
+  tidyverse,
+  purrr

@@ -4,8 +4,10 @@ title: "Item Response Theory"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
+
 # Overview
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html 

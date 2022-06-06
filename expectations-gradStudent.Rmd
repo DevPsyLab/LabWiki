@@ -4,7 +4,8 @@ title: "Lab Expectations for Graduate Students"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 Please read the whole document of lab expectations[^1] carefully.

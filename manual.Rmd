@@ -4,7 +4,8 @@ title: "Lab Manual"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 # Mission Statement {#missionStatement}
@@ -1224,25 +1225,20 @@ This helps with version control—individually changed sentences will be highlig
     Instead, use a single space after a period.
     To replace all double spaces with single spaces, do a find and replace for `".  "` → `". "` 
     Be careful not to blanket remove all double spaces because tabbed bullets have 3 spaces.
-
 - Add protocol entries as links to the `README.md`
-
 - Add linked content (e.g., images) to sub-directories
-
 - Use no spaces in file or folder names.
 Use a dash (-) instead of a space.
-
 - If you use `Visual Studio Code` to edit the Lab Wiki, you can view the source code side-by-side with the markdown Preview (after selecting the code type as `markdown`):
 ![Visual Studio Code](images/vsCode.png)
-
 - When making numbered (ordered) lists, just use `1. ` for all numbers.
 Markdown will make them sequential automatically.
 This is helpful if you go back and add additional entries later.
-
 - Use `"[XXX]"` to indicate an area that needs editing.
 This will allow the lab to `CTRL+F` for `"[XXX]"` and find areas that need editing.
-
 - To update the list of `R` packages that are installed for running the `.Rmd` files, update the `DESCRIPTION` file.
+- To preview the wiki before you commit changes to the site, you can create the `.html` files locally (in a folder called `_site`) by running the following command:
+   - `rmarkdown::render_site()`
 
 ## Updating
 

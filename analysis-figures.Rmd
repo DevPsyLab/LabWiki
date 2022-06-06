@@ -4,7 +4,8 @@ title: "Figures in R"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 # Picking a Chart Type

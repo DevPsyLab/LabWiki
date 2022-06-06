@@ -7,7 +7,8 @@ output:
 
 ```{r setup}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 # Methods

@@ -4,7 +4,8 @@ title: "School Readiness Study"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 The School Readiness Study is a longitudinal study that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.

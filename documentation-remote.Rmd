@@ -4,7 +4,8 @@ title: "Remote Participation"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 The following sections provide instructions for how to participate in the lab remotely.

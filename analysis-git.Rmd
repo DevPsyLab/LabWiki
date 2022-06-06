@@ -4,7 +4,8 @@ title: "Git, GitLab, and GitHub"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 For code below, Open Git (or Powershell, Terminal, Command Prompt, etc.) in directory of repository and use the relevant code.

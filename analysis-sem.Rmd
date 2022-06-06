@@ -4,7 +4,8 @@ title: "Structural Equation Modeling"
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)
+                      error = TRUE,
+                      comment = "")
 ```
 
 # Overview
