@@ -79,7 +79,9 @@ data.frame(psych::describe(df))
 ## Sample
 
 - Check the sample size (*N*)
-  - Is the sample size in the data the expected sample size? Are there cases (participants) that are missing? Are there cases that should not be there?
+  - Is the sample size in the data the expected sample size?
+  Are there cases (participants) that are missing?
+  Are there cases that should not be there?
   - Here is the sample size:
 ```{r}
 length(unique(df$ID))
@@ -157,6 +159,40 @@ df %>%
               values_from = value) %>% 
   rename(skewness = skew,
          kurtosis = kurtosi)
+```
+
+## Summary Statistics
+
+Add summary statistics to the bottom of correlation matrices in papers:
+
+```{r}
+summaryTable <- df %>% 
+  summarise_all(list(~ length(na.omit(.)),
+                     ~ mean(is.na(.)) * 100,
+                     ~ mean(., na.rm = TRUE),
+                     ~ sd(., na.rm = TRUE),
+                     ~ skew(., na.rm = TRUE),
+                     ~ kurtosi(., na.rm = TRUE))) %>% 
+  pivot_longer(cols = everything(),
+               names_to = c("variable","index"),
+               names_sep = "_") %>% 
+  pivot_wider(names_from = index,
+              values_from = value) %>% 
+  rename(n = length,
+         missingness = "*",
+         M = mean,
+         SD = sd,
+         skewness = skew,
+         kurtosis = kurtosi)
+
+summaryTableTransposed <- summaryTable[-1] %>% 
+  t() %>% 
+  as.data.frame() %>% 
+  setNames(summaryTable$variable) %>% 
+  round(., digits = 2)
+
+cor.table(df, type = "manuscript")
+summaryTableTransposed
 ```
 
 ## Distribution Plots
