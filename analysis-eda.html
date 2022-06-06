@@ -453,8 +453,8 @@ div.tocify {
 
 <div id="rationale" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Rationale</h1>
-<p>Important for understanding data, checking for data issues/errors, checking assumptions for different statistical models.</p>
-<p>LOOK AT YOUR DATA—most overlooked step in data analysis!</p>
+<p>Exploratory data analysis is important for understanding your data, checking for data issues/errors, and checking assumptions for different statistical models.</p>
+<p>LOOK AT YOUR DATA—this is one of the most overlooked steps in data analysis!</p>
 </div>
 <div id="preamble" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Preamble</h1>
@@ -473,62 +473,138 @@ library(&quot;nlme&quot;)
 library(&quot;effects&quot;)
 library(&quot;corrplot&quot;)
 library(&quot;ggplot2&quot;)
-library(&quot;psych&quot;)</code></pre>
+library(&quot;psych&quot;)
+library(&quot;tidyverse&quot;)
+library(&quot;purrr&quot;)</code></pre>
 </div>
 </div>
 <div id="simulate-data" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Simulate Data</h1>
-<pre class="r"><code>set.seed(52242)
-
-n &lt;- 1000
+<pre class="r"><code>n &lt;- 1000
 
 ID &lt;- rep(1:100, each = 10)
 predictor &lt;- rbeta(n, 1.5, 5) * 100
 outcome &lt;- predictor + rnorm(n, mean = 0, sd = 20) + 50
-number &lt;- sample(1:1000, replace = TRUE)
 
 predictorOverplot &lt;- sample(1:50, n, replace = TRUE)
 outcomeOverplot &lt;- predictorOverplot + sample(1:75, n, replace = TRUE)
+
+categorical1 &lt;- sample(1:5, size = n, replace = TRUE)
+categorical2 &lt;- sample(1:5, size = n, replace = TRUE)
 
 df &lt;- data.frame(ID = ID,
                  predictor = predictor,
                  outcome = outcome,
                  predictorOverplot = predictorOverplot,
-                 outcomeOverplot = outcomeOverplot)
+                 outcomeOverplot = outcomeOverplot,
+                 categorical1 = categorical1,
+                 categorical2 = categorical2)
 
 df[sample(1:n, size = 10), &quot;predictor&quot;] &lt;- NA
 df[sample(1:n, size = 10), &quot;outcome&quot;] &lt;- NA
 df[sample(1:n, size = 10), &quot;predictorOverplot&quot;] &lt;- NA
-df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
+df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA
+df[sample(1:n, size = 30), &quot;categorical1&quot;] &lt;- NA
+df[sample(1:n, size = 70), &quot;categorical2&quot;] &lt;- NA</code></pre>
 </div>
 <div id="descriptive-statistics" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Descriptive statistics</h1>
 <pre class="r"><code>data.frame(psych::describe(df))</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["vars"],"name":[1],"type":["int"],"align":["right"]},{"label":["n"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["trimmed"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["mad"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["range"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["skew"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["kurtosis"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["se"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1000","3":"50.50000","4":"28.88051","5":"50.50000","6":"50.50000","7":"37.06500","8":"1.0000000","9":"100.00000","10":"99.00000","11":"0.00000000","12":"-1.2038377","13":"0.9132820","_rn_":"ID"},{"1":"2","2":"990","3":"22.74381","4":"15.39936","5":"19.66110","6":"21.14228","7":"14.42451","8":"0.1076808","9":"81.69121","10":"81.58352","11":"0.96365975","12":"0.7063695","13":"0.4894239","_rn_":"predictor"},{"1":"3","2":"990","3":"73.23935","4":"25.83453","5":"73.06966","6":"72.89297","7":"25.86698","8":"5.8192503","9":"171.89645","10":"166.07720","11":"0.18060699","12":"0.1055579","13":"0.8210751","_rn_":"outcome"},{"1":"4","2":"990","3":"26.57980","4":"14.58517","5":"28.00000","6":"26.76010","7":"17.79120","8":"1.0000000","9":"50.00000","10":"49.00000","11":"-0.09276398","12":"-1.1840725","13":"0.4635471","_rn_":"predictorOverplot"},{"1":"5","2":"990","3":"63.69495","4":"26.36444","5":"62.50000","6":"63.54798","7":"28.91070","8":"6.0000000","9":"124.00000","10":"118.00000","11":"0.05072879","12":"-0.7882190","13":"0.8379170","_rn_":"outcomeOverplot"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["vars"],"name":[1],"type":["int"],"align":["right"]},{"label":["n"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["sd"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["trimmed"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["mad"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["range"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["skew"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["kurtosis"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["se"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"1000","3":"50.500000","4":"28.880514","5":"50.50000","6":"50.500000","7":"37.06500","8":"1.0000000","9":"100.00000","10":"99.00000","11":"0.00000000","12":"-1.2038377","13":"0.91328204","_rn_":"ID"},{"1":"2","2":"990","3":"22.901874","4":"15.348372","5":"20.40093","6":"21.503748","7":"16.14526","8":"0.3202479","9":"79.07299","10":"78.75274","11":"0.82835305","12":"0.4275343","13":"0.48780329","_rn_":"predictor"},{"1":"3","2":"990","3":"72.758230","4":"25.253026","5":"72.29956","6":"72.095959","7":"26.37487","8":"-6.4663094","9":"155.89341","10":"162.35972","11":"0.21427955","12":"-0.1111500","13":"0.80259385","_rn_":"outcome"},{"1":"4","2":"990","3":"26.246465","4":"14.127466","5":"27.00000","6":"26.335859","7":"17.79120","8":"1.0000000","9":"50.00000","10":"49.00000","11":"-0.04153690","12":"-1.1336208","13":"0.44900035","_rn_":"predictorOverplot"},{"1":"5","2":"990","3":"64.376768","4":"26.551674","5":"65.00000","6":"64.488636","7":"29.65200","8":"4.0000000","9":"124.00000","10":"120.00000","11":"-0.02820182","12":"-0.7887283","13":"0.84386758","_rn_":"outcomeOverplot"},{"1":"6","2":"970","3":"2.983505","4":"1.380139","5":"3.00000","6":"2.979381","7":"1.48260","8":"1.0000000","9":"5.00000","10":"4.00000","11":"0.02013322","12":"-1.2478693","13":"0.04431360","_rn_":"categorical1"},{"1":"7","2":"930","3":"2.975269","4":"1.413616","5":"3.00000","6":"2.969086","7":"1.48260","8":"1.0000000","9":"5.00000","10":"4.00000","11":"0.03454344","12":"-1.2908881","13":"0.04635431","_rn_":"categorical2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <div id="sample" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Sample</h2>
 <ul>
-<li>N—expected?</li>
-<li>Extent of missingness</li>
+<li>Check the sample size (<em>N</em>)
+<ul>
+<li>Is the sample size in the data the expected sample size? Are there cases (participants) that are missing? Are there cases that should not be there?</li>
+<li>Here is the sample size:</li>
+</ul></li>
 </ul>
+<pre class="r"><code>length(unique(df$ID))</code></pre>
+<pre><code>[1] 100</code></pre>
+<ul>
+<li>Check the extent of missingness
+<ul>
+<li>How much data are missing in the model variables—including the predictor, outcome, and covariates?</li>
+<li>Here are the proportion of missing data in each variable:</li>
+</ul></li>
+</ul>
+<pre class="r"><code>map(df, ~mean(is.na(.))) %&gt;% t %&gt;% t</code></pre>
+<pre><code>                  [,1]
+ID                0   
+predictor         0.01
+outcome           0.01
+predictorOverplot 0.01
+outcomeOverplot   0.01
+categorical1      0.03
+categorical2      0.07</code></pre>
 </div>
 <div id="distribution" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Distribution</h2>
 <ul>
-<li>Frequencies</li>
+<li>Frequencies
+<ul>
+<li>Examine the frequencies of categorical variables:</li>
+</ul></li>
 </ul>
+<pre class="r"><code>df %&gt;% 
+  select(categorical1, categorical2) %&gt;%
+  sapply(function(x) table(x, useNA = &quot;always&quot;)) %&gt;% 
+  t()</code></pre>
+<pre><code>               1   2   3   4   5 &lt;NA&gt;
+categorical1 182 207 204 199 178   30
+categorical2 189 188 195 173 185   70</code></pre>
 </div>
 <div id="central-tendency" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Central Tendency</h2>
 <ul>
 <li>Mean</li>
+</ul>
+<pre class="r"><code>colMeans(df, na.rm = TRUE)</code></pre>
+<pre><code>               ID         predictor           outcome predictorOverplot 
+        50.500000         22.901874         72.758230         26.246465 
+  outcomeOverplot      categorical1      categorical2 
+        64.376768          2.983505          2.975269 </code></pre>
+<ul>
 <li>Median</li>
+</ul>
+<pre class="r"><code>df %&gt;% 
+  summarise_all(list(~ median(., na.rm = TRUE)))</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["ID"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["predictor"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["outcome"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["predictorOverplot"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["outcomeOverplot"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["categorical1"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["categorical2"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"50.5","2":"20.40093","3":"72.29956","4":"27","5":"65","6":"3","7":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<ul>
 <li>Mode</li>
 </ul>
+<pre class="r"><code>df %&gt;% 
+  summarise_all(list(~ Mode(., multipleModes = &quot;mean&quot;)))</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["ID"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["predictor"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["outcome"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["predictorOverplot"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["outcomeOverplot"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["categorical1"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["categorical2"],"name":[7],"type":["dbl"],"align":["right"]}],"data":[{"1":"50.5","2":"22.90187","3":"72.75823","4":"27","5":"63.66667","6":"2","7":"3"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Compute all of these measures of central tendency:</p>
+<pre class="r"><code>df %&gt;% 
+  summarise_all(list(~ mean(., na.rm = TRUE),
+                     ~ median(., na.rm = TRUE),
+                     ~ Mode(., multipleModes = &quot;mean&quot;))) %&gt;% 
+  pivot_longer(cols = everything(),
+               names_to = c(&quot;variable&quot;,&quot;index&quot;),
+               names_sep = &quot;_&quot;) %&gt;% 
+  pivot_wider(names_from = index,
+              values_from = value) %&gt;% 
+  rename(mode = Mode)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["median"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["mode"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"ID","2":"50.500000","3":"50.50000","4":"50.50000"},{"1":"predictor","2":"22.901874","3":"20.40093","4":"22.90187"},{"1":"outcome","2":"72.758230","3":"72.29956","4":"72.75823"},{"1":"predictorOverplot","2":"26.246465","3":"27.00000","4":"27.00000"},{"1":"outcomeOverplot","2":"64.376768","3":"65.00000","4":"63.66667"},{"1":"categorical1","2":"2.983505","3":"3.00000","4":"2.00000"},{"1":"categorical2","2":"2.975269","3":"3.00000","4":"3.00000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <div id="dispersion" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Dispersion</h2>
@@ -538,6 +614,25 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 <li>Skewness</li>
 <li>Kurtosis</li>
 </ul>
+<p>Compute all of these measures of dispersion:</p>
+<pre class="r"><code>df %&gt;% 
+  summarise_all(list(~ sd(., na.rm = TRUE),
+                     ~ min(., na.rm = TRUE),
+                     ~ max(., na.rm = TRUE),
+                     ~ skew(., na.rm = TRUE),
+                     ~ kurtosi(., na.rm = TRUE))) %&gt;% 
+  pivot_longer(cols = everything(),
+               names_to = c(&quot;variable&quot;,&quot;index&quot;),
+               names_sep = &quot;_&quot;) %&gt;% 
+  pivot_wider(names_from = index,
+              values_from = value) %&gt;% 
+  rename(skewness = skew,
+         kurtosis = kurtosi)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["sd"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["min"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["max"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["skewness"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["kurtosis"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"ID","2":"28.880514","3":"1.0000000","4":"100.00000","5":"0.00000000","6":"-1.2038377"},{"1":"predictor","2":"15.348372","3":"0.3202479","4":"79.07299","5":"0.82835305","6":"0.4275343"},{"1":"outcome","2":"25.253026","3":"-6.4663094","4":"155.89341","5":"0.21427955","6":"-0.1111500"},{"1":"predictorOverplot","2":"14.127466","3":"1.0000000","4":"50.00000","5":"-0.04153690","6":"-1.1336208"},{"1":"outcomeOverplot","2":"26.551674","3":"4.0000000","4":"124.00000","5":"-0.02820182","6":"-0.7887283"},{"1":"categorical1","2":"1.380139","3":"1.0000000","4":"5.00000","5":"0.02013322","6":"-1.2478693"},{"1":"categorical2","2":"1.413616","3":"1.0000000","4":"5.00000","5":"0.03454344","6":"-1.2908881"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 <div id="distribution-plots" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Distribution Plots</h2>
@@ -547,15 +642,15 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 <div id="base-r" class="section level4" number="4.5.1.1">
 <h4><span class="header-section-number">4.5.1.1</span> Base R</h4>
 <pre class="r"><code>hist(df$outcome)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="ggplot2" class="section level4" number="4.5.1.2">
 <h4><span class="header-section-number">4.5.1.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = outcome)) +
   geom_histogram(color = 1)</code></pre>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 </div>
 <div id="histogram-overlaid-with-density-plot-and-rug-plot" class="section level3" number="4.5.2">
@@ -565,7 +660,7 @@ df[sample(1:n, size = 10), &quot;outcomeOverplot&quot;] &lt;- NA</code></pre>
 <pre class="r"><code>hist(df$outcome, prob = TRUE)
 lines(density(df$outcome, na.rm = TRUE))
 rug(df$outcome)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-1" class="section level4" number="4.5.2.2">
 <h4><span class="header-section-number">4.5.2.2</span> <code>ggplot2</code></h4>
@@ -573,10 +668,10 @@ rug(df$outcome)</code></pre>
   geom_histogram(aes(y = ..density..), color = 1) +
   geom_density() +
   geom_rug()</code></pre>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_bin).</code></pre>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 </div>
 <div id="density-plot" class="section level3" number="4.5.3">
@@ -584,14 +679,14 @@ rug(df$outcome)</code></pre>
 <div id="base-r-2" class="section level4" number="4.5.3.1">
 <h4><span class="header-section-number">4.5.3.1</span> Base R</h4>
 <pre class="r"><code>plot(density(df$outcome, na.rm = TRUE))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-2" class="section level4" number="4.5.3.2">
 <h4><span class="header-section-number">4.5.3.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = outcome)) +
   geom_density()</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 </div>
 <div id="box-and-whisker-plot-boxplot" class="section level3" number="4.5.4">
@@ -599,26 +694,29 @@ rug(df$outcome)</code></pre>
 <div id="base-r-3" class="section level4" number="4.5.4.1">
 <h4><span class="header-section-number">4.5.4.1</span> Base R</h4>
 <pre class="r"><code>boxplot(df$outcome, horizontal = TRUE)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="ggplot2-3" class="section level4" number="4.5.4.2">
 <h4><span class="header-section-number">4.5.4.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = outcome)) +
   geom_boxplot()</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_boxplot).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-12-1.png" width="672" /> ### Violin plot</p>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
-<div id="base-r-4" class="section level4" number="4.5.4.3">
-<h4><span class="header-section-number">4.5.4.3</span> Base R</h4>
+</div>
+<div id="violin-plot" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> Violin plot</h3>
+<div id="base-r-4" class="section level4" number="4.5.5.1">
+<h4><span class="header-section-number">4.5.5.1</span> Base R</h4>
 <pre class="r"><code>vioplot(na.omit(df$outcome), horizontal = TRUE)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
-<div id="ggplot2-4" class="section level4" number="4.5.4.4">
-<h4><span class="header-section-number">4.5.4.4</span> <code>ggplot2</code></h4>
+<div id="ggplot2-4" class="section level4" number="4.5.5.2">
+<h4><span class="header-section-number">4.5.5.2</span> <code>ggplot2</code></h4>
 <pre class="r"><code>ggplot(df, aes(x = &quot;&quot;, y = outcome)) +
   geom_violin()</code></pre>
-<pre><code>## Warning: Removed 10 rows containing non-finite values (stat_ydensity).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<pre><code>Warning: Removed 10 rows containing non-finite values (stat_ydensity).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -630,22 +728,22 @@ rug(df$outcome)</code></pre>
 <pre class="r"><code>ggplot(df, aes(x = predictorOverplot, y = outcomeOverplot)) + 
   geom_point(position = &quot;jitter&quot;, alpha = 0.3) + 
   geom_density2d()</code></pre>
-<pre><code>## Warning: Removed 20 rows containing non-finite values (stat_density2d).</code></pre>
-<pre><code>## Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<pre><code>Warning: Removed 20 rows containing non-finite values (stat_density2d).</code></pre>
+<pre><code>Warning: Removed 20 rows containing missing values (geom_point).</code></pre>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <pre class="r"><code>smoothScatter(df$predictorOverplot, df$outcomeOverplot)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-23-2.png" width="672" /></p>
 </div>
 <div id="data-ellipse" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Data Ellipse</h2>
 <pre class="r"><code>df_nomissing &lt;- na.omit(df[,c(&quot;predictor&quot;,&quot;outcome&quot;)])
 dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 </div>
 <div id="visually-weighted-regression" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Visually Weighted Regression</h2>
 <pre class="r"><code>vwReg(outcome ~ predictor, data = df)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 </div>
 </div>
 <div id="basic-inferential-statistics" class="section level1" number="6">
@@ -676,100 +774,100 @@ dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))<
 <div id="pearson-correlations" class="section level4" number="6.3.1.1">
 <h4><span class="header-section-number">6.3.1.1</span> Pearson Correlations</h4>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)])</code></pre>
-<pre><code>##                        predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor.r              1.00  .63***              -.03             .00
-## 2. sig                        NA     .00               .37             .93
-## 3. n                         990     981               980             980
-## 4. outcome.r              .63***    1.00              -.01            -.02
-## 5. sig                       .00      NA               .81             .51
-## 6. n                         981     990               980             980
-## 7. predictorOverplot.r      -.03    -.01              1.00          .59***
-## 8. sig                       .37     .81                NA             .00
-## 9. n                         980     980               990             980
-## 10. outcomeOverplot.r        .00    -.02            .59***            1.00
-## 11. sig                      .93     .51               .00              NA
-## 12. n                        980     980               980             990</code></pre>
+<pre><code>                       predictor outcome predictorOverplot outcomeOverplot
+1. predictor.r              1.00  .59***              -.01            -.03
+2. sig                        NA     .00               .84             .38
+3. n                         990     980               980             980
+4. outcome.r              .59***    1.00              -.01            -.01
+5. sig                       .00      NA               .83             .81
+6. n                         980     990               980             980
+7. predictorOverplot.r      -.01    -.01              1.00          .55***
+8. sig                       .84     .83                NA             .00
+9. n                         980     980               990             980
+10. outcomeOverplot.r       -.03    -.01            .55***            1.00
+11. sig                      .38     .81               .00              NA
+12. n                        980     980               980             990</code></pre>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], type = &quot;manuscript&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor              1.00                                          
-## 2. outcome              .63***    1.00                                  
-## 3. predictorOverplot      -.03    -.01              1.00                
-## 4. outcomeOverplot         .00    -.02            .59***            1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot outcomeOverplot
+1. predictor              1.00                                          
+2. outcome              .59***    1.00                                  
+3. predictorOverplot      -.01    -.01              1.00                
+4. outcomeOverplot        -.03    -.01            .55***            1.00</code></pre>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], type = &quot;manuscriptBig&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor              1.00                                          
-## 2. outcome                 .63    1.00                                  
-## 3. predictorOverplot      -.03    -.01              1.00                
-## 4. outcomeOverplot         .00    -.02               .59            1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot outcomeOverplot
+1. predictor              1.00                                          
+2. outcome                 .59    1.00                                  
+3. predictorOverplot      -.01    -.01              1.00                
+4. outcomeOverplot        -.03    -.01               .55            1.00</code></pre>
 </div>
 <div id="spearman-correlations" class="section level4" number="6.3.1.2">
 <h4><span class="header-section-number">6.3.1.2</span> Spearman Correlations</h4>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], correlation = &quot;spearman&quot;)</code></pre>
-<pre><code>##                        predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor.r              1.00  .59***              -.03             .01
-## 2. sig                        NA     .00               .28             .86
-## 3. n                         990     981               980             980
-## 4. outcome.r              .59***    1.00               .00            -.02
-## 5. sig                       .00      NA              1.00             .46
-## 6. n                         981     990               980             980
-## 7. predictorOverplot.r      -.03     .00              1.00          .58***
-## 8. sig                       .28    1.00                NA             .00
-## 9. n                         980     980               990             980
-## 10. outcomeOverplot.r        .01    -.02            .58***            1.00
-## 11. sig                      .86     .46               .00              NA
-## 12. n                        980     980               980             990</code></pre>
+<pre><code>                       predictor outcome predictorOverplot outcomeOverplot
+1. predictor.r              1.00  .56***               .00            -.03
+2. sig                        NA     .00               .98             .30
+3. n                         990     980               980             980
+4. outcome.r              .56***    1.00               .00             .01
+5. sig                       .00      NA               .96             .82
+6. n                         980     990               980             980
+7. predictorOverplot.r       .00     .00              1.00          .53***
+8. sig                       .98     .96                NA             .00
+9. n                         980     980               990             980
+10. outcomeOverplot.r       -.03     .01            .53***            1.00
+11. sig                      .30     .82               .00              NA
+12. n                        980     980               980             990</code></pre>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], type = &quot;manuscript&quot;, correlation = &quot;spearman&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor              1.00                                          
-## 2. outcome              .59***    1.00                                  
-## 3. predictorOverplot      -.03     .00              1.00                
-## 4. outcomeOverplot         .01    -.02            .58***            1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot outcomeOverplot
+1. predictor              1.00                                          
+2. outcome              .56***    1.00                                  
+3. predictorOverplot       .00     .00              1.00                
+4. outcomeOverplot        -.03     .01            .53***            1.00</code></pre>
 <pre class="r"><code>cor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], type = &quot;manuscriptBig&quot;, correlation = &quot;spearman&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot outcomeOverplot
-## 1. predictor              1.00                                          
-## 2. outcome                 .59    1.00                                  
-## 3. predictorOverplot      -.03     .00              1.00                
-## 4. outcomeOverplot         .01    -.02               .58            1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot outcomeOverplot
+1. predictor              1.00                                          
+2. outcome                 .56    1.00                                  
+3. predictorOverplot       .00     .00              1.00                
+4. outcomeOverplot        -.03     .01               .53            1.00</code></pre>
 </div>
 <div id="partial-correlations" class="section level4" number="6.3.1.3">
 <h4><span class="header-section-number">6.3.1.3</span> Partial Correlations</h4>
 <pre class="r"><code>partialcor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;)], z = df[,c(&quot;outcomeOverplot&quot;)])</code></pre>
-<pre><code>##                        predictor outcome predictorOverplot
-## 1. predictor.r              1.00  .63***              -.03
-## 2. sig                        NA     .00               .29
-## 3. n                         980     971               970
-## 4. outcome.r              .63***    1.00               .01
-## 5. sig                       .00      NA               .86
-## 6. n                         971     980               970
-## 7. predictorOverplot.r      -.03     .01              1.00
-## 8. sig                       .29     .86                NA
-## 9. n                         970     970               980</code></pre>
+<pre><code>                       predictor outcome predictorOverplot
+1. predictor.r              1.00  .59***               .01
+2. sig                        NA     .00               .74
+3. n                         980     970               970
+4. outcome.r              .59***    1.00               .00
+5. sig                       .00      NA               .92
+6. n                         970     980               970
+7. predictorOverplot.r       .01     .00              1.00
+8. sig                       .74     .92                NA
+9. n                         970     970               980</code></pre>
 <pre class="r"><code>partialcor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;)], z = df[,c(&quot;outcomeOverplot&quot;)], type = &quot;manuscript&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot
-## 1. predictor              1.00                          
-## 2. outcome              .63***    1.00                  
-## 3. predictorOverplot      -.03     .01              1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot
+1. predictor              1.00                          
+2. outcome              .59***    1.00                  
+3. predictorOverplot       .01     .00              1.00</code></pre>
 <pre class="r"><code>partialcor.table(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;)], z = df[,c(&quot;outcomeOverplot&quot;)], type = &quot;manuscriptBig&quot;)</code></pre>
-<pre><code>##                      predictor outcome predictorOverplot
-## 1. predictor              1.00                          
-## 2. outcome                 .63    1.00                  
-## 3. predictorOverplot      -.03     .01              1.00</code></pre>
+<pre><code>                     predictor outcome predictorOverplot
+1. predictor              1.00                          
+2. outcome                 .59    1.00                  
+3. predictorOverplot       .01     .00              1.00</code></pre>
 </div>
 </div>
 <div id="correlogram" class="section level3" number="6.3.2">
 <h3><span class="header-section-number">6.3.2</span> Correlogram</h3>
 <pre class="r"><code>corrplot(cor(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)], use = &quot;pairwise.complete.obs&quot;))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 </div>
 <div id="scatterplot-matrix" class="section level3" number="6.3.3">
 <h3><span class="header-section-number">6.3.3</span> Scatterplot matrix</h3>
 <pre class="r"><code>scatterplotMatrix(~ predictor + outcome + predictorOverplot + outcomeOverplot, data = df, use = &quot;pairwise.complete.obs&quot;)</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 </div>
 <div id="pairs-panels" class="section level3" number="6.3.4">
 <h3><span class="header-section-number">6.3.4</span> Pairs panels</h3>
 <pre class="r"><code>pairs.panels(df[,c(&quot;predictor&quot;,&quot;outcome&quot;,&quot;predictorOverplot&quot;,&quot;outcomeOverplot&quot;)])</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 </div>
 </div>
 <div id="effect-plots" class="section level2" number="6.4">
@@ -778,101 +876,107 @@ dataEllipse(df_nomissing$predictor, df_nomissing$outcome, levels = c(0.5, .95))<
 <h3><span class="header-section-number">6.4.1</span> Multiple Regression Model</h3>
 <pre class="r"><code>multipleRegressionModel &lt;- lm(outcome ~ predictor + predictorOverplot, data = df, na.action = &quot;na.exclude&quot;)
 allEffects(multipleRegressionModel)</code></pre>
-<pre><code>##  model: outcome ~ predictor + predictorOverplot
-## 
-##  predictor effect
-## predictor
-##       0.1        20        40        60        80 
-##  49.17748  70.48444  91.89847 113.31249 134.72652 
-## 
-##  predictorOverplot effect
-## predictorOverplot
-##        1       10       30       40       50 
-## 72.81957 73.01843 73.46034 73.68130 73.90226</code></pre>
+<pre><code> model: outcome ~ predictor + predictorOverplot
+
+ predictor effect
+predictor
+      0.3        20        40        60        80 
+ 50.87508  69.99219  89.40041 108.80864 128.21687 
+
+ predictorOverplot effect
+predictorOverplot
+       1       10       30       40       50 
+73.11207 73.04042 72.88121 72.80160 72.72199 </code></pre>
 <pre class="r"><code>plot(allEffects(multipleRegressionModel))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 </div>
 <div id="multilevel-regression-model" class="section level3" number="6.4.2">
 <h3><span class="header-section-number">6.4.2</span> Multilevel Regression Model</h3>
 <pre class="r"><code>multilevelRegressionModel &lt;- lme(outcome ~ predictor + predictorOverplot, random = ~ 1|ID, method = &quot;ML&quot;, data = df, na.action = &quot;na.exclude&quot;)
 allEffects(multilevelRegressionModel)</code></pre>
-<pre><code>##  model: outcome ~ predictor + predictorOverplot
-## 
-##  predictor effect
-## predictor
-##       0.1        20        40        60        80 
-##  49.17748  70.48444  91.89847 113.31249 134.72652 
-## 
-##  predictorOverplot effect
-## predictorOverplot
-##        1       10       30       40       50 
-## 72.81957 73.01843 73.46034 73.68130 73.90226</code></pre>
+<pre><code> model: outcome ~ predictor + predictorOverplot
+
+ predictor effect
+predictor
+      0.3        20        40        60        80 
+ 50.87508  69.99219  89.40041 108.80864 128.21687 
+
+ predictorOverplot effect
+predictorOverplot
+       1       10       30       40       50 
+73.11207 73.04042 72.88121 72.80160 72.72199 </code></pre>
 <pre class="r"><code>plot(allEffects(multilevelRegressionModel))</code></pre>
-<p><img src="analysis-eda_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="analysis-eda_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 </div>
 </div>
 </div>
 <div id="session-info" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Session Info</h1>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.2.0 (2022-04-22)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.4 LTS
-## 
-## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-## 
-## locale:
-##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-##  [1] psych_2.2.5            ggplot2_3.3.6          corrplot_0.92         
-##  [4] effects_4.2-1          nlme_3.1-157           ellipse_0.4.3         
-##  [7] vioplot_0.3.7          zoo_1.8-10             sm_2.2-5.7            
-## [10] car_3.0-13             carData_3.0-5          petersenlab_0.1.2-9006
-## 
-## loaded via a namespace (and not attached):
-##  [1] insight_0.17.1      RColorBrewer_1.1-3  tools_4.2.0        
-##  [4] backports_1.4.1     bslib_0.3.1         utf8_1.2.2         
-##  [7] R6_2.5.1            KernSmooth_2.23-20  rpart_4.1.16       
-## [10] Hmisc_4.7-0         DBI_1.1.2           colorspace_2.0-3   
-## [13] nnet_7.3-17         withr_2.5.0         tidyselect_1.1.2   
-## [16] gridExtra_2.3       mnormt_2.0.2        compiler_4.2.0     
-## [19] cli_3.3.0           htmlTable_2.4.0     isoband_0.2.5      
-## [22] mix_1.0-11          labeling_0.4.2      sass_0.4.1         
-## [25] scales_1.2.0        checkmate_2.1.0     mvtnorm_1.1-3      
-## [28] stringr_1.4.0       digest_0.6.29       pbivnorm_0.6.0     
-## [31] foreign_0.8-82      minqa_1.2.4         rmarkdown_2.14     
-## [34] base64enc_0.1-3     jpeg_0.1-9          pkgconfig_2.0.3    
-## [37] htmltools_0.5.2     lme4_1.1-29         highr_0.9          
-## [40] fastmap_1.1.0       htmlwidgets_1.5.4   rlang_1.0.2        
-## [43] rstudioapi_0.13     farver_2.1.0        jquerylib_0.1.4    
-## [46] generics_0.1.2      jsonlite_1.8.0      dplyr_1.0.9        
-## [49] magrittr_2.0.3      Formula_1.2-4       Matrix_1.4-1       
-## [52] Rcpp_1.0.8.3        munsell_0.5.0       fansi_1.0.3        
-## [55] abind_1.4-5         lifecycle_1.0.1     stringi_1.7.6      
-## [58] yaml_2.3.5          MASS_7.3-56         plyr_1.8.7         
-## [61] lavaan_0.6-11       grid_4.2.0          parallel_4.2.0     
-## [64] crayon_1.5.1        lattice_0.20-45     splines_4.2.0      
-## [67] tmvnsim_1.0-2       knitr_1.39          pillar_1.7.0       
-## [70] boot_1.3-28         estimability_1.3    reshape2_1.4.4     
-## [73] stats4_4.2.0        glue_1.6.2          evaluate_0.15      
-## [76] mitools_2.4         latticeExtra_0.6-29 data.table_1.14.2  
-## [79] png_0.1-7           vctrs_0.4.1         nloptr_2.0.3       
-## [82] gtable_0.3.0        purrr_0.3.4         xfun_0.31          
-## [85] xtable_1.8-4        survey_4.1-1        survival_3.3-1     
-## [88] viridisLite_0.4.0   tibble_3.1.7        cluster_2.1.3      
-## [91] ellipsis_0.3.2</code></pre>
+<pre><code>R version 4.2.0 (2022-04-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] forcats_0.5.1          stringr_1.4.0          dplyr_1.0.9           
+ [4] purrr_0.3.4            readr_2.1.2            tidyr_1.2.0           
+ [7] tibble_3.1.7           tidyverse_1.3.1        psych_2.2.5           
+[10] ggplot2_3.3.6          corrplot_0.92          effects_4.2-1         
+[13] nlme_3.1-157           ellipse_0.4.3          vioplot_0.3.7         
+[16] zoo_1.8-10             sm_2.2-5.7             car_3.0-13            
+[19] carData_3.0-5          petersenlab_0.1.2-9006
+
+loaded via a namespace (and not attached):
+  [1] minqa_1.2.4         colorspace_2.0-3    ellipsis_0.3.2     
+  [4] estimability_1.3    htmlTable_2.4.0     base64enc_0.1-3    
+  [7] fs_1.5.2            mix_1.0-11          rstudioapi_0.13    
+ [10] farver_2.1.0        lavaan_0.6-11       fansi_1.0.3        
+ [13] mvtnorm_1.1-3       lubridate_1.8.0     xml2_1.3.3         
+ [16] splines_4.2.0       mnormt_2.0.2        knitr_1.39         
+ [19] Formula_1.2-4       jsonlite_1.8.0      nloptr_2.0.3       
+ [22] broom_0.8.0         cluster_2.1.3       dbplyr_2.2.0       
+ [25] png_0.1-7           compiler_4.2.0      httr_1.4.3         
+ [28] backports_1.4.1     assertthat_0.2.1    Matrix_1.4-1       
+ [31] fastmap_1.1.0       survey_4.1-1        cli_3.3.0          
+ [34] htmltools_0.5.2     tools_4.2.0         gtable_0.3.0       
+ [37] glue_1.6.2          reshape2_1.4.4      Rcpp_1.0.8.3       
+ [40] cellranger_1.1.0    jquerylib_0.1.4     vctrs_0.4.1        
+ [43] insight_0.17.1      xfun_0.31           lme4_1.1-29        
+ [46] rvest_1.0.2         lifecycle_1.0.1     MASS_7.3-56        
+ [49] scales_1.2.0        hms_1.1.1           parallel_4.2.0     
+ [52] RColorBrewer_1.1-3  yaml_2.3.5          gridExtra_2.3      
+ [55] sass_0.4.1          rpart_4.1.16        latticeExtra_0.6-29
+ [58] stringi_1.7.6       highr_0.9           checkmate_2.1.0    
+ [61] boot_1.3-28         rlang_1.0.2         pkgconfig_2.0.3    
+ [64] evaluate_0.15       lattice_0.20-45     labeling_0.4.2     
+ [67] htmlwidgets_1.5.4   tidyselect_1.1.2    plyr_1.8.7         
+ [70] magrittr_2.0.3      R6_2.5.1            generics_0.1.2     
+ [73] Hmisc_4.7-0         DBI_1.1.2           pillar_1.7.0       
+ [76] haven_2.5.0         foreign_0.8-82      withr_2.5.0        
+ [79] survival_3.3-1      abind_1.4-5         nnet_7.3-17        
+ [82] modelr_0.1.8        crayon_1.5.1        KernSmooth_2.23-20 
+ [85] utf8_1.2.2          tmvnsim_1.0-2       tzdb_0.3.0         
+ [88] rmarkdown_2.14      jpeg_0.1-9          isoband_0.2.5      
+ [91] grid_4.2.0          readxl_1.4.0        data.table_1.14.2  
+ [94] pbivnorm_0.6.0      reprex_2.0.1        digest_0.6.29      
+ [97] xtable_1.8-4        stats4_4.2.0        munsell_0.5.0      
+[100] viridisLite_0.4.0   bslib_0.3.1         mitools_2.4        </code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBSYXRpb25hbGUKCkltcG9ydGFudCBmb3IgdW5kZXJzdGFuZGluZyBkYXRhLCBjaGVja2luZyBmb3IgZGF0YSBpc3N1ZXMvZXJyb3JzLCBjaGVja2luZyBhc3N1bXB0aW9ucyBmb3IgZGlmZmVyZW50IHN0YXRpc3RpY2FsIG1vZGVscy4KCkxPT0sgQVQgWU9VUiBEQVRB4oCUbW9zdCBvdmVybG9va2VkIHN0ZXAgaW4gZGF0YSBhbmFseXNpcyEKCiMgUHJlYW1ibGUKCiMjIEluc3RhbGwgTGlicmFyaWVzCgpgYGB7cn0KI2luc3RhbGwucGFja2FnZXMoInJlbW90ZXMiKQojcmVtb3Rlczo6aW5zdGFsbF9naXQoImh0dHBzOi8vcmVzZWFyY2gtZ2l0LnVpb3dhLmVkdS9QZXRlcnNlbkxhYi9wZXRlcnNlbmxhYi5naXQiKQpgYGAKCiMjIExvYWQgTGlicmFyaWVzCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFLCB3YXJuaW5nID0gRkFMU0V9CmxpYnJhcnkoInBldGVyc2VubGFiIikKbGlicmFyeSgiY2FyIikKbGlicmFyeSgidmlvcGxvdCIpCmxpYnJhcnkoImVsbGlwc2UiKQpsaWJyYXJ5KCJubG1lIikKbGlicmFyeSgiZWZmZWN0cyIpCmxpYnJhcnkoImNvcnJwbG90IikKbGlicmFyeSgiZ2dwbG90MiIpCmxpYnJhcnkoInBzeWNoIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKCm4gPC0gMTAwMAoKSUQgPC0gcmVwKDE6MTAwLCBlYWNoID0gMTApCnByZWRpY3RvciA8LSByYmV0YShuLCAxLjUsIDUpICogMTAwCm91dGNvbWUgPC0gcHJlZGljdG9yICsgcm5vcm0obiwgbWVhbiA9IDAsIHNkID0gMjApICsgNTAKbnVtYmVyIDwtIHNhbXBsZSgxOjEwMDAsIHJlcGxhY2UgPSBUUlVFKQoKcHJlZGljdG9yT3ZlcnBsb3QgPC0gc2FtcGxlKDE6NTAsIG4sIHJlcGxhY2UgPSBUUlVFKQpvdXRjb21lT3ZlcnBsb3QgPC0gcHJlZGljdG9yT3ZlcnBsb3QgKyBzYW1wbGUoMTo3NSwgbiwgcmVwbGFjZSA9IFRSVUUpCgpkZiA8LSBkYXRhLmZyYW1lKElEID0gSUQsCiAgICAgICAgICAgICAgICAgcHJlZGljdG9yID0gcHJlZGljdG9yLAogICAgICAgICAgICAgICAgIG91dGNvbWUgPSBvdXRjb21lLAogICAgICAgICAgICAgICAgIHByZWRpY3Rvck92ZXJwbG90ID0gcHJlZGljdG9yT3ZlcnBsb3QsCiAgICAgICAgICAgICAgICAgb3V0Y29tZU92ZXJwbG90ID0gb3V0Y29tZU92ZXJwbG90KQoKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3RvciJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSAxMCksICJvdXRjb21lIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgInByZWRpY3Rvck92ZXJwbG90Il0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWVPdmVycGxvdCJdIDwtIE5BCmBgYAoKIyBEZXNjcmlwdGl2ZSBzdGF0aXN0aWNzCgpgYGB7cn0KZGF0YS5mcmFtZShwc3ljaDo6ZGVzY3JpYmUoZGYpKQpgYGAKCiMjIFNhbXBsZQoKLSBO4oCUZXhwZWN0ZWQ/Ci0gRXh0ZW50IG9mIG1pc3NpbmduZXNzCgojIyBEaXN0cmlidXRpb24KCi0gRnJlcXVlbmNpZXMKCiMjIENlbnRyYWwgVGVuZGVuY3kKCi0gTWVhbgotIE1lZGlhbgotIE1vZGUKCiMjIERpc3BlcnNpb24KCi0gU3RhbmRhcmQgZGV2aWF0aW9uCi0gT2JzZXJ2ZWQgbWluaW11bSBhbmQgbWF4aW11bSAodmlzLcOgLXZpcyBwb3NzaWJsZSBtaW5pbXVtIGFuZCBtYXhpbXVtKQotIFNrZXduZXNzCi0gS3VydG9zaXMKCiMjIERpc3RyaWJ1dGlvbiBQbG90cwoKU2VlIFtoZXJlXShhbmFseXNpcy1maWd1cmVzLmh0bWwpIGZvciByZXNvdXJjZXMgZm9yIGNyZWF0aW5nIGZpZ3VyZXMgaW4gUi4KCiMjIyBIaXN0b2dyYW0KCiMjIyMgQmFzZSBSCgpgYGB7cn0KaGlzdChkZiRvdXRjb21lKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9oaXN0b2dyYW0oY29sb3IgPSAxKQpgYGAKCiMjIyBIaXN0b2dyYW0gb3ZlcmxhaWQgd2l0aCBkZW5zaXR5IHBsb3QgYW5kIHJ1ZyBwbG90CgojIyMjIEJhc2UgUgoKYGBge3J9Cmhpc3QoZGYkb3V0Y29tZSwgcHJvYiA9IFRSVUUpCmxpbmVzKGRlbnNpdHkoZGYkb3V0Y29tZSwgbmEucm0gPSBUUlVFKSkKcnVnKGRmJG91dGNvbWUpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gb3V0Y29tZSkpICsKICBnZW9tX2hpc3RvZ3JhbShhZXMoeSA9IC4uZGVuc2l0eS4uKSwgY29sb3IgPSAxKSArCiAgZ2VvbV9kZW5zaXR5KCkgKwogIGdlb21fcnVnKCkKYGBgCgojIyMgRGVuc2l0eSBQbG90CgojIyMjIEJhc2UgUgoKYGBge3J9CnBsb3QoZGVuc2l0eShkZiRvdXRjb21lLCBuYS5ybSA9IFRSVUUpKQpgYGAKCiMjIyMgYGdncGxvdDJgCgpgYGB7cn0KZ2dwbG90KGRmLCBhZXMoeCA9IG91dGNvbWUpKSArCiAgZ2VvbV9kZW5zaXR5KCkKYGBgCgojIyMgQm94IGFuZCB3aGlza2VyIHBsb3QgKGJveHBsb3QpCgojIyMjIEJhc2UgUgoKYGBge3J9CmJveHBsb3QoZGYkb3V0Y29tZSwgaG9yaXpvbnRhbCA9IFRSVUUpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gb3V0Y29tZSkpICsKICBnZW9tX2JveHBsb3QoKQpgYGAKIyMjIFZpb2xpbiBwbG90CgojIyMjIEJhc2UgUgoKYGBge3J9CnZpb3Bsb3QobmEub21pdChkZiRvdXRjb21lKSwgaG9yaXpvbnRhbCA9IFRSVUUpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gIiIsIHkgPSBvdXRjb21lKSkgKwogIGdlb21fdmlvbGluKCkKYGBgCgojIEJpdmFyaWF0ZSBBc3NvY2lhdGlvbnMKCiMjIEhpZ2ggRGVuc2l0eSBTY2F0dGVycGxvdAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBwcmVkaWN0b3JPdmVycGxvdCwgeSA9IG91dGNvbWVPdmVycGxvdCkpICsgCiAgZ2VvbV9wb2ludChwb3NpdGlvbiA9ICJqaXR0ZXIiLCBhbHBoYSA9IDAuMykgKyAKICBnZW9tX2RlbnNpdHkyZCgpCgpzbW9vdGhTY2F0dGVyKGRmJHByZWRpY3Rvck92ZXJwbG90LCBkZiRvdXRjb21lT3ZlcnBsb3QpCmBgYAoKIyMgRGF0YSBFbGxpcHNlCgpgYGB7cn0KZGZfbm9taXNzaW5nIDwtIG5hLm9taXQoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiKV0pCmRhdGFFbGxpcHNlKGRmX25vbWlzc2luZyRwcmVkaWN0b3IsIGRmX25vbWlzc2luZyRvdXRjb21lLCBsZXZlbHMgPSBjKDAuNSwgLjk1KSkKYGBgCgojIyBWaXN1YWxseSBXZWlnaHRlZCBSZWdyZXNzaW9uCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFLCByZXN1bHRzID0gImhpZGUifQp2d1JlZyhvdXRjb21lIH4gcHJlZGljdG9yLCBkYXRhID0gZGYpCmBgYAoKIyBCYXNpYyBpbmZlcmVudGlhbCBzdGF0aXN0aWNzCgojIyBTdGF0aXN0aWNhbCBkZWNpc2lvbiB0cmVlCgojIyBUZXN0cyBvZiBzeXN0ZW1hdGljIG1pc3NpbmduZXNzIChpLmUuLCB3aGV0aGVyIG1pc3NpbmduZXNzIG9uIGEgdmFyaWFibGUgZGVwZW5kcyBvbiBvdGhlciB2YXJpYWJsZXMpCgotIEdlbmVyYWxseSB0ZXN0OgogICAgLSBXaGV0aGVyIG91dGNvbWUgdmFyaWFibGUocykgZGlmZmVyIGFzIGEgZnVuY3Rpb24gb2YgYW55IG1vZGVsIHZhcmlhYmxlcyAocHJlZGljdG9ycyBhbmQgY292YXJpYXRlcykgYW5kIGFzIGEgZnVuY3Rpb24gb2YgYW55IGtleSBkZW1vZ3JhcGhpYyBjaGFyYWN0ZXJpc3RpY3MgKGUuZy4sIHNleCwgZXRobmljaXR5LCBzb2Npb2Vjb25vbWljIHN0YXR1cykKICAgIC0gV2hldGhlciBmb2NhbCBwcmVkaWN0b3IgdmFyaWFibGUocykgZGlmZmVyIGFzIGEgZnVuY3Rpb24gb2YgYW55IG1vZGVsIHZhcmlhYmxlcyAoaW5jbHVkaW5nIG91dGNvbWUgdmFyaWFibGUpIGFuZCBhcyBhIGZ1bmN0aW9uIG9mIGFueSBrZXkgZGVtb2dyYXBoaWMgY2hhcmFjdGVyaXN0aWNzCi0gRm9yIGluc3RhbmNlOgogICAgLSBXaGV0aGVyIG1hbGVzIGFyZSBtb3JlIGxpa2VseSB0aGFuIGdpcmxzIHRvIGJlIG1pc3Npbmcgc2NvcmVzIG9uIHRoZSBkZXBlbmRlbnQgdmFyaWFibGUKICAgIC0gV2hldGhlciBsb25naXR1ZGluYWwgYXR0cml0aW9uIGlzIGdyZWF0ZXIgaW4gbG93ZXIgc29jaW9lY29ub21pYyBzdGF0dXMgZmFtaWxpZXMKLSBJZiBtaXNzaW5nbmVzcyBkaWZmZXJzIHN5c3RlbWF0aWNhbGx5IGFzIGEgZnVuY3Rpb24gb2Ygb3RoZXIgdmFyaWFibGVzLCBjYW4gaW5jbHVkZSB0aGF0IHZhcmlhYmxlIGFzIGEgY29udHJvbCB2YXJpYWJsZSBpbiBtb2RlbHMsIGFuZC9vciBjYW4gaW5jbHVkZSB0aGF0IHZhcmlhYmxlIGluIG11bHRpcGxlIGltcHV0YXRpb24gdG8gaW5mb3JtIGltcHV0ZWQgc2NvcmVzIGZvciBtaXNzaW5nIHZhbHVlcwoKIyMgTXVsdGl2YXJpYXRlIEFzc29jaWF0aW9ucwoKIyMjIENvcnJlbGF0aW9uIE1hdHJpeAoKIyMjIyBQZWFyc29uIENvcnJlbGF0aW9ucwoKYGBge3J9CmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0IikKY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdEJpZyIpCmBgYAoKIyMjIyBTcGVhcm1hbiBDb3JyZWxhdGlvbnMKCmBgYHtyfQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0IiwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0QmlnIiwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpgYGAKCiMjIyMgUGFydGlhbCBDb3JyZWxhdGlvbnMKCmBgYHtyfQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildKQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiKQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHRCaWciKQpgYGAKCiMjIyBDb3JyZWxvZ3JhbQoKYGBge3J9CmNvcnJwbG90KGNvcihkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB1c2UgPSAicGFpcndpc2UuY29tcGxldGUub2JzIikpCmBgYAoKIyMjIFNjYXR0ZXJwbG90IG1hdHJpeAoKYGBge3J9CnNjYXR0ZXJwbG90TWF0cml4KH4gcHJlZGljdG9yICsgb3V0Y29tZSArIHByZWRpY3Rvck92ZXJwbG90ICsgb3V0Y29tZU92ZXJwbG90LCBkYXRhID0gZGYsIHVzZSA9ICJwYWlyd2lzZS5jb21wbGV0ZS5vYnMiKQpgYGAKCiMjIyBQYWlycyBwYW5lbHMKCmBgYHtyfQpwYWlycy5wYW5lbHMoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSkKYGBgCgojIyBFZmZlY3QgUGxvdHMKCiMjIyBNdWx0aXBsZSBSZWdyZXNzaW9uIE1vZGVsCgpgYGB7cn0KbXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwgPC0gbG0ob3V0Y29tZSB+IHByZWRpY3RvciArIHByZWRpY3Rvck92ZXJwbG90LCBkYXRhID0gZGYsIG5hLmFjdGlvbiA9ICJuYS5leGNsdWRlIikKYWxsRWZmZWN0cyhtdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbCkKcGxvdChhbGxFZmZlY3RzKG11bHRpcGxlUmVncmVzc2lvbk1vZGVsKSkKYGBgCgojIyMgTXVsdGlsZXZlbCBSZWdyZXNzaW9uIE1vZGVsCgpgYGB7cn0KbXVsdGlsZXZlbFJlZ3Jlc3Npb25Nb2RlbCA8LSBsbWUob3V0Y29tZSB+IHByZWRpY3RvciArIHByZWRpY3Rvck92ZXJwbG90LCByYW5kb20gPSB+IDF8SUQsIG1ldGhvZCA9ICJNTCIsIGRhdGEgPSBkZiwgbmEuYWN0aW9uID0gIm5hLmV4Y2x1ZGUiKQphbGxFZmZlY3RzKG11bHRpbGV2ZWxSZWdyZXNzaW9uTW9kZWwpCnBsb3QoYWxsRWZmZWN0cyhtdWx0aWxldmVsUmVncmVzc2lvbk1vZGVsKSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYGBge3J9CnNlc3Npb25JbmZvKCkKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiRXhwbG9yYXRvcnkgRGF0YSBBbmFseXNpcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBSYXRpb25hbGUKCkV4cGxvcmF0b3J5IGRhdGEgYW5hbHlzaXMgaXMgaW1wb3J0YW50IGZvciB1bmRlcnN0YW5kaW5nIHlvdXIgZGF0YSwgY2hlY2tpbmcgZm9yIGRhdGEgaXNzdWVzL2Vycm9ycywgYW5kIGNoZWNraW5nIGFzc3VtcHRpb25zIGZvciBkaWZmZXJlbnQgc3RhdGlzdGljYWwgbW9kZWxzLgoKTE9PSyBBVCBZT1VSIERBVEHigJR0aGlzIGlzIG9uZSBvZiB0aGUgbW9zdCBvdmVybG9va2VkIHN0ZXBzIGluIGRhdGEgYW5hbHlzaXMhCgojIFByZWFtYmxlCgojIyBJbnN0YWxsIExpYnJhcmllcwoKYGBge3J9CiNpbnN0YWxsLnBhY2thZ2VzKCJyZW1vdGVzIikKI3JlbW90ZXM6Omluc3RhbGxfZ2l0KCJodHRwczovL3Jlc2VhcmNoLWdpdC51aW93YS5lZHUvUGV0ZXJzZW5MYWIvcGV0ZXJzZW5sYWIuZ2l0IikKYGBgCgojIyBMb2FkIExpYnJhcmllcwoKYGBge3IsIG1lc3NhZ2UgPSBGQUxTRSwgd2FybmluZyA9IEZBTFNFfQpsaWJyYXJ5KCJwZXRlcnNlbmxhYiIpCmxpYnJhcnkoImNhciIpCmxpYnJhcnkoInZpb3Bsb3QiKQpsaWJyYXJ5KCJlbGxpcHNlIikKbGlicmFyeSgibmxtZSIpCmxpYnJhcnkoImVmZmVjdHMiKQpsaWJyYXJ5KCJjb3JycGxvdCIpCmxpYnJhcnkoImdncGxvdDIiKQpsaWJyYXJ5KCJwc3ljaCIpCmxpYnJhcnkoInRpZHl2ZXJzZSIpCmxpYnJhcnkoInB1cnJyIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpuIDwtIDEwMDAKCklEIDwtIHJlcCgxOjEwMCwgZWFjaCA9IDEwKQpwcmVkaWN0b3IgPC0gcmJldGEobiwgMS41LCA1KSAqIDEwMApvdXRjb21lIDwtIHByZWRpY3RvciArIHJub3JtKG4sIG1lYW4gPSAwLCBzZCA9IDIwKSArIDUwCgpwcmVkaWN0b3JPdmVycGxvdCA8LSBzYW1wbGUoMTo1MCwgbiwgcmVwbGFjZSA9IFRSVUUpCm91dGNvbWVPdmVycGxvdCA8LSBwcmVkaWN0b3JPdmVycGxvdCArIHNhbXBsZSgxOjc1LCBuLCByZXBsYWNlID0gVFJVRSkKCmNhdGVnb3JpY2FsMSA8LSBzYW1wbGUoMTo1LCBzaXplID0gbiwgcmVwbGFjZSA9IFRSVUUpCmNhdGVnb3JpY2FsMiA8LSBzYW1wbGUoMTo1LCBzaXplID0gbiwgcmVwbGFjZSA9IFRSVUUpCgpkZiA8LSBkYXRhLmZyYW1lKElEID0gSUQsCiAgICAgICAgICAgICAgICAgcHJlZGljdG9yID0gcHJlZGljdG9yLAogICAgICAgICAgICAgICAgIG91dGNvbWUgPSBvdXRjb21lLAogICAgICAgICAgICAgICAgIHByZWRpY3Rvck92ZXJwbG90ID0gcHJlZGljdG9yT3ZlcnBsb3QsCiAgICAgICAgICAgICAgICAgb3V0Y29tZU92ZXJwbG90ID0gb3V0Y29tZU92ZXJwbG90LAogICAgICAgICAgICAgICAgIGNhdGVnb3JpY2FsMSA9IGNhdGVnb3JpY2FsMSwKICAgICAgICAgICAgICAgICBjYXRlZ29yaWNhbDIgPSBjYXRlZ29yaWNhbDIpCgpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAicHJlZGljdG9yIl0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDEwKSwgIm91dGNvbWUiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAicHJlZGljdG9yT3ZlcnBsb3QiXSA8LSBOQQpkZltzYW1wbGUoMTpuLCBzaXplID0gMTApLCAib3V0Y29tZU92ZXJwbG90Il0gPC0gTkEKZGZbc2FtcGxlKDE6biwgc2l6ZSA9IDMwKSwgImNhdGVnb3JpY2FsMSJdIDwtIE5BCmRmW3NhbXBsZSgxOm4sIHNpemUgPSA3MCksICJjYXRlZ29yaWNhbDIiXSA8LSBOQQpgYGAKCiMgRGVzY3JpcHRpdmUgc3RhdGlzdGljcwoKYGBge3J9CmRhdGEuZnJhbWUocHN5Y2g6OmRlc2NyaWJlKGRmKSkKYGBgCgojIyBTYW1wbGUKCi0gQ2hlY2sgdGhlIHNhbXBsZSBzaXplICgqTiopCiAgLSBJcyB0aGUgc2FtcGxlIHNpemUgaW4gdGhlIGRhdGEgdGhlIGV4cGVjdGVkIHNhbXBsZSBzaXplPyBBcmUgdGhlcmUgY2FzZXMgKHBhcnRpY2lwYW50cykgdGhhdCBhcmUgbWlzc2luZz8gQXJlIHRoZXJlIGNhc2VzIHRoYXQgc2hvdWxkIG5vdCBiZSB0aGVyZT8KICAtIEhlcmUgaXMgdGhlIHNhbXBsZSBzaXplOgpgYGB7cn0KbGVuZ3RoKHVuaXF1ZShkZiRJRCkpCmBgYCAgIAotIENoZWNrIHRoZSBleHRlbnQgb2YgbWlzc2luZ25lc3MKICAgIC0gSG93IG11Y2ggZGF0YSBhcmUgbWlzc2luZyBpbiB0aGUgbW9kZWwgdmFyaWFibGVz4oCUaW5jbHVkaW5nIHRoZSBwcmVkaWN0b3IsIG91dGNvbWUsIGFuZCBjb3ZhcmlhdGVzPwogICAgLSBIZXJlIGFyZSB0aGUgcHJvcG9ydGlvbiBvZiBtaXNzaW5nIGRhdGEgaW4gZWFjaCB2YXJpYWJsZToKYGBge3J9Cm1hcChkZiwgfm1lYW4oaXMubmEoLikpKSAlPiUgdCAlPiUgdApgYGAKCiMjIERpc3RyaWJ1dGlvbgoKLSBGcmVxdWVuY2llcwogICAgLSBFeGFtaW5lIHRoZSBmcmVxdWVuY2llcyBvZiBjYXRlZ29yaWNhbCB2YXJpYWJsZXM6CmBgYHtyfQpkZiAlPiUgCiAgc2VsZWN0KGNhdGVnb3JpY2FsMSwgY2F0ZWdvcmljYWwyKSAlPiUKICBzYXBwbHkoZnVuY3Rpb24oeCkgdGFibGUoeCwgdXNlTkEgPSAiYWx3YXlzIikpICU+JSAKICB0KCkKYGBgCgojIyBDZW50cmFsIFRlbmRlbmN5CgotIE1lYW4KYGBge3J9CmNvbE1lYW5zKGRmLCBuYS5ybSA9IFRSVUUpCmBgYAotIE1lZGlhbgpgYGB7cn0KZGYgJT4lIAogIHN1bW1hcmlzZV9hbGwobGlzdCh+IG1lZGlhbiguLCBuYS5ybSA9IFRSVUUpKSkKYGBgCi0gTW9kZQpgYGB7cn0KZGYgJT4lIAogIHN1bW1hcmlzZV9hbGwobGlzdCh+IE1vZGUoLiwgbXVsdGlwbGVNb2RlcyA9ICJtZWFuIikpKQpgYGAKCkNvbXB1dGUgYWxsIG9mIHRoZXNlIG1lYXN1cmVzIG9mIGNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KZGYgJT4lIAogIHN1bW1hcmlzZV9hbGwobGlzdCh+IG1lYW4oLiwgbmEucm0gPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgfiBtZWRpYW4oLiwgbmEucm0gPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgfiBNb2RlKC4sIG11bHRpcGxlTW9kZXMgPSAibWVhbiIpKSkgJT4lIAogIHBpdm90X2xvbmdlcihjb2xzID0gZXZlcnl0aGluZygpLAogICAgICAgICAgICAgICBuYW1lc190byA9IGMoInZhcmlhYmxlIiwiaW5kZXgiKSwKICAgICAgICAgICAgICAgbmFtZXNfc2VwID0gIl8iKSAlPiUgCiAgcGl2b3Rfd2lkZXIobmFtZXNfZnJvbSA9IGluZGV4LAogICAgICAgICAgICAgIHZhbHVlc19mcm9tID0gdmFsdWUpICU+JSAKICByZW5hbWUobW9kZSA9IE1vZGUpCmBgYAoKIyMgRGlzcGVyc2lvbgoKLSBTdGFuZGFyZCBkZXZpYXRpb24KLSBPYnNlcnZlZCBtaW5pbXVtIGFuZCBtYXhpbXVtICh2aXMtw6AtdmlzIHBvc3NpYmxlIG1pbmltdW0gYW5kIG1heGltdW0pCi0gU2tld25lc3MKLSBLdXJ0b3NpcwoKQ29tcHV0ZSBhbGwgb2YgdGhlc2UgbWVhc3VyZXMgb2YgZGlzcGVyc2lvbjoKCmBgYHtyfQpkZiAlPiUgCiAgc3VtbWFyaXNlX2FsbChsaXN0KH4gc2QoLiwgbmEucm0gPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgfiBtaW4oLiwgbmEucm0gPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgfiBtYXgoLiwgbmEucm0gPSBUUlVFKSwKICAgICAgICAgICAgICAgICAgICAgfiBza2V3KC4sIG5hLnJtID0gVFJVRSksCiAgICAgICAgICAgICAgICAgICAgIH4ga3VydG9zaSguLCBuYS5ybSA9IFRSVUUpKSkgJT4lIAogIHBpdm90X2xvbmdlcihjb2xzID0gZXZlcnl0aGluZygpLAogICAgICAgICAgICAgICBuYW1lc190byA9IGMoInZhcmlhYmxlIiwiaW5kZXgiKSwKICAgICAgICAgICAgICAgbmFtZXNfc2VwID0gIl8iKSAlPiUgCiAgcGl2b3Rfd2lkZXIobmFtZXNfZnJvbSA9IGluZGV4LAogICAgICAgICAgICAgIHZhbHVlc19mcm9tID0gdmFsdWUpICU+JSAKICByZW5hbWUoc2tld25lc3MgPSBza2V3LAogICAgICAgICBrdXJ0b3NpcyA9IGt1cnRvc2kpCmBgYAoKIyMgRGlzdHJpYnV0aW9uIFBsb3RzCgpTZWUgW2hlcmVdKGFuYWx5c2lzLWZpZ3VyZXMuaHRtbCkgZm9yIHJlc291cmNlcyBmb3IgY3JlYXRpbmcgZmlndXJlcyBpbiBSLgoKIyMjIEhpc3RvZ3JhbQoKIyMjIyBCYXNlIFIKCmBgYHtyfQpoaXN0KGRmJG91dGNvbWUpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gb3V0Y29tZSkpICsKICBnZW9tX2hpc3RvZ3JhbShjb2xvciA9IDEpCmBgYAoKIyMjIEhpc3RvZ3JhbSBvdmVybGFpZCB3aXRoIGRlbnNpdHkgcGxvdCBhbmQgcnVnIHBsb3QKCiMjIyMgQmFzZSBSCgpgYGB7cn0KaGlzdChkZiRvdXRjb21lLCBwcm9iID0gVFJVRSkKbGluZXMoZGVuc2l0eShkZiRvdXRjb21lLCBuYS5ybSA9IFRSVUUpKQpydWcoZGYkb3V0Y29tZSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21faGlzdG9ncmFtKGFlcyh5ID0gLi5kZW5zaXR5Li4pLCBjb2xvciA9IDEpICsKICBnZW9tX2RlbnNpdHkoKSArCiAgZ2VvbV9ydWcoKQpgYGAKCiMjIyBEZW5zaXR5IFBsb3QKCiMjIyMgQmFzZSBSCgpgYGB7cn0KcGxvdChkZW5zaXR5KGRmJG91dGNvbWUsIG5hLnJtID0gVFJVRSkpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gb3V0Y29tZSkpICsKICBnZW9tX2RlbnNpdHkoKQpgYGAKCiMjIyBCb3ggYW5kIHdoaXNrZXIgcGxvdCAoYm94cGxvdCkKCiMjIyMgQmFzZSBSCgpgYGB7cn0KYm94cGxvdChkZiRvdXRjb21lLCBob3Jpem9udGFsID0gVFJVRSkKYGBgCgojIyMjIGBnZ3Bsb3QyYAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBvdXRjb21lKSkgKwogIGdlb21fYm94cGxvdCgpCmBgYAoKIyMjIFZpb2xpbiBwbG90CgojIyMjIEJhc2UgUgoKYGBge3J9CnZpb3Bsb3QobmEub21pdChkZiRvdXRjb21lKSwgaG9yaXpvbnRhbCA9IFRSVUUpCmBgYAoKIyMjIyBgZ2dwbG90MmAKCmBgYHtyfQpnZ3Bsb3QoZGYsIGFlcyh4ID0gIiIsIHkgPSBvdXRjb21lKSkgKwogIGdlb21fdmlvbGluKCkKYGBgCgojIEJpdmFyaWF0ZSBBc3NvY2lhdGlvbnMKCiMjIEhpZ2ggRGVuc2l0eSBTY2F0dGVycGxvdAoKYGBge3J9CmdncGxvdChkZiwgYWVzKHggPSBwcmVkaWN0b3JPdmVycGxvdCwgeSA9IG91dGNvbWVPdmVycGxvdCkpICsgCiAgZ2VvbV9wb2ludChwb3NpdGlvbiA9ICJqaXR0ZXIiLCBhbHBoYSA9IDAuMykgKyAKICBnZW9tX2RlbnNpdHkyZCgpCgpzbW9vdGhTY2F0dGVyKGRmJHByZWRpY3Rvck92ZXJwbG90LCBkZiRvdXRjb21lT3ZlcnBsb3QpCmBgYAoKIyMgRGF0YSBFbGxpcHNlCgpgYGB7cn0KZGZfbm9taXNzaW5nIDwtIG5hLm9taXQoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiKV0pCmRhdGFFbGxpcHNlKGRmX25vbWlzc2luZyRwcmVkaWN0b3IsIGRmX25vbWlzc2luZyRvdXRjb21lLCBsZXZlbHMgPSBjKDAuNSwgLjk1KSkKYGBgCgojIyBWaXN1YWxseSBXZWlnaHRlZCBSZWdyZXNzaW9uCgpgYGB7ciwgbWVzc2FnZSA9IEZBTFNFLCByZXN1bHRzID0gImhpZGUifQp2d1JlZyhvdXRjb21lIH4gcHJlZGljdG9yLCBkYXRhID0gZGYpCmBgYAoKIyBCYXNpYyBpbmZlcmVudGlhbCBzdGF0aXN0aWNzCgojIyBTdGF0aXN0aWNhbCBkZWNpc2lvbiB0cmVlCgojIyBUZXN0cyBvZiBzeXN0ZW1hdGljIG1pc3NpbmduZXNzIChpLmUuLCB3aGV0aGVyIG1pc3NpbmduZXNzIG9uIGEgdmFyaWFibGUgZGVwZW5kcyBvbiBvdGhlciB2YXJpYWJsZXMpCgotIEdlbmVyYWxseSB0ZXN0OgogICAgLSBXaGV0aGVyIG91dGNvbWUgdmFyaWFibGUocykgZGlmZmVyIGFzIGEgZnVuY3Rpb24gb2YgYW55IG1vZGVsIHZhcmlhYmxlcyAocHJlZGljdG9ycyBhbmQgY292YXJpYXRlcykgYW5kIGFzIGEgZnVuY3Rpb24gb2YgYW55IGtleSBkZW1vZ3JhcGhpYyBjaGFyYWN0ZXJpc3RpY3MgKGUuZy4sIHNleCwgZXRobmljaXR5LCBzb2Npb2Vjb25vbWljIHN0YXR1cykKICAgIC0gV2hldGhlciBmb2NhbCBwcmVkaWN0b3IgdmFyaWFibGUocykgZGlmZmVyIGFzIGEgZnVuY3Rpb24gb2YgYW55IG1vZGVsIHZhcmlhYmxlcyAoaW5jbHVkaW5nIG91dGNvbWUgdmFyaWFibGUpIGFuZCBhcyBhIGZ1bmN0aW9uIG9mIGFueSBrZXkgZGVtb2dyYXBoaWMgY2hhcmFjdGVyaXN0aWNzCi0gRm9yIGluc3RhbmNlOgogICAgLSBXaGV0aGVyIG1hbGVzIGFyZSBtb3JlIGxpa2VseSB0aGFuIGdpcmxzIHRvIGJlIG1pc3Npbmcgc2NvcmVzIG9uIHRoZSBkZXBlbmRlbnQgdmFyaWFibGUKICAgIC0gV2hldGhlciBsb25naXR1ZGluYWwgYXR0cml0aW9uIGlzIGdyZWF0ZXIgaW4gbG93ZXIgc29jaW9lY29ub21pYyBzdGF0dXMgZmFtaWxpZXMKLSBJZiBtaXNzaW5nbmVzcyBkaWZmZXJzIHN5c3RlbWF0aWNhbGx5IGFzIGEgZnVuY3Rpb24gb2Ygb3RoZXIgdmFyaWFibGVzLCBjYW4gaW5jbHVkZSB0aGF0IHZhcmlhYmxlIGFzIGEgY29udHJvbCB2YXJpYWJsZSBpbiBtb2RlbHMsIGFuZC9vciBjYW4gaW5jbHVkZSB0aGF0IHZhcmlhYmxlIGluIG11bHRpcGxlIGltcHV0YXRpb24gdG8gaW5mb3JtIGltcHV0ZWQgc2NvcmVzIGZvciBtaXNzaW5nIHZhbHVlcwoKIyMgTXVsdGl2YXJpYXRlIEFzc29jaWF0aW9ucwoKIyMjIENvcnJlbGF0aW9uIE1hdHJpeAoKIyMjIyBQZWFyc29uIENvcnJlbGF0aW9ucwoKYGBge3J9CmNvci50YWJsZShkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0IikKY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiLCJvdXRjb21lT3ZlcnBsb3QiKV0sIHR5cGUgPSAibWFudXNjcmlwdEJpZyIpCmBgYAoKIyMjIyBTcGVhcm1hbiBDb3JyZWxhdGlvbnMKCmBgYHtyfQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0IiwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpjb3IudGFibGUoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSwgdHlwZSA9ICJtYW51c2NyaXB0QmlnIiwgY29ycmVsYXRpb24gPSAic3BlYXJtYW4iKQpgYGAKCiMjIyMgUGFydGlhbCBDb3JyZWxhdGlvbnMKCmBgYHtyfQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildKQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHQiKQpwYXJ0aWFsY29yLnRhYmxlKGRmWyxjKCJwcmVkaWN0b3IiLCJvdXRjb21lIiwicHJlZGljdG9yT3ZlcnBsb3QiKV0sIHogPSBkZlssYygib3V0Y29tZU92ZXJwbG90IildLCB0eXBlID0gIm1hbnVzY3JpcHRCaWciKQpgYGAKCiMjIyBDb3JyZWxvZ3JhbQoKYGBge3J9CmNvcnJwbG90KGNvcihkZlssYygicHJlZGljdG9yIiwib3V0Y29tZSIsInByZWRpY3Rvck92ZXJwbG90Iiwib3V0Y29tZU92ZXJwbG90IildLCB1c2UgPSAicGFpcndpc2UuY29tcGxldGUub2JzIikpCmBgYAoKIyMjIFNjYXR0ZXJwbG90IG1hdHJpeAoKYGBge3J9CnNjYXR0ZXJwbG90TWF0cml4KH4gcHJlZGljdG9yICsgb3V0Y29tZSArIHByZWRpY3Rvck92ZXJwbG90ICsgb3V0Y29tZU92ZXJwbG90LCBkYXRhID0gZGYsIHVzZSA9ICJwYWlyd2lzZS5jb21wbGV0ZS5vYnMiKQpgYGAKCiMjIyBQYWlycyBwYW5lbHMKCmBgYHtyfQpwYWlycy5wYW5lbHMoZGZbLGMoInByZWRpY3RvciIsIm91dGNvbWUiLCJwcmVkaWN0b3JPdmVycGxvdCIsIm91dGNvbWVPdmVycGxvdCIpXSkKYGBgCgojIyBFZmZlY3QgUGxvdHMKCiMjIyBNdWx0aXBsZSBSZWdyZXNzaW9uIE1vZGVsCgpgYGB7cn0KbXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwgPC0gbG0ob3V0Y29tZSB+IHByZWRpY3RvciArIHByZWRpY3Rvck92ZXJwbG90LCBkYXRhID0gZGYsIG5hLmFjdGlvbiA9ICJuYS5leGNsdWRlIikKYWxsRWZmZWN0cyhtdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbCkKcGxvdChhbGxFZmZlY3RzKG11bHRpcGxlUmVncmVzc2lvbk1vZGVsKSkKYGBgCgojIyMgTXVsdGlsZXZlbCBSZWdyZXNzaW9uIE1vZGVsCgpgYGB7cn0KbXVsdGlsZXZlbFJlZ3Jlc3Npb25Nb2RlbCA8LSBsbWUob3V0Y29tZSB+IHByZWRpY3RvciArIHByZWRpY3Rvck92ZXJwbG90LCByYW5kb20gPSB+IDF8SUQsIG1ldGhvZCA9ICJNTCIsIGRhdGEgPSBkZiwgbmEuYWN0aW9uID0gIm5hLmV4Y2x1ZGUiKQphbGxFZmZlY3RzKG11bHRpbGV2ZWxSZWdyZXNzaW9uTW9kZWwpCnBsb3QoYWxsRWZmZWN0cyhtdWx0aWxldmVsUmVncmVzc2lvbk1vZGVsKSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYGBge3J9CnNlc3Npb25JbmZvKCkKYGBgCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->

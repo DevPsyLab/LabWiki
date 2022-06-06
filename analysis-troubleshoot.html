@@ -452,30 +452,31 @@ div.tocify {
 
 
 <pre class="r"><code>knitr::opts_chunk$set(echo = TRUE,
-                      error = TRUE)</code></pre>
+                      error = TRUE,
+                      comment = &quot;&quot;)</code></pre>
 <div id="methods" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Methods</h1>
 <pre class="r"><code>methods(&quot;describe&quot;)</code></pre>
-<pre><code>## Error in .S3methods(generic.function, class, envir): no function &#39;describe&#39; is visible</code></pre>
+<pre><code>Error in .S3methods(generic.function, class, envir): no function &#39;describe&#39; is visible</code></pre>
 </div>
 <div id="load-libraries" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Load Libraries</h1>
 <pre class="r"><code>library(&quot;Hmisc&quot;, exclude = c(&quot;describe&quot;)) </code></pre>
-<pre><code>## Loading required package: lattice</code></pre>
-<pre><code>## Loading required package: survival</code></pre>
-<pre><code>## Loading required package: Formula</code></pre>
-<pre><code>## Loading required package: ggplot2</code></pre>
-<pre><code>## 
-## Attaching package: &#39;Hmisc&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     format.pval, units</code></pre>
+<pre><code>Loading required package: lattice</code></pre>
+<pre><code>Loading required package: survival</code></pre>
+<pre><code>Loading required package: Formula</code></pre>
+<pre><code>Loading required package: ggplot2</code></pre>
+<pre><code>
+Attaching package: &#39;Hmisc&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    format.pval, units</code></pre>
 <pre class="r"><code>library(&quot;psych&quot;)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;psych&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:ggplot2&#39;:
-## 
-##     %+%, alpha</code></pre>
+<pre><code>
+Attaching package: &#39;psych&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:ggplot2&#39;:
+
+    %+%, alpha</code></pre>
 </div>
 <div id="simulate-data" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Simulate Data</h1>
@@ -495,57 +496,58 @@ df &lt;- data.frame(ID = ID,
 <h1><span class="header-section-number">4</span> Session Info</h1>
 <p><code>Hmisc</code> is loaded:</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.2.0 (2022-04-22)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.4 LTS
-## 
-## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-## 
-## locale:
-##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] psych_2.2.5     Hmisc_4.7-0     ggplot2_3.3.6   Formula_1.2-4  
-## [5] survival_3.3-1  lattice_0.20-45
-## 
-## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.1.2    xfun_0.31           bslib_0.3.1        
-##  [4] purrr_0.3.4         splines_4.2.0       colorspace_2.0-3   
-##  [7] vctrs_0.4.1         generics_0.1.2      htmltools_0.5.2    
-## [10] yaml_2.3.5          base64enc_0.1-3     utf8_1.2.2         
-## [13] rlang_1.0.2         jquerylib_0.1.4     pillar_1.7.0       
-## [16] foreign_0.8-82      glue_1.6.2          withr_2.5.0        
-## [19] RColorBrewer_1.1-3  jpeg_0.1-9          lifecycle_1.0.1    
-## [22] stringr_1.4.0       munsell_0.5.0       gtable_0.3.0       
-## [25] htmlwidgets_1.5.4   evaluate_0.15       latticeExtra_0.6-29
-## [28] knitr_1.39          fastmap_1.1.0       parallel_4.2.0     
-## [31] fansi_1.0.3         htmlTable_2.4.0     backports_1.4.1    
-## [34] checkmate_2.1.0     scales_1.2.0        jsonlite_1.8.0     
-## [37] tmvnsim_1.0-2       gridExtra_2.3       mnormt_2.0.2       
-## [40] png_0.1-7           digest_0.6.29       stringi_1.7.6      
-## [43] dplyr_1.0.9         grid_4.2.0          cli_3.3.0          
-## [46] tools_4.2.0         magrittr_2.0.3      sass_0.4.1         
-## [49] tibble_3.1.7        cluster_2.1.3       crayon_1.5.1       
-## [52] pkgconfig_2.0.3     ellipsis_0.3.2      Matrix_1.4-1       
-## [55] data.table_1.14.2   rstudioapi_0.13     rmarkdown_2.14     
-## [58] rpart_4.1.16        R6_2.5.1            nlme_3.1-157       
-## [61] nnet_7.3-17         compiler_4.2.0</code></pre>
+<pre><code>R version 4.2.0 (2022-04-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] psych_2.2.5     Hmisc_4.7-0     ggplot2_3.3.6   Formula_1.2-4  
+[5] survival_3.3-1  lattice_0.20-45
+
+loaded via a namespace (and not attached):
+ [1] png_0.1-7           assertthat_0.2.1    digest_0.6.29      
+ [4] utf8_1.2.2          R6_2.5.1            backports_1.4.1    
+ [7] evaluate_0.15       pillar_1.7.0        rlang_1.0.2        
+[10] rstudioapi_0.13     data.table_1.14.2   jquerylib_0.1.4    
+[13] rpart_4.1.16        Matrix_1.4-1        checkmate_2.1.0    
+[16] rmarkdown_2.14      splines_4.2.0       stringr_1.4.0      
+[19] foreign_0.8-82      htmlwidgets_1.5.4   munsell_0.5.0      
+[22] compiler_4.2.0      xfun_0.31           pkgconfig_2.0.3    
+[25] base64enc_0.1-3     mnormt_2.0.2        tmvnsim_1.0-2      
+[28] htmltools_0.5.2     nnet_7.3-17         tidyselect_1.1.2   
+[31] tibble_3.1.7        gridExtra_2.3       htmlTable_2.4.0    
+[34] fansi_1.0.3         crayon_1.5.1        dplyr_1.0.9        
+[37] withr_2.5.0         grid_4.2.0          nlme_3.1-157       
+[40] jsonlite_1.8.0      gtable_0.3.0        lifecycle_1.0.1    
+[43] DBI_1.1.2           magrittr_2.0.3      scales_1.2.0       
+[46] cli_3.3.0           stringi_1.7.6       latticeExtra_0.6-29
+[49] bslib_0.3.1         ellipsis_0.3.2      generics_0.1.2     
+[52] vctrs_0.4.1         RColorBrewer_1.1-3  tools_4.2.0        
+[55] glue_1.6.2          purrr_0.3.4         jpeg_0.1-9         
+[58] parallel_4.2.0      fastmap_1.1.0       yaml_2.3.5         
+[61] colorspace_2.0-3    cluster_2.1.3       knitr_1.39         
+[64] sass_0.4.1         </code></pre>
 </div>
 <div id="methods-1" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Methods</h1>
 <pre class="r"><code>methods(&quot;describe&quot;)</code></pre>
-<pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;describe&#39;
-## appears not to be S3 generic; found functions that look like S3 methods</code></pre>
-<pre><code>## [1] describe.by
-## see &#39;?methods&#39; for accessing help and source code</code></pre>
+<pre><code>Warning in .S3methods(generic.function, class, envir): function &#39;describe&#39;
+appears not to be S3 generic; found functions that look like S3 methods</code></pre>
+<pre><code>[1] describe.by
+see &#39;?methods&#39; for accessing help and source code</code></pre>
 </div>
 <div id="unload-hmisc" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Unload <code>Hmisc</code></h1>
@@ -555,57 +557,58 @@ df &lt;- data.frame(ID = ID,
 <h1><span class="header-section-number">7</span> Session Info</h1>
 <p><code>Hmisc</code> is unloaded:</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.2.0 (2022-04-22)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.4 LTS
-## 
-## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-## 
-## locale:
-##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] psych_2.2.5     ggplot2_3.3.6   Formula_1.2-4   survival_3.3-1 
-## [5] lattice_0.20-45
-## 
-## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.1.2    xfun_0.31           bslib_0.3.1        
-##  [4] purrr_0.3.4         splines_4.2.0       colorspace_2.0-3   
-##  [7] vctrs_0.4.1         generics_0.1.2      htmltools_0.5.2    
-## [10] yaml_2.3.5          base64enc_0.1-3     utf8_1.2.2         
-## [13] rlang_1.0.2         jquerylib_0.1.4     pillar_1.7.0       
-## [16] foreign_0.8-82      glue_1.6.2          withr_2.5.0        
-## [19] RColorBrewer_1.1-3  jpeg_0.1-9          lifecycle_1.0.1    
-## [22] stringr_1.4.0       munsell_0.5.0       gtable_0.3.0       
-## [25] htmlwidgets_1.5.4   evaluate_0.15       latticeExtra_0.6-29
-## [28] knitr_1.39          fastmap_1.1.0       parallel_4.2.0     
-## [31] fansi_1.0.3         htmlTable_2.4.0     backports_1.4.1    
-## [34] checkmate_2.1.0     scales_1.2.0        jsonlite_1.8.0     
-## [37] tmvnsim_1.0-2       gridExtra_2.3       mnormt_2.0.2       
-## [40] png_0.1-7           digest_0.6.29       stringi_1.7.6      
-## [43] dplyr_1.0.9         grid_4.2.0          cli_3.3.0          
-## [46] tools_4.2.0         magrittr_2.0.3      sass_0.4.1         
-## [49] tibble_3.1.7        cluster_2.1.3       crayon_1.5.1       
-## [52] pkgconfig_2.0.3     ellipsis_0.3.2      Matrix_1.4-1       
-## [55] data.table_1.14.2   rstudioapi_0.13     rmarkdown_2.14     
-## [58] rpart_4.1.16        R6_2.5.1            nlme_3.1-157       
-## [61] nnet_7.3-17         compiler_4.2.0</code></pre>
+<pre><code>R version 4.2.0 (2022-04-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] psych_2.2.5     ggplot2_3.3.6   Formula_1.2-4   survival_3.3-1 
+[5] lattice_0.20-45
+
+loaded via a namespace (and not attached):
+ [1] png_0.1-7           assertthat_0.2.1    digest_0.6.29      
+ [4] utf8_1.2.2          R6_2.5.1            backports_1.4.1    
+ [7] evaluate_0.15       pillar_1.7.0        rlang_1.0.2        
+[10] rstudioapi_0.13     data.table_1.14.2   jquerylib_0.1.4    
+[13] rpart_4.1.16        Matrix_1.4-1        checkmate_2.1.0    
+[16] rmarkdown_2.14      splines_4.2.0       stringr_1.4.0      
+[19] foreign_0.8-82      htmlwidgets_1.5.4   munsell_0.5.0      
+[22] compiler_4.2.0      xfun_0.31           pkgconfig_2.0.3    
+[25] base64enc_0.1-3     mnormt_2.0.2        tmvnsim_1.0-2      
+[28] htmltools_0.5.2     nnet_7.3-17         tidyselect_1.1.2   
+[31] tibble_3.1.7        gridExtra_2.3       htmlTable_2.4.0    
+[34] fansi_1.0.3         crayon_1.5.1        dplyr_1.0.9        
+[37] withr_2.5.0         grid_4.2.0          nlme_3.1-157       
+[40] jsonlite_1.8.0      gtable_0.3.0        lifecycle_1.0.1    
+[43] DBI_1.1.2           magrittr_2.0.3      scales_1.2.0       
+[46] cli_3.3.0           stringi_1.7.6       latticeExtra_0.6-29
+[49] bslib_0.3.1         ellipsis_0.3.2      generics_0.1.2     
+[52] vctrs_0.4.1         RColorBrewer_1.1-3  tools_4.2.0        
+[55] glue_1.6.2          purrr_0.3.4         jpeg_0.1-9         
+[58] parallel_4.2.0      fastmap_1.1.0       yaml_2.3.5         
+[61] colorspace_2.0-3    cluster_2.1.3       knitr_1.39         
+[64] sass_0.4.1         </code></pre>
 </div>
 <div id="methods-2" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Methods</h1>
 <pre class="r"><code>methods(&quot;describe&quot;)</code></pre>
-<pre><code>## Warning in .S3methods(generic.function, class, envir): function &#39;describe&#39;
-## appears not to be S3 generic; found functions that look like S3 methods</code></pre>
-<pre><code>## [1] describe.by
-## see &#39;?methods&#39; for accessing help and source code</code></pre>
+<pre><code>Warning in .S3methods(generic.function, class, envir): function &#39;describe&#39;
+appears not to be S3 generic; found functions that look like S3 methods</code></pre>
+<pre><code>[1] describe.by
+see &#39;?methods&#39; for accessing help and source code</code></pre>
 </div>
 <div id="use-psychdescribe" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Use <code>psych::describe()</code></h1>
@@ -620,52 +623,53 @@ df &lt;- data.frame(ID = ID,
 <div id="session-info-2" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Session Info</h1>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.2.0 (2022-04-22)
-## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 20.04.4 LTS
-## 
-## Matrix products: default
-## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
-## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
-## 
-## locale:
-##  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
-##  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
-##  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
-## [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
-## 
-## other attached packages:
-## [1] psych_2.2.5     ggplot2_3.3.6   Formula_1.2-4   survival_3.3-1 
-## [5] lattice_0.20-45
-## 
-## loaded via a namespace (and not attached):
-##  [1] tidyselect_1.1.2    xfun_0.31           bslib_0.3.1        
-##  [4] purrr_0.3.4         splines_4.2.0       colorspace_2.0-3   
-##  [7] vctrs_0.4.1         generics_0.1.2      htmltools_0.5.2    
-## [10] yaml_2.3.5          base64enc_0.1-3     utf8_1.2.2         
-## [13] rlang_1.0.2         jquerylib_0.1.4     pillar_1.7.0       
-## [16] foreign_0.8-82      glue_1.6.2          withr_2.5.0        
-## [19] RColorBrewer_1.1-3  jpeg_0.1-9          lifecycle_1.0.1    
-## [22] stringr_1.4.0       munsell_0.5.0       gtable_0.3.0       
-## [25] htmlwidgets_1.5.4   evaluate_0.15       latticeExtra_0.6-29
-## [28] knitr_1.39          fastmap_1.1.0       parallel_4.2.0     
-## [31] fansi_1.0.3         htmlTable_2.4.0     backports_1.4.1    
-## [34] checkmate_2.1.0     scales_1.2.0        jsonlite_1.8.0     
-## [37] tmvnsim_1.0-2       gridExtra_2.3       mnormt_2.0.2       
-## [40] png_0.1-7           digest_0.6.29       stringi_1.7.6      
-## [43] dplyr_1.0.9         grid_4.2.0          cli_3.3.0          
-## [46] tools_4.2.0         magrittr_2.0.3      sass_0.4.1         
-## [49] tibble_3.1.7        cluster_2.1.3       crayon_1.5.1       
-## [52] pkgconfig_2.0.3     ellipsis_0.3.2      Matrix_1.4-1       
-## [55] data.table_1.14.2   rstudioapi_0.13     rmarkdown_2.14     
-## [58] rpart_4.1.16        R6_2.5.1            nlme_3.1-157       
-## [61] nnet_7.3-17         compiler_4.2.0</code></pre>
+<pre><code>R version 4.2.0 (2022-04-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] psych_2.2.5     ggplot2_3.3.6   Formula_1.2-4   survival_3.3-1 
+[5] lattice_0.20-45
+
+loaded via a namespace (and not attached):
+ [1] png_0.1-7           assertthat_0.2.1    digest_0.6.29      
+ [4] utf8_1.2.2          R6_2.5.1            backports_1.4.1    
+ [7] evaluate_0.15       pillar_1.7.0        rlang_1.0.2        
+[10] rstudioapi_0.13     data.table_1.14.2   jquerylib_0.1.4    
+[13] rpart_4.1.16        Matrix_1.4-1        checkmate_2.1.0    
+[16] rmarkdown_2.14      splines_4.2.0       stringr_1.4.0      
+[19] foreign_0.8-82      htmlwidgets_1.5.4   munsell_0.5.0      
+[22] compiler_4.2.0      xfun_0.31           pkgconfig_2.0.3    
+[25] base64enc_0.1-3     mnormt_2.0.2        tmvnsim_1.0-2      
+[28] htmltools_0.5.2     nnet_7.3-17         tidyselect_1.1.2   
+[31] tibble_3.1.7        gridExtra_2.3       htmlTable_2.4.0    
+[34] fansi_1.0.3         crayon_1.5.1        dplyr_1.0.9        
+[37] withr_2.5.0         grid_4.2.0          nlme_3.1-157       
+[40] jsonlite_1.8.0      gtable_0.3.0        lifecycle_1.0.1    
+[43] DBI_1.1.2           magrittr_2.0.3      scales_1.2.0       
+[46] cli_3.3.0           stringi_1.7.6       latticeExtra_0.6-29
+[49] bslib_0.3.1         ellipsis_0.3.2      generics_0.1.2     
+[52] vctrs_0.4.1         RColorBrewer_1.1-3  tools_4.2.0        
+[55] glue_1.6.2          purrr_0.3.4         jpeg_0.1-9         
+[58] parallel_4.2.0      fastmap_1.1.0       yaml_2.3.5         
+[61] colorspace_2.0-3    cluster_2.1.3       knitr_1.39         
+[64] sass_0.4.1         </code></pre>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUpCmBgYAoKIyBNZXRob2RzCgpgYGB7cn0KbWV0aG9kcygiZGVzY3JpYmUiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyfQpsaWJyYXJ5KCJIbWlzYyIsIGV4Y2x1ZGUgPSBjKCJkZXNjcmliZSIpKSAKbGlicmFyeSgicHN5Y2giKQpgYGAKCiMgU2ltdWxhdGUgRGF0YQoKYGBge3J9CnNldC5zZWVkKDUyMjQyKQoKbiA8LSAxMDAwCgpJRCA8LSByZXAoMToxMDAsIGVhY2ggPSAxMCkKcHJlZGljdG9yIDwtIHJiZXRhKG4sIDEuNSwgNSkgKiAxMDAKb3V0Y29tZSA8LSBwcmVkaWN0b3IgKyBybm9ybShuLCBtZWFuID0gMCwgc2QgPSAyMCkgKyA1MAoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYEhtaXNjYCBpcyBsb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVubG9hZCBgSG1pc2NgCgpgYGB7cn0KdW5sb2FkTmFtZXNwYWNlKCJIbWlzYyIpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBIbWlzY2AgaXMgdW5sb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVzZSBgcHN5Y2g6OmRlc2NyaWJlKClgCgpUaHJvd3MgZXJyb3I6CgpgYGB7cn0KZGF0YS5mcmFtZShwc3ljaDo6ZGVzY3JpYmUoZGYpKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVwcm9kdWNpYmxlIEV4YW1wbGUiCm91dHB1dDogCiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBNZXRob2RzCgpgYGB7cn0KbWV0aG9kcygiZGVzY3JpYmUiKQpgYGAKCiMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyfQpsaWJyYXJ5KCJIbWlzYyIsIGV4Y2x1ZGUgPSBjKCJkZXNjcmliZSIpKSAKbGlicmFyeSgicHN5Y2giKQpgYGAKCiMgU2ltdWxhdGUgRGF0YQoKYGBge3J9CnNldC5zZWVkKDUyMjQyKQoKbiA8LSAxMDAwCgpJRCA8LSByZXAoMToxMDAsIGVhY2ggPSAxMCkKcHJlZGljdG9yIDwtIHJiZXRhKG4sIDEuNSwgNSkgKiAxMDAKb3V0Y29tZSA8LSBwcmVkaWN0b3IgKyBybm9ybShuLCBtZWFuID0gMCwgc2QgPSAyMCkgKyA1MAoKZGYgPC0gZGF0YS5mcmFtZShJRCA9IElELAogICAgICAgICAgICAgICAgIHByZWRpY3RvciA9IHByZWRpY3RvciwKICAgICAgICAgICAgICAgICBvdXRjb21lID0gb3V0Y29tZSkKYGBgCgojIFNlc3Npb24gSW5mbwoKYEhtaXNjYCBpcyBsb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVubG9hZCBgSG1pc2NgCgpgYGB7cn0KdW5sb2FkTmFtZXNwYWNlKCJIbWlzYyIpCmBgYAoKIyBTZXNzaW9uIEluZm8KCmBIbWlzY2AgaXMgdW5sb2FkZWQ6CgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAKCiMgTWV0aG9kcwoKYGBge3J9Cm1ldGhvZHMoImRlc2NyaWJlIikKYGBgCgojIFVzZSBgcHN5Y2g6OmRlc2NyaWJlKClgCgpUaHJvd3MgZXJyb3I6CgpgYGB7cn0KZGF0YS5mcmFtZShwc3ljaDo6ZGVzY3JpYmUoZGYpKQpgYGAKCiMgU2Vzc2lvbiBJbmZvCgpgYGB7cn0Kc2Vzc2lvbkluZm8oKQpgYGAK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
