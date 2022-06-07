@@ -8,10 +8,11 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-Overview:
+# Overview
+
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html
 
-## Confirmatory Factor Analysis (CFA)
+# Confirmatory Factor Analysis (CFA)
 
 Overview:
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#cfa
@@ -19,7 +20,7 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-anal
 Code examples:
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#cfaExamples
 
-## Exploratory Factor Analysis (EFA)
+# Exploratory Factor Analysis (EFA)
 
 Overview:
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/factor-analysis-PCA.html#efa

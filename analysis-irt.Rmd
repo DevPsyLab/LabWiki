@@ -14,23 +14,23 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html
 
 # Analysis examples
 
-## 1-parameter logistic
+## 1-parameter logistic model
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html#irt-onePL
 
-## 2-parameter logistic
+## 2-parameter logistic model
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html#irt-twoPL
 
-## 2-parameter multi-dimensional logistic
+## 2-parameter multi-dimensional logistic model
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html#irt-twoPLmultidimensional
 
-## 3-parameter logistic
+## 3-parameter logistic model
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html#irt-threePL
 
-## 4-parameter logistic
+## 4-parameter logistic model
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/irt.html#irt-fourPL
 
