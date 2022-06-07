@@ -107,18 +107,34 @@ df %>%
 ## Central Tendency
 
 - Mean
+
 ```{r}
-colMeans(df, na.rm = TRUE)
+round(colMeans(df, na.rm = TRUE), 2)
+round(apply(df, 2, function(x) mean(x, na.rm = TRUE)), 2)
+
+df %>% 
+  summarise_all(list(~ mean(., na.rm = TRUE))) %>% 
+  round(., 2)
 ```
+
 - Median
+
 ```{r}
+round(apply(df, 2, function(x) median(x, na.rm = TRUE)), 2)
+
 df %>% 
-  summarise_all(list(~ median(., na.rm = TRUE)))
+  summarise_all(list(~ median(., na.rm = TRUE))) %>% 
+  round(., 2)
 ```
+
 - Mode
+
 ```{r}
+round(apply(df, 2, function(x) Mode(x, multipleModes = "mean")), 2)
+
 df %>% 
-  summarise_all(list(~ Mode(., multipleModes = "mean")))
+  summarise_all(list(~ Mode(., multipleModes = "mean"))) %>% 
+  round(., 2)
 ```
 
 Compute all of these measures of central tendency:
@@ -128,6 +144,7 @@ df %>%
   summarise_all(list(~ mean(., na.rm = TRUE),
                      ~ median(., na.rm = TRUE),
                      ~ Mode(., multipleModes = "mean"))) %>% 
+  round(., 2) %>% 
   pivot_longer(cols = everything(),
                names_to = c("variable","index"),
                names_sep = "_") %>% 
@@ -152,6 +169,7 @@ df %>%
                      ~ max(., na.rm = TRUE),
                      ~ skew(., na.rm = TRUE),
                      ~ kurtosi(., na.rm = TRUE))) %>% 
+  round(., 2) %>% 
   pivot_longer(cols = everything(),
                names_to = c("variable","index"),
                names_sep = "_") %>% 
@@ -173,6 +191,7 @@ summaryTable <- df %>%
                      ~ sd(., na.rm = TRUE),
                      ~ skew(., na.rm = TRUE),
                      ~ kurtosi(., na.rm = TRUE))) %>% 
+  round(., 2) %>% 
   pivot_longer(cols = everything(),
                names_to = c("variable","index"),
                names_sep = "_") %>% 
