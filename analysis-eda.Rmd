@@ -73,7 +73,7 @@ df[sample(1:n, size = 70), "categorical2"] <- NA
 # Descriptive statistics
 
 ```{r}
-data.frame(psych::describe(df))
+round(data.frame(psych::describe(df)), 2)
 ```
 
 ## Sample
@@ -83,12 +83,15 @@ data.frame(psych::describe(df))
   Are there cases (participants) that are missing?
   Are there cases that should not be there?
   - Here is the sample size:
+  
 ```{r}
 length(unique(df$ID))
 ```   
+
 - Check the extent of missingness
     - How much data are missing in the model variables—including the predictor, outcome, and covariates?
     - Here are the proportion of missing data in each variable:
+    
 ```{r}
 map(df, ~mean(is.na(.))) %>% t %>% t
 ```
@@ -97,6 +100,7 @@ map(df, ~mean(is.na(.))) %>% t %>% t
 
 - Frequencies
     - Examine the frequencies of categorical variables:
+
 ```{r}
 df %>% 
   select(categorical1, categorical2) %>%
@@ -357,6 +361,8 @@ cor.table(df[,c("predictor","outcome","predictorOverplot","outcomeOverplot")], t
 ```
 
 #### Partial Correlations
+
+Examine the associations among variables controlling for a covariate (`outcomeOverplot`).
 
 ```{r}
 partialcor.table(df[,c("predictor","outcome","predictorOverplot")], z = df[,c("outcomeOverplot")])
