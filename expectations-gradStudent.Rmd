@@ -226,8 +226,8 @@ I expect you to discuss order of authorship with me early on when there are pote
 ## Readings and resources
 
 Trainees are expected to read foundational articles relating to the lab and to their research interests.
-Examples of foundational articles are on the lab's Google Drive folder of primer articles[^2].
-I also expect you to read one of the primer articles by Schwartz (2008) titled, "The Importance of Stupidity in Scientific Research." It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right! It is also important to read background information and protocols about our projects.
+Examples of foundational articles are on the lab's Google Drive folder of [primer articles](https://drive.google.com/drive/u/0/folders/1XlPW37ADfn6iCCvpt3s6VwWxOMKkjJNu)[^2].
+I also expect you to read one of the primer articles by Schwartz (2008) titled, "[The Importance of Stupidity in Scientific Research](https://drive.google.com/file/d/1KhyqX51ZL3UET0HjDRmuAix-o7me9Cqw/view?usp=sharing)." It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right! It is also important to read background information and protocols about our projects.
 
 We have a list of lab resources for graduate students on our Lab's Trello board called "Grad Students"[^2]: https://trello.com/b/WjqbgpW9/grad-students.
 The Trello board includes items for onboarding, important foundational skills for scientific training, useful software, and relevant journals, organizations, conferences, and listservs.
@@ -679,7 +679,7 @@ Note: Breadth courses can be completed with directed readings.
   Likewise, some of the language used in this document was borrowed from other sources.
   
 [^2]: Ask me to give you access.
-  It is easiest to share the Google Drive folder of primer articles with your Google account.
+  It is easiest to share the [Google Drive folder of primer articles](https://drive.google.com/drive/u/0/folders/1XlPW37ADfn6iCCvpt3s6VwWxOMKkjJNu) with your Google account.
 
 [^3]: You need to be on the VPN to access.
   You may need to contact the clinic director to get access to the Clinic Drive.
