@@ -306,3 +306,9 @@ mtcars %>%
                names_to = "variable",
                values_to = "value")
 ```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
