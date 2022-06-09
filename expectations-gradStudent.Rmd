@@ -189,7 +189,8 @@ The university and our lab use Outlook for scheduling; you are expected to keep 
 
 One-on-one meetings are 45-min, weekly meetings between each trainee and me.
 You can also schedule one-off one-on-one meetings with me.
-When scheduling your one-on-one and other meetings, send all of your available times (between 9am and 5pm), not just your preferred times! You may indicate which of your available times are preferred or less preferred.
+When scheduling your one-on-one and other meetings, send all of your available times (between 9am and 5pm), not just your preferred times!
+You may indicate which of your available times are preferred or less preferred.
 One-on-one meetings are designed for us to discuss any training and research-related issues in detail and to form plans for the near future, in addition to any challenges.
 Make sure that you also use this time to communicate new ideas that you have about your work and challenges that you are facing.
 Remember: I cannot address or advise about issues that you do not bring to my attention.
@@ -227,7 +228,9 @@ I expect you to discuss order of authorship with me early on when there are pote
 
 Trainees are expected to read foundational articles relating to the lab and to their research interests.
 Examples of foundational articles are on the lab's Google Drive folder of [primer articles](https://drive.google.com/drive/u/0/folders/1XlPW37ADfn6iCCvpt3s6VwWxOMKkjJNu)[^2].
-I also expect you to read one of the primer articles by Schwartz (2008) titled, "[The Importance of Stupidity in Scientific Research](https://drive.google.com/file/d/1KhyqX51ZL3UET0HjDRmuAix-o7me9Cqw/view?usp=sharing)." It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right! It is also important to read background information and protocols about our projects.
+I also expect you to read one of the primer articles by Schwartz (2008) titled, "[The Importance of Stupidity in Scientific Research](https://drive.google.com/file/d/1KhyqX51ZL3UET0HjDRmuAix-o7me9Cqw/view?usp=sharing)."
+It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right!
+It is also important to read background information and protocols about our projects.
 
 We have a list of lab resources for graduate students on our Lab's Trello board called "Grad Students"[^2]: https://trello.com/b/WjqbgpW9/grad-students.
 The Trello board includes items for onboarding, important foundational skills for scientific training, useful software, and relevant journals, organizations, conferences, and listservs.
@@ -264,7 +267,8 @@ For some students, there may be relevant training fellowships.
 For instance, the Behavioral-Biomedical Interface Training Program (BBIP) provides training in bio-medical research.
 
 This is a research-oriented program; you are expected to prioritize research relative to your other obligations.
-If you are getting all As in classes, you are spending too much time on coursework! [Grades in grad school don't matter](https://phdcomics.com/comics/archive.php?comicid=469) (as long as you pass your classes), and the sooner you figure that out, the better off and more productive you will be.
+If you are getting all As in classes, you are spending too much time on coursework!
+[Grades in grad school don't matter](https://phdcomics.com/comics/archive.php?comicid=469) (as long as you pass your classes), and the sooner you figure that out, the better off and more productive you will be.
 Instead of focusing your learning on coursework, learn by doing.
 Take what you need from classes to advance your research program.
 
@@ -291,7 +295,8 @@ I expect you to comment your code so that others can understand it (and so you c
 I expect you to use version control (git with GitLab) with all projects and to save your lab projects in a repo on the [lab's GitLab page](https://research-git.uiowa.edu/PetersenLab).
 Commit and push your work to the GitLab repo often.
 Using version control provides many benefits: (a) it provides backups of all files in the cloud, (b) it allows you to access the files in the cloud from any computer with access to the internet, even if you are away from your local computer, (c) it provides history of all (committed) changes made to all files.
-If you make a mistake in your code, you can easily revert to a prior version because you took snapshots (commits) of your files! (d) It allows you to write cleaner code because you do not need to keep all the old, "commented out" lines of code, (e) it helps with project organization; you no longer have to keep files or folders named "project_old" (or "project_2", "[project_final](https://phdcomics.com/comics/archive.php?comicid=1531)", or whatever), (f) it keeps all files for the project self-contained, which helps increase reproducibility, and (g) it allows easier collaboration with others on the project.
+If you make a mistake in your code, you can easily revert to a prior version because you took snapshots (commits) of your files!
+(d) It allows you to write cleaner code because you do not need to keep all the old, "commented out" lines of code, (e) it helps with project organization; you no longer have to keep files or folders named "project_old" (or "project_2", "[project_final](https://phdcomics.com/comics/archive.php?comicid=1531)", or whatever), (f) it keeps all files for the project self-contained, which helps increase reproducibility, and (g) it allows easier collaboration with others on the project.
 
 ## Other responsibilities
 
@@ -505,13 +510,16 @@ You are also encouraged to seek professional help—it is not a sign of weakness
 
 Remember that all of us are "new" at various points in our careers.
 Imposter syndrome is normal; I encourage you to adopt a growth mindset.
-You are meant to be here! Failure is common in academia.
+You are meant to be here!
+Failure is common in academia.
 Take a look at the [CV of Failures](https://www.uni-goettingen.de/de/document/download/bed2706fd34e29822004dbe29cd00bb5.pdf/Johannes_Haushofer_CV_of_Failures%5b1%5d.pdf).
 Persistence pays off.
 I have found it helpful to have a ["feelgood" email folder](https://blogs.scientificamerican.com/guest-blog/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/) that I can refer back to when things are difficult.
 
-Do not forget to laugh and have fun! Graduate school is a challenging job with very high expectations, but it should also be fun.
-You get to study something that is exciting to you and get paid to do it! To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cloudfront.net/wp-content/uploads/sites/163/2016/11/Ramsey-Guide-for-Research-Students.pdf), "To sustain yourself through difficult times, find research that means a lot to you.
+Do not forget to laugh and have fun!
+Graduate school is a challenging job with very high expectations, but it should also be fun.
+You get to study something that is exciting to you and get paid to do it!
+To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cloudfront.net/wp-content/uploads/sites/163/2016/11/Ramsey-Guide-for-Research-Students.pdf), "To sustain yourself through difficult times, find research that means a lot to you.
 Successful researchers find interesting problems and fall in love with them.
 In operational terms, some Friday nights should be spent having fun out in the world, but if you aren't also spending some Friday nights having fun with your research, you're not doing the right research."
 
