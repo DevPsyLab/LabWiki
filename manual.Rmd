@@ -726,7 +726,7 @@ The purpose of this private group is to communicate with past and future RAs, as
 
 **Public-Facing Facebook Page**
 
-The purpose of this page is to inform the outside world about the research, inform about changes (e.g., safety precautions, new team members) and provide updates (e.g., new research findings, conferences, grants, events in the lab)
+The purpose of this page is to inform the outside world about the research, inform about changes (e.g., safety precautions, new team members) and provide updates (e.g., new research findings, conferences, grants, events in the lab).
 
 1. Log on to https://www.facebook.com using your email and password
 2. Like the lab page: https://www.facebook.com/DevPsyLab
@@ -734,7 +734,7 @@ The purpose of this page is to inform the outside world about the research, info
 #### Twitter
 
 The purpose of this Twitter account is to post updates with the outside world about things we are working on in the lab.
-We invite everyone to follow us on this platform, so we can get the word out about what we do! 
+We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
 1. Log on to https://twitter.com using your personal credentials
 2. Follow `@devpsylab`
