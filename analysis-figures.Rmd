@@ -213,7 +213,7 @@ Theme based on the publication, the Wall Street Journal.
 basePlot + theme_wsj()
 ```
 
-#### FiveThirty Eight: `theme_fivethirtyeight()`
+#### FiveThirtyEight: `theme_fivethirtyeight()`
 
 Theme based on the publication, FiveThirtyEight.
 
