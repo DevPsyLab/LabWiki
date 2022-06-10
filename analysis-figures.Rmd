@@ -132,21 +132,108 @@ ggplot(df, aes(x = predictor, y = outcome)) +
 ```{r}
 basePlot <- ggplot(df, aes(x = predictor, y = outcome)) +
   geom_point()
+```
 
+#### Default Theme
+
+```{r}
 basePlot
+```
+
+#### Grayscale: `theme_gray()`
+
+```{r}
 basePlot + theme_gray() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Black-and-White: `theme_bw()`
+
+```{r}
 basePlot + theme_bw() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Line Drawing: `theme_linedraw()`
+
+A theme with only black lines of various widths on white backgrounds, reminiscent of a line drawing.
+Note that this theme has some very thin lines (<< 1 pt) which some journals may refuse.
+
+```{r}
 basePlot + theme_linedraw() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Light: `theme_light()`
+
+```{r}
 basePlot + theme_light() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Dark: `theme_dark()`
+
+```{r}
 basePlot + theme_dark() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Minimal: `theme_minimal()`
+
+```{r}
 basePlot + theme_minimal() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Classic: `theme_classic()`
+
+```{r}
 basePlot + theme_classic() + theme(text = element_text(family = "Gotham"))
+```
+
+#### A Completely Empty Theme: `theme_void()`
+
+```{r}
 basePlot + theme_void() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Visual Unit Tests: `theme_test()`
+
+```{r}
 basePlot + theme_test() + theme(text = element_text(family = "Gotham"))
+```
+
+#### Edward Tufte: `theme_tufte()`
+
+Theme based on Edward Tufte.
+
+```{r}
 basePlot + theme_tufte()
+```
+
+#### Wall Street Journal: `theme_wsj()`
+
+Theme based on the publication, the Wall Street Journal.
+
+```{r}
 basePlot + theme_wsj()
+```
+
+#### FiveThirty Eight: `theme_fivethirtyeight()`
+
+Theme based on the publication, FiveThirtyEight.
+
+```{r}
 basePlot + theme_fivethirtyeight()
+```
+
+#### The Economist: `theme_economist()`
+
+Theme based on the publication, The Economist.
+
+```{r}
 basePlot + theme_economist()
+```
+
+#### Stephen Few: `theme_few()`
+
+Theme based on the rules and examples from Stephen Few's *Show Me the Numbers* and "Practical Rules for Using Color in Charts".
+
+```{r}
 basePlot + theme_few()
 ```
 
@@ -159,6 +246,8 @@ scatterplot <- ggplot(df, aes(x = predictor, y = outcome)) +
   theme(text = element_text(family = "Gotham"))
 ```
 
+### Density Plot
+
 ```{r}
 densityMarginal <- ggMarginal(scatterplot, type = "density", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
 ```
@@ -166,6 +255,8 @@ densityMarginal <- ggMarginal(scatterplot, type = "density", xparams = list(fill
 ```{r}
 print(densityMarginal, newpage = TRUE)
 ```
+
+### Histogram
 
 ```{r}
 histogramMarginal <- ggMarginal(scatterplot, type = "histogram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
@@ -175,6 +266,8 @@ histogramMarginal <- ggMarginal(scatterplot, type = "histogram", xparams = list(
 print(histogramMarginal, newpage = TRUE)
 ```
 
+### Boxplot
+
 ```{r}
 boxplotMarginal <- ggMarginal(scatterplot, type = "boxplot", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
 ```
@@ -183,6 +276,8 @@ boxplotMarginal <- ggMarginal(scatterplot, type = "boxplot", xparams = list(fill
 print(boxplotMarginal, newpage = TRUE)
 ```
 
+### Violin Plot
+
 ```{r}
 violinMarginal <- ggMarginal(scatterplot, type = "violin", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
 ```
@@ -190,6 +285,8 @@ violinMarginal <- ggMarginal(scatterplot, type = "violin", xparams = list(fill =
 ```{r}
 print(violinMarginal, newpage = TRUE)
 ```
+
+### Density Plot and Histogram
 
 ```{r}
 densigramMarginal <- ggMarginal(scatterplot, type = "densigram", xparams = list(fill = "gray"), yparams = list(fill = "gray"))
@@ -337,10 +434,10 @@ df$x <- df$predictorOverplot
 df$y <- df$outcomeOverplot
 
 xc <- with(df, xyTable(x, y))
-df2 <- cbind.data.frame(x=xc$x, y=xc$y, number=xc$number)
-df2$n <- cut(df2$number,c(0,1.5,2.5,Inf), labels=c(1,2,4))
+df2 <- cbind.data.frame(x = xc$x, y = xc$y, number = xc$number)
+df2$n <- cut(df2$number, c(0,1.5,2.5,Inf), labels = c(1,2,4))
 df.ell <- as.data.frame(with(df, ellipse(cor(df$x, df$y, use = "pairwise.complete.obs"),
-                                         scale = c(sd(df$x, na.rm = TRUE),sd(df$y,na.rm=T)),
+                                         scale = c(sd(df$x, na.rm = TRUE), sd(df$y, na.rm = TRUE)),
                                          centre = c(mean(df$x, na.rm = TRUE), mean(df$y, na.rm = TRUE)),
                                          level = .95)))
 
@@ -359,16 +456,16 @@ do.it <- function(df, type="confidence", ...) {
   require(ellipse)
   lm0 <- lm(y ~ x, data=df)
   xc <- with(df, xyTable(x, y))
-  df.new <- data.frame(x=seq(min(df$x), max(df$x), 0.1))
-  pred.ulb <- predict(lm0, df.new, interval=type)
-  pred.lo <- predict(loess(y ~ x, data=df), df.new)
-  plot(xc$x, xc$y, cex=xc$number*1/4, xlab="x", ylab="y", ...) #change number*X to change dot size
-  abline(lm0, col="red")
-  lines(df.new$x, pred.lo, col="green", lwd=2)
-  lines(df.new$x, pred.ulb[,"lwr"], lty=2, col="red")
-  lines(df.new$x, pred.ulb[,"upr"], lty=2, col="red")    
+  df.new <- data.frame(x = seq(min(df$x), max(df$x), 0.1))
+  pred.ulb <- predict(lm0, df.new, interval = type)
+  pred.lo <- predict(loess(y ~ x, data = df), df.new)
+  plot(xc$x, xc$y, cex = xc$number*1/4, xlab = "x", ylab = "y", ...) #change number*X to change dot size
+  abline(lm0, col = "red")
+  lines(df.new$x, pred.lo, col="green", lwd = 2)
+  lines(df.new$x, pred.ulb[,"lwr"], lty = 2, col = "red")
+  lines(df.new$x, pred.ulb[,"upr"], lty = 2, col = "red")    
   lines(ellipse(cor(df$x, df$y), scale=c(sd(df$x),sd(df$y)), 
-                centre=c(mean(df$x),mean(df$y)),level=.95), lwd=2, col="green")
+                centre = c(mean(df$x), mean(df$y)), level = .95), lwd = 2, col = "green")
   invisible(lm0)
 }
 
