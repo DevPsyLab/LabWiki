@@ -16,8 +16,8 @@ For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 You can embed an R code chunk like this:
 
-```` markdown
-```{r}
+````markdown
+```{r}`r ''`
 summary(cars)
 ```
 ````
@@ -66,8 +66,8 @@ Instead, the output of the chunk when it was last run in the editor is displayed
 
 You can embed plots, for example:
 
-```` markdown
-```{r, echo = FALSE}
+````markdown
+```{r, echo = FALSE}`r ''`
 plot(pressure)
 ```
 ````
@@ -170,8 +170,8 @@ summary(cars)
 
 or
 
-```` markdown
-```{r, eval = FALSE}
+````markdown
+```{r, eval = FALSE}`r ''`
 summary(cars)
 ```
 ````
