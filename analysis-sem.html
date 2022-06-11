@@ -489,30 +489,29 @@ mydata &lt;- data.frame(X = X, Y = Y, M = M)</code></pre>
 <div id="model-syntax" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Model Syntax</h2>
 <pre class="r"><code>mediationModel &lt;- &#39;
-# direct effect (c)
-Y ~ c*X
+# direct effect (cPrime)
+Y ~ direct*X
 
 # mediator
 M ~ a*X
 Y ~ b*M
 
-# indirect effect (a*b)
-ab := a*b
+# indirect effect = a*b
+indirect := a*b
 
-# total effect (direct effect + indirect effect)
-total := c + (a*b)
+# total effect (c)
+total := direct + indirect
 &#39;</code></pre>
 </div>
 <div id="fit-the-model" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Fit the Model</h2>
-<pre class="r"><code>mediationFit &lt;- sem(model,
+<pre class="r"><code>mediationFit &lt;- sem(mediationModel,
                     data = mydata,
                     se = &quot;bootstrap&quot;,
                     bootstrap = 1000, # generally use 10,000 bootstrap draws; this example uses 1,000 for speed
                     missing = &quot;ML&quot;,
                     estimator = &quot;ML&quot;,
                     std.lv = TRUE)</code></pre>
-<pre><code>Error in lavaan::lavaan(model = model, data = mydata, se = &quot;bootstrap&quot;, : object &#39;model&#39; not found</code></pre>
 </div>
 <div id="summary-output" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Summary Output</h2>
@@ -520,14 +519,96 @@ total := c + (a*b)
         fit.measures = TRUE,
         standardized = TRUE,
         rsquare = TRUE)</code></pre>
-<pre><code>Error in h(simpleError(msg, call)): error in evaluating the argument &#39;object&#39; in selecting a method for function &#39;summary&#39;: object &#39;mediationFit&#39; not found</code></pre>
+<pre><code>lavaan 0.6-11 ended normally after 11 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                         7
+                                                      
+  Number of observations                           100
+  Number of missing patterns                         1
+                                                      
+Model Test User Model:
+                                                      
+  Test statistic                                 0.000
+  Degrees of freedom                                 0
+
+Model Test Baseline Model:
+
+  Test statistic                                79.768
+  Degrees of freedom                                 3
+  P-value                                        0.000
+
+User Model versus Baseline Model:
+
+  Comparative Fit Index (CFI)                    1.000
+  Tucker-Lewis Index (TLI)                       1.000
+
+Loglikelihood and Information Criteria:
+
+  Loglikelihood user model (H0)               -256.804
+  Loglikelihood unrestricted model (H1)       -256.804
+                                                      
+  Akaike (AIC)                                 527.609
+  Bayesian (BIC)                               545.845
+  Sample-size adjusted Bayesian (BIC)          523.737
+
+Root Mean Square Error of Approximation:
+
+  RMSEA                                          0.000
+  90 Percent confidence interval - lower         0.000
+  90 Percent confidence interval - upper         0.000
+  P-value RMSEA &lt;= 0.05                             NA
+
+Standardized Root Mean Square Residual:
+
+  SRMR                                           0.000
+
+Parameter Estimates:
+
+  Standard errors                            Bootstrap
+  Number of requested bootstrap draws             1000
+  Number of successful bootstrap draws            1000
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+  Y ~                                                                   
+    X       (drct)   -0.045    0.106   -0.426    0.670   -0.045   -0.038
+  M ~                                                                   
+    X          (a)    0.568    0.089    6.375    0.000    0.568    0.549
+  Y ~                                                                   
+    M          (b)    0.714    0.120    5.936    0.000    0.714    0.616
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .Y                 0.028    0.094    0.300    0.765    0.028    0.024
+   .M                -0.072    0.081   -0.891    0.373   -0.072   -0.073
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+   .Y                 0.850    0.127    6.696    0.000    0.850    0.644
+   .M                 0.686    0.083    8.247    0.000    0.686    0.699
+
+R-Square:
+                   Estimate
+    Y                 0.356
+    M                 0.301
+
+Defined Parameters:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+    indirect          0.406    0.096    4.207    0.000    0.406    0.338
+    total             0.361    0.104    3.483    0.000    0.361    0.300</code></pre>
 </div>
 <div id="indirect-effect" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Indirect Effect</h2>
-<pre class="r"><code>parameterEstimates(fit,
+<pre class="r"><code>parameterEstimates(mediationFit,
                    boot.ci.type = &quot;bca.simple&quot;,
                    standardized = TRUE)</code></pre>
-<pre><code>Error in parameterEstimates(fit, boot.ci.type = &quot;bca.simple&quot;, standardized = TRUE): object &#39;fit&#39; not found</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["lhs"],"name":[1],"type":["chr"],"align":["left"]},{"label":["op"],"name":[2],"type":["chr"],"align":["left"]},{"label":["rhs"],"name":[3],"type":["chr"],"align":["left"]},{"label":["label"],"name":[4],"type":["chr"],"align":["left"]},{"label":["est"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["se"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["z"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["pvalue"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["ci.lower"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["ci.upper"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["std.lv"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["std.all"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["std.nox"],"name":[13],"type":["dbl"],"align":["right"]}],"data":[{"1":"Y","2":"~","3":"X","4":"direct","5":"-0.04514371","6":"0.10585060","7":"-0.4264852","8":"6.697543e-01","9":"-0.2364167","10":"0.19101554","11":"-0.04514371","12":"-0.03761782","13":"-0.03931082"},{"1":"M","2":"~","3":"X","4":"a","5":"0.56815371","6":"0.08911622","7":"6.3754245","8":"1.824569e-10","9":"0.3981622","10":"0.75470524","11":"0.56815371","12":"0.54878799","13":"0.57348639"},{"1":"Y","2":"~","3":"M","4":"b","5":"0.71413854","6":"0.12031514","7":"5.9355668","8":"2.928321e-09","9":"0.4656660","10":"0.95275812","11":"0.71413854","12":"0.61608416","13":"0.61608416"},{"1":"Y","2":"~~","3":"Y","4":"","5":"0.84990004","6":"0.12693295","7":"6.6956615","8":"2.146971e-11","9":"0.6400797","10":"1.13096721","11":"0.84990004","12":"0.64446234","13":"0.64446234"},{"1":"M","2":"~~","3":"M","4":"","5":"0.68589570","6":"0.08317156","7":"8.2467573","8":"2.220446e-16","9":"0.5410971","10":"0.86694426","11":"0.68589570","12":"0.69883174","13":"0.69883174"},{"1":"X","2":"~~","3":"X","4":"","5":"0.91572057","6":"0.00000000","7":"NA","8":"NA","9":"0.9157206","10":"0.91572057","11":"0.91572057","12":"1.00000000","13":"0.91572057"},{"1":"Y","2":"~1","3":"","4":"","5":"0.02804007","6":"0.09362156","7":"0.2995044","8":"7.645552e-01","9":"-0.1509356","10":"0.21223084","11":"0.02804007","12":"0.02441709","13":"0.02441709"},{"1":"M","2":"~1","3":"","4":"","5":"-0.07206804","6":"0.08089167","7":"-0.8909204","8":"3.729719e-01","9":"-0.2225248","10":"0.09507091","11":"-0.07206804","12":"-0.07274447","13":"-0.07274447"},{"1":"X","2":"~1","3":"","4":"","5":"-0.17309875","6":"0.00000000","7":"NA","8":"NA","9":"-0.1730987","10":"-0.17309875","11":"-0.17309875","12":"-0.18088912","13":"-0.17309875"},{"1":"indirect","2":":=","3":"a*b","4":"indirect","5":"0.40574046","6":"0.09645208","7":"4.2066532","8":"2.591804e-05","9":"0.2424839","10":"0.62424178","11":"0.40574046","12":"0.33809959","13":"0.35331588"},{"1":"total","2":":=","3":"direct+indirect","4":"total","5":"0.36059674","6":"0.10353969","7":"3.4826910","8":"4.964010e-04","9":"0.1799032","10":"0.59982205","11":"0.36059674","12":"0.30048177","13":"0.31400506"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 </div>
 </div>
 <div id="power-analysis" class="section level1" number="7">
@@ -535,7 +616,7 @@ total := c + (a*b)
 <p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis</a></p>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgibGF2YWFuIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKClggPC0gcm5vcm0oMTAwKQpNIDwtIDAuNSpYICsgcm5vcm0oMTAwKQpZIDwtIDAuNypNICsgcm5vcm0oMTAwKQoKbXlkYXRhIDwtIGRhdGEuZnJhbWUoWCA9IFgsIFkgPSBZLCBNID0gTSkKYGBgCgojIEltcG9ydCBkYXRhCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbAoKIyBBbmFseXNpcyBleGFtcGxlcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjc2VtTW9kZWwtc2VtCgojIE1lZGlhdGlvbgoKIyMgTW9kZWwgU3ludGF4CgpgYGB7cn0KbWVkaWF0aW9uTW9kZWwgPC0gJwojIGRpcmVjdCBlZmZlY3QgKGMpClkgfiBjKlgKCiMgbWVkaWF0b3IKTSB+IGEqWApZIH4gYipNCgojIGluZGlyZWN0IGVmZmVjdCAoYSpiKQphYiA6PSBhKmIKCiMgdG90YWwgZWZmZWN0IChkaXJlY3QgZWZmZWN0ICsgaW5kaXJlY3QgZWZmZWN0KQp0b3RhbCA6PSBjICsgKGEqYikKJwpgYGAKCiMjIEZpdCB0aGUgTW9kZWwKCmBgYHtyfQptZWRpYXRpb25GaXQgPC0gc2VtKG1vZGVsLAogICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgc2UgPSAiYm9vdHN0cmFwIiwKICAgICAgICAgICAgICAgICAgICBib290c3RyYXAgPSAxMDAwLCAjIGdlbmVyYWxseSB1c2UgMTAsMDAwIGJvb3RzdHJhcCBkcmF3czsgdGhpcyBleGFtcGxlIHVzZXMgMSwwMDAgZm9yIHNwZWVkCiAgICAgICAgICAgICAgICAgICAgbWlzc2luZyA9ICJNTCIsCiAgICAgICAgICAgICAgICAgICAgZXN0aW1hdG9yID0gIk1MIiwKICAgICAgICAgICAgICAgICAgICBzdGQubHYgPSBUUlVFKQpgYGAKCiMjIFN1bW1hcnkgT3V0cHV0CgpgYGB7cn0Kc3VtbWFyeShtZWRpYXRpb25GaXQsCiAgICAgICAgZml0Lm1lYXN1cmVzID0gVFJVRSwKICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFLAogICAgICAgIHJzcXVhcmUgPSBUUlVFKQpgYGAKCiMjIEluZGlyZWN0IEVmZmVjdAoKYGBge3J9CnBhcmFtZXRlckVzdGltYXRlcyhmaXQsCiAgICAgICAgICAgICAgICAgICBib290LmNpLnR5cGUgPSAiYmNhLnNpbXBsZSIsCiAgICAgICAgICAgICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFKQpgYGAKCiMgUG93ZXIgYW5hbHlzaXMKCmh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI21vbnRlQ2FybG9Qb3dlckFuYWx5c2lzCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgibGF2YWFuIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKClggPC0gcm5vcm0oMTAwKQpNIDwtIDAuNSpYICsgcm5vcm0oMTAwKQpZIDwtIDAuNypNICsgcm5vcm0oMTAwKQoKbXlkYXRhIDwtIGRhdGEuZnJhbWUoWCA9IFgsIFkgPSBZLCBNID0gTSkKYGBgCgojIEltcG9ydCBkYXRhCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbAoKIyBBbmFseXNpcyBleGFtcGxlcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjc2VtTW9kZWwtc2VtCgojIE1lZGlhdGlvbgoKIyMgTW9kZWwgU3ludGF4CgpgYGB7cn0KbWVkaWF0aW9uTW9kZWwgPC0gJwojIGRpcmVjdCBlZmZlY3QgKGNQcmltZSkKWSB+IGRpcmVjdCpYCgojIG1lZGlhdG9yCk0gfiBhKlgKWSB+IGIqTQoKIyBpbmRpcmVjdCBlZmZlY3QgPSBhKmIKaW5kaXJlY3QgOj0gYSpiCgojIHRvdGFsIGVmZmVjdCAoYykKdG90YWwgOj0gZGlyZWN0ICsgaW5kaXJlY3QKJwpgYGAKCiMjIEZpdCB0aGUgTW9kZWwKCmBgYHtyfQptZWRpYXRpb25GaXQgPC0gc2VtKG1lZGlhdGlvbk1vZGVsLAogICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgc2UgPSAiYm9vdHN0cmFwIiwKICAgICAgICAgICAgICAgICAgICBib290c3RyYXAgPSAxMDAwLCAjIGdlbmVyYWxseSB1c2UgMTAsMDAwIGJvb3RzdHJhcCBkcmF3czsgdGhpcyBleGFtcGxlIHVzZXMgMSwwMDAgZm9yIHNwZWVkCiAgICAgICAgICAgICAgICAgICAgbWlzc2luZyA9ICJNTCIsCiAgICAgICAgICAgICAgICAgICAgZXN0aW1hdG9yID0gIk1MIiwKICAgICAgICAgICAgICAgICAgICBzdGQubHYgPSBUUlVFKQpgYGAKCiMjIFN1bW1hcnkgT3V0cHV0CgpgYGB7cn0Kc3VtbWFyeShtZWRpYXRpb25GaXQsCiAgICAgICAgZml0Lm1lYXN1cmVzID0gVFJVRSwKICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFLAogICAgICAgIHJzcXVhcmUgPSBUUlVFKQpgYGAKCiMjIEluZGlyZWN0IEVmZmVjdAoKYGBge3J9CnBhcmFtZXRlckVzdGltYXRlcyhtZWRpYXRpb25GaXQsCiAgICAgICAgICAgICAgICAgICBib290LmNpLnR5cGUgPSAiYmNhLnNpbXBsZSIsCiAgICAgICAgICAgICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFKQpgYGAKCiMgUG93ZXIgYW5hbHlzaXMKCmh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI21vbnRlQ2FybG9Qb3dlckFuYWx5c2lzCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
