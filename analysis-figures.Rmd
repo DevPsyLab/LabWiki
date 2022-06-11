@@ -615,6 +615,7 @@ You can look at various options below:
 - `Onyx`: https://onyx-sem.com
 - `yworks`: https://www.yworks.com
 - `Microsoft Visio`: https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software
+- `Microsoft Powerpoint`
 - `AMOS`
 - `Warppls`
 - `Graphviz`: https://graphviz.org
