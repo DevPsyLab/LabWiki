@@ -488,7 +488,7 @@ mydata &lt;- data.frame(X = X, Y = Y, M = M)</code></pre>
 <h1><span class="header-section-number">6</span> Mediation</h1>
 <div id="model-syntax" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Model Syntax</h2>
-<pre class="r"><code>mediationModel &lt;- &#39;
+<pre class="r fold-show"><code>mediationModel &lt;- &#39;
 # direct effect (cPrime)
 Y ~ direct*X
 
@@ -505,7 +505,7 @@ total := direct + indirect
 </div>
 <div id="fit-the-model" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Fit the Model</h2>
-<pre class="r"><code>mediationFit &lt;- sem(mediationModel,
+<pre class="r fold-show"><code>mediationFit &lt;- sem(mediationModel,
                     data = mydata,
                     se = &quot;bootstrap&quot;,
                     bootstrap = 1000, # generally use 10,000 bootstrap draws; this example uses 1,000 for speed
@@ -515,7 +515,7 @@ total := direct + indirect
 </div>
 <div id="summary-output" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Summary Output</h2>
-<pre class="r"><code>summary(mediationFit,
+<pre class="r fold-show"><code>summary(mediationFit,
         fit.measures = TRUE,
         standardized = TRUE,
         rsquare = TRUE)</code></pre>
@@ -601,7 +601,7 @@ Defined Parameters:
 </div>
 <div id="indirect-effect" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Indirect Effect</h2>
-<pre class="r"><code>parameterEstimates(mediationFit,
+<pre class="r fold-show"><code>parameterEstimates(mediationFit,
                    boot.ci.type = &quot;bca.simple&quot;,
                    standardized = TRUE)</code></pre>
 <div data-pagedtable="false">
@@ -616,7 +616,7 @@ Defined Parameters:
 <p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis</a></p>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgibGF2YWFuIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKClggPC0gcm5vcm0oMTAwKQpNIDwtIDAuNSpYICsgcm5vcm0oMTAwKQpZIDwtIDAuNypNICsgcm5vcm0oMTAwKQoKbXlkYXRhIDwtIGRhdGEuZnJhbWUoWCA9IFgsIFkgPSBZLCBNID0gTSkKYGBgCgojIEltcG9ydCBkYXRhCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbAoKIyBBbmFseXNpcyBleGFtcGxlcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjc2VtTW9kZWwtc2VtCgojIE1lZGlhdGlvbgoKIyMgTW9kZWwgU3ludGF4CgpgYGB7cn0KbWVkaWF0aW9uTW9kZWwgPC0gJwojIGRpcmVjdCBlZmZlY3QgKGNQcmltZSkKWSB+IGRpcmVjdCpYCgojIG1lZGlhdG9yCk0gfiBhKlgKWSB+IGIqTQoKIyBpbmRpcmVjdCBlZmZlY3QgPSBhKmIKaW5kaXJlY3QgOj0gYSpiCgojIHRvdGFsIGVmZmVjdCAoYykKdG90YWwgOj0gZGlyZWN0ICsgaW5kaXJlY3QKJwpgYGAKCiMjIEZpdCB0aGUgTW9kZWwKCmBgYHtyfQptZWRpYXRpb25GaXQgPC0gc2VtKG1lZGlhdGlvbk1vZGVsLAogICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgc2UgPSAiYm9vdHN0cmFwIiwKICAgICAgICAgICAgICAgICAgICBib290c3RyYXAgPSAxMDAwLCAjIGdlbmVyYWxseSB1c2UgMTAsMDAwIGJvb3RzdHJhcCBkcmF3czsgdGhpcyBleGFtcGxlIHVzZXMgMSwwMDAgZm9yIHNwZWVkCiAgICAgICAgICAgICAgICAgICAgbWlzc2luZyA9ICJNTCIsCiAgICAgICAgICAgICAgICAgICAgZXN0aW1hdG9yID0gIk1MIiwKICAgICAgICAgICAgICAgICAgICBzdGQubHYgPSBUUlVFKQpgYGAKCiMjIFN1bW1hcnkgT3V0cHV0CgpgYGB7cn0Kc3VtbWFyeShtZWRpYXRpb25GaXQsCiAgICAgICAgZml0Lm1lYXN1cmVzID0gVFJVRSwKICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFLAogICAgICAgIHJzcXVhcmUgPSBUUlVFKQpgYGAKCiMjIEluZGlyZWN0IEVmZmVjdAoKYGBge3J9CnBhcmFtZXRlckVzdGltYXRlcyhtZWRpYXRpb25GaXQsCiAgICAgICAgICAgICAgICAgICBib290LmNpLnR5cGUgPSAiYmNhLnNpbXBsZSIsCiAgICAgICAgICAgICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFKQpgYGAKCiMgUG93ZXIgYW5hbHlzaXMKCmh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI21vbnRlQ2FybG9Qb3dlckFuYWx5c2lzCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgibGF2YWFuIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKClggPC0gcm5vcm0oMTAwKQpNIDwtIDAuNSpYICsgcm5vcm0oMTAwKQpZIDwtIDAuNypNICsgcm5vcm0oMTAwKQoKbXlkYXRhIDwtIGRhdGEuZnJhbWUoWCA9IFgsIFkgPSBZLCBNID0gTSkKYGBgCgojIEltcG9ydCBkYXRhCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbAoKIyBBbmFseXNpcyBleGFtcGxlcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjc2VtTW9kZWwtc2VtCgojIE1lZGlhdGlvbgoKIyMgTW9kZWwgU3ludGF4CgpgYGB7ciwgY2xhc3Muc291cmNlID0gImZvbGQtc2hvdyJ9Cm1lZGlhdGlvbk1vZGVsIDwtICcKIyBkaXJlY3QgZWZmZWN0IChjUHJpbWUpClkgfiBkaXJlY3QqWAoKIyBtZWRpYXRvcgpNIH4gYSpYClkgfiBiKk0KCiMgaW5kaXJlY3QgZWZmZWN0ID0gYSpiCmluZGlyZWN0IDo9IGEqYgoKIyB0b3RhbCBlZmZlY3QgKGMpCnRvdGFsIDo9IGRpcmVjdCArIGluZGlyZWN0CicKYGBgCgojIyBGaXQgdGhlIE1vZGVsCgpgYGB7ciwgY2xhc3Muc291cmNlID0gImZvbGQtc2hvdyJ9Cm1lZGlhdGlvbkZpdCA8LSBzZW0obWVkaWF0aW9uTW9kZWwsCiAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICBzZSA9ICJib290c3RyYXAiLAogICAgICAgICAgICAgICAgICAgIGJvb3RzdHJhcCA9IDEwMDAsICMgZ2VuZXJhbGx5IHVzZSAxMCwwMDAgYm9vdHN0cmFwIGRyYXdzOyB0aGlzIGV4YW1wbGUgdXNlcyAxLDAwMCBmb3Igc3BlZWQKICAgICAgICAgICAgICAgICAgICBtaXNzaW5nID0gIk1MIiwKICAgICAgICAgICAgICAgICAgICBlc3RpbWF0b3IgPSAiTUwiLAogICAgICAgICAgICAgICAgICAgIHN0ZC5sdiA9IFRSVUUpCmBgYAoKIyMgU3VtbWFyeSBPdXRwdXQKCmBgYHtyLCBjbGFzcy5zb3VyY2UgPSAiZm9sZC1zaG93In0Kc3VtbWFyeShtZWRpYXRpb25GaXQsCiAgICAgICAgZml0Lm1lYXN1cmVzID0gVFJVRSwKICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFLAogICAgICAgIHJzcXVhcmUgPSBUUlVFKQpgYGAKCiMjIEluZGlyZWN0IEVmZmVjdAoKYGBge3IsIGNsYXNzLnNvdXJjZSA9ICJmb2xkLXNob3cifQpwYXJhbWV0ZXJFc3RpbWF0ZXMobWVkaWF0aW9uRml0LAogICAgICAgICAgICAgICAgICAgYm9vdC5jaS50eXBlID0gImJjYS5zaW1wbGUiLAogICAgICAgICAgICAgICAgICAgc3RhbmRhcmRpemVkID0gVFJVRSkKYGBgCgojIFBvd2VyIGFuYWx5c2lzCgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbCNtb250ZUNhcmxvUG93ZXJBbmFseXNpcwo=</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
