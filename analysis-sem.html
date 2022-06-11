@@ -451,20 +451,91 @@ div.tocify {
 </div>
 
 
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Overview</h1>
+<div id="preamble" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Preamble</h1>
+<div id="install-libraries" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Install Libraries</h2>
+<pre class="r"><code>#install.packages(&quot;remotes&quot;)
+#remotes::install_git(&quot;https://research-git.uiowa.edu/PetersenLab/petersenlab.git&quot;)</code></pre>
+</div>
+<div id="load-libraries" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Load Libraries</h2>
+<pre class="r"><code>library(&quot;lavaan&quot;)</code></pre>
+</div>
+</div>
+<div id="simulate-data" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Simulate Data</h1>
+<pre class="r"><code>set.seed(52242)
+
+X &lt;- rnorm(100)
+M &lt;- 0.5*X + rnorm(100)
+Y &lt;- 0.7*M + rnorm(100)
+
+mydata &lt;- data.frame(X = X, Y = Y, M = M)</code></pre>
+</div>
+<div id="import-data" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Import data</h1>
+</div>
+<div id="overview" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Overview</h1>
 <p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html</a></p>
 </div>
-<div id="analysis-examples" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Analysis examples</h1>
+<div id="analysis-examples" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Analysis examples</h1>
 <p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#semModel-sem" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#semModel-sem</a></p>
 </div>
-<div id="power-analysis" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Power analysis</h1>
+<div id="mediation" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Mediation</h1>
+<div id="model-syntax" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Model Syntax</h2>
+<pre class="r"><code>mediationModel &lt;- &#39;
+# direct effect (c)
+Y ~ c*X
+
+# mediator
+M ~ a*X
+Y ~ b*M
+
+# indirect effect (a*b)
+ab := a*b
+
+# total effect (direct effect + indirect effect)
+total := c + (a*b)
+&#39;</code></pre>
+</div>
+<div id="fit-the-model" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Fit the Model</h2>
+<pre class="r"><code>mediationFit &lt;- sem(model,
+                    data = mydata,
+                    se = &quot;bootstrap&quot;,
+                    bootstrap = 1000, # generally use 10,000 bootstrap draws; this example uses 1,000 for speed
+                    missing = &quot;ML&quot;,
+                    estimator = &quot;ML&quot;,
+                    std.lv = TRUE)</code></pre>
+<pre><code>Error in lavaan::lavaan(model = model, data = mydata, se = &quot;bootstrap&quot;, : object &#39;model&#39; not found</code></pre>
+</div>
+<div id="summary-output" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Summary Output</h2>
+<pre class="r"><code>summary(mediationFit,
+        fit.measures = TRUE,
+        standardized = TRUE,
+        rsquare = TRUE)</code></pre>
+<pre><code>Error in h(simpleError(msg, call)): error in evaluating the argument &#39;object&#39; in selecting a method for function &#39;summary&#39;: object &#39;mediationFit&#39; not found</code></pre>
+</div>
+<div id="indirect-effect" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Indirect Effect</h2>
+<pre class="r"><code>parameterEstimates(fit,
+                   boot.ci.type = &quot;bca.simple&quot;,
+                   standardized = TRUE)</code></pre>
+<pre><code>Error in parameterEstimates(fit, boot.ci.type = &quot;bca.simple&quot;, standardized = TRUE): object &#39;fit&#39; not found</code></pre>
+</div>
+</div>
+<div id="power-analysis" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Power analysis</h1>
 <p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#monteCarloPowerAnalysis</a></p>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBPdmVydmlldwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwKCiMgQW5hbHlzaXMgZXhhbXBsZXMKCmh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI3NlbU1vZGVsLXNlbQoKIyBQb3dlciBhbmFseXNpcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjbW9udGVDYXJsb1Bvd2VyQW5hbHlzaXMK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3RydWN0dXJhbCBFcXVhdGlvbiBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgibGF2YWFuIikKYGBgCgojIFNpbXVsYXRlIERhdGEKCmBgYHtyfQpzZXQuc2VlZCg1MjI0MikKClggPC0gcm5vcm0oMTAwKQpNIDwtIDAuNSpYICsgcm5vcm0oMTAwKQpZIDwtIDAuNypNICsgcm5vcm0oMTAwKQoKbXlkYXRhIDwtIGRhdGEuZnJhbWUoWCA9IFgsIFkgPSBZLCBNID0gTSkKYGBgCgojIEltcG9ydCBkYXRhCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9zZW0uaHRtbAoKIyBBbmFseXNpcyBleGFtcGxlcwoKaHR0cHM6Ly9pc2FhY3RwZXRlcnNlbi5naXRodWIuaW8vUHJpbmNpcGxlcy1Qc3ljaG9sb2dpY2FsLUFzc2Vzc21lbnQvc2VtLmh0bWwjc2VtTW9kZWwtc2VtCgojIE1lZGlhdGlvbgoKIyMgTW9kZWwgU3ludGF4CgpgYGB7cn0KbWVkaWF0aW9uTW9kZWwgPC0gJwojIGRpcmVjdCBlZmZlY3QgKGMpClkgfiBjKlgKCiMgbWVkaWF0b3IKTSB+IGEqWApZIH4gYipNCgojIGluZGlyZWN0IGVmZmVjdCAoYSpiKQphYiA6PSBhKmIKCiMgdG90YWwgZWZmZWN0IChkaXJlY3QgZWZmZWN0ICsgaW5kaXJlY3QgZWZmZWN0KQp0b3RhbCA6PSBjICsgKGEqYikKJwpgYGAKCiMjIEZpdCB0aGUgTW9kZWwKCmBgYHtyfQptZWRpYXRpb25GaXQgPC0gc2VtKG1vZGVsLAogICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgc2UgPSAiYm9vdHN0cmFwIiwKICAgICAgICAgICAgICAgICAgICBib290c3RyYXAgPSAxMDAwLCAjIGdlbmVyYWxseSB1c2UgMTAsMDAwIGJvb3RzdHJhcCBkcmF3czsgdGhpcyBleGFtcGxlIHVzZXMgMSwwMDAgZm9yIHNwZWVkCiAgICAgICAgICAgICAgICAgICAgbWlzc2luZyA9ICJNTCIsCiAgICAgICAgICAgICAgICAgICAgZXN0aW1hdG9yID0gIk1MIiwKICAgICAgICAgICAgICAgICAgICBzdGQubHYgPSBUUlVFKQpgYGAKCiMjIFN1bW1hcnkgT3V0cHV0CgpgYGB7cn0Kc3VtbWFyeShtZWRpYXRpb25GaXQsCiAgICAgICAgZml0Lm1lYXN1cmVzID0gVFJVRSwKICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFLAogICAgICAgIHJzcXVhcmUgPSBUUlVFKQpgYGAKCiMjIEluZGlyZWN0IEVmZmVjdAoKYGBge3J9CnBhcmFtZXRlckVzdGltYXRlcyhmaXQsCiAgICAgICAgICAgICAgICAgICBib290LmNpLnR5cGUgPSAiYmNhLnNpbXBsZSIsCiAgICAgICAgICAgICAgICAgICBzdGFuZGFyZGl6ZWQgPSBUUlVFKQpgYGAKCiMgUG93ZXIgYW5hbHlzaXMKCmh0dHBzOi8vaXNhYWN0cGV0ZXJzZW4uZ2l0aHViLmlvL1ByaW5jaXBsZXMtUHN5Y2hvbG9naWNhbC1Bc3Nlc3NtZW50L3NlbS5odG1sI21vbnRlQ2FybG9Qb3dlckFuYWx5c2lzCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
