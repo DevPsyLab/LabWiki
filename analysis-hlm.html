@@ -451,9 +451,32 @@ div.tocify {
 </div>
 
 
-<p>To be added…</p>
+<div id="terms" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Terms</h1>
+<p>These models go by a variety of different terms:</p>
+<ul>
+<li>hierarchical linear model (HLM)</li>
+<li>multilevel model (MLM)</li>
+<li>mixed effects model</li>
+<li>mixed model</li>
+</ul>
+</div>
+<div id="overview" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Overview</h1>
+<p><a href="https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#mixedModels" class="uri">https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#mixedModels</a></p>
+</div>
+<div id="assumptions" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Assumptions</h1>
+<p>The within-group errors: 1. are independent 2. are identically normally distributed 3. have mean zero and variance sigma-squared 4. are independent of the random effects</p>
+<p>The random effects: 5. are normally distributed 6. have mean zero and covariance matrix Psi (not depending on the group) 7. are independent for different groups</p>
+<div id="resources" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Resources</h2>
+<p>Pinheiro and Bates (2000) book (p. 174, section 4.3.1)</p>
+<p><a href="https://stats.stackexchange.com/questions/77891/checking-assumptions-lmer-lme-mixed-models-in-r" class="uri">https://stats.stackexchange.com/questions/77891/checking-assumptions-lmer-lme-mixed-models-in-r</a></p>
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGllcmFyY2hpY2FsIExpbmVhciBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKVG8gYmUgYWRkZWQuLi4K</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiSGllcmFyY2hpY2FsIExpbmVhciBNb2RlbGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBUZXJtcwoKVGhlc2UgbW9kZWxzIGdvIGJ5IGEgdmFyaWV0eSBvZiBkaWZmZXJlbnQgdGVybXM6CgotIGhpZXJhcmNoaWNhbCBsaW5lYXIgbW9kZWwgKEhMTSkKLSBtdWx0aWxldmVsIG1vZGVsIChNTE0pCi0gbWl4ZWQgZWZmZWN0cyBtb2RlbAotIG1peGVkIG1vZGVsCgojIE92ZXJ2aWV3CgpodHRwczovL2lzYWFjdHBldGVyc2VuLmdpdGh1Yi5pby9QcmluY2lwbGVzLVBzeWNob2xvZ2ljYWwtQXNzZXNzbWVudC9yZWxpYWJpbGl0eS5odG1sI21peGVkTW9kZWxzCgojIEFzc3VtcHRpb25zCgpUaGUgd2l0aGluLWdyb3VwIGVycm9yczoKMS4gYXJlIGluZGVwZW5kZW50CjIuIGFyZSBpZGVudGljYWxseSBub3JtYWxseSBkaXN0cmlidXRlZAozLiBoYXZlIG1lYW4gemVybyBhbmQgdmFyaWFuY2Ugc2lnbWEtc3F1YXJlZAo0LiBhcmUgaW5kZXBlbmRlbnQgb2YgdGhlIHJhbmRvbSBlZmZlY3RzCgpUaGUgcmFuZG9tIGVmZmVjdHM6CjUuIGFyZSBub3JtYWxseSBkaXN0cmlidXRlZAo2LiBoYXZlIG1lYW4gemVybyBhbmQgY292YXJpYW5jZSBtYXRyaXggUHNpIChub3QgZGVwZW5kaW5nIG9uIHRoZSBncm91cCkKNy4gYXJlIGluZGVwZW5kZW50IGZvciBkaWZmZXJlbnQgZ3JvdXBzCgojIyBSZXNvdXJjZXMKClBpbmhlaXJvIGFuZCBCYXRlcyAoMjAwMCkgYm9vayAocC4gMTc0LCBzZWN0aW9uIDQuMy4xKQoKaHR0cHM6Ly9zdGF0cy5zdGFja2V4Y2hhbmdlLmNvbS9xdWVzdGlvbnMvNzc4OTEvY2hlY2tpbmctYXNzdW1wdGlvbnMtbG1lci1sbWUtbWl4ZWQtbW9kZWxzLWluLXIK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <!-- Add icon library -->
@@ -521,7 +544,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2",
+      selectors: "h1,h2,h3",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
