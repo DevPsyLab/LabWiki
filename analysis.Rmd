@@ -19,4 +19,5 @@ knitr::opts_chunk$set(echo = TRUE,
 - [Markdown](analysis-markdown.html)
 - [Principal Component Analysis](analysis-pca.html)
 - [R](analysis-R.html)
+- [Regression](analysis-regression.html)
 - [Structural Equation Modeling](analysis-sem.html)

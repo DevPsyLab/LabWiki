@@ -8,4 +8,34 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-To be added...
+# Terms
+
+These models go by a variety of different terms:
+
+- hierarchical linear model (HLM)
+- multilevel model (MLM)
+- mixed effects model
+- mixed model
+
+# Overview
+
+https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#mixedModels
+
+# Assumptions
+
+The within-group errors:
+1. are independent
+2. are identically normally distributed
+3. have mean zero and variance sigma-squared
+4. are independent of the random effects
+
+The random effects:
+5. are normally distributed
+6. have mean zero and covariance matrix Psi (not depending on the group)
+7. are independent for different groups
+
+## Resources
+
+Pinheiro and Bates (2000) book (p. 174, section 4.3.1)
+
+https://stats.stackexchange.com/questions/77891/checking-assumptions-lmer-lme-mixed-models-in-r
