@@ -38,6 +38,7 @@ library("psych")
 library("tidyverse")
 library("purrr")
 library("naniar")
+library("mvnormtest")
 ```
 
 # Simulate Data
@@ -332,6 +333,25 @@ vwReg(outcome ~ predictor, data = mydata)
 ```
 
 # Basic inferential statistics
+
+## Tests of Normality
+
+### Shapiro-Wilk test of normality
+
+The Shapiro-Wilk test of normality does not accept more than 5000 cases because it will reject the hypothesis that data come from a normal distribution with even slight deviations from normality.
+
+```{r}
+shapiro.test(na.omit(mydata$outcome)) #subset to keep only the first 5000 rows: mydata$outcome[1:5000]
+```
+
+### Test of multivariate normality
+
+```{r}
+mydata %>% 
+  na.omit %>% 
+  t %>% 
+  mshapiro.test
+```
 
 ## Statistical decision tree
 
