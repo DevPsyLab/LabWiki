@@ -619,7 +619,7 @@ You can look at various options below:
 - `AMOS`
 - `Warppls`
 - `Graphviz`: https://graphviz.org
-    - has an R port—this is what we use for our study flowchart via the DiagrammeR package: https://rich-iannone.github.io/DiagrammeR/index.html
+    - has an R port—this is what we use for our study flowchart via the `DiagrammeR` package: https://rich-iannone.github.io/DiagrammeR/index.html
 - https://app.diagrams.net
 - https://github.com/jgraph/drawio-desktop/releases
 
