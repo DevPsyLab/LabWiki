@@ -21,6 +21,17 @@ These models go by a variety of different terms:
 
 https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#mixedModels
 
+# Estimator: ML or REML
+
+For small sample sizes, restricted maximum likelihood (REML) is preferred over maximum likelihood (ML).
+ML preferred when there is a small number (< 4) of fixed effects; REML is preferred when there are more (> 4) fixed effects.
+The greater the number of fixed effects, the greater the difference between REML and ML estimates.
+Likelihood ratio (LR) tests for REML require exactly the same fixed effects specification in both models.
+So, to compare models with different fixed effects with an LR test (to determine whether to include a particular fixed effect), ML must be used.
+In contrast to the maximum likelihood estimation, REML can produce unbiased estimates of variance and covariance parameters, variance estimates are larger in REML than ML.
+To compare whether an effect should be fixed or random, use REML.
+To simultaneously compare fixed and random effects, use ML.
+
 # Assumptions
 
 The within-group errors:
