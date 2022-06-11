@@ -42,6 +42,8 @@ library("purrr")
 # Simulate Data
 
 ```{r}
+set.seed(52242)
+
 n <- 1000
 
 ID <- rep(1:100, each = 10)
