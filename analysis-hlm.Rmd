@@ -24,12 +24,14 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability
 # Assumptions
 
 The within-group errors:
+
 1. are independent
 2. are identically normally distributed
 3. have mean zero and variance sigma-squared
 4. are independent of the random effects
 
 The random effects:
+
 5. are normally distributed
 6. have mean zero and covariance matrix Psi (not depending on the group)
 7. are independent for different groups
