@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Regression</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8JSDTYMH7P');
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="includes/custom.css" type="text/css" />
+<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-SROP.html">SROP Students</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Documentation
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="analysis.html">Data Analysis Guides</a>
+    </li>
+    <li>
+      <a href="honors.html">Honors Projects</a>
+    </li>
+    <li>
+      <a href="documentation-remote.html">Remote Participation</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Studies
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Regression</h1>
+
+</div>
+
+
+<div id="preamble" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Preamble</h1>
+<div id="install-libraries" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Install Libraries</h2>
+<pre class="r"><code>#install.packages(&quot;remotes&quot;)
+#remotes::install_git(&quot;https://research-git.uiowa.edu/PetersenLab/petersenlab.git&quot;)</code></pre>
+</div>
+<div id="load-libraries" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Load Libraries</h2>
+<pre class="r"><code>library(&quot;psych&quot;)
+library(&quot;rms&quot;)
+library(&quot;robustbase&quot;)
+library(&quot;brms&quot;)</code></pre>
+</div>
+</div>
+<div id="import-data" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Import data</h1>
+<pre class="r"><code>mydata &lt;- read.csv(&quot;https://osf.io/8syp5/download&quot;)</code></pre>
+</div>
+<div id="data-preparation" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Data preparation</h1>
+<pre class="r"><code>mydata$countVariable &lt;- as.integer(mydata$bpi_antisocialT2Sum)
+mydata$orderedVariable &lt;- factor(mydata$countVariable, ordered = TRUE)
+
+mydata$female &lt;- NA
+mydata$female[which(mydata$sex == &quot;male&quot;)] &lt;- 0
+mydata$female[which(mydata$sex == &quot;female&quot;)] &lt;- 1</code></pre>
+</div>
+<div id="linear-regression" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Linear Regression</h1>
+<div id="linear-regression-model" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Linear regression model</h2>
+<pre class="r"><code>multipleRegressionModel &lt;- lm(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                              data = mydata,
+                              na.action = na.exclude)
+multipleRegressionModelNoMissing &lt;- lm(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                       data = mydata,
+                                       na.action = na.omit)
+
+summary(multipleRegressionModel)</code></pre>
+<pre><code>
+Call:
+lm(formula = bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+    data = mydata, na.action = na.exclude)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8.3755 -1.2337 -0.2212  0.9911 12.8017 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)              1.19830    0.05983  20.029  &lt; 2e-16 ***
+bpi_antisocialT1Sum      0.46553    0.01858  25.049  &lt; 2e-16 ***
+bpi_anxiousDepressedSum  0.16075    0.02916   5.513 3.83e-08 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.979 on 2871 degrees of freedom
+  (8656 observations deleted due to missingness)
+Multiple R-squared:  0.262, Adjusted R-squared:  0.2615 
+F-statistic: 509.6 on 2 and 2871 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>confint(multipleRegressionModel)</code></pre>
+<pre><code>                            2.5 %    97.5 %
+(Intercept)             1.0809881 1.3156128
+bpi_antisocialT1Sum     0.4290884 0.5019688
+bpi_anxiousDepressedSum 0.1035825 0.2179258</code></pre>
+</div>
+<div id="linear-regression-model-on-correlationcovariance-matrix-for-pairwise-deletion" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Linear regression model on correlation/covariance matrix (for pairwise deletion)</h2>
+<p>Also see here: <a href="https://stats.stackexchange.com/questions/158366/fit-multiple-regression-model-with-pairwise-deletion-or-on-a-correlation-covari/173002#173002" class="uri">https://stats.stackexchange.com/questions/158366/fit-multiple-regression-model-with-pairwise-deletion-or-on-a-correlation-covari/173002#173002</a></p>
+<pre class="r"><code>multipleRegressionModelPairwise &lt;- setCor(y = &quot;bpi_antisocialT2Sum&quot;,
+                                          x = c(&quot;bpi_antisocialT1Sum&quot;,&quot;bpi_anxiousDepressedSum&quot;),
+                                          data = cov(mydata[,c(&quot;bpi_antisocialT2Sum&quot;,&quot;bpi_antisocialT1Sum&quot;,&quot;bpi_anxiousDepressedSum&quot;)], use = &quot;pairwise.complete.obs&quot;),
+                                          n.obs = nrow(mydata))</code></pre>
+<pre><code>Warning in sqrt(diag(resid) * (n.obs - 1)/(df)): NaNs produced</code></pre>
+<pre><code>Warning in sqrt(MSE[i] * diag(x.inv)): NaNs produced</code></pre>
+<pre><code>Warning in qt(1 - alpha/2, df): NaNs produced
+
+Warning in qt(1 - alpha/2, df): NaNs produced</code></pre>
+<pre><code>Warning in pf(F, k, df, log.p = TRUE): NaNs produced</code></pre>
+<p><img src="analysis-regression_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code>summary(multipleRegressionModelPairwise)</code></pre>
+<pre><code>
+Multiple Regression from raw data 
+setCor(y = &quot;bpi_antisocialT2Sum&quot;, x = c(&quot;bpi_antisocialT1Sum&quot;, 
+    &quot;bpi_anxiousDepressedSum&quot;), data = cov(mydata[, c(&quot;bpi_antisocialT2Sum&quot;, 
+    &quot;bpi_antisocialT1Sum&quot;, &quot;bpi_anxiousDepressedSum&quot;)], use = &quot;pairwise.complete.obs&quot;), 
+    n.obs = nrow(mydata))
+
+Multiple Regression from matrix input 
+
+Beta weights 
+                        bpi_antisocialT2Sum
+(Intercept)                           0.000
+bpi_antisocialT1Sum                  -0.031
+bpi_anxiousDepressedSum              -1.004
+
+Multiple R 
+bpi_antisocialT2Sum 
+                  1 
+
+Multiple R2 
+bpi_antisocialT2Sum 
+                  1 
+
+Cohen&#39;s set correlation R2 
+[1] 1
+
+Squared Canonical Correlations
+NULL</code></pre>
+<pre class="r"><code>multipleRegressionModelPairwise[c(&quot;coefficients&quot;,&quot;se&quot;,&quot;Probability&quot;,&quot;R2&quot;,&quot;shrunkenR2&quot;)]</code></pre>
+<pre><code>$coefficients
+                        bpi_antisocialT2Sum
+(Intercept)                       0.0000000
+bpi_antisocialT1Sum              -0.0311043
+bpi_anxiousDepressedSum          -1.0040177
+
+$se
+                        bpi_antisocialT2Sum
+(Intercept)                             NaN
+bpi_antisocialT1Sum                     NaN
+bpi_anxiousDepressedSum                 NaN
+
+$Probability
+                        bpi_antisocialT2Sum
+(Intercept)                             NaN
+bpi_antisocialT1Sum                     NaN
+bpi_anxiousDepressedSum                 NaN
+
+$R2
+bpi_antisocialT2Sum 
+                  1 
+
+$shrunkenR2
+bpi_antisocialT2Sum 
+                Inf </code></pre>
+</div>
+<div id="linear-regression-model-with-robust-covariance-matrix-rms" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Linear regression model with robust covariance matrix (rms)</h2>
+<pre class="r"><code>rmsMultipleRegressionModel &lt;- robcov(ols(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                         data = mydata,
+                                         x = TRUE,
+                                         y = TRUE))
+
+rmsMultipleRegressionModel</code></pre>
+<pre><code>Frequencies of Missing Values Due to Each Variable
+    bpi_antisocialT2Sum     bpi_antisocialT1Sum bpi_anxiousDepressedSum 
+                   7501                    7613                    7616 
+
+Linear Regression Model
+ 
+ ols(formula = bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+     data = mydata, x = TRUE, y = TRUE)
+ 
+ 
+                 Model Likelihood    Discrimination    
+                       Ratio Test           Indexes    
+ Obs    2874    LR chi2    873.09    R2       0.262    
+ sigma1.9786    d.f.            2    R2 adj   0.261    
+ d.f.   2871    Pr(&gt; chi2) 0.0000    g        1.278    
+ 
+ Residuals
+ 
+     Min      1Q  Median      3Q     Max 
+ -8.3755 -1.2337 -0.2212  0.9911 12.8017 
+ 
+ 
+                         Coef   S.E.   t     Pr(&gt;|t|)
+ Intercept               1.1983 0.0622 19.26 &lt;0.0001 
+ bpi_antisocialT1Sum     0.4655 0.0229 20.30 &lt;0.0001 
+ bpi_anxiousDepressedSum 0.1608 0.0330  4.87 &lt;0.0001 
+ </code></pre>
+<pre class="r"><code>confint(rmsMultipleRegressionModel)</code></pre>
+<pre><code>                             2.5 %    97.5 %
+Intercept               1.07631713 1.3202837
+bpi_antisocialT1Sum     0.42056957 0.5104877
+bpi_anxiousDepressedSum 0.09606644 0.2254418</code></pre>
+</div>
+<div id="robust-linear-regression-mm-type-iteratively-reweighted-least-squares-regression" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Robust linear regression (MM-type iteratively reweighted least squares regression)</h2>
+<pre class="r"><code>robustLinearRegression &lt;- lmrob(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                data = mydata,
+                                na.action = na.exclude)
+
+summary(robustLinearRegression)</code></pre>
+<pre><code>
+Call:
+lmrob(formula = bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+    data = mydata, na.action = na.exclude)
+ \--&gt; method = &quot;MM&quot;
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-8.43518 -1.06680 -0.06707  1.14090 13.05599 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)              0.94401    0.05406  17.464  &lt; 2e-16 ***
+bpi_antisocialT1Sum      0.49135    0.02237  21.966  &lt; 2e-16 ***
+bpi_anxiousDepressedSum  0.15766    0.03102   5.083 3.96e-07 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Robust residual standard error: 1.628 
+  (8656 observations deleted due to missingness)
+Multiple R-squared:  0.326, Adjusted R-squared:  0.3255 
+Convergence in 14 IRWLS iterations
+
+Robustness weights: 
+ 12 observations c(52,347,354,517,709,766,768,979,1618,2402,2403,2404)
+     are outliers with |weight| = 0 ( &lt; 3.5e-05); 
+ 283 weights are ~= 1. The remaining 2579 ones are summarized as
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+0.0001311 0.8599000 0.9470000 0.8814000 0.9816000 0.9990000 
+Algorithmic parameters: 
+       tuning.chi                bb        tuning.psi        refine.tol 
+        1.548e+00         5.000e-01         4.685e+00         1.000e-07 
+          rel.tol         scale.tol         solve.tol       eps.outlier 
+        1.000e-07         1.000e-10         1.000e-07         3.479e-05 
+            eps.x warn.limit.reject warn.limit.meanrw 
+        2.365e-11         5.000e-01         5.000e-01 
+     nResample         max.it       best.r.s       k.fast.s          k.max 
+           500             50              2              1            200 
+   maxit.scale      trace.lev            mts     compute.rd fast.s.large.n 
+           200              0           1000              0           2000 
+                  psi           subsampling                   cov 
+           &quot;bisquare&quot;         &quot;nonsingular&quot;         &quot;.vcov.avar1&quot; 
+compute.outlier.stats 
+                 &quot;SM&quot; 
+seed : int(0) </code></pre>
+<pre class="r"><code>confint(robustLinearRegression)</code></pre>
+<pre><code>                             2.5 %    97.5 %
+(Intercept)             0.83801565 1.0499981
+bpi_antisocialT1Sum     0.44749135 0.5352118
+bpi_anxiousDepressedSum 0.09683728 0.2184779</code></pre>
+</div>
+<div id="least-trimmed-squares-regression-for-removing-outliers" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Least trimmed squares regression (for removing outliers)</h2>
+<pre class="r"><code>ltsRegression &lt;- ltsReg(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                        data = mydata,
+                        na.action = na.exclude)
+
+summary(ltsRegression)</code></pre>
+<pre><code>
+Call:
+ltsReg.formula(formula = bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + 
+    bpi_anxiousDepressedSum, data = mydata, na.action = na.exclude)
+
+Residuals (from reweighted LS):
+    Min      1Q  Median      3Q     Max 
+-3.8356 -0.8714  0.0000  1.0275  3.9358 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(&gt;|t|)    
+Intercept                0.76093    0.04804  15.838  &lt; 2e-16 ***
+bpi_antisocialT1Sum      0.55054    0.01527  36.061  &lt; 2e-16 ***
+bpi_anxiousDepressedSum  0.11045    0.02346   4.708 2.63e-06 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 1.537 on 2711 degrees of freedom
+Multiple R-Squared: 0.4082, Adjusted R-squared: 0.4077 
+F-statistic: 934.9 on 2 and 2711 DF,  p-value: &lt; 2.2e-16 </code></pre>
+</div>
+<div id="bayesian-linear-regression" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Bayesian linear regression</h2>
+<pre class="r"><code>bayesianRegularizedRegression &lt;- brm(bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                     data = mydata,
+                                     chains = 4,
+                                     iter = 2000,
+                                     seed = 52242)</code></pre>
+<pre><code>Warning: Rows containing NAs were excluded from the model.</code></pre>
+<pre><code>Compiling Stan program...</code></pre>
+<pre><code>Start sampling</code></pre>
+<pre><code>
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 2.2e-05 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.22 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 0.094 seconds (Warm-up)
+Chain 1:                0.089 seconds (Sampling)
+Chain 1:                0.183 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 1.6e-05 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.16 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 0.093 seconds (Warm-up)
+Chain 2:                0.085 seconds (Sampling)
+Chain 2:                0.178 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 1.5e-05 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 0.093 seconds (Warm-up)
+Chain 3:                0.088 seconds (Sampling)
+Chain 3:                0.181 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 1.5e-05 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 0.097 seconds (Warm-up)
+Chain 4:                0.099 seconds (Sampling)
+Chain 4:                0.196 seconds (Total)
+Chain 4: </code></pre>
+<pre class="r"><code>summary(bayesianRegularizedRegression)</code></pre>
+<pre><code> Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: bpi_antisocialT2Sum ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum 
+   Data: mydata (Number of observations: 2874) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Population-Level Effects: 
+                        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                   1.20      0.06     1.09     1.31 1.00     4628
+bpi_antisocialT1Sum         0.47      0.02     0.43     0.50 1.00     3493
+bpi_anxiousDepressedSum     0.16      0.03     0.10     0.22 1.00     3476
+                        Tail_ESS
+Intercept                   3534
+bpi_antisocialT1Sum         2895
+bpi_anxiousDepressedSum     3086
+
+Family Specific Parameters: 
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     1.98      0.03     1.93     2.03 1.00     4163     2897
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+</div>
+<div id="generalized-linear-regression" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Generalized Linear Regression</h1>
+<div id="generalized-regression-model" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Generalized regression model</h2>
+<p>In this example, we predict a count variable that has a poisson distribution. We could change the distribution.</p>
+<pre class="r"><code>generalizedRegressionModel &lt;- glm(countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                  data = mydata,
+                                  family = &quot;poisson&quot;,
+                                  na.action = na.exclude)
+
+summary(generalizedRegressionModel)</code></pre>
+<pre><code>
+Call:
+glm(formula = countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+    family = &quot;poisson&quot;, data = mydata, na.action = na.exclude)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-5.2767  -0.9731  -0.1403   0.5939   6.0151  
+
+Coefficients:
+                        Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)             0.459999   0.019650  23.410  &lt; 2e-16 ***
+bpi_antisocialT1Sum     0.141577   0.004891  28.948  &lt; 2e-16 ***
+bpi_anxiousDepressedSum 0.047567   0.008036   5.919 3.23e-09 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 5849.4  on 2873  degrees of freedom
+Residual deviance: 4562.6  on 2871  degrees of freedom
+  (8656 observations deleted due to missingness)
+AIC: 11482
+
+Number of Fisher Scoring iterations: 5</code></pre>
+<pre class="r"><code>confint(generalizedRegressionModel)</code></pre>
+<pre><code>Waiting for profiling to be done...</code></pre>
+<pre><code>                             2.5 %     97.5 %
+(Intercept)             0.42136094 0.49838751
+bpi_antisocialT1Sum     0.13196544 0.15113708
+bpi_anxiousDepressedSum 0.03177425 0.06327445</code></pre>
+</div>
+<div id="generalized-regression-model-rms" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Generalized regression model (rms)</h2>
+<p>In this example, we predict a count variable that has a poisson distribution. We could change the distribution.</p>
+<pre class="r"><code>rmsGeneralizedRegressionModel &lt;- Glm(countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                     data = mydata,
+                                     x = TRUE,
+                                     y = TRUE,
+                                     family = &quot;poisson&quot;)
+
+rmsGeneralizedRegressionModel</code></pre>
+<pre><code>Frequencies of Missing Values Due to Each Variable
+          countVariable     bpi_antisocialT1Sum bpi_anxiousDepressedSum 
+                   7501                    7613                    7616 
+
+General Linear Model
+ 
+ Glm(formula = countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+     family = &quot;poisson&quot;, data = mydata, x = TRUE, y = TRUE)
+ 
+ 
+                        Model Likelihood    
+                              Ratio Test    
+       Obs    2874    LR chi2    1286.72    
+ Residual d.f.2871    d.f.             2    
+       g 0.3873236    Pr(&gt; chi2) &lt;0.0001    
+ 
+                         Coef   S.E.   Wald Z Pr(&gt;|Z|)
+ Intercept               0.4600 0.0196 23.41  &lt;0.0001 
+ bpi_antisocialT1Sum     0.1416 0.0049 28.95  &lt;0.0001 
+ bpi_anxiousDepressedSum 0.0476 0.0080  5.92  &lt;0.0001 
+ </code></pre>
+<pre class="r"><code>confint(rmsGeneralizedRegressionModel)</code></pre>
+<pre><code>Waiting for profiling to be done...</code></pre>
+<pre><code>Error in summary.rms(fitted): adjustment values not defined here or with datadist for bpi_antisocialT1Sum bpi_anxiousDepressedSum</code></pre>
+</div>
+<div id="bayesian-generalized-linear-model" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Bayesian generalized linear model</h2>
+<p>In this example, we predict a count variable that has a poisson distribution. We could change the distribution. For example, we could use Gamma regression, <code>family = Gamma</code>, when the response variable is continuous and positive, and the coefficient of variation–rather than the variance–is constant.</p>
+<pre class="r"><code>bayesianGeneralizedLinearRegression &lt;- brm(countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                           data = mydata,
+                                           family = poisson,
+                                           chains = 4,
+                                           seed = 52242,
+                                           iter = 2000)</code></pre>
+<pre><code>Warning: Rows containing NAs were excluded from the model.</code></pre>
+<pre><code>Compiling Stan program...</code></pre>
+<pre><code>Start sampling</code></pre>
+<pre><code>
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.000135 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.35 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 0.986 seconds (Warm-up)
+Chain 1:                0.869 seconds (Sampling)
+Chain 1:                1.855 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.000136 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 1.36 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 1.001 seconds (Warm-up)
+Chain 2:                0.864 seconds (Sampling)
+Chain 2:                1.865 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 0.00013 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 1.3 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 0.895 seconds (Warm-up)
+Chain 3:                0.861 seconds (Sampling)
+Chain 3:                1.756 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 0.000121 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 1.21 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 0.953 seconds (Warm-up)
+Chain 4:                0.791 seconds (Sampling)
+Chain 4:                1.744 seconds (Total)
+Chain 4: </code></pre>
+<pre class="r"><code>summary(bayesianGeneralizedLinearRegression)</code></pre>
+<pre><code> Family: poisson 
+  Links: mu = log 
+Formula: countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum 
+   Data: mydata (Number of observations: 2874) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Population-Level Effects: 
+                        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                   0.46      0.02     0.42     0.50 1.00     3053
+bpi_antisocialT1Sum         0.14      0.00     0.13     0.15 1.00     2791
+bpi_anxiousDepressedSum     0.05      0.01     0.03     0.06 1.00     2532
+                        Tail_ESS
+Intercept                   2974
+bpi_antisocialT1Sum         2579
+bpi_anxiousDepressedSum     2575
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="robust-generalized-regression" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Robust generalized regression</h2>
+<pre class="r"><code>robustGeneralizedRegression &lt;- glmrob(countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                      data = mydata,
+                                      family = &quot;poisson&quot;,
+                                      na.action = na.exclude)
+
+summary(robustGeneralizedRegression)</code></pre>
+<pre><code>
+Call:  glmrob(formula = countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,      family = &quot;poisson&quot;, data = mydata, na.action = na.exclude) 
+
+
+Coefficients:
+                        Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)             0.365934   0.020794  17.598  &lt; 2e-16 ***
+bpi_antisocialT1Sum     0.156275   0.005046  30.969  &lt; 2e-16 ***
+bpi_anxiousDepressedSum 0.050526   0.008332   6.064 1.32e-09 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+Robustness weights w.r * w.x: 
+ 2273 weights are ~= 1. The remaining 601 ones are summarized as
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.1286  0.5550  0.7574  0.7183  0.8874  0.9982 
+
+Number of observations: 2874 
+Fitted by method &#39;Mqle&#39;  (in 5 iterations)
+
+(Dispersion parameter for poisson family taken to be 1)
+
+No deviance values available 
+Algorithmic parameters: 
+   acc    tcc 
+0.0001 1.3450 
+maxit 
+   50 
+test.acc 
+  &quot;coef&quot; </code></pre>
+<pre class="r"><code>confint(robustGeneralizedRegression)</code></pre>
+<pre><code>Waiting for profiling to be done...</code></pre>
+<pre><code>Error in glm.control(acc = 1e-04, test.acc = &quot;coef&quot;, maxit = 50, tcc = 1.345): unused arguments (acc = 1e-04, test.acc = &quot;coef&quot;, tcc = 1.345)</code></pre>
+</div>
+<div id="ordinal-regression-model-rms" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Ordinal regression model (rms)</h2>
+<pre class="r"><code>ordinalRegressionModel &lt;- robcov(orm(orderedVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                     data = mydata,
+                                     x = TRUE,
+                                     y = TRUE))
+
+ordinalRegressionModel</code></pre>
+<pre><code>Frequencies of Missing Values Due to Each Variable
+        orderedVariable     bpi_antisocialT1Sum bpi_anxiousDepressedSum 
+                   7501                    7613                    7616 
+
+Logistic (Proportional Odds) Ordinal Regression Model
+ 
+ orm(formula = orderedVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+     data = mydata, x = TRUE, y = TRUE)
+ 
+ 
+ Frequencies of Responses
+ 
+   0   1   2   3   4   5   6   7   8   9  10  11  12  14 
+ 455 597 527 444 313 205 133  80  52  33  16   9   6   4 
+ 
+ 
+                        Model Likelihood               Discrimination    Rank Discrim.    
+                              Ratio Test                      Indexes          Indexes    
+ Obs          2874    LR chi2     881.26    R2                  0.268    rho     0.506    
+ Distinct Y     14    d.f.             2    R2(2,2874)          0.264                     
+ Median Y        3    Pr(&gt; chi2) &lt;0.0001    R2(2,2803.4)        0.269                     
+ max |deriv| 6e-06    Score chi2  916.79    |Pr(Y&gt;=median)-0.5| 0.188                     
+                      Pr(&gt; chi2) &lt;0.0001                                                  
+ 
+                         Coef   S.E.   Wald Z Pr(&gt;|Z|)
+ bpi_antisocialT1Sum     0.4404 0.0208 21.16  &lt;0.0001 
+ bpi_anxiousDepressedSum 0.1427 0.0266  5.36  &lt;0.0001 
+ </code></pre>
+<pre class="r"><code>confint(ordinalRegressionModel)</code></pre>
+<pre><code>                              2.5 %     97.5 %
+y&gt;=1                             NA         NA
+y&gt;=2                    -0.79571122 -0.5575596
+y&gt;=3                             NA         NA
+y&gt;=4                             NA         NA
+y&gt;=5                             NA         NA
+y&gt;=6                             NA         NA
+y&gt;=7                             NA         NA
+y&gt;=8                             NA         NA
+y&gt;=9                             NA         NA
+y&gt;=10                            NA         NA
+y&gt;=11                            NA         NA
+y&gt;=12                            NA         NA
+y&gt;=14                            NA         NA
+bpi_antisocialT1Sum      0.39961501  0.4811892
+bpi_anxiousDepressedSum  0.09053245  0.1948370</code></pre>
+</div>
+<div id="bayesian-ordinal-regression-model" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Bayesian ordinal regression model</h2>
+<pre class="r"><code>bayesianOrdinalRegression &lt;- brm(orderedVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                 data = mydata,
+                                 family = cumulative(),
+                                 chains = 4,
+                                 seed = 52242,
+                                 iter = 2000)</code></pre>
+<pre><code>Warning: Rows containing NAs were excluded from the model.</code></pre>
+<pre><code>Compiling Stan program...</code></pre>
+<pre><code>Start sampling</code></pre>
+<pre><code>
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.002239 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 22.39 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 33.415 seconds (Warm-up)
+Chain 1:                27.381 seconds (Sampling)
+Chain 1:                60.796 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.00181 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 18.1 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 28.87 seconds (Warm-up)
+Chain 2:                20.952 seconds (Sampling)
+Chain 2:                49.822 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 0.002112 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 21.12 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 32.051 seconds (Warm-up)
+Chain 3:                22.838 seconds (Sampling)
+Chain 3:                54.889 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 0.002112 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 21.12 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 31.061 seconds (Warm-up)
+Chain 4:                27.726 seconds (Sampling)
+Chain 4:                58.787 seconds (Total)
+Chain 4: </code></pre>
+<pre class="r"><code>summary(bayesianOrdinalRegression)</code></pre>
+<pre><code> Family: cumulative 
+  Links: mu = logit; disc = identity 
+Formula: orderedVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum 
+   Data: mydata (Number of observations: 2874) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Population-Level Effects: 
+                        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept[1]               -0.60      0.06    -0.73    -0.48 1.00     4626
+Intercept[2]                0.67      0.06     0.56     0.78 1.00     5687
+Intercept[3]                1.57      0.06     1.45     1.70 1.00     4939
+Intercept[4]                2.40      0.07     2.26     2.54 1.00     4633
+Intercept[5]                3.15      0.08     2.99     3.31 1.00     4346
+Intercept[6]                3.84      0.09     3.66     4.03 1.00     4524
+Intercept[7]                4.52      0.11     4.31     4.74 1.00     4638
+Intercept[8]                5.15      0.13     4.90     5.41 1.00     4695
+Intercept[9]                5.79      0.15     5.50     6.10 1.00     4710
+Intercept[10]               6.51      0.19     6.16     6.90 1.00     5155
+Intercept[11]               7.17      0.24     6.70     7.66 1.00     5239
+Intercept[12]               7.87      0.33     7.25     8.56 1.00     5835
+Intercept[13]               8.91      0.53     8.02    10.03 1.00     6030
+bpi_antisocialT1Sum         0.44      0.02     0.40     0.48 1.00     3936
+bpi_anxiousDepressedSum     0.14      0.03     0.09     0.19 1.00     4692
+                        Tail_ESS
+Intercept[1]                3275
+Intercept[2]                3236
+Intercept[3]                3579
+Intercept[4]                3633
+Intercept[5]                3310
+Intercept[6]                3649
+Intercept[7]                3355
+Intercept[8]                3295
+Intercept[9]                3341
+Intercept[10]               3020
+Intercept[11]               3106
+Intercept[12]               3455
+Intercept[13]               3399
+bpi_antisocialT1Sum         3142
+bpi_anxiousDepressedSum     3548
+
+Family Specific Parameters: 
+     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+disc     1.00      0.00     1.00     1.00   NA       NA       NA
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="bayesian-count-regression-model" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Bayesian count regression model</h2>
+<pre class="r"><code>bayesianCountRegression &lt;- brm(countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                               data = mydata,
+                               family = &quot;poisson&quot;,
+                               chains = 4,
+                               seed = 52242,
+                               iter = 2000)</code></pre>
+<pre><code>Warning: Rows containing NAs were excluded from the model.</code></pre>
+<pre><code>Compiling Stan program...</code></pre>
+<pre><code>Start sampling</code></pre>
+<pre><code>
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.000125 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.25 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 0.926 seconds (Warm-up)
+Chain 1:                0.802 seconds (Sampling)
+Chain 1:                1.728 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.000123 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 1.23 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 0.976 seconds (Warm-up)
+Chain 2:                0.824 seconds (Sampling)
+Chain 2:                1.8 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 0.000122 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 1.22 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 0.901 seconds (Warm-up)
+Chain 3:                0.864 seconds (Sampling)
+Chain 3:                1.765 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 0.000129 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 1.29 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 0.949 seconds (Warm-up)
+Chain 4:                0.827 seconds (Sampling)
+Chain 4:                1.776 seconds (Total)
+Chain 4: </code></pre>
+<pre class="r"><code>summary(bayesianCountRegression)</code></pre>
+<pre><code> Family: poisson 
+  Links: mu = log 
+Formula: countVariable ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum 
+   Data: mydata (Number of observations: 2874) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Population-Level Effects: 
+                        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                   0.46      0.02     0.42     0.50 1.00     3053
+bpi_antisocialT1Sum         0.14      0.00     0.13     0.15 1.00     2791
+bpi_anxiousDepressedSum     0.05      0.01     0.03     0.06 1.00     2532
+                        Tail_ESS
+Intercept                   2974
+bpi_antisocialT1Sum         2579
+bpi_anxiousDepressedSum     2575
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+<div id="logistic-regression-model-rms" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Logistic regression model (rms)</h2>
+<pre class="r"><code>logisticRegressionModel &lt;- robcov(lrm(female ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                      data = mydata,
+                                      x = TRUE,
+                                      y = TRUE))
+
+logisticRegressionModel</code></pre>
+<pre><code>Frequencies of Missing Values Due to Each Variable
+                 female     bpi_antisocialT1Sum bpi_anxiousDepressedSum 
+                      2                    7613                    7616 
+
+Logistic Regression Model
+ 
+ lrm(formula = female ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum, 
+     data = mydata, x = TRUE, y = TRUE)
+ 
+ 
+                        Model Likelihood       Discrimination    Rank Discrim.    
+                              Ratio Test              Indexes          Indexes    
+ Obs          3914    LR chi2      66.63       R2       0.023    C       0.571    
+  0           1965    d.f.             2      R2(2,3914)0.016    Dxy     0.142    
+  1           1949    Pr(&gt; chi2) &lt;0.0001    R2(2,2935.5)0.022    gamma   0.147    
+ max |deriv| 1e-12                             Brier    0.246    tau-a   0.071    
+ 
+                         Coef    S.E.   Wald Z Pr(&gt;|Z|)
+ Intercept                0.3002 0.0529  5.67  &lt;0.0001 
+ bpi_antisocialT1Sum     -0.1244 0.0166 -7.48  &lt;0.0001 
+ bpi_anxiousDepressedSum  0.0382 0.0253  1.51  0.1314  
+ </code></pre>
+<pre class="r"><code>confint(logisticRegressionModel)</code></pre>
+<pre><code>Waiting for profiling to be done...</code></pre>
+<pre><code>Error in summary.rms(fitted): adjustment values not defined here or with datadist for bpi_antisocialT1Sum bpi_anxiousDepressedSum</code></pre>
+</div>
+<div id="bayesian-logistic-regression-model" class="section level2" number="5.9">
+<h2><span class="header-section-number">5.9</span> Bayesian logistic regression model</h2>
+<pre class="r"><code>bayesianLogisticRegression &lt;- brm(female ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum,
+                                  data = mydata,
+                                  family = bernoulli,
+                                  chains = 4,
+                                  seed = 52242,
+                                  iter = 2000)</code></pre>
+<pre><code>Warning: Rows containing NAs were excluded from the model.</code></pre>
+<pre><code>Compiling Stan program...</code></pre>
+<pre><code>Start sampling</code></pre>
+<pre><code>
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 1).
+Chain 1: 
+Chain 1: Gradient evaluation took 0.000148 seconds
+Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 1.48 seconds.
+Chain 1: Adjust your expectations accordingly!
+Chain 1: 
+Chain 1: 
+Chain 1: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 1: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 1: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 1: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 1: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 1: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 1: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 1: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 1: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 1: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 1: 
+Chain 1:  Elapsed Time: 0.878 seconds (Warm-up)
+Chain 1:                0.932 seconds (Sampling)
+Chain 1:                1.81 seconds (Total)
+Chain 1: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 2).
+Chain 2: 
+Chain 2: Gradient evaluation took 0.000135 seconds
+Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 1.35 seconds.
+Chain 2: Adjust your expectations accordingly!
+Chain 2: 
+Chain 2: 
+Chain 2: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 2: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 2: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 2: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 2: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 2: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 2: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 2: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 2: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 2: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 2: 
+Chain 2:  Elapsed Time: 0.914 seconds (Warm-up)
+Chain 2:                0.914 seconds (Sampling)
+Chain 2:                1.828 seconds (Total)
+Chain 2: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 3).
+Chain 3: 
+Chain 3: Gradient evaluation took 0.000138 seconds
+Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 1.38 seconds.
+Chain 3: Adjust your expectations accordingly!
+Chain 3: 
+Chain 3: 
+Chain 3: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 3: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 3: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 3: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 3: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 3: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 3: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 3: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 3: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 3: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 3: 
+Chain 3:  Elapsed Time: 0.866 seconds (Warm-up)
+Chain 3:                0.791 seconds (Sampling)
+Chain 3:                1.657 seconds (Total)
+Chain 3: 
+
+SAMPLING FOR MODEL &#39;anon_model&#39; NOW (CHAIN 4).
+Chain 4: 
+Chain 4: Gradient evaluation took 0.000137 seconds
+Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 1.37 seconds.
+Chain 4: Adjust your expectations accordingly!
+Chain 4: 
+Chain 4: 
+Chain 4: Iteration:    1 / 2000 [  0%]  (Warmup)
+Chain 4: Iteration:  200 / 2000 [ 10%]  (Warmup)
+Chain 4: Iteration:  400 / 2000 [ 20%]  (Warmup)
+Chain 4: Iteration:  600 / 2000 [ 30%]  (Warmup)
+Chain 4: Iteration:  800 / 2000 [ 40%]  (Warmup)
+Chain 4: Iteration: 1000 / 2000 [ 50%]  (Warmup)
+Chain 4: Iteration: 1001 / 2000 [ 50%]  (Sampling)
+Chain 4: Iteration: 1200 / 2000 [ 60%]  (Sampling)
+Chain 4: Iteration: 1400 / 2000 [ 70%]  (Sampling)
+Chain 4: Iteration: 1600 / 2000 [ 80%]  (Sampling)
+Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
+Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
+Chain 4: 
+Chain 4:  Elapsed Time: 0.883 seconds (Warm-up)
+Chain 4:                0.947 seconds (Sampling)
+Chain 4:                1.83 seconds (Total)
+Chain 4: </code></pre>
+<pre class="r"><code>summary(bayesianLogisticRegression)</code></pre>
+<pre><code> Family: bernoulli 
+  Links: mu = logit 
+Formula: female ~ bpi_antisocialT1Sum + bpi_anxiousDepressedSum 
+   Data: mydata (Number of observations: 3914) 
+  Draws: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup draws = 4000
+
+Population-Level Effects: 
+                        Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS
+Intercept                   0.30      0.05     0.20     0.41 1.00     3975
+bpi_antisocialT1Sum        -0.13      0.02    -0.16    -0.09 1.00     2967
+bpi_anxiousDepressedSum     0.04      0.03    -0.01     0.09 1.00     3115
+                        Tail_ESS
+Intercept                   3063
+bpi_antisocialT1Sum         2794
+bpi_anxiousDepressedSum     2947
+
+Draws were sampled using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).</code></pre>
+</div>
+</div>
+<div id="hierarchical-linear-regression" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Hierarchical Linear Regression</h1>
+</div>
+<div id="moderated-multiple-regression" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Moderated Multiple Regression</h1>
+</div>
+<div id="model-building-steps" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Model Building Steps</h1>
+<ol style="list-style-type: decimal">
+<li>Examine extent and type of missing data, consider how to handle missing values (multiple imputation, FIML, pairwise deletion, listwise deletion)
+<ul>
+<li>Little’s MCAR test from <code>mcar_test()</code> function of the <code>njtierney/naniar</code> package</li>
+<li>Bayesian handling of missing data: <a href="https://cran.r-project.org/web/packages/brms/vignettes/brms_missings.html" class="uri">https://cran.r-project.org/web/packages/brms/vignettes/brms_missings.html</a></li>
+</ul></li>
+<li>Examine descriptive statistics, consider variable transformations</li>
+<li>Examine scatterplot matrix to examine whether associations between predictor and outcomes are linear or nonlinear</li>
+<li>Model building: theory and empiricism (stepwise regression, likelihood ratio tests, k-fold cross validation to check for over-fitting compared to simpler model)</li>
+<li>Test assumptions
+<ul>
+<li>Examine whether predictors have linear association with outcome (Residual Plots, Marginal Model Plots, Added-Variable Plots—check for non-horizontal lines)</li>
+<li>Examine whether residuals have constant variance across levels of outcome and predictors Residual Plots, Spread-Level Plots—check for fan-shaped plot or other increasing/decreasing structure)</li>
+<li>Examine whether predictors show multicollinearity (VIF)</li>
+<li>Examine whether residuals are normally distributed (QQ plot and density plot)</li>
+<li>Examine influence of influential observations (high outlyingness and leverage) on parameter stimates by iteratively removing influential observations and refitting (Added-Variable Plots)</li>
+</ul></li>
+<li>Handle violated assumptions, select final set of predictors/outcomes and transformation of each</li>
+<li>Use k-fold cross validation to identify the best estimation procedure (OLS, MM, or LTS) on the final model</li>
+<li>Use identified estimation procedure to fit final model and determine the best parameter point estimates</li>
+<li>Calculate bootstrapped estimates to determine the confidence intervals around the parameter estimates of the final model</li>
+</ol>
+</div>
+<div id="diagnostics" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Diagnostics</h1>
+<div id="assumptions" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Assumptions</h2>
+<div id="linear-relation-between-predictors-and-outcome" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> 1. Linear relation between predictors and outcome</h3>
+<div id="ways-to-test" class="section level4" number="9.1.1.1">
+<h4><span class="header-section-number">9.1.1.1</span> Ways to Test</h4>
+<div id="before-model-fitting" class="section level5" number="9.1.1.1.1">
+<h5><span class="header-section-number">9.1.1.1.1</span> Before Model Fitting</h5>
+<ul>
+<li>scatterplot matrix</li>
+</ul>
+</div>
+<div id="after-model-fitting" class="section level5" number="9.1.1.1.2">
+<h5><span class="header-section-number">9.1.1.1.2</span> After Model Fitting</h5>
+<p>Check for nonlinearities (non-horizontal line) in plots of: - Residuals versus fitted values (Residual Plots) — best - Residuals versus predictors (Residual Plots) - Outcome versus fitted values (Marginal Model Plots) - Outcome versus predictors, ignoring other predictors (Marginal Model Plots) - Outcome versus predictors, controlling for other predictors (Added-Variable Plots)</p>
+</div>
+</div>
+<div id="ways-to-handle" class="section level4" number="9.1.1.2">
+<h4><span class="header-section-number">9.1.1.2</span> Ways to Handle</h4>
+<ul>
+<li>Transform outcome/predictor variables (Box-Cox transformations)</li>
+<li>Semi-parametric regression models: Generalized additive models (GAM)</li>
+<li>Non-parametric regression models: Nearest-Neighbor Kernel Regression</li>
+</ul>
+</div>
+</div>
+<div id="exogeneity" class="section level3" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> 2. Exogeneity</h3>
+<p>Exogeneity means that the association between predictors and outcome is fully causal and unrelated to other variables.</p>
+<div id="ways-to-test-1" class="section level4" number="9.1.2.1">
+<h4><span class="header-section-number">9.1.2.1</span> Ways to Test</h4>
+<ul>
+<li>Durbin-Wu-Hausman test of endogeneity</li>
+</ul>
+</div>
+<div id="ways-to-handle-1" class="section level4" number="9.1.2.2">
+<h4><span class="header-section-number">9.1.2.2</span> Ways to Handle</h4>
+<ul>
+<li>Conduct an experiment/RCT with random assignment</li>
+<li>Instrumental variables</li>
+</ul>
+</div>
+</div>
+<div id="homoscedasticity-of-residuals" class="section level3" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> 3. Homoscedasticity of residuals</h3>
+<p>Homoscedasticity of the residuals means that the variance of the residuals does not differ as a function of the outcome/predictors (i.e., the residuals show constant variance as a function of outcome/predictors).</p>
+<div id="ways-to-test-2" class="section level4" number="9.1.3.1">
+<h4><span class="header-section-number">9.1.3.1</span> Ways to Test</h4>
+<ul>
+<li>Plot residuals vs. outcome and predictor variables (Residual Plots)</li>
+<li>Plot residuals vs. fitted values (Residual Plots)</li>
+<li>Time Series data: Plot residuals vs. time</li>
+<li>Spread-level plot</li>
+<li>Breusch-Pagan test: <code>bptest()</code> function from <code>lmtest</code> package</li>
+<li>Goldfeld-Quandt Test</li>
+</ul>
+</div>
+<div id="ways-to-handle-2" class="section level4" number="9.1.3.2">
+<h4><span class="header-section-number">9.1.3.2</span> Ways to Handle</h4>
+<ul>
+<li>If residual variance increases as a function of the fitted values, consider a poisson regression model (especially for count data), for which the variance does increase with the mean</li>
+<li>If residual variance differs as a function of model predictors, consider adding interactions/product terms (the effect of one variable depends on the level of another variable)</li>
+<li>Try transforming the outcome variable to be normally distributed (log-transform if the errors seem consistent in percentage rather than absolute terms)</li>
+<li>If the error variance is proportional to a variable z, then fit the model using Weighted Least Squares (WLS), with the weights given be 1/z</li>
+<li>Weighted least squares (WLS) using the “weights” argument of the <code>lm()</code> function</li>
+<li>Huber-White standard errors (a.k.a. “Sandwich” estimates) from a heteroscedasticity-corrected covariance matrix
+<ul>
+<li><code>coeftest()</code> function from the <code>sandwich</code> package along with hccm sandwich estimates from the <code>car</code> package</li>
+<li><code>robcov()</code> function from the <code>rms</code> package</li>
+</ul></li>
+<li>Time series data: ARCH (auto-regressive conditional heteroscedasticity) models</li>
+<li>Time series data: seasonal patterns can be addressed by applying log transformation to outcome variable</li>
+</ul>
+</div>
+</div>
+<div id="errors-are-independent" class="section level3" number="9.1.4">
+<h3><span class="header-section-number">9.1.4</span> 4. Errors are independent</h3>
+<p>Independent errors means that the errors are uncorrelated with each other.</p>
+<div id="ways-to-test-3" class="section level4" number="9.1.4.1">
+<h4><span class="header-section-number">9.1.4.1</span> Ways to Test</h4>
+<ul>
+<li>Plot residuals vs. predictors (Residual Plots)</li>
+<li>Time Series data: Residual time series plot (residuals vs. row number)</li>
+<li>Time Series data: Table or plot of residual autocorrelations</li>
+<li>Time Series data: Durbin-Watson statistic for test of significant residual autocorrelation at lag 1</li>
+</ul>
+</div>
+<div id="ways-to-handle-3" class="section level4" number="9.1.4.2">
+<h4><span class="header-section-number">9.1.4.2</span> Ways to Handle</h4>
+<ul>
+<li>Generalized least squares (GLS) models are capable of handling correlated errors</li>
+<li>Regression with cluster variable
+<ul>
+<li><code>robcov()</code> from <code>rms</code> package</li>
+</ul></li>
+<li>Multilevel modeling
+<ul>
+<li>Linear mixed effects models</li>
+<li>Generalized linear mixed effects models</li>
+<li>Nonlinear mixed effects models</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="no-multicollinearity" class="section level3" number="9.1.5">
+<h3><span class="header-section-number">9.1.5</span> 5. No multicollinearity</h3>
+<p>Multicollinearity occurs when the predictors are correlated with each other.</p>
+<div id="ways-to-test-4" class="section level4" number="9.1.5.1">
+<h4><span class="header-section-number">9.1.5.1</span> Ways to Test</h4>
+<ul>
+<li>Variance Inflation Factor (VIF)</li>
+<li>Generalized Variance Inflation Factor (GVIF)—when models have related regressors (multiple polynomial terms or contrasts from same predictor)</li>
+<li>Correlation</li>
+<li>Tolerance</li>
+<li>Condition Index</li>
+</ul>
+</div>
+<div id="ways-to-handle-4" class="section level4" number="9.1.5.2">
+<h4><span class="header-section-number">9.1.5.2</span> Ways to Handle</h4>
+<ul>
+<li>Remove highly correlated (i.e., redundant) predictors</li>
+<li>Average the correlated predictors</li>
+<li>Principal Component Analysis for data reduction</li>
+<li>Standardize predictors</li>
+<li>Center the data (deduct the mean)</li>
+<li>Singular-value decomposition of the model matrix or the mean-centered model matrix</li>
+<li>Conduct a factor analysis and rotate the factors to insure independence of the factors</li>
+</ul>
+</div>
+</div>
+<div id="errors-are-normally-distributed" class="section level3" number="9.1.6">
+<h3><span class="header-section-number">9.1.6</span> 6. Errors are normally distributed</h3>
+<div id="ways-to-test-5" class="section level4" number="9.1.6.1">
+<h4><span class="header-section-number">9.1.6.1</span> Ways to Test</h4>
+<ul>
+<li>Probability Plots
+<ul>
+<li>Normal Quantile (QQ) Plots (based on non-cumulative distribution of residuals)</li>
+<li>Normal Probability (PP) Plots (based on cumulative distribution of residuals)</li>
+</ul></li>
+<li>Density Plot of Residuals</li>
+<li>Statistical Tests
+<ul>
+<li>Kolmogorov-Smirnov test</li>
+<li>Shapiro-Wilk test</li>
+<li>Jarque-Bera test</li>
+<li>Anderson-Darling test (best test)</li>
+</ul></li>
+<li>Examine influence of outliers</li>
+</ul>
+</div>
+<div id="ways-to-handle-5" class="section level4" number="9.1.6.2">
+<h4><span class="header-section-number">9.1.6.2</span> Ways to Handle</h4>
+<ul>
+<li>Apply a transformation to the predictor or outcome variable</li>
+<li>Exclude outliers</li>
+<li>Robust regression
+<ul>
+<li>Best when no outliers: MM-type regression estimator
+<ul>
+<li><code>lmrob()</code>/<code>glmrob()</code> function of <code>robustbase</code> package</li>
+<li>Iteratively reweighted least squares (IRLS): <code>rlm(, method = "MM")</code> function of <code>MASS</code> package: <a href="http://www.ats.ucla.edu/stat/r/dae/rreg.htm" class="uri">http://www.ats.ucla.edu/stat/r/dae/rreg.htm</a></li>
+</ul></li>
+<li>Most resistant to outliers: Least trimmed squares (LTS)—but not good as a standalone estimator, better for identifying outliers
+<ul>
+<li><code>ltsReg()</code> function of <code>robustbase</code> package (best)</li>
+</ul></li>
+<li>Best when single predictor: Theil-Sen estimator
+<ul>
+<li><code>mblm(, repeated = FALSE)</code> function of <code>mblm</code> package</li>
+</ul></li>
+<li>Robust correlation
+<ul>
+<li>Spearman’s rho: <code>cor(, method = "spearman")</code></li>
+<li>Percentage bend correlation</li>
+<li>Minimum vollume ellipsoid</li>
+<li>Minimum covariance determinant:</li>
+<li>Winsorized correlation</li>
+<li>Biweight midcorrelation</li>
+</ul></li>
+<li>Not great options:
+<ul>
+<li>Quantile (L1) regression: <code>rq()</code> function of <code>quantreg</code> package</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="resources" class="section level3" number="9.1.7">
+<h3><span class="header-section-number">9.1.7</span> Resources</h3>
+<p>Book: An R Companion to Applied Regression</p>
+<p><a href="http://people.duke.edu/~rnau/testing.htm" class="uri">http://people.duke.edu/~rnau/testing.htm</a></p>
+<p><a href="http://www.statmethods.net/stats/rdiagnostics.html" class="uri">http://www.statmethods.net/stats/rdiagnostics.html</a></p>
+<p><a href="http://socserv.socsci.mcmaster.ca/jfox/Courses/Brazil-2009/index.html" class="uri">http://socserv.socsci.mcmaster.ca/jfox/Courses/Brazil-2009/index.html</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Ordinary_least_squares#Assumptions" class="uri">https://en.wikipedia.org/wiki/Ordinary_least_squares#Assumptions</a></p>
+</div>
+</div>
+</div>
+<div id="session-info" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Session Info</h1>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.2.0 (2022-04-22)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 20.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] brms_2.17.0       Rcpp_1.0.8.3      robustbase_0.95-0 rms_6.3-0        
+ [5] SparseM_1.81      Hmisc_4.7-0       ggplot2_3.3.6     Formula_1.2-4    
+ [9] survival_3.3-1    lattice_0.20-45   psych_2.2.5      
+
+loaded via a namespace (and not attached):
+  [1] backports_1.4.1      plyr_1.8.7           igraph_1.3.1        
+  [4] splines_4.2.0        crosstalk_1.2.0      TH.data_1.1-1       
+  [7] rstantools_2.2.0     inline_0.3.19        digest_0.6.29       
+ [10] htmltools_0.5.2      fansi_1.0.3          magrittr_2.0.3      
+ [13] checkmate_2.1.0      cluster_2.1.3        RcppParallel_5.1.5  
+ [16] matrixStats_0.62.0   xts_0.12.1           sandwich_3.0-1      
+ [19] prettyunits_1.1.1    jpeg_0.1-9           colorspace_2.0-3    
+ [22] xfun_0.31            dplyr_1.0.9          callr_3.7.0         
+ [25] crayon_1.5.1         jsonlite_1.8.0       zoo_1.8-10          
+ [28] glue_1.6.2           gtable_0.3.0         MatrixModels_0.5-0  
+ [31] V8_4.2.0             distributional_0.3.0 pkgbuild_1.3.1      
+ [34] rstan_2.26.11        DEoptimR_1.0-11      abind_1.4-5         
+ [37] scales_1.2.0         mvtnorm_1.1-3        DBI_1.1.2           
+ [40] miniUI_0.1.1.1       xtable_1.8-4         htmlTable_2.4.0     
+ [43] foreign_0.8-82       stats4_4.2.0         StanHeaders_2.26.11 
+ [46] DT_0.23              htmlwidgets_1.5.4    threejs_0.3.3       
+ [49] RColorBrewer_1.1-3   posterior_1.2.2      ellipsis_0.3.2      
+ [52] pkgconfig_2.0.3      loo_2.5.1            farver_2.1.0        
+ [55] nnet_7.3-17          sass_0.4.1           utf8_1.2.2          
+ [58] tidyselect_1.1.2     rlang_1.0.2          reshape2_1.4.4      
+ [61] later_1.3.0          munsell_0.5.0        tools_4.2.0         
+ [64] cli_3.3.0            generics_0.1.2       ggridges_0.5.3      
+ [67] evaluate_0.15        stringr_1.4.0        fastmap_1.1.0       
+ [70] yaml_2.3.5           processx_3.6.0       knitr_1.39          
+ [73] purrr_0.3.4          nlme_3.1-157         mime_0.12           
+ [76] quantreg_5.93        compiler_4.2.0       bayesplot_1.9.0     
+ [79] shinythemes_1.2.0    rstudioapi_0.13      curl_4.3.2          
+ [82] png_0.1-7            tibble_3.1.7         bslib_0.3.1         
+ [85] stringi_1.7.6        highr_0.9            ps_1.7.0            
+ [88] Brobdingnag_1.2-7    Matrix_1.4-1         markdown_1.1        
+ [91] shinyjs_2.1.0        tensorA_0.36.2       vctrs_0.4.1         
+ [94] pillar_1.7.0         lifecycle_1.0.1      jquerylib_0.1.4     
+ [97] bridgesampling_1.1-2 data.table_1.14.2    httpuv_1.6.5        
+[100] R6_2.5.1             latticeExtra_0.6-29  promises_1.2.0.1    
+[103] gridExtra_2.3        codetools_0.2-18     polspline_1.1.20    
+[106] colourpicker_1.1.1   MASS_7.3-56          gtools_3.9.2.1      
+[109] assertthat_0.2.1     withr_2.5.0          shinystan_2.6.0     
+[112] mnormt_2.1.0         multcomp_1.4-19      parallel_4.2.0      
+[115] grid_4.2.0           rpart_4.1.16         coda_0.19-4         
+[118] rmarkdown_2.14       shiny_1.7.1          base64enc_0.1-3     
+[121] dygraphs_1.1.1.6    </code></pre>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVncmVzc2lvbiIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKIyBQcmVhbWJsZQoKIyMgSW5zdGFsbCBMaWJyYXJpZXMKCmBgYHtyfQojaW5zdGFsbC5wYWNrYWdlcygicmVtb3RlcyIpCiNyZW1vdGVzOjppbnN0YWxsX2dpdCgiaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL3BldGVyc2VubGFiLmdpdCIpCmBgYAoKIyMgTG9hZCBMaWJyYXJpZXMKCmBgYHtyLCBtZXNzYWdlID0gRkFMU0UsIHdhcm5pbmcgPSBGQUxTRX0KbGlicmFyeSgicHN5Y2giKQpsaWJyYXJ5KCJybXMiKQpsaWJyYXJ5KCJyb2J1c3RiYXNlIikKbGlicmFyeSgiYnJtcyIpCmBgYAoKIyBJbXBvcnQgZGF0YQoKYGBge3J9Cm15ZGF0YSA8LSByZWFkLmNzdigiaHR0cHM6Ly9vc2YuaW8vOHN5cDUvZG93bmxvYWQiKQpgYGAKCiMgRGF0YSBwcmVwYXJhdGlvbgoKYGBge3J9Cm15ZGF0YSRjb3VudFZhcmlhYmxlIDwtIGFzLmludGVnZXIobXlkYXRhJGJwaV9hbnRpc29jaWFsVDJTdW0pCm15ZGF0YSRvcmRlcmVkVmFyaWFibGUgPC0gZmFjdG9yKG15ZGF0YSRjb3VudFZhcmlhYmxlLCBvcmRlcmVkID0gVFJVRSkKCm15ZGF0YSRmZW1hbGUgPC0gTkEKbXlkYXRhJGZlbWFsZVt3aGljaChteWRhdGEkc2V4ID09ICJtYWxlIildIDwtIDAKbXlkYXRhJGZlbWFsZVt3aGljaChteWRhdGEkc2V4ID09ICJmZW1hbGUiKV0gPC0gMQpgYGAKCiMgTGluZWFyIFJlZ3Jlc3Npb24KCiMjIExpbmVhciByZWdyZXNzaW9uIG1vZGVsCgpgYGB7cn0KbXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwgPC0gbG0oYnBpX2FudGlzb2NpYWxUMlN1bSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmEuYWN0aW9uID0gbmEuZXhjbHVkZSkKbXVsdGlwbGVSZWdyZXNzaW9uTW9kZWxOb01pc3NpbmcgPC0gbG0oYnBpX2FudGlzb2NpYWxUMlN1bSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbmEuYWN0aW9uID0gbmEub21pdCkKCnN1bW1hcnkobXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwpCmNvbmZpbnQobXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwpCmBgYAoKIyMgTGluZWFyIHJlZ3Jlc3Npb24gbW9kZWwgb24gY29ycmVsYXRpb24vY292YXJpYW5jZSBtYXRyaXggKGZvciBwYWlyd2lzZSBkZWxldGlvbikKCkFsc28gc2VlIGhlcmU6IGh0dHBzOi8vc3RhdHMuc3RhY2tleGNoYW5nZS5jb20vcXVlc3Rpb25zLzE1ODM2Ni9maXQtbXVsdGlwbGUtcmVncmVzc2lvbi1tb2RlbC13aXRoLXBhaXJ3aXNlLWRlbGV0aW9uLW9yLW9uLWEtY29ycmVsYXRpb24tY292YXJpLzE3MzAwMiMxNzMwMDIKCmBgYHtyfQptdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbFBhaXJ3aXNlIDwtIHNldENvcih5ID0gImJwaV9hbnRpc29jaWFsVDJTdW0iLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB4ID0gYygiYnBpX2FudGlzb2NpYWxUMVN1bSIsImJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBjb3YobXlkYXRhWyxjKCJicGlfYW50aXNvY2lhbFQyU3VtIiwiYnBpX2FudGlzb2NpYWxUMVN1bSIsImJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtIildLCB1c2UgPSAicGFpcndpc2UuY29tcGxldGUub2JzIiksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG4ub2JzID0gbnJvdyhteWRhdGEpKQoKc3VtbWFyeShtdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbFBhaXJ3aXNlKQptdWx0aXBsZVJlZ3Jlc3Npb25Nb2RlbFBhaXJ3aXNlW2MoImNvZWZmaWNpZW50cyIsInNlIiwiUHJvYmFiaWxpdHkiLCJSMiIsInNocnVua2VuUjIiKV0KYGBgCgojIyBMaW5lYXIgcmVncmVzc2lvbiBtb2RlbCB3aXRoIHJvYnVzdCBjb3ZhcmlhbmNlIG1hdHJpeCAocm1zKQoKYGBge3J9CnJtc011bHRpcGxlUmVncmVzc2lvbk1vZGVsIDwtIHJvYmNvdihvbHMoYnBpX2FudGlzb2NpYWxUMlN1bSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRhID0gbXlkYXRhLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHggPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBUUlVFKSkKCnJtc011bHRpcGxlUmVncmVzc2lvbk1vZGVsCmNvbmZpbnQocm1zTXVsdGlwbGVSZWdyZXNzaW9uTW9kZWwpCmBgYAoKIyMgUm9idXN0IGxpbmVhciByZWdyZXNzaW9uIChNTS10eXBlIGl0ZXJhdGl2ZWx5IHJld2VpZ2h0ZWQgbGVhc3Qgc3F1YXJlcyByZWdyZXNzaW9uKQoKYGBge3J9CnJvYnVzdExpbmVhclJlZ3Jlc3Npb24gPC0gbG1yb2IoYnBpX2FudGlzb2NpYWxUMlN1bSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRhID0gbXlkYXRhLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hLmFjdGlvbiA9IG5hLmV4Y2x1ZGUpCgpzdW1tYXJ5KHJvYnVzdExpbmVhclJlZ3Jlc3Npb24pCmNvbmZpbnQocm9idXN0TGluZWFyUmVncmVzc2lvbikKYGBgCgojIyBMZWFzdCB0cmltbWVkIHNxdWFyZXMgcmVncmVzc2lvbiAoZm9yIHJlbW92aW5nIG91dGxpZXJzKQoKYGBge3J9Cmx0c1JlZ3Jlc3Npb24gPC0gbHRzUmVnKGJwaV9hbnRpc29jaWFsVDJTdW0gfiBicGlfYW50aXNvY2lhbFQxU3VtICsgYnBpX2FueGlvdXNEZXByZXNzZWRTdW0sCiAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgICAgIG5hLmFjdGlvbiA9IG5hLmV4Y2x1ZGUpCgpzdW1tYXJ5KGx0c1JlZ3Jlc3Npb24pCmBgYAoKIyMgQmF5ZXNpYW4gbGluZWFyIHJlZ3Jlc3Npb24KCmBgYHtyfQpiYXllc2lhblJlZ3VsYXJpemVkUmVncmVzc2lvbiA8LSBicm0oYnBpX2FudGlzb2NpYWxUMlN1bSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjaGFpbnMgPSA0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaXRlciA9IDIwMDAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZWVkID0gNTIyNDIpCgpzdW1tYXJ5KGJheWVzaWFuUmVndWxhcml6ZWRSZWdyZXNzaW9uKQpgYGAKCiMgR2VuZXJhbGl6ZWQgTGluZWFyIFJlZ3Jlc3Npb24KCiMjIEdlbmVyYWxpemVkIHJlZ3Jlc3Npb24gbW9kZWwKCkluIHRoaXMgZXhhbXBsZSwgd2UgcHJlZGljdCBhIGNvdW50IHZhcmlhYmxlIHRoYXQgaGFzIGEgcG9pc3NvbiBkaXN0cmlidXRpb24uCldlIGNvdWxkIGNoYW5nZSB0aGUgZGlzdHJpYnV0aW9uLgoKYGBge3J9CmdlbmVyYWxpemVkUmVncmVzc2lvbk1vZGVsIDwtIGdsbShjb3VudFZhcmlhYmxlIH4gYnBpX2FudGlzb2NpYWxUMVN1bSArIGJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhbWlseSA9ICJwb2lzc29uIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hLmFjdGlvbiA9IG5hLmV4Y2x1ZGUpCgpzdW1tYXJ5KGdlbmVyYWxpemVkUmVncmVzc2lvbk1vZGVsKQpjb25maW50KGdlbmVyYWxpemVkUmVncmVzc2lvbk1vZGVsKQpgYGAKCiMjIEdlbmVyYWxpemVkIHJlZ3Jlc3Npb24gbW9kZWwgKHJtcykKCkluIHRoaXMgZXhhbXBsZSwgd2UgcHJlZGljdCBhIGNvdW50IHZhcmlhYmxlIHRoYXQgaGFzIGEgcG9pc3NvbiBkaXN0cmlidXRpb24uCldlIGNvdWxkIGNoYW5nZSB0aGUgZGlzdHJpYnV0aW9uLgoKYGBge3J9CnJtc0dlbmVyYWxpemVkUmVncmVzc2lvbk1vZGVsIDwtIEdsbShjb3VudFZhcmlhYmxlIH4gYnBpX2FudGlzb2NpYWxUMVN1bSArIGJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHggPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeSA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmYW1pbHkgPSAicG9pc3NvbiIpCgpybXNHZW5lcmFsaXplZFJlZ3Jlc3Npb25Nb2RlbApjb25maW50KHJtc0dlbmVyYWxpemVkUmVncmVzc2lvbk1vZGVsKQpgYGAKCiMjIEJheWVzaWFuIGdlbmVyYWxpemVkIGxpbmVhciBtb2RlbAoKSW4gdGhpcyBleGFtcGxlLCB3ZSBwcmVkaWN0IGEgY291bnQgdmFyaWFibGUgdGhhdCBoYXMgYSBwb2lzc29uIGRpc3RyaWJ1dGlvbi4KV2UgY291bGQgY2hhbmdlIHRoZSBkaXN0cmlidXRpb24uCkZvciBleGFtcGxlLCB3ZSBjb3VsZCB1c2UgR2FtbWEgcmVncmVzc2lvbiwgYGZhbWlseSA9IEdhbW1hYCwgd2hlbiB0aGUgcmVzcG9uc2UgdmFyaWFibGUgaXMgY29udGludW91cyBhbmQgcG9zaXRpdmUsIGFuZCB0aGUgY29lZmZpY2llbnQgb2YgdmFyaWF0aW9uLS1yYXRoZXIgdGhhbiB0aGUgdmFyaWFuY2UtLWlzIGNvbnN0YW50LgoKYGBge3J9CmJheWVzaWFuR2VuZXJhbGl6ZWRMaW5lYXJSZWdyZXNzaW9uIDwtIGJybShjb3VudFZhcmlhYmxlIH4gYnBpX2FudGlzb2NpYWxUMVN1bSArIGJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZhbWlseSA9IHBvaXNzb24sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjaGFpbnMgPSA0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VlZCA9IDUyMjQyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaXRlciA9IDIwMDApCgpzdW1tYXJ5KGJheWVzaWFuR2VuZXJhbGl6ZWRMaW5lYXJSZWdyZXNzaW9uKQpgYGAKCiMjIFJvYnVzdCBnZW5lcmFsaXplZCByZWdyZXNzaW9uCgpgYGB7cn0Kcm9idXN0R2VuZXJhbGl6ZWRSZWdyZXNzaW9uIDwtIGdsbXJvYihjb3VudFZhcmlhYmxlIH4gYnBpX2FudGlzb2NpYWxUMVN1bSArIGJwaV9hbnhpb3VzRGVwcmVzc2VkU3VtLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFtaWx5ID0gInBvaXNzb24iLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG5hLmFjdGlvbiA9IG5hLmV4Y2x1ZGUpCgpzdW1tYXJ5KHJvYnVzdEdlbmVyYWxpemVkUmVncmVzc2lvbikKY29uZmludChyb2J1c3RHZW5lcmFsaXplZFJlZ3Jlc3Npb24pCmBgYAoKIyMgT3JkaW5hbCByZWdyZXNzaW9uIG1vZGVsIChybXMpCgpgYGB7cn0Kb3JkaW5hbFJlZ3Jlc3Npb25Nb2RlbCA8LSByb2Jjb3Yob3JtKG9yZGVyZWRWYXJpYWJsZSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB4ID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBUUlVFKSkKCm9yZGluYWxSZWdyZXNzaW9uTW9kZWwKY29uZmludChvcmRpbmFsUmVncmVzc2lvbk1vZGVsKQpgYGAKCiMjIEJheWVzaWFuIG9yZGluYWwgcmVncmVzc2lvbiBtb2RlbAoKYGBge3J9CmJheWVzaWFuT3JkaW5hbFJlZ3Jlc3Npb24gPC0gYnJtKG9yZGVyZWRWYXJpYWJsZSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YSA9IG15ZGF0YSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFtaWx5ID0gY3VtdWxhdGl2ZSgpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjaGFpbnMgPSA0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzZWVkID0gNTIyNDIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGl0ZXIgPSAyMDAwKQoKc3VtbWFyeShiYXllc2lhbk9yZGluYWxSZWdyZXNzaW9uKQpgYGAKCiMjIEJheWVzaWFuIGNvdW50IHJlZ3Jlc3Npb24gbW9kZWwKCmBgYHtyfQpiYXllc2lhbkNvdW50UmVncmVzc2lvbiA8LSBicm0oY291bnRWYXJpYWJsZSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEgPSBteWRhdGEsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmYW1pbHkgPSAicG9pc3NvbiIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjaGFpbnMgPSA0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VlZCA9IDUyMjQyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaXRlciA9IDIwMDApCgpzdW1tYXJ5KGJheWVzaWFuQ291bnRSZWdyZXNzaW9uKQpgYGAKCiMjIExvZ2lzdGljIHJlZ3Jlc3Npb24gbW9kZWwgKHJtcykKCmBgYHtyfQpsb2dpc3RpY1JlZ3Jlc3Npb25Nb2RlbCA8LSByb2Jjb3YobHJtKGZlbWFsZSB+IGJwaV9hbnRpc29jaWFsVDFTdW0gKyBicGlfYW54aW91c0RlcHJlc3NlZFN1bSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRhID0gbXlkYXRhLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHggPSBUUlVFLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHkgPSBUUlVFKSkKCmxvZ2lzdGljUmVncmVzc2lvbk1vZGVsCmNvbmZpbnQobG9naXN0aWNSZWdyZXNzaW9uTW9kZWwpCmBgYAoKIyMgQmF5ZXNpYW4gbG9naXN0aWMgcmVncmVzc2lvbiBtb2RlbAoKYGBge3J9CmJheWVzaWFuTG9naXN0aWNSZWdyZXNzaW9uIDwtIGJybShmZW1hbGUgfiBicGlfYW50aXNvY2lhbFQxU3VtICsgYnBpX2FueGlvdXNEZXByZXNzZWRTdW0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRhID0gbXlkYXRhLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZmFtaWx5ID0gYmVybm91bGxpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2hhaW5zID0gNCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlZWQgPSA1MjI0MiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGl0ZXIgPSAyMDAwKQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKc3VtbWFyeShiYXllc2lhbkxvZ2lzdGljUmVncmVzc2lvbikKYGBgCgojIEhpZXJhcmNoaWNhbCBMaW5lYXIgUmVncmVzc2lvbgoKIyBNb2RlcmF0ZWQgTXVsdGlwbGUgUmVncmVzc2lvbgoKIyBNb2RlbCBCdWlsZGluZyBTdGVwcwoKMS4gRXhhbWluZSBleHRlbnQgYW5kIHR5cGUgb2YgbWlzc2luZyBkYXRhLCBjb25zaWRlciBob3cgdG8gaGFuZGxlIG1pc3NpbmcgdmFsdWVzIChtdWx0aXBsZSBpbXB1dGF0aW9uLCBGSU1MLCBwYWlyd2lzZSBkZWxldGlvbiwgbGlzdHdpc2UgZGVsZXRpb24pCiAgICAtIExpdHRsZSdzIE1DQVIgdGVzdCBmcm9tIGBtY2FyX3Rlc3QoKWAgZnVuY3Rpb24gb2YgdGhlIGBuanRpZXJuZXkvbmFuaWFyYCBwYWNrYWdlCiAgICAtIEJheWVzaWFuIGhhbmRsaW5nIG9mIG1pc3NpbmcgZGF0YTogaHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvd2ViL3BhY2thZ2VzL2JybXMvdmlnbmV0dGVzL2JybXNfbWlzc2luZ3MuaHRtbAoxLiBFeGFtaW5lIGRlc2NyaXB0aXZlIHN0YXRpc3RpY3MsIGNvbnNpZGVyIHZhcmlhYmxlIHRyYW5zZm9ybWF0aW9ucwoxLiBFeGFtaW5lIHNjYXR0ZXJwbG90IG1hdHJpeCB0byBleGFtaW5lIHdoZXRoZXIgYXNzb2NpYXRpb25zIGJldHdlZW4gcHJlZGljdG9yIGFuZCBvdXRjb21lcyBhcmUgbGluZWFyIG9yIG5vbmxpbmVhcgoxLiBNb2RlbCBidWlsZGluZzogdGhlb3J5IGFuZCBlbXBpcmljaXNtIChzdGVwd2lzZSByZWdyZXNzaW9uLCBsaWtlbGlob29kIHJhdGlvIHRlc3RzLCBrLWZvbGQgY3Jvc3MgdmFsaWRhdGlvbiB0byBjaGVjayBmb3Igb3Zlci1maXR0aW5nIGNvbXBhcmVkIHRvIHNpbXBsZXIgbW9kZWwpCjEuIFRlc3QgYXNzdW1wdGlvbnMKICAgIC0gRXhhbWluZSB3aGV0aGVyIHByZWRpY3RvcnMgaGF2ZSBsaW5lYXIgYXNzb2NpYXRpb24gd2l0aCBvdXRjb21lIChSZXNpZHVhbCBQbG90cywgTWFyZ2luYWwgTW9kZWwgUGxvdHMsIEFkZGVkLVZhcmlhYmxlIFBsb3Rz4oCUY2hlY2sgZm9yIG5vbi1ob3Jpem9udGFsIGxpbmVzKQogICAgLSBFeGFtaW5lIHdoZXRoZXIgcmVzaWR1YWxzIGhhdmUgY29uc3RhbnQgdmFyaWFuY2UgYWNyb3NzIGxldmVscyBvZiBvdXRjb21lIGFuZCBwcmVkaWN0b3JzIFJlc2lkdWFsIFBsb3RzLCBTcHJlYWQtTGV2ZWwgUGxvdHPigJRjaGVjayBmb3IgZmFuLXNoYXBlZCBwbG90IG9yIG90aGVyIGluY3JlYXNpbmcvZGVjcmVhc2luZyBzdHJ1Y3R1cmUpCiAgICAtIEV4YW1pbmUgd2hldGhlciBwcmVkaWN0b3JzIHNob3cgbXVsdGljb2xsaW5lYXJpdHkgKFZJRikKICAgIC0gRXhhbWluZSB3aGV0aGVyIHJlc2lkdWFscyBhcmUgbm9ybWFsbHkgZGlzdHJpYnV0ZWQgKFFRIHBsb3QgYW5kIGRlbnNpdHkgcGxvdCkKICAgIC0gRXhhbWluZSBpbmZsdWVuY2Ugb2YgaW5mbHVlbnRpYWwgb2JzZXJ2YXRpb25zIChoaWdoIG91dGx5aW5nbmVzcyBhbmQgbGV2ZXJhZ2UpIG9uIHBhcmFtZXRlciBzdGltYXRlcyBieSBpdGVyYXRpdmVseSByZW1vdmluZyBpbmZsdWVudGlhbCBvYnNlcnZhdGlvbnMgYW5kIHJlZml0dGluZyAoQWRkZWQtVmFyaWFibGUgUGxvdHMpCjEuIEhhbmRsZSB2aW9sYXRlZCBhc3N1bXB0aW9ucywgc2VsZWN0IGZpbmFsIHNldCBvZiBwcmVkaWN0b3JzL291dGNvbWVzIGFuZCB0cmFuc2Zvcm1hdGlvbiBvZiBlYWNoCjEuIFVzZSBrLWZvbGQgY3Jvc3MgdmFsaWRhdGlvbiB0byBpZGVudGlmeSB0aGUgYmVzdCBlc3RpbWF0aW9uIHByb2NlZHVyZSAoT0xTLCBNTSwgb3IgTFRTKSBvbiB0aGUgZmluYWwgbW9kZWwKMS4gVXNlIGlkZW50aWZpZWQgZXN0aW1hdGlvbiBwcm9jZWR1cmUgdG8gZml0IGZpbmFsIG1vZGVsIGFuZCBkZXRlcm1pbmUgdGhlIGJlc3QgcGFyYW1ldGVyIHBvaW50IGVzdGltYXRlcwoxLiBDYWxjdWxhdGUgYm9vdHN0cmFwcGVkIGVzdGltYXRlcyB0byBkZXRlcm1pbmUgdGhlIGNvbmZpZGVuY2UgaW50ZXJ2YWxzIGFyb3VuZCB0aGUgcGFyYW1ldGVyIGVzdGltYXRlcyBvZiB0aGUgZmluYWwgbW9kZWwKCiMgRGlhZ25vc3RpY3MKCiMjIEFzc3VtcHRpb25zCgojIyMgMS4gTGluZWFyIHJlbGF0aW9uIGJldHdlZW4gcHJlZGljdG9ycyBhbmQgb3V0Y29tZQoKIyMjIyBXYXlzIHRvIFRlc3QKCiMjIyMjIEJlZm9yZSBNb2RlbCBGaXR0aW5nCgotIHNjYXR0ZXJwbG90IG1hdHJpeAoKIyMjIyMgQWZ0ZXIgTW9kZWwgRml0dGluZwoKQ2hlY2sgZm9yIG5vbmxpbmVhcml0aWVzIChub24taG9yaXpvbnRhbCBsaW5lKSBpbiBwbG90cyBvZjoKLSBSZXNpZHVhbHMgdmVyc3VzIGZpdHRlZCB2YWx1ZXMgKFJlc2lkdWFsIFBsb3RzKSAtLS0gYmVzdAotIFJlc2lkdWFscyB2ZXJzdXMgcHJlZGljdG9ycyAoUmVzaWR1YWwgUGxvdHMpCi0gT3V0Y29tZSB2ZXJzdXMgZml0dGVkIHZhbHVlcyAoTWFyZ2luYWwgTW9kZWwgUGxvdHMpCi0gT3V0Y29tZSB2ZXJzdXMgcHJlZGljdG9ycywgaWdub3Jpbmcgb3RoZXIgcHJlZGljdG9ycyAoTWFyZ2luYWwgTW9kZWwgUGxvdHMpCi0gT3V0Y29tZSB2ZXJzdXMgcHJlZGljdG9ycywgY29udHJvbGxpbmcgZm9yIG90aGVyIHByZWRpY3RvcnMgKEFkZGVkLVZhcmlhYmxlIFBsb3RzKQoKIyMjIyBXYXlzIHRvIEhhbmRsZQoKLSBUcmFuc2Zvcm0gb3V0Y29tZS9wcmVkaWN0b3IgdmFyaWFibGVzIChCb3gtQ294IHRyYW5zZm9ybWF0aW9ucykKLSBTZW1pLXBhcmFtZXRyaWMgcmVncmVzc2lvbiBtb2RlbHM6IEdlbmVyYWxpemVkIGFkZGl0aXZlIG1vZGVscyAoR0FNKQotIE5vbi1wYXJhbWV0cmljIHJlZ3Jlc3Npb24gbW9kZWxzOiBOZWFyZXN0LU5laWdoYm9yIEtlcm5lbCBSZWdyZXNzaW9uCgojIyMgMi4gRXhvZ2VuZWl0eQoKRXhvZ2VuZWl0eSBtZWFucyB0aGF0IHRoZSBhc3NvY2lhdGlvbiBiZXR3ZWVuIHByZWRpY3RvcnMgYW5kIG91dGNvbWUgaXMgZnVsbHkgY2F1c2FsIGFuZCB1bnJlbGF0ZWQgdG8gb3RoZXIgdmFyaWFibGVzLgoKIyMjIyBXYXlzIHRvIFRlc3QKCi0gRHVyYmluLVd1LUhhdXNtYW4gdGVzdCBvZiBlbmRvZ2VuZWl0eQoKIyMjIyBXYXlzIHRvIEhhbmRsZQoKLSBDb25kdWN0IGFuIGV4cGVyaW1lbnQvUkNUIHdpdGggcmFuZG9tIGFzc2lnbm1lbnQKLSBJbnN0cnVtZW50YWwgdmFyaWFibGVzCgojIyMgMy4gSG9tb3NjZWRhc3RpY2l0eSBvZiByZXNpZHVhbHMKCkhvbW9zY2VkYXN0aWNpdHkgb2YgdGhlIHJlc2lkdWFscyBtZWFucyB0aGF0IHRoZSB2YXJpYW5jZSBvZiB0aGUgcmVzaWR1YWxzIGRvZXMgbm90IGRpZmZlciBhcyBhIGZ1bmN0aW9uIG9mIHRoZSBvdXRjb21lL3ByZWRpY3RvcnMgKGkuZS4sIHRoZSByZXNpZHVhbHMgc2hvdyBjb25zdGFudCB2YXJpYW5jZSBhcyBhIGZ1bmN0aW9uIG9mIG91dGNvbWUvcHJlZGljdG9ycykuCgojIyMjIFdheXMgdG8gVGVzdAoKLSBQbG90IHJlc2lkdWFscyB2cy4gb3V0Y29tZSBhbmQgcHJlZGljdG9yIHZhcmlhYmxlcyAoUmVzaWR1YWwgUGxvdHMpCi0gUGxvdCByZXNpZHVhbHMgdnMuIGZpdHRlZCB2YWx1ZXMgKFJlc2lkdWFsIFBsb3RzKQotIFRpbWUgU2VyaWVzIGRhdGE6IFBsb3QgcmVzaWR1YWxzIHZzLiB0aW1lCi0gU3ByZWFkLWxldmVsIHBsb3QKLSBCcmV1c2NoLVBhZ2FuIHRlc3Q6IGBicHRlc3QoKWAgZnVuY3Rpb24gZnJvbSBgbG10ZXN0YCBwYWNrYWdlCi0gR29sZGZlbGQtUXVhbmR0IFRlc3QKCiMjIyMgV2F5cyB0byBIYW5kbGUKCi0gSWYgcmVzaWR1YWwgdmFyaWFuY2UgaW5jcmVhc2VzIGFzIGEgZnVuY3Rpb24gb2YgdGhlIGZpdHRlZCB2YWx1ZXMsIGNvbnNpZGVyIGEgcG9pc3NvbiByZWdyZXNzaW9uIG1vZGVsIChlc3BlY2lhbGx5IGZvciBjb3VudCBkYXRhKSwgZm9yIHdoaWNoIHRoZSB2YXJpYW5jZSBkb2VzIGluY3JlYXNlIHdpdGggdGhlIG1lYW4KLSBJZiByZXNpZHVhbCB2YXJpYW5jZSBkaWZmZXJzIGFzIGEgZnVuY3Rpb24gb2YgbW9kZWwgcHJlZGljdG9ycywgY29uc2lkZXIgYWRkaW5nIGludGVyYWN0aW9ucy9wcm9kdWN0IHRlcm1zICh0aGUgZWZmZWN0IG9mIG9uZSB2YXJpYWJsZSBkZXBlbmRzIG9uIHRoZSBsZXZlbCBvZiBhbm90aGVyIHZhcmlhYmxlKQotIFRyeSB0cmFuc2Zvcm1pbmcgdGhlIG91dGNvbWUgdmFyaWFibGUgdG8gYmUgbm9ybWFsbHkgZGlzdHJpYnV0ZWQgKGxvZy10cmFuc2Zvcm0gaWYgdGhlIGVycm9ycyBzZWVtIGNvbnNpc3RlbnQgaW4gcGVyY2VudGFnZSByYXRoZXIgdGhhbiBhYnNvbHV0ZSB0ZXJtcykKLSBJZiB0aGUgZXJyb3IgdmFyaWFuY2UgaXMgcHJvcG9ydGlvbmFsIHRvIGEgdmFyaWFibGUgeiwgdGhlbiBmaXQgdGhlIG1vZGVsIHVzaW5nIFdlaWdodGVkIExlYXN0IFNxdWFyZXMgKFdMUyksIHdpdGggdGhlIHdlaWdodHMgZ2l2ZW4gYmUgMS96Ci0gV2VpZ2h0ZWQgbGVhc3Qgc3F1YXJlcyAoV0xTKSB1c2luZyB0aGUgIndlaWdodHMiIGFyZ3VtZW50IG9mIHRoZSBgbG0oKWAgZnVuY3Rpb24KLSBIdWJlci1XaGl0ZSBzdGFuZGFyZCBlcnJvcnMgKGEuay5hLiAiU2FuZHdpY2giIGVzdGltYXRlcykgZnJvbSBhIGhldGVyb3NjZWRhc3RpY2l0eS1jb3JyZWN0ZWQgY292YXJpYW5jZSBtYXRyaXgKICAgIC0gYGNvZWZ0ZXN0KClgIGZ1bmN0aW9uIGZyb20gdGhlIGBzYW5kd2ljaGAgcGFja2FnZSBhbG9uZyB3aXRoIGhjY20gc2FuZHdpY2ggZXN0aW1hdGVzIGZyb20gdGhlIGBjYXJgIHBhY2thZ2UgCiAgICAtIGByb2Jjb3YoKWAgZnVuY3Rpb24gZnJvbSB0aGUgYHJtc2AgcGFja2FnZQotIFRpbWUgc2VyaWVzIGRhdGE6IEFSQ0ggKGF1dG8tcmVncmVzc2l2ZSBjb25kaXRpb25hbCBoZXRlcm9zY2VkYXN0aWNpdHkpIG1vZGVscwotIFRpbWUgc2VyaWVzIGRhdGE6IHNlYXNvbmFsIHBhdHRlcm5zIGNhbiBiZSBhZGRyZXNzZWQgYnkgYXBwbHlpbmcgbG9nIHRyYW5zZm9ybWF0aW9uIHRvIG91dGNvbWUgdmFyaWFibGUKCiMjIyA0LiBFcnJvcnMgYXJlIGluZGVwZW5kZW50CgpJbmRlcGVuZGVudCBlcnJvcnMgbWVhbnMgdGhhdCB0aGUgZXJyb3JzIGFyZSB1bmNvcnJlbGF0ZWQgd2l0aCBlYWNoIG90aGVyLgoKIyMjIyBXYXlzIHRvIFRlc3QKCi0gUGxvdCByZXNpZHVhbHMgdnMuIHByZWRpY3RvcnMgKFJlc2lkdWFsIFBsb3RzKQotIFRpbWUgU2VyaWVzIGRhdGE6IFJlc2lkdWFsIHRpbWUgc2VyaWVzIHBsb3QgKHJlc2lkdWFscyB2cy4gcm93IG51bWJlcikKLSBUaW1lIFNlcmllcyBkYXRhOiBUYWJsZSBvciBwbG90IG9mIHJlc2lkdWFsIGF1dG9jb3JyZWxhdGlvbnMKLSBUaW1lIFNlcmllcyBkYXRhOiBEdXJiaW4tV2F0c29uIHN0YXRpc3RpYyBmb3IgdGVzdCBvZiBzaWduaWZpY2FudCByZXNpZHVhbCBhdXRvY29ycmVsYXRpb24gYXQgbGFnIDEKCiMjIyMgV2F5cyB0byBIYW5kbGUKCi0gR2VuZXJhbGl6ZWQgbGVhc3Qgc3F1YXJlcyAoR0xTKSBtb2RlbHMgYXJlIGNhcGFibGUgb2YgaGFuZGxpbmcgY29ycmVsYXRlZCBlcnJvcnMKLSBSZWdyZXNzaW9uIHdpdGggY2x1c3RlciB2YXJpYWJsZQogICAgLSBgcm9iY292KClgIGZyb20gYHJtc2AgcGFja2FnZQotIE11bHRpbGV2ZWwgbW9kZWxpbmcKICAgIC0gTGluZWFyIG1peGVkIGVmZmVjdHMgbW9kZWxzCiAgICAtIEdlbmVyYWxpemVkIGxpbmVhciBtaXhlZCBlZmZlY3RzIG1vZGVscwogICAgLSBOb25saW5lYXIgbWl4ZWQgZWZmZWN0cyBtb2RlbHMKCiMjIyA1LiBObyBtdWx0aWNvbGxpbmVhcml0eQoKTXVsdGljb2xsaW5lYXJpdHkgb2NjdXJzIHdoZW4gdGhlIHByZWRpY3RvcnMgYXJlIGNvcnJlbGF0ZWQgd2l0aCBlYWNoIG90aGVyLgoKIyMjIyBXYXlzIHRvIFRlc3QKCi0gVmFyaWFuY2UgSW5mbGF0aW9uIEZhY3RvciAoVklGKQotIEdlbmVyYWxpemVkIFZhcmlhbmNlIEluZmxhdGlvbiBGYWN0b3IgKEdWSUYp4oCUd2hlbiBtb2RlbHMgaGF2ZSByZWxhdGVkIHJlZ3Jlc3NvcnMgKG11bHRpcGxlIHBvbHlub21pYWwgdGVybXMgb3IgY29udHJhc3RzIGZyb20gc2FtZSBwcmVkaWN0b3IpCi0gQ29ycmVsYXRpb24KLSBUb2xlcmFuY2UKLSBDb25kaXRpb24gSW5kZXgKCiMjIyMgV2F5cyB0byBIYW5kbGUKCi0gUmVtb3ZlIGhpZ2hseSBjb3JyZWxhdGVkIChpLmUuLCByZWR1bmRhbnQpIHByZWRpY3RvcnMKLSBBdmVyYWdlIHRoZSBjb3JyZWxhdGVkIHByZWRpY3RvcnMKLSBQcmluY2lwYWwgQ29tcG9uZW50IEFuYWx5c2lzIGZvciBkYXRhIHJlZHVjdGlvbgotIFN0YW5kYXJkaXplIHByZWRpY3RvcnMKLSBDZW50ZXIgdGhlIGRhdGEgKGRlZHVjdCB0aGUgbWVhbikKLSBTaW5ndWxhci12YWx1ZSBkZWNvbXBvc2l0aW9uIG9mIHRoZSBtb2RlbCBtYXRyaXggb3IgdGhlIG1lYW4tY2VudGVyZWQgbW9kZWwgbWF0cml4Ci0gQ29uZHVjdCBhIGZhY3RvciBhbmFseXNpcyBhbmQgcm90YXRlIHRoZSBmYWN0b3JzIHRvIGluc3VyZSBpbmRlcGVuZGVuY2Ugb2YgdGhlIGZhY3RvcnMKCiMjIyA2LiBFcnJvcnMgYXJlIG5vcm1hbGx5IGRpc3RyaWJ1dGVkCgojIyMjIFdheXMgdG8gVGVzdAoKLSBQcm9iYWJpbGl0eSBQbG90cwogICAgLSBOb3JtYWwgUXVhbnRpbGUgKFFRKSBQbG90cyAoYmFzZWQgb24gbm9uLWN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uIG9mIHJlc2lkdWFscykKICAgIC0gTm9ybWFsIFByb2JhYmlsaXR5IChQUCkgUGxvdHMgKGJhc2VkIG9uIGN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uIG9mIHJlc2lkdWFscykKLSBEZW5zaXR5IFBsb3Qgb2YgUmVzaWR1YWxzCi0gU3RhdGlzdGljYWwgVGVzdHMKICAgIC0gS29sbW9nb3Jvdi1TbWlybm92IHRlc3QKICAgIC0gU2hhcGlyby1XaWxrIHRlc3QKICAgIC0gSmFycXVlLUJlcmEgdGVzdAogICAgLSBBbmRlcnNvbi1EYXJsaW5nIHRlc3QgKGJlc3QgdGVzdCkKLSBFeGFtaW5lIGluZmx1ZW5jZSBvZiBvdXRsaWVycwoKIyMjIyBXYXlzIHRvIEhhbmRsZQoKLSBBcHBseSBhIHRyYW5zZm9ybWF0aW9uIHRvIHRoZSBwcmVkaWN0b3Igb3Igb3V0Y29tZSB2YXJpYWJsZQotIEV4Y2x1ZGUgb3V0bGllcnMKLSBSb2J1c3QgcmVncmVzc2lvbgogICAgLSBCZXN0IHdoZW4gbm8gb3V0bGllcnM6IE1NLXR5cGUgcmVncmVzc2lvbiBlc3RpbWF0b3IKICAgICAgICAtIGBsbXJvYigpYC9gZ2xtcm9iKClgIGZ1bmN0aW9uIG9mIGByb2J1c3RiYXNlYCBwYWNrYWdlCiAgICAgICAgLSBJdGVyYXRpdmVseSByZXdlaWdodGVkIGxlYXN0IHNxdWFyZXMgKElSTFMpOiBgcmxtKCwgbWV0aG9kID0gIk1NIilgIGZ1bmN0aW9uIG9mIGBNQVNTYCBwYWNrYWdlOiBodHRwOi8vd3d3LmF0cy51Y2xhLmVkdS9zdGF0L3IvZGFlL3JyZWcuaHRtCiAgICAtIE1vc3QgcmVzaXN0YW50IHRvIG91dGxpZXJzOiBMZWFzdCB0cmltbWVkIHNxdWFyZXMgKExUUynigJRidXQgbm90IGdvb2QgYXMgYSBzdGFuZGFsb25lIGVzdGltYXRvciwgYmV0dGVyIGZvciBpZGVudGlmeWluZyBvdXRsaWVycwogICAgICAgIC0gYGx0c1JlZygpYCBmdW5jdGlvbiBvZiBgcm9idXN0YmFzZWAgcGFja2FnZSAoYmVzdCkKICAgIC0gQmVzdCB3aGVuIHNpbmdsZSBwcmVkaWN0b3I6IFRoZWlsLVNlbiBlc3RpbWF0b3IKICAgICAgICAtIGBtYmxtKCwgcmVwZWF0ZWQgPSBGQUxTRSlgIGZ1bmN0aW9uIG9mIGBtYmxtYCBwYWNrYWdlCiAgICAtIFJvYnVzdCBjb3JyZWxhdGlvbgogICAgICAgIC0gU3BlYXJtYW4ncyByaG86IGBjb3IoLCBtZXRob2QgPSAic3BlYXJtYW4iKWAKICAgICAgICAtIFBlcmNlbnRhZ2UgYmVuZCBjb3JyZWxhdGlvbgogICAgICAgIC0gTWluaW11bSB2b2xsdW1lIGVsbGlwc29pZAogICAgICAgIC0gTWluaW11bSBjb3ZhcmlhbmNlIGRldGVybWluYW50OgogICAgICAgIC0gV2luc29yaXplZCBjb3JyZWxhdGlvbgogICAgICAgIC0gQml3ZWlnaHQgbWlkY29ycmVsYXRpb24KICAgIC0gTm90IGdyZWF0IG9wdGlvbnM6CiAgICAgICAgLSBRdWFudGlsZSAoTDEpIHJlZ3Jlc3Npb246IGBycSgpYCBmdW5jdGlvbiBvZiBgcXVhbnRyZWdgIHBhY2thZ2UKCiMjIyBSZXNvdXJjZXMKCkJvb2s6IEFuIFIgQ29tcGFuaW9uIHRvIEFwcGxpZWQgUmVncmVzc2lvbgoKaHR0cDovL3Blb3BsZS5kdWtlLmVkdS9+cm5hdS90ZXN0aW5nLmh0bQoKaHR0cDovL3d3dy5zdGF0bWV0aG9kcy5uZXQvc3RhdHMvcmRpYWdub3N0aWNzLmh0bWwKCmh0dHA6Ly9zb2NzZXJ2LnNvY3NjaS5tY21hc3Rlci5jYS9qZm94L0NvdXJzZXMvQnJhemlsLTIwMDkvaW5kZXguaHRtbAoKaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvT3JkaW5hcnlfbGVhc3Rfc3F1YXJlcyNBc3N1bXB0aW9ucwoKIyBTZXNzaW9uIEluZm8KCmBgYHtyfQpzZXNzaW9uSW5mbygpCmBgYAo=</div>
+<script type="text/javascript" src="includes/external-links.js"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/DevPsyLab" target="_blank" class="fa fa-github fa-fw fa-3x"></a>
+    <a href="https://twitter.com/devpsylab" target="_blank" class="fa fa-twitter fa-fw fa-3x"></a>
+    <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
+	<a href="https://www.instagram.com/dev_psy_lab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("analysis-regression.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
