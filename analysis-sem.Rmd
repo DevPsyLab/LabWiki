@@ -49,7 +49,7 @@ https://isaactpetersen.github.io/Principles-Psychological-Assessment/sem.html#se
 
 ## Model Syntax
 
-```{r}
+```{r, class.source = "fold-show"}
 mediationModel <- '
 # direct effect (cPrime)
 Y ~ direct*X
@@ -68,7 +68,7 @@ total := direct + indirect
 
 ## Fit the Model
 
-```{r}
+```{r, class.source = "fold-show"}
 mediationFit <- sem(mediationModel,
                     data = mydata,
                     se = "bootstrap",
@@ -80,7 +80,7 @@ mediationFit <- sem(mediationModel,
 
 ## Summary Output
 
-```{r}
+```{r, class.source = "fold-show"}
 summary(mediationFit,
         fit.measures = TRUE,
         standardized = TRUE,
@@ -89,7 +89,7 @@ summary(mediationFit,
 
 ## Indirect Effect
 
-```{r}
+```{r, class.source = "fold-show"}
 parameterEstimates(mediationFit,
                    boot.ci.type = "bca.simple",
                    standardized = TRUE)
