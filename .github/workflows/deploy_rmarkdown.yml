@@ -41,13 +41,6 @@ jobs:
          Rscript -e 'remotes::install_git("https://research-git.uiowa.edu/PetersenLab/petersenlab.git")'
          Rscript -e "remotes::install_github('njtierney/naniar')"
          Rscript -e "install.packages('rstan', repos = c('https://mc-stan.org/r-packages/', getOption('repos')))"
-         Rscript -e "remotes::install_github('stan-dev/cmdstanr')"
-
-      - name: Build Cmdstan
-        run: |
-          cmdstanr::check_cmdstan_toolchain(fix = TRUE)
-          cmdstanr::install_cmdstan(cores = parallel::detectCores())
-        shell: Rscript {0}
 
       - name: Render blog
         run: Rscript -e 'rmarkdown::render_site()'

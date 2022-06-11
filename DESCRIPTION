@@ -28,5 +28,4 @@ Imports:
   robustbase,
   brms
 Remotes:
-  njtierney/naniar,
-  stan-dev/cmdstanr
+  njtierney/naniar
