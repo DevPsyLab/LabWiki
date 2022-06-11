@@ -160,7 +160,7 @@ mydata[which(mydata$survived == 1),]
 
 To view data, use the following syntax:
 
-```{r, class.source = "fold-show"}
+```{r, eval = FALSE, class.source = "fold-show"}
 View(mydata)
 ```
 
@@ -184,8 +184,8 @@ Here is an example of creating a data frame:
 
 ```{r, class.source = "fold-show"}
 mydata2 <- data.frame(
-  ID = 1:5,
-  cat = c(0,0,1,1,1)
+  ID = c(1:5, 1047:1051),
+  cat = sample(0:1, 10, replace = TRUE)
 )
 
 mydata2
@@ -213,9 +213,10 @@ Image source: [Predictive Hacks](https://predictivehacks.com/?all-tips=anti-join
 Here is how to merge two data frames using a full join:
 
 ```{r, class.source = "fold-show"}
-mergedData <- merge(mydata, mydata2, by = "ID", all = TRUE)
+fullJoinData <- merge(mydata, mydata2, by = "ID", all = TRUE)
 
-mergedData
+fullJoinData
+dim(fullJoinData)
 ```
 
 Or, alternatively, using `tidyverse`:
@@ -229,7 +230,10 @@ full_join(mydata, mydata2, by = "ID")
 Here is how to merge two data frames using a left join:
 
 ```{r, class.source = "fold-show"}
-merge(mydata, mydata2, by = "ID", all.x = TRUE)
+leftJoinData <- merge(mydata, mydata2, by = "ID", all.x = TRUE)
+
+leftJoinData
+dim(leftJoinData)
 ```
 
 Or, alternatively, using `tidyverse`:
@@ -243,7 +247,10 @@ left_join(mydata, mydata2, by = "ID")
 Here is how to merge two data frames using a right join:
 
 ```{r, class.source = "fold-show"}
-merge(mydata, mydata2, by = "ID", all.y = TRUE)
+rightJoinData <- merge(mydata, mydata2, by = "ID", all.y = TRUE)
+
+rightJoinData
+dim(rightJoinData)
 ```
 
 Or, alternatively, using `tidyverse`:
@@ -257,7 +264,10 @@ right_join(mydata, mydata2, by = "ID")
 Here is how to merge two data frames using a right join:
 
 ```{r, class.source = "fold-show"}
-merge(mydata, mydata2, by = "ID", all.x = FALSE, all.y = FALSE)
+innerJoinData <- merge(mydata, mydata2, by = "ID", all.x = FALSE, all.y = FALSE)
+
+innerJoinData
+dim(innerJoinData)
 ```
 
 Or, alternatively, using `tidyverse`:
@@ -271,7 +281,10 @@ inner_join(mydata, mydata2, by = "ID")
 An anti join return all rows from $x$ without a match in $y$:
 
 ```{r, class.source = "fold-show"}
-anti_join(mydata, mydata2, by = "ID")
+antiJoinData <- anti_join(mydata, mydata2, by = "ID")
+
+antiJoinData
+dim(antiJoinData)
 ```
 
 # Long to wide
