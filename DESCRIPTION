@@ -34,6 +34,8 @@ Imports:
   foreign,
   olsrr,
   MASS,
-  WRS2
+  WRS2,
+  quantreg,
+  mblm
 Remotes:
   njtierney/naniar
