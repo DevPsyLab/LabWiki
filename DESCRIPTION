@@ -32,10 +32,10 @@ Imports:
   mgcv,
   AER,
   foreign,
-  olsrr,
   MASS,
   WRS2,
   asbio,
+  quantreg,
   mblm
 Remotes:
   njtierney/naniar
