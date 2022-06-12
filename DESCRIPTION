@@ -33,6 +33,7 @@ Imports:
   AER,
   foreign,
   olsrr,
-  MASS
+  MASS,
+  WRS2
 Remotes:
   njtierney/naniar
