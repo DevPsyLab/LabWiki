@@ -29,6 +29,7 @@ Imports:
   brms,
   cvTools,
   boot,
-  mgcv
+  mgcv,
+  AER
 Remotes:
   njtierney/naniar
