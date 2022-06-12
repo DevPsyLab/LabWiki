@@ -26,6 +26,10 @@ Imports:
   mvnormtest,
   rms,
   robustbase,
-  brms
+  brms,
+  cvTools,
+  boot,
+  mgcv,
+  AER
 Remotes:
   njtierney/naniar
