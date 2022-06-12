@@ -30,6 +30,7 @@ Imports:
   cvTools,
   boot,
   mgcv,
-  AER
+  AER,
+  foreign
 Remotes:
   njtierney/naniar
