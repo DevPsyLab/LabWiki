@@ -43,7 +43,7 @@ navbar:
     - text: "Documentation"
       menu:
       - text: Data Analysis Guides
-        href: analysis.html
+        href: https://devpsylab.github.io/DataAnalysis
       - text: Honors Projects
         href: honors.html
       - text: Remote Participation
