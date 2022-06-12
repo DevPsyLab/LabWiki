@@ -36,7 +36,6 @@ Imports:
   MASS,
   WRS2,
   asbio,
-  quantreg,
   mblm
 Remotes:
   njtierney/naniar
