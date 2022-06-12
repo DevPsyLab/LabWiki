@@ -48,6 +48,8 @@ navbar:
         href: honors.html
       - text: Remote Participation
         href: documentation-remote.html
+      - text: Studies
+        href: studies.html
     - text: "Studies"
       menu:
       - text: School Readiness Study
