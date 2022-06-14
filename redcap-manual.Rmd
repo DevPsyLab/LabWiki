@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE,
 ## Adding new RAs to REDCap/tasks
 
 1.  Go to "User Rights" on the left side (under "Applications").
-1. In the text box labeled "Assign new user", type the new lab member's HawkID and click "Assign to Role".  Then assign them to the relevant role ("RA", "Grad Student", etc.).
+1. In the text box labeled "Assign new user", type the new lab member's HawkID and click "Assign to Role" (e.g., "RA", "Grad Student").  
    - "RA Analyst" is for RAs conducting honors projects who need to do data analysis.
    - "Project Manager" is for the lab coordinator.
    - "Add Measures" is for selected RAs who are deemed ready by Dr. Petersen to make edits/additions to measures in REDCap
@@ -50,7 +50,9 @@ knitr::opts_chunk$set(echo = TRUE,
 
 
 ## Branching Logic
-Branching logic is a method to link two questions with each other. The answer of Question A will determine whether Question B will be displayed. Typically question A is a checkbox or multiple-choice question. Follow the below steps to use branching logic: 
+Branching logic is a method to link two questions with each other. 
+The answer of Question A will determine whether Question B will be displayed. 
+Typically question A is a checkbox or multiple-choice question. Follow the below steps to use branching logic: 
 
 1. Create all questions to be linked
 1. Click on the green arrow to begin using branching logic
@@ -87,7 +89,8 @@ To designate events, follow the below steps:
 
 ## Designating Instruments as Repeatable
 
-Some instruments will be designated as repeatable. These events will first need to be designated accross events (See section on  [designating events](#designateInstruments)) 
+Some instruments will be designated as repeatable. 
+These events will first need to be designated accross events (See section on  [designating events](#designateInstruments)). 
 Tasks that require multiple people to create the same form will often need to be repeatable. For example, coding tasks that require multiple people to check accross forms for reliability. 
 
 To designate forms repeatable, follow the below steps: 
