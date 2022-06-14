@@ -50,6 +50,8 @@ navbar:
         href: documentation-remote.html
       - text: Studies
         href: studies.html
+        text: REDCap
+        href: redcap-manual.html
     - text: "Studies"
       menu:
       - text: School Readiness Study
