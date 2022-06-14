@@ -73,7 +73,7 @@ Filed embedding is an advanced branching logic method which allows Question B to
 ![RedcapExample1](images/redcapExample1.png)
 ![RedcapExample2](images/redcapExample2.png)
 
-## Designating Instruments to Events {designateInstruments}
+## Designating Instruments to Events {#designateInstruments}
 
 Most instruments in longitudinal studies will need to be desigated accross events. 
 Instruments should already be created and approved before designating to events. 
