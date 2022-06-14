@@ -46,12 +46,12 @@ navbar:
         href: https://devpsylab.github.io/DataAnalysis
       - text: Honors Projects
         href: honors.html
+      - text: REDCap
+        href: redcap-manual.html
       - text: Remote Participation
         href: documentation-remote.html
       - text: Studies
         href: studies.html
-        text: REDCap
-        href: redcap-manual.html
     - text: "Studies"
       menu:
       - text: School Readiness Study
