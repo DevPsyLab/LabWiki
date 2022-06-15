@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE,
    - After assigning them to the correct role, go to "DAGs" on the left side (under "Applications").
 1.  To add an RA to their specific task, go to Project Home → Project Setup → Online Designer → click on name of required task in the left column
 1. Select "Edit" on the "Coder Name" field.
-1. Under "Choices (one choice per line)", add the subsequent number followed by a comma and the RA’s name.
+1. Under "Choices (one choice per line)", add the subsequent number followed by a comma and the RA's name.
 1. Click "Save".
 
 ## Creating a new instrument in REDCap
@@ -112,52 +112,54 @@ To designate forms repeatable, follow the below steps:
     - Include numbers (if relevant) in parentheses in row below column choices
 -	Choices follow correct format: Number, Choice
     - (e.g., 1, female)
--	For yes/no questions, use the “Yes - No” question type (rather than multiple choice radio buttons)
+-	For yes/no questions, use the "Yes - No" question type (rather than multiple choice radio buttons)
     1. No = 0	
     1. Yes = 1
 
 - Time questions
-   - Specific time (e.g., What is the child’s bedtime?):
-        - **Begin question with instructions:** Below you will enter your child’s bedtime. 
-        Please specify in 12-hour time (AM/PM). 
-        For example, if your child’s bedtime is 10:30 PM, please enter 10 hours and 30 minutes like the example below. (show example image below)
+   - Specific time (e.g., What is the child's bedtime?):
+      - **Begin question with instructions:** Below you will enter your child's bedtime. 
+      Please specify in 12-hour time (AM/PM). 
+      For example, if your child's bedtime is 10:30 PM, please enter 10 hours and 30 minutes like the example below. (show example image below)
       - Have three variables for every time question:	
          - AM/PM (Radio Button)
          - hours (text box), italicized
-   validation: integer from 1-12
+             - Validation: integer from 1–12
          - minutes (text box), italicized
-a.	Validation: integer from 0-59
-Specify 12-hour time in the question
-      - **Example**: What is the child’s bedtime? Please specify in 12-hour time (AM/PM).
+             - Validation: integer from 0–59
+      - Specify 12-hour time in the question
+         - **Example**: What is the child's bedtime?
+         Please specify in 12-hour time (AM/PM).
    - Duration: (e.g., How long does the child nap each day?)
-      - Below you will enter how long your child naps each day. Please specify in hours and minutes. 
+      - Below you will enter how long your child naps each day.
+      Please specify in hours and minutes. 
       For example, if your child naps 2 hours and 30 minutes each day, please enter 2 hours and 30 minutes like the example below (show example image below).
       - Have two variables for every time question:
-         - 	hours (text box), italicized. Validation: integer (minimum 0; maximum—case specific)
+         - hours (text box), italicized.
+            - Validation: integer (minimum 0; maximum—case specific)
          - minutes (text box), italicized
-         Validation: integer (minimum 0; maximum 59)
+            - Validation: integer (minimum 0; maximum 59)
 
 ## Creating Variables
-
 
 - Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters
 - **Validation is used wherever possible**
 - For variables with identifying information (e.g., name, address), select the checkbox labeled "Identifier"
 - Branching logic is used to give questions only to relevant participants
-- A “Matrix of Fields” is used to group together items with common response options
-- For “Matrix of Fields,” only select “Ranking” if you want the participant to select only one response per column
--	Where helpful, “Sections” are used to break up the questions
+- A "Matrix of Fields" is used to group together items with common response options
+- For "Matrix of Fields," only select "Ranking" if you want the participant to select only one response per column
+-	Where helpful, "Sections" are used to break up the questions
 -	Radio buttons are used rather than drop-down lists
 -	For crucial variables, "Required" is selected
 -	If necessary, piping is used
-- Add the following verbatim to the end of every questionnaire (in italics): “Please be sure you answered all items.”
-   - Name the variable: measure_allitems (where “measure” is the abbreviated measure name)
+- Add the following verbatim to the end of every questionnaire (in italics): "Please be sure you answered all items."
+   - Name the variable: measure_allitems (where "measure" is the abbreviated measure name)
 
 ## Troubleshooting
 
-- When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
+- When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: "ERASE CURRENT VALUE OF THE FIELD?"
    - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf
-   - If you do not want the field hidden once it contains data, add the following as an “OR” condition on the existing branching      
+   - If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      
       - logic: [field_name] <> ""
 
 ## How To
@@ -178,20 +180,21 @@ Specify 12-hour time in the question
 
 ## Lab Universal Notations
 
-- Correct = 2
+- Correct = 2 (or 1, if there is no option for "initially incorrect, changed to correct")
 - Incorrect = 0
 - Initially incorrect, changed to correct = 1
 - No response = -9
 - Uncodeable = 9
-
+- Not Applicable = -999
 - Sex: Male = 0, Female = 1
-- For Likert scales:
-   - If there are numbers listed for the Likert scale options, use those numbers as the values
-   - If there are not numbers listed, check with Dr. Petersen for what numbers to use as the values
-   - In general, values start with number 1 (not 0—unless value actually reflects complete absence of something)
-   - If there is an “Other” option, code it as “9”, if possible
-   - If there is a ”N/A” option, code it as “-999”
 
+For Likert scales:
+
+- If there are numbers listed for the Likert scale options, use those numbers as the values
+- If there are not numbers listed, check with Dr. Petersen for what numbers to use as the values
+- In general, values start with number 1 (not 0—unless the value actually reflects complete absence of something)
+- If there is an "Other" option, code it as "9", if possible
+- If there is a "N/A" option, code it as "-999"
 
 ## Editing the Data Dictionary
 
