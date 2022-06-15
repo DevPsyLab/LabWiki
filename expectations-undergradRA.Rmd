@@ -52,11 +52,9 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-## Scheduling Expectations {#schedulingExpectations}
-
 [Note: Move this section to the `expectations-undergrad.Rmd` file]: # 
 
-### Your responsibilities as an RA
+## Your responsibilities as an RA
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
 If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks.
@@ -95,7 +93,7 @@ You are welcome to make yourself available more than two evenings per week and t
 If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
 If you have concerns making up these hours, please reach out to the lab coordinator.
 
-### Our responsibilities to you
+## Our responsibilities to you
 
 We appreciate that your classes—including exams and course prep—come first.
 We will work with you so that your lab schedule does not interfere with your other classes.
