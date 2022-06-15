@@ -67,9 +67,9 @@ Filed embedding is an advanced branching logic method which allows Question B to
 
 1. Use branching logic to link Question B to Question A, so Question B will only appear if the participant selects "other" for Question A
 (in our example, variable name for Question A would be college, variable name for Question B: college_other)
-1. 	Make sure that answer choice "Other" is coded as ‘9’ (see figure 1)
+1. Make sure that answer choice "Other" is coded as "9" (see figure 1)
 1.	Return to Question A and add several spaces behind the answer choice you would like to embed.
-1. Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other} see figure 1)
+1. Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1
 1. Save
 1. When testing the instrument, a textbox should now appear directly behind the answer choice, when selecting "Other" (see below example)
 
