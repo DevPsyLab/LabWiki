@@ -41,7 +41,8 @@ knitr::opts_chunk$set(echo = TRUE,
 1. Add variable name:
    - Variable names must be unique
    - Variable names within the same instrument should have the same beginning (e.g. all variables within the school information instrument start with "school_")
-   - Indicate whether question is required
+1. Indicate whether question is required
+1. Add data validation (if possible) to reduce the possibility of human error in data entry
 1. Questions within the same instrument may belong to different sections.
 To add a new section:
    - Click "Add Field"
@@ -50,6 +51,7 @@ To add a new section:
    - Save
 
 ## Branching Logic
+
 Branching logic is a method to link two questions with each other.
 The answer of Question A will determine whether Question B will be displayed.
 Typically question A is a checkbox or multiple-choice question.
