@@ -56,8 +56,6 @@ RTFM
 RTFC
 : Read the ******* checklist
 
-[Note: I moved the section on Dress Code  to the `expectations-everyone.Rmd` file. We will also move the summerwear section there.]: # 
-
 # CITI Certification
 
 Before you can interact with any data in the lab (including observing visits) you must be certified on human subject research protocols.

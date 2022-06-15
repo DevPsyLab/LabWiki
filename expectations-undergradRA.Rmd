@@ -52,8 +52,6 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-[Note: Move this section to the `expectations-undergrad.Rmd` file]: # 
-
 ## Your responsibilities as an RA
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
