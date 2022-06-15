@@ -104,7 +104,7 @@ To designate forms repeatable, follow the below steps:
 # Creating Instruments and Questionnaires 
 
 ## Good Practices for Creating Instruments
---- 
+
 -	Include relevant instructions where applicable
 -	Omit "introductory" variables (e.g., date of birth) that are collected from other measures
 -	Field Labels are the same across instruments where applicable
@@ -139,7 +139,7 @@ Specify 12-hour time in the question
 
 ## Creating Variables
 
---- 
+
 - Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters
 - **Validation is used wherever possible**
 - For variables with identifying information (e.g., name, address), select the checkbox labeled "Identifier"
@@ -154,14 +154,14 @@ Specify 12-hour time in the question
    - Name the variable: measure_allitems (where “measure” is the abbreviated measure name)
 
 ## Troubleshooting
---- 
+
 - When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
    - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf
    - If you do not want the field hidden once it contains data, add the following as an “OR” condition on the existing branching      
       - logic: [field_name] <> ""
 
 ## How To
---- 
+
 - Em dash (—):
    - `&mdash;`
 - Line Break
@@ -177,7 +177,7 @@ Specify 12-hour time in the question
    - **Example**: <font color="red">This color will be red.</font>
 
 ## Lab Universal Notations
---- 
+
 - Correct = 2
 - Incorrect = 0
 - Initially incorrect, changed to correct = 1
@@ -194,7 +194,7 @@ Specify 12-hour time in the question
 
 
 ## Editing the Data Dictionary
---- 
+
 - If editing the data dictionary, do not use Excel!—Excel truncates values in cells
    - Instead, use LibreOffice with UTF-8 encoding
 
