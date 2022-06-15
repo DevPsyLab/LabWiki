@@ -52,7 +52,71 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-Scheduling expectations for RAs are outlined in the lab manual [here](manual.html#schedulingExpectations).
+## Scheduling Expectations {#schedulingExpectations}
+
+[Note: Move this section to the `expectations-undergrad.Rmd` file]: # 
+
+### Your responsibilities as an RA
+
+You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
+If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks.
+
+Unless otherwise stated, running lab visits is always the top priority.
+If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.
+If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.
+
+You are responsible for keeping the "RES-DPL-Busy" calendar up to date, including evenings and weekends, and to keep the Lab Coordinator informed of any changes as they occur.
+
+You are expected to track your lab hours honestly using the electronic scheduling system.
+You should diligently clock in and clock out every time you are in lab, and should only be "on the clock" while you are doing scheduled lab-related work or activities.
+
+If you come into lab to help run lab visits during university breaks, the hours can count as hours for either the current semester (if you are "under hours" for the semester), or toward the following semester (if you are "over hours" for the semester).
+Completed lab-related hours count as lab hours no matter when they occur as long as they occur when they are scheduled.
+Lab hours must be scheduled/arranged with the Lab Coordinator in advance.
+
+You are NOT expected to be in lab for regularly scheduled lab hours on university holidays.
+If holidays occur during the week when lab hours are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter hours for that day.
+
+You are expected to schedule non-lab activities (course-related, therapy/medical appointments, extra-curricular, etc.) outside of your scheduled lab hours.
+However, we understand that this is occasionally not possible.
+If scheduling an outside activity during your regular lab hours is necessary, you are expected to first discuss this with the Lab Coordinator, to mark yourself as unavailable on the calendar (RES-DPL-Busy), and to work with the Lab Coordinator to determine when to make up the missed hours.
+
+You are expected to be available at least two weekday evenings (M–F) per week and at least 8 weekend days per semester to run lab visits that may extend or be scheduled outside of the lab's normal business hours, which are 9:00am to 5:00pm Monday through Friday.
+You will be considered "on call" the evenings and weekend days you mark as available (i.e., your scheduled "on-call days").
+It is unlikely you will run a lab visit on all of your on-call days, but we may schedule a lab visit on any of your on-call days, in which case you would be expected to help run the lab visit.
+You are expected to hold your scheduled on-call days available until 24 hours beforehand.
+If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
+Both parties are then required to inform the Lab Coordinator of the trade before it is finalized.
+We will do our best to schedule families during your regular lab hours, however this may not always be possible.
+We want to ensure, as much as possible, (a) adequate coverage to accommodate families' schedules and (b) equitable distribution of "after-hours" lab visits.
+These are the minimum expectations for evening and weekend availability.
+You are welcome to make yourself available more than two evenings per week and three weekend days per month to help us better meet families' needs.
+
+If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
+If you have concerns making up these hours, please reach out to the lab coordinator.
+
+### Our responsibilities to you
+
+We appreciate that your classes—including exams and course prep—come first.
+We will work with you so that your lab schedule does not interfere with your other classes.
+
+It is greatly appreciated when RAs are able to run lab visits during breaks because breaks are often when families are available and thus it is very helpful to the lab.
+RAs who are available and willing to run lab visits during breaks will accrue those hours either for the current or following semester.
+Running lab visits during breaks is not an expectation of RAs.
+
+We will schedule lab visits using the availability schedule you submitted to the Lab Coordinator at the beginning of the semester and the RES-DPL-Busy calendar.
+We will never expect you to help run lab visits when you have marked yourself as unavailable on the calendar.
+
+We will do our best to schedule a similar number of lab visits across RAs.
+This will ensure RAs receive a similar amount of experience with children/families and that a small set of RAs are not overburdened by lab visits and unable to tend to their other lab responsibilities.
+
+We will do our best to schedule families during your regular lab hours.
+We will only schedule families outside regular lab hours (e.g., evenings/weekends) if necessary.
+
+We will never schedule a lab visit outside of normal lab hours with less than 24 hours' notice to the RAs scheduled to run it.
+
+We will work with you to help you identify when you can "cut back" when you let us know that you are over the expected number of hours for that point in the semester.
+
 
 # Grading Scale
 
