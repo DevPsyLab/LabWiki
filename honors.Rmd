@@ -98,13 +98,7 @@ Please organize all thesis-related files into subfolders within your member fold
 					          \Thesis\ -- put your Thesis document here (i.e., your paper)
 
 To access the lab drive off-campus, you will need to set up VPN.
-Visit this website to learn how to set up VPN access to the lab drive:
-https://its.uiowa.edu/support/article/1876
-
-The full drive path to our lab drive is:
-
-- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
-- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+For instructions to set up VPN, see [here](documentation-remote.html#vpn).
 
 # Accessing Articles through the UI Libraries
 
@@ -119,25 +113,17 @@ If the university does not have access to the journal, then you can access the P
 # Working on Your Thesis
 
 The easiest way to work on your thesis is to work on it in the lab.
-If you must work on your thesis outside of the lab, you may either 1) VPN into the lab drive or 2) "remote in" to a lab computer.
-For instructions how to do each, see below, or see the [RA Remote Participation page](documentation-remote.html).
-
-## VPN Access to the Lab Drive {#vpn}
-
-For information on how to VPN in to the lab drive, see [here](documentation-remote.html#vpn).
-
-## Remote Access to a Lab Computer
-
-For information on how to "remote in" to a lab computer, see [here](documentation-remote.html#remoteAccess).
+If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.html#remoteAccess).
+For instructions how to do each, see the [RA Remote Participation page](documentation-remote.html).
 
 # Access SPSS/R for Data Analysis {#spss-R}
 
 You can access SPSS and R through an online platform called UI Virtual Desktop.
-You can use Virtual Desktop on campus or from home, but if you are off-campus VPN is required.
-See the the section above for information on [how to set up VPN](#vpn).
+You can use Virtual Desktop on campus or from home, but if you are off-campus, VPN is required.
+For instructions to set up VPN, see [here](documentation-remote.html#vpn).
 Follow the steps below to set up Virtual Desktop for the first time.
 
-1. Connect to VPN using Cisco AnyConnect.
+1. Connect to [VPN](documentation-remote.html#vpn) using Cisco AnyConnect.
 1. Go to: https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb
 1. If this is your first time accessing Virtual Desktop on your computer, you will need to install an application called Citrix Receiver.
 In the process of logging into Virtual Desktop, you will encounter a window that prompts you to install Citrix Receiver.
