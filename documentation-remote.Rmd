@@ -27,13 +27,16 @@ Nevertheless, students who are conducting [Honors Projects](honors.html) may nee
 
 # VPN Access to the Lab Drive {#vpn}
 
-- To access the lab drive, connect to the university's VPN using Cisco AnyConnect (https://its.uiowa.edu/vpn).
-Visit this website to learn how to set up VPN access to the lab drive: https://its.uiowa.edu/support/article/1876
-- The full drive path to our lab drive is: 
-    - PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
-    - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
+Visit this website to learn how to set up VPN access to the lab drive:
+https://its.uiowa.edu/support/article/1876
 
-# Map the Lab Drive Onto a Mac Computer
+The full drive path to our lab drive is: 
+
+- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
+- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+
+# Map the Lab Drive Onto a Mac Computer {#mapLabDrive}
 
 1. [VPN](#vpn) into the university network
 1. In the upper task bar, click "Go"
@@ -49,19 +52,23 @@ Visit this website to learn how to set up VPN access to the lab drive: https://i
     In the future, you can reconnect to the shared volume by double-clicking this alias.
 1. Then, you should be able to access the scripts on the lab share with `R` at the following location: `/Volumes/rdss_itpetersen`
 
-# Remote Access to a Lab Computer
+# Remote Access to a Lab Computer {#remoteAccess}
 
-- A possibility may be to "remote in" to a lab computer.
+A possibility may be to "remote in" to a lab computer.
 This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.
 Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).
 However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.
-You can remote in to a lab computer using a program called "Remote Desktop." Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
-- Before gaining remote access to a lab computer, you will first have to VPN into the lab drive
-- When prompted for the computer's name in the Remote Desktop client, follow this format: 
+You can remote in to a lab computer using a program called "Remote Desktop."
+Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
+
+To gain remote access to a lab computer:
+
+1. [VPN](#vpn) into the lab drive
+1. When prompted for the computer's name in the Remote Desktop client, follow this format: 
     - `PSYC-S###.iowa.uiowa.edu`
     - Then, enter your username using this format: `iowa\HawkID`
 
-# Code from Home
+# Perform Coding from Home
 
 ## Remote Access Changes
 

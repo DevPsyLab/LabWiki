@@ -107,6 +107,7 @@ The full drive path to our lab drive is:
 - Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
 
 # Accessing Articles through the UI Libraries
+
 You should be able to obtain the PDF of any article, even if it is not freely available online and the university does not provide access to the journal.
 Even if the PDF of article is not available on Google Scholar, you can easily get it through the university library system.
 First, see if the university has access to the electronic/online version of the journal by searching the name in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
@@ -123,30 +124,13 @@ For instructions how to do each, see below, or see the [RA Remote Participation 
 
 ## VPN Access to the Lab Drive {#vpn}
 
-To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
-Visit this website to learn how to set up VPN access to the lab drive:
-https://its.uiowa.edu/support/article/1876
-
-The full drive path to our lab drive is: 
-
-- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
-- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+For information on how to VPN in to the lab drive, see [here](documentation-remote.html#vpn).
 
 ## Remote Access to a Lab Computer
 
-A possibility may be to "remote in" to a lab computer.
-This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.
-Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).
-However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.
-You can remote in to a lab computer using a program called "Remote Desktop."
-Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
+For information on how to "remote in" to a lab computer, see [here](documentation-remote.html#remoteAccess).
 
-- Before gaining remote access to a lab computer, you will first have to VPN into the lab drive
-- When prompted for the computer's name in the Remote Desktop client, follow this format: 
-`PSYC-S###.iowa.uiowa.edu`
-- Then, enter your username using this format: `iowa\HawkID`
-
-# Access SPSS/R for Data Analysis
+# Access SPSS/R for Data Analysis {#spss-R}
 
 You can access SPSS and R through an online platform called UI Virtual Desktop.
 You can use Virtual Desktop on campus or from home, but if you are off-campus VPN is required.
@@ -179,7 +163,7 @@ Lab data must remain on the lab drive.
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
 It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
 
-# Presenting Work at Conferences
+# Presenting Work at Conferences {#conferences}
 
 You are expected to present a research poster on your thesis findings at the UI Undergraduate Research Festival.
 You are encouraged (but not required) to additionally present your research at other conferences, as well.
