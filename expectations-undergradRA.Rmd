@@ -89,7 +89,7 @@ These are the minimum expectations for evening and weekend availability.
 You are welcome to make yourself available more than two evenings per week and three weekend days per month to help us better meet families' needs.
 
 If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
-If you have concerns making up these hours, please reach out to the lab coordinator.
+If you have concerns making up these hours, please reach out to the Lab Coordinator.
 
 ## Our responsibilities to you
 
@@ -113,7 +113,6 @@ We will never schedule a lab visit outside of normal lab hours with less than 24
 
 We will work with you to help you identify when you can "cut back" when you let us know that you are over the expected number of hours for that point in the semester.
 
-
 # Grading Scale
 
 Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A–F] for their performance in the lab on the tasks assigned to them.
@@ -128,7 +127,7 @@ F: <= 50 attendance, or never on time, or generally failing to meet the lab expe
 
 # Signature
 
-I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](manual.html#scheduling)" (including "[Scheduling Expectations](manual.html#schedulingExpectations)", "[Scheduling System Overview](manual.html#schedulingOverview)", and "[Weekend On-Call Schedule](manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](manual.html).
+I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](manual.html#scheduling)" (including "[Scheduling System Overview](manual.html#schedulingOverview)" and "[Weekend On-Call Schedule](manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](manual.html).
 I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
 
 RA Signature ________________	RA Printed Name ________________ Date __________
