@@ -216,6 +216,7 @@ This includes, but is not limited to, pre- or co-registering studies, sharing an
 We use GitLab for version control.
 Our lab's template for GitLab repositories can be found here: https://research-git.uiowa.edu/PetersenLab/Template.
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^2]: https://osf.io/4w9sv.
+Follow our [lab's guide for open science](openScience.html).
 
 ## Collaborations
 
@@ -229,13 +230,15 @@ I expect you to discuss order of authorship with me early on when there are pote
 Trainees are expected to read foundational articles relating to the lab and to their research interests.
 Examples of foundational articles are on the lab's Google Drive folder of [primer articles](https://drive.google.com/drive/u/0/folders/1XlPW37ADfn6iCCvpt3s6VwWxOMKkjJNu)[^2].
 I also expect you to read one of the primer articles by Schwartz (2008) titled, "[The Importance of Stupidity in Scientific Research](https://drive.google.com/file/d/1KhyqX51ZL3UET0HjDRmuAix-o7me9Cqw/view?usp=sharing)."
-It is important to feel comfortable feeling stupid in science; if you (and any of us) don not feel stupid, we are not doing science right!
+It is important to feel comfortable feeling stupid in science; if you (and any of us) do not feel stupid, we are not doing science right!
 It is also important to read background information and protocols about our projects.
 
 We have a list of lab resources for graduate students on our Lab's Trello board called "Grad Students"[^2]: https://trello.com/b/WjqbgpW9/grad-students.
 The Trello board includes items for onboarding, important foundational skills for scientific training, useful software, and relevant journals, organizations, conferences, and listservs.
 It also includes training materials for various software (e.g., REDCap, GitLab, R).
 And it includes a list of the times to block off during the semester.
+
+Data analysis guides for the lab are available here: https://devpsylab.github.io/DataAnalysis
 
 ## Training
 
