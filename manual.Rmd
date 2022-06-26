@@ -833,6 +833,8 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
 ## Bi-Weekly Lab Reports {#labReport}
 
 1. Lab reports are due by 5pm on Friday every other week throughout the semester.
+1. Write the lab report in Microsoft Word and save it as a `.docx` file.
+This is important so that Dr. Petersen can comment on the file.
 1. Save the reports in the "Lab Reports" folder:
     a. `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\[YOUR HAWKID]\`
     b. Name the lab reports so that they are ordered by date (e.g., `Lab Report_2017-12-31.docx`).
