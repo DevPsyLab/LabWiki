@@ -832,6 +832,14 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
 
 ## Bi-Weekly Lab Reports {#labReport}
 
+Lab reports serve important purposes:
+
+- they provide a channel of communication between you and Dr. Petersen
+- they help you gain experience and practice with writing, which is important for many careers
+- they provide an avenue for you to make suggestions that can help improve the lab and study. (Of course, you can make suggestions to the team in other ways, too.)
+
+Follow these instructions when submitting lab reports:
+
 1. Lab reports are due by 5pm on Friday every other week throughout the semester.
 1. Write the lab report in Microsoft Word and save it as a `.docx` file.
 This is important so that Dr. Petersen can comment on the file.
