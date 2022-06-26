@@ -19,6 +19,111 @@ Our lab's template for projects on the Open Science Framework (OSF) is located h
 
 # Sharing Data, Analysis Scripts, and Research Materials
 
+## Data Dictionary {#dataDictionary}
+
+For each study, we create a Data Dictionary with the following columns:
+
+- Variable Name
+    - the variable name in the data file
+- Form Name
+    - the instrument or measure that the variable comes from
+- Human-Readable Variable Name
+    - a more easily readable version of the variable name
+- Data Type
+    - the format of the values in the column (e.g., string, binary, integer, numeric, date, time, etc.)
+- Variable Type
+    - whether the scale of measurement is nominal, ordinal, interval, or ratio
+- Measurement Unit
+    - the conceptual unit that is being measured (e.g., seconds, level, count)
+- Allowed Values
+    - the allowed values for a variable and (if possible), what conceptual level each value corresponds to (e.g., 0 = Male; 1 = Female)
+- Description
+    - conceptual description of the variable
+- Definition
+    - definitions of abbreviations, conceptual defintions of terms, mathematical definitions of how a variable is calculated, etc.
+- Notes
+    - additional notes about the variable and how it is calculated
+- References
+    - references for the measure and/or variable
+
+Data Types include:
+
+- string
+    - include letters or other characters (and possibly numbers)
+- factor
+    - categorical variable with letters and/or numbers
+- binary
+    - 0/1
+- integer
+    - whole numbers (never decimals)
+- numeric
+    - numbers
+- date
+    - `MM/DD/YYYY`; e.g., 06/24/2020
+- time
+    - `HH:MM:SS` (e.g., 01:30:24), or `HH:MM` (e.g., 05:24), or `MM:SS`
+- date-time
+    - `MM/DD/YYYY HH:MM:SS` (e.g., 06/24/2020 01:30:24)
+
+Variable Types include:
+
+- nominal
+    - distinct categories
+- ordinal
+    - ordered categories
+- interval
+    - ordered with meaningful distances
+- ratio
+    - ordered with meaningful distances and an absolute zero
+
+Measurement Units include:
+
+- ID
+    - participant identification (ID) numbers
+- count
+    - number of something (e.g., number of children in the household)
+- group
+    - categories that reflect different groups (e.g., female vs male)
+- instance
+    - nominal categories that do not reflect groups
+- yes/no
+    - 0 = No; 1 = Yes
+- ratio
+    - ratio of two variables (one variable divided by another variable)
+- USD
+    - U.S. dollars ($)
+- option
+    - categories that reflect participant's choice among multiple options
+- location
+    - categories that reflect different locations
+- state
+    - categories that reflect a status
+- degree
+    - the degree of
+- level
+    - the level of
+- grade
+    - school grade
+- date
+    - `MM/DD/YYYY`; e.g., 06/24/2020
+- time
+    - `HH:MM:SS` (e.g., 01:30:24), or `HH:MM` (e.g., 05:24), or `MM:SS`
+- date-time
+    - `MM/DD/YYYY HH:MM:SS` (e.g., 06/24/2020 01:30:24)
+- milliseconds
+- seconds
+- minutes
+- hours
+- days
+- months
+- years
+- percentile
+- item
+
+**Style Guide:**
+
+When specifying a range of allowed values (e.g., 3–7), use an en dash (–) instead of a hyphen (-); an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7
+
 # Version Control
 
 We use [GitLab](https://research-git.uiowa.edu) for version control.
@@ -56,6 +161,9 @@ To anonymize participant IDs, use the following script and change the seed for e
 [https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R](https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R)
 
 ### Data Dictionary
+
+For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#data-dictionary) variables used for that specific paper.
+We upload that `.csv` file to the OSF.
 
 ### Analysis Code
 
