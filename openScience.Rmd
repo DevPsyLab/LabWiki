@@ -21,7 +21,18 @@ Our lab's template for projects on the Open Science Framework (OSF) is located h
 
 ## Data Dictionary {#dataDictionary}
 
-For each study, we create a Data Dictionary with the following columns:
+For each study, we create a Data Dictionary.
+
+### Style Guide
+
+- Use Roboto font size 10
+- Use an en dash (`–`; i.e., not a hyphen) to indicate a range:
+    - e.g., 1–18 (not 1-18)
+    - an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7
+
+### Columns
+
+The Data Dictionary should have the following columns:
 
 - Variable Name
     - the variable name in the data file
@@ -46,6 +57,8 @@ For each study, we create a Data Dictionary with the following columns:
 - References
     - references for the measure and/or variable
 
+#### Data Types
+
 Data Types include:
 
 - string
@@ -65,6 +78,8 @@ Data Types include:
 - date-time
     - `MM/DD/YYYY HH:MM:SS` (e.g., 06/24/2020 01:30:24)
 
+#### Variable Types
+
 Variable Types include:
 
 - nominal
@@ -75,6 +90,8 @@ Variable Types include:
     - ordered with meaningful distances
 - ratio
     - ordered with meaningful distances and an absolute zero
+
+#### Measurement Units
 
 Measurement Units include:
 
@@ -119,10 +136,6 @@ Measurement Units include:
 - years
 - percentile
 - item
-
-**Style Guide:**
-
-When specifying a range of allowed values (e.g., 3–7), use an en dash (–) instead of a hyphen (-); an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7
 
 # Version Control
 
