@@ -284,11 +284,11 @@ I am a licensed clinical psychologist, so assessment hours in my research lab co
 
 ## Software {#software}
 
-My lab primarily uses R for data management and analysis because it is free, open source, open platform, code-based (which increases share-ability and reproducibility of analyses), and supports advanced statistics and state-of-the-art graphics from packages designed by statistical experts all over the world, and to which anyone (including you) can contribute.
-We also use MATLAB for processing of event-related potential data and Mplus for structural equation modeling.
-You are encouraged to learn R and any other specialized software that will allow you to answer the research questions you are pursuing.
+My lab primarily uses `R` for data management and analysis because it is free, open source, open platform, code-based (which increases share-ability and reproducibility of analyses), and supports advanced statistics and state-of-the-art graphics from packages designed by statistical experts all over the world, and to which anyone (including you) can contribute.
+We also use `MATLAB` for processing of event-related potential data and `Mplus` for structural equation modeling.
+You are encouraged to learn `R` and any other specialized software that will allow you to answer the research questions you are pursuing.
 If there's another tool or software package that can do something easier, better, more efficiently, or with greater reproducibility than what we are using, feel free to use it—though I may not be able to provide formal guidance.
-For instance, Python is a free programming language that is emerging as a nice complement to R for statistical programming.
+For instance, `Python` is a free programming language that is emerging as a nice complement to `R` for statistical programming.
 No matter which software you use, you should be able to understand and explain what the analysis is doing and be able to interpret and explain the output.
 
 ## Best practices
