@@ -282,7 +282,7 @@ We will discuss your plans for clinical training and practicum opportunities dur
 I will also provide clinical supervision of some of your cases as part of the Seashore Clinic.
 I am a licensed clinical psychologist, so assessment hours in my research lab count as clinical hours.
 
-## Software
+## Software {#software}
 
 My lab primarily uses R for data management and analysis because it is free, open source, open platform, code-based (which increases share-ability and reproducibility of analyses), and supports advanced statistics and state-of-the-art graphics from packages designed by statistical experts all over the world, and to which anyone (including you) can contribute.
 We also use MATLAB for processing of event-related potential data and Mplus for structural equation modeling.
