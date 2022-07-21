@@ -157,8 +157,9 @@ To designate forms repeatable, follow the below steps:
 
 ## Adding Smart Variables to Questionnaires
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
-Use the exact text below in the "Field label"
+These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
+### Timestamps
 1. "Date/Timestamp in the rater's timezone"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
    * Add the following action tags: 
@@ -169,14 +170,21 @@ Use the exact text below in the "Field label"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
    * Add the following Action tags: 
       * @HIDDEN-SURVEY
-      * @NOW
+      * @NOW-SERVER
       * @READONLY
 1. "Date/Timestamp (UTC)"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
    * Add the following Action tags: 
       * @HIDDEN-SURVEY
-      * @NOW
+      * @NOW-UTC
       * @READONLY
+
+### Date Completed, Time Completed and Survey Durations
+
+In the below section, it is necessary to identify the `instrument_name` for each variable added. In REDCap, open the `Designer` tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the *parenting_partner* instrument. 
+
+* https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&page=<mark>parenting_partner</mark>
+
 1. "Survey Time Started:"
    * Add a "Text Box" field with no validation
    * Add the following Action Tags 
@@ -204,14 +212,14 @@ Use the exact text below in the "Field label"
 1. "Survey Duration:" 
    * Add a "Calculated Field" field
    * In the "Calculation Equation", enter the following equation
-      * [survey-duration:parenting_partner:m]
+      * [survey-duration:instrument_name:m]
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY
 1. "Survey Duration Completed:" 
    * Add a "Calculated Field" field
    * In the "Calculation Equation", enter the following equation
-      * [survey-duration-completed:parenting_partner:m]
+      * [survey-duration-completed:instrument_name:m]
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY  
