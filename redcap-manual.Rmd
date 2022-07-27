@@ -157,23 +157,27 @@ To designate forms repeatable, follow the below steps:
 
 ## Adding Smart Variables to Questionnaires
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
+Variable names should follow the appropriate naming convention that is used for each survey.
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
 ### Timestamps
 1. "Date/Timestamp in the rater's timezone"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   * Use variable name: `prefix_ratertimezone`
    * Add the following action tags: 
       * @HIDDEN-SURVEY
       * @NOW
       * @READONLY
 1. "Date/Timestamp (REDCap server)"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   * Use variable name: `prefix_servertimezone`
    * Add the following Action tags: 
       * @HIDDEN-SURVEY
       * @NOW-SERVER
       * @READONLY
 1. "Date/Timestamp (UTC)"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   * Use variable name: `prefix_centraltimezone`
    * Add the following Action tags: 
       * @HIDDEN-SURVEY
       * @NOW-UTC
@@ -187,30 +191,35 @@ In the below section, it is necessary to identify the `instrument_name` for each
 
 1. "Survey Time Started:"
    * Add a "Text Box" field with no validation
+   * Use variable name: `prefix_timestarted`
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY 
       * @CALCTEXT([survey-time-started:instrument_name])
 1. "Survey Date Started:"
    * Add a "Text Box" field with no validation
+   * * Use variable name: `prefix_datestarted`
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY 
       * @CALCTEXT([survey-date-started:instrument_name])
 1. "Survey Time Completed:"
    * Add a "Text Box" field with no validation
+   * * Use variable name: `prefix_timecompleted`
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY 
       * @CALCTEXT([survey-time-completed:instrument_name])
 1. "Survey Date Completed:"
    * Add a "Text Box" field with no validation
+   * Use variable name: `prefix_datecompleted`
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY 
       * @CALCTEXT([survey-date-completed:instrument_name])
 1. "Survey Duration:" 
    * Add a "Calculated Field" field
+   * Use variable name: `prefix_surveyduration`
    * In the "Calculation Equation", enter the following equation
       * [survey-duration:instrument_name:m]
    * Add the following Action Tags 
@@ -218,6 +227,7 @@ In the below section, it is necessary to identify the `instrument_name` for each
       * @READONLY
 1. "Survey Duration Completed:" 
    * Add a "Calculated Field" field
+   * Use variable name: `prefix_surveydurationcompleted`
    * In the "Calculation Equation", enter the following equation
       * [survey-duration-completed:instrument_name:m]
    * Add the following Action Tags 
