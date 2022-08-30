@@ -8,32 +8,37 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-# What graduate training areas can I apply to in order to join the Developmental Psychopathology Lab?
+# What graduate training tracks can I apply to in order to join the Developmental Psychopathology Lab?
 
-Prospective graduate students interested in joining the lab can apply to <ins>***any***</ins> of the [graduate training areas](https://psychology.uiowa.edu/graduate-program) of the Department:
+Prospective graduate students interested in joining the lab can apply to <ins>***any***</ins> of the [graduate training tracks](https://psychology.uiowa.edu/graduate-program) of the Department:
 
 - [Clinical Science](https://psychology.uiowa.edu/research/clinical-science)
 - [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track)
 - [Behavioral and Cognitive Neuroscience](https://psychology.uiowa.edu/research/behavioral-cognitive-neuroscience)
 - [Cognition](https://psychology.uiowa.edu/research/cognition)
 
-Students are welcome to join one of various departmental research groups.
-Research groups provide individualized, interdisciplinary, and student-centered research training in that domain.
-Dr. Petersen is a member of the following research groups:
+The [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track) is an exciting training opportunity for students.
+The [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track) provides students considerable flexibility in their graduate training curriculum.
+It allows the student, in conjunction with their research committee, to custom-tailor their graduate training to meet their training goals.
+Moreover, it provides students more time for research than the [Clinical Science](https://psychology.uiowa.edu/research/clinical-science) track, because the [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track) does not have clinical training requirements (unlike the [Clinical Science](https://psychology.uiowa.edu/research/clinical-science) track).
+
+In addition to a training track, students are welcome to join one of various departmental [research groups](#https://psychology.uiowa.edu/research).
+[Research groups](#https://psychology.uiowa.edu/research) provide individualized, interdisciplinary, and student-centered research training in that domain.
+Dr. Petersen is a member of the following [research groups](#https://psychology.uiowa.edu/research):
 
 - [Developmental Psychopathology](https://psychology.uiowa.edu/research/developmental-psychopathology)
 - [Developmental Science](https://psychology.uiowa.edu/research/developmental-science)
 - [Cognitive Control](https://psychology.uiowa.edu/research/cognitive-control)
 
-Students who are interested in joining the [Developmental Psychopathology Research Group](https://psychology.uiowa.edu/research/developmental-psychopathology) and who do not want clinical training are encouraged to apply to the [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track).
+Students who are interested in joining the [Developmental Psychopathology Research Group](https://psychology.uiowa.edu/research/developmental-psychopathology) and who do not want clinical training requirements are encouraged to apply to the [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track).
 
 # Criteria used for evaluation of graduate applications
 
-Your application will be reviewed closely by me and by the relevant training area.
+Your application will be reviewed closely by me and by the relevant training track.
 So you have a sense of how graduate applications are evaluated, here are the criteria that I consider most strongly when evaluating applicants for graduate school and my lab:
 
 - fit of interests with the Developmental Psychopathology Lab
-- fit of career goals with the mission of the program and the relevant training area
+- fit of career goals with the mission of the program and the relevant training track
     - i.e., career goals in research
 - evidence of high-quality, independent research experience
     - e.g., Honors project, senior thesis, independent research project, first-authored peer-reviewed publications, first-authored posters or talks at national or international conferences, grant/fellowship submissions—these are just examples (you are not expected to have all of these!)
