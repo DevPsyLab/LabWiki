@@ -510,9 +510,19 @@ The lab meeting is generally divided into two sections:
 If you have questions or suggestions, please raise them.
 1. The second half of the meeting is reserved for an article discussion or a professional development workshop. 
 
-### Article Discussion
+### Article Discussion {#articleDiscussion}
 
 Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a peer-reviewed, empirical research article of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
+Article discussions serve several purposes:
+
+- in the spirit of getting course credit for lab experience, article discussions provide a seminar forum for learning about science
+- article discussions help students connect the work they are conducting in the lab to the broader scientific field
+- they help students gain greater skill in reading and critiquing scientific articles, which helps people be more critical consumers of information in society
+- they provide a space to explore scientific ideas and the potential practical implications of science
+- they provide opportunities to gain skill in leading a discussion, which is an important public-speaking skill
+- they provide opportunities in learning to digest complex concepts and to communicate them in a way that is understandable and relevant to others
+- they provide a nonjudgmental space to get out of your comfort zone and to grow intellectually and professionally
+
 RAs will sign up to lead discussion of an article on the Lab Meeting Article Sign-Up Sheet (shared via OneDrive or during lab meeting) during the first week of classes.
 If there are fewer days available than there are RAs, priority is given to newer RAs or to RAs who have had fewer opportunities to lead the discussion of an article.
 **All lab members are expected to contribute to each discussion.**
