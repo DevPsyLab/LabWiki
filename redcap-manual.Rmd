@@ -158,6 +158,8 @@ To designate forms repeatable, follow the below steps:
 ## Adding Smart Variables to Questionnaires
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
 Variable names should follow the appropriate naming convention that is used for each survey.
+After you have added variables, slack the Lab Coordinator for review.
+**Do not add variables to more than three surveys at a time.**
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
 ### Timestamps
@@ -233,6 +235,7 @@ In the below section, it is necessary to identify the `instrument_name` for each
    * Add the following Action Tags 
       * @HIDDEN-SURVEY 
       * @READONLY  
+1. Slack the Lab Coordinator for review
 
 ## Troubleshooting
 

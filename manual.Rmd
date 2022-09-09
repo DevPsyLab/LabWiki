@@ -1002,7 +1002,7 @@ This envelope will only include compensation for the lab session in which they p
 This money will be designated for parking compensation.
 If this cash is added to the participant's compensation on a given day, the TCID, date, and amount needs to be written on the extra cash envelope, and this amount should be reflected on payment receipts.
 - After payment has been made, relevant data will be entered in the Excel spreadsheet ledger (in the payments folder in on the lab drive).
-[XXX][**Insert note about Lab Coordinator's responsibility**]
+The lab coordinator is responsible for entering cash data in the ledger.
 - Each participant and the RA will sign a payment receipt form confirming that they received payment.
 Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.
 
