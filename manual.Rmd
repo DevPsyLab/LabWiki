@@ -349,13 +349,15 @@ Advanced projects are given priority to RAs who have shown reliability and commi
 
 As mentioned above, there are a number of oppotunities to gain advanced experiences in the lab.
 There may be an opportunity for some experiences to count for lab hours if:
+   1. The project is assigned to the RA
    1. The project benefits the overall lab
-   1. The RA has demonstrated proficiency at the experience
+   1. The RA has demonstrated proficiency in the skills needed to complete the project
+   1. The project is not part of an honors project, or any other independent research experience
 
 For example, our lab leverages [R](https://devpsylab.github.io/DataAnalysis/R.html) for a variety of tasks.
-RA's may be able to use R to complete lab projects if they take the time outside of lab hours to tackle the steep learning curve.
-Furthermore, RA's may have an opportunity to lear how EEG data is processed.
-This is certainly not meant to discourage pursuing these experiences, but set expectations for how they will look.
+RA's may be able to use R to complete lab projects if they take the time outside of lab hours to tackle the steep learning curve of R.
+Furthermore, RA's may have an opportunity to learn how EEG data is processed.
+These expectations are not meant to discourage RA's from pursuing advanced experiences, but set expectations for how these experiences can count for lab hours.
 If you would like to learn more about either of these opportunities, or any others, please reach out to the Lab Coordinator.
 
 
