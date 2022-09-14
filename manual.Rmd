@@ -338,28 +338,28 @@ However, RAs should seek permission from Dr. Petersen before enrolling in PSY:39
 
 ## A Note About Other Opportunities for Advancement
 
-In addition to opportunities for advancement in lab, there may also be opportunities to conduct independent research projects, to conduct an Honors project/thesis, or to contribute to papers, grants, or conference poster presentations.
+In addition to opportunities for advancement in lab, there may also be opportunities to conduct independent research projects, to conduct an [Honors project/thesis](honors.html), or to contribute to papers, grants, or conference poster presentations.
 An important part of professional development is learning to advocate for yourself and to inquire about opportunities that are available.
-If you are interested in gaining experience in a certain area of lab work, taking on a leadership role, or if you are interested in an opportunity to take on a more advanced role in the project, then ask!
+If you are interested in gaining experience in a certain area of lab work, taking on a leadership role, or if you are interested in an opportunity to take on a more advanced role in the project, just ask!
 There may be opportunities available for RAs to gain experience in specialized areas of lab work (e.g., recruitment of participants, data processing) or even to earn authorship on a paper or poster for an ongoing project.
 If you are motivated to gain these kinds of opportunities, you are welcome to ask and see what may be available.
 Advanced projects are given priority to RAs who have shown reliability and commitment.
 
 ## A Note About Lab Hours for Advanced Tasks
 
-As mentioned above, there are a number of oppotunities to gain advanced experiences in the lab.
+As mentioned above, there are a number of opportunities to gain advanced experiences in the lab.
 There may be an opportunity for some experiences to count for lab hours if:
    1. The project is assigned to the RA
    1. The project benefits the overall lab
    1. The RA has demonstrated proficiency in the skills needed to complete the project
-   1. The project is not part of an honors project, or any other independent research experience
+   1. The project is not part of an [Honors project/thesis](honors.html), or another independent research experience
 
 For example, our lab leverages [R](https://devpsylab.github.io/DataAnalysis/R.html) for a variety of tasks.
-RA's may be able to use R to complete lab projects if they take the time outside of lab hours to tackle the steep learning curve of R.
-Furthermore, RA's may have an opportunity to learn how EEG data is processed.
-These expectations are not meant to discourage RA's from pursuing advanced experiences, but set expectations for how these experiences can count for lab hours.
+RAs may be able to use [R](https://devpsylab.github.io/DataAnalysis/R.html) to complete lab projects if they take the time outside of lab hours to tackle the learning curve of R.
+Furthermore, RAs may have an opportunity to learn how EEG data is processed.
+These expectations are not meant to discourage RAs from pursuing advanced experiences, but to set expectations for how these experiences can (or in other cases cannot) count for lab hours.
+However, even if experiences do not count toward lab hours, they are still valuable learning experiences that can advance your professional development in pursuit of your career goals.
 If you would like to learn more about either of these opportunities, or any others, please reach out to the Lab Coordinator.
-
 
 ## Honors Theses/Projects
 
@@ -1018,10 +1018,9 @@ This envelope will only include compensation for the lab session in which they p
 This money will be designated for parking compensation.
 If this cash is added to the participant's compensation on a given day, the TCID, date, and amount needs to be written on the extra cash envelope, and this amount should be reflected on payment receipts.
 - After payment has been made, relevant data will be entered in the Excel spreadsheet ledger (in the payments folder in on the lab drive).
-The lab coordinator is responsible for entering cash data in the ledger.
+The Lab Coordinator is responsible for entering cash data in the ledger.
 - Each participant and the RA will sign a payment receipt form confirming that they received payment.
 Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.
-
 
 # Lab Wiki
 
