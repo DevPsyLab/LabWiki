@@ -50,7 +50,7 @@ There are many helpful resources on the lab drive for thesis projects, including
 You can find these resources at the following location on the lab drive:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
 
-For information on how to use SPSS for data analysis, see [here](https://devpsylab.github.io/DataAnalysis/SPSS.html).
+For information on how to use `SPSS` for data analysis, see [here](https://devpsylab.github.io/DataAnalysis/SPSS.html).
 
 In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:
 
@@ -120,7 +120,7 @@ For instructions how to do each, see the [RA Remote Participation page](document
 
 # Access SPSS/R for Data Analysis {#spss-R}
 
-You can access [SPSS](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [R](https://devpsylab.github.io/DataAnalysis/R.html) through an online platform called UI Virtual Desktop.
+You can access [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`R`](https://devpsylab.github.io/DataAnalysis/R.html) through an online platform called UI Virtual Desktop.
 You can use Virtual Desktop on campus or from home, but if you are off-campus, VPN is required.
 For instructions to set up VPN, see [here](documentation-remote.html#vpn).
 Follow the steps below to set up Virtual Desktop for the first time.
@@ -139,7 +139,7 @@ This will prompt a new window.
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
 1. Click the "Finish" button at the bottom of the window.
 1. Now, navigate back through the "Apps" section of Virtual Desktop to find `SPSS` or `R`, and click it to open.
-1. To open your data file in `SPSS`, click "Open another file…" under "Recent Files."
+1. To open your data file in [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html), click "Open another file…" under "Recent Files."
 1. In the new window, click the drop-down menu under "Look in:" and click the lab drive.
 1. Click the "Members" folder and open your member folder to find your data files.
 Once you have selected your data file, click "Open."

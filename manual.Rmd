@@ -354,8 +354,8 @@ There may be an opportunity for some experiences to count for lab hours if:
    1. The RA has demonstrated proficiency in the skills needed to complete the project
    1. The project is not part of an [Honors project/thesis](honors.html), or another independent research experience
 
-For example, our lab leverages [R](https://devpsylab.github.io/DataAnalysis/R.html) for a variety of tasks.
-RAs may be able to use [R](https://devpsylab.github.io/DataAnalysis/R.html) to complete lab projects if they take the time outside of lab hours to tackle the learning curve of R.
+For example, our lab leverages [`R`](https://devpsylab.github.io/DataAnalysis/R.html) for a variety of tasks.
+RAs may be able to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) to complete lab projects if they take the time outside of lab hours to tackle the learning curve of [`R`](https://devpsylab.github.io/DataAnalysis/R.html).
 Furthermore, RAs may have an opportunity to learn how EEG data is processed.
 These expectations are not meant to discourage RAs from pursuing advanced experiences, but to set expectations for how these experiences can (or in other cases cannot) count for lab hours.
 However, even if experiences do not count toward lab hours, they are still valuable learning experiences that can advance your professional development in pursuit of your career goals.
