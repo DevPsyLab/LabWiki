@@ -1,5 +1,5 @@
 ---
-title: "School Readiness Study"
+title: "Studies"
 ---
 
 ```{r setup, include = FALSE}
@@ -8,6 +8,11 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-- School Readiness Study
-    - Documentation is currently on the lab drive (to be added to a repo)
+Studies:
+
 - [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject)
+- [School Readiness Study](study-schoolReadinessStudy.html)
+    - Documentation for the School Readiness Study is on the lab drive at the following location[^1]:
+    `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html`
+
+[^1]: Only accessible by team members.

@@ -113,4 +113,9 @@ https://redcap.icts.uiowa.edu/redcap/redcap_v9.9.1/Design/data_dictionary_codebo
 
 To see the pre-registered hypotheses for the study, see here: https://osf.io/gpn5y
 
+# Documentation
+
+Documentation for the School Readiness Study is on the lab drive at the following location[^1]:
+    `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html`
+
 [^1]: Only accessible by team members.
