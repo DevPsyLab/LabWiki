@@ -13,7 +13,7 @@
 
 <title>REDCap Manual</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -465,52 +458,74 @@ div.tocify {
 
 
 <div id="redcap-data-management" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> REDCap Data Management</h1>
-<div id="adding-new-ras-to-redcaptasks" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Adding new RAs to REDCap/tasks</h2>
+<h1><span class="header-section-number">1</span> REDCap Data
+Management</h1>
+<div id="adding-new-ras-to-redcaptasks" class="section level2"
+number="1.1">
+<h2><span class="header-section-number">1.1</span> Adding new RAs to
+REDCap/tasks</h2>
 <ol style="list-style-type: decimal">
 <li>Go to “User Rights” on the left side (under “Applications”).</li>
-<li>In the text box labeled “Assign new user”, type the new lab member’s HawkID and click “Assign to Role” (e.g., “RA”, “Grad Student”).
+<li>In the text box labeled “Assign new user”, type the new lab member’s
+HawkID and click “Assign to Role” (e.g., “RA”, “Grad Student”).
 <ul>
-<li>“RA Analyst” is for RAs conducting honors projects who need to do data analysis.</li>
+<li>“RA Analyst” is for RAs conducting honors projects who need to do
+data analysis.</li>
 <li>“Project Manager” is for the Lab Coordinator.</li>
-<li>“Add Measures” is for selected RAs who are deemed ready by Dr. Petersen to make edits/additions to measures in REDCap</li>
-<li>After assigning them to the correct role, go to “DAGs” on the left side (under “Applications”).</li>
+<li>“Add Measures” is for selected RAs who are deemed ready by
+Dr. Petersen to make edits/additions to measures in REDCap</li>
+<li>After assigning them to the correct role, go to “DAGs” on the left
+side (under “Applications”).</li>
 </ul></li>
-<li>To add an RA to their specific task, go to Project Home → Project Setup → Online Designer → click on name of required task in the left column</li>
+<li>To add an RA to their specific task, go to Project Home → Project
+Setup → Online Designer → click on name of required task in the left
+column</li>
 <li>Select “Edit” on the “Coder Name” field.</li>
-<li>Under “Choices (one choice per line)”, add the subsequent number followed by a comma and the RA’s name.</li>
+<li>Under “Choices (one choice per line)”, add the subsequent number
+followed by a comma and the RA’s name.</li>
 <li>Click “Save”.</li>
 </ol>
 </div>
-<div id="creating-a-new-instrument-in-redcap" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Creating a new instrument in REDCap</h2>
+<div id="creating-a-new-instrument-in-redcap" class="section level2"
+number="1.2">
+<h2><span class="header-section-number">1.2</span> Creating a new
+instrument in REDCap</h2>
 <ol style="list-style-type: decimal">
 <li>Project Home → Project Setup → Online Designer</li>
-<li>In grey box (Data Collection Instruments), click on “+ Create” to create a new instrument from scratch</li>
+<li>In grey box (Data Collection Instruments), click on “+ Create” to
+create a new instrument from scratch</li>
 </ol>
 </div>
-<div id="adding-fields-to-an-instrument" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Adding fields to an instrument</h2>
+<div id="adding-fields-to-an-instrument" class="section level2"
+number="1.3">
+<h2><span class="header-section-number">1.3</span> Adding fields to an
+instrument</h2>
 <ol style="list-style-type: decimal">
-<li>To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column</li>
-<li>Select the correct location where question needs to be added and select “Add Field”</li>
+<li>To edit an instrument, go to: Project Home → Project Setup → Online
+Designer → click on name of required task in the left column</li>
+<li>Select the correct location where question needs to be added and
+select “Add Field”</li>
 <li>Select field type—the most frequently we use are:
 <ul>
 <li>Text Box</li>
 <li>Multiple Choice</li>
 <li>Yes/No</li>
 <li>True/False</li>
-<li><strong>Note</strong>: For Multiple Choice Questions and Checkboxes, enter one answer choice per line in the box labeled “Choices”</li>
+<li><strong>Note</strong>: For Multiple Choice Questions and Checkboxes,
+enter one answer choice per line in the box labeled “Choices”</li>
 </ul></li>
 <li>Add variable name:
 <ul>
 <li>Variable names must be unique</li>
-<li>Variable names within the same instrument should have the same beginning (e.g. all variables within the school information instrument start with “school_”)</li>
+<li>Variable names within the same instrument should have the same
+beginning (e.g. all variables within the school information instrument
+start with “school_”)</li>
 </ul></li>
 <li>Indicate whether question is required</li>
-<li>Add data validation (if possible) to reduce the possibility of human error in data entry</li>
-<li>Questions within the same instrument may belong to different sections. To add a new section:
+<li>Add data validation (if possible) to reduce the possibility of human
+error in data entry</li>
+<li>Questions within the same instrument may belong to different
+sections. To add a new section:
 <ul>
 <li>Click “Add Field”</li>
 <li>As field type select “Begin New Section (with optional text)</li>
@@ -521,7 +536,10 @@ div.tocify {
 </div>
 <div id="branching-logic" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Branching Logic</h2>
-<p>Branching logic is a method to link two questions with each other. The answer of Question A will determine whether Question B will be displayed. Typically question A is a checkbox or multiple-choice question. Follow the below steps to use branching logic:</p>
+<p>Branching logic is a method to link two questions with each other.
+The answer of Question A will determine whether Question B will be
+displayed. Typically question A is a checkbox or multiple-choice
+question. Follow the below steps to use branching logic:</p>
 <ol style="list-style-type: decimal">
 <li>Create all questions to be linked</li>
 <li>Click on the green arrow to begin using branching logic
@@ -529,62 +547,97 @@ div.tocify {
 <li>Use the drag and drop builder to create questions to be linked</li>
 <li>Use the code to link questions together
 <ul>
-<li>Example: When, <code>[other_instrument_name] = '1'</code>, show this question</li>
+<li>Example: When, <code>[other_instrument_name] = '1'</code>, show this
+question</li>
 </ul></li>
 </ul></li>
 </ol>
 </div>
 <div id="field-embedding" class="section level2" number="1.5">
 <h2><span class="header-section-number">1.5</span> Field Embedding</h2>
-<p>Filed embedding is an advanced branching logic method which allows Question B to be directly embedded in Question A, if the relevant answer choice is selected.</p>
+<p>Filed embedding is an advanced branching logic method which allows
+Question B to be directly embedded in Question A, if the relevant answer
+choice is selected.</p>
 <ol style="list-style-type: decimal">
-<li>Use branching logic to link Question B to Question A, so Question B will only appear if the participant selects “other” for Question A (in our example, variable name for Question A would be college, variable name for Question B: college_other)</li>
-<li>Make sure that answer choice “Other” is coded as “9” (see figure 1)</li>
-<li>Return to Question A and add several spaces behind the answer choice you would like to embed.</li>
-<li>Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1</li>
+<li>Use branching logic to link Question B to Question A, so Question B
+will only appear if the participant selects “other” for Question A (in
+our example, variable name for Question A would be college, variable
+name for Question B: college_other)</li>
+<li>Make sure that answer choice “Other” is coded as “9” (see figure
+1)</li>
+<li>Return to Question A and add several spaces behind the answer choice
+you would like to embed.</li>
+<li>Insert variable you would like to embed in curly brackets {var_name}
+(in our example this would be {college_other}; see figure 1</li>
 <li>Save</li>
-<li>When testing the instrument, a textbox should now appear directly behind the answer choice, when selecting “Other” (see below example)</li>
+<li>When testing the instrument, a textbox should now appear directly
+behind the answer choice, when selecting “Other” (see below
+example)</li>
 </ol>
-<p><img src="images/redcapExample1.png" alt="RedcapExample1" /> <img src="images/redcapExample2.png" alt="RedcapExample2" /></p>
+<p><img src="images/redcapExample1.png" alt="RedcapExample1" /> <img
+src="images/redcapExample2.png" alt="RedcapExample2" /></p>
 </div>
 <div id="designateInstruments" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Designating Instruments to Events</h2>
-<p>Most instruments in longitudinal studies will need to be desigated accross events. Instruments should already be created and approved before designating to events.</p>
+<h2><span class="header-section-number">1.6</span> Designating
+Instruments to Events</h2>
+<p>Most instruments in longitudinal studies will need to be desigated
+accross events. Instruments should already be created and approved
+before designating to events.</p>
 <p>To designate events, follow the below steps:</p>
 <ol style="list-style-type: decimal">
 <li>Go to “Designer” → “Project Setup”</li>
-<li>Under the <em>“Define your events and designate instruments for them”</em> section, select <code>Designate Instrument for my events</code></li>
-<li>Select, <code>begin editing</code> and select checkboxes for each event to designate the instrument to</li>
-<li><strong>Important:</strong> Update the roles in <code>User Rights</code> to be able to view and edit the newly designated instrument</li>
+<li>Under the <em>“Define your events and designate instruments for
+them”</em> section, select
+<code>Designate Instrument for my events</code></li>
+<li>Select, <code>begin editing</code> and select checkboxes for each
+event to designate the instrument to</li>
+<li><strong>Important:</strong> Update the roles in
+<code>User Rights</code> to be able to view and edit the newly
+designated instrument</li>
 </ol>
 </div>
-<div id="designating-instruments-as-repeatable" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Designating Instruments as Repeatable</h2>
-<p>Some instruments will be designated as repeatable. These events will first need to be designated accross events (See section on <a href="#designateInstruments">designating events</a>). Tasks that require multiple people to create the same form will often need to be repeatable.For example, coding tasks that require multiple people to check accross forms for reliability.</p>
+<div id="designating-instruments-as-repeatable" class="section level2"
+number="1.7">
+<h2><span class="header-section-number">1.7</span> Designating
+Instruments as Repeatable</h2>
+<p>Some instruments will be designated as repeatable. These events will
+first need to be designated accross events (See section on <a
+href="#designateInstruments">designating events</a>). Tasks that require
+multiple people to create the same form will often need to be
+repeatable.For example, coding tasks that require multiple people to
+check accross forms for reliability.</p>
 <p>To designate forms repeatable, follow the below steps:</p>
 <ol style="list-style-type: decimal">
-<li>Under <em>“Enable optional modules and customizations”</em>, select <code>Repeatable instruments and events</code></li>
+<li>Under <em>“Enable optional modules and customizations”</em>, select
+<code>Repeatable instruments and events</code></li>
 <li>Select instruments to be designated repeatable</li>
 </ol>
 </div>
 </div>
-<div id="creating-instruments-and-questionnaires" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Creating Instruments and Questionnaires</h1>
-<div id="good-practices-for-creating-instruments" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Good Practices for Creating Instruments</h2>
+<div id="creating-instruments-and-questionnaires" class="section level1"
+number="2">
+<h1><span class="header-section-number">2</span> Creating Instruments
+and Questionnaires</h1>
+<div id="good-practices-for-creating-instruments" class="section level2"
+number="2.1">
+<h2><span class="header-section-number">2.1</span> Good Practices for
+Creating Instruments</h2>
 <ul>
 <li>Include relevant instructions where applicable</li>
-<li>Omit “introductory” variables (e.g., date of birth) that are collected from other measures</li>
+<li>Omit “introductory” variables (e.g., date of birth) that are
+collected from other measures</li>
 <li>Field Labels are the same across instruments where applicable</li>
 <li>Choices are the same across instruments where applicable
 <ul>
-<li>Include numbers (if relevant) in parentheses in row below column choices</li>
+<li>Include numbers (if relevant) in parentheses in row below column
+choices</li>
 </ul></li>
 <li>Choices follow correct format: Number, Choice
 <ul>
 <li>(e.g., 1, female)</li>
 </ul></li>
-<li>For yes/no questions, use the “Yes - No” question type (rather than multiple choice radio buttons)
+<li>For yes/no questions, use the “Yes - No” question type (rather than
+multiple choice radio buttons)
 <ol style="list-style-type: decimal">
 <li>No = 0<br />
 </li>
@@ -594,7 +647,10 @@ div.tocify {
 <ul>
 <li>Specific time (e.g., What is the child’s bedtime?):
 <ul>
-<li><strong>Begin question with instructions:</strong> Below you will enter your child’s bedtime. Please specify in 12-hour time (AM/PM). For example, if your child’s bedtime is 10:30 PM, please enter 10 hours and 30 minutes like the example below. (show example image below)</li>
+<li><strong>Begin question with instructions:</strong> Below you will
+enter your child’s bedtime. Please specify in 12-hour time (AM/PM). For
+example, if your child’s bedtime is 10:30 PM, please enter 10 hours and
+30 minutes like the example below. (show example image below)</li>
 <li>Have three variables for every time question:
 <ul>
 <li>AM/PM (Radio Button)</li>
@@ -609,12 +665,16 @@ div.tocify {
 </ul></li>
 <li>Specify 12-hour time in the question
 <ul>
-<li><strong>Example</strong>: What is the child’s bedtime? Please specify in 12-hour time (AM/PM).</li>
+<li><strong>Example</strong>: What is the child’s bedtime? Please
+specify in 12-hour time (AM/PM).</li>
 </ul></li>
 </ul></li>
 <li>Duration: (e.g., How long does the child nap each day?)
 <ul>
-<li>Below you will enter how long your child naps each day. Please specify in hours and minutes. For example, if your child naps 2 hours and 30 minutes each day, please enter 2 hours and 30 minutes like the example below (show example image below).</li>
+<li>Below you will enter how long your child naps each day. Please
+specify in hours and minutes. For example, if your child naps 2 hours
+and 30 minutes each day, please enter 2 hours and 30 minutes like the
+example below (show example image below).</li>
 <li>Have two variables for every time question:
 <ul>
 <li>hours (text box), italicized.
@@ -631,33 +691,52 @@ div.tocify {
 </ul>
 </div>
 <div id="creating-variables" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Creating Variables</h2>
+<h2><span class="header-section-number">2.2</span> Creating
+Variables</h2>
 <ul>
-<li>Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters</li>
+<li>Variable names follow the lab conventions (measure_item): use
+abbreviated measure name, all lowercase, less than 26 characters</li>
 <li><strong>Validation is used wherever possible</strong></li>
-<li>For variables with identifying information (e.g., name, address), select the checkbox labeled “Identifier”</li>
-<li>Branching logic is used to give questions only to relevant participants</li>
-<li>A “Matrix of Fields” is used to group together items with common response options</li>
-<li>For “Matrix of Fields,” only select “Ranking” if you want the participant to select only one response per column</li>
+<li>For variables with identifying information (e.g., name, address),
+select the checkbox labeled “Identifier”</li>
+<li>Branching logic is used to give questions only to relevant
+participants</li>
+<li>A “Matrix of Fields” is used to group together items with common
+response options</li>
+<li>For “Matrix of Fields,” only select “Ranking” if you want the
+participant to select only one response per column</li>
 <li>Where helpful, “Sections” are used to break up the questions</li>
 <li>Radio buttons are used rather than drop-down lists</li>
 <li>For crucial variables, “Required” is selected</li>
 <li>If necessary, piping is used</li>
-<li>Add the following verbatim to the end of every questionnaire (in italics): “Please be sure you answered all items.”
+<li>Add the following verbatim to the end of every questionnaire (in
+italics): “Please be sure you answered all items.”
 <ul>
-<li>Name the variable: measure_allitems (where “measure” is the abbreviated measure name)</li>
+<li>Name the variable: measure_allitems (where “measure” is the
+abbreviated measure name)</li>
 </ul></li>
 </ul>
 </div>
-<div id="adding-smart-variables-to-questionnaires" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Adding Smart Variables to Questionnaires</h2>
-<p>In every surey, we want to add the following “Smart Variables”. These variables automatically calculate the survey start time, survey start date, and duration survey was completed. Variable names should follow the appropriate naming convention that is used for each survey. After you have added variables, slack the Lab Coordinator for review. <strong>Do not add variables to more than three surveys at a time.</strong> These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables:</p>
+<div id="adding-smart-variables-to-questionnaires"
+class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Adding Smart
+Variables to Questionnaires</h2>
+<p>In every surey, we want to add the following “Smart Variables”. These
+variables automatically calculate the survey start time, survey start
+date, and duration survey was completed. Variable names should follow
+the appropriate naming convention that is used for each survey. After
+you have added variables, slack the Lab Coordinator for review.
+<strong>Do not add variables to more than three surveys at a
+time.</strong> These variables should be entered at the end of each
+survey. For each survey, follow the instructions below to add the
+required smart variables:</p>
 <div id="timestamps" class="section level3" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Timestamps</h3>
 <ol style="list-style-type: decimal">
 <li>“Date/Timestamp in the rater’s timezone”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
+H:M:S)</li>
 <li>Use variable name: <code>prefix_ratertimezone</code></li>
 <li>Add the following action tags:
 <ul>
@@ -668,7 +747,8 @@ div.tocify {
 </ul></li>
 <li>“Date/Timestamp (REDCap server)”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
+H:M:S)</li>
 <li>Use variable name: <code>prefix_servertimezone</code></li>
 <li>Add the following Action tags:
 <ul>
@@ -679,7 +759,8 @@ div.tocify {
 </ul></li>
 <li>“Date/Timestamp (UTC)”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
+H:M:S)</li>
 <li>Use variable name: <code>prefix_centraltimezone</code></li>
 <li>Add the following Action tags:
 <ul>
@@ -690,11 +771,20 @@ div.tocify {
 </ul></li>
 </ol>
 </div>
-<div id="date-completed-time-completed-and-survey-durations" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Date Completed, Time Completed and Survey Durations</h3>
-<p>In the below section, it is necessary to identify the <code>instrument_name</code> for each variable added. In REDCap, open the <code>Designer</code> tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the <em>parenting_partner</em> instrument.</p>
+<div id="date-completed-time-completed-and-survey-durations"
+class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Date Completed,
+Time Completed and Survey Durations</h3>
+<p>In the below section, it is necessary to identify the
+<code>instrument_name</code> for each variable added. In REDCap, open
+the <code>Designer</code> tab and navigate to the survey to be edited.
+In the URL on the webpage, identify the instrument name for the given
+survey. For example, the below URL corresponds to the
+<em>parenting_partner</em> instrument.</p>
 <ul>
-<li><a href="https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=" class="uri">https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=</a><mark>parenting_partner</mark></li>
+<li><a
+href="https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page="
+class="uri">https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=</a><mark>parenting_partner</mark></li>
 </ul>
 <ol style="list-style-type: decimal">
 <li>“Survey Time Started:”
@@ -705,7 +795,8 @@ div.tocify {
 <ul>
 <li><span class="citation">@HIDDEN-SURVEY</span></li>
 <li><span class="citation">@READONLY</span></li>
-<li><span class="citation">@CALCTEXT</span>([survey-time-started:instrument_name])</li>
+<li><span
+class="citation">@CALCTEXT</span>([survey-time-started:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Date Started:”
@@ -718,7 +809,8 @@ div.tocify {
 <ul>
 <li><span class="citation">@HIDDEN-SURVEY</span></li>
 <li><span class="citation">@READONLY</span></li>
-<li><span class="citation">@CALCTEXT</span>([survey-date-started:instrument_name])</li>
+<li><span
+class="citation">@CALCTEXT</span>([survey-date-started:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Time Completed:”
@@ -731,7 +823,8 @@ div.tocify {
 <ul>
 <li><span class="citation">@HIDDEN-SURVEY</span></li>
 <li><span class="citation">@READONLY</span></li>
-<li><span class="citation">@CALCTEXT</span>([survey-time-completed:instrument_name])</li>
+<li><span
+class="citation">@CALCTEXT</span>([survey-time-completed:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Date Completed:”
@@ -742,7 +835,8 @@ div.tocify {
 <ul>
 <li><span class="citation">@HIDDEN-SURVEY</span></li>
 <li><span class="citation">@READONLY</span></li>
-<li><span class="citation">@CALCTEXT</span>([survey-date-completed:instrument_name])</li>
+<li><span
+class="citation">@CALCTEXT</span>([survey-date-completed:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Duration:”
@@ -781,10 +875,14 @@ div.tocify {
 <div id="troubleshooting" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Troubleshooting</h2>
 <ul>
-<li>When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
+<li>When a field that will be hidden by branching logic has a value,
+REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
 <ul>
-<li><a href="http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf" class="uri">http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf</a></li>
-<li>If you do not want the field hidden once it contains data, add the following as an “OR” condition on the existing branching
+<li><a
+href="http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf"
+class="uri">http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf</a></li>
+<li>If you do not want the field hidden once it contains data, add the
+following as an “OR” condition on the existing branching
 <ul>
 <li>logic: [field_name] &lt;&gt; “”</li>
 </ul></li>
@@ -810,19 +908,23 @@ div.tocify {
 <li>Change font size:
 <ul>
 <li><code>&lt;font size="6"&gt;This is some text!&lt;/font&gt;</code></li>
-<li><strong>Example</strong>: <font size="6">This is some text!</font></li>
+<li><strong>Example</strong>: <font size="6">This is some
+text!</font></li>
 </ul></li>
 <li>Change font color:
 <ul>
 <li><code>&lt;font color="red"&gt;This color will be red.&lt;/font&gt;</code></li>
-<li><strong>Example</strong>: <font color="red">This color will be red.</font></li>
+<li><strong>Example</strong>: <font color="red">This color will be
+red.</font></li>
 </ul></li>
 </ul>
 </div>
 <div id="lab-universal-notations" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Lab Universal Notations</h2>
+<h2><span class="header-section-number">2.6</span> Lab Universal
+Notations</h2>
 <ul>
-<li>Correct = 2 (or 1, if there is no option for “initially incorrect, changed to correct”)</li>
+<li>Correct = 2 (or 1, if there is no option for “initially incorrect,
+changed to correct”)</li>
 <li>Incorrect = 0</li>
 <li>Initially incorrect, changed to correct = 1</li>
 <li>No response = -9</li>
@@ -832,17 +934,23 @@ div.tocify {
 </ul>
 <p>For Likert scales:</p>
 <ul>
-<li>If there are numbers listed for the Likert scale options, use those numbers as the values</li>
-<li>If there are not numbers listed, check with Dr. Petersen for what numbers to use as the values</li>
-<li>In general, values start with number 1 (not 0—unless the value actually reflects complete absence of something)</li>
+<li>If there are numbers listed for the Likert scale options, use those
+numbers as the values</li>
+<li>If there are not numbers listed, check with Dr. Petersen for what
+numbers to use as the values</li>
+<li>In general, values start with number 1 (not 0—unless the value
+actually reflects complete absence of something)</li>
 <li>If there is an “Other” option, code it as “9”, if possible</li>
 <li>If there is a “N/A” option, code it as “-999”</li>
 </ul>
 </div>
-<div id="editing-the-data-dictionary" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Editing the Data Dictionary</h2>
+<div id="editing-the-data-dictionary" class="section level2"
+number="2.7">
+<h2><span class="header-section-number">2.7</span> Editing the Data
+Dictionary</h2>
 <ul>
-<li>If editing the data dictionary, do not use Excel!—Excel truncates values in cells
+<li>If editing the data dictionary, do not use Excel!—Excel truncates
+values in cells
 <ul>
 <li>Instead, use LibreOffice with UTF-8 encoding</li>
 </ul></li>

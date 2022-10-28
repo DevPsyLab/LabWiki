@@ -13,7 +13,7 @@
 
 <title>Honors Thesis: Expectations and Resources</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -459,55 +452,143 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Honors Thesis: Expectations and Resources</h1>
+<h1 class="title toc-ignore">Honors Thesis: Expectations and
+Resources</h1>
 
 </div>
 
 
 <div id="expectations" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Expectations</h1>
-<p>The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen. During this process, you are encouraged to register for PSY:4990 or HONR:4990 (<em>Honors Thesis or Project</em>) to account for the time commitment this project requires. If you are interested in conducting an Honors thesis, it is your responsibility to contact Dr. Petersen to set up a meeting (see below). Dr. Petersen’s decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, the quality of your research question and hypotheses, your motivation, and whether you have the skills and aptitude necessary for successfully completing the project. To help keep you on track to finish your project and thesis on this timeline, Dr. Petersen expects you to meet with him once per month. It is your responsibility to schedule the monthly meetings.</p>
-<p>The first half of the year is spent formulating a research question and hypotheses (based on the research literature), and writing the Introduction and Method sections of the thesis. The second half of the year is spent performing the data analysis to answer the research question, writing the Results and Discussion sections of the thesis, and presenting the findings at a poster conference (see below). The more reading you do, before the “thesis year” begins, and the more you think about what you are interested in, what questions you have, and what gaps are in the literature that you can address with the lab’s data, the more prepared you will be to complete your thesis on this timeline. Note: work related to Honors theses is expected to take place *outside* of your regular 10 hours in the lab. You can get academic credit for your thesis research via the course entitled “Honors Thesis Research” (PSY:4990).</p>
-<p>Dr. Petersen expects you to present a research poster on your thesis findings at the UI ICRU Undergraduate Research Festival during the final semester in which you complete your thesis. It is your responsibility to keep track of the registration deadlines for the Undergraduate Research Festival so you do not miss it!</p>
-<p>You are expected to follow the Department requirements for Honors theses and for Honors in Psychology, including meeting all deadlines: <a href="https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major" class="uri">https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major</a></p>
-<p>You must have two readers of the thesis who are familiar with the topic. One reader will be Dr. Petersen. You will work with Dr. Petersen to identify a second reader. The reader should be in the Department of Psychological and Brain Sciences. You should work with your readers to schedule your thesis defense. Your defense should take place no later than Finals week so you can get Honors credit when you graduate etc. You must send the completed final draft of your thesis to both Dr. Petersen and the second reader at least one week prior to your defense. Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.</p>
-<p>UI Undergraduate Research Festival: <a href="https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals" class="uri">https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals</a></p>
+<p>The Honors Thesis process is (at least) a year-long process
+(including summer) that must be initiated in collaboration with
+Dr. Petersen. During this process, you are encouraged to register for
+PSY:4990 or HONR:4990 (<em>Honors Thesis or Project</em>) to account for
+the time commitment this project requires. If you are interested in
+conducting an Honors thesis, it is your responsibility to contact
+Dr. Petersen to set up a meeting (see below). Dr. Petersen’s decision
+whether to approve your proposal will depend on factors such as whether
+you are meeting your regular lab expectations, whether you have the time
+necessary, the quality of your research question and hypotheses, your
+motivation, and whether you have the skills and aptitude necessary for
+successfully completing the project. To help keep you on track to finish
+your project and thesis on this timeline, Dr. Petersen expects you to
+meet with him once per month. It is your responsibility to schedule the
+monthly meetings.</p>
+<p>The first half of the year is spent formulating a research question
+and hypotheses (based on the research literature), and writing the
+Introduction and Method sections of the thesis. The second half of the
+year is spent performing the data analysis to answer the research
+question, writing the Results and Discussion sections of the thesis, and
+presenting the findings at a poster conference (see below). The more
+reading you do, before the “thesis year” begins, and the more you think
+about what you are interested in, what questions you have, and what gaps
+are in the literature that you can address with the lab’s data, the more
+prepared you will be to complete your thesis on this timeline. Note:
+work related to Honors theses is expected to take place *outside* of
+your regular 10 hours in the lab. You can get academic credit for your
+thesis research via the course entitled “Honors Thesis Research”
+(PSY:4990).</p>
+<p>Dr. Petersen expects you to present a research poster on your thesis
+findings at the UI ICRU Undergraduate Research Festival during the final
+semester in which you complete your thesis. It is your responsibility to
+keep track of the registration deadlines for the Undergraduate Research
+Festival so you do not miss it!</p>
+<p>You are expected to follow the Department requirements for Honors
+theses and for Honors in Psychology, including meeting all deadlines: <a
+href="https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major"
+class="uri">https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major</a></p>
+<p>You must have two readers of the thesis who are familiar with the
+topic. One reader will be Dr. Petersen. You will work with Dr. Petersen
+to identify a second reader. The reader should be in the Department of
+Psychological and Brain Sciences. You should work with your readers to
+schedule your thesis defense. Your defense should take place no later
+than Finals week so you can get Honors credit when you graduate etc. You
+must send the completed final draft of your thesis to both Dr. Petersen
+and the second reader at least one week prior to your defense. Read the
+Cover Page Instructions for how to create your cover page, what you need
+to have signed at your defense, and what you need to submit.</p>
+<p>UI Undergraduate Research Festival: <a
+href="https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals"
+class="uri">https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals</a></p>
 </div>
 <div id="resources" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Resources</h1>
-<p>For more information on the <a href="study-schoolReadinessStudy.html">School Readiness Study</a>, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses. These resources are available on the project page for the <a href="study-schoolReadinessStudy.html">School Readiness Study</a>.</p>
-<p>There are many helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings. You can find these resources at the following location on the lab drive: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\</code></p>
-<p>For information on how to use <code>SPSS</code> for data analysis, see <a href="https://devpsylab.github.io/DataAnalysis/SPSS.html">here</a>.</p>
-<p>In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:</p>
+<p>For more information on the <a
+href="study-schoolReadinessStudy.html">School Readiness Study</a>, you
+are encouraged to read papers from the project, view the available
+measures, examine the Data Dictionary, and see the pre-registered
+hypotheses. These resources are available on the project page for the <a
+href="study-schoolReadinessStudy.html">School Readiness Study</a>.</p>
+<p>There are many helpful resources on the lab drive for thesis
+projects, including resources for data analysis, example theses, example
+posters, cover page instructions, and helpful readings. You can find
+these resources at the following location on the lab drive:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\</code></p>
+<p>For information on how to use <code>SPSS</code> for data analysis,
+see <a
+href="https://devpsylab.github.io/DataAnalysis/SPSS.html">here</a>.</p>
+<p>In conducting your Honors thesis, you are expected to obtain and use
+the following must-have general resources:</p>
 <ol style="list-style-type: decimal">
-<li>“Writing Empirical Research Reports: A Basic Guide for Students of the Social and Behavioral Sciences”, 8th Edition (Fred Pyrczak)<br />
-<a href="https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361" class="uri">https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361</a></li>
-<li>“Publication Manual of the American Psychological Association”, 7th Edition<br />
-<a href="https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X" class="uri">https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X</a></li>
+<li>“Writing Empirical Research Reports: A Basic Guide for Students of
+the Social and Behavioral Sciences”, 8th Edition (Fred Pyrczak)<br />
+<a
+href="https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361"
+class="uri">https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361</a></li>
+<li>“Publication Manual of the American Psychological Association”, 7th
+Edition<br />
+<a
+href="https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X"
+class="uri">https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X</a></li>
 <li>“Discovering Statistics using SPSS”, 5th Edition (Andy Field)<br />
-<a href="https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566" class="uri">https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566</a></li>
-<li>EndNote or Zotero—software for organizing your articles and for writing your References section<br />
-<a href="https://its.uiowa.edu/endnote">https://its.uiowa.edu/endnote</a><br />
-<a href="https://www.zotero.org" class="uri">https://www.zotero.org</a></li>
+<a
+href="https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566"
+class="uri">https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566</a></li>
+<li>EndNote or Zotero—software for organizing your articles and for
+writing your References section<br />
+<a
+href="https://its.uiowa.edu/endnote">https://its.uiowa.edu/endnote</a><br />
+<a href="https://www.zotero.org"
+class="uri">https://www.zotero.org</a></li>
 </ol>
-<p>Please note that we do not want these resources to be financial barriers to completing an Honors thesis. You may be able to find many of these at the library, and Dr. Petersen may be able to lend you a copy, as well. Please talk with Dr. Petersen if these resources would be a financial barrier.</p>
+<p>Please note that we do not want these resources to be financial
+barriers to completing an Honors thesis. You may be able to find many of
+these at the library, and Dr. Petersen may be able to lend you a copy,
+as well. Please talk with Dr. Petersen if these resources would be a
+financial barrier.</p>
 </div>
 <div id="steps-to-get-started" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Steps to Get Started</h1>
-<p>Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:</p>
+<h1><span class="header-section-number">3</span> Steps to Get
+Started</h1>
+<p>Before you meet with Dr. Petersen to come up with a thesis idea, (1)
+think about what you would like to study, (2) begin to read up on it,
+and (3) send Dr. Petersen a short document (1–2 paragraphs) describing
+the following:</p>
 <ol style="list-style-type: lower-alpha">
 <li>what you are interested in studying</li>
 <li>why you are interested in studying it</li>
-<li>what you have learned in doing reading on the topic (provide citations)</li>
+<li>what you have learned in doing reading on the topic (provide
+citations)</li>
 <li>what specific research question(s) you have</li>
-<li>what measure(s) in our lab’s study you are interested in using for each construct</li>
+<li>what measure(s) in our lab’s study you are interested in using for
+each construct</li>
 <li>what your hypotheses are</li>
 </ol>
-<p>Do not spend too much time on the preliminary document, because it will important for you to be flexible to the possibility that you may end up examining a different question. Following the steps above will help structure your conversation with Dr. Petersen in the most efficient way.</p>
+<p>Do not spend too much time on the preliminary document, because it
+will important for you to be flexible to the possibility that you may
+end up examining a different question. Following the steps above will
+help structure your conversation with Dr. Petersen in the most efficient
+way.</p>
 </div>
 <div id="accessing-the-lab-drive" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Accessing the Lab Drive</h1>
-<p>Your member folder on the lab drive (<code>\Lab\Members\</code>) should be used for all thesis-related work. This is where you will find your data file(s), and where you should save all writing and analysis files. Please organize all thesis-related files into subfolders within your member folder using this structure:</p>
+<h1><span class="header-section-number">4</span> Accessing the Lab
+Drive</h1>
+<p>Your member folder on the lab drive (<code>\Lab\Members\</code>)
+should be used for all thesis-related work. This is where you will find
+your data file(s), and where you should save all writing and analysis
+files. Please organize all thesis-related files into subfolders within
+your member folder using this structure:</p>
 <pre><code>\Lab\Members\[Your HawkID]\Thesis\...subfolders below…
                           \Analysis\ -- put analysis scripts (SPSS, R, etc.) here
                           \Conference Abstract\ -- put your conference abstract here
@@ -518,54 +599,138 @@ div.tocify {
                           \Presentation\ -- put your presentation here
                           \Tables\ -- put your tables here
                           \Thesis\ -- put your Thesis document here (i.e., your paper)</code></pre>
-<p>To access the lab drive off-campus, you will need to set up VPN. For instructions to set up VPN, see <a href="documentation-remote.html#vpn">here</a>.</p>
+<p>To access the lab drive off-campus, you will need to set up VPN. For
+instructions to set up VPN, see <a
+href="documentation-remote.html#vpn">here</a>.</p>
 </div>
-<div id="accessing-articles-through-the-ui-libraries" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Accessing Articles through the UI Libraries</h1>
-<p>You should be able to obtain the PDF of any article, even if it is not freely available online and the university does not provide access to the journal. Even if the PDF of article is not available on Google Scholar, you can easily get it through the university library system. First, see if the university has access to the electronic/online version of the journal by searching the name in <a href="https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA">Infohawk</a>. For instance, here is a search for the journal ‘Developmental Neuropsychology’:<br />
-<a href="https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&amp;search_scope=default_scope&amp;vid=01IOWA" class="uri">https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&amp;search_scope=default_scope&amp;vid=01IOWA</a></p>
-<p>If the university does not have access to the journal, then you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the <a href="https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll">UI Document Delivery System</a>.</p>
+<div id="accessing-articles-through-the-ui-libraries"
+class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Accessing Articles
+through the UI Libraries</h1>
+<p>You should be able to obtain the PDF of any article, even if it is
+not freely available online and the university does not provide access
+to the journal. Even if the PDF of article is not available on Google
+Scholar, you can easily get it through the university library system.
+First, see if the university has access to the electronic/online version
+of the journal by searching the name in <a
+href="https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA">Infohawk</a>.
+For instance, here is a search for the journal ‘Developmental
+Neuropsychology’:<br />
+<a
+href="https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&amp;search_scope=default_scope&amp;vid=01IOWA"
+class="uri">https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&amp;search_scope=default_scope&amp;vid=01IOWA</a></p>
+<p>If the university does not have access to the journal, then you can
+access the PDF of any article, book chapter, or even the inter-library
+loan of any book through the <a
+href="https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll">UI
+Document Delivery System</a>.</p>
 </div>
 <div id="working-on-your-thesis" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Working on Your Thesis</h1>
-<p>The easiest way to work on your thesis is to work on it in the lab. If you must work on your thesis outside of the lab, you may either 1) <a href="documentation-remote.html#vpn">VPN into the lab drive</a> or 2) <a href="documentation-remote.html#remoteAccess">“remote in” to a lab computer</a>. For instructions how to do each, see the <a href="documentation-remote.html">RA Remote Participation page</a>.</p>
+<h1><span class="header-section-number">6</span> Working on Your
+Thesis</h1>
+<p>The easiest way to work on your thesis is to work on it in the lab.
+If you must work on your thesis outside of the lab, you may either 1) <a
+href="documentation-remote.html#vpn">VPN into the lab drive</a> or 2) <a
+href="documentation-remote.html#remoteAccess">“remote in” to a lab
+computer</a>. For instructions how to do each, see the <a
+href="documentation-remote.html">RA Remote Participation page</a>.</p>
 </div>
 <div id="spss-R" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Access SPSS/R for Data Analysis</h1>
-<p>You can access <a href="https://devpsylab.github.io/DataAnalysis/SPSS.html"><code>SPSS</code></a> and <a href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a> through an online platform called UI Virtual Desktop. You can use Virtual Desktop on campus or from home, but if you are off-campus, VPN is required. For instructions to set up VPN, see <a href="documentation-remote.html#vpn">here</a>. Follow the steps below to set up Virtual Desktop for the first time.</p>
+<h1><span class="header-section-number">7</span> Access SPSS/R for Data
+Analysis</h1>
+<p>You can access <a
+href="https://devpsylab.github.io/DataAnalysis/SPSS.html"><code>SPSS</code></a>
+and <a
+href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a>
+through an online platform called UI Virtual Desktop. You can use
+Virtual Desktop on campus or from home, but if you are off-campus, VPN
+is required. For instructions to set up VPN, see <a
+href="documentation-remote.html#vpn">here</a>. Follow the steps below to
+set up Virtual Desktop for the first time.</p>
 <ol style="list-style-type: decimal">
-<li>Connect to <a href="documentation-remote.html#vpn">VPN</a> using Cisco AnyConnect.</li>
-<li>Go to: <a href="https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb" class="uri">https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb</a></li>
-<li>If this is your first time accessing Virtual Desktop on your computer, you will need to install an application called Citrix Receiver. In the process of logging into Virtual Desktop, you will encounter a window that prompts you to install Citrix Receiver. Follow the prompts on the screen to install the application.
+<li>Connect to <a href="documentation-remote.html#vpn">VPN</a> using
+Cisco AnyConnect.</li>
+<li>Go to: <a
+href="https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb"
+class="uri">https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb</a></li>
+<li>If this is your first time accessing Virtual Desktop on your
+computer, you will need to install an application called Citrix
+Receiver. In the process of logging into Virtual Desktop, you will
+encounter a window that prompts you to install Citrix Receiver. Follow
+the prompts on the screen to install the application.
 <ol style="list-style-type: lower-alpha">
-<li>Note: You must finish the installation before you can progress to the next window</li>
+<li>Note: You must finish the installation before you can progress to
+the next window</li>
 </ol></li>
-<li>Follow the prompts on the screen to finish logging into Virtual Desktop.</li>
-<li>Once you are logged in, click the “Apps” tab at the top of the screen. Scroll down and click “Map Network Drive.” This will prompt a new window.</li>
-<li>In the empty “Folder” textbox type the lab drive path: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\</code></li>
+<li>Follow the prompts on the screen to finish logging into Virtual
+Desktop.</li>
+<li>Once you are logged in, click the “Apps” tab at the top of the
+screen. Scroll down and click “Map Network Drive.” This will prompt a
+new window.</li>
+<li>In the empty “Folder” textbox type the lab drive path:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\</code></li>
 <li>Click the “Finish” button at the bottom of the window.</li>
-<li>Now, navigate back through the “Apps” section of Virtual Desktop to find <code>SPSS</code> or <code>R</code>, and click it to open.</li>
-<li>To open your data file in <a href="https://devpsylab.github.io/DataAnalysis/SPSS.html"><code>SPSS</code></a>, click “Open another file…” under “Recent Files.”</li>
-<li>In the new window, click the drop-down menu under “Look in:” and click the lab drive.</li>
-<li>Click the “Members” folder and open your member folder to find your data files. Once you have selected your data file, click “Open.”</li>
+<li>Now, navigate back through the “Apps” section of Virtual Desktop to
+find <code>SPSS</code> or <code>R</code>, and click it to open.</li>
+<li>To open your data file in <a
+href="https://devpsylab.github.io/DataAnalysis/SPSS.html"><code>SPSS</code></a>,
+click “Open another file…” under “Recent Files.”</li>
+<li>In the new window, click the drop-down menu under “Look in:” and
+click the lab drive.</li>
+<li>Click the “Members” folder and open your member folder to find your
+data files. Once you have selected your data file, click “Open.”</li>
 <li>Then, you are ready to analyze your data!</li>
 </ol>
 </div>
 <div id="important" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Important</h1>
-<p>Lab data must remain on the lab drive. Please make sure NOT to move lab data off the lab drive or onto a personal computer. It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.</p>
+<p>Lab data must remain on the lab drive. Please make sure NOT to move
+lab data off the lab drive or onto a personal computer. It is important
+that you do not save any visit videos or lab files of any kind to your
+personal computer, or take screenshots, Snapchats, etc. of any
+lab-related documents.</p>
 </div>
 <div id="conferences" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Presenting Work at Conferences</h1>
-<p>You are expected to present a research poster on your thesis findings at the UI Undergraduate Research Festival. You are encouraged (but not required) to additionally present your research at other conferences, as well. There are regional, national, and international conferences. Presenting your work at conferences provides important importunities for professional development. First, it helps people get important experiences in how to communicate research (visually and in conversation). Second, it helps people network with other researchers who are interested in similar questions. Third, it makes people more competitive for graduate school.</p>
-<p>If you would you like to put together a conference submission (abstract), it is your responsibility to put together a draft of the abstract. We have example conference abstracts at the following location on the lab drive: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Conference Abstracts\</code>. Feel free to let Dr. Petersen, the Lab Coordinator, and graduate students know what you need (e.g., data, help with analysis, etc.) to help you put together your abstract. We are happy to help you in the process. If your conference submission is accepted, you will need to put together a poster. We have example conference posters at the following location on the lab drive: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Posters\</code>. You must send your draft to Dr. Petersen before you submit it because (1) he is a co-author and is signing off on it by allowing it to be submitted, and (2) he wants to give helpful feedback to give it the best chance of being accepted.</p>
+<h1><span class="header-section-number">9</span> Presenting Work at
+Conferences</h1>
+<p>You are expected to present a research poster on your thesis findings
+at the UI Undergraduate Research Festival. You are encouraged (but not
+required) to additionally present your research at other conferences, as
+well. There are regional, national, and international conferences.
+Presenting your work at conferences provides important importunities for
+professional development. First, it helps people get important
+experiences in how to communicate research (visually and in
+conversation). Second, it helps people network with other researchers
+who are interested in similar questions. Third, it makes people more
+competitive for graduate school.</p>
+<p>If you would you like to put together a conference submission
+(abstract), it is your responsibility to put together a draft of the
+abstract. We have example conference abstracts at the following location
+on the lab drive:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Conference Abstracts\</code>.
+Feel free to let Dr. Petersen, the Lab Coordinator, and graduate
+students know what you need (e.g., data, help with analysis, etc.) to
+help you put together your abstract. We are happy to help you in the
+process. If your conference submission is accepted, you will need to put
+together a poster. We have example conference posters at the following
+location on the lab drive:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Posters\</code>.
+You must send your draft to Dr. Petersen before you submit it because
+(1) he is a co-author and is signing off on it by allowing it to be
+submitted, and (2) he wants to give helpful feedback to give it the best
+chance of being accepted.</p>
 <p>Below is a list of potentially relevant conferences:</p>
 <ul>
-<li>Society for Research in Child Development (SRCD): This international conference is the most commonly attended conference by members of the lab.</li>
-<li>International Society for Research in Child and Adolescent Psychopathology (ISRCAP)</li>
-<li>International Society for the Study of Behavioral Development (ISSBD)</li>
+<li>Society for Research in Child Development (SRCD): This international
+conference is the most commonly attended conference by members of the
+lab.</li>
+<li>International Society for Research in Child and Adolescent
+Psychopathology (ISRCAP)</li>
+<li>International Society for the Study of Behavioral Development
+(ISSBD)</li>
 <li>Occasional Temperament Conference (OTC)</li>
-<li>Flux: a conference that deals with developmental cognitive neuroscience</li>
+<li>Flux: a conference that deals with developmental cognitive
+neuroscience</li>
 <li>Society for Research in Psychopathology (SRP)</li>
 <li>International Congress of Infant Studies (ICIS)</li>
 <li>Society for Research on Adolescence (SRA)</li>

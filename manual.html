@@ -13,7 +13,7 @@
 
 <title>Lab Manual</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -467,18 +460,32 @@ div.tocify {
 <div id="missionStatement" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Mission Statement</h1>
 <div id="missionStatement-external" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> External Mission Statement</h2>
-<p>We are striving to improve the health and well-being of families and communities by conducting research to advance the understanding of human development.</p>
+<h2><span class="header-section-number">1.1</span> External Mission
+Statement</h2>
+<p>We are striving to improve the health and well-being of families and
+communities by conducting research to advance the understanding of human
+development.</p>
 <p>Date drafted: May 2018</p>
 </div>
 <div id="missionStatement-internal" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Internal Mission Statement</h2>
-<p>As members of the Developmental Psychopathology Lab, we strive to create, maintain, and improve a fun and collaborative culture. We commit to bettering ourselves and others through respect, hard work, ethical practices, support, and meaningful, lasting relationships. As a team, we cultivate a supportive environment for a free exchange of ideas and embrace the value of failure to foster personal and professional growth.</p>
+<h2><span class="header-section-number">1.2</span> Internal Mission
+Statement</h2>
+<p>As members of the Developmental Psychopathology Lab, we strive to
+create, maintain, and improve a fun and collaborative culture. We commit
+to bettering ourselves and others through respect, hard work, ethical
+practices, support, and meaningful, lasting relationships. As a team, we
+cultivate a supportive environment for a free exchange of ideas and
+embrace the value of failure to foster personal and professional
+growth.</p>
 <p>Date drafted: August 2018</p>
 </div>
 <div id="diversityStatement" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Diversity Statement</h2>
-<p>We seek to include members of various cultural, ethnic, and socioeconomic backgrounds so that our research might best represent the families which make up our diverse communities. We aim to provide a welcoming and respectful environment for people of all backgrounds.</p>
+<h2><span class="header-section-number">1.3</span> Diversity
+Statement</h2>
+<p>We seek to include members of various cultural, ethnic, and
+socioeconomic backgrounds so that our research might best represent the
+families which make up our diverse communities. We aim to provide a
+welcoming and respectful environment for people of all backgrounds.</p>
 <p>Date drafted: October 2020</p>
 </div>
 </div>
@@ -486,44 +493,81 @@ div.tocify {
 <h1><span class="header-section-number">2</span> Lab Glossary</h1>
 <dl>
 <dt>DevPsy Lab</dt>
-<dd>shorthand for Developmental Psychopathology Lab
+<dd>
+shorthand for Developmental Psychopathology Lab
 </dd>
 <dt>RA</dt>
-<dd>research assistant
+<dd>
+research assistant
 </dd>
 <dt>E</dt>
-<dd>experimenter
+<dd>
+experimenter
 </dd>
 <dt>TC</dt>
-<dd>target child, or the child participant
+<dd>
+target child, or the child participant
 </dd>
 <dt>coding</dt>
-<dd>the term means different things depending on the context. In our lab, we use “coding” as a shorthand to refer to “behavioral coding from video,” which involves assessing a construct from video observation to turn the video segment into numbers that can be analyzed. This is distinct from computer programming, which is another type of coding.
+<dd>
+the term means different things depending on the context. In our lab, we
+use “coding” as a shorthand to refer to “behavioral coding from video,”
+which involves assessing a construct from video observation to turn the
+video segment into numbers that can be analyzed. This is distinct from
+computer programming, which is another type of coding.
 </dd>
 <dt>RTFM</dt>
-<dd>Read the ******* manual
+<dd>
+Read the ******* manual
 </dd>
 <dt>RTFC</dt>
-<dd>Read the ******* checklist
+<dd>
+Read the ******* checklist
 </dd>
 </dl>
 </div>
 <div id="citi-certification" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> CITI Certification</h1>
-<p>Before you can interact with any data in the lab (including observing visits) you must be certified on human subject research protocols. This means completing the CITI training, which will upload to the IRB. You will need to complete the <strong>Group 1 – Biomedical Research – IRB-01</strong> course. Instructions are below. If you have questions, please follow this link: <a href="https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi" class="uri">https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi</a></p>
+<p>Before you can interact with any data in the lab (including observing
+visits) you must be certified on human subject research protocols. This
+means completing the CITI training, which will upload to the IRB. You
+will need to complete the <strong>Group 1 – Biomedical Research –
+IRB-01</strong> course. Instructions are below. If you have questions,
+please follow this link: <a
+href="https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi"
+class="uri">https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi</a></p>
 <ol style="list-style-type: decimal">
-<li>Enter the CITI program at <a href="https://www.citiprogram.org" class="uri">https://www.citiprogram.org</a></li>
-<li>On the Main Menu screen, under the ‘University of Iowa Courses’ tab, in the ‘My Learner Tools for University of Iowa’ box, select the ‘Add a Course or Update Learner Groups’ link</li>
-<li>Select the “I am required to complete human subjects’ research training.” to complete the IRB required course for certification in Human Subjects Protections. Click on the ‘Next’ button.</li>
-<li>Select Group 1 –Biomedical Research – IRB-01. Click on the ‘Next’ button.</li>
-<li>On the Main Menu screen, under the ‘University of Iowa Courses’ tab, click on the title of the course to enter course.</li>
-<li>Click on the ‘Complete the Integrity Assurance Statement before beginning the course’ link and complete. Click on the ‘Submit’ button.</li>
+<li>Enter the CITI program at <a href="https://www.citiprogram.org"
+class="uri">https://www.citiprogram.org</a></li>
+<li>On the Main Menu screen, under the ‘University of Iowa Courses’ tab,
+in the ‘My Learner Tools for University of Iowa’ box, select the ‘Add a
+Course or Update Learner Groups’ link</li>
+<li>Select the “I am required to complete human subjects’ research
+training.” to complete the IRB required course for certification in
+Human Subjects Protections. Click on the ‘Next’ button.</li>
+<li>Select Group 1 –Biomedical Research – IRB-01. Click on the ‘Next’
+button.</li>
+<li>On the Main Menu screen, under the ‘University of Iowa Courses’ tab,
+click on the title of the course to enter course.</li>
+<li>Click on the ‘Complete the Integrity Assurance Statement before
+beginning the course’ link and complete. Click on the ‘Submit’
+button.</li>
 <li>Click on the title of the first module to begin.</li>
 <li>Complete all of the required modules.</li>
 </ol>
-<p>When you have finished the course, please send the Lab Coordinator a PDF of the completion certificate.</p>
-<p>If you have already completed the HSO/IRB certification, just bring/send a copy of your certification. Please note, however, that it must be Group 1 – Biomedical Research – IRB-01.</p>
-<p><strong>IMPORTANT</strong>: It is likely that you will receive an email from the IRB upon completion of your IRB-01 CITI training asking you to confirm your lab, PI, the study, or that you completed the correct training. This is because it is uncommon for psychology labs to complete the IRB-01 training instead of the IRB-02 training. IT IS CRUCIALLY IMPORTANT THAT YOU RESPOND TO THIS EMAIL. If you do not, it will delay our ability to add you to the IRB project, and thus delay your ability continue RA training.</p>
+<p>When you have finished the course, please send the Lab Coordinator a
+PDF of the completion certificate.</p>
+<p>If you have already completed the HSO/IRB certification, just
+bring/send a copy of your certification. Please note, however, that it
+must be Group 1 – Biomedical Research – IRB-01.</p>
+<p><strong>IMPORTANT</strong>: It is likely that you will receive an
+email from the IRB upon completion of your IRB-01 CITI training asking
+you to confirm your lab, PI, the study, or that you completed the
+correct training. This is because it is uncommon for psychology labs to
+complete the IRB-01 training instead of the IRB-02 training. IT IS
+CRUCIALLY IMPORTANT THAT YOU RESPOND TO THIS EMAIL. If you do not, it
+will delay our ability to add you to the IRB project, and thus delay
+your ability continue RA training.</p>
 <p>The basic information they may ask you to confirm is:</p>
 <p><em>Department</em>: Psychological and Brain Sciences<br />
 <em>PI</em>: Dr. Isaac Petersen<br />
@@ -531,86 +575,183 @@ div.tocify {
 </div>
 <div id="confidentiality" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Confidentiality</h1>
-<p>As part of every participant’s consent process, we promise that we will protect their information. Therefore, it is imperative that all identifying information related to our participants remains confidential. Below are guidelines on how to handle study data and participant information.</p>
+<p>As part of every participant’s consent process, we promise that we
+will protect their information. Therefore, it is imperative that all
+identifying information related to our participants remains
+confidential. Below are guidelines on how to handle study data and
+participant information.</p>
 <div id="handling-data" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Handling Data</h2>
-<p>All hard-copy physical research data must remain in the lab. All electronic data should be accessed from the lab, on university computers, or secure private computers. Electronic data should not be accessed on public computers. Identifiable electronic data (including visit videos) should be stored only on the lab’s RDSS share and should not be saved onto your computer.</p>
+<p>All hard-copy physical research data must remain in the lab. All
+electronic data should be accessed from the lab, on university
+computers, or secure private computers. Electronic data should not be
+accessed on public computers. Identifiable electronic data (including
+visit videos) should be stored only on the lab’s RDSS share and should
+not be saved onto your computer.</p>
 </div>
-<div id="no-talking-about-participants-outside-of-lab" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> No Talking About Participants Outside of Lab</h2>
-<p>It is important that you <em>not</em> talk about participants outside of lab. Even if you are talking to other RAs or people on our IRB project, you never know who else might hear your conversation. Therefore, you should never use participant names, addresses, physical descriptions, or any other personally identifying information outside of the lab space.</p>
+<div id="no-talking-about-participants-outside-of-lab"
+class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> No Talking About
+Participants Outside of Lab</h2>
+<p>It is important that you <em>not</em> talk about participants outside
+of lab. Even if you are talking to other RAs or people on our IRB
+project, you never know who else might hear your conversation.
+Therefore, you should never use participant names, addresses, physical
+descriptions, or any other personally identifying information outside of
+the lab space.</p>
 </div>
 <div id="photos-and-social-media" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Photos and Social Media</h2>
-<p>No one should ever take photos, screenshots, Snapchats, or any other kind of video recording of lab data, including visit videos. Additionally, no data or identifying information should be shared on social media, through email, etc. Even when using Slack to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.</p>
+<h2><span class="header-section-number">4.3</span> Photos and Social
+Media</h2>
+<p>No one should ever take photos, screenshots, Snapchats, or any other
+kind of video recording of lab data, including visit videos.
+Additionally, no data or identifying information should be shared on
+social media, through email, etc. Even when using Slack to communicate
+with team members about visits or lab-related tasks, team members should
+always use TCIDs and waves, which are de-identified, to refer to
+specific participants/videos.</p>
 </div>
 <div id="remote" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Remote Access</h2>
-<p>RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI. This is to ensure that the RA has received all of the requisite training, instructions, and resources to properly access data remotely. After receiving permission or direction to work on lab tasks remotely, it is critical that all team members follow these basic guidelines:</p>
+<p>RAs should never access lab data remotely without permission or
+direction from the Lab Coordinator, a graduate student, or the PI. This
+is to ensure that the RA has received all of the requisite training,
+instructions, and resources to properly access data remotely. After
+receiving permission or direction to work on lab tasks remotely, it is
+critical that all team members follow these basic guidelines:</p>
 <ul>
-<li>No lab-related data or documents should be saved to your local computer</li>
-<li>All lab-related data or documents should only be opened when no one else can see your computer screen or hear visit videos. Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM.</li>
+<li>No lab-related data or documents should be saved to your local
+computer</li>
+<li>All lab-related data or documents should only be opened when no one
+else can see your computer screen or hear visit videos. Therefore, if
+your parents/roommates/friends/etc. are in the room with you and can see
+or hear the videos, DO NOT OPEN THEM.</li>
 </ul>
 </div>
 </div>
 <div id="courseRegistration" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> How to Register Lab for Credit</h1>
+<h1><span class="header-section-number">5</span> How to Register Lab for
+Credit</h1>
 <div id="regular-credit" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Regular Credit</h2>
-<p>Students who wish to receive credit for time spent in the lab may register for “PSY:3994:01IND – Research Practicum in Psychology” or “URES:3992”. Generally, students enroll in “PSY:3994”.</p>
-<p>URES:3992 is 0-hour and has no tuition or fees associated. It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.). URES:3992 is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).</p>
-<p>Keep in mind that some courses differ in the way that they are graded.</p>
+<p>Students who wish to receive credit for time spent in the lab may
+register for “PSY:3994:01IND – Research Practicum in Psychology” or
+“URES:3992”. Generally, students enroll in “PSY:3994”.</p>
+<p>URES:3992 is 0-hour and has no tuition or fees associated. It is
+recommended to enroll in URES:3992 when you cannot take credit-bearing
+courses (e.g., if you are getting paid, if you do not have the ability
+to maintain a regular schedule, etc.). URES:3992 is also useful for
+students in the summer so you do not have to pay the tuition and fees
+(which you will have to pay if you take a credit-bearing course).</p>
+<p>Keep in mind that some courses differ in the way that they are
+graded.</p>
 <ul>
-<li>Students receive a letter grade (see the section on <a href="#honorsCredit">Honors Credit</a>) for PSY:4990 and HONR:3994.</li>
+<li>Students receive a letter grade (see the section on <a
+href="#honorsCredit">Honors Credit</a>) for PSY:4990 and HONR:3994.</li>
 <li>Students receive a Pass/Fail grade for PSY:3994.</li>
 </ul>
 <p>There are several advantages to registering for course credit:</p>
 <ul>
-<li>Your participation in lab will be included on your transcript, which can look good when you apply to graduate/professional school and jobs</li>
-<li>If you meet the hours and expectations, it can also help your GPA</li>
-<li>The 10 hours per week you spend in lab will be accounted for in your course schedule</li>
+<li>Your participation in lab will be included on your transcript, which
+can look good when you apply to graduate/professional school and
+jobs</li>
+<li>If you meet the hours and expectations, it can also help your
+GPA</li>
+<li>The 10 hours per week you spend in lab will be accounted for in your
+course schedule</li>
 </ul>
-<p><img src="images/psy3994_1.png" alt="PSY:3994 Step 1" /> <img src="images/psy3994_2.png" alt="PSY:3994 Step 2" /></p>
+<p><img src="images/psy3994_1.png" alt="PSY:3994 Step 1" /> <img
+src="images/psy3994_2.png" alt="PSY:3994 Step 2" /></p>
 </div>
 <div id="honorsCredit" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Honors Credit</h2>
-<p>Students who wish to receive Honors credit for participation in lab may register for “HONR:3994:01IND – Honors Research Practicum”. In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: <code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Course Syllabi\</code></p>
-<p>If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for “PSY:4990 – Honors Thesis Research”. Advantages for registering for honors course credit are:</p>
+<p>Students who wish to receive Honors credit for participation in lab
+may register for “HONR:3994:01IND – Honors Research Practicum”. In
+addition to enrolling on MyUI, you can find the Honors Research
+Practicum syllabus on the lab drive (to be read and signed by the RA and
+Dr. Petersen) here:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Course Syllabi\</code></p>
+<p>If you are completing an Honors project and thesis in the lab, with
+approval by Dr. Petersen, you may enroll for “PSY:4990 – Honors Thesis
+Research”. Advantages for registering for honors course credit are:</p>
 <ul>
-<li>Your work in the lab will be included on your transcript (letter graded), which can look good when apply to graduate/professional school and jobs</li>
-<li>The 10 hours per week you spend in lab will be accounted for in your course schedule</li>
-<li>The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)</li>
+<li>Your work in the lab will be included on your transcript (letter
+graded), which can look good when apply to graduate/professional school
+and jobs</li>
+<li>The 10 hours per week you spend in lab will be accounted for in your
+course schedule</li>
+<li>The hours accumulated in the lab can count towards your honors
+experiential learning (up to 12 semester hours)</li>
 </ul>
-<p>Interested students may be able to conduct an Honors project. For information on conducting an Honors thesis/project, see <a href="honors.html">here</a>. Note that conducting an Honors project is not a requirement for enrolling in HONR:3994.</p>
-<p><img src="images/honr3994_1.png" alt="HONR:3994 Step 1" /> <img src="images/honr3994_2.png" alt="HONR:3994 Step 2" /></p>
-<div id="how-to-fulfill-the-experiential-learning-requirement-for-honors-credit" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> How to Fulfill the Experiential Learning Requirement for Honors Credit</h3>
-<p>HONR:3994 and PSY:3994 will appear automatically on your Honors degree audit as fulfilling part of the experiential learning requirement for Honors credit.</p>
-<p>A student can still receive Honors credit by registering for URES:3992 or by participating in the lab on a volunteer basis without it showing on their transcript (so long as the student still completes their required 10 hours). However, these semester hours will not count toward the experiential learning requirement unless additional steps are taken.</p>
+<p>Interested students may be able to conduct an Honors project. For
+information on conducting an Honors thesis/project, see <a
+href="honors.html">here</a>. Note that conducting an Honors project is
+not a requirement for enrolling in HONR:3994.</p>
+<p><img src="images/honr3994_1.png" alt="HONR:3994 Step 1" /> <img
+src="images/honr3994_2.png" alt="HONR:3994 Step 2" /></p>
+<div
+id="how-to-fulfill-the-experiential-learning-requirement-for-honors-credit"
+class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> How to Fulfill the
+Experiential Learning Requirement for Honors Credit</h3>
+<p>HONR:3994 and PSY:3994 will appear automatically on your Honors
+degree audit as fulfilling part of the experiential learning requirement
+for Honors credit.</p>
+<p>A student can still receive Honors credit by registering for
+URES:3992 or by participating in the lab on a volunteer basis without it
+showing on their transcript (so long as the student still completes
+their required 10 hours). However, these semester hours will not count
+toward the experiential learning requirement unless additional steps are
+taken.</p>
 <ol style="list-style-type: decimal">
 <li>Complete the Pre-Experience Questionnaire before the semester begins
 <ol style="list-style-type: lower-alpha">
-<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit" class="uri">https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit</a></li>
+<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit"
+class="uri">https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit</a></li>
 </ol></li>
-<li>Complete your lab responsibilities and engage in your 10 hours of research each week!</li>
-<li>Complete the Post-Experience Questionnaire after the semester ends (within the next 5 weeks)
+<li>Complete your lab responsibilities and engage in your 10 hours of
+research each week!</li>
+<li>Complete the Post-Experience Questionnaire after the semester ends
+(within the next 5 weeks)
 <ol style="list-style-type: lower-alpha">
-<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF" class="uri">https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF</a></li>
+<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF"
+class="uri">https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF</a></li>
 </ol></li>
 <li>Submit a Narrative (within 5 weeks of semester end)
 <ol style="list-style-type: lower-alpha">
-<li>This final project is flexible in its formatting, but an essay (the typical choice) should be 500–1,000 words in length. This will allow you to reflect on your experiences and how you grew. A couple images, an author bio, and highlights of your experience are all required components of this piece.</li>
-<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57" class="uri">https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57</a></li>
+<li>This final project is flexible in its formatting, but an essay (the
+typical choice) should be 500–1,000 words in length. This will allow you
+to reflect on your experiences and how you grew. A couple images, an
+author bio, and highlights of your experience are all required
+components of this piece.</li>
+<li><a href="https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57"
+class="uri">https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57</a></li>
 </ol></li>
 </ol>
-<p>More information on the Honors experiential learning process for research involvement can be found here: <a href="https://honors.uiowa.edu/experientiallearning" class="uri">https://honors.uiowa.edu/experientiallearning</a></p>
+<p>More information on the Honors experiential learning process for
+research involvement can be found here: <a
+href="https://honors.uiowa.edu/experientiallearning"
+class="uri">https://honors.uiowa.edu/experientiallearning</a></p>
 </div>
 </div>
 </div>
 <div id="ra-roles" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> RA Roles</h1>
-<p>The Developmental Psychopathology Lab uses a “generalist with specialization” approach—there are some tasks that all RAs are trained to perform, and there are other tasks that RAs specialize in. We have three specialized tracks or roles that RAs can train in after completing basic lab training: <a href="#behavioralTestingSpecialist">Behavioral Testing Specialist</a>, <a href="#eegSpecialist">Electroencephalography (EEG) Specialist</a>, and <a href="#dataSpecialist">Data Specialist</a>. <strong>Every role is important</strong>. Placement in these roles depends on each RA’s (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team’s needs. We take into consideration the desired placement of every RA, but ultimately Dr. Petersen and the Lab Coordinator make this determination based on a, b, c, and d from above.</p>
-<p>Below are cross-cutting responsibilities that all RAs are expected to contribute to.</p>
+<p>The Developmental Psychopathology Lab uses a “generalist with
+specialization” approach—there are some tasks that all RAs are trained
+to perform, and there are other tasks that RAs specialize in. We have
+three specialized tracks or roles that RAs can train in after completing
+basic lab training: <a href="#behavioralTestingSpecialist">Behavioral
+Testing Specialist</a>, <a href="#eegSpecialist">Electroencephalography
+(EEG) Specialist</a>, and <a href="#dataSpecialist">Data Specialist</a>.
+<strong>Every role is important</strong>. Placement in these roles
+depends on each RA’s (a) interests, (b) aptitude, and (c) fit, in
+addition to (d) the team’s needs. We take into consideration the desired
+placement of every RA, but ultimately Dr. Petersen and the Lab
+Coordinator make this determination based on a, b, c, and d from
+above.</p>
+<p>Below are cross-cutting responsibilities that all RAs are expected to
+contribute to.</p>
 <p><strong>Cross-Cutting Responsibilities</strong></p>
 <ul>
 <li>data entry</li>
@@ -619,14 +760,19 @@ div.tocify {
 <li>quality control and improvement</li>
 <li>helping run visits</li>
 <li>updating/editing coding manual as needed</li>
-<li>auditing “Question and Answer” (Q&amp;A) and “Quality Control Improvement” (QCI) documents</li>
+<li>auditing “Question and Answer” (Q&amp;A) and “Quality Control
+Improvement” (QCI) documents</li>
 <li>providing answers to coding questions when applicable</li>
 </ul>
 <div id="specialized-roles" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Specialized Roles</h2>
-<div id="behavioralTestingSpecialist" class="section level3" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Behavioral Testing Specialist</h3>
-<p>Below are necessary characteristics and potential responsibilities for Behavioral Testing Specialists:</p>
+<h2><span class="header-section-number">6.1</span> Specialized
+Roles</h2>
+<div id="behavioralTestingSpecialist" class="section level3"
+number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Behavioral Testing
+Specialist</h3>
+<p>Below are necessary characteristics and potential responsibilities
+for Behavioral Testing Specialists:</p>
 <p><strong>Necessary Characteristics:</strong></p>
 <ul>
 <li>works well with 3–7-year-old children and parents</li>
@@ -634,15 +780,20 @@ div.tocify {
 <li>mature</li>
 <li>able to quickly and easily soothe upset children</li>
 <li>able to stay calm and composed in the face of pressure</li>
-<li>able to follow a script with adherence yet flexibility to tailor it to the individual child (based on the child’s age, interests, intellectual capacity, etc.)</li>
+<li>able to follow a script with adherence yet flexibility to tailor it
+to the individual child (based on the child’s age, interests,
+intellectual capacity, etc.)</li>
 <li>able to take feedback non-defensively and learn from feedback</li>
 <li>confidence to remain in control of a chaotic environment</li>
 </ul>
 <p><strong>Responsibilities Could Include:</strong></p>
 <ul>
-<li>serving as an experimenter (E) for behavioral testing (lab visit 1; LV1) visits</li>
+<li>serving as an experimenter (E) for behavioral testing (lab visit 1;
+LV1) visits</li>
 <li>training new LV1 Es</li>
-<li>assuring procedural adherence for LV1 (including coaching RA and Camera roles, collaborating with other Es to ensure consistent administration)</li>
+<li>assuring procedural adherence for LV1 (including coaching RA and
+Camera roles, collaborating with other Es to ensure consistent
+administration)</li>
 <li>editing/updating LV1 manual procedures and scripts as needed</li>
 <li>keeping LV1 observation room stocked and prepped for visits</li>
 <li>having a lighter focus on coding</li>
@@ -650,13 +801,16 @@ div.tocify {
 </div>
 <div id="eegSpecialist" class="section level3" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> EEG Specialist</h3>
-<p>Below are necessary characteristics and potential responsibilities for EEG Specialists:</p>
+<p>Below are necessary characteristics and potential responsibilities
+for EEG Specialists:</p>
 <p><strong>Necessary Characteristics:</strong></p>
 <ul>
 <li>technical skills</li>
 <li>attention to detail</li>
 <li>confidence to remain in control of a chaotic environment</li>
-<li>comfortable trouble-shooting issues with technical equipment (after receiving extensive training); ability to follow strict procedures and guidelines</li>
+<li>comfortable trouble-shooting issues with technical equipment (after
+receiving extensive training); ability to follow strict procedures and
+guidelines</li>
 <li>works well with 3–7-year-old children and parents</li>
 <li>mature</li>
 </ul>
@@ -664,136 +818,364 @@ div.tocify {
 <ul>
 <li>serving as an E for EEG (lab visit 2; LV2) visits</li>
 <li>training new LV2 Es</li>
-<li>assuring procedural adherence for LV2 (including coaching RA roles, collaborating with other Es to trouble-shoot technical issues and assure procedural adherence)</li>
+<li>assuring procedural adherence for LV2 (including coaching RA roles,
+collaborating with other Es to trouble-shoot technical issues and assure
+procedural adherence)</li>
 <li>editing/updating LV2 manual procedures and scripts as needed</li>
 </ul>
 </div>
 <div id="dataSpecialist" class="section level3" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Data Specialist</h3>
-<p>Below are necessary characteristics and potential responsibilities for Data Specialists:</p>
+<h3><span class="header-section-number">6.1.3</span> Data
+Specialist</h3>
+<p>Below are necessary characteristics and potential responsibilities
+for Data Specialists:</p>
 <p><strong>Necessary Characteristics:</strong></p>
 <ul>
 <li>professional communication skills</li>
-<li>knows the study well (able to describe the study and consent form thoroughly, can answer questions about the study)</li>
-<li>able to interact well with people in the community for purposes of making connections with schools/preschools/daycares for recruitment</li>
+<li>knows the study well (able to describe the study and consent form
+thoroughly, can answer questions about the study)</li>
+<li>able to interact well with people in the community for purposes of
+making connections with schools/preschools/daycares for recruitment</li>
 <li>highly organized</li>
 <li>attention to detail</li>
 <li>technical skills</li>
-<li>creative for developing recruitment and retention tools and discovering recruitment sources</li>
+<li>creative for developing recruitment and retention tools and
+discovering recruitment sources</li>
 <li>comfortable in connecting with diverse people in diverse places</li>
 </ul>
 <p><strong>Responsibilities Could Include:</strong></p>
 <ul>
-<li>heavier focus on coding, coding tasks with advanced programs (e.g., Datavyu)</li>
-<li>REDCap additions and edits (upon completion of advanced REDCap training)</li>
+<li>heavier focus on coding, coding tasks with advanced programs (e.g.,
+Datavyu)</li>
+<li>REDCap additions and edits (upon completion of advanced REDCap
+training)</li>
 <li>train new RAs in LV1 RA and Camera roles, and LV2 RA roles</li>
 <li>help run visits in RA and Camera roles</li>
-<li>recruitment and retention, including helping to develop/improve current recruitment and retention systems and devising new recruitment and retention possibilities, updating social media pages</li>
+<li>recruitment and retention, including helping to develop/improve
+current recruitment and retention systems and devising new recruitment
+and retention possibilities, updating social media pages</li>
 <li>helping to develop new coding systems</li>
 </ul>
 </div>
 </div>
 </div>
 <div id="advancement" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> RA Advancement in Lab</h1>
-<p>The DevPsy lab is happy to offer exceptional RAs the opportunity to gain advanced research experience in the form of leadership roles within the lab. Eligibility is at the discretion of the Lab Coordinator and Dr. Petersen.</p>
+<h1><span class="header-section-number">7</span> RA Advancement in
+Lab</h1>
+<p>The DevPsy lab is happy to offer exceptional RAs the opportunity to
+gain advanced research experience in the form of leadership roles within
+the lab. Eligibility is at the discretion of the Lab Coordinator and
+Dr. Petersen.</p>
 <div id="eligibility-criteria" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Eligibility Criteria</h2>
+<h2><span class="header-section-number">7.1</span> Eligibility
+Criteria</h2>
 <p>Below are the eligibility criteria for advancement in lab:</p>
 <ul>
 <li>Has been an active and engaged RA for at least 4 full semesters</li>
-<li>Has shown a personal interest in the research being conducted in lab/research in general</li>
-<li>Meaningful and engaging research and leadership opportunities can be helpful in building a CV and research background, but it also can involve considerable work and responsibility. Therefore, prospective Advanced RAs should be <strong>self-motivated</strong> and have consistently shown that they are <strong>reliable</strong> and <strong>capable of additional responsibility</strong>.</li>
+<li>Has shown a personal interest in the research being conducted in
+lab/research in general</li>
+<li>Meaningful and engaging research and leadership opportunities can be
+helpful in building a CV and research background, but it also can
+involve considerable work and responsibility. Therefore, prospective
+Advanced RAs should be <strong>self-motivated</strong> and have
+consistently shown that they are <strong>reliable</strong> and
+<strong>capable of additional responsibility</strong>.</li>
 </ul>
 </div>
-<div id="i-meet-the-criteria-what-should-i-do-next" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> I meet the criteria, what should I do next?</h2>
-<p>After you have met all the criteria and feel that you are ready to pursue this opportunity, <ins>it is your responsibility to set up a meeting with the Lab Coordinator and Dr. Petersen</ins>, and to determine what types of responsibilities and projects you would like to lead. You should be prepared to come to this meeting with a thought-out idea of what projects and roles you are interested in given these new responsibilities and privileges.</p>
+<div id="i-meet-the-criteria-what-should-i-do-next"
+class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> I meet the criteria,
+what should I do next?</h2>
+<p>After you have met all the criteria and feel that you are ready to
+pursue this opportunity, <ins>it is your responsibility to set up a
+meeting with the Lab Coordinator and Dr. Petersen</ins>, and to
+determine what types of responsibilities and projects you would like to
+lead. You should be prepared to come to this meeting with a thought-out
+idea of what projects and roles you are interested in given these new
+responsibilities and privileges.</p>
 </div>
 <div id="potential-advanced-roles" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Potential Advanced Roles</h2>
-<p>Some advanced roles that can be pursued include (but are not limited to):</p>
-<p><strong>If you are already a Behavior Testing Specialist and want to pursue further advancement to become an <em>Advanced</em> Behavior Testing Specialist:</strong></p>
+<h2><span class="header-section-number">7.3</span> Potential Advanced
+Roles</h2>
+<p>Some advanced roles that can be pursued include (but are not limited
+to):</p>
+<p><strong>If you are already a Behavior Testing Specialist and want to
+pursue further advancement to become an <em>Advanced</em> Behavior
+Testing Specialist:</strong></p>
 <ul>
-<li>Lead E: training, supervising, quality control (procedural and data audits) for LV1</li>
+<li>Lead E: training, supervising, quality control (procedural and data
+audits) for LV1</li>
 </ul>
-<p><strong>If you are already an EEG Specialist and want to pursue further advancement to become an <em>Advanced</em> EEG Specialist:</strong></p>
+<p><strong>If you are already an EEG Specialist and want to pursue
+further advancement to become an <em>Advanced</em> EEG
+Specialist:</strong></p>
 <ul>
-<li>Lead E: training, supervising, quality control (procedural and data audits) for LV2</li>
-<li>Preliminary help with data analyses and data processing (e.g., EEG data)</li>
+<li>Lead E: training, supervising, quality control (procedural and data
+audits) for LV2</li>
+<li>Preliminary help with data analyses and data processing (e.g., EEG
+data)</li>
 </ul>
-<p><strong>If you are already a Data Specialist and want to pursue further advancement to become an <em>Advanced</em> Data Specialist:</strong></p>
+<p><strong>If you are already a Data Specialist and want to pursue
+further advancement to become an <em>Advanced</em> Data
+Specialist:</strong></p>
 <ul>
-<li>Advanced coding responsibilities, including Datavyu coding, helping develop new coding systems for tasks not currently being coded, etc.</li>
-<li>If you wish to be trained on Datavyu coding, you must commit to staying in lab at least an additional 3 semesters from when training begins.</li>
+<li>Advanced coding responsibilities, including Datavyu coding, helping
+develop new coding systems for tasks not currently being coded,
+etc.</li>
+<li>If you wish to be trained on Datavyu coding, you must commit to
+staying in lab at least an additional 3 semesters from when training
+begins.</li>
 <li>In charge of recruitment and retention events/opportunities</li>
 <li>Coming up with new ideas and systems for implementation</li>
 <li>Contacting organizations to coordinate recruitment</li>
 <li>Social media, postcards, newsletter, holiday cards, diplomas</li>
 </ul>
 </div>
-<div id="benefits-of-assuming-an-advanced-role" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Benefits of Assuming an Advanced Role</h2>
-<p><strong>Research works for your CV:</strong> One of the major perks of this role is that you may be able to pursue a written piece of research (paper, poster, conference presentation, etc.) that can be a great boost for your CV!</p>
-<p><strong>Collaborative research projects in the lab:</strong> This can take many forms (e.g., poster, paper). You are encouraged to ask a current advanced RA, a graduate student in the lab, the Lab Coordinator, and/or Dr. Petersen about what this may entail.</p>
-<p><strong>Reduced availability expectation:</strong> advanced RAs are expected to make themselves available 1 night per week &amp; 5 weekend days per semester to train/coach new experimenters/run visits (when needed).</p>
-<p><strong>Registering for Advanced Research Practicum in Psychology (PSY:3995):</strong> if the RA’s role includes advanced participation in lab-related research projects in such a way that includes significant reading and writing (such as when performing an independent research project), the RA may register for PSY:3995: “Advanced Research Practicum in Psychology”. However, RAs should seek permission from Dr. Petersen before enrolling in PSY:3995.</p>
+<div id="benefits-of-assuming-an-advanced-role" class="section level2"
+number="7.4">
+<h2><span class="header-section-number">7.4</span> Benefits of Assuming
+an Advanced Role</h2>
+<p><strong>Research works for your CV:</strong> One of the major perks
+of this role is that you may be able to pursue a written piece of
+research (paper, poster, conference presentation, etc.) that can be a
+great boost for your CV!</p>
+<p><strong>Collaborative research projects in the lab:</strong> This can
+take many forms (e.g., poster, paper). You are encouraged to ask a
+current advanced RA, a graduate student in the lab, the Lab Coordinator,
+and/or Dr. Petersen about what this may entail.</p>
+<p><strong>Reduced availability expectation:</strong> advanced RAs are
+expected to make themselves available 1 night per week &amp; 5 weekend
+days per semester to train/coach new experimenters/run visits (when
+needed).</p>
+<p><strong>Registering for Advanced Research Practicum in Psychology
+(PSY:3995):</strong> if the RA’s role includes advanced participation in
+lab-related research projects in such a way that includes significant
+reading and writing (such as when performing an independent research
+project), the RA may register for PSY:3995: “Advanced Research Practicum
+in Psychology”. However, RAs should seek permission from Dr. Petersen
+before enrolling in PSY:3995.</p>
 </div>
-<div id="a-note-about-other-opportunities-for-advancement" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> A Note About Other Opportunities for Advancement</h2>
-<p>In addition to opportunities for advancement in lab, there may also be opportunities to conduct independent research projects, to conduct an <a href="honors.html">Honors project/thesis</a>, or to contribute to papers, grants, or conference poster presentations. An important part of professional development is learning to advocate for yourself and to inquire about opportunities that are available. If you are interested in gaining experience in a certain area of lab work, taking on a leadership role, or if you are interested in an opportunity to take on a more advanced role in the project, just ask! There may be opportunities available for RAs to gain experience in specialized areas of lab work (e.g., recruitment of participants, data processing) or even to earn authorship on a paper or poster for an ongoing project. If you are motivated to gain these kinds of opportunities, you are welcome to ask and see what may be available. Advanced projects are given priority to RAs who have shown reliability and commitment.</p>
+<div id="a-note-about-other-opportunities-for-advancement"
+class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> A Note About Other
+Opportunities for Advancement</h2>
+<p>In addition to opportunities for advancement in lab, there may also
+be opportunities to conduct independent research projects, to conduct an
+<a href="honors.html">Honors project/thesis</a>, or to contribute to
+papers, grants, or conference poster presentations. An important part of
+professional development is learning to advocate for yourself and to
+inquire about opportunities that are available. If you are interested in
+gaining experience in a certain area of lab work, taking on a leadership
+role, or if you are interested in an opportunity to take on a more
+advanced role in the project, just ask! There may be opportunities
+available for RAs to gain experience in specialized areas of lab work
+(e.g., recruitment of participants, data processing) or even to earn
+authorship on a paper or poster for an ongoing project. If you are
+motivated to gain these kinds of opportunities, you are welcome to ask
+and see what may be available. Advanced projects are given priority to
+RAs who have shown reliability and commitment.</p>
 </div>
-<div id="a-note-about-lab-hours-for-advanced-tasks" class="section level2" number="7.6">
-<h2><span class="header-section-number">7.6</span> A Note About Lab Hours for Advanced Tasks</h2>
-<p>As mentioned above, there are a number of opportunities to gain advanced experiences in the lab. There may be an opportunity for some experiences to count for lab hours if: 1. The project is assigned to the RA 1. The project benefits the overall lab 1. The RA has demonstrated proficiency in the skills needed to complete the project 1. The project is not part of an <a href="honors.html">Honors project/thesis</a>, or another independent research experience</p>
-<p>For example, our lab leverages <a href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a> for a variety of tasks. RAs may be able to use <a href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a> to complete lab projects if they take the time outside of lab hours to tackle the learning curve of <a href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a>. Furthermore, RAs may have an opportunity to learn how EEG data is processed. These expectations are not meant to discourage RAs from pursuing advanced experiences, but to set expectations for how these experiences can (or in other cases cannot) count for lab hours. However, even if experiences do not count toward lab hours, they are still valuable learning experiences that can advance your professional development in pursuit of your career goals. If you would like to learn more about either of these opportunities, or any others, please reach out to the Lab Coordinator.</p>
+<div id="a-note-about-lab-hours-for-advanced-tasks"
+class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> A Note About Lab
+Hours for Advanced Tasks</h2>
+<p>As mentioned above, there are a number of opportunities to gain
+advanced experiences in the lab. There may be an opportunity for some
+experiences to count for lab hours if: 1. The project is assigned to the
+RA 1. The project benefits the overall lab 1. The RA has demonstrated
+proficiency in the skills needed to complete the project 1. The project
+is not part of an <a href="honors.html">Honors project/thesis</a>, or
+another independent research experience</p>
+<p>For example, our lab leverages <a
+href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a>
+for a variety of tasks. RAs may be able to use <a
+href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a>
+to complete lab projects if they take the time outside of lab hours to
+tackle the learning curve of <a
+href="https://devpsylab.github.io/DataAnalysis/R.html"><code>R</code></a>.
+Furthermore, RAs may have an opportunity to learn how EEG data is
+processed. These expectations are not meant to discourage RAs from
+pursuing advanced experiences, but to set expectations for how these
+experiences can (or in other cases cannot) count for lab hours. However,
+even if experiences do not count toward lab hours, they are still
+valuable learning experiences that can advance your professional
+development in pursuit of your career goals. If you would like to learn
+more about either of these opportunities, or any others, please reach
+out to the Lab Coordinator.</p>
 </div>
 <div id="honors-thesesprojects" class="section level2" number="7.7">
-<h2><span class="header-section-number">7.7</span> Honors Theses/Projects</h2>
-<p>For information on conducting an Honors Thesis/Project, see <a href="honors.html">here</a>.</p>
+<h2><span class="header-section-number">7.7</span> Honors
+Theses/Projects</h2>
+<p>For information on conducting an Honors Thesis/Project, see <a
+href="honors.html">here</a>.</p>
 </div>
 </div>
 <div id="lab-buddy-system" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Lab Buddy System</h1>
-<p>Our buddy system is a knowledge-sharing method that we use when onboarding new RAs into the lab. Each new RA is paired up with an existing RA who will guide them through their first weeks in their new role. The exchange of information goes both ways. New RAs are encouraged to share tips, knowledge, and techniques from previous experiences, while the existing RAs makes sure that new lab members feel welcome.</p>
-<p>During their first weeks, new RAs can feel very overwhelmed and lost, because they are presented with considerable new information in a short amount of time. Although new RAs typically have the essential skills and interests to succeed in the lab, they are unfamiliar with the work culture, the lab processes, and “unspoken rules<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.” While the coding team teaches the RA the coding and entry skills, a lab buddy helps a new RA to ease their transition during the orientation phase and provides guidance and advice in a more informal setting. The goal of the buddy system is that new RAs feel welcome and have someone in the lab they can connect with. New RAs should be introduced to their buddy at the end of their orientation session.</p>
+<p>Our buddy system is a knowledge-sharing method that we use when
+onboarding new RAs into the lab. Each new RA is paired up with an
+existing RA who will guide them through their first weeks in their new
+role. The exchange of information goes both ways. New RAs are encouraged
+to share tips, knowledge, and techniques from previous experiences,
+while the existing RAs makes sure that new lab members feel welcome.</p>
+<p>During their first weeks, new RAs can feel very overwhelmed and lost,
+because they are presented with considerable new information in a short
+amount of time. Although new RAs typically have the essential skills and
+interests to succeed in the lab, they are unfamiliar with the work
+culture, the lab processes, and “unspoken rules<a href="#fn1"
+class="footnote-ref" id="fnref1"><sup>1</sup></a>.” While the coding
+team teaches the RA the coding and entry skills, a lab buddy helps a new
+RA to ease their transition during the orientation phase and provides
+guidance and advice in a more informal setting. The goal of the buddy
+system is that new RAs feel welcome and have someone in the lab they can
+connect with. New RAs should be introduced to their buddy at the end of
+their orientation session.</p>
 </div>
 <div id="scheduling" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Scheduling</h1>
 <div id="schedulingOverview" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Scheduling System Overview</h2>
-<p>After course registration at the end of each semester, RAs are to submit their course schedules for the following semester to the Lab Coordinator. If an RA has a strict, set work schedule, this can be included with the course schedule. We will do our best to accommodate work schedules; however, classes (including lab) take precedence over work schedules. The Lab Coordinator will review everyone’s individual schedules and create a lab schedule that best allows visits to be scheduled, while respecting RA course schedules and—as best as possible—other responsibilities. Once the Lab Coordinator has finalized the lab schedule for the semester, they will email each RA their weekly lab schedule. This weekly lab schedule consists of 10 total hours per week. This includes 9 weekly hours of lab time, during which RAs may run visits, help with recruitment, complete data entry and coding tasks, assist the Lab Coordinator with assigned tasks, etc. Additionally, all RAs are expected to attend a one-hour lab meeting every week when the entire team assembles to discuss lab-related issues and science. Once the semester schedules have been sent out to all RAs, it is expected that RAs schedule other events around their scheduled lab hours to the best of their availability (i.e., there are no major schedule changes that would impact an RA’s scheduled lab hours for the semester).</p>
-<p>By the first day of the new semester, RAs are expected to submit to the Lab Coordinator their standard weekly availability. This should include all normally occurring weekly availability during which the Lab Coordinator can schedule them to run visits that occur outside of an RA’s normal lab hours. This availability schedule should include at least two available weekday evenings (M–F) per week. The Lab Coordinator will keep a composite schedule of RA weekly availability to use in scheduling visits when additional coverage is needed beyond RA lab schedules. If an RA is scheduled to run a visit during their availability but outside of their normal lab hours, the RA will be notified of the visit details via an invitation to the Outlook calendar event, but the Lab Coordinator will not reach out to them before scheduling to confirm their availability. The RA is expected to accept the invitation to the calendar event in Outlook.</p>
-<p>If scheduling commitments come up throughout the semester during any time that an RA submitted as part of their weekly availability, they are responsible for adding it to the shared Outlook “Busy Calendar” (RES-DPL-Busy) so that the Lab Coordinator knows not to schedule them. It is acceptable for an RA’s available evenings to vary week to week, but all RAs are expected to maintain at least two available evenings every week. RAs are responsible for any visit they may be scheduled to run during the availability they provide at the beginning of the semester. Therefore, it is imperative that all appointments and events that occur during their normal weekly availability are shared with the Lab Coordinator via the “Busy Calendar” as soon as possible.</p>
-<p>If an RA has been scheduled for a visit during their availability (including available time on weekdays, available evenings, and chosen weekend days), has been notified of this visit, and cannot run the visit due to an unexpected conflict, the RA is responsible for posting on the <code>#scheduling</code> channel on Slack to ask for a cover. It is the RA’s responsibility to let the Lab Coordinator know who will cover the visit. If unable to find a cover, it is the RA’s responsibility to let the Lab Coordinator know by at least 48 hours before the visit.</p>
-<p>For information regarding weekend visits, please refer to the section regarding the <a href="#schedulingWeekend">Weekend On-Call Schedule</a>.</p>
-<p>For general information regarding the scheduling expectations of the Developmental Psychopathology Lab, please refer to the section on <a href="#schedulingExpectations">Scheduling Expectations</a>.</p>
+<h2><span class="header-section-number">9.1</span> Scheduling System
+Overview</h2>
+<p>After course registration at the end of each semester, RAs are to
+submit their course schedules for the following semester to the Lab
+Coordinator. If an RA has a strict, set work schedule, this can be
+included with the course schedule. We will do our best to accommodate
+work schedules; however, classes (including lab) take precedence over
+work schedules. The Lab Coordinator will review everyone’s individual
+schedules and create a lab schedule that best allows visits to be
+scheduled, while respecting RA course schedules and—as best as
+possible—other responsibilities. Once the Lab Coordinator has finalized
+the lab schedule for the semester, they will email each RA their weekly
+lab schedule. This weekly lab schedule consists of 10 total hours per
+week. This includes 9 weekly hours of lab time, during which RAs may run
+visits, help with recruitment, complete data entry and coding tasks,
+assist the Lab Coordinator with assigned tasks, etc. Additionally, all
+RAs are expected to attend a one-hour lab meeting every week when the
+entire team assembles to discuss lab-related issues and science. Once
+the semester schedules have been sent out to all RAs, it is expected
+that RAs schedule other events around their scheduled lab hours to the
+best of their availability (i.e., there are no major schedule changes
+that would impact an RA’s scheduled lab hours for the semester).</p>
+<p>By the first day of the new semester, RAs are expected to submit to
+the Lab Coordinator their standard weekly availability. This should
+include all normally occurring weekly availability during which the Lab
+Coordinator can schedule them to run visits that occur outside of an
+RA’s normal lab hours. This availability schedule should include at
+least two available weekday evenings (M–F) per week. The Lab Coordinator
+will keep a composite schedule of RA weekly availability to use in
+scheduling visits when additional coverage is needed beyond RA lab
+schedules. If an RA is scheduled to run a visit during their
+availability but outside of their normal lab hours, the RA will be
+notified of the visit details via an invitation to the Outlook calendar
+event, but the Lab Coordinator will not reach out to them before
+scheduling to confirm their availability. The RA is expected to accept
+the invitation to the calendar event in Outlook.</p>
+<p>If scheduling commitments come up throughout the semester during any
+time that an RA submitted as part of their weekly availability, they are
+responsible for adding it to the shared Outlook “Busy Calendar”
+(RES-DPL-Busy) so that the Lab Coordinator knows not to schedule them.
+It is acceptable for an RA’s available evenings to vary week to week,
+but all RAs are expected to maintain at least two available evenings
+every week. RAs are responsible for any visit they may be scheduled to
+run during the availability they provide at the beginning of the
+semester. Therefore, it is imperative that all appointments and events
+that occur during their normal weekly availability are shared with the
+Lab Coordinator via the “Busy Calendar” as soon as possible.</p>
+<p>If an RA has been scheduled for a visit during their availability
+(including available time on weekdays, available evenings, and chosen
+weekend days), has been notified of this visit, and cannot run the visit
+due to an unexpected conflict, the RA is responsible for posting on the
+<code>#scheduling</code> channel on Slack to ask for a cover. It is the
+RA’s responsibility to let the Lab Coordinator know who will cover the
+visit. If unable to find a cover, it is the RA’s responsibility to let
+the Lab Coordinator know by at least 48 hours before the visit.</p>
+<p>For information regarding weekend visits, please refer to the section
+regarding the <a href="#schedulingWeekend">Weekend On-Call
+Schedule</a>.</p>
+<p>For general information regarding the scheduling expectations of the
+Developmental Psychopathology Lab, please refer to the section on <a
+href="#schedulingExpectations">Scheduling Expectations</a>.</p>
 </div>
 <div id="schedulingWeekend" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Weekend On-Call Schedule</h2>
+<h2><span class="header-section-number">9.2</span> Weekend On-Call
+Schedule</h2>
 <div id="introduction" class="section level3" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Introduction</h3>
-<p>To ensure that the coverage responsibility for visits scheduled outside of normal lab hours is shared equally among all lab members, RAs are expected to sign up for at least 8 weekend days each semester when they will be “on-call”. Please note, this does not mean that you will be expected to come into lab for every day you sign up. This does mean that if a visit needs to be scheduled on a weekend day, the Lab Coordinator may schedule you to help run that visit without first contacting you to ask if you are available.</p>
-<p>You are expected to stay available to run visits on the days you are signed up for until 24 hours prior. The Lab Coordinator will not automatically schedule you for a weekend or evening visit without 24 hours’ notice to lab members. The Lab Coordinator may request volunteers to run visits that are scheduled “last minute” (i.e., within 24 hours), but you are not expected to be available for “last-minute” visits unless they occur during your scheduled lab hours. If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Slack with the details of the visit.</p>
-<p>If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you. Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on <a href="#advancement">RA Advancement</a>).</p>
+<p>To ensure that the coverage responsibility for visits scheduled
+outside of normal lab hours is shared equally among all lab members, RAs
+are expected to sign up for at least 8 weekend days each semester when
+they will be “on-call”. Please note, this does not mean that you will be
+expected to come into lab for every day you sign up. This does mean that
+if a visit needs to be scheduled on a weekend day, the Lab Coordinator
+may schedule you to help run that visit without first contacting you to
+ask if you are available.</p>
+<p>You are expected to stay available to run visits on the days you are
+signed up for until 24 hours prior. The Lab Coordinator will not
+automatically schedule you for a weekend or evening visit without 24
+hours’ notice to lab members. The Lab Coordinator may request volunteers
+to run visits that are scheduled “last minute” (i.e., within 24 hours),
+but you are not expected to be available for “last-minute” visits unless
+they occur during your scheduled lab hours. If a weekend visit is
+scheduled and you are on-call that day, the Lab Coordinator will tag you
+in a Slack with the details of the visit.</p>
+<p>If you can no longer help run a visit you have been scheduled for, it
+is your responsibility to find another RA to trade with you. Ultimately
+everyone is expected to be on-call for at least 8 weekend days per
+semester (apart from Advanced Specialists; see the section on <a
+href="#advancement">RA Advancement</a>).</p>
 </div>
 <div id="preparation" class="section level3" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Preparation</h3>
-<p>To ensure the process is as efficient as possible, please bring your calendar with your weekend availability for the semester. Bring a written list of the weekend days you cannot be on-call for that semester.</p>
+<p>To ensure the process is as efficient as possible, please bring your
+calendar with your weekend availability for the semester. Bring a
+written list of the weekend days you cannot be on-call for that
+semester.</p>
 </div>
 <div id="procedure" class="section level3" number="9.2.3">
 <h3><span class="header-section-number">9.2.3</span> Procedure</h3>
 <ol style="list-style-type: decimal">
-<li>The Lab Coordinator will set up separate meetings with behavioral testing specialists, EEG testing specialists, and data specialists/new RAs during the first week of the semester. At these meetings, the Lab Coordinator will conduct the weekend scheduling.</li>
+<li>The Lab Coordinator will set up separate meetings with behavioral
+testing specialists, EEG testing specialists, and data specialists/new
+RAs during the first week of the semester. At these meetings, the Lab
+Coordinator will conduct the weekend scheduling.</li>
 <li>Everyone draws a number.</li>
-<li>Pass the sign-up sheet around your group once, starting with the person who drew the lowest number, and continuing in order from lowest to highest number, each person cross their name off of every weekend day they CANNOT be on-call (i.e., family engagement, work, doctor appointment, etc.).</li>
-<li>Once the sheet has gone around the group once and everyone has had the opportunity to remove their name from days they cannot work, pass the sheet around, from lowest number to highest number, and every RA signs up for one day per turn. Each round, the order reverses (i.e., snake order). That is, whoever gets the first pick in round 1 gets the last pick in round 2. Continue this process to sign up for days until everyone has signed up for at least 8 days each. Note that this may mean signing up for a day that you are unavailable (in order to sign up for 8 days).
+<li>Pass the sign-up sheet around your group once, starting with the
+person who drew the lowest number, and continuing in order from lowest
+to highest number, each person cross their name off of every weekend day
+they CANNOT be on-call (i.e., family engagement, work, doctor
+appointment, etc.).</li>
+<li>Once the sheet has gone around the group once and everyone has had
+the opportunity to remove their name from days they cannot work, pass
+the sheet around, from lowest number to highest number, and every RA
+signs up for one day per turn. Each round, the order reverses (i.e.,
+snake order). That is, whoever gets the first pick in round 1 gets the
+last pick in round 2. Continue this process to sign up for days until
+everyone has signed up for at least 8 days each. Note that this may mean
+signing up for a day that you are unavailable (in order to sign up for 8
+days).
 <ol style="list-style-type: lower-alpha">
-<li>Data Specialists and new RAs should sign up for Camera or RA slots—the Lab Coordinator may schedule these interchangeably (i.e., if your name is listed for either a Camera or RA slot, you may be scheduled in a Camera or an RA role for a visit, at the discretion of the Lab Coordinator).</li>
-<li>Trained returning RAs (Behavioral Testing Specialists, EEG Specialists, and Data Specialists) should prioritize signing up for visits earlier in the semester first, if possible. When the new RAs complete training for visit roles, they will be able to help with visits later in the semester.</li>
-<li>To help ensure that RAs are available during the days they sign up, you are encouraged to sign up for days when your peers cannot be on-call. Then, after everyone has signed up for 8 days, RAs will have an opportunity to trade days with each other (see below).</li>
+<li>Data Specialists and new RAs should sign up for Camera or RA
+slots—the Lab Coordinator may schedule these interchangeably (i.e., if
+your name is listed for either a Camera or RA slot, you may be scheduled
+in a Camera or an RA role for a visit, at the discretion of the Lab
+Coordinator).</li>
+<li>Trained returning RAs (Behavioral Testing Specialists, EEG
+Specialists, and Data Specialists) should prioritize signing up for
+visits earlier in the semester first, if possible. When the new RAs
+complete training for visit roles, they will be able to help with visits
+later in the semester.</li>
+<li>To help ensure that RAs are available during the days they sign up,
+you are encouraged to sign up for days when your peers cannot be
+on-call. Then, after everyone has signed up for 8 days, RAs will have an
+opportunity to trade days with each other (see below).</li>
 </ol></li>
-<li>Once this process is complete, the sign-up form will be left in the RA office and remain there for one week. During this one week, RAs will have the opportunity to make any final adjustments necessary (i.e., trade days with other RAs). However, at the end of the one week, everyone should still be signed up for a total of 8 days, and everyone will be responsible for helping run any visits that may be scheduled on those days.</li>
+<li>Once this process is complete, the sign-up form will be left in the
+RA office and remain there for one week. During this one week, RAs will
+have the opportunity to make any final adjustments necessary (i.e.,
+trade days with other RAs). However, at the end of the one week,
+everyone should still be signed up for a total of 8 days, and everyone
+will be responsible for helping run any visits that may be scheduled on
+those days.</li>
 </ol>
 </div>
 </div>
@@ -807,51 +1189,98 @@ div.tocify {
 <li>Select “From directory”</li>
 <li>Type in the Directory box:</li>
 </ol></li>
-<li>For the RA Schedule, type: “RES-RA-LC-Sched” (<a href="mailto:RES-RA-LC-Sched@uiowa.edu" class="email">RES-RA-LC-Sched@uiowa.edu</a>)
+<li>For the RA Schedule, type: “RES-RA-LC-Sched” (<a
+href="mailto:RES-RA-LC-Sched@uiowa.edu"
+class="email">RES-RA-LC-Sched@uiowa.edu</a>)
 <ol style="list-style-type: lower-alpha">
 <li>Select “Open”</li>
 </ol></li>
-<li>For the Participants’ Schedule, type: “Developmental Psychopathology Lab” (<a href="mailto:dev-psylab@uiowa.edu" class="email">dev-psylab@uiowa.edu</a>)
+<li>For the Participants’ Schedule, type: “Developmental Psychopathology
+Lab” (<a href="mailto:dev-psylab@uiowa.edu"
+class="email">dev-psylab@uiowa.edu</a>)
 <ol style="list-style-type: lower-alpha">
 <li>Select “Open”</li>
 </ol></li>
-<li>For the RA Availability Schedule, type: “RES-DPL-Busy” (<a href="mailto:RES-DPL-Busy@uiowa.edu" class="email">RES-DPL-Busy@uiowa.edu</a>)
+<li>For the RA Availability Schedule, type: “RES-DPL-Busy” (<a
+href="mailto:RES-DPL-Busy@uiowa.edu"
+class="email">RES-DPL-Busy@uiowa.edu</a>)
 <ol style="list-style-type: lower-alpha">
 <li>Select “Open”</li>
 </ol></li>
 </ol>
-<p>Here is a description of the different calendars and instructions how to use them:</p>
+<p>Here is a description of the different calendars and instructions how
+to use them:</p>
 <ol style="list-style-type: decimal">
 <li>RES-RA-LC-Sched
 <ul>
-<li>This calendar has your individual schedule in the lab. It is color-coded by RA. You can view but not edit this calendar. Changes to this need to be discussed with the Lab Coordinator and/or Dr. Petersen.</li>
+<li>This calendar has your individual schedule in the lab. It is
+color-coded by RA. You can view but not edit this calendar. Changes to
+this need to be discussed with the Lab Coordinator and/or
+Dr. Petersen.</li>
 </ul></li>
 <li>Developmental Psychopathology Lab
 <ul>
-<li>This is the general lab calendar. It has lab events (e.g., participant visits, lab meeting, recruitment events). You can view but not edit this calendar.</li>
+<li>This is the general lab calendar. It has lab events (e.g.,
+participant visits, lab meeting, recruitment events). You can view but
+not edit this calendar.</li>
 </ul></li>
 <li>RES-DPL-Busy
 <ul>
-<li>This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester. In order to schedule visits, the Lab Coordinator needs to know your availability during the week. You are expected to edit this calendar and keep it up to date with any scheduling conflicts as soon as possible. Please make sure that you “categorize” the event with your name, so the event is given the proper color. In the “Subject” line, you can simply note “Name Busy”.</li>
+<li>This is where you are expected to mark yourself as unavailable for
+any scheduling commitments that come up during the weekly availability
+you submitted at the beginning of the semester. In order to schedule
+visits, the Lab Coordinator needs to know your availability during the
+week. You are expected to edit this calendar and keep it up to date with
+any scheduling conflicts as soon as possible. Please make sure that you
+“categorize” the event with your name, so the event is given the proper
+color. In the “Subject” line, you can simply note “Name Busy”.</li>
 </ul></li>
 </ol>
 </div>
 <div id="timeclock" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> TimeClock</h2>
-<p><code>OpenTimeClock2008</code> is the program we use for keeping track of RA lab hours. Each RA is expected to clock in before beginning lab-related work (including running visits, but if you come in early to each lunch, visit with other RAs, or anything else NOT lab work-related, then do not clock in until you are ready to work), and to clock out when they have stopped lab-related work (e.g., if you leave to get lunch, please clock out then clock back in again when you return to work). The Lab Coordinator will add you to the system using your <code>HawkID</code>. To set up your profile the first time you use the program, follow the steps below:</p>
+<p><code>OpenTimeClock2008</code> is the program we use for keeping
+track of RA lab hours. Each RA is expected to clock in before beginning
+lab-related work (including running visits, but if you come in early to
+each lunch, visit with other RAs, or anything else NOT lab work-related,
+then do not clock in until you are ready to work), and to clock out when
+they have stopped lab-related work (e.g., if you leave to get lunch,
+please clock out then clock back in again when you return to work). The
+Lab Coordinator will add you to the system using your
+<code>HawkID</code>. To set up your profile the first time you use the
+program, follow the steps below:</p>
 <ol style="list-style-type: decimal">
-<li>Click the TimeClock shortcut on your lab computer desktop (or go to <a href="https://www.opentimeclock.com/2008/free.html" class="uri">https://www.opentimeclock.com/2008/free.html</a>).</li>
-<li>In the “Company Name” textbox, type <code>devpsylab</code> and click the blue “Sign In” button</li>
-<li>Enter your <code>HawkID</code> in the “Username” field and click the “Login” button.</li>
+<li>Click the TimeClock shortcut on your lab computer desktop (or go to
+<a href="https://www.opentimeclock.com/2008/free.html"
+class="uri">https://www.opentimeclock.com/2008/free.html</a>).</li>
+<li>In the “Company Name” textbox, type <code>devpsylab</code> and click
+the blue “Sign In” button</li>
+<li>Enter your <code>HawkID</code> in the “Username” field and click the
+“Login” button.</li>
 <li>Go to “My settings” at the top of the page.</li>
-<li>Check the “Change password” box, and create a new password in the subsequent boxes (i.e., “Current password” which can be left blank as you will not have a password until you set one up for yourself, “New password,” and “Confirm new password”). Then click the “Save” button.</li>
+<li>Check the “Change password” box, and create a new password in the
+subsequent boxes (i.e., “Current password” which can be left blank as
+you will not have a password until you set one up for yourself, “New
+password,” and “Confirm new password”). Then click the “Save”
+button.</li>
 </ol>
-<p><em>NOTE</em>: If a pop-up window appears asking if the website can have permission to access your location, be sure to click yes or accept. TimeClock login is GPS-restricted, so the program may not work if it is not allowed to verify your location.</p>
+<p><em>NOTE</em>: If a pop-up window appears asking if the website can
+have permission to access your location, be sure to click yes or accept.
+TimeClock login is GPS-restricted, so the program may not work if it is
+not allowed to verify your location.</p>
 <p>To use this program to view your current hours for the semester:</p>
 <ol style="list-style-type: decimal">
-<li>Login to your account and click on “List view” at the top of the page.</li>
-<li>Filter your days worked by adjusting the dates at the top left of the screen to encompass the current semester (either by typing in the relevant dates, or by using the dropdown calendars by clicking the calendar icons).</li>
-<li>Once you have selected the target timeframe, look at the top right-hand side of the screen above the table. There, you will find text that reads “total hours,” and should list your total time clocked-in in hours and minutes. If you are unsure of how many total hours you need for a semester, ask the Lab Coordinator.</li>
+<li>Login to your account and click on “List view” at the top of the
+page.</li>
+<li>Filter your days worked by adjusting the dates at the top left of
+the screen to encompass the current semester (either by typing in the
+relevant dates, or by using the dropdown calendars by clicking the
+calendar icons).</li>
+<li>Once you have selected the target timeframe, look at the top
+right-hand side of the screen above the table. There, you will find text
+that reads “total hours,” and should list your total time clocked-in in
+hours and minutes. If you are unsure of how many total hours you need
+for a semester, ask the Lab Coordinator.</li>
 </ol>
 </div>
 </div>
@@ -859,74 +1288,154 @@ div.tocify {
 <h1><span class="header-section-number">10</span> The Basics of Lab</h1>
 <div id="lab-meetings" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Lab Meetings</h2>
-<p>Lab meetings will take place once per week at a pre-determined time. The Lab Coordinator will choose the weekly lab meeting time based on everyone’s schedules and will try to schedule the meeting for a time when all lab members are available. Lab meeting is the most important time that the team has together every week, because it is the only time that everyone is present, and it helps everyone stay on the same page as part of working as a team. Attending lab meeting is <ins><strong>mandatory</strong></ins>.</p>
+<p>Lab meetings will take place once per week at a pre-determined time.
+The Lab Coordinator will choose the weekly lab meeting time based on
+everyone’s schedules and will try to schedule the meeting for a time
+when all lab members are available. Lab meeting is the most important
+time that the team has together every week, because it is the only time
+that everyone is present, and it helps everyone stay on the same page as
+part of working as a team. Attending lab meeting is
+<ins><strong>mandatory</strong></ins>.</p>
 <p>The lab meeting is generally divided into two sections:</p>
 <ol style="list-style-type: decimal">
-<li>The first 15–30 minutes of the meeting is reserved for lab announcements, as well as any updates or questions about the study. If you have questions or suggestions, please raise them.</li>
-<li>The second half of the meeting is reserved for an article discussion or a professional development workshop.</li>
+<li>The first 15–30 minutes of the meeting is reserved for lab
+announcements, as well as any updates or questions about the study. If
+you have questions or suggestions, please raise them.</li>
+<li>The second half of the meeting is reserved for an article discussion
+or a professional development workshop.</li>
 </ol>
 <div id="articleDiscussion" class="section level3" number="10.1.1">
-<h3><span class="header-section-number">10.1.1</span> Article Discussion</h3>
-<p>Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a peer-reviewed, empirical research article of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab. Article discussions serve several purposes:</p>
+<h3><span class="header-section-number">10.1.1</span> Article
+Discussion</h3>
+<p>Each lab meeting (with the exception of the meetings reserved for
+professional development workshops), an RA is expected to lead the
+discussion of a peer-reviewed, empirical research article of their
+choosing that is related to the interests (broadly defined) of the
+Developmental Psychopathology Lab. Article discussions serve several
+purposes:</p>
 <ul>
-<li>in the spirit of getting course credit for lab experience, article discussions provide a seminar forum for learning about science</li>
-<li>article discussions help students connect the work they are conducting in the lab to the broader scientific field</li>
-<li>they help students gain greater skill in reading and critiquing scientific articles, which helps people be more critical consumers of information in society</li>
-<li>they provide a space to explore scientific ideas and the potential practical implications of science</li>
-<li>they provide opportunities to gain skill in leading a discussion, which is an important public-speaking skill</li>
-<li>they provide opportunities in learning to digest complex concepts and to communicate them in a way that is understandable and relevant to others</li>
-<li>they provide a nonjudgmental space to get out of your comfort zone and to grow intellectually and professionally</li>
+<li>in the spirit of getting course credit for lab experience, article
+discussions provide a seminar forum for learning about science</li>
+<li>article discussions help students connect the work they are
+conducting in the lab to the broader scientific field</li>
+<li>they help students gain greater skill in reading and critiquing
+scientific articles, which helps people be more critical consumers of
+information in society</li>
+<li>they provide a space to explore scientific ideas and the potential
+practical implications of science</li>
+<li>they provide opportunities to gain skill in leading a discussion,
+which is an important public-speaking skill</li>
+<li>they provide opportunities in learning to digest complex concepts
+and to communicate them in a way that is understandable and relevant to
+others</li>
+<li>they provide a nonjudgmental space to get out of your comfort zone
+and to grow intellectually and professionally</li>
 </ul>
-<p>RAs will sign up to lead discussion of an article on the Lab Meeting Article Sign-Up Sheet (shared via OneDrive or during lab meeting) during the first week of classes. If there are fewer days available than there are RAs, priority is given to newer RAs or to RAs who have had fewer opportunities to lead the discussion of an article. <strong>All lab members are expected to contribute to each discussion.</strong> The RA who is leading the discussion of the article should structure the discussion following the format below:</p>
+<p>RAs will sign up to lead discussion of an article on the Lab Meeting
+Article Sign-Up Sheet (shared via OneDrive or during lab meeting) during
+the first week of classes. If there are fewer days available than there
+are RAs, priority is given to newer RAs or to RAs who have had fewer
+opportunities to lead the discussion of an article. <strong>All lab
+members are expected to contribute to each discussion.</strong> The RA
+who is leading the discussion of the article should structure the
+discussion following the format below:</p>
 <ol style="list-style-type: decimal">
 <li>Provide a brief explanation of why you chose the article.</li>
-<li>Present a brief summary (~2–3 minutes) of the article’s main points (it is not a book report!), in which you describe the study and its key findings.</li>
-<li>Spend the majority of the time (~20–25 minutes) posing questions to elicit discussion. The questions should not be too vague (e.g., do not ask “What did you think of the methods?”), but instead should be specific and aim to elicit an interesting and critical discussion. You can also mention critiques you have, but keep it as question-oriented as possible to elicit discussion.</li>
-<li>Save time (~10 minutes) for big-picture questions pertaining to the implications of the findings for science/practice/policy/life, etc.</li>
+<li>Present a brief summary (~2–3 minutes) of the article’s main points
+(it is not a book report!), in which you describe the study and its key
+findings.</li>
+<li>Spend the majority of the time (~20–25 minutes) posing questions to
+elicit discussion. The questions should not be too vague (e.g., do not
+ask “What did you think of the methods?”), but instead should be
+specific and aim to elicit an interesting and critical discussion. You
+can also mention critiques you have, but keep it as question-oriented as
+possible to elicit discussion.</li>
+<li>Save time (~10 minutes) for big-picture questions pertaining to the
+implications of the findings for science/practice/policy/life, etc.</li>
 </ol>
 </div>
 <div id="labScribe" class="section level3" number="10.1.2">
-<h3><span class="header-section-number">10.1.2</span> Lab Meeting Scribe</h3>
-<p>An RA will be designated (usually on a volunteer basis) each semester to be the lab meeting scribe. The scribe is responsible for taking notes throughout the meeting. The scribe also sends a brief summary of the important information from the meeting to the entire team via the <code>#lab-meetings</code> channel in Slack after the lab meeting has ended. The scribe also adds the summary to the “Lab Meeting Agendas – Team” in the <a href="#onedrive">lab’s OneDrive</a>.</p>
+<h3><span class="header-section-number">10.1.2</span> Lab Meeting
+Scribe</h3>
+<p>An RA will be designated (usually on a volunteer basis) each semester
+to be the lab meeting scribe. The scribe is responsible for taking notes
+throughout the meeting. The scribe also sends a brief summary of the
+important information from the meeting to the entire team via the
+<code>#lab-meetings</code> channel in Slack after the lab meeting has
+ended. The scribe also adds the summary to the “Lab Meeting Agendas –
+Team” in the <a href="#onedrive">lab’s OneDrive</a>.</p>
 </div>
-<div id="attendance-and-absence-policies" class="section level3" number="10.1.3">
-<h3><span class="header-section-number">10.1.3</span> Attendance and Absence Policies</h3>
-<p>All members of the team are expected to attend every lab meeting. If an RA is not able to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time. They are also responsible for sending several detailed questions or comments on the article to the Lab Coordinator by the day before the meeting to help contribute to the discussion. If advanced notice is not possible, contact the Lab Coordinator as soon as you are able to and explain the absence. The RA is also responsible for reading the lab meeting agenda and summary notes after the meeting to learn what they missed.</p>
+<div id="attendance-and-absence-policies" class="section level3"
+number="10.1.3">
+<h3><span class="header-section-number">10.1.3</span> Attendance and
+Absence Policies</h3>
+<p>All members of the team are expected to attend every lab meeting. If
+an RA is not able to attend a meeting, they are responsible for letting
+the Lab Coordinator know as far in advance as possible so that the Lab
+Coordinator can work with the RA to arrange how they will make up the
+time. They are also responsible for sending several detailed questions
+or comments on the article to the Lab Coordinator by the day before the
+meeting to help contribute to the discussion. If advanced notice is not
+possible, contact the Lab Coordinator as soon as you are able to and
+explain the absence. The RA is also responsible for reading the lab
+meeting agenda and summary notes after the meeting to learn what they
+missed.</p>
 </div>
 </div>
 <div id="labCommunication" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> Lab Communication</h2>
-<p>Forms of lab communication are described below. <strong>Please use Slack for as much communication as possible!</strong> Keeping lab-related communication on Slack helps our team work most effectively and efficiently, and it saves time for the Lab Coordinator, Dr. Petersen, and your team members because it allows other RAs to answer questions and allows people to jump in to provide corrective feedback, as necessary.</p>
+<h2><span class="header-section-number">10.2</span> Lab
+Communication</h2>
+<p>Forms of lab communication are described below. <strong>Please use
+Slack for as much communication as possible!</strong> Keeping
+lab-related communication on Slack helps our team work most effectively
+and efficiently, and it saves time for the Lab Coordinator,
+Dr. Petersen, and your team members because it allows other RAs to
+answer questions and allows people to jump in to provide corrective
+feedback, as necessary.</p>
 <ol style="list-style-type: decimal">
 <li>Non-private lab-related communication (almost all communication)
 <ul>
 <li>Use Slack
 <ul>
 <li>See the <a href="#slack">Slack Checklist</a></li>
-<li>Feel free to send messages and you can notify particular people if the message is for particular people (<span class="citation">@isaac-petersen</span>).</li>
-<li>You can send pictures and attachments in Slack by using the plus sign next to the message.</li>
-<li>Slack communication can be informal! We want it to be a fun place to communicate and chat with the team. Feel free to post memes, set up lab-wide social gatherings, etc.</li>
+<li>Feel free to send messages and you can notify particular people if
+the message is for particular people (<span
+class="citation">@isaac-petersen</span>).</li>
+<li>You can send pictures and attachments in Slack by using the plus
+sign next to the message.</li>
+<li>Slack communication can be informal! We want it to be a fun place to
+communicate and chat with the team. Feel free to post memes, set up
+lab-wide social gatherings, etc.</li>
 </ul></li>
 </ul></li>
 <li>Private lab-related communication
 <ul>
-<li>Send to: <a href="mailto:devpsy-lab@uiowa.edu" class="email">devpsy-lab@uiowa.edu</a>
+<li>Send to: <a href="mailto:devpsy-lab@uiowa.edu"
+class="email">devpsy-lab@uiowa.edu</a>
 <ul>
-<li>Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.</li>
+<li>Examples: Sending your course schedule for the upcoming semester,
+notifying Lab Coordinator of an absence due to personal reasons/illness,
+asking Lab Coordinator for a reference, responding to an email that the
+Lab Coordinator sent to you.</li>
 </ul></li>
 </ul></li>
-<li>Communication directed specifically to Dr. Petersen rather than to the lab (e.g., to set up a meeting to discuss career goals, honors projects, etc.)
+<li>Communication directed specifically to Dr. Petersen rather than to
+the lab (e.g., to set up a meeting to discuss career goals, honors
+projects, etc.)
 <ul>
-<li>Send email to <a href="https://psychology.uiowa.edu/people/isaac-petersen">Dr. Petersen</a></li>
+<li>Send email to <a
+href="https://psychology.uiowa.edu/people/isaac-petersen">Dr. Petersen</a></li>
 </ul></li>
-<li>Communication directed to the past members of the lab (e.g., to setup a social gathering)
+<li>Communication directed to the past members of the lab (e.g., to
+setup a social gathering)
 <ul>
 <li>Use Facebook
 <ul>
 <li>See the <a href="#socialMedia">Social Media Checklist</a></li>
 </ul></li>
 </ul></li>
-<li>Communication directed to the public (e.g., to communicate results from a published study)
+<li>Communication directed to the public (e.g., to communicate results
+from a published study)
 <ul>
 <li>Use Twitter and Instagram
 <ul>
@@ -935,19 +1444,42 @@ div.tocify {
 </ul></li>
 </ol>
 <div id="resolvingConflicts" class="section level3" number="10.2.1">
-<h3><span class="header-section-number">10.2.1</span> Resolving Conflicts and Personnel Issues</h3>
-<p>It is inappropriate and unprofessional to gossip about lab personnel (i.e., complaining about someone behind their back to other RAs). If someone gossips to you about concerns/conflicts/complaints with lab personnel, please ask them to deal with the person directly, or to address the issue directly with the chain of command (see below).</p>
-<p>If the conflict/personnel issue is with a peer, the first step is to attempt to address the problem with your peer directly. If the conflict/personnel issue is with a peer, and you are unable to resolve the problem or you feel that this first step would be too difficult or uncomfortable for you, then please bring this to the attention of your direct supervisor (graduate student, postdoctoral student, or Lab Coordinator). If the conflict/personnel issue is with your direct supervisor and you are unable to resolve the problem or you feel that this first step would be too difficult or uncomfortable for you, then please bring this to the attention of your main supervisor (Dr. Petersen). Please express personnel concerns directly (in person or by email). Do not put personnel grievances in lab reports. We encourage you to express concerns to the chain of command if you feel the issues impair your or the team’s functioning.</p>
+<h3><span class="header-section-number">10.2.1</span> Resolving
+Conflicts and Personnel Issues</h3>
+<p>It is inappropriate and unprofessional to gossip about lab personnel
+(i.e., complaining about someone behind their back to other RAs). If
+someone gossips to you about concerns/conflicts/complaints with lab
+personnel, please ask them to deal with the person directly, or to
+address the issue directly with the chain of command (see below).</p>
+<p>If the conflict/personnel issue is with a peer, the first step is to
+attempt to address the problem with your peer directly. If the
+conflict/personnel issue is with a peer, and you are unable to resolve
+the problem or you feel that this first step would be too difficult or
+uncomfortable for you, then please bring this to the attention of your
+direct supervisor (graduate student, postdoctoral student, or Lab
+Coordinator). If the conflict/personnel issue is with your direct
+supervisor and you are unable to resolve the problem or you feel that
+this first step would be too difficult or uncomfortable for you, then
+please bring this to the attention of your main supervisor
+(Dr. Petersen). Please express personnel concerns directly (in person or
+by email). Do not put personnel grievances in lab reports. We encourage
+you to express concerns to the chain of command if you feel the issues
+impair your or the team’s functioning.</p>
 </div>
 <div id="slack" class="section level3" number="10.2.2">
 <h3><span class="header-section-number">10.2.2</span> Slack</h3>
 <div id="getting-started" class="section level4" number="10.2.2.1">
-<h4><span class="header-section-number">10.2.2.1</span> Getting Started</h4>
+<h4><span class="header-section-number">10.2.2.1</span> Getting
+Started</h4>
 <ol style="list-style-type: decimal">
 <li>Download the “Slack” App to your mobile phone (it is free!)</li>
-<li>You can also access Slack on any internet browser (<a href="https://slack.com" class="uri">https://slack.com</a>)</li>
-<li>Create an account with your university e-mail and a password you will remember</li>
-<li>Enter the workspace URL “devpsy-lab.slack.com” (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding)</li>
+<li>You can also access Slack on any internet browser (<a
+href="https://slack.com" class="uri">https://slack.com</a>)</li>
+<li>Create an account with your university e-mail and a password you
+will remember</li>
+<li>Enter the workspace URL “devpsy-lab.slack.com” (the Lab Coordinator
+should have added you to the workspace prior to your start in lab as
+part of your onboarding)</li>
 <li>Make sure to add yourself to all the following “Channels”</li>
 </ol>
 <ul>
@@ -970,147 +1502,315 @@ div.tocify {
 </ul>
 </div>
 <div id="howwhen-to-use" class="section level4" number="10.2.2.2">
-<h4><span class="header-section-number">10.2.2.2</span> How/When to Use</h4>
+<h4><span class="header-section-number">10.2.2.2</span> How/When to
+Use</h4>
 <ol style="list-style-type: decimal">
-<li>Channels: All channels are a certain category or topic of conversation so that it is easier to locate previous discussions relevant to that topic
+<li>Channels: All channels are a certain category or topic of
+conversation so that it is easier to locate previous discussions
+relevant to that topic
 <ol style="list-style-type: lower-alpha">
-<li>To notify specific people in your message, type “@” and then enter in their username before typing your message (usernames are located on the left side of the screen)
+<li>To notify specific people in your message, type “@” and then enter
+in their username before typing your message (usernames are located on
+the left side of the screen)
 <ol style="list-style-type: decimal">
 <li><code>@everyone</code> notifies everyone (only admins can use)</li>
 <li><code>@channel</code> notifies everyone in the channel</li>
 </ol></li>
-<li><code>#random</code>: Use this channel if you are running late to lab, or if you have a question or comment that does not fall within the other channel categories; can also put memes or random funny things here!</li>
+<li><code>#random</code>: Use this channel if you are running late to
+lab, or if you have a question or comment that does not fall within the
+other channel categories; can also put memes or random funny things
+here!</li>
 </ol></li>
-<li>Attachments: Send pictures and attachments by clicking the plus sign next to the message</li>
-<li>Direct Messages: Do not use direct messaging in Slack. If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on <a href="#labCommunication">Lab Communication</a> for more information)</li>
+<li>Attachments: Send pictures and attachments by clicking the plus sign
+next to the message</li>
+<li>Direct Messages: Do not use direct messaging in Slack. If you need
+to communicate privately with the Lab Coordinator or Dr. Petersen,
+please use email (see the section on <a href="#labCommunication">Lab
+Communication</a> for more information)</li>
 </ol>
-<p>Slack channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic. For example, the <code>#coding</code> channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between. Think of each channel as a “theme” rather than a specific “topic of conversation.” You should simply choose the channel that seems most relevant to the question or comment you want to share and have at it! It is important to remember that, even though different team members are assigned different tasks within the lab, it does not mean that it is any less important for the whole team to stay informed about the general projects of the lab. We are all collaborating on the same project, on the same team, and working toward the same general goals.</p>
+<p>Slack channels are meant to organize conversations within broad
+overarching topics, but within each channel we want diverse conversation
+to span the gamut of each topic. For example, the <code>#coding</code>
+channel should include conversations ranging from discrepancies between
+two coders on a given task, to technical discussions about Datavyu, to
+general questions to the Lab Coordinator and Dr. Petersen about the
+constructs measured in a given task, to all of the procedures, systems,
+and programs in between. Think of each channel as a “theme” rather than
+a specific “topic of conversation.” You should simply choose the channel
+that seems most relevant to the question or comment you want to share
+and have at it! It is important to remember that, even though different
+team members are assigned different tasks within the lab, it does not
+mean that it is any less important for the whole team to stay informed
+about the general projects of the lab. We are all collaborating on the
+same project, on the same team, and working toward the same general
+goals.</p>
 </div>
 </div>
 <div id="trello" class="section level3" number="10.2.3">
 <h3><span class="header-section-number">10.2.3</span> Trello</h3>
 <ol style="list-style-type: decimal">
-<li>Log on to <a href="https://trello.com" class="uri">https://trello.com</a> using your username and password</li>
-<li>On the “RAs” Board, there are categories of items that are performed in our lab
+<li>Log on to <a href="https://trello.com"
+class="uri">https://trello.com</a> using your username and password</li>
+<li>On the “RAs” Board, there are categories of items that are performed
+in our lab
 <ol style="list-style-type: lower-alpha">
 <li>Each of these categories has a list of cards with a title
 <ol style="list-style-type: lower-roman">
-<li>Within these cards, you can comment on what needs to be done, ideas for the titled item, etc.</li>
-<li>Members, due dates, attachments can also be added; to assign a person to work on a card, add them to members</li>
-<li>To notify specific people in comments, use <code>@username</code></li>
+<li>Within these cards, you can comment on what needs to be done, ideas
+for the titled item, etc.</li>
+<li>Members, due dates, attachments can also be added; to assign a
+person to work on a card, add them to members</li>
+<li>To notify specific people in comments, use
+<code>@username</code></li>
 </ol></li>
-<li>If you would like to add a card to the desired category, you can go to the bottom of the column and click on ‘Add a card…’</li>
+<li>If you would like to add a card to the desired category, you can go
+to the bottom of the column and click on ‘Add a card…’</li>
 </ol></li>
-<li>When working on a card, move the specific card to the ‘Doing’ category, so that others know you are working on that task</li>
-<li>When the task is completed, and does not need to be followed up by another person, move the card from ‘Doing’ to ‘Done’</li>
-<li>When you are assigned a task in Trello that requires another labmate to follow-up:
+<li>When working on a card, move the specific card to the ‘Doing’
+category, so that others know you are working on that task</li>
+<li>When the task is completed, and does not need to be followed up by
+another person, move the card from ‘Doing’ to ‘Done’</li>
+<li>When you are assigned a task in Trello that requires another labmate
+to follow-up:
 <ol style="list-style-type: lower-alpha">
 <li>The 1st person is assigned task (member 1 icon shows on card)</li>
 <li>1st (member 1) completes task (i.e., enters questionnaire)</li>
 <li>1st assigns a reviewer (member 2 icon shows on card)</li>
-<li>Reviewer makes comments and removes their icon—signaling to 1st that task is ready for updates</li>
+<li>Reviewer makes comments and removes their icon—signaling to 1st that
+task is ready for updates</li>
 <li>1st reads comments and makes updates</li>
 <li>1st assigns final reviewer (member 3 icon shows on card)</li>
-<li>Final reviewer makes additional comments and removes icon (signaling member 1 that changes have been reviewed and is ready for final updates) OR determines that task is complete and moves card to <ins><strong>DONE</strong></ins> column.</li>
+<li>Final reviewer makes additional comments and removes icon (signaling
+member 1 that changes have been reviewed and is ready for final updates)
+OR determines that task is complete and moves card to
+<ins><strong>DONE</strong></ins> column.</li>
 </ol></li>
 </ol>
 </div>
 <div id="socialMedia" class="section level3" number="10.2.4">
 <h3><span class="header-section-number">10.2.4</span> Social Media</h3>
-<p>The purpose of our social media pages is to inform the outside world of our research. One to two members of the <a href="#dataSpecialist">Data Specialist team</a> are responsible for creating posts. All posts must be approved by the Lab Coordinator.</p>
+<p>The purpose of our social media pages is to inform the outside world
+of our research. One to two members of the <a
+href="#dataSpecialist">Data Specialist team</a> are responsible for
+creating posts. All posts must be approved by the Lab Coordinator.</p>
 <div id="facebook" class="section level4" number="10.2.4.1">
 <h4><span class="header-section-number">10.2.4.1</span> Facebook</h4>
 <p><strong>Private Facebook Group</strong></p>
-<p>The purpose of this private group is to communicate with past and future RAs, as well as to organize fun activities outside of lab.</p>
+<p>The purpose of this private group is to communicate with past and
+future RAs, as well as to organize fun activities outside of lab.</p>
 <ol style="list-style-type: decimal">
-<li>Log on to <a href="https://www.facebook.com" class="uri">https://www.facebook.com</a> using your email and password</li>
+<li>Log on to <a href="https://www.facebook.com"
+class="uri">https://www.facebook.com</a> using your email and
+password</li>
 <li>Go to ‘Groups’</li>
-<li>Click on ‘Developmental Psychopathology Lab’ (<a href="https://www.facebook.com/groups/1483289471691634" class="uri">https://www.facebook.com/groups/1483289471691634</a>)</li>
+<li>Click on ‘Developmental Psychopathology Lab’ (<a
+href="https://www.facebook.com/groups/1483289471691634"
+class="uri">https://www.facebook.com/groups/1483289471691634</a>)</li>
 <li>You will have to request permission to join the group</li>
-<li>Once you have been added to the group, you can access the discussion, the members, events, and photos shared to this group</li>
+<li>Once you have been added to the group, you can access the
+discussion, the members, events, and photos shared to this group</li>
 </ol>
 <p><strong>Public-Facing Facebook Page</strong></p>
-<p>The purpose of this page is to inform the outside world about the research, inform about changes (e.g., safety precautions, new team members) and provide updates (e.g., new research findings, conferences, grants, events in the lab).</p>
+<p>The purpose of this page is to inform the outside world about the
+research, inform about changes (e.g., safety precautions, new team
+members) and provide updates (e.g., new research findings, conferences,
+grants, events in the lab).</p>
 <ol style="list-style-type: decimal">
-<li>Log on to <a href="https://www.facebook.com" class="uri">https://www.facebook.com</a> using your email and password</li>
-<li>Like the lab page: <a href="https://www.facebook.com/DevPsyLab" class="uri">https://www.facebook.com/DevPsyLab</a></li>
+<li>Log on to <a href="https://www.facebook.com"
+class="uri">https://www.facebook.com</a> using your email and
+password</li>
+<li>Like the lab page: <a href="https://www.facebook.com/DevPsyLab"
+class="uri">https://www.facebook.com/DevPsyLab</a></li>
 </ol>
 </div>
 <div id="twitter" class="section level4" number="10.2.4.2">
 <h4><span class="header-section-number">10.2.4.2</span> Twitter</h4>
-<p>The purpose of this Twitter account is to post updates with the outside world about things we are working on in the lab. We invite everyone to follow us on this platform, so we can get the word out about what we do!</p>
+<p>The purpose of this Twitter account is to post updates with the
+outside world about things we are working on in the lab. We invite
+everyone to follow us on this platform, so we can get the word out about
+what we do!</p>
 <ol style="list-style-type: decimal">
-<li>Log on to <a href="https://twitter.com" class="uri">https://twitter.com</a> using your personal credentials</li>
+<li>Log on to <a href="https://twitter.com"
+class="uri">https://twitter.com</a> using your personal credentials</li>
 <li>Follow <code>@devpsylab</code></li>
 </ol>
 </div>
 <div id="instagram" class="section level4" number="10.2.4.3">
 <h4><span class="header-section-number">10.2.4.3</span> Instagram</h4>
-<p>The purpose of this Instagram account is to post updates with the outside world about things we are working on in the lab. We invite everyone to follow us on this platform, so we can get the word out about what we do!</p>
+<p>The purpose of this Instagram account is to post updates with the
+outside world about things we are working on in the lab. We invite
+everyone to follow us on this platform, so we can get the word out about
+what we do!</p>
 <ol style="list-style-type: decimal">
-<li>Log on to <a href="https://www.instagram.com" class="uri">https://www.instagram.com</a> using your personal credentials</li>
+<li>Log on to <a href="https://www.instagram.com"
+class="uri">https://www.instagram.com</a> using your personal
+credentials</li>
 <li>Follow <code>@dev_psy_lab</code></li>
 </ol>
 </div>
 </div>
 </div>
 <div id="lab-documentation" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Lab Documentation</h2>
-<p>We strive to maintain accurate, detailed, and step-by-step manuals or checklists for all lab procedures. Written documentation is important for many reasons, including that it facilitates training, reduces the likelihood of human error, allows us to share our processes with others, and increases replicability. If we are missing written documentation for something, please let us know and help us create a manual or checklist!</p>
-<p>Just as important as creating written documentation is using it! <a href="https://www.newyorker.com/magazine/2007/12/10/the-checklist">Checklists to remind surgeons to wash their hands significantly reduce infection rates</a>; we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists. When you are training in a new procedure, do not rely just on what other RAs tell you. Despite their best efforts to help you, RAs may sometimes describe procedures incorrectly to you, and it is important to follow what is in the manual. If something is missing, incorrect, or out-of-date in the manual, please let us know so we can fix it.</p>
+<h2><span class="header-section-number">10.3</span> Lab
+Documentation</h2>
+<p>We strive to maintain accurate, detailed, and step-by-step manuals or
+checklists for all lab procedures. Written documentation is important
+for many reasons, including that it facilitates training, reduces the
+likelihood of human error, allows us to share our processes with others,
+and increases replicability. If we are missing written documentation for
+something, please let us know and help us create a manual or
+checklist!</p>
+<p>Just as important as creating written documentation is using it! <a
+href="https://www.newyorker.com/magazine/2007/12/10/the-checklist">Checklists
+to remind surgeons to wash their hands significantly reduce infection
+rates</a>; we are doing much more complicated work than washing hands,
+so it is crucial to follow our manuals and checklists. When you are
+training in a new procedure, do not rely just on what other RAs tell
+you. Despite their best efforts to help you, RAs may sometimes describe
+procedures incorrectly to you, and it is important to follow what is in
+the manual. If something is missing, incorrect, or out-of-date in the
+manual, please let us know so we can fix it.</p>
 </div>
 <div id="onedrive" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Lab OneDrive</h2>
-<p>We have an online folder shared with the team through Office 365 OneDrive. In order to access this folder, you have to first be granted permission by Dr. Petersen or the Lab Coordinator (which should happen as part of your onboarding when you first join the lab). Once you have permission, you can access the folder here: <a href="https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive" class="uri">https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive</a></p>
+<p>We have an online folder shared with the team through Office 365
+OneDrive. In order to access this folder, you have to first be granted
+permission by Dr. Petersen or the Lab Coordinator (which should happen
+as part of your onboarding when you first join the lab). Once you have
+permission, you can access the folder here: <a
+href="https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive"
+class="uri">https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive</a></p>
 <p>This folder contains two subfolders:</p>
 <ol style="list-style-type: decimal">
-<li>“For RA Edit”: The documents in this folder allow for editing by all team members. This folder includes:
+<li>“For RA Edit”: The documents in this folder allow for editing by all
+team members. This folder includes:
 <ul>
-<li><code>Lab Meeting Agendas – Team.docx</code>: This is the running agenda for our weekly lab meetings. Every week, the <a href="#labScribe">lab scribe</a> will add detailed meeting notes to this document</li>
-<li><code>Lab Meeting Article Sign-Up.docx</code>: This document is used by every RA at the beginning of every semester to sign up for the day they lead the article discussion. RAs can then access it throughout the semester to check which day they are scheduled to present on, but should not alter their sign-up day without first obtaining permission from the Lab Coordinator</li>
-<li><code>Task Timing Sheet.xlsx</code>: This Excel document is used by all RAs to record their coding progress (see <code>Coding Manual</code> for more information)</li>
+<li><code>Lab Meeting Agendas – Team.docx</code>: This is the running
+agenda for our weekly lab meetings. Every week, the <a
+href="#labScribe">lab scribe</a> will add detailed meeting notes to this
+document</li>
+<li><code>Lab Meeting Article Sign-Up.docx</code>: This document is used
+by every RA at the beginning of every semester to sign up for the day
+they lead the article discussion. RAs can then access it throughout the
+semester to check which day they are scheduled to present on, but should
+not alter their sign-up day without first obtaining permission from the
+Lab Coordinator</li>
+<li><code>Task Timing Sheet.xlsx</code>: This Excel document is used by
+all RAs to record their coding progress (see <code>Coding Manual</code>
+for more information)</li>
 </ul></li>
-<li>“For RA View”: The documents in this folder allow for read-only access by all team members.</li>
+<li>“For RA View”: The documents in this folder allow for read-only
+access by all team members.</li>
 </ol>
 </div>
 <div id="lab-drive" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Lab Drive</h2>
-<p><strong>#1 Rule: Never delete any documents or data without explicit permission from the Lab Coordinator, graduate students, or Dr. Petersen first.</strong></p>
-<p>If there is an old or outdated document, like an outdated checklist or an old coding form that has since been re-coded, do not delete it. You may move it to an “00-Old” folder (see <a href="#folderDesignations">Folder Designations</a> below), or, if you are unsure where it should be saved, consult your fellow lab members or the Lab Coordinator.</p>
-<div id="file-naming-conventions" class="section level3" number="10.5.1">
-<h3><span class="header-section-number">10.5.1</span> File Naming Conventions</h3>
-<p>Because the Lab Drive contains so many files across so many different tasks, TCs, and areas of the research process, it is imperative that all files are carefully named following a descriptive, standardized naming convention. <strong>All file names should be ALL lowercase, except when using the following established lab abbreviations: LV1/2, or T1/2/3/4, or TC/PC/PP/SC</strong>.</p>
+<p><strong>#1 Rule: Never delete any documents or data without explicit
+permission from the Lab Coordinator, graduate students, or Dr. Petersen
+first.</strong></p>
+<p>If there is an old or outdated document, like an outdated checklist
+or an old coding form that has since been re-coded, do not delete it.
+You may move it to an “00-Old” folder (see <a
+href="#folderDesignations">Folder Designations</a> below), or, if you
+are unsure where it should be saved, consult your fellow lab members or
+the Lab Coordinator.</p>
+<div id="file-naming-conventions" class="section level3"
+number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> File Naming
+Conventions</h3>
+<p>Because the Lab Drive contains so many files across so many different
+tasks, TCs, and areas of the research process, it is imperative that all
+files are carefully named following a descriptive, standardized naming
+convention. <strong>All file names should be ALL lowercase, except when
+using the following established lab abbreviations: LV1/2, or T1/2/3/4,
+or TC/PC/PP/SC</strong>.</p>
 <ul>
-<li>For visit-related files in “<em>Coding</em>”, “<em>Entry</em>”, and “<em>Payment</em>” folders, the file name should include: <code>TCID</code>, <code>wave</code>, and task/document type (e.g., <code>1000_36_consent</code>).</li>
-<li>For files within “<em>Coded Data</em>”, coding form files should also include which coder the form is from (e.g., <code>1000_36_grasssnow_coder1</code>).</li>
-<li>For files within “<em>Scoring</em>”, scoring form files should also include which scorer the form is from (e.g., <code>1000_36_maps_scorer1</code>).</li>
-<li>For visit-related files within “<em>Payments</em>”, file names should also indicate which visit or caregiver the receipt is from (e.g., <code>1000_36_receipt_LV1</code>, <code>1000_36_W9_SC</code>).</li>
-<li>Any IRB documents in the IRB folder (<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\IRB\</code>) that are stamped with an expiration date (e.g., recruitment materials, consents) should also indicate the year in which they are valid (e.g., <code>informedconsent_2018</code>). When these materials expire, they can be moved to the “00-Old” folder within the relevant parent folder.</li>
+<li>For visit-related files in “<em>Coding</em>”, “<em>Entry</em>”, and
+“<em>Payment</em>” folders, the file name should include:
+<code>TCID</code>, <code>wave</code>, and task/document type (e.g.,
+<code>1000_36_consent</code>).</li>
+<li>For files within “<em>Coded Data</em>”, coding form files should
+also include which coder the form is from (e.g.,
+<code>1000_36_grasssnow_coder1</code>).</li>
+<li>For files within “<em>Scoring</em>”, scoring form files should also
+include which scorer the form is from (e.g.,
+<code>1000_36_maps_scorer1</code>).</li>
+<li>For visit-related files within “<em>Payments</em>”, file names
+should also indicate which visit or caregiver the receipt is from (e.g.,
+<code>1000_36_receipt_LV1</code>, <code>1000_36_W9_SC</code>).</li>
+<li>Any IRB documents in the IRB folder
+(<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\IRB\</code>)
+that are stamped with an expiration date (e.g., recruitment materials,
+consents) should also indicate the year in which they are valid (e.g.,
+<code>informedconsent_2018</code>). When these materials expire, they
+can be moved to the “00-Old” folder within the relevant parent
+folder.</li>
 </ul>
 </div>
 <div id="folderDesignations" class="section level3" number="10.5.2">
-<h3><span class="header-section-number">10.5.2</span> Folder Designations</h3>
-<p><em>Old</em>: This file designation is used to store versions of documents that are outdated—this applies both to previous versions of active, updated documents as well as documents that are no longer in use.</p>
-<p><em>Admin</em>: This file designation is used to store miscellaneous admin-related documents (e.g., spreadsheets, checklists, etc.) that cannot logically be placed in another folder within the same parent folder. These folders are not meant to be a “junk drawer” to deposit new files, rather they are a clearly identifiable home for important files that do not have another obvious home, so they are not loose in a parent folder. If new documents are created that could logically be paired with a document in a <code>01-Admin</code> folder, then do create a new folder and move the related file from <code>01-Admin</code> into the new folder with its related documents. If a new folder needs to be created, contact the Lab Coordinator.</p>
+<h3><span class="header-section-number">10.5.2</span> Folder
+Designations</h3>
+<p><em>Old</em>: This file designation is used to store versions of
+documents that are outdated—this applies both to previous versions of
+active, updated documents as well as documents that are no longer in
+use.</p>
+<p><em>Admin</em>: This file designation is used to store miscellaneous
+admin-related documents (e.g., spreadsheets, checklists, etc.) that
+cannot logically be placed in another folder within the same parent
+folder. These folders are not meant to be a “junk drawer” to deposit new
+files, rather they are a clearly identifiable home for important files
+that do not have another obvious home, so they are not loose in a parent
+folder. If new documents are created that could logically be paired with
+a document in a <code>01-Admin</code> folder, then do create a new
+folder and move the related file from <code>01-Admin</code> into the new
+folder with its related documents. If a new folder needs to be created,
+contact the Lab Coordinator.</p>
 <p><strong>A Note About Creating New Folders:</strong></p>
-<p>The RA should ask the Lab Coordinator, Dr. Petersen, and graduate students before creating a new folder within the Lab Drive. RAs are able to create new TCID folders in their check data folders of their coding or entry task, as well as any new folders within their personal folder on the drive.</p>
+<p>The RA should ask the Lab Coordinator, Dr. Petersen, and graduate
+students before creating a new folder within the Lab Drive. RAs are able
+to create new TCID folders in their check data folders of their coding
+or entry task, as well as any new folders within their personal folder
+on the drive.</p>
 </div>
 <div id="ra-folders" class="section level3" number="10.5.3">
 <h3><span class="header-section-number">10.5.3</span> RA Folders</h3>
-<p>For every RA who joins the lab, we create two folders that are only theirs to use: their member folder and their lab report folder. Member folders and lab report folders are named using the RA’s <code>HawkID</code>.</p>
+<p>For every RA who joins the lab, we create two folders that are only
+theirs to use: their member folder and their lab report folder. Member
+folders and lab report folders are named using the RA’s
+<code>HawkID</code>.</p>
 </div>
 <div id="member-folders" class="section level3" number="10.5.4">
-<h3><span class="header-section-number">10.5.4</span> Member Folders</h3>
-<p>Member folders can be found on the lab drive here: <code>\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\</code></p>
-<p>Member folders should be used for any lab-related work (excluding lab reports). They can be accessed by anyone in lab, including other RAs, so it is not advisable to save any personal or confidential documents within a member folder. However, if you ever work on a lab-related project (e.g., recruitment material, helping to develop a new task or coding system, etc.) any relevant documents should be saved in your member folder. When RAs graduate from the lab, these folders are archived so if we ever need to go back and find documents used in previous projects we have them saved.</p>
+<h3><span class="header-section-number">10.5.4</span> Member
+Folders</h3>
+<p>Member folders can be found on the lab drive here:
+<code>\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\</code></p>
+<p>Member folders should be used for any lab-related work (excluding lab
+reports). They can be accessed by anyone in lab, including other RAs, so
+it is not advisable to save any personal or confidential documents
+within a member folder. However, if you ever work on a lab-related
+project (e.g., recruitment material, helping to develop a new task or
+coding system, etc.) any relevant documents should be saved in your
+member folder. When RAs graduate from the lab, these folders are
+archived so if we ever need to go back and find documents used in
+previous projects we have them saved.</p>
 </div>
 <div id="lab-report-folders" class="section level3" number="10.5.5">
-<h3><span class="header-section-number">10.5.5</span> Lab Report Folders</h3>
-<p>Lab report folders can be found on the lab drive here: <code>\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\</code></p>
-<p>Lab report folders can only be accessed by the RA who owns it, the Lab Coordinator, and Dr. Petersen. This is where you should save your bi-weekly lab reports throughout the semester. Each lab report folder has a subfolder named “Past Lab Reports_HawkID” which should be used to archive old lab reports—in other words, every time you save a new lab report to your root lab report folder, you should move the previous one to the “Past Lab Reports_HawkID” folder.</p>
+<h3><span class="header-section-number">10.5.5</span> Lab Report
+Folders</h3>
+<p>Lab report folders can be found on the lab drive here:
+<code>\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\</code></p>
+<p>Lab report folders can only be accessed by the RA who owns it, the
+Lab Coordinator, and Dr. Petersen. This is where you should save your
+bi-weekly lab reports throughout the semester. Each lab report folder
+has a subfolder named “Past Lab Reports_HawkID” which should be used to
+archive old lab reports—in other words, every time you save a new lab
+report to your root lab report folder, you should move the previous one
+to the “Past Lab Reports_HawkID” folder.</p>
 </div>
-<div id="lab-drive-directoryfrequently-used-folders" class="section level3" number="10.5.6">
-<h3><span class="header-section-number">10.5.6</span> Lab Drive Directory—Frequently Used Folders</h3>
+<div id="lab-drive-directoryfrequently-used-folders"
+class="section level3" number="10.5.6">
+<h3><span class="header-section-number">10.5.6</span> Lab Drive
+Directory—Frequently Used Folders</h3>
 <table>
 <colgroup>
 <col width="6%" />
@@ -1149,13 +1849,15 @@ div.tocify {
 <td align="left"></td>
 <td align="left">RAs</td>
 <td align="left">RA Lab Hours</td>
-<td align="left"><em>Folders are broken down by Semester and Year, and include RA Lab, Availability, and Weekend On-Call Schedules</em></td>
+<td align="left"><em>Folders are broken down by Semester and Year, and
+include RA Lab, Availability, and Weekend On-Call Schedules</em></td>
 </tr>
 <tr class="odd">
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">RA Task Assignments</td>
-<td align="left"><em>Folders are broken down by Semester and Year, and include Coding, EntryCheck, and Lab Cleaning Schedules</em></td>
+<td align="left"><em>Folders are broken down by Semester and Year, and
+include Coding, EntryCheck, and Lab Cleaning Schedules</em></td>
 </tr>
 <tr class="even">
 <td align="left">Studies</td>
@@ -1220,7 +1922,8 @@ div.tocify {
 <tr class="even">
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"><em>PDF text versions of video training information, by topic</em></td>
+<td align="left"><em>PDF text versions of video training information, by
+topic</em></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -1246,28 +1949,48 @@ div.tocify {
 </div>
 </div>
 <div id="lab-access-keys" class="section level2" number="10.6">
-<h2><span class="header-section-number">10.6</span> Lab Access / Keys</h2>
-<p>Sometimes when visits occur outside of normal lab hours (M–F, 9AM–5PM), the Lab Coordinator is unable to be present to open lab or lock up. In these situations, it is permissible for RAs to open or close the lab on their own (provided the Lab Coordinator has requested/approved this). When this happens, the RA can retrieve the lab key from the lockbox or from the Department. If the RA is unable to retrieve the key from the lockbox, follow the steps below:</p>
+<h2><span class="header-section-number">10.6</span> Lab Access /
+Keys</h2>
+<p>Sometimes when visits occur outside of normal lab hours (M–F,
+9AM–5PM), the Lab Coordinator is unable to be present to open lab or
+lock up. In these situations, it is permissible for RAs to open or close
+the lab on their own (provided the Lab Coordinator has
+requested/approved this). When this happens, the RA can retrieve the lab
+key from the lockbox or from the Department. If the RA is unable to
+retrieve the key from the lockbox, follow the steps below:</p>
 <ol style="list-style-type: decimal">
 <li>WHERE to get keys to open the lab:
 <ol style="list-style-type: lower-alpha">
-<li>The RA can access the key lockbox on the lab’s entry door so that all RAs assigned to help with a visit during the Lab Coordinator’s absence can access the lab
+<li>The RA can access the key lockbox on the lab’s entry door so that
+all RAs assigned to help with a visit during the Lab Coordinator’s
+absence can access the lab
 <ol style="list-style-type: lower-roman">
-<li>If the Lab Coordinator or graduate students are in the lab and their door is open, they are more than happy to lend their key to open lab doors.
+<li>If the Lab Coordinator or graduate students are in the lab and their
+door is open, they are more than happy to lend their key to open lab
+doors.
 <ol style="list-style-type: decimal">
-<li>The key lockbox passcode is changed every semester—the Lab Coordinator will provide RAs with the current passcode as needed</li>
-<li>If the key lockbox was used, the spare lab key should be returned to the key lockbox after the lab is fully locked up (see below) so that RAs on other visits can access the lab as well</li>
+<li>The key lockbox passcode is changed every semester—the Lab
+Coordinator will provide RAs with the current passcode as needed</li>
+<li>If the key lockbox was used, the spare lab key should be returned to
+the key lockbox after the lab is fully locked up (see below) so that RAs
+on other visits can access the lab as well</li>
 </ol></li>
 </ol></li>
-<li>If the RA cannot retrieve the lab key from the lockbox (for whatever reason), you can retrieve the key from Carrie Whittaker, who sits at the front desk in the PBS department main office (G60 Psychological and Brain Sciences Building)
+<li>If the RA cannot retrieve the lab key from the lockbox (for whatever
+reason), you can retrieve the key from Carrie Whittaker, who sits at the
+front desk in the PBS department main office (G60 Psychological and
+Brain Sciences Building)
 <ol style="list-style-type: lower-roman">
-<li>If lab keys were taken from the department, return to Carrie when done</li>
+<li>If lab keys were taken from the department, return to Carrie when
+done</li>
 </ol></li>
-<li>The Spare Lab Key: BAA35 = All doors to the suite (Rooms 109–119)</li>
+<li>The Spare Lab Key: BAA35 = All doors to the suite (Rooms
+109–119)</li>
 </ol></li>
 <li>HOW to Lock Up:
 <ol style="list-style-type: lower-alpha">
-<li>If you are leaving the lab and no one else is in the lab make sure to lock:
+<li>If you are leaving the lab and no one else is in the lab make sure
+to lock:
 <ol style="list-style-type: lower-roman">
 <li>All doors using key BAA35
 <ol style="list-style-type: decimal">
@@ -1278,44 +2001,69 @@ div.tocify {
 <li>Exterior door in the hallway</li>
 </ol></li>
 </ol></li>
-<li>Return keys to appropriate location—e.g., to the lockbox, to the Lab Coordinator, or to Carrie (wherever it was taken from)—and be sure to lock the lockbox.</li>
+<li>Return keys to appropriate location—e.g., to the lockbox, to the Lab
+Coordinator, or to Carrie (wherever it was taken from)—and be sure to
+lock the lockbox.</li>
 </ol></li>
 </ol>
 </div>
 <div id="phone-procedures" class="section level2" number="10.7">
-<h2><span class="header-section-number">10.7</span> Phone Procedures</h2>
+<h2><span class="header-section-number">10.7</span> Phone
+Procedures</h2>
 <ol style="list-style-type: decimal">
-<li>When the phone rings, and the Lab Coordinator is unavailable, it is the RA’s job to answer the phone.</li>
-<li>Upon answering the phone, say, “Developmental Psychopathology Lab, this is _____ [your name]”.</li>
-<li>If the person has any questions, answer them to the best of your ability
+<li>When the phone rings, and the Lab Coordinator is unavailable, it is
+the RA’s job to answer the phone.</li>
+<li>Upon answering the phone, say, “Developmental Psychopathology Lab,
+this is _____ [your name]”.</li>
+<li>If the person has any questions, answer them to the best of your
+ability
 <ol style="list-style-type: lower-alpha">
-<li>If you do not know the answer, ask one of the other RAs, the Lab Coordinator, or Dr. Petersen</li>
-<li>If you still do not know the answer, write down their question on the “While you were out” cards, and let them know that we will call them back as soon as possible</li>
+<li>If you do not know the answer, ask one of the other RAs, the Lab
+Coordinator, or Dr. Petersen</li>
+<li>If you still do not know the answer, write down their question on
+the “While you were out” cards, and let them know that we will call them
+back as soon as possible</li>
 </ol></li>
-<li>If the person is looking for the Lab Coordinator or Dr. Petersen, let them know that they are unavailable, but you can take a message if they would like.
+<li>If the person is looking for the Lab Coordinator or Dr. Petersen,
+let them know that they are unavailable, but you can take a message if
+they would like.
 <ol style="list-style-type: lower-alpha">
-<li>Write who called, and their message, on the “While you were out” cards that are next to the phone in the RA room.</li>
-<li>If they would like to call back later, and you know when they (the Lab Coordinator and Dr. Petersen) will be back, let them know when would be a good time for them to call back</li>
+<li>Write who called, and their message, on the “While you were out”
+cards that are next to the phone in the RA room.</li>
+<li>If they would like to call back later, and you know when they (the
+Lab Coordinator and Dr. Petersen) will be back, let them know when would
+be a good time for them to call back</li>
 </ol></li>
 </ol>
 </div>
 <div id="labReport" class="section level2" number="10.8">
-<h2><span class="header-section-number">10.8</span> Bi-Weekly Lab Reports</h2>
+<h2><span class="header-section-number">10.8</span> Bi-Weekly Lab
+Reports</h2>
 <p>Lab reports serve important purposes:</p>
 <ul>
-<li>they provide a channel of communication between you and Dr. Petersen</li>
-<li>they help you gain experience and practice with writing, which is important for many careers</li>
-<li>they provide an avenue for you to make suggestions that can help improve the lab and study. (Of course, you can make suggestions to the team in other ways, too.)</li>
+<li>they provide a channel of communication between you and
+Dr. Petersen</li>
+<li>they help you gain experience and practice with writing, which is
+important for many careers</li>
+<li>they provide an avenue for you to make suggestions that can help
+improve the lab and study. (Of course, you can make suggestions to the
+team in other ways, too.)</li>
 </ul>
 <p>Follow these instructions when submitting lab reports:</p>
 <ol style="list-style-type: decimal">
-<li>Lab reports are due by 5pm on Friday every other week throughout the semester.</li>
-<li>Write the lab report in Microsoft Word and save it as a <code>.docx</code> file. This is important so that Dr. Petersen can comment on the file.</li>
+<li>Lab reports are due by 5pm on Friday every other week throughout the
+semester.</li>
+<li>Write the lab report in Microsoft Word and save it as a
+<code>.docx</code> file. This is important so that Dr. Petersen can
+comment on the file.</li>
 <li>Save the reports in the “Lab Reports” folder:
 <ol style="list-style-type: lower-alpha">
 <li><code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\[YOUR HAWKID]\</code></li>
-<li>Name the lab reports so that they are ordered by date (e.g., <code>Lab Report_2017-12-31.docx</code>).</li>
-<li>When saving lab reports, please only leave the newest lab report in the main folder—your old lab reports should be moved to the “Past Lab Reports_hawkID” folder within your personal lab reports folder.</li>
+<li>Name the lab reports so that they are ordered by date (e.g.,
+<code>Lab Report_2017-12-31.docx</code>).</li>
+<li>When saving lab reports, please only leave the newest lab report in
+the main folder—your old lab reports should be moved to the “Past Lab
+Reports_hawkID” folder within your personal lab reports folder.</li>
 </ol></li>
 <li>Bi-weekly reports include:
 <ol style="list-style-type: lower-alpha">
@@ -1324,24 +2072,43 @@ div.tocify {
 <li>Questions you have</li>
 <li>Suggestions you have</li>
 </ol></li>
-<li>In general, you do not need much discussion of what specifically you worked on (2–3 sentences is fine). Dr. Petersen is most interested in what you’ve found interesting (and why), and any questions or suggestions you have.</li>
+<li>In general, you do not need much discussion of what specifically you
+worked on (2–3 sentences is fine). Dr. Petersen is most interested in
+what you’ve found interesting (and why), and any questions or
+suggestions you have.</li>
 <li>Reports should be about 1-page, double-spaced.</li>
-<li>Dr. Petersen will read and comment on your reports. Please review his comments and feel free to address anything he raised with him or with the Lab Coordinator.</li>
-<li>If you have concerns about individual(s) in lab, please let the Lab Coordinator or Dr. Petersen know directly (in person or by email). Do not put personnel grievances in lab reports.</li>
+<li>Dr. Petersen will read and comment on your reports. Please review
+his comments and feel free to address anything he raised with him or
+with the Lab Coordinator.</li>
+<li>If you have concerns about individual(s) in lab, please let the Lab
+Coordinator or Dr. Petersen know directly (in person or by email). Do
+not put personnel grievances in lab reports.</li>
 </ol>
 </div>
-<div id="tips-and-tricks-for-interacting-with-children-in-lab" class="section level2" number="10.9">
-<h2><span class="header-section-number">10.9</span> Tips and Tricks for Interacting with Children in Lab</h2>
-<div id="when-interacting-with-families-in-the-lab" class="section level3" number="10.9.1">
-<h3><span class="header-section-number">10.9.1</span> When Interacting With Families in the Lab</h3>
-<p>We strive to ensure families are as comfortable as possible in the lab. We want to be non-judgmental. Families should not feel like they are being tested. If a family feels they are being tested, they may also feel they have failed if a task does not go as expected. For example, if we instruct a parent not to let their kids touch the toys and the kid does, we leave open the possibility a family could be embarrassed.</p>
+<div id="tips-and-tricks-for-interacting-with-children-in-lab"
+class="section level2" number="10.9">
+<h2><span class="header-section-number">10.9</span> Tips and Tricks for
+Interacting with Children in Lab</h2>
+<div id="when-interacting-with-families-in-the-lab"
+class="section level3" number="10.9.1">
+<h3><span class="header-section-number">10.9.1</span> When Interacting
+With Families in the Lab</h3>
+<p>We strive to ensure families are as comfortable as possible in the
+lab. We want to be non-judgmental. Families should not feel like they
+are being tested. If a family feels they are being tested, they may also
+feel they have failed if a task does not go as expected. For example, if
+we instruct a parent not to let their kids touch the toys and the kid
+does, we leave open the possibility a family could be embarrassed.</p>
 <p>If a family asks you a question such as:</p>
-<p>“Do you ask us to stop our kids from touching the toys to see if they will do it?”</p>
+<p>“Do you ask us to stop our kids from touching the toys to see if they
+will do it?”</p>
 <p>Our response could be:</p>
-<p>“We want to simulate as close to a home and school environment as we can. We just ask you act normally.”</p>
+<p>“We want to simulate as close to a home and school environment as we
+can. We just ask you act normally.”</p>
 </div>
 <div id="how-to-give-praise" class="section level3" number="10.9.2">
-<h3><span class="header-section-number">10.9.2</span> How to Give Praise</h3>
+<h3><span class="header-section-number">10.9.2</span> How to Give
+Praise</h3>
 <p><strong>Syntax</strong>: Praise + Effort + Specific</p>
 <p><strong>Acknowledging:</strong></p>
 <ul>
@@ -1390,39 +2157,55 @@ div.tocify {
 <li>“sorting the sheep”</li>
 </ul>
 </div>
-<div id="how-to-guide-children-through-difficult-tasks" class="section level3" number="10.9.3">
-<h3><span class="header-section-number">10.9.3</span> How to Guide Children Through Difficult Tasks</h3>
+<div id="how-to-guide-children-through-difficult-tasks"
+class="section level3" number="10.9.3">
+<h3><span class="header-section-number">10.9.3</span> How to Guide
+Children Through Difficult Tasks</h3>
 <div id="dos" class="section level4" number="10.9.3.1">
 <h4><span class="header-section-number">10.9.3.1</span> DOs</h4>
 <p>The following are “Do”s when working with children in the lab:</p>
 <ul>
 <li>Build rapport early
 <ul>
-<li>Use comments and compliments more than questions; questions can be perceived as commands</li>
-<li>Comment on things they like (e.g., their shoes, hair, shirt, favorite superhero)</li>
-<li>For anxious children: they will know you are safe by judging their parents’ cues, so for an anxious/clingy child, first build rapport with parent and then it will be easier to build rapport with child after they know you’re safe</li>
+<li>Use comments and compliments more than questions; questions can be
+perceived as commands</li>
+<li>Comment on things they like (e.g., their shoes, hair, shirt,
+favorite superhero)</li>
+<li>For anxious children: they will know you are safe by judging their
+parents’ cues, so for an anxious/clingy child, first build rapport with
+parent and then it will be easier to build rapport with child after they
+know you’re safe</li>
 </ul></li>
-<li>Make sure the chair is not too big for the child (i.e., their feet solidly reach the floor)</li>
+<li>Make sure the chair is not too big for the child (i.e., their feet
+solidly reach the floor)</li>
 <li>Make it into a game!</li>
-<li>Use high positivity and energy: be like a “preschool teacher on crack” (in EEG especially)
+<li>Use high positivity and energy: be like a “preschool teacher on
+crack” (in EEG especially)
 <ul>
 <li>Both in terms of verbal AND nonverbal techniques</li>
 </ul></li>
 <li>Focus on the child rather than the script in the EEG visit
 <ul>
-<li>What you say matters less than <em>how</em> you say it (as long as you correctly explain the rules)</li>
+<li>What you say matters less than <em>how</em> you say it (as long as
+you correctly explain the rules)</li>
 </ul></li>
-<li>If the child is not doing what you want, focus on what you expect them to do instead of what you do not want them to do
+<li>If the child is not doing what you want, focus on what you expect
+them to do instead of what you do not want them to do
 <ul>
-<li>“Here, hold this toy” or “Keep your hands on the table” instead of “Don’t touch the…”</li>
+<li>“Here, hold this toy” or “Keep your hands on the table” instead of
+“Don’t touch the…”</li>
 </ul></li>
-<li>Use specific praise (“Nice job sitting so still!”) rather than general praise (“Nice job!”)</li>
+<li>Use specific praise (“Nice job sitting so still!”) rather than
+general praise (“Nice job!”)</li>
 <li>Praise effort, not outcome
 <ul>
-<li>“Thank you for trying so hard on these” instead of “Nice job answering these”</li>
+<li>“Thank you for trying so hard on these” instead of “Nice job
+answering these”</li>
 </ul></li>
-<li>Use distraction and redirection (e.g., talking to the child about the movie when putting on the EEG net)</li>
-<li>Model appropriate behavior (sit and watch the screen during the task)</li>
+<li>Use distraction and redirection (e.g., talking to the child about
+the movie when putting on the EEG net)</li>
+<li>Model appropriate behavior (sit and watch the screen during the
+task)</li>
 <li>Give them choices we’re okay with
 <ul>
 <li>“Would you rather wear the red cape or the blue cape?”</li>
@@ -1438,13 +2221,18 @@ div.tocify {
 <h4><span class="header-section-number">10.9.3.2</span> DON’Ts</h4>
 <p>The following are “Don’t”s when working with children in the lab:</p>
 <ul>
-<li>Ask commands in the form of a question (“Can you sit up in your chair?”)
+<li>Ask commands in the form of a question (“Can you sit up in your
+chair?”)
 <ul>
-<li>Instead: Be polite but firm. (“Sit up in your chair” or “Please sit up in your chair” or “Let’s sit up in your chair.”)</li>
+<li>Instead: Be polite but firm. (“Sit up in your chair” or “Please sit
+up in your chair” or “Let’s sit up in your chair.”)</li>
 </ul></li>
-<li>Frame things in the negative (or the absence of negative)—i.e., do not provide reassurance (“It’s going to be okay” or “It’s not going to hurt.”)
+<li>Frame things in the negative (or the absence of negative)—i.e., do
+not provide reassurance (“It’s going to be okay” or “It’s not going to
+hurt.”)
 <ul>
-<li>Instead: frame things in the positive (“Let’s put on the special ocean cap to be just like Jamie so we can play the fun games!”)</li>
+<li>Instead: frame things in the positive (“Let’s put on the special
+ocean cap to be just like Jamie so we can play the fun games!”)</li>
 </ul></li>
 <li>Ask yes/no questions to “no birds”
 <ul>
@@ -1452,48 +2240,77 @@ div.tocify {
 </ul></li>
 <li>Focus on the child’s distress and/or apologize
 <ul>
-<li>Instead: Distract, redirect, and be positive—children respond to your verbal and nonverbal cues!</li>
+<li>Instead: Distract, redirect, and be positive—children respond to
+your verbal and nonverbal cues!</li>
 </ul></li>
 </ul>
 </div>
 </div>
 </div>
 <div id="participant-payment" class="section level2" number="10.10">
-<h2><span class="header-section-number">10.10</span> Participant Payment</h2>
+<h2><span class="header-section-number">10.10</span> Participant
+Payment</h2>
 <div id="rules" class="section level3" number="10.10.1">
 <h3><span class="header-section-number">10.10.1</span> Rules</h3>
 <ol style="list-style-type: decimal">
-<li>Cash is the preferred method of payment (lab participants/PC only)</li>
-<li>Checks will be arranged as compensation for PP and SC when they complete the online questionnaire</li>
-<li>Participants will be compensated according to the escalating payment schedule</li>
+<li>Cash is the preferred method of payment (lab participants/PC
+only)</li>
+<li>Checks will be arranged as compensation for PP and SC when they
+complete the online questionnaire</li>
+<li>Participants will be compensated according to the escalating payment
+schedule</li>
 <li>Participants/PCs may be compensated for parking</li>
-<li>Payment to PP and SC only processed after the questionnaire is verified as completed</li>
-<li>All payment documents must include TCID, Wave, and date of service.</li>
-<li>No documents should ever contain participant SSN’s (unnecessary for our level of compensation)</li>
+<li>Payment to PP and SC only processed after the questionnaire is
+verified as completed</li>
+<li>All payment documents must include TCID, Wave, and date of
+service.</li>
+<li>No documents should ever contain participant SSN’s (unnecessary for
+our level of compensation)</li>
 </ol>
 </div>
-<div id="payment-in-cash-issued-to-pcparticipant-in-the-laboratory" class="section level3" number="10.10.2">
-<h3><span class="header-section-number">10.10.2</span> Payment in Cash Issued to PC/Participant in the Laboratory</h3>
+<div id="payment-in-cash-issued-to-pcparticipant-in-the-laboratory"
+class="section level3" number="10.10.2">
+<h3><span class="header-section-number">10.10.2</span> Payment in Cash
+Issued to PC/Participant in the Laboratory</h3>
 <ul>
-<li>Each day, the Lab Coordinator will place individual payments in sealed envelopes with the TCID and Wave labeled on the envelope. This envelope will only include compensation for the lab session in which they participate, not compensation for parking.</li>
-<li>A separate envelope with exactly $10 in $1 bills will be kept in the file drawer where the locked cashbox resides. This money will be designated for parking compensation. If this cash is added to the participant’s compensation on a given day, the TCID, date, and amount needs to be written on the extra cash envelope, and this amount should be reflected on payment receipts.</li>
-<li>After payment has been made, relevant data will be entered in the Excel spreadsheet ledger (in the payments folder in on the lab drive). The Lab Coordinator is responsible for entering cash data in the ledger.</li>
-<li>Each participant and the RA will sign a payment receipt form confirming that they received payment. Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.</li>
+<li>Each day, the Lab Coordinator will place individual payments in
+sealed envelopes with the TCID and Wave labeled on the envelope. This
+envelope will only include compensation for the lab session in which
+they participate, not compensation for parking.</li>
+<li>A separate envelope with exactly $10 in $1 bills will be kept in the
+file drawer where the locked cashbox resides. This money will be
+designated for parking compensation. If this cash is added to the
+participant’s compensation on a given day, the TCID, date, and amount
+needs to be written on the extra cash envelope, and this amount should
+be reflected on payment receipts.</li>
+<li>After payment has been made, relevant data will be entered in the
+Excel spreadsheet ledger (in the payments folder in on the lab drive).
+The Lab Coordinator is responsible for entering cash data in the
+ledger.</li>
+<li>Each participant and the RA will sign a payment receipt form
+confirming that they received payment. Receipt must include TCID/Wave,
+data of service, amount distributed, and signatures of both participant
+and RA handling payment.</li>
 </ul>
 </div>
 </div>
 </div>
 <div id="organizationalChart" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Lab Organizational Chart</h1>
+<h1><span class="header-section-number">11</span> Lab Organizational
+Chart</h1>
 <div class="figure">
 <img src="images/labOrgChart.png" alt="" />
 <p class="caption">Lab Organizational Chart</p>
 </div>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p>Let us know if you perceive any “unwritten rules.” We try to limit implicit (“unspoken”) rules to the extent possible. So-called “unspoken rules” should either be made explicit or they should be removed entirely.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Let us know if you perceive any “unwritten rules.” We
+try to limit implicit (“unspoken”) rules to the extent possible.
+So-called “unspoken rules” should either be made explicit or they should
+be removed entirely.<a href="#fnref1"
+class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 

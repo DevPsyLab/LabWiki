@@ -13,7 +13,7 @@
 
 <title>Lab Expectations for Lab Staff</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -476,7 +469,8 @@ div.tocify {
 <li>Behavioral coding from video</li>
 <li>Supervision of research assistants</li>
 <li>Making lab space warm, welcoming, and child and family friendly</li>
-<li>Quality control and ensuring high-quality and efficient procedures</li>
+<li>Quality control and ensuring high-quality and efficient
+procedures</li>
 <li>Attending and contributing at lab meeting</li>
 </ul>
 </div>
@@ -484,23 +478,40 @@ div.tocify {
 <h1><span class="header-section-number">2</span> Your Schedule</h1>
 <p>Here are the expectations regarding your schedule:</p>
 <ul>
-<li>You are in the office for your designated hours per week that are regularly scheduled between 9am–5pm Monday through Friday.</li>
-<li>You may have to work outside those hours (early mornings/evenings/weekends) for the purpose of running participants.</li>
-<li>You get approval from me for any deviations from this schedule (working outside those hours, working more than your designated hours, etc.), and update your schedule accordingly in the online calendar.</li>
-<li>You will log all hours worked using your Employee Self Service and submit them to the Lab Coordinator</li>
+<li>You are in the office for your designated hours per week that are
+regularly scheduled between 9am–5pm Monday through Friday.</li>
+<li>You may have to work outside those hours (early
+mornings/evenings/weekends) for the purpose of running
+participants.</li>
+<li>You get approval from me for any deviations from this schedule
+(working outside those hours, working more than your designated hours,
+etc.), and update your schedule accordingly in the online calendar.</li>
+<li>You will log all hours worked using your Employee Self Service and
+submit them to the Lab Coordinator</li>
 <li>The position involves fully in-person work.</li>
-<li>You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.</li>
+<li>You let me and the relevant team members know by Slack if you will
+not be able to make it in for your regularly scheduled hours.</li>
 <li>All information that is team relevant should be in Slack</li>
-<li>Personal communication (e.g., asking for time off) may be emailed</li>
-<li>You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).</li>
-<li>You keep your schedule in the online calendar up-to-date with any changes.</li>
-<li>You respond to team members promptly by email, Slack, or in person (within one business day).</li>
+<li>Personal communication (e.g., asking for time off) may be
+emailed</li>
+<li>You let me and the relevant team members know in person or by Slack
+if you are leaving the office (running lab errands, etc.).</li>
+<li>You keep your schedule in the online calendar up-to-date with any
+changes.</li>
+<li>You respond to team members promptly by email, Slack, or in person
+(within one business day).</li>
 </ul>
 </div>
 <div id="signature" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Signature</h1>
-<p>I have read and understand the above expectations, in addition to the expectations outlined in the <a href="manual.html">lab manual</a> and the section on <a href="expectations-everyone.html">expectations for everyone in the lab</a>. I agree to meet these expectations and to ask Dr. Petersen if I need clarification on any of the expectations and systems of lab.</p>
-<p>Staff Member’s Signature _________________________________ Date ____________</p>
+<p>I have read and understand the above expectations, in addition to the
+expectations outlined in the <a href="manual.html">lab manual</a> and
+the section on <a href="expectations-everyone.html">expectations for
+everyone in the lab</a>. I agree to meet these expectations and to ask
+Dr. Petersen if I need clarification on any of the expectations and
+systems of lab.</p>
+<p>Staff Member’s Signature _________________________________ Date
+____________</p>
 </div>
 
 <div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIEV4cGVjdGF0aW9ucyBmb3IgTGFiIFN0YWZmIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGVycm9yID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGNvbW1lbnQgPSAiIikKYGBgCgojIER1dGllcwoKRHV0aWVzIGZvciBsYWIgc3RhZmYgaW5jbHVkZSB0aGUgZm9sbG93aW5nOgoKLSBQYXJ0aWNpcGFudCByZWNydWl0bWVudAotIFBhcnRpY2lwYW50IHNjaGVkdWxpbmcKLSBMb25naXR1ZGluYWwgdHJhY2tpbmcgYW5kIHJldGVudGlvbiBvZiBwYXJ0aWNpcGFudHMKLSBEYXRhIGNvbGxlY3Rpb24KLSBEYXRhIG1hbmFnZW1lbnQKLSBCZWhhdmlvcmFsIGNvZGluZyBmcm9tIHZpZGVvCi0gU3VwZXJ2aXNpb24gb2YgcmVzZWFyY2ggYXNzaXN0YW50cwotIE1ha2luZyBsYWIgc3BhY2Ugd2FybSwgd2VsY29taW5nLCBhbmQgY2hpbGQgYW5kIGZhbWlseSBmcmllbmRseQotIFF1YWxpdHkgY29udHJvbCBhbmQgZW5zdXJpbmcgaGlnaC1xdWFsaXR5IGFuZCBlZmZpY2llbnQgcHJvY2VkdXJlcwotIEF0dGVuZGluZyBhbmQgY29udHJpYnV0aW5nIGF0IGxhYiBtZWV0aW5nCgojIFlvdXIgU2NoZWR1bGUKCkhlcmUgYXJlIHRoZSBleHBlY3RhdGlvbnMgcmVnYXJkaW5nIHlvdXIgc2NoZWR1bGU6CgotIFlvdSBhcmUgaW4gdGhlIG9mZmljZSBmb3IgeW91ciBkZXNpZ25hdGVkIGhvdXJzIHBlciB3ZWVrIHRoYXQgYXJlIHJlZ3VsYXJseSBzY2hlZHVsZWQgYmV0d2VlbiA5YW3igJM1cG0gTW9uZGF5IHRocm91Z2ggRnJpZGF5LgotIFlvdSBtYXkgaGF2ZSB0byB3b3JrIG91dHNpZGUgdGhvc2UgaG91cnMgKGVhcmx5IG1vcm5pbmdzL2V2ZW5pbmdzL3dlZWtlbmRzKSBmb3IgdGhlIHB1cnBvc2Ugb2YgcnVubmluZyBwYXJ0aWNpcGFudHMuCi0gWW91IGdldCBhcHByb3ZhbCBmcm9tIG1lIGZvciBhbnkgZGV2aWF0aW9ucyBmcm9tIHRoaXMgc2NoZWR1bGUgKHdvcmtpbmcgb3V0c2lkZSB0aG9zZSBob3Vycywgd29ya2luZyBtb3JlIHRoYW4geW91ciBkZXNpZ25hdGVkIGhvdXJzLCBldGMuKSwgYW5kIHVwZGF0ZSB5b3VyIHNjaGVkdWxlIGFjY29yZGluZ2x5IGluIHRoZSBvbmxpbmUgY2FsZW5kYXIuCi0gWW91IHdpbGwgbG9nIGFsbCBob3VycyB3b3JrZWQgdXNpbmcgeW91ciBFbXBsb3llZSBTZWxmIFNlcnZpY2UgYW5kIHN1Ym1pdCB0aGVtIHRvIHRoZSBMYWIgQ29vcmRpbmF0b3IKLSBUaGUgcG9zaXRpb24gaW52b2x2ZXMgZnVsbHkgaW4tcGVyc29uIHdvcmsuCi0gWW91IGxldCBtZSBhbmQgdGhlIHJlbGV2YW50IHRlYW0gbWVtYmVycyBrbm93IGJ5IFNsYWNrIGlmIHlvdSB3aWxsIG5vdCBiZSBhYmxlIHRvIG1ha2UgaXQgaW4gZm9yIHlvdXIgcmVndWxhcmx5IHNjaGVkdWxlZCBob3Vycy4KLSBBbGwgaW5mb3JtYXRpb24gdGhhdCBpcyB0ZWFtIHJlbGV2YW50IHNob3VsZCBiZSBpbiBTbGFjawotIFBlcnNvbmFsIGNvbW11bmljYXRpb24gKGUuZy4sIGFza2luZyBmb3IgdGltZSBvZmYpIG1heSBiZSBlbWFpbGVkCi0gWW91IGxldCBtZSBhbmQgdGhlIHJlbGV2YW50IHRlYW0gbWVtYmVycyBrbm93IGluIHBlcnNvbiBvciBieSBTbGFjayBpZiB5b3UgYXJlIGxlYXZpbmcgdGhlIG9mZmljZSAocnVubmluZyBsYWIgZXJyYW5kcywgZXRjLikuCi0gWW91IGtlZXAgeW91ciBzY2hlZHVsZSBpbiB0aGUgb25saW5lIGNhbGVuZGFyIHVwLXRvLWRhdGUgd2l0aCBhbnkgY2hhbmdlcy4KLSBZb3UgcmVzcG9uZCB0byB0ZWFtIG1lbWJlcnMgcHJvbXB0bHkgYnkgZW1haWwsIFNsYWNrLCBvciBpbiBwZXJzb24gKHdpdGhpbiBvbmUgYnVzaW5lc3MgZGF5KS4KCiMgU2lnbmF0dXJlCgpJIGhhdmUgcmVhZCBhbmQgdW5kZXJzdGFuZCB0aGUgYWJvdmUgZXhwZWN0YXRpb25zLCBpbiBhZGRpdGlvbiB0byB0aGUgZXhwZWN0YXRpb25zIG91dGxpbmVkIGluIHRoZSBbbGFiIG1hbnVhbF0obWFudWFsLmh0bWwpIGFuZCB0aGUgc2VjdGlvbiBvbiBbZXhwZWN0YXRpb25zIGZvciBldmVyeW9uZSBpbiB0aGUgbGFiXShleHBlY3RhdGlvbnMtZXZlcnlvbmUuaHRtbCkuCkkgYWdyZWUgdG8gbWVldCB0aGVzZSBleHBlY3RhdGlvbnMgYW5kIHRvIGFzayBEci4gUGV0ZXJzZW4gaWYgSSBuZWVkIGNsYXJpZmljYXRpb24gb24gYW55IG9mIHRoZSBleHBlY3RhdGlvbnMgYW5kIHN5c3RlbXMgb2YgbGFiLgoKU3RhZmYgTWVtYmVyJ3MgU2lnbmF0dXJlIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwlEYXRlIF9fX19fX19fX19fXwo=</div>

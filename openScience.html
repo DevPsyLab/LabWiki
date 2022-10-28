@@ -13,7 +13,7 @@
 
 <title>Open Science</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -466,13 +459,27 @@ div.tocify {
 
 <div id="overview" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Overview</h1>
-<p>We, as a lab, value and strive to advance the mission of <a href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315">open science</a> to improve the accessibility, reproducibility, and replicability of science. As such, all lab members are expected to conduct research transparently and to promote reproducibility. This includes, but is not limited to, pre- or co-registering studies, sharing analysis scripts and data, using version control (GitLab), submitting <a href="https://psyarxiv.com">preprints</a> when submitting a manuscript to a journal, and providing support for other labs’ attempts to replicate and reproduce our findings. Our lab’s template for projects on the Open Science Framework (OSF) is located here<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>: <a href="https://osf.io/4w9sv" class="uri">https://osf.io/4w9sv</a>.</p>
+<p>We, as a lab, value and strive to advance the mission of <a
+href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315">open
+science</a> to improve the accessibility, reproducibility, and
+replicability of science. As such, all lab members are expected to
+conduct research transparently and to promote reproducibility. This
+includes, but is not limited to, pre- or co-registering studies, sharing
+analysis scripts and data, using version control (GitLab), submitting <a
+href="https://psyarxiv.com">preprints</a> when submitting a manuscript
+to a journal, and providing support for other labs’ attempts to
+replicate and reproduce our findings. Our lab’s template for projects on
+the Open Science Framework (OSF) is located here<a href="#fn1"
+class="footnote-ref" id="fnref1"><sup>1</sup></a>: <a
+href="https://osf.io/4w9sv" class="uri">https://osf.io/4w9sv</a>.</p>
 </div>
 <div id="pre-registration" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Pre-Registration</h1>
 </div>
-<div id="sharing-data-analysis-scripts-and-research-materials" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Sharing Data, Analysis Scripts, and Research Materials</h1>
+<div id="sharing-data-analysis-scripts-and-research-materials"
+class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Sharing Data, Analysis
+Scripts, and Research Materials</h1>
 <div id="dataDictionary" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Data Dictionary</h2>
 <p>For each study, we create a Data Dictionary.</p>
@@ -480,10 +487,12 @@ div.tocify {
 <h3><span class="header-section-number">3.1.1</span> Style Guide</h3>
 <ul>
 <li>Use Roboto font size 10</li>
-<li>Use an en dash (<code>–</code>; i.e., not a hyphen) to indicate a range:
+<li>Use an en dash (<code>–</code>; i.e., not a hyphen) to indicate a
+range:
 <ul>
 <li>e.g., 1–18 (not 1-18)</li>
-<li>an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7</li>
+<li>an en dash is technically correct; in addition, spreadsheets often
+read 3-7 as March 7th, but they correctly read 3–7</li>
 </ul></li>
 </ul>
 </div>
@@ -505,19 +514,23 @@ div.tocify {
 </ul></li>
 <li>Data Type
 <ul>
-<li>the format of the values in the column (e.g., string, binary, integer, numeric, date, time, etc.)</li>
+<li>the format of the values in the column (e.g., string, binary,
+integer, numeric, date, time, etc.)</li>
 </ul></li>
 <li>Variable Type
 <ul>
-<li>whether the scale of measurement is nominal, ordinal, interval, or ratio</li>
+<li>whether the scale of measurement is nominal, ordinal, interval, or
+ratio</li>
 </ul></li>
 <li>Measurement Unit
 <ul>
-<li>the conceptual unit that is being measured (e.g., seconds, level, count)</li>
+<li>the conceptual unit that is being measured (e.g., seconds, level,
+count)</li>
 </ul></li>
 <li>Allowed Values
 <ul>
-<li>the allowed values for a variable and (if possible), what conceptual level each value corresponds to (e.g., 0 = Male; 1 = Female)</li>
+<li>the allowed values for a variable and (if possible), what conceptual
+level each value corresponds to (e.g., 0 = Male; 1 = Female)</li>
 </ul></li>
 <li>Description
 <ul>
@@ -525,7 +538,8 @@ div.tocify {
 </ul></li>
 <li>Definition
 <ul>
-<li>definitions of abbreviations, conceptual defintions of terms, mathematical definitions of how a variable is calculated, etc.</li>
+<li>definitions of abbreviations, conceptual defintions of terms,
+mathematical definitions of how a variable is calculated, etc.</li>
 </ul></li>
 <li>Notes
 <ul>
@@ -566,7 +580,8 @@ div.tocify {
 </ul></li>
 <li>time
 <ul>
-<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g., 05:24), or <code>MM:SS</code></li>
+<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g.,
+05:24), or <code>MM:SS</code></li>
 </ul></li>
 <li>date-time
 <ul>
@@ -575,7 +590,8 @@ div.tocify {
 </ul>
 </div>
 <div id="variable-types" class="section level4" number="3.1.2.2">
-<h4><span class="header-section-number">3.1.2.2</span> Variable Types</h4>
+<h4><span class="header-section-number">3.1.2.2</span> Variable
+Types</h4>
 <p>Variable Types include:</p>
 <ul>
 <li>nominal
@@ -597,7 +613,8 @@ div.tocify {
 </ul>
 </div>
 <div id="measurement-units" class="section level4" number="3.1.2.3">
-<h4><span class="header-section-number">3.1.2.3</span> Measurement Units</h4>
+<h4><span class="header-section-number">3.1.2.3</span> Measurement
+Units</h4>
 <p>Measurement Units include:</p>
 <ul>
 <li>ID
@@ -622,7 +639,8 @@ div.tocify {
 </ul></li>
 <li>ratio
 <ul>
-<li>ratio of two variables (one variable divided by another variable)</li>
+<li>ratio of two variables (one variable divided by another
+variable)</li>
 </ul></li>
 <li>USD
 <ul>
@@ -630,7 +648,8 @@ div.tocify {
 </ul></li>
 <li>option
 <ul>
-<li>categories that reflect participant’s choice among multiple options</li>
+<li>categories that reflect participant’s choice among multiple
+options</li>
 </ul></li>
 <li>location
 <ul>
@@ -658,7 +677,8 @@ div.tocify {
 </ul></li>
 <li>time
 <ul>
-<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g., 05:24), or <code>MM:SS</code></li>
+<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g.,
+05:24), or <code>MM:SS</code></li>
 </ul></li>
 <li>date-time
 <ul>
@@ -680,18 +700,34 @@ div.tocify {
 </div>
 <div id="version-control" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Version Control</h1>
-<p>We use <a href="https://research-git.uiowa.edu">GitLab</a> for version control. See our <a href="https://devpsylab.github.io/DataAnalysis/git.html">lab’s guide for using GitLab</a>. Our lab’s template for GitLab repositories is located here<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>: <a href="https://research-git.uiowa.edu/PetersenLab/Template" class="uri">https://research-git.uiowa.edu/PetersenLab/Template</a>.</p>
+<p>We use <a href="https://research-git.uiowa.edu">GitLab</a> for
+version control. See our <a
+href="https://devpsylab.github.io/DataAnalysis/git.html">lab’s guide for
+using GitLab</a>. Our lab’s template for GitLab repositories is located
+here<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>: <a
+href="https://research-git.uiowa.edu/PetersenLab/Template"
+class="uri">https://research-git.uiowa.edu/PetersenLab/Template</a>.</p>
 </div>
 <div id="preprint" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Preprint</h1>
-<p>When submitting a manuscript to a journal, also submit a preprint to <a href="https://psyarxiv.com">PsyArXiv</a>.</p>
+<p>When submitting a manuscript to a journal, also submit a preprint to
+<a href="https://psyarxiv.com">PsyArXiv</a>.</p>
 </div>
 <div id="osf" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> OSF</h1>
-<p>The <a href="https://osf.io">Open Science Framework</a> (OSF) is a website for hosting pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings. For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen. Our lab’s template for projects on the Open Science Framework (OSF) can be found here<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>: <a href="https://osf.io/4w9sv" class="uri">https://osf.io/4w9sv</a>.</p>
+<p>The <a href="https://osf.io">Open Science Framework</a> (OSF) is a
+website for hosting pre-registrations, data, analysis code,
+research-related materials, and pre-prints to improve replicability and
+reproducibility of findings. For each paper project, create a new
+repository on the OSF and add the relevant contributors, including
+Dr. Petersen. Our lab’s template for projects on the Open Science
+Framework (OSF) can be found here<a href="#fn3" class="footnote-ref"
+id="fnref3"><sup>3</sup></a>: <a href="https://osf.io/4w9sv"
+class="uri">https://osf.io/4w9sv</a>.</p>
 <div id="components" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Components</h2>
-<p>Create a component in the OSF project repository for the following components:</p>
+<p>Create a component in the OSF project repository for the following
+components:</p>
 <ul>
 <li>Pre-registration</li>
 <li>Data</li>
@@ -701,42 +737,63 @@ div.tocify {
 <li>Preprint</li>
 </ul>
 <div id="pre-registration-1" class="section level3" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Pre-registration</h3>
+<h3><span class="header-section-number">6.1.1</span>
+Pre-registration</h3>
 </div>
 <div id="data" class="section level3" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Data</h3>
-<p>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers. To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</p>
-<p><a href="https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R">https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R</a></p>
+<p>To help protect participant anonymity, it is important to anonymize
+participant IDs so their data cannot be stitched together across papers.
+To anonymize participant IDs, use the following script and change the
+seed for every paper so that a given participant gets a different
+anonymized code each time.</p>
+<p><a
+href="https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R">https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/OSF/Code%20to%20anonymize%20participant%20ID.R</a></p>
 </div>
 <div id="data-dictionary" class="section level3" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Data Dictionary</h3>
-<p>For each paper project, we export a <code>.csv</code> file with the subset of the <a href="#data-dictionary">Data Dictionary</a> variables used for that specific paper. We upload that <code>.csv</code> file to the OSF.</p>
+<h3><span class="header-section-number">6.1.3</span> Data
+Dictionary</h3>
+<p>For each paper project, we export a <code>.csv</code> file with the
+subset of the <a href="#data-dictionary">Data Dictionary</a> variables
+used for that specific paper. We upload that <code>.csv</code> file to
+the OSF.</p>
 </div>
 <div id="analysis-code" class="section level3" number="6.1.4">
 <h3><span class="header-section-number">6.1.4</span> Analysis Code</h3>
 </div>
 <div id="research-materials" class="section level3" number="6.1.5">
-<h3><span class="header-section-number">6.1.5</span> Research Materials</h3>
+<h3><span class="header-section-number">6.1.5</span> Research
+Materials</h3>
 </div>
 <div id="preprint-1" class="section level3" number="6.1.6">
 <h3><span class="header-section-number">6.1.6</span> Preprint</h3>
 </div>
 </div>
-<div id="create-view-only-links-for-anonymous-peer-review" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Create View-Only Links for Anonymous Peer Review</h2>
-<p>With your project open, go to Settings (top-right) → View-Only Links → Add. Then check “Anonymize”. Then you can share that URL.</p>
+<div id="create-view-only-links-for-anonymous-peer-review"
+class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Create View-Only
+Links for Anonymous Peer Review</h2>
+<p>With your project open, go to Settings (top-right) → View-Only Links
+→ Add. Then check “Anonymize”. Then you can share that URL.</p>
 </div>
 </div>
-<div id="adapting-open-science-to-longitudinal-research" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Adapting Open Science to Longitudinal Research</h1>
-<p>See our paper on adapting open science to longitudinal research: <a href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315" class="uri">https://onlinelibrary.wiley.com/doi/10.1002/icd.2315</a></p>
+<div id="adapting-open-science-to-longitudinal-research"
+class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Adapting Open Science
+to Longitudinal Research</h1>
+<p>See our paper on adapting open science to longitudinal research: <a
+href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315"
+class="uri">https://onlinelibrary.wiley.com/doi/10.1002/icd.2315</a></p>
 </div>
-<div class="footnotes">
+<div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p>Ask Dr. Petersen to give you access.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Ask Dr. Petersen to give you access.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Ask Dr. Petersen to give you access.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Ask Dr. Petersen to give you access.<a href="#fnref1"
+class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Ask Dr. Petersen to give you access.<a href="#fnref2"
+class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Ask Dr. Petersen to give you access.<a href="#fnref3"
+class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 

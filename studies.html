@@ -11,9 +11,9 @@
 
 
 
-<title>School Readiness Study</title>
+<title>Studies</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.17/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -210,16 +210,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -459,20 +452,33 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">School Readiness Study</h1>
+<h1 class="title toc-ignore">Studies</h1>
 
 </div>
 
 
+<p>Studies:</p>
 <ul>
-<li>School Readiness Study
+<li><a
+href="https://devpsylab.github.io/ExternalizingAssessmentProject">Externalizing
+Assessment Project</a></li>
+<li><a href="study-schoolReadinessStudy.html">School Readiness Study</a>
 <ul>
-<li>Documentation is currently on the lab drive (to be added to a repo)</li>
+<li>Documentation for the School Readiness Study is on the lab drive at
+the following location<a href="#fn1" class="footnote-ref"
+id="fnref1"><sup>1</sup></a>:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html</code></li>
 </ul></li>
-<li><a href="https://devpsylab.github.io/ExternalizingAssessmentProject">Externalizing Assessment Project</a></li>
 </ul>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Only accessible by team members.<a href="#fnref1"
+class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU2Nob29sIFJlYWRpbmVzcyBTdHVkeSIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKLSBTY2hvb2wgUmVhZGluZXNzIFN0dWR5CiAgICAtIERvY3VtZW50YXRpb24gaXMgY3VycmVudGx5IG9uIHRoZSBsYWIgZHJpdmUgKHRvIGJlIGFkZGVkIHRvIGEgcmVwbykKLSBbRXh0ZXJuYWxpemluZyBBc3Nlc3NtZW50IFByb2plY3RdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9FeHRlcm5hbGl6aW5nQXNzZXNzbWVudFByb2plY3QpCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3R1ZGllcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBlcnJvciA9IFRSVUUsCiAgICAgICAgICAgICAgICAgICAgICBjb21tZW50ID0gIiIpCmBgYAoKU3R1ZGllczoKCi0gW0V4dGVybmFsaXppbmcgQXNzZXNzbWVudCBQcm9qZWN0XShodHRwczovL2RldnBzeWxhYi5naXRodWIuaW8vRXh0ZXJuYWxpemluZ0Fzc2Vzc21lbnRQcm9qZWN0KQotIFtTY2hvb2wgUmVhZGluZXNzIFN0dWR5XShzdHVkeS1zY2hvb2xSZWFkaW5lc3NTdHVkeS5odG1sKQogICAgLSBEb2N1bWVudGF0aW9uIGZvciB0aGUgU2Nob29sIFJlYWRpbmVzcyBTdHVkeSBpcyBvbiB0aGUgbGFiIGRyaXZlIGF0IHRoZSBmb2xsb3dpbmcgbG9jYXRpb25bXjFdOgogICAgYFxcaW93YS51aW93YS5lZHVcU2hhcmVkXFJlc2VhcmNoRGF0YVxyZHNzX2l0cGV0ZXJzZW5cTGFiXFN0dWRpZXNcU2Nob29sIFJlYWRpbmVzcyBTdHVkeVxXaWtpXF9zaXRlXGluZGV4Lmh0bWxgCgpbXjFdOiBPbmx5IGFjY2Vzc2libGUgYnkgdGVhbSBtZW1iZXJzLgo=</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
