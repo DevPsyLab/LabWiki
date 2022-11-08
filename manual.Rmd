@@ -528,7 +528,7 @@ If you have questions or suggestions, please raise them.
 
 ### Article Discussion {#articleDiscussion}
 
-Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a peer-reviewed, empirical research article of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
+Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a <ins>peer-reviewed, empirical research article</ins> of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
 Article discussions serve several purposes:
 
 - in the spirit of getting course credit for lab experience, article discussions provide a seminar forum for learning about science
