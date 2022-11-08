@@ -542,6 +542,12 @@ Article discussions serve several purposes:
 RAs will sign up to lead discussion of an article on the Lab Meeting Article Sign-Up Sheet (shared via OneDrive or during lab meeting) during the first week of classes.
 If there are fewer days available than there are RAs, priority is given to newer RAs or to RAs who have had fewer opportunities to lead the discussion of an article.
 **All lab members are expected to contribute to each discussion.**
+
+By Monday of the week the article will be discussed, the RA picking the article should post the article PDF and full APA-style reference in the `#lab-meetings` channel on Slack.
+For more information on how to find and access articles, see [here](#honors.html#articles).
+For more information on APA formatting, see the resources on the lab drive:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
+
 The RA who is leading the discussion of the article should structure the discussion following the format below:
 
 1. Provide a brief explanation of why you chose the article.

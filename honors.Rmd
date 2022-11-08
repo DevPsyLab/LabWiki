@@ -104,15 +104,16 @@ Please organize all thesis-related files into subfolders within your member fold
 To access the lab drive off-campus, you will need to set up VPN.
 For instructions to set up VPN, see [here](documentation-remote.html#vpn).
 
-# Accessing Articles through the UI Libraries
+# Accessing Articles through the UI Libraries {#articles}
 
-You should be able to obtain the PDF of any article, even if it is not freely available online and the university does not provide access to the journal.
-Even if the PDF of article is not available on Google Scholar, you can easily get it through the university library system.
-First, see if the university has access to the electronic/online version of the journal by searching the name in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
-For instance, here is a search for the journal 'Developmental Neuropsychology':\
+You should be able to access many, if not most, articles using [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch).
+However, even if an article is not freely available online and the university does not provide access to the journal, you should be able to obtain the PDF of *any* scientific article.
+If the PDF of article is not available on [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch), you can easily get article PDFs through the university library system.
+First, see if the university has access to the electronic/online version of the journal by searching the name of the journal in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
+For instance, here is a search for the journal `Developmental Neuropsychology`:\
 https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&search_scope=default_scope&vid=01IOWA
 
-If the university does not have access to the journal, then you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
+If the university does not have access to the journal, you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
 
 # Working on Your Thesis
 
