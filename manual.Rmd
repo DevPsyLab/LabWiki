@@ -544,7 +544,7 @@ If there are fewer days available than there are RAs, priority is given to newer
 **All lab members are expected to contribute to each discussion.**
 
 By Monday of the week the article will be discussed, the RA picking the article should post the article PDF and full APA-style reference in the `#lab-meetings` channel on Slack.
-For more information on how to find and access articles, see [here](#honors.html#articles).
+For more information on how to find and access articles, see [here](honors.html#articles).
 For more information on APA formatting, see the resources on the lab drive:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
 
