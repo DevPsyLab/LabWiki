@@ -544,35 +544,35 @@ Mentor's Signature _________________________________	Date ____________
 | **Semester**   | **Research Task Goal(s)**                                                    |
 |----------------|------------------------------------------------------------------------------|
 | Year 1: Fall   | Form Research Advisory Committee (RAC)                                       |
-|                | Select topic for 1st year project                                            |
+|                | Select topic for 1st-year project                                            |
 |                | Background readings on topic and quantitative methods                        |
-|                | Begin writing literature review for 1st year project                         |
+|                | Begin writing literature review for 1st-year project                         |
 |                | RAC Meeting                                                                  |
 | Year 1: Spring | Complete literature review for 1st year project                              |
-|                | Begin methods and data analysis for 1st year project                         |
+|                | Begin methods and data analysis for 1st-year project                         |
 |                | RAC Meeting                                                                  |
-| Year 2: Summer | Complete analysis for 1st year project                                       |
-|                | Write-up results and discussion section for 1st year project                 |
+| Year 2: Summer | Complete analysis for 1st-year project                                       |
+|                | Write-up results and discussion section for 1st-year project                 |
 | Year 2: Fall   | 1st year project written document due (Monday after Thanksgiving)            |
 |                | RAC Meeting                                                                  |
-| Year 2: Spring | 1st year project presentation to department                                  |
-|                | Submit 1st year project for publication                                      |
+| Year 2: Spring | 1st-year project presentation to department                                  |
+|                | Submit 1st-year project for publication                                      |
 |                | Begin formulating comprehensive paper topic                                  |
 |                | RAC Meeting                                                                  |
-|                | Form Comprehensive Exam Committee                                            |
+|                | Form comprehensive exam committee                                            |
 | Year 3: Summer | Flesh out comprehensive paper topic                                          |
 |                | Write comprehensive paper proposal                                           |
-| Year 3: Fall   | Comprehensive Paper Proposal Meeting                                         |
+| Year 3: Fall   | Comprehensive paper proposal meeting                                         |
 |                | Write comprehensive paper                                                    |
-| Year 3: Spring | Turn in Comprehensive Paper Draft 1 (second Monday in February)              |
+| Year 3: Spring | Turn in comprehensive paper draft 1 (second Monday in February)              |
 |                | Receive feedback from committee (3 week turn-around)                         |
 |                | Revise and resubmit comprehensive paper (Monday before last week of classes) |
-|                | Final Comprehensive Exam Committee meeting with oral defense                 |
+|                | Final comprehensive exam committee meeting with oral defense                 |
 | Year 4: Summer | Begin work on dissertation prospectus                                        |
-| Year 4: Fall   | Form Dissertation committee                                                  |
+| Year 4: Fall   | Form dissertation committee                                                  |
 |                | Continue writing dissertation prospectus                                     |
 | Year 4: Spring | Complete dissertation prospectus                                             |
-|                | Defend Dissertation Prospectus (by spring break)                             |
+|                | Defend dissertation prospectus (by spring break)                             |
 |                | Begin dissertation research                                                  |
 | Year 5: Summer | Dissertation research                                                        |
 | Year 5: Fall   | Dissertation research                                                        |
@@ -580,12 +580,13 @@ Mentor's Signature _________________________________	Date ____________
 | Year 5: Spring | Dissertation research                                                        |
 |                | Interview for internship                                                     |
 |                | Defend dissertation                                                          |
-| Year 6: Summer | Begin Internship                                                             |
-| Year 6: Fall   | Internship                                                                   |
-| Year 6: Spring | Internship                                                                   |
+| Year 6: Summer | [Clinical students: Begin Internship]                                        |
+| Year 6: Fall   | [Clinical students: Internship]                                              |
+| Year 6: Spring | [Clinical students: Internship]                                              |
 | Year 7: Summer | Graduate with Ph.D.!                                                         |
 
 These are guideposts toward completing program requirements within a 5-year timeframe.
+The year of clinical internship is only for students in the Clinical Science area.
 As we have discussed, my expectation is that you will be engaged in research activities *beyond* those required by the program.
 
 ### Coursework Timeline {#timeline-coursework}
@@ -651,26 +652,26 @@ Note: Breadth courses can be completed with directed readings.
 |                | Interviewing practicum with Clinic Director                                                     |
 | Year 1: Spring | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
 |                | Work with advanced graduate students on assessment                                              |
-|                | Begin completing ID assessments in clinic                                                       |
+|                | Begin completing intellectual disability assessments in clinic                                  |
 |                | Interviewing practicum with Clinic Director                                                     |
-| Year 2: Summer | Continue ID assessments, begin SDS assessments                                                  |
+| Year 2: Summer | Continue intellectual disability assessments, begin SDS assessments                             |
 | Year 2: Fall   | Complete SDS and DHS assessments in Seashore Clinic                                             |
 |                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
-|                | Weekly 2nd year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
+|                | Weekly 2nd-year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 2: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Begin taking therapy cases in Seashore Clinic                                                   |
 |                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
-|                | Weekly 2nd year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
+|                | Weekly 2nd-year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 3: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 3: Fall   | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 |                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
-|                | Weekly 3rd year seminar (Exposure Therapy and other approaches)                                 |
+|                | Weekly 3rd-year seminar (Exposure Therapy and other approaches)                                 |
 | Year 3: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 |                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
-|                | Weekly 3rd year seminar (Exposure Therapy and other approaches)                                 |
+|                | Weekly 3rd-year seminar (Exposure Therapy and other approaches)                                 |
 | Year 4: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 4: Fall   | Seashore Clinic work and/or External Practicum                                                  |
