@@ -8,15 +8,15 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-# Working Together Toward Our Mission
+# Working Together Toward Our Mission {#mission}
 
 Everyone is expected to follow our [mission statements](manual.html#missionStatement), including our [internal](manual.html#missionStatement-internal) and [external](manual.html#missionStatement-external) mission statement, in addition to our [diversity statement](manual.html#diversityStatement).
 
-# Confidentiality
+# Confidentiality {#confidentiality}
 
 Everyone is expected to treat data confidentially, as described in the [Confidentiality](manual.html#confidentiality) section of the Lab Manual.
 
-# Professionalism
+# Professionalism {#professionalism}
 
 Everyone is expected to act professionally.
 This is especially critical when participants are in the lab.
@@ -24,9 +24,22 @@ When a participant is in the lab, they should not be able to hear anyone in eith
 In longitudinal research, each visit is exponentially more important than the last.
 Treating participants like royalty is not only the right thing to do, but significantly increases the likelihood of retention.
 
-# Communication
+# Communication {#communication}
 
 Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](manual.html#labCommunication) section of the Lab Manual.
+
+# Interactions with others {#interactions}
+
+We succeed (and fail) as a team.
+All lab members are expected to respect each other.
+This includes treating others with kindness and compassion, addressing others respectfully (including using appropriate titles, and people's preferred pronouns), listening when others speak, and allowing others to share their perspectives.
+This lab has a zero-tolerance policy for harassment or discrimination of any kind.
+Statements and behaviors that are demeaning or aggressive will not be tolerated.
+Likewise, lab members are also expected to respect colleagues in the Department and the University, and our participants.
+
+If another member of the lab is not complying with these policies, please first attempt to speak to the person directly.
+The APA Code of Ethics advises that this is a first step toward resolution.
+If that is not possible, appropriate, or proves ineffective (i.e., does not change behavior), please speak to Lab Coordinator or Dr. Petersen about the problem immediately.
 
 # Dress Code {#dressCode}
 
@@ -91,7 +104,7 @@ https://www.monster.com/career-advice/article/work-attire-whats-appropriate-and-
 
 ![Dress Code: Shorts](images/dressCode_shorts.png)
 
-# Role-Specific Expectations
+# Role-Specific Expectations {#roles}
 
 In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.html), [SROP students](expectations-SROP.html), [graduate students](expectations-gradStudent.html), [postdoctoral scholars](expectations-postdoc.html), the [Lab Coordinator](expectations-labCoordinator.html), and [lab staff](expectations-labStaff.html).
 

@@ -13,7 +13,7 @@ If you have questions or concerns, please talk with me about them; the document,
 I hope this document conveys the care and thoughtfulness I bring to the work we do together.
 I review this document periodically to make sure that my expectations and obligations are clear and that nothing important is forgotten.
 
-# The broad goals of my research program
+# The broad goals of my research program {#goals-myResearch}
 
 As part of my job as a professor, I am expected to write grants and initiate research that will make tangible contributions to science, the academic community, and to society.
 You will be helping me carry out—and improve—this research.
@@ -22,13 +22,13 @@ It is imperative that we implement strong scientific methods, and conduct oursel
 Dissemination of the knowledge we gain is critical to the advancement of our field.
 Thus, a primary goal of our work is publishing our findings in scientific journals.
 
-# The broad goals of mentoring
+# The broad goals of mentoring {#goals-mentoring}
 
 The goals of mentoring in this lab are for each trainee *to receive theoretical and technical training, to work productively on interesting research projects, and to best prepare themselves for their future career*.
 Thus, a major emphasis of your work will be data analysis, writing, and publishing papers in strong journals.
 Here I list some expectations to help you understand how the lab operates and how we can achieve these goals together.
 
-# What trainees can expect of me
+# What trainees can expect of me {#expectOfMe}
 
 Here are what trainees can expect of me:
 
@@ -43,7 +43,7 @@ Here are what trainees can expect of me:
 1. I will provide advice on other issues, if you choose to engage me.
 1. I will be your advocate.
 
-# What I expect of trainees
+# What I expect of trainees {#myExpectations}
 
 Here is what trainees I expect of trainees:
 
@@ -54,7 +54,7 @@ Here is what trainees I expect of trainees:
 I am ambitious and have high standards, and I expect the same from you.
 Below are more detailed descriptions of the expectations:
 
-## Research projects and training
+## Research projects and training {#researchTraining}
 
 Take advantage of your opportunity to work at a world-class university by developing and refining stellar scientific skills.
 I expect that you will learn how to plan, design, and conduct high-quality scientific research.
@@ -96,7 +96,7 @@ A piece of advice that was given to me as a graduate student that I pass onto yo
 You will know that you have found an idea that truly excites you when you find yourself thinking about it while brushing your teeth, going for walks, etc.
 Much of the important and exciting work in science happens at the ideas stage.
 
-## Data and research materials
+## Data and research materials {#dataAndResearchMaterials}
 
 Confidentiality of data is paramount.
 All hard-copy physical research data must remain in the lab.
@@ -112,7 +112,7 @@ One full set of all data must stay in the lab, with appropriate and accessible d
 Regularly back up the files on your computer using Microsoft OneDrive, which is provided by the university.
 De-identified data and analysis scripts associated with projects should be saved in the project repository of the lab's GitLab page (https://research-git.uiowa.edu/PetersenLab), which is hosted by the university and approved by our IRB.
 
-## Research ethics
+## Research ethics {#researchEthics}
 
 You should respect all ethical standards—including compliance with all university, state, and federal regulations in addition to the APA Ethics Code—as they relate to responsible conduct in research, possible conflicts of interest, privacy and human subjects research, laboratory safety, authorship, peer-review guidelines, and data ownership, reporting, and sharing.
 When ethical dilemmas or uncertainties arise, ask me and others for guidance.
@@ -131,7 +131,7 @@ Usually the earlier you inform me, the less damage there will be.
 Being frank about your mistakes will be greatly appreciated.
 However, things like intentionally faking data and intentionally covering mistakes are unacceptable and will lead to severe consequences.
 
-## Time in lab
+## Time in lab {#timeInLab}
 
 I expect you to be at work and on campus during the workday: 9ish–5ish or 8ish–4ish.
 In addition, I expect your availability to span 9–5 for scheduling meetings with me or members of the team—the same hours, generally, that the program attempts to schedule meetings.
@@ -177,7 +177,7 @@ Consult with me and notify fellow lab members in advance of any planned absences
 Please plan that if you are away, others will need to take over your responsibilities, so planning for adequate lead time and training may be necessary.
 Please discuss with me if you plan to take a summer internship or bootcamp.
 
-## Meetings
+## Meetings {#meetings}
 
 There are three types of meetings: lab meetings, group meetings, and one-on-one meetings.
 Lab meetings occur weekly.
@@ -208,7 +208,7 @@ I will be happy to meet with you as long as I do not have another obligation.
 My office and phone number is: [see [my University page](https://psychology.uiowa.edu/people/isaac-petersen)].
 My cell is: [blinded for the internet…just ask].
 
-## Open science
+## Open science {#openScience}
 
 We, as a lab, value and strive to advance the mission of [open science](https://onlinelibrary.wiley.com/doi/10.1002/icd.2315) to improve the accessibility, reproducibility, and replicability of science.
 As such, all lab members are expected to conduct research transparently and to promote reproducibility.
@@ -218,14 +218,14 @@ Our lab's template for GitLab repositories can be found here: https://research-g
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^2]: https://osf.io/4w9sv.
 Follow our [lab's guide for open science](openScience.html).
 
-## Collaborations
+## Collaborations {#collaborations}
 
 All lab members are encouraged to explore collaboration opportunities both within and outside of the lab.
 I ask trainees to (1) respect your collaborators' time and resources, and (2) inform me if you are seeking collaborations with or are collaborating with researchers (e.g., finishing your projects in your previous lab) outside of the lab.
 Trainees are expected to have a firm footing in their research progress in this lab before collaborating with outside researchers.
 I expect you to discuss order of authorship with me early on when there are potential collaborators.
 
-## Readings and resources
+## Readings and resources {#readingsResources}
 
 Trainees are expected to read foundational articles relating to the lab and to their research interests.
 Examples of foundational articles are on the lab's Google Drive folder of [primer articles](https://drive.google.com/drive/u/0/folders/1XlPW37ADfn6iCCvpt3s6VwWxOMKkjJNu)[^2].
@@ -240,7 +240,7 @@ And it includes a list of the times to block off during the semester.
 
 Data analysis guides for the lab are available here: https://devpsylab.github.io/DataAnalysis
 
-## Training
+## Training {#training}
 
 I expect you to take ownership over your educational experiences.
 Your education is your responsibility—you have the primary responsibility for the successful completion of your degree.
@@ -291,7 +291,7 @@ If there's another tool or software package that can do something easier, better
 For instance, `Python` is a free programming language that is emerging as a nice complement to `R` for statistical programming.
 No matter which software you use, you should be able to understand and explain what the analysis is doing and be able to interpret and explain the output.
 
-## Best practices
+## Best practices {#bestPractices}
 
 I expect you to follow open science practices (described above).
 I expect you to comment your code so that others can understand it (and so you can understand it when you go back to it 5+ years later).
@@ -301,7 +301,7 @@ Using version control provides many benefits: (a) it provides backups of all fil
 If you make a mistake in your code, you can easily revert to a prior version because you took snapshots (commits) of your files!
 (d) It allows you to write cleaner code because you do not need to keep all the old, "commented out" lines of code, (e) it helps with project organization; you no longer have to keep files or folders named "project_old" (or "project_2", "[project_final](https://phdcomics.com/comics/archive.php?comicid=1531)", or whatever), (f) it keeps all files for the project self-contained, which helps increase reproducibility, and (g) it allows easier collaboration with others on the project.
 
-## Other responsibilities
+## Other responsibilities {#otherResponsibilities}
 
 I expect you to be a team player, to contribute to the team, and to take a leadership role in the lab.
 Strive to be the very best lab citizen and citizen of the Department and University.
@@ -335,7 +335,7 @@ If a colloquium is given in an area in which you have a research interest, sign 
 Go up to speakers after talks, introduce yourself, and express interest in their work by asking questions.
 Networking skills are important and can often lead to job opportunities.
 
-## Career development
+## Career development {#careerDevelopment}
 
 I strongly believe that the lab grows better with each trainee achieving their career goals.
 I respect and support each trainee's career choice and understand that things can change over time.
@@ -356,7 +356,7 @@ I cannot imagine anything better.
 That said, there are not enough faculty positions for all Ph.D. graduates and it is not the best fit for everyone.
 I will work with you to find the career that is the right fit for you.
 
-## My approach to mentorship
+## My approach to mentorship {#approachToMentorship}
 
 As a clinical-developmental psychologist, I take a developmental perspective to mentorship.
 Early on in your training, I aim to provide sufficient structure and scaffolding.
@@ -385,7 +385,7 @@ I am committed to mentoring you, even after you leave my lab.
 I am committed to your education and training while you are in my lab, and to advising and guiding your career development—to the extent you wish—long after you leave.
 I will provide honest letters of evaluation for you when you request them.
 
-## Communication
+## Communication {#communication}
 
 Feel free to use Slack for brief communication with me.
 However, we do not use direct messages in Slack (see the lab manual).
@@ -436,7 +436,7 @@ Writing a speech for Kissinger was not an easy job because Kissinger was a speec
 > 
 > Kissinger then looked at Lord and nonchalantly said "Well, in that case, now I'll read it."
 
-## Lab culture
+## Lab culture {#labCulture}
 
 Within a lab environment, occasionally competitive thoughts or emotions may arise.
 This lab is not a place for competition, but collaboration.
@@ -453,7 +453,7 @@ If you have joined the lab, you have been selected among many qualified applican
 I encourage you to share your thoughts and ideas with the lab.
 Keeping them to yourself would be a disservice to the team.
 
-## Professionalism
+## Professionalism {#professionalism}
 
 Show up on time, fully prepared for meetings.
 If you will need to miss a meeting, let the relevant team members know in advance, with as much advance notice as possible.
@@ -465,14 +465,10 @@ The feedback you get from me, your colleagues, your committee members, your cour
 Do your best not to take it personally.
 We all have room to grow.
 
-## Interactions with others
+## Interactions with others {#interactions}
 
-We succeed (and fail) as a team.
 I expect all lab members to respect each other.
-This includes treating others with kindness and compassion, addressing others respectfully (e.g., using appropriate titles, pronouns), listening when others speak, and allowing others to share their perspectives.
-This lab has a zero-tolerance policy for harassment or discrimination of any kind.
-Statements and behaviors that are demeaning or aggressive will not be tolerated.
-Likewise, lab members are also expected to respect colleagues in the Department and the University, and our participants.
+For more information on how you are expected to interact with others, see the relevant section on "Interactions with Others" in the page on [Lab Expectations for Everyone](expectations-everyone.html#interactions).
 
 If another member of the lab is not complying with these policies, please first attempt to speak to the person directly.
 The APA Code of Ethics advises that this is a first step toward resolution.
@@ -481,7 +477,7 @@ Please also speak to me if you think you have an interpersonal issue with me.
 If, after having talked with me, you feel the issue will not be resolved and you want to speak to someone else to address the issue, follow the chain of command and talk to the Area Coordinator, the Director of Graduate Studies, and/or the Departmental Executive Officer.
 The chain of command is depicted in the [lab organizational chart](manual.html#organizationalChart).
 
-## Consequences of non-compliance
+## Consequences of non-compliance {#noncompliance}
 
 If I become aware of violations of our values or policies, I will discuss the matter with the person directly and in close temporal proximity to being made aware of the situation.
 I will first attempt to understand the situation, including both the behaviors and the antecedents.
@@ -489,12 +485,12 @@ I will also try to clarify expectations and provide constructive feedback around
 Discussion will center on prevention of such behaviors in the future.
 The consequences will vary based on the specific behavior, and may include consequences such as: meeting individually with me and possibly other departmental leadership, making repairs with the other party, development of a plan to monitor and correct the behavior so it does not recur, dismissal from the lab, and dismissal from the program.
 
-## Performance improvement plan
+## Performance improvement plan {#performanceImprovementPlan}
 
 In the case that your progress is unsatisfactory for an extended period, we need to discuss and implement a plan to improve your performance, which eventually will be helpful for your career plan, too.
 The performance improvement plan will likely involve closer monitoring of your progress and research activities until a predefined goal is reached (e.g., publishing a paper).
 
-## Accommodations
+## Accommodations {#accommodations}
 
 Sometimes, life events or medical/health-related issues may impact your ability to meet some of the lab expectations.
 You are encouraged to seek medical/professional help if such issues arise, even if the appointments occur during your regular lab hours.
@@ -502,7 +498,7 @@ If there are lab-related accommodations that would be helpful to you, please let
 Any deviations from the lab expectations should be approved by me or should coincide with documentation from UI Human Resources or Student Disability Services outlining alterations.
 If you have concerns about meeting your responsibilities or expectations, please talk to me.
 
-## Well-being
+## Well-being {#wellbeing}
 
 Last but not least, your well-being is very important.
 I went through the process of graduate school and understand how stressful things can be from my own experiences.
@@ -524,7 +520,7 @@ To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cl
 Successful researchers find interesting problems and fall in love with them.
 In operational terms, some Friday nights should be spent having fun out in the world, but if you aren't also spending some Friday nights having fun with your research, you're not doing the right research."
 
-# Signature
+# Signature {#signature}
 
 I have read and understand the above expectations, in addition to the expectations outlined in the [lab manual](manual.html) and the section on [expectations for everyone in the lab](expectations-everyone.html).
 I agree to meet these expectations and to ask Dr. Petersen if I need clarification on any of the expectations and systems of lab.
@@ -535,7 +531,7 @@ Mentee's Signature _________________________________	Date ____________
 
 Mentor's Signature _________________________________	Date ____________
 
-# Appendix
+# Appendix {#appendix}
 
 ## Approximate Expected Timelines {#timelines}
 
