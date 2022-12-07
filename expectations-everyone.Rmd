@@ -104,6 +104,14 @@ https://www.monster.com/career-advice/article/work-attire-whats-appropriate-and-
 
 ![Dress Code: Shorts](images/dressCode_shorts.png)
 
+# Consequences of Non-compliance {#noncompliance}
+
+If we become aware of violations of our values, policies, or expectations, Dr. Petersen and/or the Lab Coordinator will discuss the matter with the person directly and in close temporal proximity to being made aware of the situation.
+We will first attempt to understand the situation, including both the behaviors and the antecedents.
+We will also try to clarify expectations and provide constructive feedback around the specific task, behavior, interpersonal interaction, or scenario.
+Discussion will center on prevention of such behaviors in the future.
+The consequences will vary based on the specific behavior, and may include consequences such as: meeting individually with Dr. Petersen and/or the Lab Coordinator and possibly other departmental leadership, making repairs with the other party, development of a plan to monitor and correct the behavior so it does not recur, dismissal from the lab, and dismissal from the program.
+
 # Role-Specific Expectations {#roles}
 
 In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.html), [SROP students](expectations-SROP.html), [graduate students](expectations-gradStudent.html), [postdoctoral scholars](expectations-postdoc.html), the [Lab Coordinator](expectations-labCoordinator.html), and [lab staff](expectations-labStaff.html).
