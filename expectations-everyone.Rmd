@@ -1,5 +1,5 @@
 ---
-title: "Lab Expectations for Everyone"
+title: "Expectations for Everyone in Lab"
 ---
 
 ```{r setup, include = FALSE}
