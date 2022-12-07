@@ -468,7 +468,7 @@ We all have room to grow.
 ## Interactions with others {#interactions}
 
 I expect all lab members to respect each other.
-For more information on how you are expected to interact with others, see the relevant section on "Interactions with Others" in the page on [Expectations for Everyone in Lab](expectations-everyone.html#interactions).
+For more information on how you are expected to interact with others, see the relevant section on "Interactions with Others" in the page on [Expectations for Everyone in the Lab](expectations-everyone.html#interactions).
 
 If another member of the lab is not complying with these policies, please first attempt to speak to the person directly.
 The APA Code of Ethics advises that this is a first step toward resolution.
