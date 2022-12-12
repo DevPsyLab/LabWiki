@@ -1040,3 +1040,10 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
 [^1]: Let us know if you perceive any "unwritten rules."
   We try to limit implicit ("unspoken") rules to the extent possible.
   So-called "unspoken rules" should either be made explicit or they should be removed entirely.
+
+  # Signature Page
+
+  Please print, sign, and bring the below page to the lab coordinator no later than your first day in lab.
+
+  <embed src="Files/signature_page.pdf" width="1000" height="600">
+
