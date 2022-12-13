@@ -127,6 +127,6 @@ F: <= 50 attendance, or never on time, or generally failing to meet the lab expe
 
 # Signature {#signature}
 
-Please download, sign, and email the below document to the Lab Coordinator and Dr. Petersen prior to your first day in lab.
+Please download, sign, and email the below document to the Lab Coordinator (devpsy-lab@uiowa.edu) and Dr. Petersen prior to your first day in lab.
 
 <embed src="Files/signature_page.pdf" width="1000" height="600">
