@@ -129,4 +129,4 @@ F: <= 50 attendance, or never on time, or generally failing to meet the lab expe
 
 Please print, sign, and bring the below document document to the lab coordinator prior to your first day in lab
 
-<embed src="signature_page.pdf" width="1000" height="600">
+<embed src="Files/signature_page.pdf" width="1000" height="600">
