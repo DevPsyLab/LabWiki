@@ -681,3 +681,7 @@ Note: Breadth courses can be completed with directed readings.
 
 [^3]: You need to be on the VPN to access.
   You may need to contact the clinic director to get access to the Clinic Drive.
+
+# Signature
+
+<embed src="signature_page.pdf" width="1000" height="600">

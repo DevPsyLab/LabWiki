@@ -127,7 +127,6 @@ F: <= 50 attendance, or never on time, or generally failing to meet the lab expe
 
 # Signature
 
-I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html) and the expectations and systems outlined in the "[Scheduling](manual.html#scheduling)" (including "[Scheduling System Overview](manual.html#schedulingOverview)" and "[Weekend On-Call Schedule](manual.html#schedulingWeekend)") sections of the [Developmental Psychopathology Lab Manual](manual.html).
-I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
+Please print, sign, and bring the below document document to the lab coordinator prior to your first day in lab
 
-RA Signature ________________	RA Printed Name ________________ Date __________
+<embed src="signature_page.pdf" width="1000" height="600">

@@ -34,7 +34,4 @@ For information on how to use SPSS for data analysis, see [here](https://devpsyl
 
 # Signature
 
-I have read and understand the above expectations, in addition to the section on [expectations for everyone in the lab](expectations-everyone.html).
-I agree to meet these expectations and to ask the Lab Coordinator or Dr. Petersen if I need clarification on any of the expectations and systems of lab.
-
-Student Signature ________________	Student Printed Name ________________ Date __________
+<embed src="signature_page.pdf" width="1000" height="600">
