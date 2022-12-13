@@ -514,14 +514,9 @@ In operational terms, some Friday nights should be spent having fun out in the w
 
 # Signature {#signature}
 
-I have read and understand the above expectations, in addition to the expectations outlined in the [lab manual](manual.html) and the section on [expectations for everyone in the lab](expectations-everyone.html).
-I agree to meet these expectations and to ask Dr. Petersen if I need clarification on any of the expectations and systems of lab.
+Please sign and email the below document to Dr. Petersen prior to your first day in lab.
 
-Mentee's Signature _________________________________	Date ____________
-
-
-
-Mentor's Signature _________________________________	Date ____________
+<embed src="Files/signature_page.pdf" width="1000" height="600">
 
 # Appendix {#appendix}
 
@@ -681,7 +676,3 @@ Note: Breadth courses can be completed with directed readings.
 
 [^3]: You need to be on the VPN to access.
   You may need to contact the clinic director to get access to the Clinic Drive.
-
-# Signature
-
-<embed src="Files/signature_page.pdf" width="1000" height="600">

@@ -48,6 +48,8 @@ Here are the expectations regarding your schedule:
     1. What you plan to accomplish in the next week
     1. Items to discuss, including problems, recommended solutions, and questions
 
-# Signature
+# Signature {#signature}
+
+Please sign and email the below document to Dr. Petersen prior to your first day in lab.
 
 <embed src="Files/signature_page.pdf" width="1000" height="600">

@@ -125,8 +125,8 @@ C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expecta
 D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
 F: <= 50 attendance, or never on time, or generally failing to meet the lab expectations
 
-# Signature
+# Signature {#signature}
 
-Please print, sign, and bring the below document document to the lab coordinator prior to your first day in lab
+Please sign and email the below document to the Lab Coordinator and Dr. Petersen prior to your first day in lab.
 
 <embed src="Files/signature_page.pdf" width="1000" height="600">

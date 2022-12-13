@@ -10,6 +10,8 @@ knitr::opts_chunk$set(echo = TRUE,
 
 Coming soon!
 
-# Signature
+# Signature {#signature}
+
+Please sign and email the below document to Dr. Petersen prior to your first day in lab.
 
 <embed src="Files/signature_page.pdf" width="1000" height="600">
