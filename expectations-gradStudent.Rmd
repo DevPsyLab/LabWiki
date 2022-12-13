@@ -514,7 +514,7 @@ In operational terms, some Friday nights should be spent having fun out in the w
 
 # Signature {#signature}
 
-Please sign and email the below document to Dr. Petersen prior to your first day in lab.
+Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.
 
 <embed src="Files/signature_page.pdf" width="1000" height="600">
 
