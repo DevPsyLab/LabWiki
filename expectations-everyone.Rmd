@@ -28,7 +28,7 @@ Treating participants like royalty is not only the right thing to do, but signif
 
 Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](manual.html#labCommunication) section of the Lab Manual.
 
-# Interactions with others {#interactions}
+# Interactions with Others {#interactions}
 
 We succeed (and fail) as a team.
 All lab members are expected to respect each other.
@@ -40,6 +40,22 @@ Likewise, lab members are also expected to respect colleagues in the Department 
 If another member of the lab is not complying with these policies, please first attempt to speak to the person directly.
 The [APA Code of Ethics](https://www.apa.org/ethics/code) advises that this is a first step toward resolution.
 If that is not possible, appropriate, or proves ineffective (i.e., does not change behavior), please speak to Lab Coordinator or Dr. Petersen about the problem immediately.
+
+# Lab Publications and Presentations {#labPublications}
+
+Whenever you have a lab-related submission accepted for presentation or publication, please send the full APA-style reference to Dr. Petersen.
+We have a repository of lab publications on the lab drive so they can be helpful to the team:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\`
+Please upload the PDF of the poster, abstract, and/or paper to the lab repository.
+
+- conference abstracts: please add the PDF of the abstract (including title, author list, abstract, and any tables or figures) to the following location:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Conference Abstracts\`
+- conference posters: please add the PDF of the poster to the following location:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Posters\`
+- conference presentations: please add the PDF of the presentation to the following location:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Presentations\`
+- journal articles: please add the PDF of the paper to the following location:
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Papers\`
 
 # Dress Code {#dressCode}
 
