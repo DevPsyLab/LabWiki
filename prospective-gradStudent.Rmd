@@ -99,7 +99,7 @@ To make your application as strong as possible, I encourage you to:
 1. Make sure your application—including your CV, professional statement, letters of recommendation, coursework, experiences, writing sample, etc.—addresses the above [criteria used for evaluation of applications](#application-criteria).
 1. Include a writing sample in your application (separate from your professional statement).
 It is preferable for the writing sample to be an example of scientific writing (e.g., APA-style manuscript), and for you to be the sole- or lead-author.
-1. If there are weaknesses in your application (e.g., a period of poor grades), it is helpful for you to address them in your professional statement and to have your letter writers address them in their letter.
+1. If there are weaknesses in your application (e.g., a period of poor grades), it is helpful for you to address them in your professional statement and to have your (relevant) letter writers address them in their letter.
 
 # What to include in the Professional Statement as part of the application {#professional-statement}
 
