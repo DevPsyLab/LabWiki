@@ -46,15 +46,16 @@ If that is not possible, appropriate, or proves ineffective (i.e., does not chan
 Whenever you have a lab-related submission accepted for presentation or publication, please send the full APA-style reference to Dr. Petersen.
 We have a repository of lab publications on the lab drive so they can be helpful to the team:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\`
+
 Please upload the PDF of the poster, abstract, and/or paper to the lab repository.
 
-- conference abstracts: please add the PDF of the abstract (including title, author list, abstract, and any tables or figures) to the following location:
+- Conference abstracts (including for posters and presentations): please add the PDF of the abstract (including title, author list, abstract, and any tables or figures) to the following location:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Conference Abstracts\`
-- conference posters: please add the PDF of the poster to the following location:
+- Conference posters: please add the PDF of the poster to the following location:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Posters\`
-- conference presentations: please add the PDF of the presentation to the following location:
+- Conference presentations: please add the PDF of the presentation to the following location:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Presentations\`
-- journal articles: please add the PDF of the paper to the following location:
+- Journal articles: please add the PDF of the paper to the following location:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Publications\Papers\`
 
 # Dress Code {#dressCode}
