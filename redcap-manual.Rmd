@@ -278,22 +278,7 @@ For Likert scales:
 - If there is an "Other" option, code it as "9", if possible
 - If there is a "N/A" option, code it as "-999"
 
-## Editing the Data Dictionary
+## Editing the Data Dictionary {#dataDictionary}
 
 - If editing the data dictionary, do not use Excel!—Excel truncates values in cells
    - Instead, use LibreOffice with UTF-8 encoding
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
