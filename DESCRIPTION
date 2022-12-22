@@ -4,6 +4,4 @@ Version: 1.0.0
 Imports:
   rmarkdown,
   blogdown,
-  remotes,
-  digest,
-  petersenlab
+  remotes
