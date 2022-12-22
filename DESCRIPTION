@@ -5,6 +5,7 @@ Imports:
   rmarkdown,
   blogdown,
   remotes,
+  digest,
   petersenlab
 Remotes:
   url::https://research-git.uiowa.edu/PetersenLab/petersenlab/-/archive/master/petersenlab-master.zip
