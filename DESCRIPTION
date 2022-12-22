@@ -7,4 +7,4 @@ Imports:
   remotes,
   petersenlab
 Remotes:
-  gitlab::git@research-git.uiowa.edu:PetersenLab/petersenlab.git
+  url::https://research-git.uiowa.edu/PetersenLab/petersenlab/-/archive/master/petersenlab-master.zip
