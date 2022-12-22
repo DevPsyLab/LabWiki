@@ -4,5 +4,7 @@ Version: 1.0.0
 Imports:
   rmarkdown,
   blogdown,
-  remotes
-
+  remotes,
+  petersenlab
+Remotes:
+  git::git@research-git.uiowa.edu:PetersenLab/petersenlab.git
