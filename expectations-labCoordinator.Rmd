@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-# Duties
+# Duties {#duties}
 
 Duties for the Lab Coordinator include the following:
 
@@ -26,7 +26,7 @@ Duties for the Lab Coordinator include the following:
 - Leading lab meeting
 - Lab report
 
-# Your Schedule
+# Your Schedule {#schedule}
 
 Here are the expectations regarding your schedule:
 
@@ -39,7 +39,7 @@ Here are the expectations regarding your schedule:
 - You keep your schedule in the online calendar up-to-date with any changes.
 - You respond to team members promptly by email, Slack, or in person (within one business day).
 
-# Lab Report
+# Lab Report {#labReport}
 
 - We will have a weekly scheduled one-on-one meeting (in addition to other times I meet with you in the lab).
 - You will submit a report no later than the day before so I can review it before our meeting and come prepared.
@@ -47,6 +47,10 @@ Here are the expectations regarding your schedule:
     1. What you have accomplished since last week
     1. What you plan to accomplish in the next week
     1. Items to discuss, including problems, recommended solutions, and questions
+
+# Expectations for Everyone in Lab {#expectationsForEveryone}
+
+In addition to the expectations described above for the Lab Coordinator, please also read the [expectations for everyone in the lab](expectations-everyone.html).
 
 # Signature {#signature}
 

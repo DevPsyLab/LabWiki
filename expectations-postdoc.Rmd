@@ -10,6 +10,10 @@ knitr::opts_chunk$set(echo = TRUE,
 
 Coming soon!
 
+# Expectations for Everyone in Lab {#expectationsForEveryone}
+
+In addition to the expectations described above for postdoctoral scholars, please also read the [expectations for everyone in the lab](expectations-everyone.html).
+
 # Signature {#signature}
 
 Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.

@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-# RA Duties: What Does Work as a Research Assistant Entail?
+# RA Duties: What Does Work as a Research Assistant Entail? {#ra}
 
 The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.
 The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
@@ -19,7 +19,7 @@ Instructions for lab reports are described in the lab manual (click [here](manua
 Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
 The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
 
-# Lab Expectations
+# Lab Expectations {#expectations}
 
 With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
 We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
@@ -52,7 +52,7 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-## Your responsibilities as an RA
+## Your responsibilities as an RA {#yourSchedulingResponsibilities}
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
 If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks.
@@ -91,7 +91,7 @@ You are welcome to make yourself available more than two evenings per week and t
 If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
 If you have concerns making up these hours, please reach out to the Lab Coordinator.
 
-## Our responsibilities to you
+## Our responsibilities to you {#ourResponsibilitiesToYou}
 
 We appreciate that your classes—including exams and course prep—come first.
 We will work with you so that your lab schedule does not interfere with your other classes.
@@ -113,7 +113,7 @@ We will never schedule a lab visit outside of normal lab hours with less than 24
 
 We will work with you to help you identify when you can "cut back" when you let us know that you are over the expected number of hours for that point in the semester.
 
-# Grading Scale
+# Grading Scale {#grading}
 
 Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A–F] for their performance in the lab on the tasks assigned to them.
 (*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.
@@ -124,6 +124,10 @@ B: < 100% attendance, or inconsistently on time, or mostly meeting the lab expec
 C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expectations\
 D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
 F: <= 50 attendance, or never on time, or generally failing to meet the lab expectations
+
+# Expectations for Everyone in Lab {#expectationsForEveryone}
+
+In addition to the expectations described above for undergraduate RAs, please also read the [expectations for everyone in the lab](expectations-everyone.html).
 
 # Signature {#signature}
 

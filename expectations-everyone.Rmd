@@ -132,4 +132,3 @@ The consequences will vary based on the specific behavior, and may include conse
 # Role-Specific Expectations {#roles}
 
 In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.html), [SROP students](expectations-SROP.html), [graduate students](expectations-gradStudent.html), [postdoctoral scholars](expectations-postdoc.html), the [Lab Coordinator](expectations-labCoordinator.html), and [lab staff](expectations-labStaff.html).
-

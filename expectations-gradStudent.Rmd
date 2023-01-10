@@ -512,6 +512,10 @@ To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cl
 Successful researchers find interesting problems and fall in love with them.
 In operational terms, some Friday nights should be spent having fun out in the world, but if you aren't also spending some Friday nights having fun with your research, you're not doing the right research."
 
+## Expectations for Everyone in Lab {#expectationsForEveryone}
+
+In addition to the expectations described above for graduate students, please also read the [expectations for everyone in the lab](expectations-everyone.html).
+
 # Signature {#signature}
 
 Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.
