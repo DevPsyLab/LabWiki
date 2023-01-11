@@ -164,9 +164,9 @@ Advantages for registering for honors course credit are:
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
-Interested students may be able to conduct an Honors project.
+Interested students may be able to conduct an Honors project or non-thesis capstone for Honors in the Psychology Major.
 For information on conducting an Honors thesis/project, see [here](honors.html).
-Note that conducting an Honors project is not a requirement for enrolling in HONR:3994.
+Note that conducting an Honors thesis/project is not a requirement for enrolling in HONR:3994.
 
 ![HONR:3994 Step 1](images/honr3994_1.png)
 ![HONR:3994 Step 2](images/honr3994_2.png)
