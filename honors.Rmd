@@ -18,7 +18,9 @@ Because the non-thesis capstones requires additional coursework, students may pu
 Please meet with Dr. Petersen to help decide which might make the most sense given your goals.
 You are also encouraged to meet with the Lab Coordinator and graduate students.
 
-# Expectations: Non-Thesis Honors {#expecations-nonThesis}
+# Expectations {#expectations}
+
+## Non-Thesis Honors {#expectations-nonThesis}
 
 If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen to set up a meeting.
 Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, and your motivation.
@@ -26,7 +28,7 @@ Dr. Petersen's decision whether to approve your proposal will depend on factors 
 You are expected to follow the Department requirements for Honors in Psychology, including meeting all deadlines:
 https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major
 
-# Expectations: Honors Thesis {#expectations-thesis}
+## Honors Thesis {#expectations-thesis}
 
 The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
