@@ -8,7 +8,25 @@ knitr::opts_chunk$set(echo = TRUE,
                       comment = "")
 ```
 
-# Expectations
+# Overview of Honors Options {#options}
+
+Students may pursue Honors in the Psychology major through lab-related work, either through a thesis or a non-thesis route.
+For more information, see here:
+https://psychology.uiowa.edu/undergrad-program/honors-psychology-major.
+In general, students complete Honors theses during their senior year, after they have firm footing in the lab (i.e., they have spent at least 1–2 semesters in the lab).
+Because the non-thesis capstones requires additional coursework, students may pursue this option earlier than their senior year.
+Please meet with Dr. Petersen to help decide which might make the most sense given your goals.
+You are also encouraged to meet with the Lab Coordinator and graduate students.
+
+# Expectations: Non-Thesis Honors {#expecations-nonThesis}
+
+If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen to set up a meeting.
+Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, and your motivation.
+
+You are expected to follow the Department requirements for Honors in Psychology, including meeting all deadlines:
+https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major
+
+# Expectations: Honors Thesis {#expectations-thesis}
 
 The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
@@ -70,7 +88,7 @@ Please note that we do not want these resources to be financial barriers to comp
 You may be able to find many of these at the library, and Dr. Petersen may be able to lend you a copy, as well.
 Please talk with Dr. Petersen if these resources would be a financial barrier.
 
-# Steps to Get Started
+# Steps to Get Started {#getstarted}
 
 Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
 
@@ -84,7 +102,7 @@ f) what your hypotheses are
 Do not spend too much time on the preliminary document, because it will important for you to be flexible to the possibility that you may end up examining a different question.
 Following the steps above will help structure your conversation with Dr. Petersen in the most efficient way.
 
-# Accessing the Lab Drive
+# Accessing the Lab Drive {#labdrive}
 
 Your member folder on the lab drive (`\Lab\Members\`) should be used for all thesis-related work.
 This is where you will find your data file(s), and where you should save all writing and analysis files.
@@ -115,7 +133,7 @@ https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Development
 
 If the university does not have access to the journal, you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
 
-# Working on Your Thesis
+# Working on Your Thesis {#working}
 
 The easiest way to work on your thesis is to work on it in the lab.
 If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.html#remoteAccess).
@@ -148,7 +166,7 @@ This will prompt a new window.
 Once you have selected your data file, click "Open."
 1. Then, you are ready to analyze your data!
 
-# Important
+# Important {#confidentiality}
 
 Lab data must remain on the lab drive.
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
