@@ -39,6 +39,12 @@ Here are the expectations regarding your schedule:
 - You keep your schedule in the online calendar up-to-date with any changes.
 - You respond to team members promptly by email, Slack, or in person (within one business day).
 
+# Communication {#communication}
+
+- You will use Slack (or in person/phone) for most communication (see lab communication guidelines [here](manual.html#labCommunication)), but you will use the lab email (i.e., devpsy-lab@uiowa.edu; not your personal email) for all lab-relevant email communication.
+This makes it easier for us to keep a record of lab-related communication for Dr. Petersen and future lab staff.
+For ***non-lab*** related email communication, you will use your personal university email (i.e., firstname-lastname@uiowa.edu).
+
 # Lab Report {#labReport}
 
 - We will have a weekly scheduled one-on-one meeting (in addition to other times I meet with you in the lab).
