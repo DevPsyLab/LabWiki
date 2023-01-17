@@ -39,6 +39,30 @@ Here are the expectations regarding your schedule:
 - You keep your schedule in the online calendar up-to-date with any changes.
 - You respond to team members promptly by email, Slack, or in person (within one business day).
 
+# Priorities
+
+- If RA's are not available, E LV1 visits
+- Schedule families who have signed up via Sign-Up Genius
+- Check in once per week with pending scheduling contacts including: 
+    - Prospective participants who have indicated interest from the ICTS or Prospective Participants Survey for screening call
+    - Prospective participants who have been screened and are ready to be enrolled
+    - Enrolled participants ready to schedule for the next timepoint
+- Send survey reminders once per week to:
+    - Primary caregivers who did not complete surveys during their visits
+    - Parenting partners
+    - Secondary caregivers
+- Develop and refine new recruitment methods including: 
+    - Submitting monthly Peach Jar flyer
+    - Develop relationships with community organizations
+    - Flyering
+- Develop coding tasks 
+- Schedule Meetings with relevant team members including: 
+    - coding meetings
+    - trainings
+    - other meetings
+- Miscellaneous office tasks
+- Keep lab website up to date
+
 # Expectations for Everyone in Lab {#expectationsForEveryone}
 
 In addition to the expectations described above for lab staff, please also read the [expectations for everyone in the lab](expectations-everyone.html).
