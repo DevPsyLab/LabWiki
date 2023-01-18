@@ -567,7 +567,7 @@ The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [l
 
 All members of the team are expected to attend every lab meeting.
 If an RA is not able to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time.
-They are also responsible for sending several detailed questions or comments on the article to the Lab Coordinator by the day before the meeting to help contribute to the discussion.
+They are also responsible for emailing several detailed questions or comments on the article to the Lab Coordinator by the day before the meeting to help contribute to the discussion.
 If advanced notice is not possible, contact the Lab Coordinator as soon as you are able to and explain the absence.
 The RA is also responsible for reading the lab meeting agenda and summary notes after the meeting to learn what they missed.
 
