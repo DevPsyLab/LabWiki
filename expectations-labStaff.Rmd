@@ -43,6 +43,7 @@ Here are the expectations regarding your schedule:
 
 - If RA's are not available, E LV1 visits
 - Schedule families who have signed up via Sign-Up Genius
+    - Send reminders the night before the visit
 - Check in once per week with pending scheduling contacts including: 
     - Prospective participants who have indicated interest from the ICTS or Prospective Participants Survey for screening call
     - Prospective participants who have been screened and are ready to be enrolled
