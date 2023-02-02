@@ -97,6 +97,11 @@ https://docs.google.com/document/d/1yfNcWqayX5DdA5bdI9rk8fEB6M9Y-T8GxVvejqHZGF8/
 To see a list of measures available for the School Readiness Study (organized by domain), see here:
 https://docs.google.com/spreadsheets/d/1ptL0GdSHAjAA7zpZGABYuUy9U6eR3XJZI0mzB1wDPn8/edit?usp=sharing
 
+# Videos of Procedures
+
+To see example videos of our lab tasks and procedures, see here (you must register for and sign into [Databrary](https://nyu.databrary.org) to access):
+https://nyu.databrary.org/volume/1559
+
 # Data Dictionary
 
 A Data Dictionary is a file that describes the meaning of variables that are in a data file.
