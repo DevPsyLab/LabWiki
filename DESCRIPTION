@@ -5,3 +5,5 @@ Imports:
   rmarkdown,
   blogdown,
   remotes
+Remotes:
+  DevPsyLab/petersenlab
