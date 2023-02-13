@@ -45,6 +45,9 @@ E
 TC
 : target child, or the child participant
 
+PC
+: primary caregiver, often a child's parent
+
 coding
 : the term means different things depending on the context.
 In our lab, we use "coding" as a shorthand to refer to "behavioral coding from video," which involves assessing a construct from video observation to turn the video segment into numbers that can be analyzed.
