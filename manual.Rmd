@@ -1035,6 +1035,16 @@ The Lab Coordinator is responsible for entering cash data in the ledger.
 - Each participant and the RA will sign a payment receipt form confirming that they received payment.
 Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.
 
+# Professional Development {#professionalDevelopment}
+
+One of the goals of our lab is to advance the career and professional goals of our team members.
+We provide many professional development-related resources on the lab drive in the following location:
+
+`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\`
+
+The resources include resources on applying to graduate school, internships, postbacs, and medical school, comparing different mental health fields (e.g., clinical psychology, counseling psychology, school psychology, clinical mental health counseling, marriage and family therapy, social work), how to find programs, and resources on academic skills (e.g., reading scientific articles), cover letters, CVs/resumes, personal statements, standardized tests (e.g., GRE), and prior lab workshops on topics such as statistics and interviews.
+Please take advantage of the many resources available to help you succeed.
+And, if you have helpful resources, please give back by sharing them on the lab drive.
 
 # Lab Organizational Chart {#organizationalChart}
 
