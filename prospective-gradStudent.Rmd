@@ -59,6 +59,7 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 - writing skills, especially in scientific writing
 - quantitative/statistical skills
 - academic preparedness for graduate school
+- whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html)
 
 In addition, successful applicants to my lab tend to have at least two years of research experience and to be involved in research when applying.
 
@@ -83,7 +84,7 @@ This leads to a highly collaborative environment in which we can be more product
 Within the broader umbrella of our large longitudinal study, graduate students carve out their unique niche.
 Graduate students in my lab lead projects that are part of the broader study.
 As a result, to be a good fit for my lab, it is important that your interests align with our current study and work.
-In general, I look for graduate students who will "hit the ground running" in my lab, in terms of data analysis and writing papers, and whose interests closely align with the lab's current study and focus (as described [above](#currentFocus)).
+In general, I look for graduate students (a) who will "hit the ground running" in my lab, in terms of data analysis and writing papers, (b) whose interests closely align with the lab's current study and focus (as described [above](#currentFocus)), and (c) who will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html).
  
 # What to do before applying {#before-applying}
 
