@@ -279,7 +279,8 @@ Take what you need from classes to advance your research program.
 
 Please refer to the Clinic Manual for guidelines regarding face-to-face hours (on the clinic drive[^3]: `\\iowa.uiowa.edu\shared\CLAS\Departmental\PBS\Clinic\Clinic Manual\`).
 For clinical students, it is important to regularly track your clinical experiences and hours to ensure that you are meeting appropriate milestones in your training.
-I highly recommend using Time2Track or PsyKey to track clinical hours.
+The program has an institutional account for [Time2Track](https://time2track.com).
+You are expected to use it to track hours and are expected to stay caught up in your tracking.
 We will discuss your plans for clinical training and practicum opportunities during our regular individual meetings.
 I will also provide clinical supervision of some of your cases as part of the Seashore Clinic.
 I am a licensed clinical psychologist, so assessment hours in my research lab count as clinical hours.
