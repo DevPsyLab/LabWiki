@@ -55,10 +55,11 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 ## Your responsibilities as an RA {#yourSchedulingResponsibilities}
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
-If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks.
+If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks. 
 Any request to cut back on hours should be submitted to the lab coordinator via slack or email by 5:00 pm the day prior to the requested time off.
 
 Unless otherwise stated, running lab visits is always the top priority.
+You are expected to arrive 45 minutes before the scheduleld start time of visits.
 If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.
 If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.
 
