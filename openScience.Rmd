@@ -228,7 +228,7 @@ For example:
 In the manuscript submission, create and use [anonymous view-only OSF links](#anonymousViewOnlyLink) (for blind review).
 In the preprint submission, use the general OSF links (not the [anonymous view-only OSF links](#anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
 
-After the manuscript is accepted for publication, make the OSF repo public and [create a DOI link](#https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it.
+After the manuscript is accepted for publication, make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it.
 
 # Adapting Open Science to Longitudinal Research {#longitudinal}
 
