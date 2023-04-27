@@ -12,12 +12,31 @@ knitr::opts_chunk$set(echo = TRUE,
 
 We, as a lab, value and strive to advance the mission of [open science](https://onlinelibrary.wiley.com/doi/10.1002/icd.2315) to improve the accessibility, reproducibility, and replicability of science.
 As such, all lab members are expected to conduct research transparently and to promote reproducibility.
-This includes, but is not limited to, pre- or co-registering studies, sharing analysis scripts and data, using version control (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
+This includes, but is not limited to, [pre- or co-registering](#preregistration) studies, [sharing analysis scripts and data](#sharing), using [version control](#versionControl) (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
 Our lab's template for projects on the [Open Science Framework](https://osf.io) (OSF) is located here[^1]: https://osf.io/4w9sv.
 
-# Pre-Registration
+# Pre-Registration (or Co-Registration) {#preregistration}
 
-# Sharing Data, Analysis Scripts, and Research Materials
+There is a continuum of registration approaches.
+Pre-registration involves publicly posting aspects of a study (e.g., study design, hypotheses, methods, materials, and analysis plan) before data collection begins.
+Co-registration involves specifying aspects of your study after data collection starts but before analysis.
+Post-registration involves specifying aspects of your study after after analysis has begun.
+
+Pre-registration is often considered the gold-standard.
+However, co-registration and post-registration are better than no registration.
+
+Here are elements of a study that can be registered:
+
+- study design
+- hypotheses
+- methods
+- materials
+- analysis plan
+
+When analysis decisions are contingent upon prior steps that may influence which decision to take, the analysis plan can include decision trees (e.g., if X, then Y; if A, then B).
+For example, you can specify how you would proceed if the measures do not demonstrate longitudinal factorial invariance, or how you would handle poorly fitting models.
+
+# Sharing Data, Analysis Scripts, and Research Materials {#sharing}
 
 ## Data Dictionary {#dataDictionary}
 
@@ -159,7 +178,7 @@ Our lab's template for projects on the Open Science Framework (OSF) can be found
 
 Create a component in the OSF project repository for the following components:
 
-- Pre-registration
+- Pre-registration (or Co-registration)
 - Data
 - Data Dictionary
 - Analysis Code
@@ -194,7 +213,7 @@ Then you can share that URL.
 
 # Manuscript Submission to a Journal {#journal}
 
-Before submitting a manuscript to a journal, make sure to post the relevant materials on the [OSF](#osf), as described here, and post the preprint, as described [here](#preprint).
+Before submitting a manuscript to a journal, make sure to post the relevant materials on the [OSF](#osf), as described [here](#osf), and post the preprint, as described [here](#preprint).
 When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.
 After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
 Include the link to the preprint in the cover letter to the journal.
