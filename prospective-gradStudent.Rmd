@@ -51,7 +51,7 @@ Students who are interested in joining the [Developmental Psychopathology Resear
 Your application will be reviewed closely by me and by the relevant training track.
 So you have a sense of how graduate applications are evaluated, here are the criteria that I consider most strongly when evaluating applicants for graduate school and my lab:
 
-- fit of interests with the Developmental Psychopathology Lab
+- fit of interests with the Developmental Psychopathology Lab, including [the lab's current studies and focus](#currentFocus)
 - fit of career goals with the mission of the program and the relevant training track
     - i.e., career goals in research
 - evidence of high-quality, independent research experience
@@ -70,6 +70,10 @@ To this aim, the focal project of the lab's work is an ongoing NIH-funded longit
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
+
+In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.html), we are also in the process of designing another study, the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
+Externalizing problems change in behavioral manifestation across development.
+In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across infancy to adolescence, so that we can identify children early on who are at risk of later, more severe problems.
 
 # Am I a good fit for the Developmental Psychopathology Lab? {#fit-lab}
 
