@@ -122,10 +122,10 @@ Based on the expectations above and the grading scale below, RAs will be assigne
 See the section of the Lab Manual that describes course options and how to register (click [here](manual.html#courseRegistration))).
 
 A: 100% attendance, consistently on time, and meeting all of the lab expectations\
-B: < 100% attendance, or inconsistently on time, or mostly meeting the lab expectations\
-C: < 80% attendance, or mostly not on time, or sometimes meeting the lab expectations\
-D: < 70% attendance, or rarely on time, or only occasionally meeting the lab expectations\
-F: <= 50 attendance, or never on time, or generally failing to meet the lab expectations
+B: < 100% attendance, or late cancellations for visits for which you were scheduled, or inconsistently on time, or mostly meeting the lab expectations\
+C: < 80% attendance, or late cancellations for visits for which you were scheduled, or mostly not on time, or sometimes meeting the lab expectations\
+D: < 70% attendance, or late cancellations for visits for which you were scheduled, or rarely on time, or only occasionally meeting the lab expectations\
+F: <= 50 attendance, or frequent late cancellations for visits for which you were scheduled, or never on time, or generally failing to meet the lab expectations
 
 # Expectations for Everyone in Lab {#expectationsForEveryone}
 

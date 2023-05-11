@@ -899,7 +899,7 @@ Notes:
 - If you have concerns about individual(s) in lab, please let the Lab Coordinator or Dr. Petersen know directly (in person or by email).
 Do not put personnel grievances in lab reports.
 
-## Tips and Tricks for Interacting with Children in Lab
+## Tips and Tricks for Interacting with Children in Lab {#interactingWithChildren}
 
 ### When Interacting With Families in the Lab
 
