@@ -54,7 +54,7 @@ navbar:
         href: documentation-remote.html
       - text: Studies
         href: studies.html
-      - text: Writing Guideliens
+      - text: Writing Guidelines
         href: writing.html
     - text: "Studies"
       menu:
