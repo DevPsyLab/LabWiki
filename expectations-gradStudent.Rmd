@@ -66,6 +66,7 @@ I expect you to write frequently, and I encourage you to write daily.
 I encourage students to read Paul Silva's "[How to Write a Lot](https://www.amazon.com/How-Write-Lot-Practical-Productive/dp/1433829738)," and I am happy to lend the book to you.
 I encourage you to use EndNote, Zotero, or another reference manager to manage your references and write the References section of papers.
 Reference management software will save you lots of time.
+Additionally, please follow the lab's [writing guidelines](writing.html).
 
 My expectation is that you will be engaged in research activities beyond those required by the program.
 Have multiple research projects to work on.

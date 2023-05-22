@@ -182,6 +182,10 @@ Lab data must remain on the lab drive.
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
 It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
 
+# Writing Guidelines
+
+Make sure to follow the lab's [writing guidelines](writing.html).
+
 # Presenting Work at Conferences {#conferences}
 
 You are expected to present a research poster on your thesis findings at the UI Undergraduate Research Festival.
