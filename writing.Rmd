@@ -17,4 +17,4 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Use EndNote or Zotero for reference management
 1. In every paper, include a correlation matrix with descriptive statistics for your model variables
 1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively
-1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation"
+1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines#APA), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation"
