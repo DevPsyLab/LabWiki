@@ -118,4 +118,6 @@ I find it helpful when applicants include the following in their professional st
 1. Discussions of your independent research experience(s) and what you learned from them.
 In these discussions, I suggest emphasizing (1) the skills you developed from working on each project (e.g., data collection; behavioral coding; statistical analysis; computer programming; neural or biopsychology methods such as EEG/ERP; software such as R, REDCap, MATLAB, E-Prime, and Datavyu; writing certain sections of a paper; submitting/presenting a poster), and (2) what your "takeaways" were from the project—e.g., new research ideas or questions your work inspired.
 
+In addition, make sure to follow the Department instructions for the application and personal statement: https://psychology.uiowa.edu/grad-program/application-instructions
+
 [^1]: This was borrowed from a [document](https://docs.google.com/document/d/1sQysBbb_dWhicWRlAUnRv-UWeJZgt-RmBxJPOfPIf9c/edit) by Prof. Jessica Schleider.
