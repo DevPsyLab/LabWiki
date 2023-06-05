@@ -44,29 +44,37 @@ Here are the expectations regarding your schedule:
 These are a general order of priorities in the Dev-Psy Lab.
 Dr. Petersen or the Lab Coordinator will inform staff if there are modifications to the priorities of tasks.
 
-1.  If RA's are not available, E LV1 visits
-1.  Schedule families who have signed up via Sign1. Up Genius
+1. If RA's are not available, E LV1 visits
+1. Schedule families who have signed up via Sign1. Up Genius
     -  Send reminders the night before the visit
-1.  Check in once per week with pending scheduling contacts including: 
+1. Check in once per week with pending scheduling contacts including: 
     -  Prospective participants who have indicated interest from the ICTS or Prospective Participants Survey for screening call
     -  Prospective participants who have been screened and are ready to be enrolled
     -  Enrolled participants ready to schedule for the next timepoint
-1.  Send survey reminders once per week to:
+1. Send survey reminders once per week to:
     -  Primary caregivers who did not complete surveys during their visits
     -  Parenting partners
     -  Secondary caregivers
-1.  Develop and refine new recruitment methods including: 
+1. Develop and refine new recruitment methods including: 
     -  Submitting monthly Peach Jar flyer
     -  Develop relationships with community organizations
     -  Flyering
 1. Train LV1 Es
-1.  Develop coding tasks 
-1.  Schedule meetings with relevant team members including: 
+1. Develop coding tasks 
+1. Schedule meetings with relevant team members including: 
     -  coding meetings
     -  trainings
     -  other meetings
-1.  Miscellaneous office tasks
-1.  Keep lab website up to date
+1. Miscellaneous office tasks
+1. Keep lab website up to date
+
+# Communication {#communication}
+
+- I expect you to respond promptly when I or another lab member contacts you (in most cases, within 48 hours).
+If you need time to gather information in response to a Slack message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
+At times, I may contact you by email or Slack after hours (if that is when it is most convenient, so that I do not forget to).
+However, you are \*not\* expected to respond after hours.
+I will call you if something is urgent.
 
 # Expectations for Everyone in Lab {#expectationsForEveryone}
 
