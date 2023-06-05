@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Mediation versus Moderation</title>
+
+<script src="site_libs/header-attrs-2.22/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8JSDTYMH7P');
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type="text/css">
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+<link rel="stylesheet" href="includes/custom.css" type="text/css" />
+<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="manual.html">Lab Manual</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Expectations
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="expectations-everyone.html">Everyone</a>
+    </li>
+    <li>
+      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="expectations-SROP.html">SROP Students</a>
+    </li>
+    <li>
+      <a href="expectations-gradStudent.html">Graduate Students</a>
+    </li>
+    <li>
+      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
+    </li>
+    <li>
+      <a href="expectations-labStaff.html">Lab Staff</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Documentation
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://devpsylab.github.io/DataAnalysis">Data Analysis Guides</a>
+    </li>
+    <li>
+      <a href="honors.html">Honors Projects</a>
+    </li>
+    <li>
+      <a href="mediationModeration.html">Mediation and Moderation</a>
+    </li>
+    <li>
+      <a href="openScience.html">Open Science</a>
+    </li>
+    <li>
+      <a href="redcap-manual.html">REDCap</a>
+    </li>
+    <li>
+      <a href="documentation-remote.html">Remote Participation</a>
+    </li>
+    <li>
+      <a href="studies.html">Studies</a>
+    </li>
+    <li>
+      <a href="writing.html">Writing Guidelines</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Studies
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Prospective Applicants
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
+    </li>
+    <li>
+      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Mediation versus Moderation</h1>
+
+</div>
+
+
+<div id="overview" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Overview</h1>
+<p>This page briefly clarifies the difference between moderation (also
+called “interaction”) and mediation. Both types of effects involve (at
+least) three variables:</p>
+<ol style="list-style-type: decimal">
+<li>An independent/predictor variable, which will be labeled as
+<code>X</code>.</li>
+<li>A dependent/outcome variable, which will be labeled as
+<code>Y</code>.</li>
+<li>The mediator or moderator variable, which will be labeled as
+<code>M</code>.</li>
+</ol>
+<div class="figure">
+<img src="images/mediationModerationMnemonic.png" alt="" />
+<p class="caption">Mediation Versus Moderation Mnemonic</p>
+</div>
+</div>
+<div id="mediation" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Mediation</h1>
+<p><strong>Mediation</strong> is a <u>causal chain of events</u>, where
+one variable (a mediator variable) at least partially <u>explains (or
+accounts for) the association between two other variables</u> (the
+predictor variable and the outcome variable). In mediation, a predictor
+(<code>X</code>) leads to a mediator (<code>M</code>), which leads to an
+outcome (<code>Y</code>). Mediation answers the question of,
+“<u><strong>Why (or how)</strong> does <code>X</code> influence
+<code>Y</code>?</u> A <u>mediator</u> (<code>M</code>) is a variable
+that helps explain the assocation between two other variables, and it
+answers the question of why/how <code>X</code> influences
+<code>Y</code>. That is, the mediator is the variable that helps explain
+how/why <code>X</code> is related to <code>Y</code>. In other words, you
+can think of the mediator as the <u>mechanism</u> that helps explain why
+<code>X</code> has an impact on <code>Y</code>. The association between
+<code>X</code> and <code>Y</code> <u>gets smaller</u> when accounting
+for <code>M</code>. Visually this can be written as:</p>
+<div class="figure">
+<img src="images/mediation.png" alt="" />
+<p class="caption">Mediation</p>
+</div>
+<p>where <code>X</code> is causing <code>M</code>, which in turn is
+causing <code>Y</code>. In other words, <code>X</code> leads to
+<code>M</code>, and <code>M</code> leads to <code>Y</code>. In clinical
+psychology, we often examine mediation when we investigate why certain
+therapies cause reductions in psychopathology like depression. That is,
+what is the mechanism of a therapeutic technique <u>that helps</u> to
+reduce depression? One can hypothesize that some therapies help increase
+a client’s self-esteem, which in turn will help to reduce the client’s
+depression. In this case, increased self-esteem <u>mediates</u> (i.e.,
+helps explain or account for) the effect of the therapy on decreased
+depression.</p>
+<p>Question: <u>Why/how</u> does the therapeutic technique lead clients
+to experience fewer depressive symptoms?<br />
+Answer: increased self-esteem</p>
+<p>As a picture, we can draw this assocation as:</p>
+<div class="figure">
+<img src="images/mediationExample.png" alt="" />
+<p class="caption">Mediation Example</p>
+</div>
+<p>When one mechanism fully accounts for the effect of the predictor
+variable on the outcome variable, this is known as <strong>full
+mediation</strong>. However, many times a single process does not
+account for the full effect of the predictor variable on the outcome
+variable; this is known as <strong>partial mediation</strong> and is
+depicted below:</p>
+<div class="figure">
+<img src="images/mediationPartial.png" alt="" />
+<p class="caption">Partial Mediation</p>
+</div>
+<p>In addition, there can be multiple mediators/mechanisms that account
+for the effect of a predictor variable on an outcome variable, as
+depicted below:</p>
+<div class="figure">
+<img src="images/mediationMultiple.png" alt="" />
+<p class="caption">Multiple Mediators</p>
+</div>
+</div>
+<div id="moderation" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Moderation (i.e.,
+Interaction)</h1>
+<p><strong>Moderation</strong> (sometimes called an “interaction”), on
+the other hand, occurs when there is a variable or condition
+(<code>M</code>; called a “moderator”) that <u>changes the
+assocation</u> between <code>X</code> and <code>Y</code>. That is, the
+effect of the predictor variable on the outcome variable differs at
+different levels of the moderator variable. In these cases,
+<code>X</code> and <code>M</code> <u>work together</u> to have an effect
+on <code>Y</code>; here <code>X</code> <u>does not have a direct
+effect</u> on <code>M</code>. Moderation answers the question of,
+“<u><strong>For whom</strong> does <code>X</code> influence
+<code>Y</code>?</u>” If <code>X</code> influences <code>Y</code> more
+strongly for some people or in some circumstances, we would say that
+there is an interaction such that the <u>effect of <code>X</code> on
+<code>Y</code> depends on <code>M</code></u>, as depicted below:</p>
+<div class="figure">
+<img src="images/moderation.png" alt="" />
+<p class="caption">Moderation</p>
+</div>
+<p>For example, if the effect of time passing on words recalled differs
+for those with and without an Alzheimer’s diagnosis, the interaction
+could be depicted below:</p>
+<div class="figure">
+<img src="images/moderationExample.png" alt="" />
+<p class="caption">Moderation</p>
+</div>
+<p>There are two types of interaction effects: cross-over interactions
+and fan-shaped interactions. Graphically, both types of interaction
+effects can be identified by the appearance of <u>non-parallel
+lines</u>. However, the way these lines diverge from one another are
+what define whether it is a cross-over or fan-shaped interaction.</p>
+<p>A <strong>cross-over interaction</strong> occurs when individuals at
+different levels of <code>M</code> start at different points on
+<code>Y</code>, and when interacting with <code>X</code> the effects on
+<code>Y</code> go in different directions; when looking at a graph of
+the effects, you can see the lines “cross-over.” A visual representation
+of this kind of interaction can be displayed in a line graph with two
+groups:</p>
+<div class="figure">
+<img src="images/interactionCrossover.png" alt="" />
+<p class="caption">Cross-over Interaction</p>
+</div>
+<p>Where the predictor/independent variable <code>X</code> is on the
+x-axis, the outcome/dependent variable <code>Y</code> is on the y-axis,
+and the different levels/groups of the moderator variable <code>M</code>
+are represented by the different colored lines in the graph (i.e., the
+z-axis). An interaction can be identified visually by <u>non-parallel
+lines</u> at different levels of the moderator.</p>
+<p><strong>Fan-shaped interactions</strong> occur when individuals at
+different levels of <code>M</code> either start or end near each other
+on <code>Y</code>, but appear to diverge at different levels of
+<code>X</code>. For example: there may be an interaction between the
+presence of Alzheimer’s disease and time when predicting an individual’s
+verbal memory. Imagine a task where a list of words is repeatedly read
+to an individual. After completing the task, they are asked to recall as
+many of those words as possible at various periods of time (e.g., at
+5-minute intervals). At first, early on in the assessment (i.e., after
+the first 5 minutes) the number of words recalled by individuals in both
+groups (i.e., at different levels of <code>M</code>) may not
+significantly differ from one another; individuals with and without
+Alzheimer’s disease appear to recall the same amount of words. However,
+as more time passes, the interaction effect between time and the
+presence of the disease becomes more apparent. That is, at later time
+points (i.e., after 20 minutes) the gap between the amount of words
+recalled by both groups become significantly different. In this case, we
+can say that <u>the presence of Alzheimer’s disease interacts with the
+passing of time</u> to cause a faster decline in the number of words
+recalled. In other words, the number of words recalled over time differs
+between individuals who have Alzheimer’s versus individuals who do
+not.</p>
+<p>Visually, this can be displayed in a line graph with two groups:</p>
+<div class="figure">
+<img src="images/interactionFanShaped.png" alt="" />
+<p class="caption">Fan-Shaped Interaction</p>
+</div>
+<p>In the above example, there is a stronger association between the
+passage of time and number of words recalled for the Alzheimer’s
+diagnosis group compared to those without Alzheimer’s. For the
+Alzheimer’s diagnosis group, there is a <u>strong</u> negative
+association between the passage of time and number of words recalled.
+For those without Alzheimer’s, there is a <u>weak</u> negative
+association between the passage of time and number of words recalled.
+That is, <u>the effect of the passage of time on number of words
+recalled depends on whether the person has Alzheimer’s</u>. In terms of
+the number of words recalled, the passage of time <u>matters more</u>
+for those with Alzheimer’s compared to those without Alzheimer’s.</p>
+<p>Question: <u>For whom</u> does the passage of time lead to fewer
+words recalled?<br />
+Answer: those with Alzheimer’s</p>
+</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTWVkaWF0aW9uIHZlcnN1cyBNb2RlcmF0aW9uIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGVycm9yID0gVFJVRSwKICAgICAgICAgICAgICAgICAgICAgIGNvbW1lbnQgPSAiIikKYGBgCgojIE92ZXJ2aWV3CgpUaGlzIHBhZ2UgYnJpZWZseSBjbGFyaWZpZXMgdGhlIGRpZmZlcmVuY2UgYmV0d2VlbiBtb2RlcmF0aW9uIChhbHNvIGNhbGxlZCAiaW50ZXJhY3Rpb24iKSBhbmQgbWVkaWF0aW9uLgpCb3RoIHR5cGVzIG9mIGVmZmVjdHMgaW52b2x2ZSAoYXQgbGVhc3QpIHRocmVlIHZhcmlhYmxlczoKCjEuIEFuIGluZGVwZW5kZW50L3ByZWRpY3RvciB2YXJpYWJsZSwgd2hpY2ggd2lsbCBiZSBsYWJlbGVkIGFzIGBYYC4KMS4gQSBkZXBlbmRlbnQvb3V0Y29tZSB2YXJpYWJsZSwgd2hpY2ggd2lsbCBiZSBsYWJlbGVkIGFzIGBZYC4KMS4gVGhlIG1lZGlhdG9yIG9yIG1vZGVyYXRvciB2YXJpYWJsZSwgd2hpY2ggd2lsbCBiZSBsYWJlbGVkIGFzIGBNYC4KCiFbTWVkaWF0aW9uIFZlcnN1cyBNb2RlcmF0aW9uIE1uZW1vbmljXShpbWFnZXMvbWVkaWF0aW9uTW9kZXJhdGlvbk1uZW1vbmljLnBuZykKCiMgTWVkaWF0aW9uIHsjbWVkaWF0aW9ufQoKKipNZWRpYXRpb24qKiBpcyBhIDx1PmNhdXNhbCBjaGFpbiBvZiBldmVudHM8L3U+LCB3aGVyZSBvbmUgdmFyaWFibGUgKGEgbWVkaWF0b3IgdmFyaWFibGUpIGF0IGxlYXN0IHBhcnRpYWxseSA8dT5leHBsYWlucyAob3IgYWNjb3VudHMgZm9yKSB0aGUgYXNzb2NpYXRpb24gYmV0d2VlbiB0d28gb3RoZXIgdmFyaWFibGVzPC91PiAodGhlIHByZWRpY3RvciB2YXJpYWJsZSBhbmQgdGhlIG91dGNvbWUgdmFyaWFibGUpLgpJbiBtZWRpYXRpb24sIGEgcHJlZGljdG9yIChgWGApIGxlYWRzIHRvIGEgbWVkaWF0b3IgKGBNYCksIHdoaWNoIGxlYWRzIHRvIGFuIG91dGNvbWUgKGBZYCkuCk1lZGlhdGlvbiBhbnN3ZXJzIHRoZSBxdWVzdGlvbiBvZiwgIjx1PioqV2h5IChvciBob3cpKiogZG9lcyBgWGAgaW5mbHVlbmNlIGBZYD88L3U+IEEgPHU+bWVkaWF0b3I8L3U+IChgTWApIGlzIGEgdmFyaWFibGUgdGhhdCBoZWxwcyBleHBsYWluIHRoZSBhc3NvY2F0aW9uIGJldHdlZW4gdHdvIG90aGVyIHZhcmlhYmxlcywgYW5kIGl0IGFuc3dlcnMgdGhlIHF1ZXN0aW9uIG9mIHdoeS9ob3cgYFhgIGluZmx1ZW5jZXMgYFlgLgpUaGF0IGlzLCB0aGUgbWVkaWF0b3IgaXMgdGhlIHZhcmlhYmxlIHRoYXQgaGVscHMgZXhwbGFpbiBob3cvd2h5IGBYYCBpcyByZWxhdGVkIHRvIGBZYC4KSW4gb3RoZXIgd29yZHMsIHlvdSBjYW4gdGhpbmsgb2YgdGhlIG1lZGlhdG9yIGFzIHRoZSA8dT5tZWNoYW5pc208L3U+IHRoYXQgaGVscHMgZXhwbGFpbiB3aHkgYFhgIGhhcyBhbiBpbXBhY3Qgb24gYFlgLgpUaGUgYXNzb2NpYXRpb24gYmV0d2VlbiBgWGAgYW5kIGBZYCA8dT5nZXRzIHNtYWxsZXI8L3U+IHdoZW4gYWNjb3VudGluZyBmb3IgYE1gLgpWaXN1YWxseSB0aGlzIGNhbiBiZSB3cml0dGVuIGFzOgoKIVtNZWRpYXRpb25dKGltYWdlcy9tZWRpYXRpb24ucG5nKQoKd2hlcmUgYFhgIGlzIGNhdXNpbmcgYE1gLCB3aGljaCBpbiB0dXJuIGlzIGNhdXNpbmcgYFlgLgpJbiBvdGhlciB3b3JkcywgYFhgIGxlYWRzIHRvIGBNYCwgYW5kIGBNYCBsZWFkcyB0byBgWWAuCkluIGNsaW5pY2FsIHBzeWNob2xvZ3ksIHdlIG9mdGVuIGV4YW1pbmUgbWVkaWF0aW9uIHdoZW4gd2UgaW52ZXN0aWdhdGUgd2h5IGNlcnRhaW4gdGhlcmFwaWVzIGNhdXNlIHJlZHVjdGlvbnMgaW4gcHN5Y2hvcGF0aG9sb2d5IGxpa2UgZGVwcmVzc2lvbi4KVGhhdCBpcywgd2hhdCBpcyB0aGUgbWVjaGFuaXNtIG9mIGEgdGhlcmFwZXV0aWMgdGVjaG5pcXVlIDx1PnRoYXQgaGVscHM8L3U+IHRvIHJlZHVjZSBkZXByZXNzaW9uPwpPbmUgY2FuIGh5cG90aGVzaXplIHRoYXQgc29tZSB0aGVyYXBpZXMgaGVscCBpbmNyZWFzZSBhIGNsaWVudCdzIHNlbGYtZXN0ZWVtLCB3aGljaCBpbiB0dXJuIHdpbGwgaGVscCB0byByZWR1Y2UgdGhlIGNsaWVudCdzIGRlcHJlc3Npb24uCkluIHRoaXMgY2FzZSwgaW5jcmVhc2VkIHNlbGYtZXN0ZWVtIDx1Pm1lZGlhdGVzPC91PiAoaS5lLiwgaGVscHMgZXhwbGFpbiBvciBhY2NvdW50IGZvcikgdGhlIGVmZmVjdCBvZiB0aGUgdGhlcmFweSBvbiBkZWNyZWFzZWQgZGVwcmVzc2lvbi4KClF1ZXN0aW9uOiA8dT5XaHkvaG93PC91PiBkb2VzIHRoZSB0aGVyYXBldXRpYyB0ZWNobmlxdWUgbGVhZCBjbGllbnRzIHRvIGV4cGVyaWVuY2UgZmV3ZXIgZGVwcmVzc2l2ZSBzeW1wdG9tcz9cCkFuc3dlcjogaW5jcmVhc2VkIHNlbGYtZXN0ZWVtCgpBcyBhIHBpY3R1cmUsIHdlIGNhbiBkcmF3IHRoaXMgYXNzb2NhdGlvbiBhczoKCiFbTWVkaWF0aW9uIEV4YW1wbGVdKGltYWdlcy9tZWRpYXRpb25FeGFtcGxlLnBuZykKCldoZW4gb25lIG1lY2hhbmlzbSBmdWxseSBhY2NvdW50cyBmb3IgdGhlIGVmZmVjdCBvZiB0aGUgcHJlZGljdG9yIHZhcmlhYmxlIG9uIHRoZSBvdXRjb21lIHZhcmlhYmxlLCB0aGlzIGlzIGtub3duIGFzICoqZnVsbCBtZWRpYXRpb24qKi4KSG93ZXZlciwgbWFueSB0aW1lcyBhIHNpbmdsZSBwcm9jZXNzIGRvZXMgbm90IGFjY291bnQgZm9yIHRoZSBmdWxsIGVmZmVjdCBvZiB0aGUgcHJlZGljdG9yIHZhcmlhYmxlIG9uIHRoZSBvdXRjb21lIHZhcmlhYmxlOyB0aGlzIGlzIGtub3duIGFzICoqcGFydGlhbCBtZWRpYXRpb24qKiBhbmQgaXMgZGVwaWN0ZWQgYmVsb3c6CgohW1BhcnRpYWwgTWVkaWF0aW9uXShpbWFnZXMvbWVkaWF0aW9uUGFydGlhbC5wbmcpCgpJbiBhZGRpdGlvbiwgdGhlcmUgY2FuIGJlIG11bHRpcGxlIG1lZGlhdG9ycy9tZWNoYW5pc21zIHRoYXQgYWNjb3VudCBmb3IgdGhlIGVmZmVjdCBvZiBhIHByZWRpY3RvciB2YXJpYWJsZSBvbiBhbiBvdXRjb21lIHZhcmlhYmxlLCBhcyBkZXBpY3RlZCBiZWxvdzoKCiFbTXVsdGlwbGUgTWVkaWF0b3JzXShpbWFnZXMvbWVkaWF0aW9uTXVsdGlwbGUucG5nKQoKIyBNb2RlcmF0aW9uIChpLmUuLCBJbnRlcmFjdGlvbikgeyNtb2RlcmF0aW9ufQoKKipNb2RlcmF0aW9uKiogKHNvbWV0aW1lcyBjYWxsZWQgYW4gImludGVyYWN0aW9uIiksIG9uIHRoZSBvdGhlciBoYW5kLCBvY2N1cnMgd2hlbiB0aGVyZSBpcyBhIHZhcmlhYmxlIG9yIGNvbmRpdGlvbiAoYE1gOyBjYWxsZWQgYSAibW9kZXJhdG9yIikgdGhhdCA8dT5jaGFuZ2VzIHRoZSBhc3NvY2F0aW9uPC91PiBiZXR3ZWVuIGBYYCBhbmQgYFlgLgpUaGF0IGlzLCB0aGUgZWZmZWN0IG9mIHRoZSBwcmVkaWN0b3IgdmFyaWFibGUgb24gdGhlIG91dGNvbWUgdmFyaWFibGUgZGlmZmVycyBhdCBkaWZmZXJlbnQgbGV2ZWxzIG9mIHRoZSBtb2RlcmF0b3IgdmFyaWFibGUuCkluIHRoZXNlIGNhc2VzLCBgWGAgYW5kIGBNYCA8dT53b3JrIHRvZ2V0aGVyPC91PiB0byBoYXZlIGFuIGVmZmVjdCBvbiBgWWA7IGhlcmUgYFhgIDx1PmRvZXMgbm90IGhhdmUgYSBkaXJlY3QgZWZmZWN0PC91PiBvbiBgTWAuCk1vZGVyYXRpb24gYW5zd2VycyB0aGUgcXVlc3Rpb24gb2YsICI8dT4qKkZvciB3aG9tKiogZG9lcyBgWGAgaW5mbHVlbmNlIGBZYD88L3U+IgpJZiBgWGAgaW5mbHVlbmNlcyBgWWAgbW9yZSBzdHJvbmdseSBmb3Igc29tZSBwZW9wbGUgb3IgaW4gc29tZSBjaXJjdW1zdGFuY2VzLCB3ZSB3b3VsZCBzYXkgdGhhdCB0aGVyZSBpcyBhbiBpbnRlcmFjdGlvbiBzdWNoIHRoYXQgdGhlIDx1PmVmZmVjdCBvZiBgWGAgb24gYFlgIGRlcGVuZHMgb24gYE1gPC91PiwgYXMgZGVwaWN0ZWQgYmVsb3c6CgohW01vZGVyYXRpb25dKGltYWdlcy9tb2RlcmF0aW9uLnBuZykKCkZvciBleGFtcGxlLCBpZiB0aGUgZWZmZWN0IG9mIHRpbWUgcGFzc2luZyBvbiB3b3JkcyByZWNhbGxlZCBkaWZmZXJzIGZvciB0aG9zZSB3aXRoIGFuZCB3aXRob3V0IGFuIEFsemhlaW1lcidzIGRpYWdub3NpcywgdGhlIGludGVyYWN0aW9uIGNvdWxkIGJlIGRlcGljdGVkIGJlbG93OgoKIVtNb2RlcmF0aW9uXShpbWFnZXMvbW9kZXJhdGlvbkV4YW1wbGUucG5nKQoKVGhlcmUgYXJlIHR3byB0eXBlcyBvZiBpbnRlcmFjdGlvbiBlZmZlY3RzOiBjcm9zcy1vdmVyIGludGVyYWN0aW9ucyBhbmQgZmFuLXNoYXBlZCBpbnRlcmFjdGlvbnMuCkdyYXBoaWNhbGx5LCBib3RoIHR5cGVzIG9mIGludGVyYWN0aW9uIGVmZmVjdHMgY2FuIGJlIGlkZW50aWZpZWQgYnkgdGhlIGFwcGVhcmFuY2Ugb2YgPHU+bm9uLXBhcmFsbGVsIGxpbmVzPC91Pi4KSG93ZXZlciwgdGhlIHdheSB0aGVzZSBsaW5lcyBkaXZlcmdlIGZyb20gb25lIGFub3RoZXIgYXJlIHdoYXQgZGVmaW5lIHdoZXRoZXIgaXQgaXMgYSBjcm9zcy1vdmVyIG9yIGZhbi1zaGFwZWQgaW50ZXJhY3Rpb24uCgpBICoqY3Jvc3Mtb3ZlciBpbnRlcmFjdGlvbioqIG9jY3VycyB3aGVuIGluZGl2aWR1YWxzIGF0IGRpZmZlcmVudCBsZXZlbHMgb2YgYE1gIHN0YXJ0IGF0IGRpZmZlcmVudCBwb2ludHMgb24gYFlgLCBhbmQgd2hlbiBpbnRlcmFjdGluZyB3aXRoIGBYYCB0aGUgZWZmZWN0cyBvbiBgWWAgZ28gaW4gZGlmZmVyZW50IGRpcmVjdGlvbnM7IHdoZW4gbG9va2luZyBhdCBhIGdyYXBoIG9mIHRoZSBlZmZlY3RzLCB5b3UgY2FuIHNlZSB0aGUgbGluZXMgImNyb3NzLW92ZXIuIgpBIHZpc3VhbCByZXByZXNlbnRhdGlvbiBvZiB0aGlzIGtpbmQgb2YgaW50ZXJhY3Rpb24gY2FuIGJlIGRpc3BsYXllZCBpbiBhIGxpbmUgZ3JhcGggd2l0aCB0d28gZ3JvdXBzOgoKIVtDcm9zcy1vdmVyIEludGVyYWN0aW9uXShpbWFnZXMvaW50ZXJhY3Rpb25Dcm9zc292ZXIucG5nKQoKV2hlcmUgdGhlIHByZWRpY3Rvci9pbmRlcGVuZGVudCB2YXJpYWJsZSBgWGAgaXMgb24gdGhlIHgtYXhpcywgdGhlIG91dGNvbWUvZGVwZW5kZW50IHZhcmlhYmxlIGBZYCBpcyBvbiB0aGUgeS1heGlzLCBhbmQgdGhlIGRpZmZlcmVudCBsZXZlbHMvZ3JvdXBzIG9mIHRoZSBtb2RlcmF0b3IgdmFyaWFibGUgYE1gIGFyZSByZXByZXNlbnRlZCBieSB0aGUgZGlmZmVyZW50IGNvbG9yZWQgbGluZXMgaW4gdGhlIGdyYXBoIChpLmUuLCB0aGUgei1heGlzKS4KQW4gaW50ZXJhY3Rpb24gY2FuIGJlIGlkZW50aWZpZWQgdmlzdWFsbHkgYnkgPHU+bm9uLXBhcmFsbGVsIGxpbmVzPC91PiBhdCBkaWZmZXJlbnQgbGV2ZWxzIG9mIHRoZSBtb2RlcmF0b3IuCgoqKkZhbi1zaGFwZWQgaW50ZXJhY3Rpb25zKiogb2NjdXIgd2hlbiBpbmRpdmlkdWFscyBhdCBkaWZmZXJlbnQgbGV2ZWxzIG9mIGBNYCBlaXRoZXIgc3RhcnQgb3IgZW5kIG5lYXIgZWFjaCBvdGhlciBvbiBgWWAsIGJ1dCBhcHBlYXIgdG8gZGl2ZXJnZSBhdCBkaWZmZXJlbnQgbGV2ZWxzIG9mIGBYYC4KRm9yIGV4YW1wbGU6IHRoZXJlIG1heSBiZSBhbiBpbnRlcmFjdGlvbiBiZXR3ZWVuIHRoZSBwcmVzZW5jZSBvZiBBbHpoZWltZXIncyBkaXNlYXNlIGFuZCB0aW1lIHdoZW4gcHJlZGljdGluZyBhbiBpbmRpdmlkdWFsJ3MgdmVyYmFsIG1lbW9yeS4KSW1hZ2luZSBhIHRhc2sgd2hlcmUgYSBsaXN0IG9mIHdvcmRzIGlzIHJlcGVhdGVkbHkgcmVhZCB0byBhbiBpbmRpdmlkdWFsLgpBZnRlciBjb21wbGV0aW5nIHRoZSB0YXNrLCB0aGV5IGFyZSBhc2tlZCB0byByZWNhbGwgYXMgbWFueSBvZiB0aG9zZSB3b3JkcyBhcyBwb3NzaWJsZSBhdCB2YXJpb3VzIHBlcmlvZHMgb2YgdGltZSAoZS5nLiwgYXQgNS1taW51dGUgaW50ZXJ2YWxzKS4KQXQgZmlyc3QsIGVhcmx5IG9uIGluIHRoZSBhc3Nlc3NtZW50IChpLmUuLCBhZnRlciB0aGUgZmlyc3QgNSBtaW51dGVzKSB0aGUgbnVtYmVyIG9mIHdvcmRzIHJlY2FsbGVkIGJ5IGluZGl2aWR1YWxzIGluIGJvdGggZ3JvdXBzIChpLmUuLCBhdCBkaWZmZXJlbnQgbGV2ZWxzIG9mIGBNYCkgbWF5IG5vdCBzaWduaWZpY2FudGx5IGRpZmZlciBmcm9tIG9uZSBhbm90aGVyOyBpbmRpdmlkdWFscyB3aXRoIGFuZCB3aXRob3V0IEFsemhlaW1lcidzIGRpc2Vhc2UgYXBwZWFyIHRvIHJlY2FsbCB0aGUgc2FtZSBhbW91bnQgb2Ygd29yZHMuCkhvd2V2ZXIsIGFzIG1vcmUgdGltZSBwYXNzZXMsIHRoZSBpbnRlcmFjdGlvbiBlZmZlY3QgYmV0d2VlbiB0aW1lIGFuZCB0aGUgcHJlc2VuY2Ugb2YgdGhlIGRpc2Vhc2UgYmVjb21lcyBtb3JlIGFwcGFyZW50LgpUaGF0IGlzLCBhdCBsYXRlciB0aW1lIHBvaW50cyAoaS5lLiwgYWZ0ZXIgMjAgbWludXRlcykgdGhlIGdhcCBiZXR3ZWVuIHRoZSBhbW91bnQgb2Ygd29yZHMgcmVjYWxsZWQgYnkgYm90aCBncm91cHMgYmVjb21lIHNpZ25pZmljYW50bHkgZGlmZmVyZW50LgpJbiB0aGlzIGNhc2UsIHdlIGNhbiBzYXkgdGhhdCA8dT50aGUgcHJlc2VuY2Ugb2YgQWx6aGVpbWVyJ3MgZGlzZWFzZSBpbnRlcmFjdHMgd2l0aCB0aGUgcGFzc2luZyBvZiB0aW1lPC91PiB0byBjYXVzZSBhIGZhc3RlciBkZWNsaW5lIGluIHRoZSBudW1iZXIgb2Ygd29yZHMgcmVjYWxsZWQuCkluIG90aGVyIHdvcmRzLCB0aGUgbnVtYmVyIG9mIHdvcmRzIHJlY2FsbGVkIG92ZXIgdGltZSBkaWZmZXJzIGJldHdlZW4gaW5kaXZpZHVhbHMgd2hvIGhhdmUgQWx6aGVpbWVyJ3MgdmVyc3VzIGluZGl2aWR1YWxzIHdobyBkbyBub3QuCgpWaXN1YWxseSwgdGhpcyBjYW4gYmUgZGlzcGxheWVkIGluIGEgbGluZSBncmFwaCB3aXRoIHR3byBncm91cHM6IAoKICFbRmFuLVNoYXBlZCBJbnRlcmFjdGlvbl0oaW1hZ2VzL2ludGVyYWN0aW9uRmFuU2hhcGVkLnBuZykKCkluIHRoZSBhYm92ZSBleGFtcGxlLCB0aGVyZSBpcyBhIHN0cm9uZ2VyIGFzc29jaWF0aW9uIGJldHdlZW4gdGhlIHBhc3NhZ2Ugb2YgdGltZSBhbmQgbnVtYmVyIG9mIHdvcmRzIHJlY2FsbGVkIGZvciB0aGUgQWx6aGVpbWVyJ3MgZGlhZ25vc2lzIGdyb3VwIGNvbXBhcmVkIHRvIHRob3NlIHdpdGhvdXQgQWx6aGVpbWVyJ3MuCkZvciB0aGUgQWx6aGVpbWVyJ3MgZGlhZ25vc2lzIGdyb3VwLCB0aGVyZSBpcyBhIDx1PnN0cm9uZzwvdT4gbmVnYXRpdmUgYXNzb2NpYXRpb24gYmV0d2VlbiB0aGUgcGFzc2FnZSBvZiB0aW1lIGFuZCBudW1iZXIgb2Ygd29yZHMgcmVjYWxsZWQuCkZvciB0aG9zZSB3aXRob3V0IEFsemhlaW1lcidzLCB0aGVyZSBpcyBhIDx1PndlYWs8L3U+IG5lZ2F0aXZlIGFzc29jaWF0aW9uIGJldHdlZW4gdGhlIHBhc3NhZ2Ugb2YgdGltZSBhbmQgbnVtYmVyIG9mIHdvcmRzIHJlY2FsbGVkLgpUaGF0IGlzLCA8dT50aGUgZWZmZWN0IG9mIHRoZSBwYXNzYWdlIG9mIHRpbWUgb24gbnVtYmVyIG9mIHdvcmRzIHJlY2FsbGVkIGRlcGVuZHMgb24gd2hldGhlciB0aGUgcGVyc29uIGhhcyBBbHpoZWltZXInczwvdT4uCkluIHRlcm1zIG9mIHRoZSBudW1iZXIgb2Ygd29yZHMgcmVjYWxsZWQsIHRoZSBwYXNzYWdlIG9mIHRpbWUgPHU+bWF0dGVycyBtb3JlPC91PiBmb3IgdGhvc2Ugd2l0aCBBbHpoZWltZXIncyBjb21wYXJlZCB0byB0aG9zZSB3aXRob3V0IEFsemhlaW1lcidzLgoKUXVlc3Rpb246IDx1PkZvciB3aG9tPC91PiBkb2VzIHRoZSBwYXNzYWdlIG9mIHRpbWUgbGVhZCB0byBmZXdlciB3b3JkcyByZWNhbGxlZD9cCkFuc3dlcjogdGhvc2Ugd2l0aCBBbHpoZWltZXIncwo=</div>
+<script type="text/javascript" src="includes/external-links.js"></script>
+
+<br>
+<hr>
+<br>
+
+<!-- Add lab logo -->
+<p style="text-align: center;">
+    <a href="https://developmental-psychopathology.lab.uiowa.edu" target="_blank">
+        <img alt="Developmental Psychopathology Lab" src="images/formalLogo.png" width="60%">
+    </a>
+</p>
+
+<br>
+<hr>
+<br>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://github.com/DevPsyLab" target="_blank" class="fa fa-github fa-fw fa-3x"></a>
+    <a href="https://twitter.com/devpsylab" target="_blank" class="fa fa-twitter fa-fw fa-3x"></a>
+    <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
+	<a href="https://www.instagram.com/dev_psy_lab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("mediationModeration.Rmd");
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
