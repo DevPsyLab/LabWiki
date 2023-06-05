@@ -72,6 +72,8 @@ There are many helpful resources on the lab drive for thesis projects, including
 You can find these resources at the following location on the lab drive:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
 
+We also have a page the clarifies the difference between mediation and moderation [here](mediationModeration.html).
+
 For information on how to use `SPSS` for data analysis, see [here](https://devpsylab.github.io/DataAnalysis/SPSS.html).
 
 In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:

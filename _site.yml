@@ -46,6 +46,8 @@ navbar:
         href: https://devpsylab.github.io/DataAnalysis
       - text: Honors Projects
         href: honors.html
+      - text: Mediation and Moderation
+        href: mediationModeration.html
       - text: Open Science
         href: openScience.html
       - text: REDCap
