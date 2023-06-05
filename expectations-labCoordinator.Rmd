@@ -37,7 +37,6 @@ Here are the expectations regarding your schedule:
 - You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
-- You respond to team members promptly by email, Slack, or in person (within one business day).
 
 # Communication {#communication}
 
@@ -45,7 +44,7 @@ Here are the expectations regarding your schedule:
 This makes it easier for us to keep a record of lab-related communication for Dr. Petersen and future lab staff.
 For ***non-lab*** related email communication, you will use your personal university email (i.e., firstname-lastname@uiowa.edu).
 If someone contacts your personal university email with lab-related communication, you should reply using the lab email.
-- I expect you to respond promptly when I or another lab member contacts you (in most cases, within 48 hours).
+- You respond to team members promptly by email, Slack, or in person (within one business day).
 If you need time to gather information in response to a Slack message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
 At times, I may contact you by email or Slack after hours (if that is when it is most convenient, so that I do not forget to).
 However, you are \*not\* expected to respond after hours.
