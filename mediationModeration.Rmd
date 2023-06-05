@@ -21,6 +21,8 @@ Both types of effects involve (at least) three variables:
 
 # Mediation {#mediation}
 
+## Overview {#mediationOverview}
+
 **Mediation** is a <u>causal chain of events</u>, where one variable (a mediator variable) at least partially <u>explains (or accounts for) the association between two other variables</u> (the predictor variable and the outcome variable).
 In mediation, a predictor (`X`) leads to a mediator (`M`), which leads to an outcome (`Y`).
 Mediation answers the question of, "<u>**Why (or how)** does `X` influence `Y`?</u> A <u>mediator</u> (`M`) is a variable that helps explain the assocation between two other variables, and it answers the question of why/how `X` influences `Y`.
@@ -45,16 +47,29 @@ As a picture, we can draw this assocation as:
 
 ![Mediation Example](images/mediationExample.png)
 
-When one mechanism fully accounts for the effect of the predictor variable on the outcome variable, this is known as **full mediation**.
-However, many times a single process does not account for the full effect of the predictor variable on the outcome variable; this is known as **partial mediation** and is depicted below:
+## Types of Mediation {#mediationTypes}
+
+### Full Mediation {#fullMediation}
+
+When one mechanism fully accounts for the effect of the predictor variable on the outcome variable, this is known as **full mediation**, as depicted below:
+
+![Full Mediation](images/mediation.png)
+
+### Partial Mediation {#partialMediation}
+
+When a single process partially—but does not fully—accounts for the effect of the predictor variable on the outcome variable; this is known as **partial mediation** and is depicted below:
 
 ![Partial Mediation](images/mediationPartial.png)
+
+### Multiple Mediators {#multipleMediators}
 
 In addition, there can be multiple mediators/mechanisms that account for the effect of a predictor variable on an outcome variable, as depicted below:
 
 ![Multiple Mediators](images/mediationMultiple.png)
 
 # Moderation (i.e., Interaction) {#moderation}
+
+## Overview {#moderationOverview}
 
 **Moderation** (sometimes called an "interaction"), on the other hand, occurs when there is a variable or condition (`M`; called a "moderator") that <u>changes the assocation</u> between `X` and `Y`.
 That is, the effect of the predictor variable on the outcome variable differs at different levels of the moderator variable.
@@ -68,9 +83,13 @@ For example, if the effect of time passing on words recalled differs for those w
 
 ![Moderation](images/moderationExample.png)
 
+## Types of Interactions {#interactionTypes}
+
 There are two types of interaction effects: cross-over interactions and fan-shaped interactions.
 Graphically, both types of interaction effects can be identified by the appearance of <u>non-parallel lines</u>.
 However, the way these lines diverge from one another are what define whether it is a cross-over or fan-shaped interaction.
+
+### Cross-Over Interaction {#crossoverInteraction}
 
 A **cross-over interaction** occurs when individuals at different levels of `M` start at different points on `Y`, and when interacting with `X` the effects on `Y` go in different directions; when looking at a graph of the effects, you can see the lines "cross-over."
 A visual representation of this kind of interaction can be displayed in a line graph with two groups:
@@ -79,6 +98,8 @@ A visual representation of this kind of interaction can be displayed in a line g
 
 Where the predictor/independent variable `X` is on the x-axis, the outcome/dependent variable `Y` is on the y-axis, and the different levels/groups of the moderator variable `M` are represented by the different colored lines in the graph (i.e., the z-axis).
 An interaction can be identified visually by <u>non-parallel lines</u> at different levels of the moderator.
+
+### Fan-Shaped Interaction {#fanShapedInteraction}
 
 **Fan-shaped interactions** occur when individuals at different levels of `M` either start or end near each other on `Y`, but appear to diverge at different levels of `X`.
 For example: there may be an interaction between the presence of Alzheimer's disease and time when predicting an individual's verbal memory.
