@@ -83,10 +83,12 @@ For example, if the effect of time passing on words recalled differs for those w
 
 ![Moderation](images/moderationExample.png)
 
+An interaction can be identified visually by <u>non-parallel lines</u> at different levels of the moderator.
+
 ## Types of Interactions {#interactionTypes}
 
 There are two types of interaction effects: cross-over interactions and fan-shaped interactions.
-Graphically, both types of interaction effects can be identified by the appearance of <u>non-parallel lines</u>.
+Graphically, both types of interaction effects can be identified by the appearance of <u>non-parallel lines</u> at different levels of the moderator.
 However, the way these lines diverge from one another are what define whether it is a cross-over or fan-shaped interaction.
 
 ### Cross-Over Interaction {#crossoverInteraction}
@@ -96,8 +98,8 @@ A visual representation of this kind of interaction can be displayed in a line g
 
 ![Cross-over Interaction](images/interactionCrossover.png)
 
-Where the predictor/independent variable `X` is on the x-axis, the outcome/dependent variable `Y` is on the y-axis, and the different levels/groups of the moderator variable `M` are represented by the different colored lines in the graph (i.e., the z-axis).
-An interaction can be identified visually by <u>non-parallel lines</u> at different levels of the moderator.
+where the predictor/independent variable `X` is on the x-axis, the outcome/dependent variable `Y` is on the y-axis, and the different levels/groups of the moderator variable `M` are represented by the different colored lines in the graph (i.e., the z-axis).
+Notice the <u>non-parallel lines</u> at different levels of the moderator.
 
 ### Fan-Shaped Interaction {#fanShapedInteraction}
 
@@ -108,14 +110,15 @@ After completing the task, they are asked to recall as many of those words as po
 At first, early on in the assessment (i.e., after the first 5 minutes) the number of words recalled by individuals in both groups (i.e., at different levels of `M`) may not significantly differ from one another; individuals with and without Alzheimer's disease appear to recall the same amount of words.
 However, as more time passes, the interaction effect between time and the presence of the disease becomes more apparent.
 That is, at later time points (i.e., after 20 minutes) the gap between the amount of words recalled by both groups become significantly different.
-In this case, we can say that <u>the presence of Alzheimer's disease interacts with the passing of time</u> to cause a faster decline in the number of words recalled.
+In this case, <u>the presence of Alzheimer's disease interacts with the passing of time</u> to cause a faster decline in the number of words recalled.
 In other words, the number of words recalled over time differs between individuals who have Alzheimer's versus individuals who do not.
 
 Visually, this can be displayed in a line graph with two groups: 
 
  ![Fan-Shaped Interaction](images/interactionFanShaped.png)
 
-In the above example, there is a stronger association between the passage of time and number of words recalled for the Alzheimer's diagnosis group compared to those without Alzheimer's.
+In the above example, notice the <u>non-parallel lines</u> at different levels of the moderator.
+There is a stronger association between the passage of time and number of words recalled for the Alzheimer's diagnosis group compared to those without Alzheimer's.
 For the Alzheimer's diagnosis group, there is a <u>strong</u> negative association between the passage of time and number of words recalled.
 For those without Alzheimer's, there is a <u>weak</u> negative association between the passage of time and number of words recalled.
 That is, <u>the effect of the passage of time on number of words recalled depends on whether the person has Alzheimer's</u>.
