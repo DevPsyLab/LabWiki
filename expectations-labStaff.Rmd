@@ -38,35 +38,6 @@ Here are the expectations regarding your schedule:
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
 
-# Priorities
-
-These are a general order of priorities in the Dev-Psy Lab.
-Dr. Petersen or the Lab Coordinator will inform staff if there are modifications to the priorities of tasks.
-
-1. If RA's are not available, E LV1 visits
-1. Schedule families who have signed up via Sign1. Up Genius
-    -  Send reminders the night before the visit
-1. Check in once per week with pending scheduling contacts including: 
-    -  Prospective participants who have indicated interest from the ICTS or Prospective Participants Survey for screening call
-    -  Prospective participants who have been screened and are ready to be enrolled
-    -  Enrolled participants ready to schedule for the next timepoint
-1. Send survey reminders once per week to:
-    -  Primary caregivers who did not complete surveys during their visits
-    -  Parenting partners
-    -  Secondary caregivers
-1. Develop and refine new recruitment methods including: 
-    -  Submitting monthly Peach Jar flyer
-    -  Develop relationships with community organizations
-    -  Flyering
-1. Train LV1 Es
-1. Develop coding tasks 
-1. Schedule meetings with relevant team members including: 
-    -  coding meetings
-    -  trainings
-    -  other meetings
-1. Miscellaneous office tasks
-1. Keep lab website up to date
-
 # Communication {#communication}
 
 - You respond to team members promptly by email, Slack, or in person (within one business day).
