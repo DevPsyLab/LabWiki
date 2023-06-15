@@ -829,6 +829,12 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 |               |                                  | Pictures                                                    |                                                                                                                 |
 |               |                                  | Tabs                                                        |                                                                                                                 |
 
+### Google Drive {#googleDrive}
+
+Sometimes, the lab creates documents in Google Drive for purposes such as sharing, professional development workshops, etc.
+So the lab retains access to these documents, please transfer ownership to Dr. Petersen when creating them.
+To transfer ownership, right click the document, click "Share", add Dr. Petersen (isaactpetersen@gmail.com), and select "Transfer Ownership."
+
 ## Lab Access / Keys
 
 Sometimes when visits occur outside of normal lab hours (M–F, 9AM–5PM), the Lab Coordinator is unable to be present to open lab or lock up.
