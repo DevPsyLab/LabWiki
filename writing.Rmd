@@ -19,3 +19,6 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance
 1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively
 1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines#APA), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation"
+1. When submitting a manuscript to a journal, submit any supplemental appendices as a PDF (not as a Word file)
+1. When submitting a manuscript to a journal, follow the lab's [open science](openScience.html) guidelines.
+For instance, see the section on "[Manuscript Submission to a Journal](openScience.html#journal)."
