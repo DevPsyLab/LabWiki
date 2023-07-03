@@ -151,6 +151,12 @@ The easiest way to work on your thesis is to work on it in the lab.
 If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.html#remoteAccess).
 For instructions how to do each, see the [RA Remote Participation page](documentation-remote.html).
 
+# Statistical Analysis Software {#software}
+
+You can use whatever statistical software you prefer for your project.
+Students in the lab frequently use [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`Jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), though you are also welcome to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) or other software.
+The key goal is for your research to be reproducible (by you and others), so having analysis scripts that can reproduce your findings are important.
+
 # Access SPSS/R for Data Analysis {#spss-R}
 
 You can access [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`R`](https://devpsylab.github.io/DataAnalysis/R.html) through an online platform called UI Virtual Desktop.
