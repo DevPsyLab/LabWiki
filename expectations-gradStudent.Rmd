@@ -76,7 +76,7 @@ The "currency" in science is published papers—they drive a lot of what we do.
 Because our lab is supported by taxpayer dollars, we have an obligation to complete and disseminate our findings.
 I expect you to lead first-authored projects (in addition to any collaborative projects) and to publish your work in high-impact journals.
 It is my policy that students are first-author on all work for which they lead the data analysis and writing.
-I will push you to publish your research as you move through your training program, <ins>not</ins> only at the end.
+I will push you to publish your research as you move through your training program, <u>not</u> only at the end.
 I expect trainees to be lead author on at least two journal paper submissions, preferably three or four (or more!).
 Productivity in terms of publishing high-quality papers and securing funding is crucial to be competitive for many jobs.
 
@@ -411,7 +411,7 @@ I will call you if something is urgent.
 Be mindful of the constraints on my time.
 Allow a minimum of one week prior to submission deadlines for me to read and respond to short materials such as conference abstracts and three weeks for me to work on manuscripts, grant proposals, and letters of recommendation.
 Please do not assume I can read materials within a day or two, especially when I am traveling.
-Please only send drafts of manuscripts, grant proposals, dissertations, etc. when they are your <ins>best possible work</ins> (the Henry Kissinger criterion).
+Please only send drafts of manuscripts, grant proposals, dissertations, etc. when they are your <u>best possible work</u> (the Henry Kissinger criterion).
 That means going through multiple revisions, reading it out loud to yourself, etc.
 Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.21992)):
 

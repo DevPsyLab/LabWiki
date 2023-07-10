@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 # Am I a good fit for the Psychological and Brain Sciences Ph.D. Program at the University of Iowa? {#fit-program}
 
-The Psychological and Brain Sciences Ph.D. Program at the University of Iowa is a [<ins>***research-focused***</ins> training program](https://psychology.uiowa.edu/graduate-program).
+The Psychological and Brain Sciences Ph.D. Program at the University of Iowa is a [<u>***research-focused***</u> training program](https://psychology.uiowa.edu/graduate-program).
 Thus, our program is best aligned with careers in which research will be a key component.
 We look to admit and train graduate students who have research-oriented career goals.
 If you have career goals of being a clinician, our program would not be a good fit for you; you would not be happy here.
@@ -21,7 +21,7 @@ You will want to show evidence of independent research experiences, such as an H
 
 # What graduate training tracks should I apply to in order to join the Developmental Psychopathology Lab? {#tracks}
 
-Prospective graduate students interested in joining the lab can apply to <ins>***any***</ins> of the [graduate training tracks](https://psychology.uiowa.edu/graduate-program) of the Department:
+Prospective graduate students interested in joining the lab can apply to <u>***any***</u> of the [graduate training tracks](https://psychology.uiowa.edu/graduate-program) of the Department:
 
 - [Clinical Science](https://psychology.uiowa.edu/research/clinical-science)
 - [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate-program/individualized-graduate-training-track)

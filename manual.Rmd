@@ -302,7 +302,7 @@ Therefore, prospective Advanced RAs should be **self-motivated** and have consis
 
 ## I meet the criteria, what should I do next?
 
-After you have met all the criteria and feel that you are ready to pursue this opportunity, <ins>it is your responsibility to set up a meeting with the Lab Coordinator and Dr. Petersen</ins>, and to determine what types of responsibilities and projects you would like to lead.
+After you have met all the criteria and feel that you are ready to pursue this opportunity, <u>it is your responsibility to set up a meeting with the Lab Coordinator and Dr. Petersen</u>, and to determine what types of responsibilities and projects you would like to lead.
 You should be prepared to come to this meeting with a thought-out idea of what projects and roles you are interested in given these new responsibilities and privileges.
 
 ## Potential Advanced Roles
@@ -521,7 +521,7 @@ If you are unsure of how many total hours you need for a semester, ask the Lab C
 Lab meetings will take place once per week at a pre-determined time.
 The Lab Coordinator will choose the weekly lab meeting time based on everyone's schedules and will try to schedule the meeting for a time when all lab members are available.
 Lab meeting is the most important time that the team has together every week, because it is the only time that everyone is present, and it helps everyone stay on the same page as part of working as a team.
-Attending lab meeting is <ins>**mandatory**</ins>.
+Attending lab meeting is <u>**mandatory**</u>.
 
 The lab meeting is generally divided into two sections:
 
@@ -531,7 +531,7 @@ If you have questions or suggestions, please raise them.
 
 ### Article Discussion {#articleDiscussion}
 
-Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a <ins>peer-reviewed, empirical research article</ins> of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
+Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a <u>peer-reviewed, empirical research article</u> of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
 Article discussions serve several purposes:
 
 - in the spirit of getting course credit for lab experience, article discussions provide a seminar forum for learning about science
@@ -675,7 +675,7 @@ We are all collaborating on the same project, on the same team, and working towa
     d.	Reviewer makes comments and removes their icon—signaling to 1st that task is ready for updates 
     e. 1st reads comments and makes updates 
     f. 1st assigns final reviewer (member 3 icon shows on card)
-    g. Final reviewer makes additional comments and removes icon (signaling member 1 that changes have been reviewed and is ready for final updates) OR determines that task is complete and moves card to <ins>**DONE**</ins> column.
+    g. Final reviewer makes additional comments and removes icon (signaling member 1 that changes have been reviewed and is ready for final updates) OR determines that task is complete and moves card to <u>**DONE**</u> column.
 
 ### Social Media {#socialMedia}
 
