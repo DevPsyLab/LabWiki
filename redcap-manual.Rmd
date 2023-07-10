@@ -28,6 +28,14 @@ knitr::opts_chunk$set(echo = TRUE,
 1. Project Home → Project Setup → Online Designer
 1. In grey box (Data Collection Instruments), click on "+ Create" to create a new instrument from scratch
 
+However, an instrument will not show up for entry until:
+
+1. The addition of the measure has been approved by Dr. Petersen.
+1. The instrument has been [designated to an event](#designateInstrument).
+1. (As necessary, the instrument has been [designated as a survey](#survey).)
+1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
+1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")
+
 ## Adding fields to an instrument
 
 1. To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column
@@ -71,16 +79,21 @@ Filed embedding is an advanced branching logic method which allows Question B to
 (in our example, variable name for Question A would be college, variable name for Question B: college_other)
 1. Make sure that answer choice "Other" is coded as "9" (see figure 1)
 1.	Return to Question A and add several spaces behind the answer choice you would like to embed.
-1. Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1
+1. Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1)
 1. Save
 1. When testing the instrument, a textbox should now appear directly behind the answer choice, when selecting "Other" (see below example)
 
 ![RedcapExample1](images/redcapExample1.png)
 ![RedcapExample2](images/redcapExample2.png)
 
+## Designating Instruments as a Survey {#survey}
+
+If an instrument is intended to be completed by participants as a survey (as opposed to a data entry instrument for entry of data by lab members), the instrument will need to be designated as a survey.
+To designate an instrument as a survey, go to Project Home → Project Setup → Online Designer → click on "Enable" under the "Enabled as Survey" column for the relevant instrument.
+
 ## Designating Instruments to Events {#designateInstruments}
 
-Most instruments in longitudinal studies will need to be desigated accross events.
+Most instruments in longitudinal studies will need to be desigated across events.
 Instruments should already be created and approved before designating to events.
 
 To designate events, follow the below steps:
@@ -90,15 +103,16 @@ To designate events, follow the below steps:
 1. Select, `begin editing` and select checkboxes for each event to designate the instrument to
 1. **Important:** Update the roles in `User Rights` to be able to view and edit the newly designated instrument
 
-## Designating Instruments as Repeatable
+## Designating Instruments as Repeatable {#repeatableInstrument}
 
 Some instruments will be designated as repeatable.
-These events will first need to be designated accross events (See section on  [designating events](#designateInstruments)).
-Tasks that require multiple people to create the same form will often need to be repeatable.For example, coding tasks that require multiple people to check accross forms for reliability.
+These events will first need to be designated across events (See section on [designating events](#designateInstruments)).
+Tasks that require multiple people to create the same form will often need to be repeatable.
+For example, coding tasks that require multiple people to check across forms for reliability.
 
-To designate forms repeatable, follow the below steps:
+To designate forms as repeatable, follow the below steps:
 
-1. Under *"Enable optional modules and customizations"*, select ` Repeatable instruments and events`
+1. Under *"Enable optional modules and customizations"*, select `Repeatable instruments and events`
 1. Select instruments to be designated repeatable
 
 # Creating Instruments and Questionnaires 
@@ -163,6 +177,7 @@ After you have added variables, slack the Lab Coordinator for review.
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
 ### Timestamps
+
 1. "Date/Timestamp in the rater's timezone"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
    * Use variable name: `prefix_ratertimezone`
