@@ -29,7 +29,7 @@ Nevertheless, students who are conducting [Honors Projects](honors.html) may nee
 
 To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
 Visit this website to learn how to set up VPN access to the lab drive:
-https://its.uiowa.edu/support/article/1876
+https://its.uiowa.edu/support/article/1876 (archived at https://perma.cc/ST6R-PCJU)
 
 The full drive path to our lab drive is: 
 

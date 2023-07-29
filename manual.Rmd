@@ -725,7 +725,7 @@ Written documentation is important for many reasons, including that it facilitat
 If we are missing written documentation for something, please let us know and help us create a manual or checklist!
 
 Just as important as creating written documentation is using it!
-[Checklists to remind surgeons to wash their hands significantly reduce infection rates](https://www.newyorker.com/magazine/2007/12/10/the-checklist); we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists.
+[Checklists to remind surgeons to wash their hands significantly reduce infection rates](https://www.newyorker.com/magazine/2007/12/10/the-checklist) (archived at https://perma.cc/4Q62-ER5T); we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists.
 When you are training in a new procedure, do not rely just on what other RAs tell you.
 Despite their best efforts to help you, RAs may sometimes describe procedures incorrectly to you, and it is important to follow what is in the manual.
 If something is missing, incorrect, or out-of-date in the manual, please let us know so we can fix it.

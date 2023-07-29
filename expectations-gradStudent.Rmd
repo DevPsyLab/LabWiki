@@ -63,7 +63,7 @@ I expect all trainees to maintain good progress on their projects.
 This includes: keeping updated on the literature and research methods, actively thinking about the best ways to conduct your research projects and applying them, regularly discussing your research progress with me, following the plans based on our discussions, and presenting (conferences, presentations, and/or journal articles) the findings at a satisfactory level.
 Writing is the single most important ability to develop during graduate school.
 I expect you to write frequently, and I encourage you to write daily.
-I encourage students to read Paul Silva's "[How to Write a Lot](https://www.amazon.com/How-Write-Lot-Practical-Productive/dp/1433829738)," and I am happy to lend the book to you.
+I encourage students to read Paul Silva's "[How to Write a Lot](https://www.amazon.com/How-Write-Lot-Practical-Productive/dp/1433829738) (archived at https://perma.cc/C6XV-84UR)," and I am happy to lend the book to you.
 I encourage you to use EndNote, Zotero, or another reference manager to manage your references and write the References section of papers.
 Reference management software will save you lots of time.
 Additionally, please follow the lab's [writing guidelines](writing.html).
@@ -147,7 +147,7 @@ We have a collaborative lab environment.
 Our lab works as a team, and other lab members count on you being there.
 Likewise, you benefit from having other team members, myself, and Departmental staff available.
 Working in the lab space helps improve quality control of lab procedures and can lead to exciting collaborative projects.
-This short blurb on how "[Isolation is one of the biggest enemies of graduate students](https://www.insidehighered.com/views/2005/10/26/we-need-humanities-labs)" may give you some insight why facetime in the lab is so important:
+This short blurb on how "[Isolation is one of the biggest enemies of graduate students](https://www.insidehighered.com/views/2005/10/26/we-need-humanities-labs)" (archived at https://perma.cc/GK56-7LLW) may give you some insight why facetime in the lab is so important:
 
 > "I wonder how an English professor would feel spending a week in a physics lab.
 > Not about the scientific work, but about the frequent, ongoing interaction between students and peers, post-docs and faculty.
@@ -274,7 +274,7 @@ For instance, the Behavioral-Biomedical Interface Training Program (BBIP) provid
 
 This is a research-oriented program; you are expected to prioritize research relative to your other obligations.
 If you are getting all As in classes, you are spending too much time on coursework!
-[Grades in grad school don't matter](https://phdcomics.com/comics/archive.php?comicid=469) (as long as you pass your classes), and the sooner you figure that out, the better off and more productive you will be.
+[Grades in grad school don't matter](https://phdcomics.com/comics/archive.php?comicid=469) (as long as you pass your classes; archived at https://perma.cc/KDU2-79JZ), and the sooner you figure that out, the better off and more productive you will be.
 Instead of focusing your learning on coursework, learn by doing.
 Take what you need from classes to advance your research program.
 
@@ -303,7 +303,7 @@ I expect you to use version control (git with GitLab) with all projects and to s
 Commit and push your work to the GitLab repo often.
 Using version control provides many benefits: (a) it provides backups of all files in the cloud, (b) it allows you to access the files in the cloud from any computer with access to the internet, even if you are away from your local computer, (c) it provides history of all (committed) changes made to all files.
 If you make a mistake in your code, you can easily revert to a prior version because you took snapshots (commits) of your files!
-(d) It allows you to write cleaner code because you do not need to keep all the old, "commented out" lines of code, (e) it helps with project organization; you no longer have to keep files or folders named "project_old" (or "project_2", "[project_final](https://phdcomics.com/comics/archive.php?comicid=1531)", or whatever), (f) it keeps all files for the project self-contained, which helps increase reproducibility, and (g) it allows easier collaboration with others on the project.
+(d) It allows you to write cleaner code because you do not need to keep all the old, "commented out" lines of code, (e) it helps with project organization; you no longer have to keep files or folders named "project_old" (or "project_2", "[project_final](https://phdcomics.com/comics/archive.php?comicid=1531)" (archived at https://perma.cc/3Q5D-XKTJ), or whatever), (f) it keeps all files for the project self-contained, which helps increase reproducibility, and (g) it allows easier collaboration with others on the project.
 
 ## Other responsibilities {#otherResponsibilities}
 
@@ -327,7 +327,7 @@ You should not spend more than 10 hours per week doing teaching-related work for
 You should talk with me and get my approval before doing or adding any external practica.
 Per lab and program expectations, you should not spend more than 1.5 full days (i.e., 12 hours) doing clinic-related work per week.
 Do not focus too much on clinical hours; Ph.D. students from non-clinical science programs and Psy.D. students will have way more clinical hours than you—you are not competing with them for the same types of sites.
-You will be most competitive at [clinical science internship sites](https://www.acadpsychclinicalscience.org/internship-programs.html), which care much more about the *quality* of training than the *quantity* of training.
+You will be most competitive at [clinical science internship sites](https://www.acadpsychclinicalscience.org/internship-programs.html) (archived at https://perma.cc/2VRK-JRMQ), which care much more about the *quality* of training than the *quantity* of training.
 And UI has top-notch clinical training.
 Internship sites also care heavily about scientific productivity including publications ([Lund et al., 2016](https://psycnet.apa.org/record/2015-57073-001)), and this is even more true for clinical science internship sites.
 I had four first-authored publications (nine total) and an NRSA when I applied for internship and received 13 interview invitations out of 15 sites.
@@ -347,7 +347,7 @@ At the same time, keep in mind that this is a [research-oriented training progra
 For prospective graduate students, if you have goals of being a clinician, I would dissuade you from joining our program and this lab; you would not be happy here.
 
 We will discuss your career development plans and how I can best support them.
-During each Fall semester, I expect you to complete an Individual Development Plan ([https://myidp.sciencecareers.org](https://myidp.sciencecareers.org)), and to review and discuss the results with me.
+During each Fall semester, I expect you to complete an Individual Development Plan ([https://myidp.sciencecareers.org](https://myidp.sciencecareers.org); archived at https://perma.cc/MT27-CPP2), and to review and discuss the results with me.
 I expect you to inform me if there is any change in your career plans so that your lab activities can be better aligned to your new goals.
 In addition to academic careers (e.g., research/teaching/clinical work at R1 university, academic medical center, or liberal arts college), I support plans for industry and non-academic careers (e.g., data science, consulting, government, NGO; these are just examples—there are many others).
 You are welcome to get the training you need, provided that you maintain good progress on your degree-related training and research.
@@ -398,7 +398,7 @@ For longer communication, please call or stop by my office.
 I find this much more efficient and pleasant than writing and reading lengthy communication.
 For sending manuscripts, personal information, and messages that do not need an urgent response, you may email me.
 Please limit your use of email as much as possible.
-[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
+[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid) (archived at https://perma.cc/9XJE-BM8N); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
 I encourage you to stop by my office or to call my office phone instead of relying on email, whenever possible.
 
 When you contact me or send me materials, you can expect me to respond promptly.
@@ -505,14 +505,14 @@ Remember that all of us are "new" at various points in our careers.
 Imposter syndrome is normal; I encourage you to adopt a growth mindset.
 You are meant to be here!
 Failure is common in academia.
-Take a look at the [CV of Failures](https://www.uni-goettingen.de/de/document/download/bed2706fd34e29822004dbe29cd00bb5.pdf/Johannes_Haushofer_CV_of_Failures%5b1%5d.pdf).
+Take a look at the [CV of Failures](https://www.uni-goettingen.de/de/document/download/bed2706fd34e29822004dbe29cd00bb5.pdf/Johannes_Haushofer_CV_of_Failures%5b1%5d.pdf) (archived at https://perma.cc/6UFR-ZBV4).
 Persistence pays off.
-I have found it helpful to have a ["feelgood" email folder](https://blogs.scientificamerican.com/guest-blog/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/) that I can refer back to when things are difficult.
+I have found it helpful to have a ["feelgood" email folder](https://blogs.scientificamerican.com/guest-blog/the-awesomest-7-year-postdoc-or-how-i-learned-to-stop-worrying-and-love-the-tenure-track-faculty-life/) (archived at https://perma.cc/C3CB-25LU) that I can refer back to when things are difficult.
 
 Do not forget to laugh and have fun!
 Graduate school is a challenging job with very high expectations, but it should also be fun.
 You get to study something that is exciting to you and get paid to do it!
-To quote [Norman Ramsey's guide for graduate students](https://d1uqjtzsuwlnsf.cloudfront.net/wp-content/uploads/sites/163/2016/11/Ramsey-Guide-for-Research-Students.pdf), "To sustain yourself through difficult times, find research that means a lot to you.
+To quote [Norman Ramsey's guide for graduate students](https://www.cs.tufts.edu/~nr/students/guide.pdf) (archived at https://perma.cc/3WFY-SH3L), "To sustain yourself through difficult times, find research that means a lot to you.
 Successful researchers find interesting problems and fall in love with them.
 In operational terms, some Friday nights should be spent having fun out in the world, but if you aren't also spending some Friday nights having fun with your research, you're not doing the right research."
 

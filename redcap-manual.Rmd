@@ -255,7 +255,7 @@ In the below section, it is necessary to identify the `instrument_name` for each
 ## Troubleshooting
 
 - When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: "ERASE CURRENT VALUE OF THE FIELD?"
-   - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf
+   - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf (archived at https://perma.cc/6NBY-3Y5R)
    - If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      
       - logic: [field_name] <> ""
 
