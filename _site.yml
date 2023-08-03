@@ -42,6 +42,8 @@ navbar:
         href: expectations-labStaff.html
     - text: "Documentation"
       menu:
+      - text: Adobe
+        href: adobe.html
       - text: Data Analysis Guides
         href: https://devpsylab.github.io/DataAnalysis
       - text: Honors Projects
