@@ -517,7 +517,7 @@ If you are unsure of how many total hours you need for a semester, ask the Lab C
 
 # The Basics of Lab
 
-## Lab Meetings
+## Lab Meetings {#lab-meetings}
 
 Lab meetings will take place once per week at a pre-determined time.
 The Lab Coordinator will choose the weekly lab meeting time based on everyone's schedules and will try to schedule the meeting for a time when all lab members are available.
@@ -567,11 +567,11 @@ The scribe is responsible for taking notes throughout the meeting.
 The scribe also sends a brief summary of the important information from the meeting to the entire team via the `#lab-meetings` channel in Slack after the lab meeting has ended.
 The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [lab's OneDrive](#onedrive).
 
-### Attendance and Absence Policies
+### Attendance and Absence Policies {#lab-meeting-attendance}
 
 All members of the team are expected to attend every lab meeting.
-If an RA is not able to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time.
-They are also responsible for emailing several detailed questions or comments on the article to the Lab Coordinator by the day before the meeting to help contribute to the discussion.
+If an RA is unable to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time.
+They are also responsible for emailing several detailed questions or comments on the article to the presenting student AND to the lab email (devpsy-lab@uiowa.edu) by the day before the meeting to help contribute to the discussion.
 If advanced notice is not possible, contact the Lab Coordinator as soon as you are able to and explain the absence.
 The RA is also responsible for reading the lab meeting agenda and summary notes after the meeting to learn what they missed.
 
