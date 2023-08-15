@@ -194,6 +194,7 @@ It is important that you do not save any visit videos or lab files of any kind t
 # Writing Guidelines
 
 Make sure to follow the lab's [writing guidelines](writing.html).
+You are also encouraged to take advantage of the [UI Writing Center](https://writingcenter.uiowa.edu).
 
 # Presenting Work at Conferences {#conferences}
 
