@@ -237,14 +237,14 @@ In the below section, it is necessary to identify the `instrument_name` for each
       * @CALCTEXT([survey-date-completed:instrument_name])
 1. "Survey Duration:"
    * Add a "Text Box" field with numeric validation
-   * Use variable name: prefix_surveyduration
+   * Use variable name: `prefix_surveyduration`
    * Add the following Action Tags
       * @HIDDEN-SURVEY
       * @READONLY
       * @CALCTEXT([survey-duration:instrument_name:m])
 1. "Survey Duration Completed:"
    * Add a "Text Box" field with numeric validation
-   * Use variable name: prefix_surveydurationcompleted
+   * Use variable name: `prefix_surveydurationcompleted`
    * Add the following Action Tags
       * @HIDDEN-SURVEY
       * @READONLY
