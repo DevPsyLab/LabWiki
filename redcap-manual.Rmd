@@ -201,7 +201,7 @@ These variables should be entered at the end of each survey. For each survey, fo
       * @NOW-UTC
       * @READONLY
 
-### Date Completed, Time Completed and Survey Durations
+### Date Completed, Time Completed and Survey Durations {#dateTimestampDuration}
 
 In the below section, it is necessary to identify the `instrument_name` for each variable added. In REDCap, open the `Designer` tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the *parenting_partner* instrument. 
 
