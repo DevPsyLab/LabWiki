@@ -257,7 +257,8 @@ In the below section, it is necessary to identify the `instrument_name` for each
    - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf (archived at https://perma.cc/6NBY-3Y5R)
    - If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      
       - logic: [field_name] <> ""
-- Sometimes REDCap may record incorrect values or may fail to record values at all. You can check for this by:
+- Sometimes REDCap may record incorrect values or may fail to record values at all.
+You can check for this by:
 1. Navigating to a project, then in the side bar clicking "Data Quality" under "Applications"
 1. Under Rule #H "Incorrect values for calculated fields", click "Execute"
 1. You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".
