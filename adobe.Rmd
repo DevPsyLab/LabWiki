@@ -28,50 +28,1134 @@ knitr::opts_chunk$set(
     * `task_start_time`
     * `task_stop_time`
     * `task_length`
-* keep it clean
-* keep consistent naming conventions within (and across) forms
+* Keep it clean
+* Keep consistent naming conventions within (and across) forms
 * For fonts in the fields, in general, use auto.
 However, this can be changed if problematic. 
 * To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared. 
 
-# Calculating fields
+# Converting Word Documents to PDFs
 
-How to define values:
+Before converting forms to pdfs, all required edits to the document should be made in Microsoft Word.
+Edits of content or formatting should be completed and finalized in Word before converting the document to a pdf.
+To convert a Word document to a pdf, complete the following steps:
+
+1. Open the document in Microsoft Word
+1. Click the "File" tab in the top left corner within the Word interface
+1. Select "Save as ADOBE PDF"
+1. Name the new pdf accordingly
+
+# Editing pdfs in Adobe
+
+1. Open pdf in Adobe Acrobat Pro 2020
+
+   * *Note:* Editing of pdfs must be done in Adobe Acrobat Pro 2020, ***not*** Adobe Acrobat
+
+1. Under the "Tools" tab in the top left corner of the Adobe interface, find the heading "Forms & Signatures" and select "Prepare Form"
+
+1. Select "Start" to begin scanning and preparation of the pdf
+
+1. The "Prepare Form" tool bar should now be visible, allowing for the addition of text fields, radio buttons, check boxes, and more
+
+## Adding Text Fields, Radio Buttons, and Check Boxes
+
+1. Text fields should be implemented when:
+   1. Textual or numeric information must be manually entered
+   1. A calculated field is required
+1. Radio buttons should be implemented whenever possible
+   * Radio buttons allow for only one selection out of a group of options
+      * Radio buttons thus should be used for imitation, comprehension, practice, and test trial fields within pdfs
+   * In order to prevent human error, radio buttons should be applied to as many variables as possible
+   * Calculated fields can be derived from radio buttons
+1. Check boxes should only be used when necessary
+   * Check boxes allow for multiple selections within a group
+   * Check boxes should **not** be used for trials fields within pdfs unless multiple answers can be selected for a given trial
+   * Calculated fields can be derived from check boxes
+
+## Naming Convention for Variables in Adobe {#namingvariables}
+
+1. Variable names should be in all lowercase with no spaces and underscores separating words
+1. Keep variable names as consistent as possible across forms with similar variables
+1. The following are common names for variables which should be used when applicable:
+   * Identifying information:
+      * TCID: `tcid`
+      * Wave: `wave`
+      * Coder Name: `coder_name`
+      * Date Coded: `date_coded`
+      * Coder: `coder` (for 1, 2, 3 variable)
+      * Was TC given the opportunity to play the task: `given_opp_to_play`
+      * Did TC play the task: `play_task`
+      * PC Present: `pc_present`
+      * Did TC pass the imitation trials: `pass_imitation`
+      * Did TC pass the comprehension check: `pass_comprehension`
+      * Did TC pass the practice trials: `pass_practiceX`
+      * Start time: `task_start_time`
+      * Stop time: `task_stop_time`
+      * Length of administration: `task_length`
+      * Coder 1/2/3: `initials_date_coderX`
+   * Task Trials
+      * Imitation Trials: `imitation_trials_x`
+      * Imitation Trials Second Administration: `imitation_trials_readmin_x`
+      * Comprehension Check: `comp_checkX_x`
+      * Practice Trials: `practice_trialsX_x`
+      * Test Trials: `test_trialsX_x`
+      * *Note:* "X" signifies the round/block of the trials while "x" signifies the trial number within that round/block (ex: `practice_trials2_7`).
+      An "X" within the variable name is only necessary if there are multiple rounds/blocks for the trial.
+      Thus, if there is only one round of imitation trials, those trials should be simply named `test_trials` rather than `test_trials1`.
+   * Trial Totals
+      * Total Incorrect: `total_incorrect_task_trials`
+      * Total Initially incorrect, but changed to correct: `total_initially_task_trials`
+      * Total Correct: `total_correct_task_trials`
+      * Total No Response: `total_noresponse_task_trials`
+      * Total Uncodeable: `total_uncodeable_task_trials`
+      * Total # of Scoreable Trials Played: `total_scored_task_trials`
+      * *Note:* "task_trials" should be replaced with whether the round/block of trials is `imitation_trials`, `comp_check`, `practice_trials`, or `test_trials`.
+
+### Naming Convention for Radio Buttons {#namingconventionradiobuttons}
+
+1. In order to create calculated fields for trial totals, radio button "Choice Values" must be manually set.
+To facilitate the process, this should be done after aligning each group of radio buttons for each trial under each TC response for the trial.
+For example, there should be a column of radio buttons under the "Correct" label within the trial's grid with each radio button in this column representing the "Correct" choice for a different group of radio buttons.
+A column of buttons should be present for "Incorrect," "No Response," and so forth.
+Thus, each group of radio buttons should be aligned horizontally, with each button reflecting a different TC response.
+These groups should then be stacked into a column with each column representing the response across trials.
+The Choice Values can then be set through the following steps:
+   
+   1. Select the entire column under a certain TC response (ex. select the entire column of radio buttons under "Correct")
+   1. Right-click on the selected column of radio buttons and select "Properties"
+   1. Under the "Options" tab, set the "Radio Button Choice" according to the following values:
+      * "Correct" column = 2
+      * "Incorrect" column = 0
+      * "Initially incorrect but changed response to correct" column = 1
+      * "No response" column = -9
+      * "Uncodeable" column = 9
+   1. Set all columns with their appropriate radio button choice value
+   * *Note:* While calculated fields can be derived from different radio button choice values, it is imperative to assign the button choices according to these values.
+   This allows for consistency across pdfs and the ability to smoothly borrow code for calculated fields.
+
+### Naming Convention for Check Boxes {#namingconventioncheckboxes}
+
+Check boxes can be named in such a way that they act similar to radio buttons, allowing only one selection out of a group of check boxes.=
+A group of check boxes can be formatted as radio buttons through the following steps:
+
+1. Input the *same* variable name for each check box within the group to be formatted
+1. Right click on each check box and select "Properties"
+1. Under the "Options" tab, set the "Export Value" for each check box according to the following values:
+      * "Correct" column = 2
+      * "Incorrect" column = 0
+      * "Initially incorrect but changed response to correct" column = 1
+      * "No response" column = -9
+      * "Uncodeable" column = 9
+1. With each check box named the same but also each with a different export value, the group of check boxes should now operate similar to a group of radio buttons
+   * Within the group, only one check box should be able to be selected
+   * Additionally, the selection should be able to be unselected
+1. While both groups of radio buttons and this form of groups of check boxes operate the same way and permit only one selection within the group, groups of check boxes provide an advantage by allowing for deselection of the value.
+Within groups of radio buttons, as soon as a button is selected, the group of buttons cannot be reset or deselected.
+This usage of groups of check buttons may be useful going forward and should be considered when creating new coding forms.
+   * *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](adobe.html#createcalculatedradiobuttons).
+   Thus, it is important to ensure the export values for each check box follow the values listed in Step 3.
+
+
+# Creating Calculated Fields
+
+Adobe Acrobat both includes its own functions for creating calculated fields and allows for the implementation of custom calculation scripts within forms.
+While the calculation features are built-in to Adobe, the custom calculation scripts must be written using the programming language JavaScript.
+The following sections detail how to create different types of calculated fields.
+
+## Creating Calculated Fields from Radio Buttons {#createcalculatedradiobuttons}
+
+1. First, ensure the radio buttons and their choice values are appropriately set according to the [naming convention for radio buttons](adobe.html#namingconventionradiobuttons)
+1. Select the text field which must be turned into a calculated field
+1. Right-click on the field and select "Properties"
+1. Select the "Calculate" tab within the Properties menu
+1. Select the "Custom calculation script:" radio button
+1. Select "Edit..." and input the desired calculation script
+   * The following script should be applied in order to calculate radio buttons:
+
+   ```
+   var v1 = getField("variable_group_name").value
+   var v2 = getField("variable_group_name2").value
+   var v3 = getField("variable_group_name3").value
+   var v4 = getField("variable_group_name4").value
+
+   if (v1 == X) { 
+   total = 1;
+   } else {
+   total = 0;
+   }
+
+   if (v2 == X) {
+   total2 = 1;
+   } else {
+   total2 = 0;
+   }
+
+   if (v3 == X) {
+   total3 = 1;
+   } else {
+   total3 = 0;
+   }
+
+   if (v4 == X) {
+   total4 = 1;
+   } else {
+   total4 = 0;
+   }
+
+   event.value = total + total2 + total3 + total4
+   ```
+   * This script should be fit according to how many trials/variables must be calculated from
+   * Proceed to [Breaking Down the Calculation Script](adobe.html#breakingdownscript) to gain a greater understanding of the script
+
+## Creating Calculated Fields from Radio Buttons: Video
+
+Watch the following video in order to observe an example of creating calculated fields from radio buttons:
+<br>
+<br>
+
+<video width="100%" controls="" preload="none">
+<source src="images/creating_calculated_fields_in_adobe.mp4" type="video/mp4">
+</video>
+
+## Creating Calculated Fields from Check Boxes
+
+1. Prepare the check boxes for calculation:
+
+   1. Provide the check boxes from which the field will be calculated with appropriate variable names, closely following standard [naming convention for variables](adobe.html#namingvariables) when possible
+   
+   1. For each check box, an export value must be assigned.
+   The export value will determine what numeric value the check box will carry throughout calculation.
+   To set the export value, complete the following steps:
+
+      1. Select and right-click on the check box and select "Properties"
+      1. In the Properties menu, select the "Options" tab
+      1. In the "Export Value:" field, enter the numeric value the check box should reflect
+
+1. Select the text field which must be turned into a calculated field
+1. Right-click on the field and select "Properties"
+1. Select the "Calculate" tab within the Properties menu
+1. Select the "Value is the `mathematical operators` of the following fields" radio button
+   * *Note:* The appropriate `mathematical operator` should be selected according to the desired final calculation from the drop down list of "sum (+)," "product (x)," "average," "minimum," or "maximum"
+1. Select "Pick..." and then check the variable names of the check boxes to be calculated
+
+## Breaking Down the Calculation Script {#breakingdownscript}
 
 ```
-# get field pulls the choice value from each group. 
-# This number comes from the choice number it is in the group.
-var v1 = getField("practice_trials1_1").value
-var v2 =
-getField("practice_trials1_2").value
-var v3 = getField("practice_trials1_3").value
-var v4 = getField("practice_trials1_4").value
+var v1 = getField("variable_group_name").value
+var v2 = getField("variable_group_name2").value
+var v3 = getField("variable_group_name3").value
+var v4 = getField("variable_group_name4").value
 
-# if else statements use the choice number from the field value. 
-# The purpose of these is to create the total values fields
-if (v1 == 3) { 
+if (v1 == X) { 
+total = 1;
+} else {
+total = 0;
+}
+
+if (v2 == X) {
+total2 = 1;
+} else {
+total2 = 0;
+}
+
+if (v3 == X) {
+total3 = 1;
+} else {
+total3 = 0;
+}
+
+if (v4 == X) {
+total4 = 1;
+} else {
+total4 = 0;
+}
+
+event.value = total + total2 + total3 + total4
+```
+The calculation script for radio buttons can be broken down into three parts:
+
+1. Defining the Variables
+
+   ```
+   var v1 = getField("variable_group_name").value
+   var v2 = getField("variable_group_name2").value
+   var v3 = getField("variable_group_name3").value
+   var v4 = getField("variable_group_name4").value
+   ```
+
+   * This portion of the script defines the variables from which information is being pulled from.
+   In nearly all cases the variables being pulled from will be the groups of radio buttons for each trial.
+   * The line `var v1 = getField("variable_group_name").value` defines the selected radio button in "variable_group_name" as `var v1` (variable 1) within this script and pulls the **choice value** from each group
+      * Thus, within each `getField()`, the name of each group of radio buttons should be added in quotations
+      * *Note:* The number being pulled through this function directly corresponds to the choice value defined for each radio button in the group of radio of radio buttons.
+      This is why it is crucial to define choice values according to the same [naming convention for radio buttons](adobe.html#namingconventionradiobuttons)
+   * Each `var vX` should reflect a trial on the form.
+   Thus, if there are 15 test trials, there should be 15 lines of code from `var v1` to `var v15` with the name for each group of radio buttons inputed in `getField("")` for each variable
+
+2. Defining the Selected Values
+
+   ```
+   if (v1 == X) { 
+   total = 1;
+   } else {
+   total = 0;
+   }
+
+   if (v2 == X) {
+   total2 = 1;
+   } else {
+   total2 = 0;
+   }
+
+   if (v3 == X) {
+   total3 = 1;
+   } else {
+   total3 = 0;
+   }
+
+   if (v4 == X) {
+   total4 = 1;
+   } else {
+   total4 = 0;
+   }
+   ```
+   * This portion of code utilizes if/else statements in order to create the total value for each field
+   * In `v1 == X` and each subsequent `v == X`, the `X` should be replaced with the **choice value** of the radio button from the group of radio buttons that corresponds to the desired field you are calculating
+      * For example, if a total correct field is being calculated, the code should read:
+
+         ```
+         if (v1 == 2) { 
+         total = 1;
+         } else {
+         total = 0;
+         }
+
+         if (v2 == 2) {
+         total2 = 1;
+         } else {
+         total2 = 0;
+         }
+         ```
+
+      * Because a total correct field is being calculated, the choice value of 2 should be inputed as this is the choice value which corresponds to "Correct" (see [naming convention for radio buttons](adobe.html#namingconventionradiobuttons))
+      * The value of 2 would be inputed for each if/else statement for each variable.
+      Thus, if there were 15 variables, there should be 15 if/else statements `v1 == 2` to `v15 == 2`
+   * The if/else statement for each variable defines that if the value pulled by the `getField()` function matches the inputted choice value for the variable then the total for that variable becomes equal to 1.
+   If it does not match, the the total becomes equal to 0.
+
+3. Defining the Total
+
+```
+event.value = total + total2 + total3 + total4
+```
+
+* This portion of code defines the calculation to take place in the field
+   * The `event.value` determines what appears in the text box
+* This line of code adds together the totals defined in the if/else statements.
+This produces the final calculated value for the field.
+* The number of totals added together should correspond to the number of variables.
+Thus, if there are 15 trials, then the final line of code should read:
+   ```
+   event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15
+   ```
+
+The following is an example script for a calculated "total_correct_test_trials" field, calculated from 15 trials:
+
+```
+var v1 = getField("test_trials_1").value
+var v2 = getField("test_trials_2").value
+var v3 = getField("test_trials_3").value
+var v4 = getField("test_trials_4").value
+var v5 = getField("test_trials_5").value
+var v6 = getField("test_trials_6").value
+var v7 = getField("test_trials_7").value
+var v8 = getField("test_trials_8").value
+var v9 = getField("test_trials_9").value
+var v10 = getField("test_trials_10").value
+var v11 = getField("test_trials_11").value
+var v12 = getField("test_trials_12").value
+var v13 = getField("test_trials_13").value
+var v14 = getField("test_trials_14").value
+var v15 = getField("test_trials_15").value
+
+
+if (v1 == 2) {
   total = 1;
 } else {
   total = 0;
 }
 
-if (v2 == 3) {
+if (v2 == 2) {
   total2 = 1;
 } else {
   total2 = 0;
 }
 
-if (v3 == 3) {
+if (v3 == 2) {
   total3 = 1;
 } else {
   total3 = 0;
 }
 
-if (v4 == 3) {
+if (v4 == 2) {
   total4 = 1;
 } else {
   total4 = 0;
 }
 
-event.value = total + total2 + total3 + total4
+if (v5 == 2) {
+  total5 = 1;
+} else {
+  total5 = 0;
+}
+
+if (v6 == 2) {
+  total6 = 1;
+} else {
+  total6 = 0;
+}
+
+if (v7 == 2) {
+  total7 = 1;
+} else {
+  total7 = 0;
+}
+
+if (v8 == 2) {
+  total8 = 1;
+} else {
+  total8 = 0;
+}
+
+if (v9 == 2) {
+  total9 = 1;
+} else {
+  total9 = 0;
+}
+
+if (v10 == 2) {
+  total10 = 1;
+} else {
+  total10 = 0;
+}
+
+if (v11 == 2) {
+  total11 = 1;
+} else {
+  total11 = 0;
+}
+
+if (v12 == 2) {
+  total12 = 1;
+} else {
+  total12 = 0;
+}
+
+if (v13 == 2) {
+  total13 = 1;
+} else {
+  total13 = 0;
+}
+
+if (v14 == 2) {
+  total14 = 1;
+} else {
+  total14 = 0;
+}
+
+if (v15 == 2) {
+  total15 = 1;
+} else {
+  total15 = 0;
+}
+
+event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15
+```
+
+## Creating Calculated Fields with Conditional Formatting
+
+For cases where a calculated total can change from a manually-input variable, an altered script must be used.
+<br>
+
+For example, a calculated field can be created for the total number of correct responses a participant gives to a stimulus.
+If what qualifies as a "correct" response depends on a variable that can be manually changed, the original calculation script will result in an inaccurate total.
+<br>
+
+Thus, the altered scripted must show that the value of the calculated total is conditional on another variable.
+The value of `Variable X` is dependent on the value of `Variable Y`.
+This can be accomplished through the usage of if/else commands in JavaScript.
+<br>
+
+Provided below is an example of a calculation script with conditional formatting:
+<br>
+
+```
+var v1= getField("variable_X_group_name").value
+var v2= getField("variable_X_group_name2").value
+var v3= getField("variable_X_group_name3").value
+var v4= getField("variable_X_group_name4").value
+var v5= getField("variable_X_group_name5").value
+var v6= getField("variable_X_group_name6").value
+var v7= getField("variable_X_group_name7").value
+var v8= getField("variable_X_group_name8").value
+var v9= getField("variable_X_group_name9").value
+var v10= getField("variable_X_group_name10").value
+var v11= getField("variable_X_group_name11").value
+var v12= getField("variable_X_group_name12").value
+var v13= getField("variable_X_group_name13").value
+var v14= getField("variable_X_group_name14").value
+var v15= getField("variable_X_group_name15").value
+var v16= getField("variable_X_group_name16").value
+
+
+var v17= getField("variable_Y_group_name").value
+var v18= getField("variable_Y_group_name2").value
+var v19= getField("variable_Y_group_name3").value
+var v20= getField("variable_Y_group_name4").value
+var v21= getField("variable_Y_group_name5").value
+var v22= getField("variable_Y_group_name6").value
+var v23= getField("variable_Y_group_name7").value
+var v24= getField("variable_Y_group_name8").value
+var v25= getField("variable_Y_group_name9").value
+var v26= getField("variable_Y_group_name10").value
+var v27= getField("variable_Y_group_name11").value
+var v28= getField("variable_Y_group_name12").value
+var v29= getField("variable_Y_group_name13").value
+var v30= getField("variable_Y_group_name14").value
+var v31= getField("variable_Y_group_name15").value
+var v32= getField("variable_Y_group_name16").value
+
+if(v17 == Y1){
+	if (v1 == X2){
+    		total=1
+	}else{
+    		total=0
+	}
+}else{
+	if (v1 == X1){
+    		total=1
+	}else{
+    		total=0
+	}
+}
+
+if(v18 == Y2){
+	if (v2 == X1){
+    		total2=1
+	}else{
+    		total2=0
+	}
+}else{
+	if (v2 == X2){
+    		total2=1
+	}else{
+    		total2=0
+	}
+}
+
+if(v19 == Y2){
+	if (v3 == X1){
+    		total3=1
+	}else{
+    		total3=0
+	}
+}else{
+	if (v3 == X2){
+    		total3=1
+	}else{
+    		total3=0
+	}
+}
+
+if(v20 == Y1){
+	if (v4 == X2){
+    		total4=1
+	}else{
+    		total4=0
+	}
+}else{
+	if (v4 == X1){
+    		total4=1
+	}else{
+    		total4=0
+	}
+}
+
+if(v21 == Y2){
+	if (v5 == X1){
+    		total5=1
+	}else{
+    		total5=0
+	}
+}else{
+
+	if (v5 == X2){
+    		total5=1
+	}else{
+    		total5=0
+	}
+}
+
+if(v22 == Y2){
+	if (v6 == X1){
+    		total6=1
+	}else{
+    		total6=0
+	}
+}else{
+	if (v6 == X2){
+    		total6=1
+	}else{
+    		total6=0
+	}
+}
+
+if(v23 == Y1){
+	if (v7 == X2){
+   		 total7=1
+	}else{
+    		total7=0
+	}
+}else{
+	if (v7 == X1){
+   		 total7=1
+	}else{
+    		total7=0
+	}
+}
+
+if(v24 == Y1){
+	if (v8 == X2){
+    		total8=1
+	}else{
+   		 total8=0
+	}
+}else{
+	if (v8 == X1){
+    		total8=1
+	}else{
+   		 total8=0
+	}
+}
+
+if(v25 == Y1){
+	if (v9 == X2){
+   		 total9=1
+	}else{
+    		total9=0
+	}
+}else{
+	if (v9 == X1){
+   		 total9=1
+	}else{
+    		total9=0
+	}
+}
+
+if(v26 == Y2){
+	if (v10 == X1){
+    		total10=1
+	}else{
+    		total10=0
+	}
+}else{
+	if (v10 == X2){
+    		total10=1
+	}else{
+    		total10=0
+	}
+}
+
+if(v27 == Y1){
+	if (v11 == X2){
+    		total11=1
+	}else{
+    		total11=0
+	}
+}else{
+	if (v11 == X1){
+    		total11=1
+	}else{
+    		total11=0
+	}
+}
+
+if(v28 == Y2){
+	if (v12 == X1){
+    		total12=1
+	}else{
+   		 total12=0
+	}
+}else{
+	if (v12 == X2){
+    		total12=1
+	}else{
+   		 total12=0
+	}
+}
+
+if(v29 == Y2){
+	if (v13 == X1){
+    		total13=1
+	}else{
+    		total13=0
+	}
+}else{
+	if (v13 == X2){
+    		total13=1
+	}else{
+    		total13=0
+	}
+}
+
+if(v30 == Y1){
+	if (v14 == X2){
+    		total14=1
+	}else{
+		total14=0
+	}
+}else{
+	if (v14 == X1){
+		total14=1
+	}else{
+    		total14=0
+	}
+}
+
+if(v31 == Y1){
+	if (v15 == X2){
+    		total15=1
+	}else{
+    		total15=0
+	}
+}else{
+	if (v15 == X1){
+    		total15=1
+	}else{
+    		total15=0
+	}
+}
+
+if(v32 == Y2){
+	if (v16 == X1){
+    		total16=1
+	}else{
+    		total16=0
+	}
+}else{
+	if (v16 == X2){
+    		total16=1
+	}else{
+    		total16=0
+	}
+}
+
+
+event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
+```
+<br>
+
+## Breaking Down the Conditional Formatting Calculation Script
+
+Notice the [traditional calculation script](adobe.html#breakingdownscript) is present within this script.
+However, additional if/else commands are implemented in order to account for the dependence on another variable.
+Before proceeding with this section, an understanding of the [traditional calculation script](adobe.html#breakingdownscript) should be obtained.
+In the following section, Variable X refers to the variable which is contingent on the value of another variable, Variable Y.
+Thus, the conditional formatting is described in such a way that the value of a Variable X is dependent on the value of Variable Y.
+<br>
+
+The conditional formatting calculation script features two major alterations:
+
+1. Defining the Additional Variable
+
+   ```
+   var v17= getField("variable_Y_group_name").value
+   var v18= getField("variable_Y_group_name2").value
+   var v19= getField("variable_Y_group_name3").value
+   var v20= getField("variable_Y_group_name4").value
+   var v21= getField("variable_Y_group_name5").value
+   var v22= getField("variable_Y_group_name6").value
+   var v23= getField("variable_Y_group_name7").value
+   var v24= getField("variable_Y_group_name8").value
+   var v25= getField("variable_Y_group_name9").value
+   var v26= getField("variable_Y_group_name10").value
+   var v27= getField("variable_Y_group_name11").value
+   var v28= getField("variable_Y_group_name12").value
+   var v29= getField("variable_Y_group_name13").value
+   var v30= getField("variable_Y_group_name14").value
+   var v31= getField("variable_Y_group_name15").value
+   var v32= getField("variable_Y_group_name16").value
+   ```
+   
+   * This addition to the script is necessary in order to accomodate for the additional Variable Y by which the calculated total is contingent
+   * An additional 16 variables must be added, one for each of the 16 groups of Variable X (v1-v16).
+   Each of these new `var` commands corresponds to one of the original 16 `var` commands for Variable X and pulls each trial's value for Variable Y upon which the total is dependent.
+   * Thus for a form with 16 test trials, there should be 32 total lines of code: 16 which correspond to the original 16 groups of radio buttons for Variable X which reflect a response for each trial, and an additional 16 which correspond to the manually input response for Variable Y upon which the calculated total is conditional
+
+1. Creating the Conditional Formatting using If/Else Commands
+
+   ```
+   if(v17 == Y1){
+	   if (v1 == X2){
+    		   total=1
+	   }else{
+    		   total=0
+	   }
+   }else{
+	   if (v1 == X1){
+    		   total=1
+	   }else{
+    		   total=0
+	   }
+   }
+
+   if(v18 == Y2){
+	   if (v2 == X1){
+    		   total2=1
+	   }else{
+    		   total2=0
+	   }
+   }else{
+	   if (v2 == X2){
+    		   total2=1
+	   }else{
+    		   total2=0
+	   }
+   }
+   ...
+   ```
+
+   * This alteration to the script utilizes if/else commands to establish contingency on Variable Y
+   * As outlined in the [Breaking Down the Calculation Script](adobe.html#breakingdownscript) section, the if/else statements operate in the same manner and follow the same procedures.
+   However, notice an additional if/else statement is present for each trial and surrounds the original if/else statement:
+   
+      ```
+      if(v17 == Y1){       <------------ START OF OVERARCHING IF STATEMENT
+	      if (v1 == X2){     # Original if/else statement
+    		      total=1
+	      }else{
+    		      total=0
+	      }
+      }else{               <------------ START OF OVERARCHING ELSE STATEMENT
+	      if (v1 == X1){     # Second original if/else statement
+    		      total=1
+	      }else{
+    		      total=0
+	      }
+      }                    <------------ END OF OVERARCHING IF/ELSE STATEMENT
+      
+      ```
+
+   * The overarching if/else statement is centered around the variable which defines the conditional formatting, Variable Y, thus the `if(v == Y){` should only reference `var v17` to `var v32`
+   * Within the overarching if/else statement, `Y1` and `Y2` represent the **choice value** of the field being pulled from for Variable Y
+   
+      * For the original if/else statements within the overarching if/else statement, `X1` and `X2` still reflect the desired **choice value** of the radio button from the group of radio buttons that correspond to the desired field you are calculating for Variable X
+
+   * The conditional formatting emerges from defining the `Y` in `if(v == Y){` as `Y1` or `Y2`
+      
+      * Notice, there are two if/else statements within the overarching if/else statement.
+      Each of these secondary if/else statements define a different outcome - in this instance, the outcomes are "if `v1 == X2` then `total = 1`" and "if `v1 == X1` then `total = 1`"
+      Which outcome is selected is dependent on the definition of `Y` in `if(v == Y){`.
+      * Thus, for the example script above, if `v17 == Y1`, then the first outcome of "if `v1 == X2` then `total = 1`" will be the result, but if `v17` equals anything else besides `Y1`, then the second outcome of "if `v1 == X1` then `total = 1`" will be the result
+      * The final result is conditional formatting as the calculated total for each trial of Variable X is ultimately dependent on the value of Variable Y
+   
+
+## Conditional Formatting Calculation Script: An Example
+
+Listed below is a specific example where the conditional formatting calculation script is necessary:
+<br>
+
+### The Scenario
+
+A calculated field for the total number of correct responses out of 16 trials is needed.
+<br>
+
+For each trial, an experimenter taps the table either one time or two times.
+In response to the experimenter's administration, the participant is expected to tap the table the opposite number of times.
+<br>
+
+If the experimenter taps the table once, the participant should tap the table twice; if the experimenter taps the table twice, the participant taps the table once.
+A response is correct if the particpant successfully taps the table the opposite number of times as the experimenter.
+<br>
+
+Thus, the correct response is not always one tap or two taps.
+Instead, whether the response is correct is contingent on the experimenter's administration and how many times the experimenter taps the table.
+As a result, conditional formatting is necessary in order to calculate the total number of correct responses across the 16 trials.
+
+### The Variables
+
+* `Variable X` = participant's responses (the number of times the participant taps the table)
+* `Variable Y` = experimenter's administration (the number of times the experimenter tapped the table)
+* `X1` = choice value of radio button reflecting the action of the participant tapping the table once - in this case, **1**
+* `X2` = choice value of radio button reflecting the action of the participant tapping the table twice - in this case, **2**
+* `Y1` = choice value of the field reflecting the experimenter tapped the table once - in this case, **1**
+* `Y2` = choice value of the field reflecting the experimenter tapped the table once - in this case, **2**
+ 
+### The Script
+
+The calculation script for the above scenario can be written as such:
+<br>
+
+```
+var v1= getField("participant_response").value
+var v2= getField("participant_response2").value
+var v3= getField("participant_response3").value
+var v4= getField("participant_response4").value
+var v5= getField("participant_response5").value
+var v6= getField("participant_response6").value
+var v7= getField("participant_response7").value
+var v8= getField("participant_response8").value
+var v9= getField("participant_response9").value
+var v10= getField("participant_response10").value
+var v11= getField("participant_response11").value
+var v12= getField("participant_response12").value
+var v13= getField("participant_response13").value
+var v14= getField("participant_response14").value
+var v15= getField("participant_response15").value
+var v16= getField("participant_response16").value
+
+
+var v17= getField("experimenter_administration").value
+var v18= getField("experimenter_administration2").value
+var v19= getField("experimenter_administration3").value
+var v20= getField("experimenter_administration4").value
+var v21= getField("experimenter_administration5").value
+var v22= getField("experimenter_administration6").value
+var v23= getField("experimenter_administration7").value
+var v24= getField("experimenter_administration8").value
+var v25= getField("experimenter_administration9").value
+var v26= getField("experimenter_administration10").value
+var v27= getField("experimenter_administration11").value
+var v28= getField("experimenter_administration12").value
+var v29= getField("experimenter_administration13").value
+var v30= getField("experimenter_administration14").value
+var v31= getField("experimenter_administration15").value
+var v32= getField("experimenter_administration16").value
+
+if(v17 == 1){
+	if (v1 == 2){
+    		total=1
+	}else{
+    		total=0
+	}
+}else{
+	if (v1 == 1){
+    		total=1
+	}else{
+    		total=0
+	}
+}
+
+if(v18 == 2){
+	if (v2 == 1){
+    		total2=1
+	}else{
+    		total2=0
+	}
+}else{
+	if (v2 == 2){
+    		total2=1
+	}else{
+    		total2=0
+	}
+}
+
+if(v19 == 2){
+	if (v3 == 1){
+    		total3=1
+	}else{
+    		total3=0
+	}
+}else{
+	if (v3 == 2){
+    		total3=1
+	}else{
+    		total3=0
+	}
+}
+
+if(v20 == 1){
+	if (v4 == 2){
+    		total4=1
+	}else{
+    		total4=0
+	}
+}else{
+	if (v4 == 1){
+    		total4=1
+	}else{
+    		total4=0
+	}
+}
+
+if(v21 == 2){
+	if (v5 == 1){
+    		total5=1
+	}else{
+    		total5=0
+	}
+}else{
+	if (v5 == 2){
+    		total5=1
+	}else{
+    		total5=0
+	}
+}
+
+if(v22 == 2){
+	if (v6 == 1){
+    		total6=1
+	}else{
+    		total6=0
+	}
+}else{
+	if (v6 == 2){
+    		total6=1
+	}else{
+    		total6=0
+	}
+}
+
+if(v23 == 1){
+	if (v7 == 2){
+   		 total7=1
+	}else{
+    		total7=0
+	}
+}else{
+	if (v7 == 1){
+   		 total7=1
+	}else{
+    		total7=0
+	}
+}
+
+if(v24 == 1){
+	if (v8 == 2){
+    		total8=1
+	}else{
+   		 total8=0
+	}
+}else{
+	if (v8 == 1){
+    		total8=1
+	}else{
+   		 total8=0
+	}
+}
+
+if(v25 == 1){
+	if (v9 == 2){
+   		 total9=1
+	}else{
+    		total9=0
+	}
+}else{
+	if (v9 == 1){
+   		 total9=1
+	}else{
+    		total9=0
+	}
+}
+
+if(v26 == 2){
+	if (v10 == 1){
+    		total10=1
+	}else{
+    		total10=0
+	}
+}else{
+	if (v10 == 2){
+    		total10=1
+	}else{
+    		total10=0
+	}
+}
+
+if(v27 == 1){
+	if (v11 == 2){
+    		total11=1
+	}else{
+    		total11=0
+	}
+}else{
+	if (v11 == 1){
+    		total11=1
+	}else{
+    		total11=0
+	}
+}
+
+if(v28 == 2){
+	if (v12 == 1){
+    		total12=1
+	}else{
+   		 total12=0
+	}
+}else{
+	if (v12 == 2){
+    		total12=1
+	}else{
+   		 total12=0
+	}
+}
+
+if(v29 == 2){
+	if (v13 == 1){
+    		total13=1
+	}else{
+    		total13=0
+	}
+}else{
+	if (v13 == 2){
+    		total13=1
+	}else{
+    		total13=0
+	}
+}
+
+if(v30 == 1){
+	if (v14 == 2){
+    		total14=1
+	}else{
+		total14=0
+	}
+}else{
+	if (v14 == 1){
+		total14=1
+	}else{
+    		total14=0
+	}
+}
+
+if(v31 == 1){
+	if (v15 == 2){
+    		total15=1
+	}else{
+    		total15=0
+	}
+}else{
+	if (v15 == 1){
+    		total15=1
+	}else{
+    		total15=0
+	}
+}
+
+if(v32 == 2){
+	if (v16 == 1){
+    		total16=1
+	}else{
+    		total16=0
+	}
+}else{
+	if (v16 == 2){
+    		total16=1
+	}else{
+    		total16=0
+	}
+}
+
+
+event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
 ```
