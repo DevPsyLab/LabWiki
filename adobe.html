@@ -491,55 +491,1342 @@ will eventually be created</li>
 <li><code>task_stop_time</code></li>
 <li><code>task_length</code></li>
 </ul></li>
-<li>keep it clean</li>
-<li>keep consistent naming conventions within (and across) forms</li>
+<li>Keep it clean</li>
+<li>Keep consistent naming conventions within (and across) forms</li>
 <li>For fonts in the fields, in general, use auto. However, this can be
 changed if problematic.</li>
 <li>To reset forms, copy and paste the variables, then delete what you
 pasted, and it will be cleared.</li>
 </ul>
 </div>
-<div id="calculating-fields" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Calculating fields</h1>
-<p>How to define values:</p>
-<pre><code># get field pulls the choice value from each group. 
-# This number comes from the choice number it is in the group.
-var v1 = getField(&quot;practice_trials1_1&quot;).value
-var v2 =
-getField(&quot;practice_trials1_2&quot;).value
-var v3 = getField(&quot;practice_trials1_3&quot;).value
-var v4 = getField(&quot;practice_trials1_4&quot;).value
+<div id="converting-word-documents-to-pdfs" class="section level1"
+number="2">
+<h1><span class="header-section-number">2</span> Converting Word
+Documents to PDFs</h1>
+<p>Before converting forms to pdfs, all required edits to the document
+should be made in Microsoft Word. Edits of content or formatting should
+be completed and finalized in Word before converting the document to a
+pdf. To convert a Word document to a pdf, complete the following
+steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open the document in Microsoft Word</li>
+<li>Click the “File” tab in the top left corner within the Word
+interface</li>
+<li>Select “Save as ADOBE PDF”</li>
+<li>Name the new pdf accordingly</li>
+</ol>
+</div>
+<div id="editing-pdfs-in-adobe" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Editing pdfs in
+Adobe</h1>
+<ol style="list-style-type: decimal">
+<li><p>Open pdf in Adobe Acrobat Pro 2020</p>
+<ul>
+<li><em>Note:</em> Editing of pdfs must be done in Adobe Acrobat Pro
+2020, <strong><em>not</em></strong> Adobe Acrobat</li>
+</ul></li>
+<li><p>Under the “Tools” tab in the top left corner of the Adobe
+interface, find the heading “Forms &amp; Signatures” and select “Prepare
+Form”</p></li>
+<li><p>Select “Start” to begin scanning and preparation of the
+pdf</p></li>
+<li><p>The “Prepare Form” tool bar should now be visible, allowing for
+the addition of text fields, radio buttons, check boxes, and
+more</p></li>
+</ol>
+<div id="adding-text-fields-radio-buttons-and-check-boxes"
+class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Adding Text Fields,
+Radio Buttons, and Check Boxes</h2>
+<ol style="list-style-type: decimal">
+<li>Text fields should be implemented when:
+<ol style="list-style-type: decimal">
+<li>Textual or numeric information must be manually entered</li>
+<li>A calculated field is required</li>
+</ol></li>
+<li>Radio buttons should be implemented whenever possible
+<ul>
+<li>Radio buttons allow for only one selection out of a group of options
+<ul>
+<li>Radio buttons thus should be used for imitation, comprehension,
+practice, and test trial fields within pdfs</li>
+</ul></li>
+<li>In order to prevent human error, radio buttons should be applied to
+as many variables as possible</li>
+<li>Calculated fields can be derived from radio buttons</li>
+</ul></li>
+<li>Check boxes should only be used when necessary
+<ul>
+<li>Check boxes allow for multiple selections within a group</li>
+<li>Check boxes should <strong>not</strong> be used for trials fields
+within pdfs unless multiple answers can be selected for a given
+trial</li>
+<li>Calculated fields can be derived from check boxes</li>
+</ul></li>
+</ol>
+</div>
+<div id="namingvariables" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Naming Convention for
+Variables in Adobe</h2>
+<ol style="list-style-type: decimal">
+<li>Variable names should be in all lowercase with no spaces and
+underscores separating words</li>
+<li>Keep variable names as consistent as possible across forms with
+similar variables</li>
+<li>The following are common names for variables which should be used
+when applicable:
+<ul>
+<li>Identifying information:
+<ul>
+<li>TCID: <code>tcid</code></li>
+<li>Wave: <code>wave</code></li>
+<li>Coder Name: <code>coder_name</code></li>
+<li>Date Coded: <code>date_coded</code></li>
+<li>Coder: <code>coder</code> (for 1, 2, 3 variable)</li>
+<li>Was TC given the opportunity to play the task:
+<code>given_opp_to_play</code></li>
+<li>Did TC play the task: <code>play_task</code></li>
+<li>PC Present: <code>pc_present</code></li>
+<li>Did TC pass the imitation trials: <code>pass_imitation</code></li>
+<li>Did TC pass the comprehension check:
+<code>pass_comprehension</code></li>
+<li>Did TC pass the practice trials: <code>pass_practiceX</code></li>
+<li>Start time: <code>task_start_time</code></li>
+<li>Stop time: <code>task_stop_time</code></li>
+<li>Length of administration: <code>task_length</code></li>
+<li>Coder 1/2/3: <code>initials_date_coderX</code></li>
+</ul></li>
+<li>Task Trials
+<ul>
+<li>Imitation Trials: <code>imitation_trials_x</code></li>
+<li>Imitation Trials Second Administration:
+<code>imitation_trials_readmin_x</code></li>
+<li>Comprehension Check: <code>comp_checkX_x</code></li>
+<li>Practice Trials: <code>practice_trialsX_x</code></li>
+<li>Test Trials: <code>test_trialsX_x</code></li>
+<li><em>Note:</em> “X” signifies the round/block of the trials while “x”
+signifies the trial number within that round/block (ex:
+<code>practice_trials2_7</code>). An “X” within the variable name is
+only necessary if there are multiple rounds/blocks for the trial. Thus,
+if there is only one round of imitation trials, those trials should be
+simply named <code>test_trials</code> rather than
+<code>test_trials1</code>.</li>
+</ul></li>
+<li>Trial Totals
+<ul>
+<li>Total Incorrect: <code>total_incorrect_task_trials</code></li>
+<li>Total Initially incorrect, but changed to correct:
+<code>total_initially_task_trials</code></li>
+<li>Total Correct: <code>total_correct_task_trials</code></li>
+<li>Total No Response: <code>total_noresponse_task_trials</code></li>
+<li>Total Uncodeable: <code>total_uncodeable_task_trials</code></li>
+<li>Total # of Scoreable Trials Played:
+<code>total_scored_task_trials</code></li>
+<li><em>Note:</em> “task_trials” should be replaced with whether the
+round/block of trials is <code>imitation_trials</code>,
+<code>comp_check</code>, <code>practice_trials</code>, or
+<code>test_trials</code>.</li>
+</ul></li>
+</ul></li>
+</ol>
+<div id="namingconventionradiobuttons" class="section level3"
+number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Naming Convention
+for Radio Buttons</h3>
+<ol style="list-style-type: decimal">
+<li><p>In order to create calculated fields for trial totals, radio
+button “Choice Values” must be manually set. To facilitate the process,
+this should be done after aligning each group of radio buttons for each
+trial under each TC response for the trial. For example, there should be
+a column of radio buttons under the “Correct” label within the trial’s
+grid with each radio button in this column representing the “Correct”
+choice for a different group of radio buttons. A column of buttons
+should be present for “Incorrect,” “No Response,” and so forth. Thus,
+each group of radio buttons should be aligned horizontally, with each
+button reflecting a different TC response. These groups should then be
+stacked into a column with each column representing the response across
+trials. The Choice Values can then be set through the following
+steps:</p>
+<ol style="list-style-type: decimal">
+<li>Select the entire column under a certain TC response (ex. select the
+entire column of radio buttons under “Correct”)</li>
+<li>Right-click on the selected column of radio buttons and select
+“Properties”</li>
+<li>Under the “Options” tab, set the “Radio Button Choice” according to
+the following values:
+<ul>
+<li>“Correct” column = 2</li>
+<li>“Incorrect” column = 0</li>
+<li>“Initially incorrect but changed response to correct” column =
+1</li>
+<li>“No response” column = -9</li>
+<li>“Uncodeable” column = 9</li>
+</ul></li>
+<li>Set all columns with their appropriate radio button choice
+value</li>
+</ol>
+<ul>
+<li><em>Note:</em> While calculated fields can be derived from different
+radio button choice values, it is imperative to assign the button
+choices according to these values. This allows for consistency across
+pdfs and the ability to smoothly borrow code for calculated fields.</li>
+</ul></li>
+</ol>
+</div>
+<div id="namingconventioncheckboxes" class="section level3"
+number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Naming Convention
+for Check Boxes</h3>
+<p>Check boxes can be named in such a way that they act similar to radio
+buttons, allowing only one selection out of a group of check boxes.= A
+group of check boxes can be formatted as radio buttons through the
+following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Input the <em>same</em> variable name for each check box within the
+group to be formatted</li>
+<li>Right click on each check box and select “Properties”</li>
+<li>Under the “Options” tab, set the “Export Value” for each check box
+according to the following values:
+<ul>
+<li>“Correct” column = 2</li>
+<li>“Incorrect” column = 0</li>
+<li>“Initially incorrect but changed response to correct” column =
+1</li>
+<li>“No response” column = -9</li>
+<li>“Uncodeable” column = 9</li>
+</ul></li>
+<li>With each check box named the same but also each with a different
+export value, the group of check boxes should now operate similar to a
+group of radio buttons
+<ul>
+<li>Within the group, only one check box should be able to be
+selected</li>
+<li>Additionally, the selection should be able to be unselected</li>
+</ul></li>
+<li>While both groups of radio buttons and this form of groups of check
+boxes operate the same way and permit only one selection within the
+group, groups of check boxes provide an advantage by allowing for
+deselection of the value. Within groups of radio buttons, as soon as a
+button is selected, the group of buttons cannot be reset or deselected.
+This usage of groups of check buttons may be useful going forward and
+should be considered when creating new coding forms.
+<ul>
+<li><em>Note:</em> Creating calculated fields from groups of check boxes
+will follow the same procedure as <a
+href="adobe.html#createcalculatedradiobuttons">creating calcuated fields
+from radio buttons</a>. Thus, it is important to ensure the export
+values for each check box follow the values listed in Step 3.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="creating-calculated-fields" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Creating Calculated
+Fields</h1>
+<p>Adobe Acrobat both includes its own functions for creating calculated
+fields and allows for the implementation of custom calculation scripts
+within forms. While the calculation features are built-in to Adobe, the
+custom calculation scripts must be written using the programming
+language JavaScript. The following sections detail how to create
+different types of calculated fields.</p>
+<div id="createcalculatedradiobuttons" class="section level2"
+number="4.1">
+<h2><span class="header-section-number">4.1</span> Creating Calculated
+Fields from Radio Buttons</h2>
+<ol style="list-style-type: decimal">
+<li>First, ensure the radio buttons and their choice values are
+appropriately set according to the <a
+href="adobe.html#namingconventionradiobuttons">naming convention for
+radio buttons</a></li>
+<li>Select the text field which must be turned into a calculated
+field</li>
+<li>Right-click on the field and select “Properties”</li>
+<li>Select the “Calculate” tab within the Properties menu</li>
+<li>Select the “Custom calculation script:” radio button</li>
+<li>Select “Edit…” and input the desired calculation script
+<ul>
+<li>The following script should be applied in order to calculate radio
+buttons:</li>
+</ul>
+<pre><code>var v1 = getField(&quot;variable_group_name&quot;).value
+var v2 = getField(&quot;variable_group_name2&quot;).value
+var v3 = getField(&quot;variable_group_name3&quot;).value
+var v4 = getField(&quot;variable_group_name4&quot;).value
 
-# if else statements use the choice number from the field value. 
-# The purpose of these is to create the total values fields
-if (v1 == 3) { 
+if (v1 == X) { 
+total = 1;
+} else {
+total = 0;
+}
+
+if (v2 == X) {
+total2 = 1;
+} else {
+total2 = 0;
+}
+
+if (v3 == X) {
+total3 = 1;
+} else {
+total3 = 0;
+}
+
+if (v4 == X) {
+total4 = 1;
+} else {
+total4 = 0;
+}
+
+event.value = total + total2 + total3 + total4</code></pre>
+<ul>
+<li>This script should be fit according to how many trials/variables
+must be calculated from</li>
+<li>Proceed to <a href="adobe.html#breakingdownscript">Breaking Down the
+Calculation Script</a> to gain a greater understanding of the
+script</li>
+</ul></li>
+</ol>
+</div>
+<div id="creating-calculated-fields-from-radio-buttons-video"
+class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Creating Calculated
+Fields from Radio Buttons: Video</h2>
+<p>Watch the following video in order to observe an example of creating
+calculated fields from radio buttons: <br> <br></p>
+<video width="100%" controls="" preload="none">
+<source src="images/creating_calculated_fields_in_adobe.mp4" type="video/mp4">
+</video>
+</div>
+<div id="creating-calculated-fields-from-check-boxes"
+class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Creating Calculated
+Fields from Check Boxes</h2>
+<ol style="list-style-type: decimal">
+<li><p>Prepare the check boxes for calculation:</p>
+<ol style="list-style-type: decimal">
+<li><p>Provide the check boxes from which the field will be calculated
+with appropriate variable names, closely following standard <a
+href="adobe.html#namingvariables">naming convention for variables</a>
+when possible</p></li>
+<li><p>For each check box, an export value must be assigned. The export
+value will determine what numeric value the check box will carry
+throughout calculation. To set the export value, complete the following
+steps:</p>
+<ol style="list-style-type: decimal">
+<li>Select and right-click on the check box and select “Properties”</li>
+<li>In the Properties menu, select the “Options” tab</li>
+<li>In the “Export Value:” field, enter the numeric value the check box
+should reflect</li>
+</ol></li>
+</ol></li>
+<li><p>Select the text field which must be turned into a calculated
+field</p></li>
+<li><p>Right-click on the field and select “Properties”</p></li>
+<li><p>Select the “Calculate” tab within the Properties menu</p></li>
+<li><p>Select the “Value is the <code>mathematical operators</code> of
+the following fields” radio button</p>
+<ul>
+<li><em>Note:</em> The appropriate <code>mathematical operator</code>
+should be selected according to the desired final calculation from the
+drop down list of “sum (+),” “product (x),” “average,” “minimum,” or
+“maximum”</li>
+</ul></li>
+<li><p>Select “Pick…” and then check the variable names of the check
+boxes to be calculated</p></li>
+</ol>
+</div>
+<div id="breakingdownscript" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Breaking Down the
+Calculation Script</h2>
+<pre><code>var v1 = getField(&quot;variable_group_name&quot;).value
+var v2 = getField(&quot;variable_group_name2&quot;).value
+var v3 = getField(&quot;variable_group_name3&quot;).value
+var v4 = getField(&quot;variable_group_name4&quot;).value
+
+if (v1 == X) { 
+total = 1;
+} else {
+total = 0;
+}
+
+if (v2 == X) {
+total2 = 1;
+} else {
+total2 = 0;
+}
+
+if (v3 == X) {
+total3 = 1;
+} else {
+total3 = 0;
+}
+
+if (v4 == X) {
+total4 = 1;
+} else {
+total4 = 0;
+}
+
+event.value = total + total2 + total3 + total4</code></pre>
+<p>The calculation script for radio buttons can be broken down into
+three parts:</p>
+<ol style="list-style-type: decimal">
+<li><p>Defining the Variables</p>
+<pre><code>var v1 = getField(&quot;variable_group_name&quot;).value
+var v2 = getField(&quot;variable_group_name2&quot;).value
+var v3 = getField(&quot;variable_group_name3&quot;).value
+var v4 = getField(&quot;variable_group_name4&quot;).value</code></pre>
+<ul>
+<li>This portion of the script defines the variables from which
+information is being pulled from. In nearly all cases the variables
+being pulled from will be the groups of radio buttons for each
+trial.</li>
+<li>The line <code>var v1 = getField("variable_group_name").value</code>
+defines the selected radio button in “variable_group_name” as
+<code>var v1</code> (variable 1) within this script and pulls the
+<strong>choice value</strong> from each group
+<ul>
+<li>Thus, within each <code>getField()</code>, the name of each group of
+radio buttons should be added in quotations</li>
+<li><em>Note:</em> The number being pulled through this function
+directly corresponds to the choice value defined for each radio button
+in the group of radio of radio buttons. This is why it is crucial to
+define choice values according to the same <a
+href="adobe.html#namingconventionradiobuttons">naming convention for
+radio buttons</a></li>
+</ul></li>
+<li>Each <code>var vX</code> should reflect a trial on the form. Thus,
+if there are 15 test trials, there should be 15 lines of code from
+<code>var v1</code> to <code>var v15</code> with the name for each group
+of radio buttons inputed in <code>getField("")</code> for each
+variable</li>
+</ul></li>
+<li><p>Defining the Selected Values</p>
+<pre><code>if (v1 == X) { 
+total = 1;
+} else {
+total = 0;
+}
+
+if (v2 == X) {
+total2 = 1;
+} else {
+total2 = 0;
+}
+
+if (v3 == X) {
+total3 = 1;
+} else {
+total3 = 0;
+}
+
+if (v4 == X) {
+total4 = 1;
+} else {
+total4 = 0;
+}</code></pre>
+<ul>
+<li>This portion of code utilizes if/else statements in order to create
+the total value for each field</li>
+<li>In <code>v1 == X</code> and each subsequent <code>v == X</code>, the
+<code>X</code> should be replaced with the <strong>choice value</strong>
+of the radio button from the group of radio buttons that corresponds to
+the desired field you are calculating
+<ul>
+<li><p>For example, if a total correct field is being calculated, the
+code should read:</p>
+<pre><code>if (v1 == 2) { 
+total = 1;
+} else {
+total = 0;
+}
+
+if (v2 == 2) {
+total2 = 1;
+} else {
+total2 = 0;
+}</code></pre></li>
+<li><p>Because a total correct field is being calculated, the choice
+value of 2 should be inputed as this is the choice value which
+corresponds to “Correct” (see <a
+href="adobe.html#namingconventionradiobuttons">naming convention for
+radio buttons</a>)</p></li>
+<li><p>The value of 2 would be inputed for each if/else statement for
+each variable. Thus, if there were 15 variables, there should be 15
+if/else statements <code>v1 == 2</code> to
+<code>v15 == 2</code></p></li>
+</ul></li>
+<li>The if/else statement for each variable defines that if the value
+pulled by the <code>getField()</code> function matches the inputted
+choice value for the variable then the total for that variable becomes
+equal to 1. If it does not match, the the total becomes equal to 0.</li>
+</ul></li>
+<li><p>Defining the Total</p></li>
+</ol>
+<pre><code>event.value = total + total2 + total3 + total4</code></pre>
+<ul>
+<li>This portion of code defines the calculation to take place in the
+field
+<ul>
+<li>The <code>event.value</code> determines what appears in the text
+box</li>
+</ul></li>
+<li>This line of code adds together the totals defined in the if/else
+statements. This produces the final calculated value for the field.</li>
+<li>The number of totals added together should correspond to the number
+of variables. Thus, if there are 15 trials, then the final line of code
+should read:
+<code>event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15</code></li>
+</ul>
+<p>The following is an example script for a calculated
+“total_correct_test_trials” field, calculated from 15 trials:</p>
+<pre><code>var v1 = getField(&quot;test_trials_1&quot;).value
+var v2 = getField(&quot;test_trials_2&quot;).value
+var v3 = getField(&quot;test_trials_3&quot;).value
+var v4 = getField(&quot;test_trials_4&quot;).value
+var v5 = getField(&quot;test_trials_5&quot;).value
+var v6 = getField(&quot;test_trials_6&quot;).value
+var v7 = getField(&quot;test_trials_7&quot;).value
+var v8 = getField(&quot;test_trials_8&quot;).value
+var v9 = getField(&quot;test_trials_9&quot;).value
+var v10 = getField(&quot;test_trials_10&quot;).value
+var v11 = getField(&quot;test_trials_11&quot;).value
+var v12 = getField(&quot;test_trials_12&quot;).value
+var v13 = getField(&quot;test_trials_13&quot;).value
+var v14 = getField(&quot;test_trials_14&quot;).value
+var v15 = getField(&quot;test_trials_15&quot;).value
+
+
+if (v1 == 2) {
   total = 1;
 } else {
   total = 0;
 }
 
-if (v2 == 3) {
+if (v2 == 2) {
   total2 = 1;
 } else {
   total2 = 0;
 }
 
-if (v3 == 3) {
+if (v3 == 2) {
   total3 = 1;
 } else {
   total3 = 0;
 }
 
-if (v4 == 3) {
+if (v4 == 2) {
   total4 = 1;
 } else {
   total4 = 0;
 }
 
-event.value = total + total2 + total3 + total4</code></pre>
+if (v5 == 2) {
+  total5 = 1;
+} else {
+  total5 = 0;
+}
+
+if (v6 == 2) {
+  total6 = 1;
+} else {
+  total6 = 0;
+}
+
+if (v7 == 2) {
+  total7 = 1;
+} else {
+  total7 = 0;
+}
+
+if (v8 == 2) {
+  total8 = 1;
+} else {
+  total8 = 0;
+}
+
+if (v9 == 2) {
+  total9 = 1;
+} else {
+  total9 = 0;
+}
+
+if (v10 == 2) {
+  total10 = 1;
+} else {
+  total10 = 0;
+}
+
+if (v11 == 2) {
+  total11 = 1;
+} else {
+  total11 = 0;
+}
+
+if (v12 == 2) {
+  total12 = 1;
+} else {
+  total12 = 0;
+}
+
+if (v13 == 2) {
+  total13 = 1;
+} else {
+  total13 = 0;
+}
+
+if (v14 == 2) {
+  total14 = 1;
+} else {
+  total14 = 0;
+}
+
+if (v15 == 2) {
+  total15 = 1;
+} else {
+  total15 = 0;
+}
+
+event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15</code></pre>
+</div>
+<div id="creating-calculated-fields-with-conditional-formatting"
+class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Creating Calculated
+Fields with Conditional Formatting</h2>
+<p>For cases where a calculated total can change from a manually-input
+variable, an altered script must be used. <br></p>
+<p>For example, a calculated field can be created for the total number
+of correct responses a participant gives to a stimulus. If what
+qualifies as a “correct” response depends on a variable that can be
+manually changed, the original calculation script will result in an
+inaccurate total. <br></p>
+<p>Thus, the altered scripted must show that the value of the calculated
+total is conditional on another variable. The value of
+<code>Variable X</code> is dependent on the value of
+<code>Variable Y</code>. This can be accomplished through the usage of
+if/else commands in JavaScript. <br></p>
+<p>Provided below is an example of a calculation script with conditional
+formatting: <br></p>
+<pre><code>var v1= getField(&quot;variable_X_group_name&quot;).value
+var v2= getField(&quot;variable_X_group_name2&quot;).value
+var v3= getField(&quot;variable_X_group_name3&quot;).value
+var v4= getField(&quot;variable_X_group_name4&quot;).value
+var v5= getField(&quot;variable_X_group_name5&quot;).value
+var v6= getField(&quot;variable_X_group_name6&quot;).value
+var v7= getField(&quot;variable_X_group_name7&quot;).value
+var v8= getField(&quot;variable_X_group_name8&quot;).value
+var v9= getField(&quot;variable_X_group_name9&quot;).value
+var v10= getField(&quot;variable_X_group_name10&quot;).value
+var v11= getField(&quot;variable_X_group_name11&quot;).value
+var v12= getField(&quot;variable_X_group_name12&quot;).value
+var v13= getField(&quot;variable_X_group_name13&quot;).value
+var v14= getField(&quot;variable_X_group_name14&quot;).value
+var v15= getField(&quot;variable_X_group_name15&quot;).value
+var v16= getField(&quot;variable_X_group_name16&quot;).value
+
+
+var v17= getField(&quot;variable_Y_group_name&quot;).value
+var v18= getField(&quot;variable_Y_group_name2&quot;).value
+var v19= getField(&quot;variable_Y_group_name3&quot;).value
+var v20= getField(&quot;variable_Y_group_name4&quot;).value
+var v21= getField(&quot;variable_Y_group_name5&quot;).value
+var v22= getField(&quot;variable_Y_group_name6&quot;).value
+var v23= getField(&quot;variable_Y_group_name7&quot;).value
+var v24= getField(&quot;variable_Y_group_name8&quot;).value
+var v25= getField(&quot;variable_Y_group_name9&quot;).value
+var v26= getField(&quot;variable_Y_group_name10&quot;).value
+var v27= getField(&quot;variable_Y_group_name11&quot;).value
+var v28= getField(&quot;variable_Y_group_name12&quot;).value
+var v29= getField(&quot;variable_Y_group_name13&quot;).value
+var v30= getField(&quot;variable_Y_group_name14&quot;).value
+var v31= getField(&quot;variable_Y_group_name15&quot;).value
+var v32= getField(&quot;variable_Y_group_name16&quot;).value
+
+if(v17 == Y1){
+    if (v1 == X2){
+            total=1
+    }else{
+            total=0
+    }
+}else{
+    if (v1 == X1){
+            total=1
+    }else{
+            total=0
+    }
+}
+
+if(v18 == Y2){
+    if (v2 == X1){
+            total2=1
+    }else{
+            total2=0
+    }
+}else{
+    if (v2 == X2){
+            total2=1
+    }else{
+            total2=0
+    }
+}
+
+if(v19 == Y2){
+    if (v3 == X1){
+            total3=1
+    }else{
+            total3=0
+    }
+}else{
+    if (v3 == X2){
+            total3=1
+    }else{
+            total3=0
+    }
+}
+
+if(v20 == Y1){
+    if (v4 == X2){
+            total4=1
+    }else{
+            total4=0
+    }
+}else{
+    if (v4 == X1){
+            total4=1
+    }else{
+            total4=0
+    }
+}
+
+if(v21 == Y2){
+    if (v5 == X1){
+            total5=1
+    }else{
+            total5=0
+    }
+}else{
+
+    if (v5 == X2){
+            total5=1
+    }else{
+            total5=0
+    }
+}
+
+if(v22 == Y2){
+    if (v6 == X1){
+            total6=1
+    }else{
+            total6=0
+    }
+}else{
+    if (v6 == X2){
+            total6=1
+    }else{
+            total6=0
+    }
+}
+
+if(v23 == Y1){
+    if (v7 == X2){
+         total7=1
+    }else{
+            total7=0
+    }
+}else{
+    if (v7 == X1){
+         total7=1
+    }else{
+            total7=0
+    }
+}
+
+if(v24 == Y1){
+    if (v8 == X2){
+            total8=1
+    }else{
+         total8=0
+    }
+}else{
+    if (v8 == X1){
+            total8=1
+    }else{
+         total8=0
+    }
+}
+
+if(v25 == Y1){
+    if (v9 == X2){
+         total9=1
+    }else{
+            total9=0
+    }
+}else{
+    if (v9 == X1){
+         total9=1
+    }else{
+            total9=0
+    }
+}
+
+if(v26 == Y2){
+    if (v10 == X1){
+            total10=1
+    }else{
+            total10=0
+    }
+}else{
+    if (v10 == X2){
+            total10=1
+    }else{
+            total10=0
+    }
+}
+
+if(v27 == Y1){
+    if (v11 == X2){
+            total11=1
+    }else{
+            total11=0
+    }
+}else{
+    if (v11 == X1){
+            total11=1
+    }else{
+            total11=0
+    }
+}
+
+if(v28 == Y2){
+    if (v12 == X1){
+            total12=1
+    }else{
+         total12=0
+    }
+}else{
+    if (v12 == X2){
+            total12=1
+    }else{
+         total12=0
+    }
+}
+
+if(v29 == Y2){
+    if (v13 == X1){
+            total13=1
+    }else{
+            total13=0
+    }
+}else{
+    if (v13 == X2){
+            total13=1
+    }else{
+            total13=0
+    }
+}
+
+if(v30 == Y1){
+    if (v14 == X2){
+            total14=1
+    }else{
+        total14=0
+    }
+}else{
+    if (v14 == X1){
+        total14=1
+    }else{
+            total14=0
+    }
+}
+
+if(v31 == Y1){
+    if (v15 == X2){
+            total15=1
+    }else{
+            total15=0
+    }
+}else{
+    if (v15 == X1){
+            total15=1
+    }else{
+            total15=0
+    }
+}
+
+if(v32 == Y2){
+    if (v16 == X1){
+            total16=1
+    }else{
+            total16=0
+    }
+}else{
+    if (v16 == X2){
+            total16=1
+    }else{
+            total16=0
+    }
+}
+
+
+event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16</code></pre>
+<p><br></p>
+</div>
+<div id="breaking-down-the-conditional-formatting-calculation-script"
+class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Breaking Down the
+Conditional Formatting Calculation Script</h2>
+<p>Notice the <a href="adobe.html#breakingdownscript">traditional
+calculation script</a> is present within this script. However,
+additional if/else commands are implemented in order to account for the
+dependence on another variable. Before proceeding with this section, an
+understanding of the <a href="adobe.html#breakingdownscript">traditional
+calculation script</a> should be obtained. In the following section,
+Variable X refers to the variable which is contingent on the value of
+another variable, Variable Y. Thus, the conditional formatting is
+described in such a way that the value of a Variable X is dependent on
+the value of Variable Y. <br></p>
+<p>The conditional formatting calculation script features two major
+alterations:</p>
+<ol style="list-style-type: decimal">
+<li><p>Defining the Additional Variable</p>
+<pre><code>var v17= getField(&quot;variable_Y_group_name&quot;).value
+var v18= getField(&quot;variable_Y_group_name2&quot;).value
+var v19= getField(&quot;variable_Y_group_name3&quot;).value
+var v20= getField(&quot;variable_Y_group_name4&quot;).value
+var v21= getField(&quot;variable_Y_group_name5&quot;).value
+var v22= getField(&quot;variable_Y_group_name6&quot;).value
+var v23= getField(&quot;variable_Y_group_name7&quot;).value
+var v24= getField(&quot;variable_Y_group_name8&quot;).value
+var v25= getField(&quot;variable_Y_group_name9&quot;).value
+var v26= getField(&quot;variable_Y_group_name10&quot;).value
+var v27= getField(&quot;variable_Y_group_name11&quot;).value
+var v28= getField(&quot;variable_Y_group_name12&quot;).value
+var v29= getField(&quot;variable_Y_group_name13&quot;).value
+var v30= getField(&quot;variable_Y_group_name14&quot;).value
+var v31= getField(&quot;variable_Y_group_name15&quot;).value
+var v32= getField(&quot;variable_Y_group_name16&quot;).value</code></pre>
+<ul>
+<li>This addition to the script is necessary in order to accomodate for
+the additional Variable Y by which the calculated total is
+contingent</li>
+<li>An additional 16 variables must be added, one for each of the 16
+groups of Variable X (v1-v16). Each of these new <code>var</code>
+commands corresponds to one of the original 16 <code>var</code> commands
+for Variable X and pulls each trial’s value for Variable Y upon which
+the total is dependent.</li>
+<li>Thus for a form with 16 test trials, there should be 32 total lines
+of code: 16 which correspond to the original 16 groups of radio buttons
+for Variable X which reflect a response for each trial, and an
+additional 16 which correspond to the manually input response for
+Variable Y upon which the calculated total is conditional</li>
+</ul></li>
+<li><p>Creating the Conditional Formatting using If/Else Commands</p>
+<pre><code>if(v17 == Y1){
+    if (v1 == X2){
+            total=1
+    }else{
+            total=0
+    }
+}else{
+    if (v1 == X1){
+            total=1
+    }else{
+            total=0
+    }
+}
+
+if(v18 == Y2){
+    if (v2 == X1){
+            total2=1
+    }else{
+            total2=0
+    }
+}else{
+    if (v2 == X2){
+            total2=1
+    }else{
+            total2=0
+    }
+}
+...</code></pre>
+<ul>
+<li><p>This alteration to the script utilizes if/else commands to
+establish contingency on Variable Y</p></li>
+<li><p>As outlined in the <a
+href="adobe.html#breakingdownscript">Breaking Down the Calculation
+Script</a> section, the if/else statements operate in the same manner
+and follow the same procedures. However, notice an additional if/else
+statement is present for each trial and surrounds the original if/else
+statement:</p>
+<pre><code>if(v17 == Y1){       &lt;------------ START OF OVERARCHING IF STATEMENT
+    if (v1 == X2){     # Original if/else statement
+            total=1
+    }else{
+            total=0
+    }
+}else{               &lt;------------ START OF OVERARCHING ELSE STATEMENT
+    if (v1 == X1){     # Second original if/else statement
+            total=1
+    }else{
+            total=0
+    }
+}                    &lt;------------ END OF OVERARCHING IF/ELSE STATEMENT
+</code></pre></li>
+<li><p>The overarching if/else statement is centered around the variable
+which defines the conditional formatting, Variable Y, thus the
+<code>if(v == Y){</code> should only reference <code>var v17</code> to
+<code>var v32</code></p></li>
+<li><p>Within the overarching if/else statement, <code>Y1</code> and
+<code>Y2</code> represent the <strong>choice value</strong> of the field
+being pulled from for Variable Y</p>
+<ul>
+<li>For the original if/else statements within the overarching if/else
+statement, <code>X1</code> and <code>X2</code> still reflect the desired
+<strong>choice value</strong> of the radio button from the group of
+radio buttons that correspond to the desired field you are calculating
+for Variable X</li>
+</ul></li>
+<li><p>The conditional formatting emerges from defining the
+<code>Y</code> in <code>if(v == Y){</code> as <code>Y1</code> or
+<code>Y2</code></p>
+<ul>
+<li>Notice, there are two if/else statements within the overarching
+if/else statement. Each of these secondary if/else statements define a
+different outcome - in this instance, the outcomes are “if
+<code>v1 == X2</code> then <code>total = 1</code>” and “if
+<code>v1 == X1</code> then <code>total = 1</code>” Which outcome is
+selected is dependent on the definition of <code>Y</code> in
+<code>if(v == Y){</code>.</li>
+<li>Thus, for the example script above, if <code>v17 == Y1</code>, then
+the first outcome of “if <code>v1 == X2</code> then
+<code>total = 1</code>” will be the result, but if <code>v17</code>
+equals anything else besides <code>Y1</code>, then the second outcome of
+“if <code>v1 == X1</code> then <code>total = 1</code>” will be the
+result</li>
+<li>The final result is conditional formatting as the calculated total
+for each trial of Variable X is ultimately dependent on the value of
+Variable Y</li>
+</ul></li>
+</ul></li>
+</ol>
+</div>
+<div id="conditional-formatting-calculation-script-an-example"
+class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Conditional
+Formatting Calculation Script: An Example</h2>
+<p>Listed below is a specific example where the conditional formatting
+calculation script is necessary: <br></p>
+<div id="the-scenario" class="section level3" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> The Scenario</h3>
+<p>A calculated field for the total number of correct responses out of
+16 trials is needed. <br></p>
+<p>For each trial, an experimenter taps the table either one time or two
+times. In response to the experimenter’s administration, the participant
+is expected to tap the table the opposite number of times. <br></p>
+<p>If the experimenter taps the table once, the participant should tap
+the table twice; if the experimenter taps the table twice, the
+participant taps the table once. A response is correct if the particpant
+successfully taps the table the opposite number of times as the
+experimenter. <br></p>
+<p>Thus, the correct response is not always one tap or two taps.
+Instead, whether the response is correct is contingent on the
+experimenter’s administration and how many times the experimenter taps
+the table. As a result, conditional formatting is necessary in order to
+calculate the total number of correct responses across the 16
+trials.</p>
+</div>
+<div id="the-variables" class="section level3" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> The Variables</h3>
+<ul>
+<li><code>Variable X</code> = participant’s responses (the number of
+times the participant taps the table)</li>
+<li><code>Variable Y</code> = experimenter’s administration (the number
+of times the experimenter tapped the table)</li>
+<li><code>X1</code> = choice value of radio button reflecting the action
+of the participant tapping the table once - in this case,
+<strong>1</strong></li>
+<li><code>X2</code> = choice value of radio button reflecting the action
+of the participant tapping the table twice - in this case,
+<strong>2</strong></li>
+<li><code>Y1</code> = choice value of the field reflecting the
+experimenter tapped the table once - in this case,
+<strong>1</strong></li>
+<li><code>Y2</code> = choice value of the field reflecting the
+experimenter tapped the table once - in this case,
+<strong>2</strong></li>
+</ul>
+</div>
+<div id="the-script" class="section level3" number="4.7.3">
+<h3><span class="header-section-number">4.7.3</span> The Script</h3>
+<p>The calculation script for the above scenario can be written as such:
+<br></p>
+<pre><code>var v1= getField(&quot;participant_response&quot;).value
+var v2= getField(&quot;participant_response2&quot;).value
+var v3= getField(&quot;participant_response3&quot;).value
+var v4= getField(&quot;participant_response4&quot;).value
+var v5= getField(&quot;participant_response5&quot;).value
+var v6= getField(&quot;participant_response6&quot;).value
+var v7= getField(&quot;participant_response7&quot;).value
+var v8= getField(&quot;participant_response8&quot;).value
+var v9= getField(&quot;participant_response9&quot;).value
+var v10= getField(&quot;participant_response10&quot;).value
+var v11= getField(&quot;participant_response11&quot;).value
+var v12= getField(&quot;participant_response12&quot;).value
+var v13= getField(&quot;participant_response13&quot;).value
+var v14= getField(&quot;participant_response14&quot;).value
+var v15= getField(&quot;participant_response15&quot;).value
+var v16= getField(&quot;participant_response16&quot;).value
+
+
+var v17= getField(&quot;experimenter_administration&quot;).value
+var v18= getField(&quot;experimenter_administration2&quot;).value
+var v19= getField(&quot;experimenter_administration3&quot;).value
+var v20= getField(&quot;experimenter_administration4&quot;).value
+var v21= getField(&quot;experimenter_administration5&quot;).value
+var v22= getField(&quot;experimenter_administration6&quot;).value
+var v23= getField(&quot;experimenter_administration7&quot;).value
+var v24= getField(&quot;experimenter_administration8&quot;).value
+var v25= getField(&quot;experimenter_administration9&quot;).value
+var v26= getField(&quot;experimenter_administration10&quot;).value
+var v27= getField(&quot;experimenter_administration11&quot;).value
+var v28= getField(&quot;experimenter_administration12&quot;).value
+var v29= getField(&quot;experimenter_administration13&quot;).value
+var v30= getField(&quot;experimenter_administration14&quot;).value
+var v31= getField(&quot;experimenter_administration15&quot;).value
+var v32= getField(&quot;experimenter_administration16&quot;).value
+
+if(v17 == 1){
+    if (v1 == 2){
+            total=1
+    }else{
+            total=0
+    }
+}else{
+    if (v1 == 1){
+            total=1
+    }else{
+            total=0
+    }
+}
+
+if(v18 == 2){
+    if (v2 == 1){
+            total2=1
+    }else{
+            total2=0
+    }
+}else{
+    if (v2 == 2){
+            total2=1
+    }else{
+            total2=0
+    }
+}
+
+if(v19 == 2){
+    if (v3 == 1){
+            total3=1
+    }else{
+            total3=0
+    }
+}else{
+    if (v3 == 2){
+            total3=1
+    }else{
+            total3=0
+    }
+}
+
+if(v20 == 1){
+    if (v4 == 2){
+            total4=1
+    }else{
+            total4=0
+    }
+}else{
+    if (v4 == 1){
+            total4=1
+    }else{
+            total4=0
+    }
+}
+
+if(v21 == 2){
+    if (v5 == 1){
+            total5=1
+    }else{
+            total5=0
+    }
+}else{
+    if (v5 == 2){
+            total5=1
+    }else{
+            total5=0
+    }
+}
+
+if(v22 == 2){
+    if (v6 == 1){
+            total6=1
+    }else{
+            total6=0
+    }
+}else{
+    if (v6 == 2){
+            total6=1
+    }else{
+            total6=0
+    }
+}
+
+if(v23 == 1){
+    if (v7 == 2){
+         total7=1
+    }else{
+            total7=0
+    }
+}else{
+    if (v7 == 1){
+         total7=1
+    }else{
+            total7=0
+    }
+}
+
+if(v24 == 1){
+    if (v8 == 2){
+            total8=1
+    }else{
+         total8=0
+    }
+}else{
+    if (v8 == 1){
+            total8=1
+    }else{
+         total8=0
+    }
+}
+
+if(v25 == 1){
+    if (v9 == 2){
+         total9=1
+    }else{
+            total9=0
+    }
+}else{
+    if (v9 == 1){
+         total9=1
+    }else{
+            total9=0
+    }
+}
+
+if(v26 == 2){
+    if (v10 == 1){
+            total10=1
+    }else{
+            total10=0
+    }
+}else{
+    if (v10 == 2){
+            total10=1
+    }else{
+            total10=0
+    }
+}
+
+if(v27 == 1){
+    if (v11 == 2){
+            total11=1
+    }else{
+            total11=0
+    }
+}else{
+    if (v11 == 1){
+            total11=1
+    }else{
+            total11=0
+    }
+}
+
+if(v28 == 2){
+    if (v12 == 1){
+            total12=1
+    }else{
+         total12=0
+    }
+}else{
+    if (v12 == 2){
+            total12=1
+    }else{
+         total12=0
+    }
+}
+
+if(v29 == 2){
+    if (v13 == 1){
+            total13=1
+    }else{
+            total13=0
+    }
+}else{
+    if (v13 == 2){
+            total13=1
+    }else{
+            total13=0
+    }
+}
+
+if(v30 == 1){
+    if (v14 == 2){
+            total14=1
+    }else{
+        total14=0
+    }
+}else{
+    if (v14 == 1){
+        total14=1
+    }else{
+            total14=0
+    }
+}
+
+if(v31 == 1){
+    if (v15 == 2){
+            total15=1
+    }else{
+            total15=0
+    }
+}else{
+    if (v15 == 1){
+            total15=1
+    }else{
+            total15=0
+    }
+}
+
+if(v32 == 2){
+    if (v16 == 1){
+            total16=1
+    }else{
+            total16=0
+    }
+}else{
+    if (v16 == 2){
+            total16=1
+    }else{
+            total16=0
+    }
+}
+
+
+event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16</code></pre>
+</div>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQWRvYmUgQmVzdCBQcmFjdGljZSBHdWlkZSIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIiwKICBjbGFzcy5zb3VyY2UgPSAiZm9sZC1zaG93IikKYGBgCgojIEFkb2JlIEJlc3QgUHJhY3RpY2VzCgoqIE5hbWUgdmFyaWFibGVzIGFsbCBsb3dlcmNhc2Ugd2l0aCBubyBzcGFjZXM7IHVzZSB1bmRlcnNjb3JlcyBpZiBzZXBhcmF0aW5nIHdvcmRzCiogVXNlIHJhZGlvIGJ1dHRvbnMgd2hlbmV2ZXIgcG9zc2libGUKKiBVc2UgdGhlIGBhbGlnbmAgZmVhdHVyZSBhbmQgYG1hdGNoIHNpemVgIHRvIHdoZW4gY3JlYXRpbmcgdmFyaWFibGVzCiogV2hlbiBjcmVhdGluZyBmb3JtcyBpbiBXb3JkLCBnaXZlIHNwYWNlIGZvciB0aGUgQWRvYmUgYnV0dG9ucyB0aGF0IHdpbGwgZXZlbnR1YWxseSBiZSBjcmVhdGVkCiogTWFrZSBzdXJlIHlvdSBhcmUgdXNpbmcgc2FtZSBuYW1pbmcgY29udmVudGlvbnMKICAgICogYHRjaWRgCiAgICAqIGB3YXZlYAogICAgKiBgY29kZXJfbmFtZWAKICAgICogYGRhdGVfY29kZWRgCiAgICAqIGBjb2RlcmAgKGZvciAxLCAyLCAzIHZhcmlhYmxlKQogICAgKiBgZ2l2ZW5fb3BwX3RvX3BsYXlgCiAgICAqIGBwbGF5X3Rhc2tgCiAgICAqIGBwY19wcmVzZW50YAogICAgKiBgdGFza19zdGFydF90aW1lYAogICAgKiBgdGFza19zdG9wX3RpbWVgCiAgICAqIGB0YXNrX2xlbmd0aGAKKiBrZWVwIGl0IGNsZWFuCioga2VlcCBjb25zaXN0ZW50IG5hbWluZyBjb252ZW50aW9ucyB3aXRoaW4gKGFuZCBhY3Jvc3MpIGZvcm1zCiogRm9yIGZvbnRzIGluIHRoZSBmaWVsZHMsIGluIGdlbmVyYWwsIHVzZSBhdXRvLgpIb3dldmVyLCB0aGlzIGNhbiBiZSBjaGFuZ2VkIGlmIHByb2JsZW1hdGljLiAKKiBUbyByZXNldCBmb3JtcywgY29weSBhbmQgcGFzdGUgdGhlIHZhcmlhYmxlcywgdGhlbiBkZWxldGUgd2hhdCB5b3UgcGFzdGVkLCBhbmQgaXQgd2lsbCBiZSBjbGVhcmVkLiAKCiMgQ2FsY3VsYXRpbmcgZmllbGRzCgpIb3cgdG8gZGVmaW5lIHZhbHVlczoKCmBgYAojIGdldCBmaWVsZCBwdWxscyB0aGUgY2hvaWNlIHZhbHVlIGZyb20gZWFjaCBncm91cC4gCiMgVGhpcyBudW1iZXIgY29tZXMgZnJvbSB0aGUgY2hvaWNlIG51bWJlciBpdCBpcyBpbiB0aGUgZ3JvdXAuCnZhciB2MSA9IGdldEZpZWxkKCJwcmFjdGljZV90cmlhbHMxXzEiKS52YWx1ZQp2YXIgdjIgPQpnZXRGaWVsZCgicHJhY3RpY2VfdHJpYWxzMV8yIikudmFsdWUKdmFyIHYzID0gZ2V0RmllbGQoInByYWN0aWNlX3RyaWFsczFfMyIpLnZhbHVlCnZhciB2NCA9IGdldEZpZWxkKCJwcmFjdGljZV90cmlhbHMxXzQiKS52YWx1ZQoKIyBpZiBlbHNlIHN0YXRlbWVudHMgdXNlIHRoZSBjaG9pY2UgbnVtYmVyIGZyb20gdGhlIGZpZWxkIHZhbHVlLiAKIyBUaGUgcHVycG9zZSBvZiB0aGVzZSBpcyB0byBjcmVhdGUgdGhlIHRvdGFsIHZhbHVlcyBmaWVsZHMKaWYgKHYxID09IDMpIHsgCiAgdG90YWwgPSAxOwp9IGVsc2UgewogIHRvdGFsID0gMDsKfQoKaWYgKHYyID09IDMpIHsKICB0b3RhbDIgPSAxOwp9IGVsc2UgewogIHRvdGFsMiA9IDA7Cn0KCmlmICh2MyA9PSAzKSB7CiAgdG90YWwzID0gMTsKfSBlbHNlIHsKICB0b3RhbDMgPSAwOwp9CgppZiAodjQgPT0gMykgewogIHRvdGFsNCA9IDE7Cn0gZWxzZSB7CiAgdG90YWw0ID0gMDsKfQoKZXZlbnQudmFsdWUgPSB0b3RhbCArIHRvdGFsMiArIHRvdGFsMyArIHRvdGFsNApgYGA=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQWRvYmUgQmVzdCBQcmFjdGljZSBHdWlkZSIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIiwKICBjbGFzcy5zb3VyY2UgPSAiZm9sZC1zaG93IikKYGBgCgojIEFkb2JlIEJlc3QgUHJhY3RpY2VzCgoqIE5hbWUgdmFyaWFibGVzIGFsbCBsb3dlcmNhc2Ugd2l0aCBubyBzcGFjZXM7IHVzZSB1bmRlcnNjb3JlcyBpZiBzZXBhcmF0aW5nIHdvcmRzCiogVXNlIHJhZGlvIGJ1dHRvbnMgd2hlbmV2ZXIgcG9zc2libGUKKiBVc2UgdGhlIGBhbGlnbmAgZmVhdHVyZSBhbmQgYG1hdGNoIHNpemVgIHRvIHdoZW4gY3JlYXRpbmcgdmFyaWFibGVzCiogV2hlbiBjcmVhdGluZyBmb3JtcyBpbiBXb3JkLCBnaXZlIHNwYWNlIGZvciB0aGUgQWRvYmUgYnV0dG9ucyB0aGF0IHdpbGwgZXZlbnR1YWxseSBiZSBjcmVhdGVkCiogTWFrZSBzdXJlIHlvdSBhcmUgdXNpbmcgc2FtZSBuYW1pbmcgY29udmVudGlvbnMKICAgICogYHRjaWRgCiAgICAqIGB3YXZlYAogICAgKiBgY29kZXJfbmFtZWAKICAgICogYGRhdGVfY29kZWRgCiAgICAqIGBjb2RlcmAgKGZvciAxLCAyLCAzIHZhcmlhYmxlKQogICAgKiBgZ2l2ZW5fb3BwX3RvX3BsYXlgCiAgICAqIGBwbGF5X3Rhc2tgCiAgICAqIGBwY19wcmVzZW50YAogICAgKiBgdGFza19zdGFydF90aW1lYAogICAgKiBgdGFza19zdG9wX3RpbWVgCiAgICAqIGB0YXNrX2xlbmd0aGAKKiBLZWVwIGl0IGNsZWFuCiogS2VlcCBjb25zaXN0ZW50IG5hbWluZyBjb252ZW50aW9ucyB3aXRoaW4gKGFuZCBhY3Jvc3MpIGZvcm1zCiogRm9yIGZvbnRzIGluIHRoZSBmaWVsZHMsIGluIGdlbmVyYWwsIHVzZSBhdXRvLgpIb3dldmVyLCB0aGlzIGNhbiBiZSBjaGFuZ2VkIGlmIHByb2JsZW1hdGljLiAKKiBUbyByZXNldCBmb3JtcywgY29weSBhbmQgcGFzdGUgdGhlIHZhcmlhYmxlcywgdGhlbiBkZWxldGUgd2hhdCB5b3UgcGFzdGVkLCBhbmQgaXQgd2lsbCBiZSBjbGVhcmVkLiAKCiMgQ29udmVydGluZyBXb3JkIERvY3VtZW50cyB0byBQREZzCgpCZWZvcmUgY29udmVydGluZyBmb3JtcyB0byBwZGZzLCBhbGwgcmVxdWlyZWQgZWRpdHMgdG8gdGhlIGRvY3VtZW50IHNob3VsZCBiZSBtYWRlIGluIE1pY3Jvc29mdCBXb3JkLgpFZGl0cyBvZiBjb250ZW50IG9yIGZvcm1hdHRpbmcgc2hvdWxkIGJlIGNvbXBsZXRlZCBhbmQgZmluYWxpemVkIGluIFdvcmQgYmVmb3JlIGNvbnZlcnRpbmcgdGhlIGRvY3VtZW50IHRvIGEgcGRmLgpUbyBjb252ZXJ0IGEgV29yZCBkb2N1bWVudCB0byBhIHBkZiwgY29tcGxldGUgdGhlIGZvbGxvd2luZyBzdGVwczoKCjEuIE9wZW4gdGhlIGRvY3VtZW50IGluIE1pY3Jvc29mdCBXb3JkCjEuIENsaWNrIHRoZSAiRmlsZSIgdGFiIGluIHRoZSB0b3AgbGVmdCBjb3JuZXIgd2l0aGluIHRoZSBXb3JkIGludGVyZmFjZQoxLiBTZWxlY3QgIlNhdmUgYXMgQURPQkUgUERGIgoxLiBOYW1lIHRoZSBuZXcgcGRmIGFjY29yZGluZ2x5CgojIEVkaXRpbmcgcGRmcyBpbiBBZG9iZQoKMS4gT3BlbiBwZGYgaW4gQWRvYmUgQWNyb2JhdCBQcm8gMjAyMAoKICAgKiAqTm90ZToqIEVkaXRpbmcgb2YgcGRmcyBtdXN0IGJlIGRvbmUgaW4gQWRvYmUgQWNyb2JhdCBQcm8gMjAyMCwgKioqbm90KioqIEFkb2JlIEFjcm9iYXQKCjEuIFVuZGVyIHRoZSAiVG9vbHMiIHRhYiBpbiB0aGUgdG9wIGxlZnQgY29ybmVyIG9mIHRoZSBBZG9iZSBpbnRlcmZhY2UsIGZpbmQgdGhlIGhlYWRpbmcgIkZvcm1zICYgU2lnbmF0dXJlcyIgYW5kIHNlbGVjdCAiUHJlcGFyZSBGb3JtIgoKMS4gU2VsZWN0ICJTdGFydCIgdG8gYmVnaW4gc2Nhbm5pbmcgYW5kIHByZXBhcmF0aW9uIG9mIHRoZSBwZGYKCjEuIFRoZSAiUHJlcGFyZSBGb3JtIiB0b29sIGJhciBzaG91bGQgbm93IGJlIHZpc2libGUsIGFsbG93aW5nIGZvciB0aGUgYWRkaXRpb24gb2YgdGV4dCBmaWVsZHMsIHJhZGlvIGJ1dHRvbnMsIGNoZWNrIGJveGVzLCBhbmQgbW9yZQoKIyMgQWRkaW5nIFRleHQgRmllbGRzLCBSYWRpbyBCdXR0b25zLCBhbmQgQ2hlY2sgQm94ZXMKCjEuIFRleHQgZmllbGRzIHNob3VsZCBiZSBpbXBsZW1lbnRlZCB3aGVuOgogICAxLiBUZXh0dWFsIG9yIG51bWVyaWMgaW5mb3JtYXRpb24gbXVzdCBiZSBtYW51YWxseSBlbnRlcmVkCiAgIDEuIEEgY2FsY3VsYXRlZCBmaWVsZCBpcyByZXF1aXJlZAoxLiBSYWRpbyBidXR0b25zIHNob3VsZCBiZSBpbXBsZW1lbnRlZCB3aGVuZXZlciBwb3NzaWJsZQogICAqIFJhZGlvIGJ1dHRvbnMgYWxsb3cgZm9yIG9ubHkgb25lIHNlbGVjdGlvbiBvdXQgb2YgYSBncm91cCBvZiBvcHRpb25zCiAgICAgICogUmFkaW8gYnV0dG9ucyB0aHVzIHNob3VsZCBiZSB1c2VkIGZvciBpbWl0YXRpb24sIGNvbXByZWhlbnNpb24sIHByYWN0aWNlLCBhbmQgdGVzdCB0cmlhbCBmaWVsZHMgd2l0aGluIHBkZnMKICAgKiBJbiBvcmRlciB0byBwcmV2ZW50IGh1bWFuIGVycm9yLCByYWRpbyBidXR0b25zIHNob3VsZCBiZSBhcHBsaWVkIHRvIGFzIG1hbnkgdmFyaWFibGVzIGFzIHBvc3NpYmxlCiAgICogQ2FsY3VsYXRlZCBmaWVsZHMgY2FuIGJlIGRlcml2ZWQgZnJvbSByYWRpbyBidXR0b25zCjEuIENoZWNrIGJveGVzIHNob3VsZCBvbmx5IGJlIHVzZWQgd2hlbiBuZWNlc3NhcnkKICAgKiBDaGVjayBib3hlcyBhbGxvdyBmb3IgbXVsdGlwbGUgc2VsZWN0aW9ucyB3aXRoaW4gYSBncm91cAogICAqIENoZWNrIGJveGVzIHNob3VsZCAqKm5vdCoqIGJlIHVzZWQgZm9yIHRyaWFscyBmaWVsZHMgd2l0aGluIHBkZnMgdW5sZXNzIG11bHRpcGxlIGFuc3dlcnMgY2FuIGJlIHNlbGVjdGVkIGZvciBhIGdpdmVuIHRyaWFsCiAgICogQ2FsY3VsYXRlZCBmaWVsZHMgY2FuIGJlIGRlcml2ZWQgZnJvbSBjaGVjayBib3hlcwoKIyMgTmFtaW5nIENvbnZlbnRpb24gZm9yIFZhcmlhYmxlcyBpbiBBZG9iZSB7I25hbWluZ3ZhcmlhYmxlc30KCjEuIFZhcmlhYmxlIG5hbWVzIHNob3VsZCBiZSBpbiBhbGwgbG93ZXJjYXNlIHdpdGggbm8gc3BhY2VzIGFuZCB1bmRlcnNjb3JlcyBzZXBhcmF0aW5nIHdvcmRzCjEuIEtlZXAgdmFyaWFibGUgbmFtZXMgYXMgY29uc2lzdGVudCBhcyBwb3NzaWJsZSBhY3Jvc3MgZm9ybXMgd2l0aCBzaW1pbGFyIHZhcmlhYmxlcwoxLiBUaGUgZm9sbG93aW5nIGFyZSBjb21tb24gbmFtZXMgZm9yIHZhcmlhYmxlcyB3aGljaCBzaG91bGQgYmUgdXNlZCB3aGVuIGFwcGxpY2FibGU6CiAgICogSWRlbnRpZnlpbmcgaW5mb3JtYXRpb246CiAgICAgICogVENJRDogYHRjaWRgCiAgICAgICogV2F2ZTogYHdhdmVgCiAgICAgICogQ29kZXIgTmFtZTogYGNvZGVyX25hbWVgCiAgICAgICogRGF0ZSBDb2RlZDogYGRhdGVfY29kZWRgCiAgICAgICogQ29kZXI6IGBjb2RlcmAgKGZvciAxLCAyLCAzIHZhcmlhYmxlKQogICAgICAqIFdhcyBUQyBnaXZlbiB0aGUgb3Bwb3J0dW5pdHkgdG8gcGxheSB0aGUgdGFzazogYGdpdmVuX29wcF90b19wbGF5YAogICAgICAqIERpZCBUQyBwbGF5IHRoZSB0YXNrOiBgcGxheV90YXNrYAogICAgICAqIFBDIFByZXNlbnQ6IGBwY19wcmVzZW50YAogICAgICAqIERpZCBUQyBwYXNzIHRoZSBpbWl0YXRpb24gdHJpYWxzOiBgcGFzc19pbWl0YXRpb25gCiAgICAgICogRGlkIFRDIHBhc3MgdGhlIGNvbXByZWhlbnNpb24gY2hlY2s6IGBwYXNzX2NvbXByZWhlbnNpb25gCiAgICAgICogRGlkIFRDIHBhc3MgdGhlIHByYWN0aWNlIHRyaWFsczogYHBhc3NfcHJhY3RpY2VYYAogICAgICAqIFN0YXJ0IHRpbWU6IGB0YXNrX3N0YXJ0X3RpbWVgCiAgICAgICogU3RvcCB0aW1lOiBgdGFza19zdG9wX3RpbWVgCiAgICAgICogTGVuZ3RoIG9mIGFkbWluaXN0cmF0aW9uOiBgdGFza19sZW5ndGhgCiAgICAgICogQ29kZXIgMS8yLzM6IGBpbml0aWFsc19kYXRlX2NvZGVyWGAKICAgKiBUYXNrIFRyaWFscwogICAgICAqIEltaXRhdGlvbiBUcmlhbHM6IGBpbWl0YXRpb25fdHJpYWxzX3hgCiAgICAgICogSW1pdGF0aW9uIFRyaWFscyBTZWNvbmQgQWRtaW5pc3RyYXRpb246IGBpbWl0YXRpb25fdHJpYWxzX3JlYWRtaW5feGAKICAgICAgKiBDb21wcmVoZW5zaW9uIENoZWNrOiBgY29tcF9jaGVja1hfeGAKICAgICAgKiBQcmFjdGljZSBUcmlhbHM6IGBwcmFjdGljZV90cmlhbHNYX3hgCiAgICAgICogVGVzdCBUcmlhbHM6IGB0ZXN0X3RyaWFsc1hfeGAKICAgICAgKiAqTm90ZToqICJYIiBzaWduaWZpZXMgdGhlIHJvdW5kL2Jsb2NrIG9mIHRoZSB0cmlhbHMgd2hpbGUgIngiIHNpZ25pZmllcyB0aGUgdHJpYWwgbnVtYmVyIHdpdGhpbiB0aGF0IHJvdW5kL2Jsb2NrIChleDogYHByYWN0aWNlX3RyaWFsczJfN2ApLgogICAgICBBbiAiWCIgd2l0aGluIHRoZSB2YXJpYWJsZSBuYW1lIGlzIG9ubHkgbmVjZXNzYXJ5IGlmIHRoZXJlIGFyZSBtdWx0aXBsZSByb3VuZHMvYmxvY2tzIGZvciB0aGUgdHJpYWwuCiAgICAgIFRodXMsIGlmIHRoZXJlIGlzIG9ubHkgb25lIHJvdW5kIG9mIGltaXRhdGlvbiB0cmlhbHMsIHRob3NlIHRyaWFscyBzaG91bGQgYmUgc2ltcGx5IG5hbWVkIGB0ZXN0X3RyaWFsc2AgcmF0aGVyIHRoYW4gYHRlc3RfdHJpYWxzMWAuCiAgICogVHJpYWwgVG90YWxzCiAgICAgICogVG90YWwgSW5jb3JyZWN0OiBgdG90YWxfaW5jb3JyZWN0X3Rhc2tfdHJpYWxzYAogICAgICAqIFRvdGFsIEluaXRpYWxseSBpbmNvcnJlY3QsIGJ1dCBjaGFuZ2VkIHRvIGNvcnJlY3Q6IGB0b3RhbF9pbml0aWFsbHlfdGFza190cmlhbHNgCiAgICAgICogVG90YWwgQ29ycmVjdDogYHRvdGFsX2NvcnJlY3RfdGFza190cmlhbHNgCiAgICAgICogVG90YWwgTm8gUmVzcG9uc2U6IGB0b3RhbF9ub3Jlc3BvbnNlX3Rhc2tfdHJpYWxzYAogICAgICAqIFRvdGFsIFVuY29kZWFibGU6IGB0b3RhbF91bmNvZGVhYmxlX3Rhc2tfdHJpYWxzYAogICAgICAqIFRvdGFsICMgb2YgU2NvcmVhYmxlIFRyaWFscyBQbGF5ZWQ6IGB0b3RhbF9zY29yZWRfdGFza190cmlhbHNgCiAgICAgICogKk5vdGU6KiAidGFza190cmlhbHMiIHNob3VsZCBiZSByZXBsYWNlZCB3aXRoIHdoZXRoZXIgdGhlIHJvdW5kL2Jsb2NrIG9mIHRyaWFscyBpcyBgaW1pdGF0aW9uX3RyaWFsc2AsIGBjb21wX2NoZWNrYCwgYHByYWN0aWNlX3RyaWFsc2AsIG9yIGB0ZXN0X3RyaWFsc2AuCgojIyMgTmFtaW5nIENvbnZlbnRpb24gZm9yIFJhZGlvIEJ1dHRvbnMgeyNuYW1pbmdjb252ZW50aW9ucmFkaW9idXR0b25zfQoKMS4gSW4gb3JkZXIgdG8gY3JlYXRlIGNhbGN1bGF0ZWQgZmllbGRzIGZvciB0cmlhbCB0b3RhbHMsIHJhZGlvIGJ1dHRvbiAiQ2hvaWNlIFZhbHVlcyIgbXVzdCBiZSBtYW51YWxseSBzZXQuClRvIGZhY2lsaXRhdGUgdGhlIHByb2Nlc3MsIHRoaXMgc2hvdWxkIGJlIGRvbmUgYWZ0ZXIgYWxpZ25pbmcgZWFjaCBncm91cCBvZiByYWRpbyBidXR0b25zIGZvciBlYWNoIHRyaWFsIHVuZGVyIGVhY2ggVEMgcmVzcG9uc2UgZm9yIHRoZSB0cmlhbC4KRm9yIGV4YW1wbGUsIHRoZXJlIHNob3VsZCBiZSBhIGNvbHVtbiBvZiByYWRpbyBidXR0b25zIHVuZGVyIHRoZSAiQ29ycmVjdCIgbGFiZWwgd2l0aGluIHRoZSB0cmlhbCdzIGdyaWQgd2l0aCBlYWNoIHJhZGlvIGJ1dHRvbiBpbiB0aGlzIGNvbHVtbiByZXByZXNlbnRpbmcgdGhlICJDb3JyZWN0IiBjaG9pY2UgZm9yIGEgZGlmZmVyZW50IGdyb3VwIG9mIHJhZGlvIGJ1dHRvbnMuCkEgY29sdW1uIG9mIGJ1dHRvbnMgc2hvdWxkIGJlIHByZXNlbnQgZm9yICJJbmNvcnJlY3QsIiAiTm8gUmVzcG9uc2UsIiBhbmQgc28gZm9ydGguClRodXMsIGVhY2ggZ3JvdXAgb2YgcmFkaW8gYnV0dG9ucyBzaG91bGQgYmUgYWxpZ25lZCBob3Jpem9udGFsbHksIHdpdGggZWFjaCBidXR0b24gcmVmbGVjdGluZyBhIGRpZmZlcmVudCBUQyByZXNwb25zZS4KVGhlc2UgZ3JvdXBzIHNob3VsZCB0aGVuIGJlIHN0YWNrZWQgaW50byBhIGNvbHVtbiB3aXRoIGVhY2ggY29sdW1uIHJlcHJlc2VudGluZyB0aGUgcmVzcG9uc2UgYWNyb3NzIHRyaWFscy4KVGhlIENob2ljZSBWYWx1ZXMgY2FuIHRoZW4gYmUgc2V0IHRocm91Z2ggdGhlIGZvbGxvd2luZyBzdGVwczoKICAgCiAgIDEuIFNlbGVjdCB0aGUgZW50aXJlIGNvbHVtbiB1bmRlciBhIGNlcnRhaW4gVEMgcmVzcG9uc2UgKGV4LiBzZWxlY3QgdGhlIGVudGlyZSBjb2x1bW4gb2YgcmFkaW8gYnV0dG9ucyB1bmRlciAiQ29ycmVjdCIpCiAgIDEuIFJpZ2h0LWNsaWNrIG9uIHRoZSBzZWxlY3RlZCBjb2x1bW4gb2YgcmFkaW8gYnV0dG9ucyBhbmQgc2VsZWN0ICJQcm9wZXJ0aWVzIgogICAxLiBVbmRlciB0aGUgIk9wdGlvbnMiIHRhYiwgc2V0IHRoZSAiUmFkaW8gQnV0dG9uIENob2ljZSIgYWNjb3JkaW5nIHRvIHRoZSBmb2xsb3dpbmcgdmFsdWVzOgogICAgICAqICJDb3JyZWN0IiBjb2x1bW4gPSAyCiAgICAgICogIkluY29ycmVjdCIgY29sdW1uID0gMAogICAgICAqICJJbml0aWFsbHkgaW5jb3JyZWN0IGJ1dCBjaGFuZ2VkIHJlc3BvbnNlIHRvIGNvcnJlY3QiIGNvbHVtbiA9IDEKICAgICAgKiAiTm8gcmVzcG9uc2UiIGNvbHVtbiA9IC05CiAgICAgICogIlVuY29kZWFibGUiIGNvbHVtbiA9IDkKICAgMS4gU2V0IGFsbCBjb2x1bW5zIHdpdGggdGhlaXIgYXBwcm9wcmlhdGUgcmFkaW8gYnV0dG9uIGNob2ljZSB2YWx1ZQogICAqICpOb3RlOiogV2hpbGUgY2FsY3VsYXRlZCBmaWVsZHMgY2FuIGJlIGRlcml2ZWQgZnJvbSBkaWZmZXJlbnQgcmFkaW8gYnV0dG9uIGNob2ljZSB2YWx1ZXMsIGl0IGlzIGltcGVyYXRpdmUgdG8gYXNzaWduIHRoZSBidXR0b24gY2hvaWNlcyBhY2NvcmRpbmcgdG8gdGhlc2UgdmFsdWVzLgogICBUaGlzIGFsbG93cyBmb3IgY29uc2lzdGVuY3kgYWNyb3NzIHBkZnMgYW5kIHRoZSBhYmlsaXR5IHRvIHNtb290aGx5IGJvcnJvdyBjb2RlIGZvciBjYWxjdWxhdGVkIGZpZWxkcy4KCiMjIyBOYW1pbmcgQ29udmVudGlvbiBmb3IgQ2hlY2sgQm94ZXMgeyNuYW1pbmdjb252ZW50aW9uY2hlY2tib3hlc30KCkNoZWNrIGJveGVzIGNhbiBiZSBuYW1lZCBpbiBzdWNoIGEgd2F5IHRoYXQgdGhleSBhY3Qgc2ltaWxhciB0byByYWRpbyBidXR0b25zLCBhbGxvd2luZyBvbmx5IG9uZSBzZWxlY3Rpb24gb3V0IG9mIGEgZ3JvdXAgb2YgY2hlY2sgYm94ZXMuPQpBIGdyb3VwIG9mIGNoZWNrIGJveGVzIGNhbiBiZSBmb3JtYXR0ZWQgYXMgcmFkaW8gYnV0dG9ucyB0aHJvdWdoIHRoZSBmb2xsb3dpbmcgc3RlcHM6CgoxLiBJbnB1dCB0aGUgKnNhbWUqIHZhcmlhYmxlIG5hbWUgZm9yIGVhY2ggY2hlY2sgYm94IHdpdGhpbiB0aGUgZ3JvdXAgdG8gYmUgZm9ybWF0dGVkCjEuIFJpZ2h0IGNsaWNrIG9uIGVhY2ggY2hlY2sgYm94IGFuZCBzZWxlY3QgIlByb3BlcnRpZXMiCjEuIFVuZGVyIHRoZSAiT3B0aW9ucyIgdGFiLCBzZXQgdGhlICJFeHBvcnQgVmFsdWUiIGZvciBlYWNoIGNoZWNrIGJveCBhY2NvcmRpbmcgdG8gdGhlIGZvbGxvd2luZyB2YWx1ZXM6CiAgICAgICogIkNvcnJlY3QiIGNvbHVtbiA9IDIKICAgICAgKiAiSW5jb3JyZWN0IiBjb2x1bW4gPSAwCiAgICAgICogIkluaXRpYWxseSBpbmNvcnJlY3QgYnV0IGNoYW5nZWQgcmVzcG9uc2UgdG8gY29ycmVjdCIgY29sdW1uID0gMQogICAgICAqICJObyByZXNwb25zZSIgY29sdW1uID0gLTkKICAgICAgKiAiVW5jb2RlYWJsZSIgY29sdW1uID0gOQoxLiBXaXRoIGVhY2ggY2hlY2sgYm94IG5hbWVkIHRoZSBzYW1lIGJ1dCBhbHNvIGVhY2ggd2l0aCBhIGRpZmZlcmVudCBleHBvcnQgdmFsdWUsIHRoZSBncm91cCBvZiBjaGVjayBib3hlcyBzaG91bGQgbm93IG9wZXJhdGUgc2ltaWxhciB0byBhIGdyb3VwIG9mIHJhZGlvIGJ1dHRvbnMKICAgKiBXaXRoaW4gdGhlIGdyb3VwLCBvbmx5IG9uZSBjaGVjayBib3ggc2hvdWxkIGJlIGFibGUgdG8gYmUgc2VsZWN0ZWQKICAgKiBBZGRpdGlvbmFsbHksIHRoZSBzZWxlY3Rpb24gc2hvdWxkIGJlIGFibGUgdG8gYmUgdW5zZWxlY3RlZAoxLiBXaGlsZSBib3RoIGdyb3VwcyBvZiByYWRpbyBidXR0b25zIGFuZCB0aGlzIGZvcm0gb2YgZ3JvdXBzIG9mIGNoZWNrIGJveGVzIG9wZXJhdGUgdGhlIHNhbWUgd2F5IGFuZCBwZXJtaXQgb25seSBvbmUgc2VsZWN0aW9uIHdpdGhpbiB0aGUgZ3JvdXAsIGdyb3VwcyBvZiBjaGVjayBib3hlcyBwcm92aWRlIGFuIGFkdmFudGFnZSBieSBhbGxvd2luZyBmb3IgZGVzZWxlY3Rpb24gb2YgdGhlIHZhbHVlLgpXaXRoaW4gZ3JvdXBzIG9mIHJhZGlvIGJ1dHRvbnMsIGFzIHNvb24gYXMgYSBidXR0b24gaXMgc2VsZWN0ZWQsIHRoZSBncm91cCBvZiBidXR0b25zIGNhbm5vdCBiZSByZXNldCBvciBkZXNlbGVjdGVkLgpUaGlzIHVzYWdlIG9mIGdyb3VwcyBvZiBjaGVjayBidXR0b25zIG1heSBiZSB1c2VmdWwgZ29pbmcgZm9yd2FyZCBhbmQgc2hvdWxkIGJlIGNvbnNpZGVyZWQgd2hlbiBjcmVhdGluZyBuZXcgY29kaW5nIGZvcm1zLgogICAqICpOb3RlOiogQ3JlYXRpbmcgY2FsY3VsYXRlZCBmaWVsZHMgZnJvbSBncm91cHMgb2YgY2hlY2sgYm94ZXMgd2lsbCBmb2xsb3cgdGhlIHNhbWUgcHJvY2VkdXJlIGFzIFtjcmVhdGluZyBjYWxjdWF0ZWQgZmllbGRzIGZyb20gcmFkaW8gYnV0dG9uc10oYWRvYmUuaHRtbCNjcmVhdGVjYWxjdWxhdGVkcmFkaW9idXR0b25zKS4KICAgVGh1cywgaXQgaXMgaW1wb3J0YW50IHRvIGVuc3VyZSB0aGUgZXhwb3J0IHZhbHVlcyBmb3IgZWFjaCBjaGVjayBib3ggZm9sbG93IHRoZSB2YWx1ZXMgbGlzdGVkIGluIFN0ZXAgMy4KCgojIENyZWF0aW5nIENhbGN1bGF0ZWQgRmllbGRzCgpBZG9iZSBBY3JvYmF0IGJvdGggaW5jbHVkZXMgaXRzIG93biBmdW5jdGlvbnMgZm9yIGNyZWF0aW5nIGNhbGN1bGF0ZWQgZmllbGRzIGFuZCBhbGxvd3MgZm9yIHRoZSBpbXBsZW1lbnRhdGlvbiBvZiBjdXN0b20gY2FsY3VsYXRpb24gc2NyaXB0cyB3aXRoaW4gZm9ybXMuCldoaWxlIHRoZSBjYWxjdWxhdGlvbiBmZWF0dXJlcyBhcmUgYnVpbHQtaW4gdG8gQWRvYmUsIHRoZSBjdXN0b20gY2FsY3VsYXRpb24gc2NyaXB0cyBtdXN0IGJlIHdyaXR0ZW4gdXNpbmcgdGhlIHByb2dyYW1taW5nIGxhbmd1YWdlIEphdmFTY3JpcHQuClRoZSBmb2xsb3dpbmcgc2VjdGlvbnMgZGV0YWlsIGhvdyB0byBjcmVhdGUgZGlmZmVyZW50IHR5cGVzIG9mIGNhbGN1bGF0ZWQgZmllbGRzLgoKIyMgQ3JlYXRpbmcgQ2FsY3VsYXRlZCBGaWVsZHMgZnJvbSBSYWRpbyBCdXR0b25zIHsjY3JlYXRlY2FsY3VsYXRlZHJhZGlvYnV0dG9uc30KCjEuIEZpcnN0LCBlbnN1cmUgdGhlIHJhZGlvIGJ1dHRvbnMgYW5kIHRoZWlyIGNob2ljZSB2YWx1ZXMgYXJlIGFwcHJvcHJpYXRlbHkgc2V0IGFjY29yZGluZyB0byB0aGUgW25hbWluZyBjb252ZW50aW9uIGZvciByYWRpbyBidXR0b25zXShhZG9iZS5odG1sI25hbWluZ2NvbnZlbnRpb25yYWRpb2J1dHRvbnMpCjEuIFNlbGVjdCB0aGUgdGV4dCBmaWVsZCB3aGljaCBtdXN0IGJlIHR1cm5lZCBpbnRvIGEgY2FsY3VsYXRlZCBmaWVsZAoxLiBSaWdodC1jbGljayBvbiB0aGUgZmllbGQgYW5kIHNlbGVjdCAiUHJvcGVydGllcyIKMS4gU2VsZWN0IHRoZSAiQ2FsY3VsYXRlIiB0YWIgd2l0aGluIHRoZSBQcm9wZXJ0aWVzIG1lbnUKMS4gU2VsZWN0IHRoZSAiQ3VzdG9tIGNhbGN1bGF0aW9uIHNjcmlwdDoiIHJhZGlvIGJ1dHRvbgoxLiBTZWxlY3QgIkVkaXQuLi4iIGFuZCBpbnB1dCB0aGUgZGVzaXJlZCBjYWxjdWxhdGlvbiBzY3JpcHQKICAgKiBUaGUgZm9sbG93aW5nIHNjcmlwdCBzaG91bGQgYmUgYXBwbGllZCBpbiBvcmRlciB0byBjYWxjdWxhdGUgcmFkaW8gYnV0dG9uczoKCiAgIGBgYAogICB2YXIgdjEgPSBnZXRGaWVsZCgidmFyaWFibGVfZ3JvdXBfbmFtZSIpLnZhbHVlCiAgIHZhciB2MiA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ncm91cF9uYW1lMiIpLnZhbHVlCiAgIHZhciB2MyA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ncm91cF9uYW1lMyIpLnZhbHVlCiAgIHZhciB2NCA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ncm91cF9uYW1lNCIpLnZhbHVlCgogICBpZiAodjEgPT0gWCkgeyAKICAgdG90YWwgPSAxOwogICB9IGVsc2UgewogICB0b3RhbCA9IDA7CiAgIH0KCiAgIGlmICh2MiA9PSBYKSB7CiAgIHRvdGFsMiA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsMiA9IDA7CiAgIH0KCiAgIGlmICh2MyA9PSBYKSB7CiAgIHRvdGFsMyA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsMyA9IDA7CiAgIH0KCiAgIGlmICh2NCA9PSBYKSB7CiAgIHRvdGFsNCA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsNCA9IDA7CiAgIH0KCiAgIGV2ZW50LnZhbHVlID0gdG90YWwgKyB0b3RhbDIgKyB0b3RhbDMgKyB0b3RhbDQKICAgYGBgCiAgICogVGhpcyBzY3JpcHQgc2hvdWxkIGJlIGZpdCBhY2NvcmRpbmcgdG8gaG93IG1hbnkgdHJpYWxzL3ZhcmlhYmxlcyBtdXN0IGJlIGNhbGN1bGF0ZWQgZnJvbQogICAqIFByb2NlZWQgdG8gW0JyZWFraW5nIERvd24gdGhlIENhbGN1bGF0aW9uIFNjcmlwdF0oYWRvYmUuaHRtbCNicmVha2luZ2Rvd25zY3JpcHQpIHRvIGdhaW4gYSBncmVhdGVyIHVuZGVyc3RhbmRpbmcgb2YgdGhlIHNjcmlwdAoKIyMgQ3JlYXRpbmcgQ2FsY3VsYXRlZCBGaWVsZHMgZnJvbSBSYWRpbyBCdXR0b25zOiBWaWRlbwoKV2F0Y2ggdGhlIGZvbGxvd2luZyB2aWRlbyBpbiBvcmRlciB0byBvYnNlcnZlIGFuIGV4YW1wbGUgb2YgY3JlYXRpbmcgY2FsY3VsYXRlZCBmaWVsZHMgZnJvbSByYWRpbyBidXR0b25zOgo8YnI+Cjxicj4KCjx2aWRlbyB3aWR0aD0iMTAwJSIgY29udHJvbHM9IiIgcHJlbG9hZD0ibm9uZSI+Cjxzb3VyY2Ugc3JjPSJpbWFnZXMvY3JlYXRpbmdfY2FsY3VsYXRlZF9maWVsZHNfaW5fYWRvYmUubXA0IiB0eXBlPSJ2aWRlby9tcDQiPgo8L3ZpZGVvPgoKIyMgQ3JlYXRpbmcgQ2FsY3VsYXRlZCBGaWVsZHMgZnJvbSBDaGVjayBCb3hlcwoKMS4gUHJlcGFyZSB0aGUgY2hlY2sgYm94ZXMgZm9yIGNhbGN1bGF0aW9uOgoKICAgMS4gUHJvdmlkZSB0aGUgY2hlY2sgYm94ZXMgZnJvbSB3aGljaCB0aGUgZmllbGQgd2lsbCBiZSBjYWxjdWxhdGVkIHdpdGggYXBwcm9wcmlhdGUgdmFyaWFibGUgbmFtZXMsIGNsb3NlbHkgZm9sbG93aW5nIHN0YW5kYXJkIFtuYW1pbmcgY29udmVudGlvbiBmb3IgdmFyaWFibGVzXShhZG9iZS5odG1sI25hbWluZ3ZhcmlhYmxlcykgd2hlbiBwb3NzaWJsZQogICAKICAgMS4gRm9yIGVhY2ggY2hlY2sgYm94LCBhbiBleHBvcnQgdmFsdWUgbXVzdCBiZSBhc3NpZ25lZC4KICAgVGhlIGV4cG9ydCB2YWx1ZSB3aWxsIGRldGVybWluZSB3aGF0IG51bWVyaWMgdmFsdWUgdGhlIGNoZWNrIGJveCB3aWxsIGNhcnJ5IHRocm91Z2hvdXQgY2FsY3VsYXRpb24uCiAgIFRvIHNldCB0aGUgZXhwb3J0IHZhbHVlLCBjb21wbGV0ZSB0aGUgZm9sbG93aW5nIHN0ZXBzOgoKICAgICAgMS4gU2VsZWN0IGFuZCByaWdodC1jbGljayBvbiB0aGUgY2hlY2sgYm94IGFuZCBzZWxlY3QgIlByb3BlcnRpZXMiCiAgICAgIDEuIEluIHRoZSBQcm9wZXJ0aWVzIG1lbnUsIHNlbGVjdCB0aGUgIk9wdGlvbnMiIHRhYgogICAgICAxLiBJbiB0aGUgIkV4cG9ydCBWYWx1ZToiIGZpZWxkLCBlbnRlciB0aGUgbnVtZXJpYyB2YWx1ZSB0aGUgY2hlY2sgYm94IHNob3VsZCByZWZsZWN0CgoxLiBTZWxlY3QgdGhlIHRleHQgZmllbGQgd2hpY2ggbXVzdCBiZSB0dXJuZWQgaW50byBhIGNhbGN1bGF0ZWQgZmllbGQKMS4gUmlnaHQtY2xpY2sgb24gdGhlIGZpZWxkIGFuZCBzZWxlY3QgIlByb3BlcnRpZXMiCjEuIFNlbGVjdCB0aGUgIkNhbGN1bGF0ZSIgdGFiIHdpdGhpbiB0aGUgUHJvcGVydGllcyBtZW51CjEuIFNlbGVjdCB0aGUgIlZhbHVlIGlzIHRoZSBgbWF0aGVtYXRpY2FsIG9wZXJhdG9yc2Agb2YgdGhlIGZvbGxvd2luZyBmaWVsZHMiIHJhZGlvIGJ1dHRvbgogICAqICpOb3RlOiogVGhlIGFwcHJvcHJpYXRlIGBtYXRoZW1hdGljYWwgb3BlcmF0b3JgIHNob3VsZCBiZSBzZWxlY3RlZCBhY2NvcmRpbmcgdG8gdGhlIGRlc2lyZWQgZmluYWwgY2FsY3VsYXRpb24gZnJvbSB0aGUgZHJvcCBkb3duIGxpc3Qgb2YgInN1bSAoKyksIiAicHJvZHVjdCAoeCksIiAiYXZlcmFnZSwiICJtaW5pbXVtLCIgb3IgIm1heGltdW0iCjEuIFNlbGVjdCAiUGljay4uLiIgYW5kIHRoZW4gY2hlY2sgdGhlIHZhcmlhYmxlIG5hbWVzIG9mIHRoZSBjaGVjayBib3hlcyB0byBiZSBjYWxjdWxhdGVkCgojIyBCcmVha2luZyBEb3duIHRoZSBDYWxjdWxhdGlvbiBTY3JpcHQgeyNicmVha2luZ2Rvd25zY3JpcHR9CgpgYGAKdmFyIHYxID0gZ2V0RmllbGQoInZhcmlhYmxlX2dyb3VwX25hbWUiKS52YWx1ZQp2YXIgdjIgPSBnZXRGaWVsZCgidmFyaWFibGVfZ3JvdXBfbmFtZTIiKS52YWx1ZQp2YXIgdjMgPSBnZXRGaWVsZCgidmFyaWFibGVfZ3JvdXBfbmFtZTMiKS52YWx1ZQp2YXIgdjQgPSBnZXRGaWVsZCgidmFyaWFibGVfZ3JvdXBfbmFtZTQiKS52YWx1ZQoKaWYgKHYxID09IFgpIHsgCnRvdGFsID0gMTsKfSBlbHNlIHsKdG90YWwgPSAwOwp9CgppZiAodjIgPT0gWCkgewp0b3RhbDIgPSAxOwp9IGVsc2Ugewp0b3RhbDIgPSAwOwp9CgppZiAodjMgPT0gWCkgewp0b3RhbDMgPSAxOwp9IGVsc2Ugewp0b3RhbDMgPSAwOwp9CgppZiAodjQgPT0gWCkgewp0b3RhbDQgPSAxOwp9IGVsc2Ugewp0b3RhbDQgPSAwOwp9CgpldmVudC52YWx1ZSA9IHRvdGFsICsgdG90YWwyICsgdG90YWwzICsgdG90YWw0CmBgYApUaGUgY2FsY3VsYXRpb24gc2NyaXB0IGZvciByYWRpbyBidXR0b25zIGNhbiBiZSBicm9rZW4gZG93biBpbnRvIHRocmVlIHBhcnRzOgoKMS4gRGVmaW5pbmcgdGhlIFZhcmlhYmxlcwoKICAgYGBgCiAgIHZhciB2MSA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ncm91cF9uYW1lIikudmFsdWUKICAgdmFyIHYyID0gZ2V0RmllbGQoInZhcmlhYmxlX2dyb3VwX25hbWUyIikudmFsdWUKICAgdmFyIHYzID0gZ2V0RmllbGQoInZhcmlhYmxlX2dyb3VwX25hbWUzIikudmFsdWUKICAgdmFyIHY0ID0gZ2V0RmllbGQoInZhcmlhYmxlX2dyb3VwX25hbWU0IikudmFsdWUKICAgYGBgCgogICAqIFRoaXMgcG9ydGlvbiBvZiB0aGUgc2NyaXB0IGRlZmluZXMgdGhlIHZhcmlhYmxlcyBmcm9tIHdoaWNoIGluZm9ybWF0aW9uIGlzIGJlaW5nIHB1bGxlZCBmcm9tLgogICBJbiBuZWFybHkgYWxsIGNhc2VzIHRoZSB2YXJpYWJsZXMgYmVpbmcgcHVsbGVkIGZyb20gd2lsbCBiZSB0aGUgZ3JvdXBzIG9mIHJhZGlvIGJ1dHRvbnMgZm9yIGVhY2ggdHJpYWwuCiAgICogVGhlIGxpbmUgYHZhciB2MSA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ncm91cF9uYW1lIikudmFsdWVgIGRlZmluZXMgdGhlIHNlbGVjdGVkIHJhZGlvIGJ1dHRvbiBpbiAidmFyaWFibGVfZ3JvdXBfbmFtZSIgYXMgYHZhciB2MWAgKHZhcmlhYmxlIDEpIHdpdGhpbiB0aGlzIHNjcmlwdCBhbmQgcHVsbHMgdGhlICoqY2hvaWNlIHZhbHVlKiogZnJvbSBlYWNoIGdyb3VwCiAgICAgICogVGh1cywgd2l0aGluIGVhY2ggYGdldEZpZWxkKClgLCB0aGUgbmFtZSBvZiBlYWNoIGdyb3VwIG9mIHJhZGlvIGJ1dHRvbnMgc2hvdWxkIGJlIGFkZGVkIGluIHF1b3RhdGlvbnMKICAgICAgKiAqTm90ZToqIFRoZSBudW1iZXIgYmVpbmcgcHVsbGVkIHRocm91Z2ggdGhpcyBmdW5jdGlvbiBkaXJlY3RseSBjb3JyZXNwb25kcyB0byB0aGUgY2hvaWNlIHZhbHVlIGRlZmluZWQgZm9yIGVhY2ggcmFkaW8gYnV0dG9uIGluIHRoZSBncm91cCBvZiByYWRpbyBvZiByYWRpbyBidXR0b25zLgogICAgICBUaGlzIGlzIHdoeSBpdCBpcyBjcnVjaWFsIHRvIGRlZmluZSBjaG9pY2UgdmFsdWVzIGFjY29yZGluZyB0byB0aGUgc2FtZSBbbmFtaW5nIGNvbnZlbnRpb24gZm9yIHJhZGlvIGJ1dHRvbnNdKGFkb2JlLmh0bWwjbmFtaW5nY29udmVudGlvbnJhZGlvYnV0dG9ucykKICAgKiBFYWNoIGB2YXIgdlhgIHNob3VsZCByZWZsZWN0IGEgdHJpYWwgb24gdGhlIGZvcm0uCiAgIFRodXMsIGlmIHRoZXJlIGFyZSAxNSB0ZXN0IHRyaWFscywgdGhlcmUgc2hvdWxkIGJlIDE1IGxpbmVzIG9mIGNvZGUgZnJvbSBgdmFyIHYxYCB0byBgdmFyIHYxNWAgd2l0aCB0aGUgbmFtZSBmb3IgZWFjaCBncm91cCBvZiByYWRpbyBidXR0b25zIGlucHV0ZWQgaW4gYGdldEZpZWxkKCIiKWAgZm9yIGVhY2ggdmFyaWFibGUKCjIuIERlZmluaW5nIHRoZSBTZWxlY3RlZCBWYWx1ZXMKCiAgIGBgYAogICBpZiAodjEgPT0gWCkgeyAKICAgdG90YWwgPSAxOwogICB9IGVsc2UgewogICB0b3RhbCA9IDA7CiAgIH0KCiAgIGlmICh2MiA9PSBYKSB7CiAgIHRvdGFsMiA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsMiA9IDA7CiAgIH0KCiAgIGlmICh2MyA9PSBYKSB7CiAgIHRvdGFsMyA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsMyA9IDA7CiAgIH0KCiAgIGlmICh2NCA9PSBYKSB7CiAgIHRvdGFsNCA9IDE7CiAgIH0gZWxzZSB7CiAgIHRvdGFsNCA9IDA7CiAgIH0KICAgYGBgCiAgICogVGhpcyBwb3J0aW9uIG9mIGNvZGUgdXRpbGl6ZXMgaWYvZWxzZSBzdGF0ZW1lbnRzIGluIG9yZGVyIHRvIGNyZWF0ZSB0aGUgdG90YWwgdmFsdWUgZm9yIGVhY2ggZmllbGQKICAgKiBJbiBgdjEgPT0gWGAgYW5kIGVhY2ggc3Vic2VxdWVudCBgdiA9PSBYYCwgdGhlIGBYYCBzaG91bGQgYmUgcmVwbGFjZWQgd2l0aCB0aGUgKipjaG9pY2UgdmFsdWUqKiBvZiB0aGUgcmFkaW8gYnV0dG9uIGZyb20gdGhlIGdyb3VwIG9mIHJhZGlvIGJ1dHRvbnMgdGhhdCBjb3JyZXNwb25kcyB0byB0aGUgZGVzaXJlZCBmaWVsZCB5b3UgYXJlIGNhbGN1bGF0aW5nCiAgICAgICogRm9yIGV4YW1wbGUsIGlmIGEgdG90YWwgY29ycmVjdCBmaWVsZCBpcyBiZWluZyBjYWxjdWxhdGVkLCB0aGUgY29kZSBzaG91bGQgcmVhZDoKCiAgICAgICAgIGBgYAogICAgICAgICBpZiAodjEgPT0gMikgeyAKICAgICAgICAgdG90YWwgPSAxOwogICAgICAgICB9IGVsc2UgewogICAgICAgICB0b3RhbCA9IDA7CiAgICAgICAgIH0KCiAgICAgICAgIGlmICh2MiA9PSAyKSB7CiAgICAgICAgIHRvdGFsMiA9IDE7CiAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgIHRvdGFsMiA9IDA7CiAgICAgICAgIH0KICAgICAgICAgYGBgCgogICAgICAqIEJlY2F1c2UgYSB0b3RhbCBjb3JyZWN0IGZpZWxkIGlzIGJlaW5nIGNhbGN1bGF0ZWQsIHRoZSBjaG9pY2UgdmFsdWUgb2YgMiBzaG91bGQgYmUgaW5wdXRlZCBhcyB0aGlzIGlzIHRoZSBjaG9pY2UgdmFsdWUgd2hpY2ggY29ycmVzcG9uZHMgdG8gIkNvcnJlY3QiIChzZWUgW25hbWluZyBjb252ZW50aW9uIGZvciByYWRpbyBidXR0b25zXShhZG9iZS5odG1sI25hbWluZ2NvbnZlbnRpb25yYWRpb2J1dHRvbnMpKQogICAgICAqIFRoZSB2YWx1ZSBvZiAyIHdvdWxkIGJlIGlucHV0ZWQgZm9yIGVhY2ggaWYvZWxzZSBzdGF0ZW1lbnQgZm9yIGVhY2ggdmFyaWFibGUuCiAgICAgIFRodXMsIGlmIHRoZXJlIHdlcmUgMTUgdmFyaWFibGVzLCB0aGVyZSBzaG91bGQgYmUgMTUgaWYvZWxzZSBzdGF0ZW1lbnRzIGB2MSA9PSAyYCB0byBgdjE1ID09IDJgCiAgICogVGhlIGlmL2Vsc2Ugc3RhdGVtZW50IGZvciBlYWNoIHZhcmlhYmxlIGRlZmluZXMgdGhhdCBpZiB0aGUgdmFsdWUgcHVsbGVkIGJ5IHRoZSBgZ2V0RmllbGQoKWAgZnVuY3Rpb24gbWF0Y2hlcyB0aGUgaW5wdXR0ZWQgY2hvaWNlIHZhbHVlIGZvciB0aGUgdmFyaWFibGUgdGhlbiB0aGUgdG90YWwgZm9yIHRoYXQgdmFyaWFibGUgYmVjb21lcyBlcXVhbCB0byAxLgogICBJZiBpdCBkb2VzIG5vdCBtYXRjaCwgdGhlIHRoZSB0b3RhbCBiZWNvbWVzIGVxdWFsIHRvIDAuCgozLiBEZWZpbmluZyB0aGUgVG90YWwKCmBgYApldmVudC52YWx1ZSA9IHRvdGFsICsgdG90YWwyICsgdG90YWwzICsgdG90YWw0CmBgYAoKKiBUaGlzIHBvcnRpb24gb2YgY29kZSBkZWZpbmVzIHRoZSBjYWxjdWxhdGlvbiB0byB0YWtlIHBsYWNlIGluIHRoZSBmaWVsZAogICAqIFRoZSBgZXZlbnQudmFsdWVgIGRldGVybWluZXMgd2hhdCBhcHBlYXJzIGluIHRoZSB0ZXh0IGJveAoqIFRoaXMgbGluZSBvZiBjb2RlIGFkZHMgdG9nZXRoZXIgdGhlIHRvdGFscyBkZWZpbmVkIGluIHRoZSBpZi9lbHNlIHN0YXRlbWVudHMuClRoaXMgcHJvZHVjZXMgdGhlIGZpbmFsIGNhbGN1bGF0ZWQgdmFsdWUgZm9yIHRoZSBmaWVsZC4KKiBUaGUgbnVtYmVyIG9mIHRvdGFscyBhZGRlZCB0b2dldGhlciBzaG91bGQgY29ycmVzcG9uZCB0byB0aGUgbnVtYmVyIG9mIHZhcmlhYmxlcy4KVGh1cywgaWYgdGhlcmUgYXJlIDE1IHRyaWFscywgdGhlbiB0aGUgZmluYWwgbGluZSBvZiBjb2RlIHNob3VsZCByZWFkOgogICBgYGAKICAgZXZlbnQudmFsdWUgPSB0b3RhbCArIHRvdGFsMiArIHRvdGFsMyArIHRvdGFsNCArIHRvdGFsNSArIHRvdGFsNiArIHRvdGFsNyArIHRvdGFsOCArIHRvdGFsOSArIHRvdGFsMTAgKyB0b3RhbDExICsgdG90YWwxMiArIHRvdGFsMTMgKyB0b3RhbDE0ICsgdG90YWwxNQogICBgYGAKClRoZSBmb2xsb3dpbmcgaXMgYW4gZXhhbXBsZSBzY3JpcHQgZm9yIGEgY2FsY3VsYXRlZCAidG90YWxfY29ycmVjdF90ZXN0X3RyaWFscyIgZmllbGQsIGNhbGN1bGF0ZWQgZnJvbSAxNSB0cmlhbHM6CgpgYGAKdmFyIHYxID0gZ2V0RmllbGQoInRlc3RfdHJpYWxzXzEiKS52YWx1ZQp2YXIgdjIgPSBnZXRGaWVsZCgidGVzdF90cmlhbHNfMiIpLnZhbHVlCnZhciB2MyA9IGdldEZpZWxkKCJ0ZXN0X3RyaWFsc18zIikudmFsdWUKdmFyIHY0ID0gZ2V0RmllbGQoInRlc3RfdHJpYWxzXzQiKS52YWx1ZQp2YXIgdjUgPSBnZXRGaWVsZCgidGVzdF90cmlhbHNfNSIpLnZhbHVlCnZhciB2NiA9IGdldEZpZWxkKCJ0ZXN0X3RyaWFsc182IikudmFsdWUKdmFyIHY3ID0gZ2V0RmllbGQoInRlc3RfdHJpYWxzXzciKS52YWx1ZQp2YXIgdjggPSBnZXRGaWVsZCgidGVzdF90cmlhbHNfOCIpLnZhbHVlCnZhciB2OSA9IGdldEZpZWxkKCJ0ZXN0X3RyaWFsc185IikudmFsdWUKdmFyIHYxMCA9IGdldEZpZWxkKCJ0ZXN0X3RyaWFsc18xMCIpLnZhbHVlCnZhciB2MTEgPSBnZXRGaWVsZCgidGVzdF90cmlhbHNfMTEiKS52YWx1ZQp2YXIgdjEyID0gZ2V0RmllbGQoInRlc3RfdHJpYWxzXzEyIikudmFsdWUKdmFyIHYxMyA9IGdldEZpZWxkKCJ0ZXN0X3RyaWFsc18xMyIpLnZhbHVlCnZhciB2MTQgPSBnZXRGaWVsZCgidGVzdF90cmlhbHNfMTQiKS52YWx1ZQp2YXIgdjE1ID0gZ2V0RmllbGQoInRlc3RfdHJpYWxzXzE1IikudmFsdWUKCgppZiAodjEgPT0gMikgewogIHRvdGFsID0gMTsKfSBlbHNlIHsKICB0b3RhbCA9IDA7Cn0KCmlmICh2MiA9PSAyKSB7CiAgdG90YWwyID0gMTsKfSBlbHNlIHsKICB0b3RhbDIgPSAwOwp9CgppZiAodjMgPT0gMikgewogIHRvdGFsMyA9IDE7Cn0gZWxzZSB7CiAgdG90YWwzID0gMDsKfQoKaWYgKHY0ID09IDIpIHsKICB0b3RhbDQgPSAxOwp9IGVsc2UgewogIHRvdGFsNCA9IDA7Cn0KCmlmICh2NSA9PSAyKSB7CiAgdG90YWw1ID0gMTsKfSBlbHNlIHsKICB0b3RhbDUgPSAwOwp9CgppZiAodjYgPT0gMikgewogIHRvdGFsNiA9IDE7Cn0gZWxzZSB7CiAgdG90YWw2ID0gMDsKfQoKaWYgKHY3ID09IDIpIHsKICB0b3RhbDcgPSAxOwp9IGVsc2UgewogIHRvdGFsNyA9IDA7Cn0KCmlmICh2OCA9PSAyKSB7CiAgdG90YWw4ID0gMTsKfSBlbHNlIHsKICB0b3RhbDggPSAwOwp9CgppZiAodjkgPT0gMikgewogIHRvdGFsOSA9IDE7Cn0gZWxzZSB7CiAgdG90YWw5ID0gMDsKfQoKaWYgKHYxMCA9PSAyKSB7CiAgdG90YWwxMCA9IDE7Cn0gZWxzZSB7CiAgdG90YWwxMCA9IDA7Cn0KCmlmICh2MTEgPT0gMikgewogIHRvdGFsMTEgPSAxOwp9IGVsc2UgewogIHRvdGFsMTEgPSAwOwp9CgppZiAodjEyID09IDIpIHsKICB0b3RhbDEyID0gMTsKfSBlbHNlIHsKICB0b3RhbDEyID0gMDsKfQoKaWYgKHYxMyA9PSAyKSB7CiAgdG90YWwxMyA9IDE7Cn0gZWxzZSB7CiAgdG90YWwxMyA9IDA7Cn0KCmlmICh2MTQgPT0gMikgewogIHRvdGFsMTQgPSAxOwp9IGVsc2UgewogIHRvdGFsMTQgPSAwOwp9CgppZiAodjE1ID09IDIpIHsKICB0b3RhbDE1ID0gMTsKfSBlbHNlIHsKICB0b3RhbDE1ID0gMDsKfQoKZXZlbnQudmFsdWUgPSB0b3RhbCArIHRvdGFsMiArIHRvdGFsMyArIHRvdGFsNCArIHRvdGFsNSArIHRvdGFsNiArIHRvdGFsNyArIHRvdGFsOCArIHRvdGFsOSArIHRvdGFsMTAgKyB0b3RhbDExICsgdG90YWwxMiArIHRvdGFsMTMgKyB0b3RhbDE0ICsgdG90YWwxNQpgYGAKCiMjIENyZWF0aW5nIENhbGN1bGF0ZWQgRmllbGRzIHdpdGggQ29uZGl0aW9uYWwgRm9ybWF0dGluZwoKRm9yIGNhc2VzIHdoZXJlIGEgY2FsY3VsYXRlZCB0b3RhbCBjYW4gY2hhbmdlIGZyb20gYSBtYW51YWxseS1pbnB1dCB2YXJpYWJsZSwgYW4gYWx0ZXJlZCBzY3JpcHQgbXVzdCBiZSB1c2VkLgo8YnI+CgpGb3IgZXhhbXBsZSwgYSBjYWxjdWxhdGVkIGZpZWxkIGNhbiBiZSBjcmVhdGVkIGZvciB0aGUgdG90YWwgbnVtYmVyIG9mIGNvcnJlY3QgcmVzcG9uc2VzIGEgcGFydGljaXBhbnQgZ2l2ZXMgdG8gYSBzdGltdWx1cy4KSWYgd2hhdCBxdWFsaWZpZXMgYXMgYSAiY29ycmVjdCIgcmVzcG9uc2UgZGVwZW5kcyBvbiBhIHZhcmlhYmxlIHRoYXQgY2FuIGJlIG1hbnVhbGx5IGNoYW5nZWQsIHRoZSBvcmlnaW5hbCBjYWxjdWxhdGlvbiBzY3JpcHQgd2lsbCByZXN1bHQgaW4gYW4gaW5hY2N1cmF0ZSB0b3RhbC4KPGJyPgoKVGh1cywgdGhlIGFsdGVyZWQgc2NyaXB0ZWQgbXVzdCBzaG93IHRoYXQgdGhlIHZhbHVlIG9mIHRoZSBjYWxjdWxhdGVkIHRvdGFsIGlzIGNvbmRpdGlvbmFsIG9uIGFub3RoZXIgdmFyaWFibGUuClRoZSB2YWx1ZSBvZiBgVmFyaWFibGUgWGAgaXMgZGVwZW5kZW50IG9uIHRoZSB2YWx1ZSBvZiBgVmFyaWFibGUgWWAuClRoaXMgY2FuIGJlIGFjY29tcGxpc2hlZCB0aHJvdWdoIHRoZSB1c2FnZSBvZiBpZi9lbHNlIGNvbW1hbmRzIGluIEphdmFTY3JpcHQuCjxicj4KClByb3ZpZGVkIGJlbG93IGlzIGFuIGV4YW1wbGUgb2YgYSBjYWxjdWxhdGlvbiBzY3JpcHQgd2l0aCBjb25kaXRpb25hbCBmb3JtYXR0aW5nOgo8YnI+CgpgYGAKdmFyIHYxPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lIikudmFsdWUKdmFyIHYyPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMiIpLnZhbHVlCnZhciB2Mz0gZ2V0RmllbGQoInZhcmlhYmxlX1hfZ3JvdXBfbmFtZTMiKS52YWx1ZQp2YXIgdjQ9IGdldEZpZWxkKCJ2YXJpYWJsZV9YX2dyb3VwX25hbWU0IikudmFsdWUKdmFyIHY1PSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lNSIpLnZhbHVlCnZhciB2Nj0gZ2V0RmllbGQoInZhcmlhYmxlX1hfZ3JvdXBfbmFtZTYiKS52YWx1ZQp2YXIgdjc9IGdldEZpZWxkKCJ2YXJpYWJsZV9YX2dyb3VwX25hbWU3IikudmFsdWUKdmFyIHY4PSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lOCIpLnZhbHVlCnZhciB2OT0gZ2V0RmllbGQoInZhcmlhYmxlX1hfZ3JvdXBfbmFtZTkiKS52YWx1ZQp2YXIgdjEwPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTAiKS52YWx1ZQp2YXIgdjExPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTEiKS52YWx1ZQp2YXIgdjEyPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTIiKS52YWx1ZQp2YXIgdjEzPSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTMiKS52YWx1ZQp2YXIgdjE0PSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTQiKS52YWx1ZQp2YXIgdjE1PSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTUiKS52YWx1ZQp2YXIgdjE2PSBnZXRGaWVsZCgidmFyaWFibGVfWF9ncm91cF9uYW1lMTYiKS52YWx1ZQoKCnZhciB2MTc9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUiKS52YWx1ZQp2YXIgdjE4PSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lMiIpLnZhbHVlCnZhciB2MTk9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUzIikudmFsdWUKdmFyIHYyMD0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTQiKS52YWx1ZQp2YXIgdjIxPSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lNSIpLnZhbHVlCnZhciB2MjI9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWU2IikudmFsdWUKdmFyIHYyMz0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTciKS52YWx1ZQp2YXIgdjI0PSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lOCIpLnZhbHVlCnZhciB2MjU9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWU5IikudmFsdWUKdmFyIHYyNj0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTEwIikudmFsdWUKdmFyIHYyNz0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTExIikudmFsdWUKdmFyIHYyOD0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTEyIikudmFsdWUKdmFyIHYyOT0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTEzIikudmFsdWUKdmFyIHYzMD0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTE0IikudmFsdWUKdmFyIHYzMT0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTE1IikudmFsdWUKdmFyIHYzMj0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTE2IikudmFsdWUKCmlmKHYxNyA9PSBZMSl7CglpZiAodjEgPT0gWDIpewogICAgCQl0b3RhbD0xCgl9ZWxzZXsKICAgIAkJdG90YWw9MAoJfQp9ZWxzZXsKCWlmICh2MSA9PSBYMSl7CiAgICAJCXRvdGFsPTEKCX1lbHNlewogICAgCQl0b3RhbD0wCgl9Cn0KCmlmKHYxOCA9PSBZMil7CglpZiAodjIgPT0gWDEpewogICAgCQl0b3RhbDI9MQoJfWVsc2V7CiAgICAJCXRvdGFsMj0wCgl9Cn1lbHNlewoJaWYgKHYyID09IFgyKXsKICAgIAkJdG90YWwyPTEKCX1lbHNlewogICAgCQl0b3RhbDI9MAoJfQp9CgppZih2MTkgPT0gWTIpewoJaWYgKHYzID09IFgxKXsKICAgIAkJdG90YWwzPTEKCX1lbHNlewogICAgCQl0b3RhbDM9MAoJfQp9ZWxzZXsKCWlmICh2MyA9PSBYMil7CiAgICAJCXRvdGFsMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwzPTAKCX0KfQoKaWYodjIwID09IFkxKXsKCWlmICh2NCA9PSBYMil7CiAgICAJCXRvdGFsND0xCgl9ZWxzZXsKICAgIAkJdG90YWw0PTAKCX0KfWVsc2V7CglpZiAodjQgPT0gWDEpewogICAgCQl0b3RhbDQ9MQoJfWVsc2V7CiAgICAJCXRvdGFsND0wCgl9Cn0KCmlmKHYyMSA9PSBZMil7CglpZiAodjUgPT0gWDEpewogICAgCQl0b3RhbDU9MQoJfWVsc2V7CiAgICAJCXRvdGFsNT0wCgl9Cn1lbHNlewoKCWlmICh2NSA9PSBYMil7CiAgICAJCXRvdGFsNT0xCgl9ZWxzZXsKICAgIAkJdG90YWw1PTAKCX0KfQoKaWYodjIyID09IFkyKXsKCWlmICh2NiA9PSBYMSl7CiAgICAJCXRvdGFsNj0xCgl9ZWxzZXsKICAgIAkJdG90YWw2PTAKCX0KfWVsc2V7CglpZiAodjYgPT0gWDIpewogICAgCQl0b3RhbDY9MQoJfWVsc2V7CiAgICAJCXRvdGFsNj0wCgl9Cn0KCmlmKHYyMyA9PSBZMSl7CglpZiAodjcgPT0gWDIpewogICAJCSB0b3RhbDc9MQoJfWVsc2V7CiAgICAJCXRvdGFsNz0wCgl9Cn1lbHNlewoJaWYgKHY3ID09IFgxKXsKICAgCQkgdG90YWw3PTEKCX1lbHNlewogICAgCQl0b3RhbDc9MAoJfQp9CgppZih2MjQgPT0gWTEpewoJaWYgKHY4ID09IFgyKXsKICAgIAkJdG90YWw4PTEKCX1lbHNlewogICAJCSB0b3RhbDg9MAoJfQp9ZWxzZXsKCWlmICh2OCA9PSBYMSl7CiAgICAJCXRvdGFsOD0xCgl9ZWxzZXsKICAgCQkgdG90YWw4PTAKCX0KfQoKaWYodjI1ID09IFkxKXsKCWlmICh2OSA9PSBYMil7CiAgIAkJIHRvdGFsOT0xCgl9ZWxzZXsKICAgIAkJdG90YWw5PTAKCX0KfWVsc2V7CglpZiAodjkgPT0gWDEpewogICAJCSB0b3RhbDk9MQoJfWVsc2V7CiAgICAJCXRvdGFsOT0wCgl9Cn0KCmlmKHYyNiA9PSBZMil7CglpZiAodjEwID09IFgxKXsKICAgIAkJdG90YWwxMD0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMD0wCgl9Cn1lbHNlewoJaWYgKHYxMCA9PSBYMil7CiAgICAJCXRvdGFsMTA9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTA9MAoJfQp9CgppZih2MjcgPT0gWTEpewoJaWYgKHYxMSA9PSBYMil7CiAgICAJCXRvdGFsMTE9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTE9MAoJfQp9ZWxzZXsKCWlmICh2MTEgPT0gWDEpewogICAgCQl0b3RhbDExPTEKCX1lbHNlewogICAgCQl0b3RhbDExPTAKCX0KfQoKaWYodjI4ID09IFkyKXsKCWlmICh2MTIgPT0gWDEpewogICAgCQl0b3RhbDEyPTEKCX1lbHNlewogICAJCSB0b3RhbDEyPTAKCX0KfWVsc2V7CglpZiAodjEyID09IFgyKXsKICAgIAkJdG90YWwxMj0xCgl9ZWxzZXsKICAgCQkgdG90YWwxMj0wCgl9Cn0KCmlmKHYyOSA9PSBZMil7CglpZiAodjEzID09IFgxKXsKICAgIAkJdG90YWwxMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMz0wCgl9Cn1lbHNlewoJaWYgKHYxMyA9PSBYMil7CiAgICAJCXRvdGFsMTM9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTM9MAoJfQp9CgppZih2MzAgPT0gWTEpewoJaWYgKHYxNCA9PSBYMil7CiAgICAJCXRvdGFsMTQ9MQoJfWVsc2V7CgkJdG90YWwxND0wCgl9Cn1lbHNlewoJaWYgKHYxNCA9PSBYMSl7CgkJdG90YWwxND0xCgl9ZWxzZXsKICAgIAkJdG90YWwxND0wCgl9Cn0KCmlmKHYzMSA9PSBZMSl7CglpZiAodjE1ID09IFgyKXsKICAgIAkJdG90YWwxNT0xCgl9ZWxzZXsKICAgIAkJdG90YWwxNT0wCgl9Cn1lbHNlewoJaWYgKHYxNSA9PSBYMSl7CiAgICAJCXRvdGFsMTU9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTU9MAoJfQp9CgppZih2MzIgPT0gWTIpewoJaWYgKHYxNiA9PSBYMSl7CiAgICAJCXRvdGFsMTY9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTY9MAoJfQp9ZWxzZXsKCWlmICh2MTYgPT0gWDIpewogICAgCQl0b3RhbDE2PTEKCX1lbHNlewogICAgCQl0b3RhbDE2PTAKCX0KfQoKCmV2ZW50LnZhbHVlPXRvdGFsK3RvdGFsMit0b3RhbDMrdG90YWw0K3RvdGFsNSt0b3RhbDYrdG90YWw3K3RvdGFsOCt0b3RhbDkrdG90YWwxMCt0b3RhbDExK3RvdGFsMTIrdG90YWwxMyt0b3RhbDE0K3RvdGFsMTUrdG90YWwxNgpgYGAKPGJyPgoKIyMgQnJlYWtpbmcgRG93biB0aGUgQ29uZGl0aW9uYWwgRm9ybWF0dGluZyBDYWxjdWxhdGlvbiBTY3JpcHQKCk5vdGljZSB0aGUgW3RyYWRpdGlvbmFsIGNhbGN1bGF0aW9uIHNjcmlwdF0oYWRvYmUuaHRtbCNicmVha2luZ2Rvd25zY3JpcHQpIGlzIHByZXNlbnQgd2l0aGluIHRoaXMgc2NyaXB0LgpIb3dldmVyLCBhZGRpdGlvbmFsIGlmL2Vsc2UgY29tbWFuZHMgYXJlIGltcGxlbWVudGVkIGluIG9yZGVyIHRvIGFjY291bnQgZm9yIHRoZSBkZXBlbmRlbmNlIG9uIGFub3RoZXIgdmFyaWFibGUuCkJlZm9yZSBwcm9jZWVkaW5nIHdpdGggdGhpcyBzZWN0aW9uLCBhbiB1bmRlcnN0YW5kaW5nIG9mIHRoZSBbdHJhZGl0aW9uYWwgY2FsY3VsYXRpb24gc2NyaXB0XShhZG9iZS5odG1sI2JyZWFraW5nZG93bnNjcmlwdCkgc2hvdWxkIGJlIG9idGFpbmVkLgpJbiB0aGUgZm9sbG93aW5nIHNlY3Rpb24sIFZhcmlhYmxlIFggcmVmZXJzIHRvIHRoZSB2YXJpYWJsZSB3aGljaCBpcyBjb250aW5nZW50IG9uIHRoZSB2YWx1ZSBvZiBhbm90aGVyIHZhcmlhYmxlLCBWYXJpYWJsZSBZLgpUaHVzLCB0aGUgY29uZGl0aW9uYWwgZm9ybWF0dGluZyBpcyBkZXNjcmliZWQgaW4gc3VjaCBhIHdheSB0aGF0IHRoZSB2YWx1ZSBvZiBhIFZhcmlhYmxlIFggaXMgZGVwZW5kZW50IG9uIHRoZSB2YWx1ZSBvZiBWYXJpYWJsZSBZLgo8YnI+CgpUaGUgY29uZGl0aW9uYWwgZm9ybWF0dGluZyBjYWxjdWxhdGlvbiBzY3JpcHQgZmVhdHVyZXMgdHdvIG1ham9yIGFsdGVyYXRpb25zOgoKMS4gRGVmaW5pbmcgdGhlIEFkZGl0aW9uYWwgVmFyaWFibGUKCiAgIGBgYAogICB2YXIgdjE3PSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lIikudmFsdWUKICAgdmFyIHYxOD0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTIiKS52YWx1ZQogICB2YXIgdjE5PSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lMyIpLnZhbHVlCiAgIHZhciB2MjA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWU0IikudmFsdWUKICAgdmFyIHYyMT0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTUiKS52YWx1ZQogICB2YXIgdjIyPSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lNiIpLnZhbHVlCiAgIHZhciB2MjM9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWU3IikudmFsdWUKICAgdmFyIHYyND0gZ2V0RmllbGQoInZhcmlhYmxlX1lfZ3JvdXBfbmFtZTgiKS52YWx1ZQogICB2YXIgdjI1PSBnZXRGaWVsZCgidmFyaWFibGVfWV9ncm91cF9uYW1lOSIpLnZhbHVlCiAgIHZhciB2MjY9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxMCIpLnZhbHVlCiAgIHZhciB2Mjc9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxMSIpLnZhbHVlCiAgIHZhciB2Mjg9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxMiIpLnZhbHVlCiAgIHZhciB2Mjk9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxMyIpLnZhbHVlCiAgIHZhciB2MzA9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxNCIpLnZhbHVlCiAgIHZhciB2MzE9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxNSIpLnZhbHVlCiAgIHZhciB2MzI9IGdldEZpZWxkKCJ2YXJpYWJsZV9ZX2dyb3VwX25hbWUxNiIpLnZhbHVlCiAgIGBgYAogICAKICAgKiBUaGlzIGFkZGl0aW9uIHRvIHRoZSBzY3JpcHQgaXMgbmVjZXNzYXJ5IGluIG9yZGVyIHRvIGFjY29tb2RhdGUgZm9yIHRoZSBhZGRpdGlvbmFsIFZhcmlhYmxlIFkgYnkgd2hpY2ggdGhlIGNhbGN1bGF0ZWQgdG90YWwgaXMgY29udGluZ2VudAogICAqIEFuIGFkZGl0aW9uYWwgMTYgdmFyaWFibGVzIG11c3QgYmUgYWRkZWQsIG9uZSBmb3IgZWFjaCBvZiB0aGUgMTYgZ3JvdXBzIG9mIFZhcmlhYmxlIFggKHYxLXYxNikuCiAgIEVhY2ggb2YgdGhlc2UgbmV3IGB2YXJgIGNvbW1hbmRzIGNvcnJlc3BvbmRzIHRvIG9uZSBvZiB0aGUgb3JpZ2luYWwgMTYgYHZhcmAgY29tbWFuZHMgZm9yIFZhcmlhYmxlIFggYW5kIHB1bGxzIGVhY2ggdHJpYWwncyB2YWx1ZSBmb3IgVmFyaWFibGUgWSB1cG9uIHdoaWNoIHRoZSB0b3RhbCBpcyBkZXBlbmRlbnQuCiAgICogVGh1cyBmb3IgYSBmb3JtIHdpdGggMTYgdGVzdCB0cmlhbHMsIHRoZXJlIHNob3VsZCBiZSAzMiB0b3RhbCBsaW5lcyBvZiBjb2RlOiAxNiB3aGljaCBjb3JyZXNwb25kIHRvIHRoZSBvcmlnaW5hbCAxNiBncm91cHMgb2YgcmFkaW8gYnV0dG9ucyBmb3IgVmFyaWFibGUgWCB3aGljaCByZWZsZWN0IGEgcmVzcG9uc2UgZm9yIGVhY2ggdHJpYWwsIGFuZCBhbiBhZGRpdGlvbmFsIDE2IHdoaWNoIGNvcnJlc3BvbmQgdG8gdGhlIG1hbnVhbGx5IGlucHV0IHJlc3BvbnNlIGZvciBWYXJpYWJsZSBZIHVwb24gd2hpY2ggdGhlIGNhbGN1bGF0ZWQgdG90YWwgaXMgY29uZGl0aW9uYWwKCjEuIENyZWF0aW5nIHRoZSBDb25kaXRpb25hbCBGb3JtYXR0aW5nIHVzaW5nIElmL0Vsc2UgQ29tbWFuZHMKCiAgIGBgYAogICBpZih2MTcgPT0gWTEpewoJICAgaWYgKHYxID09IFgyKXsKICAgIAkJICAgdG90YWw9MQoJICAgfWVsc2V7CiAgICAJCSAgIHRvdGFsPTAKCSAgIH0KICAgfWVsc2V7CgkgICBpZiAodjEgPT0gWDEpewogICAgCQkgICB0b3RhbD0xCgkgICB9ZWxzZXsKICAgIAkJICAgdG90YWw9MAoJICAgfQogICB9CgogICBpZih2MTggPT0gWTIpewoJICAgaWYgKHYyID09IFgxKXsKICAgIAkJICAgdG90YWwyPTEKCSAgIH1lbHNlewogICAgCQkgICB0b3RhbDI9MAoJICAgfQogICB9ZWxzZXsKCSAgIGlmICh2MiA9PSBYMil7CiAgICAJCSAgIHRvdGFsMj0xCgkgICB9ZWxzZXsKICAgIAkJICAgdG90YWwyPTAKCSAgIH0KICAgfQogICAuLi4KICAgYGBgCgogICAqIFRoaXMgYWx0ZXJhdGlvbiB0byB0aGUgc2NyaXB0IHV0aWxpemVzIGlmL2Vsc2UgY29tbWFuZHMgdG8gZXN0YWJsaXNoIGNvbnRpbmdlbmN5IG9uIFZhcmlhYmxlIFkKICAgKiBBcyBvdXRsaW5lZCBpbiB0aGUgW0JyZWFraW5nIERvd24gdGhlIENhbGN1bGF0aW9uIFNjcmlwdF0oYWRvYmUuaHRtbCNicmVha2luZ2Rvd25zY3JpcHQpIHNlY3Rpb24sIHRoZSBpZi9lbHNlIHN0YXRlbWVudHMgb3BlcmF0ZSBpbiB0aGUgc2FtZSBtYW5uZXIgYW5kIGZvbGxvdyB0aGUgc2FtZSBwcm9jZWR1cmVzLgogICBIb3dldmVyLCBub3RpY2UgYW4gYWRkaXRpb25hbCBpZi9lbHNlIHN0YXRlbWVudCBpcyBwcmVzZW50IGZvciBlYWNoIHRyaWFsIGFuZCBzdXJyb3VuZHMgdGhlIG9yaWdpbmFsIGlmL2Vsc2Ugc3RhdGVtZW50OgogICAKICAgICAgYGBgCiAgICAgIGlmKHYxNyA9PSBZMSl7ICAgICAgIDwtLS0tLS0tLS0tLS0gU1RBUlQgT0YgT1ZFUkFSQ0hJTkcgSUYgU1RBVEVNRU5UCgkgICAgICBpZiAodjEgPT0gWDIpeyAgICAgIyBPcmlnaW5hbCBpZi9lbHNlIHN0YXRlbWVudAogICAgCQkgICAgICB0b3RhbD0xCgkgICAgICB9ZWxzZXsKICAgIAkJICAgICAgdG90YWw9MAoJICAgICAgfQogICAgICB9ZWxzZXsgICAgICAgICAgICAgICA8LS0tLS0tLS0tLS0tIFNUQVJUIE9GIE9WRVJBUkNISU5HIEVMU0UgU1RBVEVNRU5UCgkgICAgICBpZiAodjEgPT0gWDEpeyAgICAgIyBTZWNvbmQgb3JpZ2luYWwgaWYvZWxzZSBzdGF0ZW1lbnQKICAgIAkJICAgICAgdG90YWw9MQoJICAgICAgfWVsc2V7CiAgICAJCSAgICAgIHRvdGFsPTAKCSAgICAgIH0KICAgICAgfSAgICAgICAgICAgICAgICAgICAgPC0tLS0tLS0tLS0tLSBFTkQgT0YgT1ZFUkFSQ0hJTkcgSUYvRUxTRSBTVEFURU1FTlQKICAgICAgCiAgICAgIGBgYAoKICAgKiBUaGUgb3ZlcmFyY2hpbmcgaWYvZWxzZSBzdGF0ZW1lbnQgaXMgY2VudGVyZWQgYXJvdW5kIHRoZSB2YXJpYWJsZSB3aGljaCBkZWZpbmVzIHRoZSBjb25kaXRpb25hbCBmb3JtYXR0aW5nLCBWYXJpYWJsZSBZLCB0aHVzIHRoZSBgaWYodiA9PSBZKXtgIHNob3VsZCBvbmx5IHJlZmVyZW5jZSBgdmFyIHYxN2AgdG8gYHZhciB2MzJgCiAgICogV2l0aGluIHRoZSBvdmVyYXJjaGluZyBpZi9lbHNlIHN0YXRlbWVudCwgYFkxYCBhbmQgYFkyYCByZXByZXNlbnQgdGhlICoqY2hvaWNlIHZhbHVlKiogb2YgdGhlIGZpZWxkIGJlaW5nIHB1bGxlZCBmcm9tIGZvciBWYXJpYWJsZSBZCiAgIAogICAgICAqIEZvciB0aGUgb3JpZ2luYWwgaWYvZWxzZSBzdGF0ZW1lbnRzIHdpdGhpbiB0aGUgb3ZlcmFyY2hpbmcgaWYvZWxzZSBzdGF0ZW1lbnQsIGBYMWAgYW5kIGBYMmAgc3RpbGwgcmVmbGVjdCB0aGUgZGVzaXJlZCAqKmNob2ljZSB2YWx1ZSoqIG9mIHRoZSByYWRpbyBidXR0b24gZnJvbSB0aGUgZ3JvdXAgb2YgcmFkaW8gYnV0dG9ucyB0aGF0IGNvcnJlc3BvbmQgdG8gdGhlIGRlc2lyZWQgZmllbGQgeW91IGFyZSBjYWxjdWxhdGluZyBmb3IgVmFyaWFibGUgWAoKICAgKiBUaGUgY29uZGl0aW9uYWwgZm9ybWF0dGluZyBlbWVyZ2VzIGZyb20gZGVmaW5pbmcgdGhlIGBZYCBpbiBgaWYodiA9PSBZKXtgIGFzIGBZMWAgb3IgYFkyYAogICAgICAKICAgICAgKiBOb3RpY2UsIHRoZXJlIGFyZSB0d28gaWYvZWxzZSBzdGF0ZW1lbnRzIHdpdGhpbiB0aGUgb3ZlcmFyY2hpbmcgaWYvZWxzZSBzdGF0ZW1lbnQuCiAgICAgIEVhY2ggb2YgdGhlc2Ugc2Vjb25kYXJ5IGlmL2Vsc2Ugc3RhdGVtZW50cyBkZWZpbmUgYSBkaWZmZXJlbnQgb3V0Y29tZSAtIGluIHRoaXMgaW5zdGFuY2UsIHRoZSBvdXRjb21lcyBhcmUgImlmIGB2MSA9PSBYMmAgdGhlbiBgdG90YWwgPSAxYCIgYW5kICJpZiBgdjEgPT0gWDFgIHRoZW4gYHRvdGFsID0gMWAiCiAgICAgIFdoaWNoIG91dGNvbWUgaXMgc2VsZWN0ZWQgaXMgZGVwZW5kZW50IG9uIHRoZSBkZWZpbml0aW9uIG9mIGBZYCBpbiBgaWYodiA9PSBZKXtgLgogICAgICAqIFRodXMsIGZvciB0aGUgZXhhbXBsZSBzY3JpcHQgYWJvdmUsIGlmIGB2MTcgPT0gWTFgLCB0aGVuIHRoZSBmaXJzdCBvdXRjb21lIG9mICJpZiBgdjEgPT0gWDJgIHRoZW4gYHRvdGFsID0gMWAiIHdpbGwgYmUgdGhlIHJlc3VsdCwgYnV0IGlmIGB2MTdgIGVxdWFscyBhbnl0aGluZyBlbHNlIGJlc2lkZXMgYFkxYCwgdGhlbiB0aGUgc2Vjb25kIG91dGNvbWUgb2YgImlmIGB2MSA9PSBYMWAgdGhlbiBgdG90YWwgPSAxYCIgd2lsbCBiZSB0aGUgcmVzdWx0CiAgICAgICogVGhlIGZpbmFsIHJlc3VsdCBpcyBjb25kaXRpb25hbCBmb3JtYXR0aW5nIGFzIHRoZSBjYWxjdWxhdGVkIHRvdGFsIGZvciBlYWNoIHRyaWFsIG9mIFZhcmlhYmxlIFggaXMgdWx0aW1hdGVseSBkZXBlbmRlbnQgb24gdGhlIHZhbHVlIG9mIFZhcmlhYmxlIFkKICAgCgojIyBDb25kaXRpb25hbCBGb3JtYXR0aW5nIENhbGN1bGF0aW9uIFNjcmlwdDogQW4gRXhhbXBsZQoKTGlzdGVkIGJlbG93IGlzIGEgc3BlY2lmaWMgZXhhbXBsZSB3aGVyZSB0aGUgY29uZGl0aW9uYWwgZm9ybWF0dGluZyBjYWxjdWxhdGlvbiBzY3JpcHQgaXMgbmVjZXNzYXJ5Ogo8YnI+CgojIyMgVGhlIFNjZW5hcmlvCgpBIGNhbGN1bGF0ZWQgZmllbGQgZm9yIHRoZSB0b3RhbCBudW1iZXIgb2YgY29ycmVjdCByZXNwb25zZXMgb3V0IG9mIDE2IHRyaWFscyBpcyBuZWVkZWQuCjxicj4KCkZvciBlYWNoIHRyaWFsLCBhbiBleHBlcmltZW50ZXIgdGFwcyB0aGUgdGFibGUgZWl0aGVyIG9uZSB0aW1lIG9yIHR3byB0aW1lcy4KSW4gcmVzcG9uc2UgdG8gdGhlIGV4cGVyaW1lbnRlcidzIGFkbWluaXN0cmF0aW9uLCB0aGUgcGFydGljaXBhbnQgaXMgZXhwZWN0ZWQgdG8gdGFwIHRoZSB0YWJsZSB0aGUgb3Bwb3NpdGUgbnVtYmVyIG9mIHRpbWVzLgo8YnI+CgpJZiB0aGUgZXhwZXJpbWVudGVyIHRhcHMgdGhlIHRhYmxlIG9uY2UsIHRoZSBwYXJ0aWNpcGFudCBzaG91bGQgdGFwIHRoZSB0YWJsZSB0d2ljZTsgaWYgdGhlIGV4cGVyaW1lbnRlciB0YXBzIHRoZSB0YWJsZSB0d2ljZSwgdGhlIHBhcnRpY2lwYW50IHRhcHMgdGhlIHRhYmxlIG9uY2UuCkEgcmVzcG9uc2UgaXMgY29ycmVjdCBpZiB0aGUgcGFydGljcGFudCBzdWNjZXNzZnVsbHkgdGFwcyB0aGUgdGFibGUgdGhlIG9wcG9zaXRlIG51bWJlciBvZiB0aW1lcyBhcyB0aGUgZXhwZXJpbWVudGVyLgo8YnI+CgpUaHVzLCB0aGUgY29ycmVjdCByZXNwb25zZSBpcyBub3QgYWx3YXlzIG9uZSB0YXAgb3IgdHdvIHRhcHMuCkluc3RlYWQsIHdoZXRoZXIgdGhlIHJlc3BvbnNlIGlzIGNvcnJlY3QgaXMgY29udGluZ2VudCBvbiB0aGUgZXhwZXJpbWVudGVyJ3MgYWRtaW5pc3RyYXRpb24gYW5kIGhvdyBtYW55IHRpbWVzIHRoZSBleHBlcmltZW50ZXIgdGFwcyB0aGUgdGFibGUuCkFzIGEgcmVzdWx0LCBjb25kaXRpb25hbCBmb3JtYXR0aW5nIGlzIG5lY2Vzc2FyeSBpbiBvcmRlciB0byBjYWxjdWxhdGUgdGhlIHRvdGFsIG51bWJlciBvZiBjb3JyZWN0IHJlc3BvbnNlcyBhY3Jvc3MgdGhlIDE2IHRyaWFscy4KCiMjIyBUaGUgVmFyaWFibGVzCgoqIGBWYXJpYWJsZSBYYCA9IHBhcnRpY2lwYW50J3MgcmVzcG9uc2VzICh0aGUgbnVtYmVyIG9mIHRpbWVzIHRoZSBwYXJ0aWNpcGFudCB0YXBzIHRoZSB0YWJsZSkKKiBgVmFyaWFibGUgWWAgPSBleHBlcmltZW50ZXIncyBhZG1pbmlzdHJhdGlvbiAodGhlIG51bWJlciBvZiB0aW1lcyB0aGUgZXhwZXJpbWVudGVyIHRhcHBlZCB0aGUgdGFibGUpCiogYFgxYCA9IGNob2ljZSB2YWx1ZSBvZiByYWRpbyBidXR0b24gcmVmbGVjdGluZyB0aGUgYWN0aW9uIG9mIHRoZSBwYXJ0aWNpcGFudCB0YXBwaW5nIHRoZSB0YWJsZSBvbmNlIC0gaW4gdGhpcyBjYXNlLCAqKjEqKgoqIGBYMmAgPSBjaG9pY2UgdmFsdWUgb2YgcmFkaW8gYnV0dG9uIHJlZmxlY3RpbmcgdGhlIGFjdGlvbiBvZiB0aGUgcGFydGljaXBhbnQgdGFwcGluZyB0aGUgdGFibGUgdHdpY2UgLSBpbiB0aGlzIGNhc2UsICoqMioqCiogYFkxYCA9IGNob2ljZSB2YWx1ZSBvZiB0aGUgZmllbGQgcmVmbGVjdGluZyB0aGUgZXhwZXJpbWVudGVyIHRhcHBlZCB0aGUgdGFibGUgb25jZSAtIGluIHRoaXMgY2FzZSwgKioxKioKKiBgWTJgID0gY2hvaWNlIHZhbHVlIG9mIHRoZSBmaWVsZCByZWZsZWN0aW5nIHRoZSBleHBlcmltZW50ZXIgdGFwcGVkIHRoZSB0YWJsZSBvbmNlIC0gaW4gdGhpcyBjYXNlLCAqKjIqKgogCiMjIyBUaGUgU2NyaXB0CgpUaGUgY2FsY3VsYXRpb24gc2NyaXB0IGZvciB0aGUgYWJvdmUgc2NlbmFyaW8gY2FuIGJlIHdyaXR0ZW4gYXMgc3VjaDoKPGJyPgoKYGBgCnZhciB2MT0gZ2V0RmllbGQoInBhcnRpY2lwYW50X3Jlc3BvbnNlIikudmFsdWUKdmFyIHYyPSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2UyIikudmFsdWUKdmFyIHYzPSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2UzIikudmFsdWUKdmFyIHY0PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U0IikudmFsdWUKdmFyIHY1PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U1IikudmFsdWUKdmFyIHY2PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U2IikudmFsdWUKdmFyIHY3PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U3IikudmFsdWUKdmFyIHY4PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U4IikudmFsdWUKdmFyIHY5PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2U5IikudmFsdWUKdmFyIHYxMD0gZ2V0RmllbGQoInBhcnRpY2lwYW50X3Jlc3BvbnNlMTAiKS52YWx1ZQp2YXIgdjExPSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2UxMSIpLnZhbHVlCnZhciB2MTI9IGdldEZpZWxkKCJwYXJ0aWNpcGFudF9yZXNwb25zZTEyIikudmFsdWUKdmFyIHYxMz0gZ2V0RmllbGQoInBhcnRpY2lwYW50X3Jlc3BvbnNlMTMiKS52YWx1ZQp2YXIgdjE0PSBnZXRGaWVsZCgicGFydGljaXBhbnRfcmVzcG9uc2UxNCIpLnZhbHVlCnZhciB2MTU9IGdldEZpZWxkKCJwYXJ0aWNpcGFudF9yZXNwb25zZTE1IikudmFsdWUKdmFyIHYxNj0gZ2V0RmllbGQoInBhcnRpY2lwYW50X3Jlc3BvbnNlMTYiKS52YWx1ZQoKCnZhciB2MTc9IGdldEZpZWxkKCJleHBlcmltZW50ZXJfYWRtaW5pc3RyYXRpb24iKS52YWx1ZQp2YXIgdjE4PSBnZXRGaWVsZCgiZXhwZXJpbWVudGVyX2FkbWluaXN0cmF0aW9uMiIpLnZhbHVlCnZhciB2MTk9IGdldEZpZWxkKCJleHBlcmltZW50ZXJfYWRtaW5pc3RyYXRpb24zIikudmFsdWUKdmFyIHYyMD0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjQiKS52YWx1ZQp2YXIgdjIxPSBnZXRGaWVsZCgiZXhwZXJpbWVudGVyX2FkbWluaXN0cmF0aW9uNSIpLnZhbHVlCnZhciB2MjI9IGdldEZpZWxkKCJleHBlcmltZW50ZXJfYWRtaW5pc3RyYXRpb242IikudmFsdWUKdmFyIHYyMz0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjciKS52YWx1ZQp2YXIgdjI0PSBnZXRGaWVsZCgiZXhwZXJpbWVudGVyX2FkbWluaXN0cmF0aW9uOCIpLnZhbHVlCnZhciB2MjU9IGdldEZpZWxkKCJleHBlcmltZW50ZXJfYWRtaW5pc3RyYXRpb245IikudmFsdWUKdmFyIHYyNj0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjEwIikudmFsdWUKdmFyIHYyNz0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjExIikudmFsdWUKdmFyIHYyOD0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjEyIikudmFsdWUKdmFyIHYyOT0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjEzIikudmFsdWUKdmFyIHYzMD0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjE0IikudmFsdWUKdmFyIHYzMT0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjE1IikudmFsdWUKdmFyIHYzMj0gZ2V0RmllbGQoImV4cGVyaW1lbnRlcl9hZG1pbmlzdHJhdGlvbjE2IikudmFsdWUKCmlmKHYxNyA9PSAxKXsKCWlmICh2MSA9PSAyKXsKICAgIAkJdG90YWw9MQoJfWVsc2V7CiAgICAJCXRvdGFsPTAKCX0KfWVsc2V7CglpZiAodjEgPT0gMSl7CiAgICAJCXRvdGFsPTEKCX1lbHNlewogICAgCQl0b3RhbD0wCgl9Cn0KCmlmKHYxOCA9PSAyKXsKCWlmICh2MiA9PSAxKXsKICAgIAkJdG90YWwyPTEKCX1lbHNlewogICAgCQl0b3RhbDI9MAoJfQp9ZWxzZXsKCWlmICh2MiA9PSAyKXsKICAgIAkJdG90YWwyPTEKCX1lbHNlewogICAgCQl0b3RhbDI9MAoJfQp9CgppZih2MTkgPT0gMil7CglpZiAodjMgPT0gMSl7CiAgICAJCXRvdGFsMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwzPTAKCX0KfWVsc2V7CglpZiAodjMgPT0gMil7CiAgICAJCXRvdGFsMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwzPTAKCX0KfQoKaWYodjIwID09IDEpewoJaWYgKHY0ID09IDIpewogICAgCQl0b3RhbDQ9MQoJfWVsc2V7CiAgICAJCXRvdGFsND0wCgl9Cn1lbHNlewoJaWYgKHY0ID09IDEpewogICAgCQl0b3RhbDQ9MQoJfWVsc2V7CiAgICAJCXRvdGFsND0wCgl9Cn0KCmlmKHYyMSA9PSAyKXsKCWlmICh2NSA9PSAxKXsKICAgIAkJdG90YWw1PTEKCX1lbHNlewogICAgCQl0b3RhbDU9MAoJfQp9ZWxzZXsKCWlmICh2NSA9PSAyKXsKICAgIAkJdG90YWw1PTEKCX1lbHNlewogICAgCQl0b3RhbDU9MAoJfQp9CgppZih2MjIgPT0gMil7CglpZiAodjYgPT0gMSl7CiAgICAJCXRvdGFsNj0xCgl9ZWxzZXsKICAgIAkJdG90YWw2PTAKCX0KfWVsc2V7CglpZiAodjYgPT0gMil7CiAgICAJCXRvdGFsNj0xCgl9ZWxzZXsKICAgIAkJdG90YWw2PTAKCX0KfQoKaWYodjIzID09IDEpewoJaWYgKHY3ID09IDIpewogICAJCSB0b3RhbDc9MQoJfWVsc2V7CiAgICAJCXRvdGFsNz0wCgl9Cn1lbHNlewoJaWYgKHY3ID09IDEpewogICAJCSB0b3RhbDc9MQoJfWVsc2V7CiAgICAJCXRvdGFsNz0wCgl9Cn0KCmlmKHYyNCA9PSAxKXsKCWlmICh2OCA9PSAyKXsKICAgIAkJdG90YWw4PTEKCX1lbHNlewogICAJCSB0b3RhbDg9MAoJfQp9ZWxzZXsKCWlmICh2OCA9PSAxKXsKICAgIAkJdG90YWw4PTEKCX1lbHNlewogICAJCSB0b3RhbDg9MAoJfQp9CgppZih2MjUgPT0gMSl7CglpZiAodjkgPT0gMil7CiAgIAkJIHRvdGFsOT0xCgl9ZWxzZXsKICAgIAkJdG90YWw5PTAKCX0KfWVsc2V7CglpZiAodjkgPT0gMSl7CiAgIAkJIHRvdGFsOT0xCgl9ZWxzZXsKICAgIAkJdG90YWw5PTAKCX0KfQoKaWYodjI2ID09IDIpewoJaWYgKHYxMCA9PSAxKXsKICAgIAkJdG90YWwxMD0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMD0wCgl9Cn1lbHNlewoJaWYgKHYxMCA9PSAyKXsKICAgIAkJdG90YWwxMD0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMD0wCgl9Cn0KCmlmKHYyNyA9PSAxKXsKCWlmICh2MTEgPT0gMil7CiAgICAJCXRvdGFsMTE9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTE9MAoJfQp9ZWxzZXsKCWlmICh2MTEgPT0gMSl7CiAgICAJCXRvdGFsMTE9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTE9MAoJfQp9CgppZih2MjggPT0gMil7CglpZiAodjEyID09IDEpewogICAgCQl0b3RhbDEyPTEKCX1lbHNlewogICAJCSB0b3RhbDEyPTAKCX0KfWVsc2V7CglpZiAodjEyID09IDIpewogICAgCQl0b3RhbDEyPTEKCX1lbHNlewogICAJCSB0b3RhbDEyPTAKCX0KfQoKaWYodjI5ID09IDIpewoJaWYgKHYxMyA9PSAxKXsKICAgIAkJdG90YWwxMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMz0wCgl9Cn1lbHNlewoJaWYgKHYxMyA9PSAyKXsKICAgIAkJdG90YWwxMz0xCgl9ZWxzZXsKICAgIAkJdG90YWwxMz0wCgl9Cn0KCmlmKHYzMCA9PSAxKXsKCWlmICh2MTQgPT0gMil7CiAgICAJCXRvdGFsMTQ9MQoJfWVsc2V7CgkJdG90YWwxND0wCgl9Cn1lbHNlewoJaWYgKHYxNCA9PSAxKXsKCQl0b3RhbDE0PTEKCX1lbHNlewogICAgCQl0b3RhbDE0PTAKCX0KfQoKaWYodjMxID09IDEpewoJaWYgKHYxNSA9PSAyKXsKICAgIAkJdG90YWwxNT0xCgl9ZWxzZXsKICAgIAkJdG90YWwxNT0wCgl9Cn1lbHNlewoJaWYgKHYxNSA9PSAxKXsKICAgIAkJdG90YWwxNT0xCgl9ZWxzZXsKICAgIAkJdG90YWwxNT0wCgl9Cn0KCmlmKHYzMiA9PSAyKXsKCWlmICh2MTYgPT0gMSl7CiAgICAJCXRvdGFsMTY9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTY9MAoJfQp9ZWxzZXsKCWlmICh2MTYgPT0gMil7CiAgICAJCXRvdGFsMTY9MQoJfWVsc2V7CiAgICAJCXRvdGFsMTY9MAoJfQp9CgoKZXZlbnQudmFsdWU9dG90YWwrdG90YWwyK3RvdGFsMyt0b3RhbDQrdG90YWw1K3RvdGFsNit0b3RhbDcrdG90YWw4K3RvdGFsOSt0b3RhbDEwK3RvdGFsMTErdG90YWwxMit0b3RhbDEzK3RvdGFsMTQrdG90YWwxNSt0b3RhbDE2CmBgYAo=</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
