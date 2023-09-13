@@ -1159,3 +1159,23 @@ if(v32 == 2){
 
 event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
 ```
+
+# How To Split PDF Files into Multiple Documents
+
+1. Open the PDF in Acrobat DC, and then choose Tools > Organize Pages or choose Organize Pages from the right pane.
+   * The Organize Pages toolset is displayed in the secondary toolbar.
+1. In the secondary toolbar, click “Split”.
+   * A new toolbar appears below the secondary toolbar with the commands specific to the Split operation.
+1. In this secondary toolbar, choose “Split” to see the document splitting options.
+1. In the “Split By” drop-down list, select the criteria for dividing the document:
+   * Number Of Pages: Specify the maximum number of pages for each document in the split.
+      * This is the most helpful option when trying to separate large scanned PDF packets into individual files.
+      Just specify the number of pages as “1” (if the individual documents are only one page),“2” (if the documents are double sided), etc.
+   * File Size: Specify the maximum file size for each document in the split.
+   * Top-level Bookmarks: If the document includes bookmarks, creates one document for every top-level bookmark.
+1. To specify a target folder for the split files and filename preferences, click “Output Options”.
+Specify the folder in the lab drive that the files should be saved to, and then click OK.
+
+*Optional:* To apply the same split to multiple documents, click “Split Multiple Files”.
+In the Split Documents dialog box, click either “Add Files”, and choose “Add Files”, “Add Folders”, or “Add Open Files”.
+Select the files or folder, and then click OK.
