@@ -53,25 +53,29 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
-## At a Glance
+## At a Glance {#atAGlance}
 
-**Weekly:**
+**General Commitment:**
+
+We want to ensure that RAs get the most value out of their experience with our lab.
+
+- Given the extensive training required, <u>RAs are expected to commit to **at least** 2 semesters of working in lab</u>
+- RAs interested in a [specialized role](manual.html#roles) must commit to **at least** 3 semesters in order to account for the extensive training process
+
+**Each Week:**
    
-   - RAs are expected to be in lab for 10 regularly scheduled hours (1 of these hours will be from the weekly lab meeting)
-      - These hours are regularly scheduled (between 9 Am - 5 PM), so we ask that RAs have substantial chunks of time within the week where their hours can be properly distributed
-   - RAs are expected to provide **at least** 2 days in the week (Monday-Friday) that they would be available past 5 PM to run visits
-      - *This does not mean you will always run visits on these days, it simply means that you are available to if need be.*
+- RAs are expected to be in lab for 10 regularly scheduled hours (1 of these hours will be from the weekly lab meeting)
+  - These hours are regularly scheduled (between 9 AM – 5 PM), so we ask that RAs have substantial chunks of time within the week where their hours can be properly distributed
+- RAs are expected to provide **at least** 2 days in the week (Monday–Friday) that they would be available past 5 PM to run visits (to accommodate children and families' schedules)
+  - *This does not mean you will always run visits on these days, it simply means that you are available to if need be.*
+- If you work in the lab more than 10 hours in a given week (e.g., to run an evening/weekend visit), you may cut down the following week to stay at an average of 10 hours per week.
 
-**Semester:**
+**Each Semester:**
    
-   - RAs are expected to provide ~ 8 weekend days in the semester that they are available to run visits
-      - This means that RAs signed up for a specific day will be "on-call" for any visits that are scheduled for that day
-         - *RAs must be notified of a weekend visit within 24 hours.*
-
-
-<u>RAs are expected to commit to **at least** 2 semesters of working in lab.</u> We want to ensure that RAs get the most value out of their experience with our lab
-
-RAs interested in specializing must commit to **at least** 3 semesters in order to account for the extensive training process
+- RAs are expected to provide ~8 weekend days in the semester that they are available to run visits (to accommodate children and families' schedules)
+  - This means that RAs signed up for a specific day will be "on-call" for any visits that are scheduled for that day
+    - *This does not mean you will always run visits on these days, it simply means that you are available to if need be.*
+    - *RAs will be notified of a weekend visit no later than 24 hours before the scheduled visit.*
 
 ## Your responsibilities as an RA {#yourSchedulingResponsibilities}
 

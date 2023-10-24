@@ -195,7 +195,7 @@ However, these semester hours will not count toward the experiential learning re
 
 More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/experientiallearning
 
-# RA Roles
+# RA Roles {#roles}
 
 The Developmental Psychopathology Lab uses a "generalist with specialization" approach—there are some tasks that all RAs are trained to perform, and there are other tasks that RAs specialize in.
 We have three specialized tracks or roles that RAs can train in after completing basic lab training: [Behavioral Testing Specialist](#behavioralTestingSpecialist), [Electroencephalography (EEG)
