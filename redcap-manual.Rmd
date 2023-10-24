@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
 
 # REDCap Data Management
 
+## Updates to RedCap changes 
+1. Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. 
+
 ## Adding new RAs to REDCap/tasks
 
 1. Go to "User Rights" on the left side (under "Applications").

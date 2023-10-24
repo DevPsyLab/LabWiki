@@ -490,7 +490,7 @@ Here is a description of the different calendars and instructions how to use the
     Please make sure that you "categorize" the event with your name, so the event is given the proper color.
 	In the "Subject" line, you can simply note "Name Busy".
 
-## TimeClock
+## TimeClock 
 
 `OpenTimeClock2008` is the program we use for keeping track of RA lab hours.
 Each RA is expected to clock in before beginning lab-related work (including running visits, but if you come in early to each lunch, visit with other RAs, or anything else NOT lab work-related, then do not clock in until you are ready to work), and to clock out when they have stopped lab-related work (e.g., if you leave to get lunch, please clock out then clock back in again when you return to work).
@@ -637,7 +637,7 @@ We encourage you to express concerns to the chain of command if you feel the iss
 -	`#recruitment`
 -	`#redcap`
 -	`#scheduling`
--	`#to-discuss`
+-   `#visits`
 -	`#website-socialmedia `
 
 #### How/When to Use
