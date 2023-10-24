@@ -11,7 +11,7 @@
 
 
 
-<title>Video Editing</title>
+<title>video-editing.knit</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -464,109 +464,226 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Video Editing</h1>
 
 </div>
 
 
-<div id="cutting-and-creating-clips-in-handbrake" class="section level1"
-number="1">
-<h1><span class="header-section-number">1</span> Cutting and Creating
-Clips in Handbrake</h1>
+<div id="avidemux" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Avidemux</h1>
+<div id="general-video-editing" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> General Video
+Editing</h2>
+<ul>
+<li>Search the computer for the <em>Avidemux</em> program.</li>
+<li><u> To combine videos: </u>
+<ol style="list-style-type: decimal">
+<li>Open first video that you want to merge (<em>File</em> &gt;
+<em>Open</em> &gt; Find file on lab drive).</li>
+<li>Save the first video clip</li>
+<li>Repeat steps 1 and 2, naming them numerically (clip2, clip3, etc.)
+in the order you want the videos to be combined.</li>
+<li>Click the “Convert.bat” file in the <em>Video converter</em> folder.
+This will convert all clips to the same frame size and automatically
+move them to the <em>“Converted”</em> folder.</li>
+<li>Delete the video clips from the <em>Toconvert</em> folder.</li>
+<li>Go to <em>Avidemux</em> and clear program workspace (File &gt;
+Close).</li>
+<li>Open the desired clip as the first clip of the video (Clip1) from
+the <em>Converted</em> folder.</li>
+<li>Once the first video is open, go to “File”, click “Append”, then
+select the next clip to be added. Continue this process until they have
+all been added, in the order you want them to be in the finished
+video.</li>
+<li>Once a full compilation video is completed, go to “File”, click
+“Save”
+<ul>
+<li>Name the video accordingly</li>
+</ul></li>
+<li>Delete the video clips from the <em>Converted</em> folder</li>
+</ol></li>
+<li><u> To clip videos: </u>
+<ol style="list-style-type: decimal">
+<li>Open the video you want to clip (<em>File</em> &gt; <em>Open</em>
+&gt; Find file on lab drive).</li>
+<li>On the bottom left-hand side of the window, drag the blue tab on the
+video duration bar to the desired start time then press the <em>A</em>
+button to set it.</li>
+<li>Once the clip start time is selected, again drag the same blue tab
+on the duration bar to the desired end time then press the <em>B</em>
+button to set it.</li>
+<li>Once the accurate clip time window is selected, go to “File”, click
+“Save”
+<ul>
+<li>Name the clip accordingly</li>
+</ul></li>
+<li>Go to <em>Avidemux</em> and clear program workspace (File &gt;
+Close).</li>
+<li>Repeat steps 1-5 until you have created all the clips needed.</li>
+</ol></li>
+</ul>
+</div>
+<div id="combining-videos" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Combining Videos</h2>
+<p>LV1 videos should be a side-by-side combination of recordings from
+Cameras 1 and 2 in the LV1 Experimenter Room. The Observation Room
+computer has been set up to combine these recordings into one video file
+when it saves. In the event that they save separately and result in two
+separate video files of the full visit, they can be knit together as one
+side-by-side video by following these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Move the video files to be combined to the folder “Side by Side,”
+found here:
+<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\01-Admin\Side by side\</code></li>
+<li>Click the “Convert.bat” file in the same folder</li>
+<li>Enter the name of the video file you want displayed on the left side
+of the combined video (Camera 1 angle), then press the Enter key on the
+keyboard
+<ol style="list-style-type: lower-alpha">
+<li>NOTE: You enter the entire file name, including the extension (e.g.,
+<code>1001video1.mp4</code>)</li>
+</ol></li>
+<li>Enter the name of the video file you want displayed on the right
+side of the combined video (Camera 2 angle), then press the Enter key on
+the keyboard
+<ol style="list-style-type: lower-alpha">
+<li>NOTE: You enter the entire file name, including the extension (e.g.,
+<code>1001video2.mp4</code>)</li>
+</ol></li>
+<li>If the file is large, the program may take over an hour to combine,
+but do not close out of the window until it has finished running. When
+it is done, there will be a saved video file named “Combined.mp4” in the
+same folder.</li>
+<li>Rename the “Combined.mp4” file with <code>TCID_Wave_LV1</code> and
+move it to the TC’s LV1 video folder on the drive
+(<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\</code>)</li>
+</ol>
+<p>NOTE: This script will only work if you open the Lab Drive directly
+from the Desktop to navigate to the Side by Side folder. <em>You cannot
+open it from the Quick Access menu in File Explorer.</em></p>
+<p>In the event that an LV1 video recorded side-by-side but the video
+was interrupted, resulting in two separate side-by-side video files that
+stop and start in the middle of a visit (e.g., if the camera box is
+accidentally kicked off during a visit, if the cameras crash and have to
+be restarted during the visit, etc.), they can be combined into one
+video file using Avidemux. See <a
+href="recruitment-manual.html#cutemoments">Cute Moments Videos</a> above
+for a description of how to use this program. To combine two videos from
+a visit with interrupted recordings, follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>Open the computer program Avidemux</li>
+<li>Open the first visit video for a given TC (File → Open → Find files
+on lab drive)</li>
+<li>Open File Explorer and locate the video files</li>
+<li>Drag the second video from the File Explorer Window straight into
+the Avidemux window, dropping it over the first video—you should see the
+video duration increase when it is added, indicating it is appending to
+the end of the previous video</li>
+<li>Save the new video in the TC’s folder as TCID_Wave_LV1
+(<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\</code>)</li>
+</ol>
+</div>
+</div>
+<div id="handbrake" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Handbrake</h1>
+<div id="cutting-and-creating-clips" class="section level2"
+number="2.1">
+<h2><span class="header-section-number">2.1</span> Cutting and Creating
+Clips</h2>
 <p>When a video requires cutting and subsequent clips must be created,
 the software, Handbrake, should be utilized. Handbrake allows for easy
 creation of video clips in .mp4 format from a source video in the .mp4
-format.</p>
-<p><em>Note:</em> Handbrake does not allow for its user to scrub through
-the video within the software. Thus, the needed timestamps for the start
-and end of the desired clip must be determined before uploading the
-video into Handbrake. These timestamps will then be entered into
-Handbrake to create the clip.</p>
+format. <br></p>
+<p><em>Note:</em> Handbrake does not allow for it’s user to scrub
+through the video within the software. Thus, the needed timestamps for
+the start and end of the desired clip must be determined before
+uploading the video into Handbrake. These timestamps will then be
+entered into Handbrake to create the clip. <br></p>
 <p>To create video clips in Handbrake, complete the following steps:</p>
 <ol style="list-style-type: decimal">
-<li>Open Handbrake</li>
-<li>On the left side of the screen under the tab titled, “Source
-Selection,” select <code>File</code></li>
-<li>Select the video which requires cutting from its location in the lab
-drive. The video should now be present in the display and open to
-editing.</li>
-<li>Within the main display, locate the “<strong>Range:</strong>” tab.
-Change the selected option from <code>Chapters</code> to
-<code>Seconds</code> from the drop-down menu.</li>
-<li>To the right of the “<strong>Range:</strong>” tab, enter your
+<li><p>Open Handbrake</p></li>
+<li><p>On the left side of the screen under the tab titled, “Source
+Selection,” select <code>File</code></p></li>
+<li><p>Select the video which requires cutting from its location in the
+lab drive. The video should now be present in the display and open to
+editing</p></li>
+<li><p>Within the main display, locate the “<strong>Range:</strong>”
+tab. Change the selected option from <code>Chapters</code> to
+<code>Seconds</code> from the drop-down menu</p></li>
+<li><p>To the right of the “<strong>Range:</strong>” tab, enter your
 desired start and end timestamps for the clip within the time input
 boxes. The start and end timestamps for the desired clip should be
-determined before uploading the video into Handbrake.</li>
-<li>In the middle of the Handbrake display, under the “Summary” tab,
+determined before uploading the video into Handbrake</p></li>
+<li><p>In the middle of the Handbrake display, under the “Summary” tab,
 ensure that the “<strong>Format:</strong>” is selected to
 <code>MP4</code>. <code>MP4</code> should automatically be selected,
 however, if it is not, manually select <code>MP4</code> from the
-drop-down menu</li>
-<li>At the bottom of the screen, next to the “<strong>Save As:</strong>”
-title, click the <code>Browse</code> button in order to select the
-desired folder from the lab drive in which to save the created clip.
-Additionally, edit the name of the clip to be as needed by altering the
-name after the final backslash of the selected filepath. Also verify
-that the name ends in <code>.mp4</code></li>
-<li>After selecting the save location for the video, at the top of the
-Handbrake display, select the large green play button titled,
-<code>Start Encode</code>, in order to create the clip</li>
-<li>Upon completion of encoding, view the created video in order to
+drop-down menu</p></li>
+<li><p>At the bottom of the screen, next to the “<strong>Save
+As:</strong>” title, click the <code>Browse</code> button in order to
+select the desired folder from the lab drive in which to save the
+created clip. Additionally, edit the name of the clip to be as needed by
+altering the name after the final backslash of the selected filepath.
+Also verify that the name ends in <code>.mp4</code></p></li>
+<li><p>After selecting the save location for the video, at the top of
+the Handbrake display, select the large green play button titled,
+<code>Start Encode</code>, in order to create the clip</p></li>
+<li><p>Upon completion of encoding, view the created video in order to
 ensure the clip was successfully made with desired start and end
-times</li>
+times</p></li>
 </ol>
 <div id="creating-multiple-clips-from-the-same-video-simultaneously"
-class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Creating Multiple
-Clips from the Same Video Simultaneously</h2>
+class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Creating Multiple
+Clips from the Same Video Simultaneously</h3>
 <p>Multiple clips can be made from the same source video and processed
-simultaneously in Handbrake.</p>
+simultaneously in Handbrake. <br></p>
 <p>To create multiple clips from the same video simulatneously, complete
 the following steps:</p>
 <ol style="list-style-type: decimal">
-<li>Open Handbrake</li>
-<li>On the left side of the screen under the tab titled, “Source
-Selection,” select <code>File</code></li>
-<li>Select the video which requires cutting from its location in the lab
-drive. The video should now be present in the display and open to
-editing</li>
-<li>Within the main display, locate the “<strong>Range:</strong>” tab.
-Change the selected option from <code>Chapters</code> to
-<code>Seconds</code> from the drop-down menu</li>
-<li>To the right of the “<strong>Range:</strong>” tab, enter your
+<li><p>Open Handbrake</p></li>
+<li><p>On the left side of the screen under the tab titled, “Source
+Selection,” select <code>File</code></p></li>
+<li><p>Select the video which requires cutting from its location in the
+lab drive. The video should now be present in the display and open to
+editing</p></li>
+<li><p>Within the main display, locate the “<strong>Range:</strong>”
+tab. Change the selected option from <code>Chapters</code> to
+<code>Seconds</code> from the drop-down menu</p></li>
+<li><p>To the right of the “<strong>Range:</strong>” tab, enter your
 desired start and end timestamps for the first clip to be made within
 the time input boxes. The start and end timestamps for the desired clip
-should be determined before uploading the video into Handbrake</li>
-<li>In the middle of the Handbrake display, under the “Summary” tab,
+should be determined before uploading the video into Handbrake</p></li>
+<li><p>In the middle of the Handbrake display, under the “Summary” tab,
 ensure that the “<strong>Format:</strong>” is selected to
 <code>MP4</code>. <code>MP4</code> should automatically be selected,
 however, if it is not, manually select <code>MP4</code> from the
-drop-down menu</li>
-<li>At the bottom of the screen, next to the “<strong>Save As:</strong>”
-title, click the <code>Browse</code> button in order to select the
-desired folder from the lab drive in which to save the created clip.
-Additionally, edit the name of the clip to be as needed by altering the
-name after the final backslash of the selected filepath. Also verify
-that the name ends in <code>.mp4</code></li>
-<li>After selecting the save location for the video, at the top of the
-Handbrake display, select the <code>Add to Queue</code> button in order
-to add the clip to the queue</li>
-<li>Repeat steps 4-7 for each clip to be made from the source video.
+drop-down menu</p></li>
+<li><p>At the bottom of the screen, next to the “<strong>Save
+As:</strong>” title, click the <code>Browse</code> button in order to
+select the desired folder from the lab drive in which to save the
+created clip. Additionally, edit the name of the clip to be as needed by
+altering the name after the final backslash of the selected filepath.
+Also verify that the name ends in <code>.mp4</code></p></li>
+<li><p>After selecting the save location for the video, at the top of
+the Handbrake display, select the <code>Add to Queue</code> button in
+order to add the clip to the queue</p></li>
+<li><p>Repeat steps 4-7 for each clip to be made from the source video.
 Ensure the start and end times are changed appropriately for each clip
 and the file name for each of the clips is changed and named
-appropriately</li>
-<li>Once all clips desired to be made have been added to the queue,
+appropriately</p></li>
+<li><p>Once all clips desired to be made have been added to the queue,
 select the large green play button titled, <code>Start Queue</code>, in
-order to create all the clips listed within the queue</li>
-<li>Upon completion of encoding, view the created videos in order to
+order to create all the clips listed within the queue</p></li>
+<li><p>Upon completion of encoding, view the created videos in order to
 ensure the clips were saved to the correct file location(s) and each
-clip was successfully made with desired start and end times</li>
+clip was successfully made with desired start and end times</p></li>
 </ol>
 </div>
 </div>
+</div>
 <div id="converting-media-files-to-.mp4" class="section level1"
-number="2">
-<h1><span class="header-section-number">2</span> Converting Media Files
+number="3">
+<h1><span class="header-section-number">3</span> Converting Media Files
 to .mp4</h1>
 <p>To convert video of alternate file type to .mp4, complete the
 following steps:</p>
@@ -593,7 +710,7 @@ the same location from which they are being pulled</li>
 </ol>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVmlkZW8gRWRpdGluZyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIikKYGBgCgojIEN1dHRpbmcgYW5kIENyZWF0aW5nIENsaXBzIGluIEhhbmRicmFrZQoKV2hlbiBhIHZpZGVvIHJlcXVpcmVzIGN1dHRpbmcgYW5kIHN1YnNlcXVlbnQgY2xpcHMgbXVzdCBiZSBjcmVhdGVkLCB0aGUgc29mdHdhcmUsIEhhbmRicmFrZSwgc2hvdWxkIGJlIHV0aWxpemVkLgpIYW5kYnJha2UgYWxsb3dzIGZvciBlYXN5IGNyZWF0aW9uIG9mIHZpZGVvIGNsaXBzIGluIC5tcDQgZm9ybWF0IGZyb20gYSBzb3VyY2UgdmlkZW8gaW4gdGhlIC5tcDQgZm9ybWF0LgoKKk5vdGU6KiBIYW5kYnJha2UgZG9lcyBub3QgYWxsb3cgZm9yIGl0cyB1c2VyIHRvIHNjcnViIHRocm91Z2ggdGhlIHZpZGVvIHdpdGhpbiB0aGUgc29mdHdhcmUuClRodXMsIHRoZSBuZWVkZWQgdGltZXN0YW1wcyBmb3IgdGhlIHN0YXJ0IGFuZCBlbmQgb2YgdGhlIGRlc2lyZWQgY2xpcCBtdXN0IGJlIGRldGVybWluZWQgYmVmb3JlIHVwbG9hZGluZyB0aGUgdmlkZW8gaW50byBIYW5kYnJha2UuClRoZXNlIHRpbWVzdGFtcHMgd2lsbCB0aGVuIGJlIGVudGVyZWQgaW50byBIYW5kYnJha2UgdG8gY3JlYXRlIHRoZSBjbGlwLgoKVG8gY3JlYXRlIHZpZGVvIGNsaXBzIGluIEhhbmRicmFrZSwgY29tcGxldGUgdGhlIGZvbGxvd2luZyBzdGVwczoKCjEuIE9wZW4gSGFuZGJyYWtlCjEuIE9uIHRoZSBsZWZ0IHNpZGUgb2YgdGhlIHNjcmVlbiB1bmRlciB0aGUgdGFiIHRpdGxlZCwgIlNvdXJjZSBTZWxlY3Rpb24sIiBzZWxlY3QgYEZpbGVgCjEuIFNlbGVjdCB0aGUgdmlkZW8gd2hpY2ggcmVxdWlyZXMgY3V0dGluZyBmcm9tIGl0cyBsb2NhdGlvbiBpbiB0aGUgbGFiIGRyaXZlLgpUaGUgdmlkZW8gc2hvdWxkIG5vdyBiZSBwcmVzZW50IGluIHRoZSBkaXNwbGF5IGFuZCBvcGVuIHRvIGVkaXRpbmcuCjEuIFdpdGhpbiB0aGUgbWFpbiBkaXNwbGF5LCBsb2NhdGUgdGhlICIqKlJhbmdlOioqIiB0YWIuCkNoYW5nZSB0aGUgc2VsZWN0ZWQgb3B0aW9uIGZyb20gYENoYXB0ZXJzYCB0byBgU2Vjb25kc2AgZnJvbSB0aGUgZHJvcC1kb3duIG1lbnUuCjEuIFRvIHRoZSByaWdodCBvZiB0aGUgIioqUmFuZ2U6KioiIHRhYiwgZW50ZXIgeW91ciBkZXNpcmVkIHN0YXJ0IGFuZCBlbmQgdGltZXN0YW1wcyBmb3IgdGhlIGNsaXAgd2l0aGluIHRoZSB0aW1lIGlucHV0IGJveGVzLgpUaGUgc3RhcnQgYW5kIGVuZCB0aW1lc3RhbXBzIGZvciB0aGUgZGVzaXJlZCBjbGlwIHNob3VsZCBiZSBkZXRlcm1pbmVkIGJlZm9yZSB1cGxvYWRpbmcgdGhlIHZpZGVvIGludG8gSGFuZGJyYWtlLgoxLiBJbiB0aGUgbWlkZGxlIG9mIHRoZSBIYW5kYnJha2UgZGlzcGxheSwgdW5kZXIgdGhlICJTdW1tYXJ5IiB0YWIsIGVuc3VyZSB0aGF0IHRoZSAiKipGb3JtYXQ6KioiIGlzIHNlbGVjdGVkIHRvIGBNUDRgLgpgTVA0YCBzaG91bGQgYXV0b21hdGljYWxseSBiZSBzZWxlY3RlZCwgaG93ZXZlciwgaWYgaXQgaXMgbm90LCBtYW51YWxseSBzZWxlY3QgYE1QNGAgZnJvbSB0aGUgZHJvcC1kb3duIG1lbnUKMS4gQXQgdGhlIGJvdHRvbSBvZiB0aGUgc2NyZWVuLCBuZXh0IHRvIHRoZSAiKipTYXZlIEFzOioqIiB0aXRsZSwgY2xpY2sgdGhlIGBCcm93c2VgIGJ1dHRvbiBpbiBvcmRlciB0byBzZWxlY3QgdGhlIGRlc2lyZWQgZm9sZGVyIGZyb20gdGhlIGxhYiBkcml2ZSBpbiB3aGljaCB0byBzYXZlIHRoZSBjcmVhdGVkIGNsaXAuCkFkZGl0aW9uYWxseSwgZWRpdCB0aGUgbmFtZSBvZiB0aGUgY2xpcCB0byBiZSBhcyBuZWVkZWQgYnkgYWx0ZXJpbmcgdGhlIG5hbWUgYWZ0ZXIgdGhlIGZpbmFsIGJhY2tzbGFzaCBvZiB0aGUgc2VsZWN0ZWQgZmlsZXBhdGguCkFsc28gdmVyaWZ5IHRoYXQgdGhlIG5hbWUgZW5kcyBpbiBgLm1wNGAKMS4gQWZ0ZXIgc2VsZWN0aW5nIHRoZSBzYXZlIGxvY2F0aW9uIGZvciB0aGUgdmlkZW8sIGF0IHRoZSB0b3Agb2YgdGhlIEhhbmRicmFrZSBkaXNwbGF5LCBzZWxlY3QgdGhlIGxhcmdlIGdyZWVuIHBsYXkgYnV0dG9uIHRpdGxlZCwgYFN0YXJ0IEVuY29kZWAsIGluIG9yZGVyIHRvIGNyZWF0ZSB0aGUgY2xpcAoxLiBVcG9uIGNvbXBsZXRpb24gb2YgZW5jb2RpbmcsIHZpZXcgdGhlIGNyZWF0ZWQgdmlkZW8gaW4gb3JkZXIgdG8gZW5zdXJlIHRoZSBjbGlwIHdhcyBzdWNjZXNzZnVsbHkgbWFkZSB3aXRoIGRlc2lyZWQgc3RhcnQgYW5kIGVuZCB0aW1lcwoKIyMgQ3JlYXRpbmcgTXVsdGlwbGUgQ2xpcHMgZnJvbSB0aGUgU2FtZSBWaWRlbyBTaW11bHRhbmVvdXNseQoKTXVsdGlwbGUgY2xpcHMgY2FuIGJlIG1hZGUgZnJvbSB0aGUgc2FtZSBzb3VyY2UgdmlkZW8gYW5kIHByb2Nlc3NlZCBzaW11bHRhbmVvdXNseSBpbiBIYW5kYnJha2UuCgpUbyBjcmVhdGUgbXVsdGlwbGUgY2xpcHMgZnJvbSB0aGUgc2FtZSB2aWRlbyBzaW11bGF0bmVvdXNseSwgY29tcGxldGUgdGhlIGZvbGxvd2luZyBzdGVwczoKCjEuIE9wZW4gSGFuZGJyYWtlCjEuIE9uIHRoZSBsZWZ0IHNpZGUgb2YgdGhlIHNjcmVlbiB1bmRlciB0aGUgdGFiIHRpdGxlZCwgIlNvdXJjZSBTZWxlY3Rpb24sIiBzZWxlY3QgYEZpbGVgCjEuIFNlbGVjdCB0aGUgdmlkZW8gd2hpY2ggcmVxdWlyZXMgY3V0dGluZyBmcm9tIGl0cyBsb2NhdGlvbiBpbiB0aGUgbGFiIGRyaXZlLgpUaGUgdmlkZW8gc2hvdWxkIG5vdyBiZSBwcmVzZW50IGluIHRoZSBkaXNwbGF5IGFuZCBvcGVuIHRvIGVkaXRpbmcKMS4gV2l0aGluIHRoZSBtYWluIGRpc3BsYXksIGxvY2F0ZSB0aGUgIioqUmFuZ2U6KioiIHRhYi4KQ2hhbmdlIHRoZSBzZWxlY3RlZCBvcHRpb24gZnJvbSBgQ2hhcHRlcnNgIHRvIGBTZWNvbmRzYCBmcm9tIHRoZSBkcm9wLWRvd24gbWVudQoxLiBUbyB0aGUgcmlnaHQgb2YgdGhlICIqKlJhbmdlOioqIiB0YWIsIGVudGVyIHlvdXIgZGVzaXJlZCBzdGFydCBhbmQgZW5kIHRpbWVzdGFtcHMgZm9yIHRoZSBmaXJzdCBjbGlwIHRvIGJlIG1hZGUgd2l0aGluIHRoZSB0aW1lIGlucHV0IGJveGVzLgpUaGUgc3RhcnQgYW5kIGVuZCB0aW1lc3RhbXBzIGZvciB0aGUgZGVzaXJlZCBjbGlwIHNob3VsZCBiZSBkZXRlcm1pbmVkIGJlZm9yZSB1cGxvYWRpbmcgdGhlIHZpZGVvIGludG8gSGFuZGJyYWtlCjEuIEluIHRoZSBtaWRkbGUgb2YgdGhlIEhhbmRicmFrZSBkaXNwbGF5LCB1bmRlciB0aGUgIlN1bW1hcnkiIHRhYiwgZW5zdXJlIHRoYXQgdGhlICIqKkZvcm1hdDoqKiIgaXMgc2VsZWN0ZWQgdG8gYE1QNGAuCmBNUDRgIHNob3VsZCBhdXRvbWF0aWNhbGx5IGJlIHNlbGVjdGVkLCBob3dldmVyLCBpZiBpdCBpcyBub3QsIG1hbnVhbGx5IHNlbGVjdCBgTVA0YCBmcm9tIHRoZSBkcm9wLWRvd24gbWVudQoxLiBBdCB0aGUgYm90dG9tIG9mIHRoZSBzY3JlZW4sIG5leHQgdG8gdGhlICIqKlNhdmUgQXM6KioiIHRpdGxlLCBjbGljayB0aGUgYEJyb3dzZWAgYnV0dG9uIGluIG9yZGVyIHRvIHNlbGVjdCB0aGUgZGVzaXJlZCBmb2xkZXIgZnJvbSB0aGUgbGFiIGRyaXZlIGluIHdoaWNoIHRvIHNhdmUgdGhlIGNyZWF0ZWQgY2xpcC4KQWRkaXRpb25hbGx5LCBlZGl0IHRoZSBuYW1lIG9mIHRoZSBjbGlwIHRvIGJlIGFzIG5lZWRlZCBieSBhbHRlcmluZyB0aGUgbmFtZSBhZnRlciB0aGUgZmluYWwgYmFja3NsYXNoIG9mIHRoZSBzZWxlY3RlZCBmaWxlcGF0aC4KQWxzbyB2ZXJpZnkgdGhhdCB0aGUgbmFtZSBlbmRzIGluIGAubXA0YAoxLiBBZnRlciBzZWxlY3RpbmcgdGhlIHNhdmUgbG9jYXRpb24gZm9yIHRoZSB2aWRlbywgYXQgdGhlIHRvcCBvZiB0aGUgSGFuZGJyYWtlIGRpc3BsYXksIHNlbGVjdCB0aGUgYEFkZCB0byBRdWV1ZWAgYnV0dG9uIGluIG9yZGVyIHRvIGFkZCB0aGUgY2xpcCB0byB0aGUgcXVldWUKMS4gUmVwZWF0IHN0ZXBzIDQtNyBmb3IgZWFjaCBjbGlwIHRvIGJlIG1hZGUgZnJvbSB0aGUgc291cmNlIHZpZGVvLgpFbnN1cmUgdGhlIHN0YXJ0IGFuZCBlbmQgdGltZXMgYXJlIGNoYW5nZWQgYXBwcm9wcmlhdGVseSBmb3IgZWFjaCBjbGlwIGFuZCB0aGUgZmlsZSBuYW1lIGZvciBlYWNoIG9mIHRoZSBjbGlwcyBpcyBjaGFuZ2VkIGFuZCBuYW1lZCBhcHByb3ByaWF0ZWx5CjEuIE9uY2UgYWxsIGNsaXBzIGRlc2lyZWQgdG8gYmUgbWFkZSBoYXZlIGJlZW4gYWRkZWQgdG8gdGhlIHF1ZXVlLCBzZWxlY3QgdGhlIGxhcmdlIGdyZWVuIHBsYXkgYnV0dG9uIHRpdGxlZCwgYFN0YXJ0IFF1ZXVlYCwgaW4gb3JkZXIgdG8gY3JlYXRlIGFsbCB0aGUgY2xpcHMgbGlzdGVkIHdpdGhpbiB0aGUgcXVldWUKMS4gVXBvbiBjb21wbGV0aW9uIG9mIGVuY29kaW5nLCB2aWV3IHRoZSBjcmVhdGVkIHZpZGVvcyBpbiBvcmRlciB0byBlbnN1cmUgdGhlIGNsaXBzIHdlcmUgc2F2ZWQgdG8gdGhlIGNvcnJlY3QgZmlsZSBsb2NhdGlvbihzKSBhbmQgZWFjaCBjbGlwIHdhcyBzdWNjZXNzZnVsbHkgbWFkZSB3aXRoIGRlc2lyZWQgc3RhcnQgYW5kIGVuZCB0aW1lcwoKIyBDb252ZXJ0aW5nIE1lZGlhIEZpbGVzIHRvIC5tcDQKClRvIGNvbnZlcnQgdmlkZW8gb2YgYWx0ZXJuYXRlIGZpbGUgdHlwZSB0byAubXA0LCBjb21wbGV0ZSB0aGUgZm9sbG93aW5nIHN0ZXBzOgoKMS4gT3BlbiBWTEMgTWVkaWEgUGxheWVyCjEuIEluIHRoZSB0b3AgbGVmdCBjb3JuZXIsIHNlbGVjdCAiTWVkaWEiIGFuZCB0aGVuIG5hdmlnYXRlIGRvd253YXJkcyB0byBzZWxlY3QgIkNvbnZlcnQgLyBTYXZlLi4uIgoxLiBVbmRlciAiRmlsZSBzZWxlY3Rpb24sIiBjbGljayB0aGUgIitBZGQiIGJ1dHRvbiB0byBhZGQgdGhlIGZpbGVzIG5lZWRpbmcgY29udmVyc2lvbi4KTXVsdGlwbGUgZmlsZXMgY2FuIGJlIHNlbGVjdGVkIGF0IGEgdGltZQoxLiBDbGljayB0aGUgZHJvcC1kb3duIGFycm93IHVuZGVyICJDb252ZXJ0IC8gU2F2ZSIgYXQgdGhlIGJvdHRvbSBvZiB0aGUgd2luZG93IGFuZCBzZWxlY3QgIkNvbnZlcnQiCjEuIFVuZGVyIHRoZSAiU2V0dGluZ3MiIGhlYWRpbmcsIGZvciB0aGUgIlByb2ZpbGUiIHNlbGVjdCBgVmlkZW8gLSBNUEVHLTIgKyBNUEdBKFRTKWAuClRoZW4sIGNsaWNrIG9uIHRoZSB3cmVuY2ggaWNvbiB0byB0aGUgcmlnaHQgYW5kIHVuZGVyICJFbmNhcHN1bGF0aW9uIiBzZWxlY3QgdGhlIGBNUDQvTU9WYCByYWRpbyBidXR0b24uClNlbGVjdCAiU2F2ZSIKMS4gVW5kZXIgIkRlc3RpbmF0aW9uIEZpbGUsIiBicm93c2UgdG8gbWFwIHdoZXJlIHRoZSBjb252ZXJ0ZWQgLm1wNCBmaWxlIHNob3VsZCBiZSBzYXZlZAogICAKICAgKiAqTm90ZToqIElmIG11bHRpcGxlIGZpbGVzIGFyZSBiZWluZyBjb252ZXJ0ZWQsICJEZXN0aW5hdGlvbiBGaWxlIiBjYW5ub3QgYmUgYWx0ZXJlZCwgYW5kIHRoZSBmaWxlcyB3aWxsIGF1dG9tYXRpY2FsbHkgYmUgc2F2ZWQgdG8gdGhlIHNhbWUgbG9jYXRpb24gZnJvbSB3aGljaCB0aGV5IGFyZSBiZWluZyBwdWxsZWQKMS4gQ2xpY2sgc3RhcnQgdG8gYmVnaW4gY29udmVydGluZyB0byAubXA0Cg==</div>
+<div id="rmd-source-code">IyBBdmlkZW11eCAKIyMgR2VuZXJhbCBWaWRlbyBFZGl0aW5nCgoqIFNlYXJjaCB0aGUgY29tcHV0ZXIgZm9yIHRoZSAqQXZpZGVtdXgqIHByb2dyYW0uCiogPHU+IFRvIGNvbWJpbmUgdmlkZW9zOiA8L3U+CiAgIDEuIE9wZW4gZmlyc3QgdmlkZW8gdGhhdCB5b3Ugd2FudCB0byBtZXJnZSAoKkZpbGUqID4gKk9wZW4qID4gRmluZCBmaWxlIG9uIGxhYiBkcml2ZSkuCiAgIDEuIFNhdmUgdGhlIGZpcnN0IHZpZGVvIGNsaXAKICAgMS4gUmVwZWF0IHN0ZXBzIDEgYW5kIDIsIG5hbWluZyB0aGVtIG51bWVyaWNhbGx5IChjbGlwMiwgY2xpcDMsIGV0Yy4pIGluIHRoZSBvcmRlciB5b3Ugd2FudCB0aGUgdmlkZW9zIHRvIGJlIGNvbWJpbmVkLgogICAxLiBDbGljayB0aGUgIkNvbnZlcnQuYmF0IiBmaWxlIGluIHRoZSAqVmlkZW8gY29udmVydGVyKiBmb2xkZXIuIFRoaXMgd2lsbCBjb252ZXJ0IGFsbCBjbGlwcyB0byB0aGUgc2FtZSBmcmFtZSBzaXplIGFuZCBhdXRvbWF0aWNhbGx5IG1vdmUgdGhlbSB0byB0aGUgKiJDb252ZXJ0ZWQiKiBmb2xkZXIuCiAgIDEuIERlbGV0ZSB0aGUgdmlkZW8gY2xpcHMgZnJvbSB0aGUgKlRvY29udmVydCogZm9sZGVyLgogICAxLiBHbyB0byAqQXZpZGVtdXgqIGFuZCBjbGVhciBwcm9ncmFtIHdvcmtzcGFjZSAoRmlsZSA+IENsb3NlKS4KICAgMS4gT3BlbiB0aGUgZGVzaXJlZCBjbGlwIGFzIHRoZSBmaXJzdCBjbGlwIG9mIHRoZSB2aWRlbyAoQ2xpcDEpIGZyb20gdGhlICpDb252ZXJ0ZWQqIGZvbGRlci4KICAgMS4gT25jZSB0aGUgZmlyc3QgdmlkZW8gaXMgb3BlbiwgZ28gdG8gIkZpbGUiLCBjbGljayAiQXBwZW5kIiwgdGhlbiBzZWxlY3QgdGhlIG5leHQgY2xpcCB0byBiZSBhZGRlZC4gQ29udGludWUgdGhpcyBwcm9jZXNzIHVudGlsIHRoZXkgaGF2ZSBhbGwgYmVlbiBhZGRlZCwgaW4gdGhlIG9yZGVyIHlvdSB3YW50IHRoZW0gdG8gYmUgaW4gdGhlIGZpbmlzaGVkIHZpZGVvLiAKICAgMS4gT25jZSBhIGZ1bGwgY29tcGlsYXRpb24gdmlkZW8gaXMgY29tcGxldGVkLCBnbyB0byAiRmlsZSIsIGNsaWNrICJTYXZlIgogICAgICAqIE5hbWUgdGhlIHZpZGVvIGFjY29yZGluZ2x5IAogICAxLiBEZWxldGUgdGhlIHZpZGVvIGNsaXBzIGZyb20gdGhlICpDb252ZXJ0ZWQqIGZvbGRlcgoqIDx1PiBUbyBjbGlwIHZpZGVvczogPC91PgogICAxLiBPcGVuIHRoZSB2aWRlbyB5b3Ugd2FudCB0byBjbGlwICgqRmlsZSogPiAqT3BlbiogPiBGaW5kIGZpbGUgb24gbGFiIGRyaXZlKS4gCiAgIDEuIE9uIHRoZSBib3R0b20gbGVmdC1oYW5kIHNpZGUgb2YgdGhlIHdpbmRvdywgZHJhZyB0aGUgYmx1ZSB0YWIgb24gdGhlIHZpZGVvIGR1cmF0aW9uIGJhciB0byB0aGUgZGVzaXJlZCBzdGFydCB0aW1lIHRoZW4gcHJlc3MgdGhlICpBKiBidXR0b24gdG8gc2V0IGl0LgogICAxLiBPbmNlIHRoZSBjbGlwIHN0YXJ0IHRpbWUgaXMgc2VsZWN0ZWQsIGFnYWluIGRyYWcgdGhlIHNhbWUgYmx1ZSB0YWIgb24gdGhlIGR1cmF0aW9uIGJhciB0byB0aGUgZGVzaXJlZCBlbmQgdGltZSB0aGVuIHByZXNzIHRoZSAqQiogYnV0dG9uIHRvIHNldCBpdC4KICAgMS4gT25jZSB0aGUgYWNjdXJhdGUgY2xpcCB0aW1lIHdpbmRvdyBpcyBzZWxlY3RlZCwgZ28gdG8gIkZpbGUiLCBjbGljayAiU2F2ZSIgCiAgICAgICogTmFtZSB0aGUgY2xpcCBhY2NvcmRpbmdseSAKICAgMS4gR28gdG8gKkF2aWRlbXV4KiBhbmQgY2xlYXIgcHJvZ3JhbSB3b3Jrc3BhY2UgKEZpbGUgPiBDbG9zZSkuCiAgIDEuIFJlcGVhdCBzdGVwcyAxLTUgdW50aWwgeW91IGhhdmUgY3JlYXRlZCBhbGwgdGhlIGNsaXBzIG5lZWRlZC4KICAgCiMjIENvbWJpbmluZyBWaWRlb3MKCkxWMSB2aWRlb3Mgc2hvdWxkIGJlIGEgc2lkZS1ieS1zaWRlIGNvbWJpbmF0aW9uIG9mIHJlY29yZGluZ3MgZnJvbSBDYW1lcmFzIDEgYW5kIDIgaW4gdGhlIExWMSBFeHBlcmltZW50ZXIgUm9vbS4KVGhlIE9ic2VydmF0aW9uIFJvb20gY29tcHV0ZXIgaGFzIGJlZW4gc2V0IHVwIHRvIGNvbWJpbmUgdGhlc2UgcmVjb3JkaW5ncyBpbnRvIG9uZSB2aWRlbyBmaWxlIHdoZW4gaXQgc2F2ZXMuCkluIHRoZSBldmVudCB0aGF0IHRoZXkgc2F2ZSBzZXBhcmF0ZWx5IGFuZCByZXN1bHQgaW4gdHdvIHNlcGFyYXRlIHZpZGVvIGZpbGVzIG9mIHRoZSBmdWxsIHZpc2l0LCB0aGV5IGNhbiBiZSBrbml0IHRvZ2V0aGVyIGFzIG9uZSBzaWRlLWJ5LXNpZGUgdmlkZW8gYnkgZm9sbG93aW5nIHRoZXNlIHN0ZXBzOgoKMS4gTW92ZSB0aGUgdmlkZW8gZmlsZXMgdG8gYmUgY29tYmluZWQgdG8gdGhlIGZvbGRlciAiU2lkZSBieSBTaWRlLCIgZm91bmQgaGVyZTogYFxcaW93YS51aW93YS5lZHVcU2hhcmVkXFJlc2VhcmNoRGF0YVxyZHNzX2l0cGV0ZXJzZW5cTGFiXFN0dWRpZXNcU2Nob29sIFJlYWRpbmVzcyBTdHVkeVxWaWRlb3NcMDEtQWRtaW5cU2lkZSBieSBzaWRlXGAKMS4gQ2xpY2sgdGhlICJDb252ZXJ0LmJhdCIgZmlsZSBpbiB0aGUgc2FtZSBmb2xkZXIKMS4gRW50ZXIgdGhlIG5hbWUgb2YgdGhlIHZpZGVvIGZpbGUgeW91IHdhbnQgZGlzcGxheWVkIG9uIHRoZSBsZWZ0IHNpZGUgb2YgdGhlIGNvbWJpbmVkIHZpZGVvIChDYW1lcmEgMSBhbmdsZSksIHRoZW4gcHJlc3MgdGhlIEVudGVyIGtleSBvbiB0aGUga2V5Ym9hcmQKICAgIGEuIE5PVEU6IFlvdSBlbnRlciB0aGUgZW50aXJlIGZpbGUgbmFtZSwgaW5jbHVkaW5nIHRoZSBleHRlbnNpb24gKGUuZy4sIGAxMDAxdmlkZW8xLm1wNGApCjEuIEVudGVyIHRoZSBuYW1lIG9mIHRoZSB2aWRlbyBmaWxlIHlvdSB3YW50IGRpc3BsYXllZCBvbiB0aGUgcmlnaHQgc2lkZSBvZiB0aGUgY29tYmluZWQgdmlkZW8gKENhbWVyYSAyIGFuZ2xlKSwgdGhlbiBwcmVzcyB0aGUgRW50ZXIga2V5IG9uIHRoZSBrZXlib2FyZAogICAgYS4gTk9URTogWW91IGVudGVyIHRoZSBlbnRpcmUgZmlsZSBuYW1lLCBpbmNsdWRpbmcgdGhlIGV4dGVuc2lvbiAoZS5nLiwgYDEwMDF2aWRlbzIubXA0YCkKMS4gSWYgdGhlIGZpbGUgaXMgbGFyZ2UsIHRoZSBwcm9ncmFtIG1heSB0YWtlIG92ZXIgYW4gaG91ciB0byBjb21iaW5lLCBidXQgZG8gbm90IGNsb3NlIG91dCBvZiB0aGUgd2luZG93IHVudGlsIGl0IGhhcyBmaW5pc2hlZCBydW5uaW5nLgpXaGVuIGl0IGlzIGRvbmUsIHRoZXJlIHdpbGwgYmUgYSBzYXZlZCB2aWRlbyBmaWxlIG5hbWVkICJDb21iaW5lZC5tcDQiIGluIHRoZSBzYW1lIGZvbGRlci4KMS4gUmVuYW1lIHRoZSAiQ29tYmluZWQubXA0IiBmaWxlIHdpdGggYFRDSURfV2F2ZV9MVjFgIGFuZCBtb3ZlIGl0IHRvIHRoZSBUQydzIExWMSB2aWRlbyBmb2xkZXIgb24gdGhlIGRyaXZlIChgXFxpb3dhLnVpb3dhLmVkdVxTaGFyZWRcUmVzZWFyY2hEYXRhXHJkc3NfaXRwZXRlcnNlblxMYWJcU3R1ZGllc1xTY2hvb2wgUmVhZGluZXNzIFN0dWR5XFZpZGVvc1xMYWIgVmlzaXQgMVxgKQoKTk9URTogVGhpcyBzY3JpcHQgd2lsbCBvbmx5IHdvcmsgaWYgeW91IG9wZW4gdGhlIExhYiBEcml2ZSBkaXJlY3RseSBmcm9tIHRoZSBEZXNrdG9wIHRvIG5hdmlnYXRlIHRvIHRoZSBTaWRlIGJ5IFNpZGUgZm9sZGVyLgoqWW91IGNhbm5vdCBvcGVuIGl0IGZyb20gdGhlIFF1aWNrIEFjY2VzcyBtZW51IGluIEZpbGUgRXhwbG9yZXIuKgoKSW4gdGhlIGV2ZW50IHRoYXQgYW4gTFYxIHZpZGVvIHJlY29yZGVkIHNpZGUtYnktc2lkZSBidXQgdGhlIHZpZGVvIHdhcyBpbnRlcnJ1cHRlZCwgcmVzdWx0aW5nIGluIHR3byBzZXBhcmF0ZSBzaWRlLWJ5LXNpZGUgdmlkZW8gZmlsZXMgdGhhdCBzdG9wIGFuZCBzdGFydCBpbiB0aGUgbWlkZGxlIG9mIGEgdmlzaXQgKGUuZy4sIGlmIHRoZSBjYW1lcmEgYm94IGlzIGFjY2lkZW50YWxseSBraWNrZWQgb2ZmIGR1cmluZyBhIHZpc2l0LCBpZiB0aGUgY2FtZXJhcyBjcmFzaCBhbmQgaGF2ZSB0byBiZSByZXN0YXJ0ZWQgZHVyaW5nIHRoZSB2aXNpdCwgZXRjLiksIHRoZXkgY2FuIGJlIGNvbWJpbmVkIGludG8gb25lIHZpZGVvIGZpbGUgdXNpbmcgQXZpZGVtdXguClNlZSBbQ3V0ZSBNb21lbnRzIFZpZGVvc10ocmVjcnVpdG1lbnQtbWFudWFsLmh0bWwjY3V0ZW1vbWVudHMpIGFib3ZlIGZvciBhIGRlc2NyaXB0aW9uIG9mIGhvdyB0byB1c2UgdGhpcyBwcm9ncmFtLgpUbyBjb21iaW5lIHR3byB2aWRlb3MgZnJvbSBhIHZpc2l0IHdpdGggaW50ZXJydXB0ZWQgcmVjb3JkaW5ncywgZm9sbG93IHRoZXNlIHN0ZXBzOgoKMS4gT3BlbiB0aGUgY29tcHV0ZXIgcHJvZ3JhbSBBdmlkZW11eAoxLiBPcGVuIHRoZSBmaXJzdCB2aXNpdCB2aWRlbyBmb3IgYSBnaXZlbiBUQyAoRmlsZSAmcmFycjsgT3BlbiAmcmFycjsgRmluZCBmaWxlcyBvbiBsYWIgZHJpdmUpCjEuIE9wZW4gRmlsZSBFeHBsb3JlciBhbmQgbG9jYXRlIHRoZSB2aWRlbyBmaWxlcwoxLiBEcmFnIHRoZSBzZWNvbmQgdmlkZW8gZnJvbSB0aGUgRmlsZSBFeHBsb3JlciBXaW5kb3cgc3RyYWlnaHQgaW50byB0aGUgQXZpZGVtdXggd2luZG93LCBkcm9wcGluZyBpdCBvdmVyIHRoZSBmaXJzdCB2aWRlb+KAlHlvdSBzaG91bGQgc2VlIHRoZSB2aWRlbyBkdXJhdGlvbiBpbmNyZWFzZSB3aGVuIGl0IGlzIGFkZGVkLCBpbmRpY2F0aW5nIGl0IGlzIGFwcGVuZGluZyB0byB0aGUgZW5kIG9mIHRoZSBwcmV2aW91cyB2aWRlbwoxLiBTYXZlIHRoZSBuZXcgdmlkZW8gaW4gdGhlIFRDJ3MgZm9sZGVyIGFzIFRDSURfV2F2ZV9MVjEgKGBcXGlvd2EudWlvd2EuZWR1XFNoYXJlZFxSZXNlYXJjaERhdGFccmRzc19pdHBldGVyc2VuXExhYlxTdHVkaWVzXFNjaG9vbCBSZWFkaW5lc3MgU3R1ZHlcVmlkZW9zXExhYiBWaXNpdCAxXGApCgojIEhhbmRicmFrZQojIyBDdXR0aW5nIGFuZCBDcmVhdGluZyBDbGlwcyAKCldoZW4gYSB2aWRlbyByZXF1aXJlcyBjdXR0aW5nIGFuZCBzdWJzZXF1ZW50IGNsaXBzIG11c3QgYmUgY3JlYXRlZCwgdGhlIHNvZnR3YXJlLCBIYW5kYnJha2UsIHNob3VsZCBiZSB1dGlsaXplZC4KSGFuZGJyYWtlIGFsbG93cyBmb3IgZWFzeSBjcmVhdGlvbiBvZiB2aWRlbyBjbGlwcyBpbiAubXA0IGZvcm1hdCBmcm9tIGEgc291cmNlIHZpZGVvIGluIHRoZSAubXA0IGZvcm1hdC4KPGJyPgoKKk5vdGU6KiBIYW5kYnJha2UgZG9lcyBub3QgYWxsb3cgZm9yIGl0J3MgdXNlciB0byBzY3J1YiB0aHJvdWdoIHRoZSB2aWRlbyB3aXRoaW4gdGhlIHNvZnR3YXJlLgpUaHVzLCB0aGUgbmVlZGVkIHRpbWVzdGFtcHMgZm9yIHRoZSBzdGFydCBhbmQgZW5kIG9mIHRoZSBkZXNpcmVkIGNsaXAgbXVzdCBiZSBkZXRlcm1pbmVkIGJlZm9yZSB1cGxvYWRpbmcgdGhlIHZpZGVvIGludG8gSGFuZGJyYWtlLgpUaGVzZSB0aW1lc3RhbXBzIHdpbGwgdGhlbiBiZSBlbnRlcmVkIGludG8gSGFuZGJyYWtlIHRvIGNyZWF0ZSB0aGUgY2xpcC4KPGJyPgoKVG8gY3JlYXRlIHZpZGVvIGNsaXBzIGluIEhhbmRicmFrZSwgY29tcGxldGUgdGhlIGZvbGxvd2luZyBzdGVwczoKCjEuIE9wZW4gSGFuZGJyYWtlCgoxLiBPbiB0aGUgbGVmdCBzaWRlIG9mIHRoZSBzY3JlZW4gdW5kZXIgdGhlIHRhYiB0aXRsZWQsICJTb3VyY2UgU2VsZWN0aW9uLCIgc2VsZWN0IGBGaWxlYAoKMS4gU2VsZWN0IHRoZSB2aWRlbyB3aGljaCByZXF1aXJlcyBjdXR0aW5nIGZyb20gaXRzIGxvY2F0aW9uIGluIHRoZSBsYWIgZHJpdmUuClRoZSB2aWRlbyBzaG91bGQgbm93IGJlIHByZXNlbnQgaW4gdGhlIGRpc3BsYXkgYW5kIG9wZW4gdG8gZWRpdGluZwoKMS4gV2l0aGluIHRoZSBtYWluIGRpc3BsYXksIGxvY2F0ZSB0aGUgIioqUmFuZ2U6KioiIHRhYi4KQ2hhbmdlIHRoZSBzZWxlY3RlZCBvcHRpb24gZnJvbSBgQ2hhcHRlcnNgIHRvIGBTZWNvbmRzYCBmcm9tIHRoZSBkcm9wLWRvd24gbWVudQoKMS4gVG8gdGhlIHJpZ2h0IG9mIHRoZSAiKipSYW5nZToqKiIgdGFiLCBlbnRlciB5b3VyIGRlc2lyZWQgc3RhcnQgYW5kIGVuZCB0aW1lc3RhbXBzIGZvciB0aGUgY2xpcCB3aXRoaW4gdGhlIHRpbWUgaW5wdXQgYm94ZXMuClRoZSBzdGFydCBhbmQgZW5kIHRpbWVzdGFtcHMgZm9yIHRoZSBkZXNpcmVkIGNsaXAgc2hvdWxkIGJlIGRldGVybWluZWQgYmVmb3JlIHVwbG9hZGluZyB0aGUgdmlkZW8gaW50byBIYW5kYnJha2UKCjEuIEluIHRoZSBtaWRkbGUgb2YgdGhlIEhhbmRicmFrZSBkaXNwbGF5LCB1bmRlciB0aGUgIlN1bW1hcnkiIHRhYiwgZW5zdXJlIHRoYXQgdGhlICIqKkZvcm1hdDoqKiIgaXMgc2VsZWN0ZWQgdG8gYE1QNGAuCmBNUDRgIHNob3VsZCBhdXRvbWF0aWNhbGx5IGJlIHNlbGVjdGVkLCBob3dldmVyLCBpZiBpdCBpcyBub3QsIG1hbnVhbGx5IHNlbGVjdCBgTVA0YCBmcm9tIHRoZSBkcm9wLWRvd24gbWVudQoKMS4gQXQgdGhlIGJvdHRvbSBvZiB0aGUgc2NyZWVuLCBuZXh0IHRvIHRoZSAiKipTYXZlIEFzOioqIiB0aXRsZSwgY2xpY2sgdGhlIGBCcm93c2VgIGJ1dHRvbiBpbiBvcmRlciB0byBzZWxlY3QgdGhlIGRlc2lyZWQgZm9sZGVyIGZyb20gdGhlIGxhYiBkcml2ZSBpbiB3aGljaCB0byBzYXZlIHRoZSBjcmVhdGVkIGNsaXAuCkFkZGl0aW9uYWxseSwgZWRpdCB0aGUgbmFtZSBvZiB0aGUgY2xpcCB0byBiZSBhcyBuZWVkZWQgYnkgYWx0ZXJpbmcgdGhlIG5hbWUgYWZ0ZXIgdGhlIGZpbmFsIGJhY2tzbGFzaCBvZiB0aGUgc2VsZWN0ZWQgZmlsZXBhdGguCkFsc28gdmVyaWZ5IHRoYXQgdGhlIG5hbWUgZW5kcyBpbiBgLm1wNGAKCjEuIEFmdGVyIHNlbGVjdGluZyB0aGUgc2F2ZSBsb2NhdGlvbiBmb3IgdGhlIHZpZGVvLCBhdCB0aGUgdG9wIG9mIHRoZSBIYW5kYnJha2UgZGlzcGxheSwgc2VsZWN0IHRoZSBsYXJnZSBncmVlbiBwbGF5IGJ1dHRvbiB0aXRsZWQsIGBTdGFydCBFbmNvZGVgLCBpbiBvcmRlciB0byBjcmVhdGUgdGhlIGNsaXAKCjEuIFVwb24gY29tcGxldGlvbiBvZiBlbmNvZGluZywgdmlldyB0aGUgY3JlYXRlZCB2aWRlbyBpbiBvcmRlciB0byBlbnN1cmUgdGhlIGNsaXAgd2FzIHN1Y2Nlc3NmdWxseSBtYWRlIHdpdGggZGVzaXJlZCBzdGFydCBhbmQgZW5kIHRpbWVzCgojIyMgQ3JlYXRpbmcgTXVsdGlwbGUgQ2xpcHMgZnJvbSB0aGUgU2FtZSBWaWRlbyBTaW11bHRhbmVvdXNseQoKTXVsdGlwbGUgY2xpcHMgY2FuIGJlIG1hZGUgZnJvbSB0aGUgc2FtZSBzb3VyY2UgdmlkZW8gYW5kIHByb2Nlc3NlZCBzaW11bHRhbmVvdXNseSBpbiBIYW5kYnJha2UuCjxicj4KClRvIGNyZWF0ZSBtdWx0aXBsZSBjbGlwcyBmcm9tIHRoZSBzYW1lIHZpZGVvIHNpbXVsYXRuZW91c2x5LCBjb21wbGV0ZSB0aGUgZm9sbG93aW5nIHN0ZXBzOgoKMS4gT3BlbiBIYW5kYnJha2UKCjEuIE9uIHRoZSBsZWZ0IHNpZGUgb2YgdGhlIHNjcmVlbiB1bmRlciB0aGUgdGFiIHRpdGxlZCwgIlNvdXJjZSBTZWxlY3Rpb24sIiBzZWxlY3QgYEZpbGVgCgoxLiBTZWxlY3QgdGhlIHZpZGVvIHdoaWNoIHJlcXVpcmVzIGN1dHRpbmcgZnJvbSBpdHMgbG9jYXRpb24gaW4gdGhlIGxhYiBkcml2ZS4KVGhlIHZpZGVvIHNob3VsZCBub3cgYmUgcHJlc2VudCBpbiB0aGUgZGlzcGxheSBhbmQgb3BlbiB0byBlZGl0aW5nCgoxLiBXaXRoaW4gdGhlIG1haW4gZGlzcGxheSwgbG9jYXRlIHRoZSAiKipSYW5nZToqKiIgdGFiLgpDaGFuZ2UgdGhlIHNlbGVjdGVkIG9wdGlvbiBmcm9tIGBDaGFwdGVyc2AgdG8gYFNlY29uZHNgIGZyb20gdGhlIGRyb3AtZG93biBtZW51CgoxLiBUbyB0aGUgcmlnaHQgb2YgdGhlICIqKlJhbmdlOioqIiB0YWIsIGVudGVyIHlvdXIgZGVzaXJlZCBzdGFydCBhbmQgZW5kIHRpbWVzdGFtcHMgZm9yIHRoZSBmaXJzdCBjbGlwIHRvIGJlIG1hZGUgd2l0aGluIHRoZSB0aW1lIGlucHV0IGJveGVzLgpUaGUgc3RhcnQgYW5kIGVuZCB0aW1lc3RhbXBzIGZvciB0aGUgZGVzaXJlZCBjbGlwIHNob3VsZCBiZSBkZXRlcm1pbmVkIGJlZm9yZSB1cGxvYWRpbmcgdGhlIHZpZGVvIGludG8gSGFuZGJyYWtlCgoxLiBJbiB0aGUgbWlkZGxlIG9mIHRoZSBIYW5kYnJha2UgZGlzcGxheSwgdW5kZXIgdGhlICJTdW1tYXJ5IiB0YWIsIGVuc3VyZSB0aGF0IHRoZSAiKipGb3JtYXQ6KioiIGlzIHNlbGVjdGVkIHRvIGBNUDRgLgpgTVA0YCBzaG91bGQgYXV0b21hdGljYWxseSBiZSBzZWxlY3RlZCwgaG93ZXZlciwgaWYgaXQgaXMgbm90LCBtYW51YWxseSBzZWxlY3QgYE1QNGAgZnJvbSB0aGUgZHJvcC1kb3duIG1lbnUKCjEuIEF0IHRoZSBib3R0b20gb2YgdGhlIHNjcmVlbiwgbmV4dCB0byB0aGUgIioqU2F2ZSBBczoqKiIgdGl0bGUsIGNsaWNrIHRoZSBgQnJvd3NlYCBidXR0b24gaW4gb3JkZXIgdG8gc2VsZWN0IHRoZSBkZXNpcmVkIGZvbGRlciBmcm9tIHRoZSBsYWIgZHJpdmUgaW4gd2hpY2ggdG8gc2F2ZSB0aGUgY3JlYXRlZCBjbGlwLgpBZGRpdGlvbmFsbHksIGVkaXQgdGhlIG5hbWUgb2YgdGhlIGNsaXAgdG8gYmUgYXMgbmVlZGVkIGJ5IGFsdGVyaW5nIHRoZSBuYW1lIGFmdGVyIHRoZSBmaW5hbCBiYWNrc2xhc2ggb2YgdGhlIHNlbGVjdGVkIGZpbGVwYXRoLgpBbHNvIHZlcmlmeSB0aGF0IHRoZSBuYW1lIGVuZHMgaW4gYC5tcDRgCgoxLiBBZnRlciBzZWxlY3RpbmcgdGhlIHNhdmUgbG9jYXRpb24gZm9yIHRoZSB2aWRlbywgYXQgdGhlIHRvcCBvZiB0aGUgSGFuZGJyYWtlIGRpc3BsYXksIHNlbGVjdCB0aGUgYEFkZCB0byBRdWV1ZWAgYnV0dG9uIGluIG9yZGVyIHRvIGFkZCB0aGUgY2xpcCB0byB0aGUgcXVldWUKCjEuIFJlcGVhdCBzdGVwcyA0LTcgZm9yIGVhY2ggY2xpcCB0byBiZSBtYWRlIGZyb20gdGhlIHNvdXJjZSB2aWRlby4KRW5zdXJlIHRoZSBzdGFydCBhbmQgZW5kIHRpbWVzIGFyZSBjaGFuZ2VkIGFwcHJvcHJpYXRlbHkgZm9yIGVhY2ggY2xpcCBhbmQgdGhlIGZpbGUgbmFtZSBmb3IgZWFjaCBvZiB0aGUgY2xpcHMgaXMgY2hhbmdlZCBhbmQgbmFtZWQgYXBwcm9wcmlhdGVseQoKMS4gT25jZSBhbGwgY2xpcHMgZGVzaXJlZCB0byBiZSBtYWRlIGhhdmUgYmVlbiBhZGRlZCB0byB0aGUgcXVldWUsIHNlbGVjdCB0aGUgbGFyZ2UgZ3JlZW4gcGxheSBidXR0b24gdGl0bGVkLCBgU3RhcnQgUXVldWVgLCBpbiBvcmRlciB0byBjcmVhdGUgYWxsIHRoZSBjbGlwcyBsaXN0ZWQgd2l0aGluIHRoZSBxdWV1ZQoKMS4gVXBvbiBjb21wbGV0aW9uIG9mIGVuY29kaW5nLCB2aWV3IHRoZSBjcmVhdGVkIHZpZGVvcyBpbiBvcmRlciB0byBlbnN1cmUgdGhlIGNsaXBzIHdlcmUgc2F2ZWQgdG8gdGhlIGNvcnJlY3QgZmlsZSBsb2NhdGlvbihzKSBhbmQgZWFjaCBjbGlwIHdhcyBzdWNjZXNzZnVsbHkgbWFkZSB3aXRoIGRlc2lyZWQgc3RhcnQgYW5kIGVuZCB0aW1lcwoKIyBDb252ZXJ0aW5nIE1lZGlhIEZpbGVzIHRvIC5tcDQKClRvIGNvbnZlcnQgdmlkZW8gb2YgYWx0ZXJuYXRlIGZpbGUgdHlwZSB0byAubXA0LCBjb21wbGV0ZSB0aGUgZm9sbG93aW5nIHN0ZXBzOgoKMS4gT3BlbiBWTEMgTWVkaWEgUGxheWVyCgoxLiBJbiB0aGUgdG9wIGxlZnQgY29ybmVyLCBzZWxlY3QgIk1lZGlhIiBhbmQgdGhlbiBuYXZpZ2F0ZSBkb3dud2FyZHMgdG8gc2VsZWN0ICJDb252ZXJ0IC8gU2F2ZS4uLiIKCjEuIFVuZGVyICJGaWxlIHNlbGVjdGlvbiwiIGNsaWNrIHRoZSAiK0FkZCIgYnV0dG9uIHRvIGFkZCB0aGUgZmlsZXMgbmVlZGluZyBjb252ZXJzaW9uLgpNdWx0aXBsZSBmaWxlcyBjYW4gYmUgc2VsZWN0ZWQgYXQgYSB0aW1lCgoxLiBDbGljayB0aGUgZHJvcC1kb3duIGFycm93IHVuZGVyICJDb252ZXJ0IC8gU2F2ZSIgYXQgdGhlIGJvdHRvbSBvZiB0aGUgd2luZG93IGFuZCBzZWxlY3QgIkNvbnZlcnQiCgoxLiBVbmRlciB0aGUgIlNldHRpbmdzIiBoZWFkaW5nLCBmb3IgdGhlICJQcm9maWxlIiBzZWxlY3QgYFZpZGVvIC0gTVBFRy0yICsgTVBHQShUUylgLgpUaGVuLCBjbGljayBvbiB0aGUgd3JlbmNoIGljb24gdG8gdGhlIHJpZ2h0IGFuZCB1bmRlciAiRW5jYXBzdWxhdGlvbiIgc2VsZWN0IHRoZSBgTVA0L01PVmAgcmFkaW8gYnV0dG9uLgpTZWxlY3QgIlNhdmUiCgoxLiBVbmRlciAiRGVzdGluYXRpb24gRmlsZSwiIGJyb3dzZSB0byBtYXAgd2hlcmUgdGhlIGNvbnZlcnRlZCAubXA0IGZpbGUgc2hvdWxkIGJlIHNhdmVkCiAgIAogICAqICpOb3RlOiogSWYgbXVsdGlwbGUgZmlsZXMgYXJlIGJlaW5nIGNvbnZlcnRlZCwgIkRlc3RpbmF0aW9uIEZpbGUiIGNhbm5vdCBiZSBhbHRlcmVkLCBhbmQgdGhlIGZpbGVzIHdpbGwgYXV0b21hdGljYWxseSBiZSBzYXZlZCB0byB0aGUgc2FtZSBsb2NhdGlvbiBmcm9tIHdoaWNoIHRoZXkgYXJlIGJlaW5nIHB1bGxlZAoKMS4gQ2xpY2sgc3RhcnQgdG8gYmVnaW4gY29udmVydGluZyB0byAubXA0</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
