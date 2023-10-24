@@ -1,4 +1,9 @@
-# Avidemux 
+---
+title: "Video Editing"
+---
+
+# Avidemux
+
 ## General Video Editing
 
 * Search the computer for the *Avidemux* program.
