@@ -547,7 +547,7 @@ RAs will sign up to lead discussion of an article on the Lab Meeting Article Sig
 If there are fewer days available than there are RAs, priority is given to newer RAs or to RAs who have had fewer opportunities to lead the discussion of an article.
 **All lab members are expected to contribute to each discussion.**
 
-By Monday of the week the article will be discussed, the RA picking the article should post the article PDF and full APA-style reference in the `#lab-meetings` channel on Slack.
+By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Slack.
 For more information on how to find and access articles, see [here](honors.html#articles).
 For more information on APA formatting, see the resources on the lab drive:
 `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`

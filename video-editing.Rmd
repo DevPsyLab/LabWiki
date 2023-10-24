@@ -1,0 +1,79 @@
+---
+title: "Video Editing"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  comment = "")
+```
+
+# Cutting and Creating Clips in Handbrake
+
+When a video requires cutting and subsequent clips must be created, the software, Handbrake, should be utilized.
+Handbrake allows for easy creation of video clips in .mp4 format from a source video in the .mp4 format.
+
+*Note:* Handbrake does not allow for its user to scrub through the video within the software.
+Thus, the needed timestamps for the start and end of the desired clip must be determined before uploading the video into Handbrake.
+These timestamps will then be entered into Handbrake to create the clip.
+
+To create video clips in Handbrake, complete the following steps:
+
+1. Open Handbrake
+1. On the left side of the screen under the tab titled, "Source Selection," select `File`
+1. Select the video which requires cutting from its location in the lab drive.
+The video should now be present in the display and open to editing.
+1. Within the main display, locate the "**Range:**" tab.
+Change the selected option from `Chapters` to `Seconds` from the drop-down menu.
+1. To the right of the "**Range:**" tab, enter your desired start and end timestamps for the clip within the time input boxes.
+The start and end timestamps for the desired clip should be determined before uploading the video into Handbrake.
+1. In the middle of the Handbrake display, under the "Summary" tab, ensure that the "**Format:**" is selected to `MP4`.
+`MP4` should automatically be selected, however, if it is not, manually select `MP4` from the drop-down menu
+1. At the bottom of the screen, next to the "**Save As:**" title, click the `Browse` button in order to select the desired folder from the lab drive in which to save the created clip.
+Additionally, edit the name of the clip to be as needed by altering the name after the final backslash of the selected filepath.
+Also verify that the name ends in `.mp4`
+1. After selecting the save location for the video, at the top of the Handbrake display, select the large green play button titled, `Start Encode`, in order to create the clip
+1. Upon completion of encoding, view the created video in order to ensure the clip was successfully made with desired start and end times
+
+## Creating Multiple Clips from the Same Video Simultaneously
+
+Multiple clips can be made from the same source video and processed simultaneously in Handbrake.
+
+To create multiple clips from the same video simulatneously, complete the following steps:
+
+1. Open Handbrake
+1. On the left side of the screen under the tab titled, "Source Selection," select `File`
+1. Select the video which requires cutting from its location in the lab drive.
+The video should now be present in the display and open to editing
+1. Within the main display, locate the "**Range:**" tab.
+Change the selected option from `Chapters` to `Seconds` from the drop-down menu
+1. To the right of the "**Range:**" tab, enter your desired start and end timestamps for the first clip to be made within the time input boxes.
+The start and end timestamps for the desired clip should be determined before uploading the video into Handbrake
+1. In the middle of the Handbrake display, under the "Summary" tab, ensure that the "**Format:**" is selected to `MP4`.
+`MP4` should automatically be selected, however, if it is not, manually select `MP4` from the drop-down menu
+1. At the bottom of the screen, next to the "**Save As:**" title, click the `Browse` button in order to select the desired folder from the lab drive in which to save the created clip.
+Additionally, edit the name of the clip to be as needed by altering the name after the final backslash of the selected filepath.
+Also verify that the name ends in `.mp4`
+1. After selecting the save location for the video, at the top of the Handbrake display, select the `Add to Queue` button in order to add the clip to the queue
+1. Repeat steps 4-7 for each clip to be made from the source video.
+Ensure the start and end times are changed appropriately for each clip and the file name for each of the clips is changed and named appropriately
+1. Once all clips desired to be made have been added to the queue, select the large green play button titled, `Start Queue`, in order to create all the clips listed within the queue
+1. Upon completion of encoding, view the created videos in order to ensure the clips were saved to the correct file location(s) and each clip was successfully made with desired start and end times
+
+# Converting Media Files to .mp4
+
+To convert video of alternate file type to .mp4, complete the following steps:
+
+1. Open VLC Media Player
+1. In the top left corner, select "Media" and then navigate downwards to select "Convert / Save..."
+1. Under "File selection," click the "+Add" button to add the files needing conversion.
+Multiple files can be selected at a time
+1. Click the drop-down arrow under "Convert / Save" at the bottom of the window and select "Convert"
+1. Under the "Settings" heading, for the "Profile" select `Video - MPEG-2 + MPGA(TS)`.
+Then, click on the wrench icon to the right and under "Encapsulation" select the `MP4/MOV` radio button.
+Select "Save"
+1. Under "Destination File," browse to map where the converted .mp4 file should be saved
+   
+   * *Note:* If multiple files are being converted, "Destination File" cannot be altered, and the files will automatically be saved to the same location from which they are being pulled
+1. Click start to begin converting to .mp4

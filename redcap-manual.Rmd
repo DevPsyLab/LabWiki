@@ -201,7 +201,7 @@ These variables should be entered at the end of each survey. For each survey, fo
       * @NOW-UTC
       * @READONLY
 
-### Date Completed, Time Completed and Survey Durations
+### Date Completed, Time Completed and Survey Durations {#dateTimestampDuration}
 
 In the below section, it is necessary to identify the `instrument_name` for each variable added. In REDCap, open the `Designer` tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the *parenting_partner* instrument. 
 
@@ -235,22 +235,20 @@ In the below section, it is necessary to identify the `instrument_name` for each
       * @HIDDEN-SURVEY 
       * @READONLY 
       * @CALCTEXT([survey-date-completed:instrument_name])
-1. "Survey Duration:" 
-   * Add a "Calculated Field" field
+1. "Survey Duration:"
+   * Add a "Text Box" field with numeric validation
    * Use variable name: `prefix_surveyduration`
-   * In the "Calculation Equation", enter the following equation
-      * [survey-duration:instrument_name:m]
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
+   * Add the following Action Tags
+      * @HIDDEN-SURVEY
       * @READONLY
-1. "Survey Duration Completed:" 
-   * Add a "Calculated Field" field
+      * @CALCTEXT([survey-duration:instrument_name:m])
+1. "Survey Duration Completed:"
+   * Add a "Text Box" field with numeric validation
    * Use variable name: `prefix_surveydurationcompleted`
-   * In the "Calculation Equation", enter the following equation
-      * [survey-duration-completed:instrument_name:m]
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
-      * @READONLY  
+   * Add the following Action Tags
+      * @HIDDEN-SURVEY
+      * @READONLY
+      * @CALCTEXT([survey-duration-completed:instrument_name:m])
 1. Slack the Lab Coordinator for review
 
 ## Troubleshooting
@@ -259,6 +257,12 @@ In the below section, it is necessary to identify the `instrument_name` for each
    - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf (archived at https://perma.cc/6NBY-3Y5R)
    - If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      
       - logic: [field_name] <> ""
+- Sometimes REDCap may record incorrect values or may fail to record values at all.
+You can check for this by:
+1. Navigating to a project, then in the side bar clicking "Data Quality" under "Applications"
+1. Under Rule #H "Incorrect values for calculated fields", click "Execute"
+1. You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".
+1. Click "Fix calcs now" to record the correct values in the data.
 
 ## How To
 
