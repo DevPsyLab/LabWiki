@@ -53,6 +53,22 @@ We expect RAs to register for the Research Practicum in Psychology course (PSY:3
 
 # Scheduling Expectations {#schedulingExpectations}
 
+## At a Glance
+
+**Weekly:**
+   - RAs are expected to be in lab for 10 regularly scheduled hours (1 of these hours will be from the weekly lab meeting)
+      - These hours are regularly scheduled, so we ask that RAs have substantial chunks of time within the week where their hours can be properly distributed
+   - RAs are expected to provide **at least** 2 days in the week (Monday-Friday) that they would be available past 5 PM to run visits
+      - *This does not mean you will always run visits on these days, it simply means that you are available to if need be.*
+
+**Semester:**
+   - RAs are expected to provide ~ 8 weekend days in the semester that they are available to run visits
+      - This means that RAs signed up for a specific day will be "on-call" for any visits that are scheduled for that day
+         - *RAs must be notified of a weekedn visit within 24 hours.*
+
+- <u>RAs are expected to committ to **at least** 2 semesters of working in lab.</u> We want to ensure that RAs get the most value out of their experience with our lab
+- RAs interested in specializing must commmitt to **at least** 3 semesters in order to account for the extensive training process
+
 ## Your responsibilities as an RA {#yourSchedulingResponsibilities}
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
