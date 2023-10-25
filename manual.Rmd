@@ -217,7 +217,7 @@ Below are cross-cutting responsibilities that all RAs are expected to contribute
 - auditing "Question and Answer" (Q&A) and "Quality Control Improvement" (QCI) documents
 - providing answers to coding questions when applicable
 
-## Specialized Roles
+## Specialized Roles {#specializedRoles}
 
 ### Behavioral Testing Specialist {#behavioralTestingSpecialist}
 

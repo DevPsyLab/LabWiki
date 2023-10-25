@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 We want to ensure that RAs get the most value out of their experience with our lab.
 
 - Given the extensive training required, <u>RAs are expected to commit to **at least** 2 semesters of working in lab</u>
-- RAs interested in a [specialized role](manual.html#roles) must commit to **at least** 3 semesters in order to account for the extensive training process
+- RAs interested in a [specialized role](manual.html#specializedRoles) must commit to **at least** 3 semesters in order to account for the extensive training process
 
 **Each Week:**
    
