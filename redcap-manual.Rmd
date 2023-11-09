@@ -11,10 +11,11 @@ knitr::opts_chunk$set(
 
 # REDCap Data Management
 
-## Updates to RedCap changes 
+## Updating instruments in REDCap {#updates}
+
 1. Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. 
 
-## Adding new RAs to REDCap/tasks
+## Adding new RAs to REDCap/tasks {#addPersonnel}
 
 1. Go to "User Rights" on the left side (under "Applications").
 1. In the text box labeled "Assign new user", type the new lab member's HawkID and click "Assign to Role" (e.g., "RA", "Grad Student").
@@ -27,20 +28,7 @@ knitr::opts_chunk$set(
 1. Under "Choices (one choice per line)", add the subsequent number followed by a comma and the RA's name.
 1. Click "Save".
 
-## Creating a new instrument in REDCap
-
-1. Project Home → Project Setup → Online Designer
-1. In grey box (Data Collection Instruments), click on "+ Create" to create a new instrument from scratch
-
-However, an instrument will not show up for entry until:
-
-1. The addition of the measure has been approved by Dr. Petersen.
-1. The instrument has been [designated to an event](#designateInstrument).
-1. (As necessary, the instrument has been [designated as a survey](#survey).)
-1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
-1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")
-
-## Adding fields to an instrument
+## Adding fields to an instrument {#addFields}
 
 1. To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column
 1. Select the correct location where question needs to be added and select "Add Field"
@@ -62,7 +50,7 @@ To add a new section:
    - As field label, name the new section
    - Save
 
-## Branching Logic
+## Branching Logic {#branchingLogic}
 
 Branching logic is a method to link two questions with each other.
 The answer of Question A will determine whether Question B will be displayed.
@@ -75,7 +63,7 @@ Follow the below steps to use branching logic:
    - Use the code to link questions together
       - Example: When, `[other_instrument_name] = '1'`, show this question
 
-## Field Embedding
+## Field Embedding {#fieldEmbedding}
 
 Filed embedding is an advanced branching logic method which allows Question B to be directly embedded in Question A, if the relevant answer choice is selected.
 
@@ -119,9 +107,22 @@ To designate forms as repeatable, follow the below steps:
 1. Under *"Enable optional modules and customizations"*, select `Repeatable instruments and events`
 1. Select instruments to be designated repeatable
 
-# Creating Instruments and Questionnaires 
+# Creating Instruments in REDCap {#createInstrument}
 
-## Good Practices for Creating Instruments
+## Steps to Add a New Instrument {#newInstrumentSteps}
+
+1. Project Home → Project Setup → Online Designer
+1. In grey box (Data Collection Instruments), click on "+ Create" to create a new instrument from scratch
+
+However, an instrument will not show up for entry until:
+
+1. The addition of the measure has been approved by Dr. Petersen.
+1. The instrument has been [designated to an event](#designateInstrument).
+1. (As necessary, the instrument has been [designated as a survey](#survey).)
+1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
+1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")
+
+## Good Practices {#goodPractices}
 
 -	Include relevant instructions where applicable
 -	Omit "introductory" variables (e.g., date of birth) that are collected from other measures
@@ -158,7 +159,7 @@ To designate forms as repeatable, follow the below steps:
          - minutes (text box), italicized
             - Validation: integer (minimum 0; maximum 59)
 
-## Creating Variables
+## Creating Variables  {#creatingVariables}
 
 - Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters
 - **Validation is used wherever possible**
@@ -173,14 +174,15 @@ To designate forms as repeatable, follow the below steps:
 - Add the following verbatim to the end of every questionnaire (in italics): "Please be sure you answered all items."
    - Name the variable: measure_allitems (where "measure" is the abbreviated measure name)
 
-## Adding Smart Variables to Questionnaires
+## Adding Smart Variables to Questionnaires {#smartVariables}
+
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
 Variable names should follow the appropriate naming convention that is used for each survey.
 After you have added variables, slack the Lab Coordinator for review.
 **Do not add variables to more than three surveys at a time.**
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
-### Timestamps
+### Timestamps {#timestamps}
 
 1. "Date/Timestamp in the rater's timezone"
    * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
@@ -254,7 +256,7 @@ In the below section, it is necessary to identify the `instrument_name` for each
       * @CALCTEXT([survey-duration-completed:instrument_name:m])
 1. Slack the Lab Coordinator for review
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
 - When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: "ERASE CURRENT VALUE OF THE FIELD?"
    - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf (archived at https://perma.cc/6NBY-3Y5R)
@@ -267,7 +269,7 @@ You can check for this by:
 1. You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".
 1. Click "Fix calcs now" to record the correct values in the data.
 
-## How To
+## How To {#howTo}
 
 - Em dash (—):
    - `&mdash;`
@@ -283,7 +285,7 @@ You can check for this by:
    - `<font color="red">This color will be red.</font>`
    - **Example**: <font color="red">This color will be red.</font>
 
-## Lab Universal Notations
+## Lab Universal Notations {#labUniversalNotations}
 
 - Correct = 2 (or 1, if there is no option for "initially incorrect, changed to correct")
 - Incorrect = 0
