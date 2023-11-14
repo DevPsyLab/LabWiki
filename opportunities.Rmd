@@ -1,0 +1,21 @@
+---
+title: "Opportunities"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  comment = "")
+```
+
+# Opportunities {#opportunities}
+
+Want to receive funding to conduct research as an undergraduate student?
+The University of Iowa provides numerous funding opportunities via its research programs that support undergraduate students in conducting research.
+For instance, you are encouraged to apply for research programs through the [Iowa Sciences Academy](https://isa.uiowa.edu/programs) and the [Office of Undergraduate Research](https://our.research.uiowa.edu/students/compensation-your-research).
+The [Iowa Sciences Academy](https://isa.uiowa.edu/programs) and [Office of Undergraduate Research](https://our.research.uiowa.edu/students/compensation-your-research) have several opportunities that provide funding to help undergraduate research assistants work in a research lab, including:
+
+- [Science Alliance Internship](https://isa.uiowa.edu/programs/sa)
+- [UI-LSAMP Program](https://isa.uiowa.edu/programs/ui-lsamp)
+- [UI-MARC Program](https://isa.uiowa.edu/programs/ui-marc)
