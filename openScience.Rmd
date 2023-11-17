@@ -229,7 +229,14 @@ For example:
 In the manuscript submission, create and use [anonymous view-only OSF links](#anonymousViewOnlyLink) (for blind review).
 In the preprint submission, use the general OSF links (not the [anonymous view-only OSF links](#anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
 
-After the manuscript is accepted for publication, make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it.
+# When the Manuscript is Accepted for Publication {#accepted}
+
+When the manuscript is accepted for publication:
+
+1. Make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it
+1. Submit the finalized manuscript (and any tables, figures, and the supplement) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
+    - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
+    We are required to report published papers to funding agences.
 
 # Adapting Open Science to Longitudinal Research {#longitudinal}
 
