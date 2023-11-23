@@ -67,18 +67,32 @@ In addition, successful applicants to my lab tend to have at least two years of 
 # The current focus of the Developmental Psychopathology Lab {#currentFocus}
 
 The broader mission of the Developmental Psychopathology Lab is to advance understanding of how self-regulation develops so that we as a society can better treat or even prevent the development of externalizing problems.
+That is, we are interested in identifiying *mechanisms* in the development of self-regulation and externalizing problems.
+
 To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
 
+Identifying mechanisms in the long-term development of externalizing problems requires strong assessment.
+Thus, my lab is also highly interested in psychometrics and measure development.
 In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.html), we are also in the process of designing another study, the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
 Externalizing problems change in behavioral manifestation across development.
 In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across infancy to adolescence, so that we can identify children early on who are at risk of later, more severe problems.
 
+Although the mechanisms we identify are relevant for intervention, my lab does not conduct research on interventions.
+
 # Am I a good fit for the Developmental Psychopathology Lab? {#fit-lab}
 
-Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s).
+Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s) (which are described [above](#currentFocus)).
+For instance, if your primary research interests are in any of the following domains, my lab would *not* be a good fit for your interests:
+
+- depression/anxiety
+- autism
+- psychosis/schizophrenia
+- trauma
+- treatment/intervention
+
 Different labs have different structures.
 In some labs, graduate students conduct separate independent research projects.
 My lab has a different structure.
