@@ -353,6 +353,7 @@ Advanced projects are given priority to RAs who have shown reliability and commi
 
 As mentioned above, there are a number of opportunities to gain advanced experiences in the lab.
 There may be an opportunity for some experiences to count for lab hours if:
+
    1. The project is assigned to the RA
    1. The project benefits the overall lab
    1. The RA has demonstrated proficiency in the skills needed to complete the project
