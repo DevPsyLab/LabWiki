@@ -11,7 +11,7 @@
 
 
 
-<title>Studies</title>
+<title>Visual Studio Code</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -470,33 +470,35 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Studies</h1>
+<h1 class="title toc-ignore">Visual Studio Code</h1>
 
 </div>
 
 
-<p>Studies:</p>
-<ul>
-<li><a
-href="https://devpsylab.github.io/ExternalizingAssessmentProject">Externalizing
-Assessment Project</a></li>
-<li><a href="study-schoolReadinessStudy.html">School Readiness Study</a>
-<ul>
-<li>Documentation for the School Readiness Study is on the lab drive at
-the following location<a href="#fn1" class="footnote-ref"
-id="fnref1"><sup>1</sup></a>:
-<code>\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html</code></li>
-</ul></li>
-</ul>
-<div class="footnotes footnotes-end-of-document">
-<hr />
-<ol>
-<li id="fn1"><p>Only accessible by team members.<a href="#fnref1"
-class="footnote-back">↩︎</a></p></li>
+<div id="tips-and-tricks" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Tips and Tricks</h1>
+<ol style="list-style-type: decimal">
+<li>You can view the source code side-by-side with the Preview (after
+selecting the code type in the bottom right): <img
+src="images/vsCode.png" alt="Visual Studio Code" /></li>
+<li>To wrap code around the selected text (<a
+href="https://stackoverflow.com/a/73344832/2029527"
+class="uri">https://stackoverflow.com/a/73344832/2029527</a>; archived
+at <a href="https://perma.cc/P5JA-7DBC"
+class="uri">https://perma.cc/P5JA-7DBC</a>):
+<ol style="list-style-type: decimal">
+<li>Press <code>Ctrl</code>+<code>Shift</code>+<code>p</code></li>
+<li>Type and select “Open Keyboard Shortcuts (JSON)”</li>
+<li>Add the following item:
+<code>[          {              "key": "alt+shift+e",              "command": "editor.action.insertSnippet",              "when": "editorTextFocus",              "args": {                  "snippet": "THIS-TEXT-GOES-BEFORE${TM_SELECTED_TEXT}\", $TM_SELECTED_TEXT$1THIS-TEXT-GOES-AFTER"              }          }      ]</code></li>
+<li>Save the <code>keybindings.json</code> file.</li>
+<li>Select the text you want to wrap, and press
+<code>Alt</code>+<code>Shift</code>+<code>e</code></li>
+</ol></li>
 </ol>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiU3R1ZGllcyIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIikKYGBgCgpTdHVkaWVzOgoKLSBbRXh0ZXJuYWxpemluZyBBc3Nlc3NtZW50IFByb2plY3RdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9FeHRlcm5hbGl6aW5nQXNzZXNzbWVudFByb2plY3QpCi0gW1NjaG9vbCBSZWFkaW5lc3MgU3R1ZHldKHN0dWR5LXNjaG9vbFJlYWRpbmVzc1N0dWR5Lmh0bWwpCiAgICAtIERvY3VtZW50YXRpb24gZm9yIHRoZSBTY2hvb2wgUmVhZGluZXNzIFN0dWR5IGlzIG9uIHRoZSBsYWIgZHJpdmUgYXQgdGhlIGZvbGxvd2luZyBsb2NhdGlvblteMV06CiAgICBgXFxpb3dhLnVpb3dhLmVkdVxTaGFyZWRcUmVzZWFyY2hEYXRhXHJkc3NfaXRwZXRlcnNlblxMYWJcU3R1ZGllc1xTY2hvb2wgUmVhZGluZXNzIFN0dWR5XFdpa2lcX3NpdGVcaW5kZXguaHRtbGAKClteMV06IE9ubHkgYWNjZXNzaWJsZSBieSB0ZWFtIG1lbWJlcnMuCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVmlzdWFsIFN0dWRpbyBDb2RlIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBlY2hvID0gVFJVRSwKICBlcnJvciA9IFRSVUUsCiAgY29tbWVudCA9ICIiLAogIGNsYXNzLnNvdXJjZSA9ICJmb2xkLXNob3ciKQpgYGAKCiMgVGlwcyBhbmQgVHJpY2tzCgoxLiBZb3UgY2FuIHZpZXcgdGhlIHNvdXJjZSBjb2RlIHNpZGUtYnktc2lkZSB3aXRoIHRoZSBQcmV2aWV3IChhZnRlciBzZWxlY3RpbmcgdGhlIGNvZGUgdHlwZSBpbiB0aGUgYm90dG9tIHJpZ2h0KToKIVtWaXN1YWwgU3R1ZGlvIENvZGVdKGltYWdlcy92c0NvZGUucG5nKQoxLiBUbyB3cmFwIGNvZGUgYXJvdW5kIHRoZSBzZWxlY3RlZCB0ZXh0IChodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvNzMzNDQ4MzIvMjAyOTUyNzsgYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9QNUpBLTdEQkMpOgogICAgMS4gUHJlc3MgYEN0cmxgK2BTaGlmdGArYHBgCiAgICAxLiBUeXBlIGFuZCBzZWxlY3QgIk9wZW4gS2V5Ym9hcmQgU2hvcnRjdXRzIChKU09OKSIKICAgIDEuIEFkZCB0aGUgZm9sbG93aW5nIGl0ZW06CiAgICAgICAgYGBgCiAgICAgICAgWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAia2V5IjogImFsdCtzaGlmdCtlIiwKICAgICAgICAgICAgICAgICJjb21tYW5kIjogImVkaXRvci5hY3Rpb24uaW5zZXJ0U25pcHBldCIsCiAgICAgICAgICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICAgICAgICAgImFyZ3MiOiB7CiAgICAgICAgICAgICAgICAgICAgInNuaXBwZXQiOiAiVEhJUy1URVhULUdPRVMtQkVGT1JFJHtUTV9TRUxFQ1RFRF9URVhUfVwiLCAkVE1fU0VMRUNURURfVEVYVCQxVEhJUy1URVhULUdPRVMtQUZURVIiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICBdCiAgICAgICAgYGBgCiAgICAxLiBTYXZlIHRoZSBga2V5YmluZGluZ3MuanNvbmAgZmlsZS4KICAgIDEuIFNlbGVjdCB0aGUgdGV4dCB5b3Ugd2FudCB0byB3cmFwLCBhbmQgcHJlc3MgYEFsdGArYFNoaWZ0YCtgZWAK</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
@@ -561,7 +563,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("studies.Rmd");
+  window.initializeSourceEmbed("vsCode.Rmd");
   window.initializeCodeFolding("hide" === "show");
 });
 </script>
