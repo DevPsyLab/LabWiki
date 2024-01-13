@@ -32,3 +32,17 @@ knitr::opts_chunk$set(
         ```
     1. Save the `keybindings.json` file.
     1. Select the text you want to wrap, and press `Alt`+`Shift`+`e`
+    - Examples:
+        - `\begin{equation}...\end{equation}`
+            ```
+            [
+                {
+                    "key": "alt+shift+e",
+                    "command": "editor.action.insertSnippet",
+                    "when": "editorTextFocus",
+                    "args": {
+                        "snippet": "\\begin{equation}\n$TM_SELECTED_TEXT\n\\end{equation}"
+                    }
+                }
+            ]
+            ```
