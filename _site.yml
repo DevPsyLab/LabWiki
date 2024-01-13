@@ -62,6 +62,8 @@ navbar:
         href: studies.html
       - text: Video Editing
         href: video-editing.html
+      - text: Visual Studio Code
+        href: vsCode.html
       - text: Writing Guidelines
         href: writing.html
     - text: "Studies"
