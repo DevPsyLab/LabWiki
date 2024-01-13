@@ -25,7 +25,7 @@ knitr::opts_chunk$set(
                 "command": "editor.action.insertSnippet",
                 "when": "editorTextFocus",
                 "args": {
-                    "snippet": "THIS-TEXT-GOES-BEFORE${TM_SELECTED_TEXT}\", $TM_SELECTED_TEXT$1THIS-TEXT-GOES-AFTER"
+                    "snippet": "<TEXT-BEFORE>$TM_SELECTED_TEXT</TEXT-AFTER>"
                 }
             }
         ]
