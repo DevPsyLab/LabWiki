@@ -18,15 +18,16 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Use EndNote or Zotero for reference management.
 1. In empirical papers, include a correlation matrix with descriptive statistics for your model variables.
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
+1. Report numbers to two decimal places; report *p*-values to three decimal places.
 1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively.
 1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines#APA) (archived at https://perma.cc/7P53-DLVT), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation".
 1. When referring to reliability, validity, or stability, specify the aspect(s) of reliability/validity/stability you are referring to.
 1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at https://perma.cc/3XQ6-DBNW).
     - [Unicode values](https://www.punctuationmatters.com/the-difference-between-a-dash-and-a-minus-sign/) (archived at https://perma.cc/Q9GM-SSCL) for each character:
-      - hyphen: 002D or 2010
-      - minus sign: 2212
-      - en dash: 2013
-      - em dash: 2014
+      - hyphen (-): 002D or 2010
+      - minus sign (−): 2212
+      - en dash (–): 2013
+      - em dash (—): 2014
 1. When submitting a manuscript to a journal, submit any supplemental appendices as a PDF (not as a Word file).
 1. When submitting a manuscript to a journal, follow the lab's [open science](openScience.html) guidelines.
   - For instance, see the section on "[Manuscript Submission to a Journal](openScience.html#journal)."
