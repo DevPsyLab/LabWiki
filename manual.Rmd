@@ -976,7 +976,7 @@ We just ask you act normally."
 -	"not touching the worms"
 -	"sorting the sheep"
 
-### How to Guide Children Through Difficult Tasks
+### How to Guide Children Through Difficult Tasks {#guideChildrenDifficultTasks}
 
 #### DOs
 
@@ -998,25 +998,32 @@ The following are "Do"s when working with children in the lab:
 - Praise effort, not outcome
     - "Thank you for trying so hard on these" instead of "Nice job answering these"
 - Use distraction and redirection (e.g., talking to the child about the movie when putting on the EEG net)
-- Model appropriate behavior (sit and watch the screen during the task)
+- Model appropriate behavior
+    - Sit and watch the screen during the task
+- Help the child feel more comfortable with the task
+    - Put the EEG cap on yourself (or on a parent)
+    - Let them touch the EEG cap
 - Give them choices we're okay with
     - "Would you rather wear the red cape or the blue cape?"
 - Use Grandma's Law:
     - "When you finish catching the fish, you can have some candy."
     - "First sit down in your chair, and then we'll play the game."
+- Have the child take breaks
+    - physical exercise (e.g., doing wiggles or jumping jacks) or playing a game can help children re-focus
+- Give the child have juice/candy/snacks (if the parent is okay with that)
 
 #### DON'Ts
 
 The following are "Don't"s when working with children in the lab:
 
-- Ask commands in the form of a question ("Can you sit up in your chair?")
+- Don't ask commands in the form of a question ("Can you sit up in your chair?")
     - Instead: Be polite but firm.
     ("Sit up in your chair" or "Please sit up in your chair" or "Let's sit up in your chair.")
-- Frame things in the negative (or the absence of negative)—i.e., do not provide reassurance ("It's going to be okay" or "It's not going to hurt.")
+- Don't frame things in the negative (or the absence of negative)—i.e., don't provide reassurance ("It's going to be okay" or "It's not going to hurt.")
     - Instead: frame things in the positive ("Let's put on the special ocean cap to be just like Jamie so we can play the fun games!")
-- Ask yes/no questions to "no birds"
+- Don't ask yes/no questions to "no birds"
     - Instead: Give them choices we're okay with (see above)
-- Focus on the child's distress and/or apologize
+- Don't focus on the child's distress and/or apologize
     - Instead: Distract, redirect, and be positive—children respond to your verbal and nonverbal cues!
 
 ## Participant Payment
