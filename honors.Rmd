@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 
 Students may pursue Honors in the Psychology major through lab-related work, either through a thesis or a non-thesis route.
 For more information, see here:
-https://psychology.uiowa.edu/undergrad-program/honors-psychology-major.
+https://psychology.uiowa.edu/undergraduate/honors-psychology.
 In general, students complete Honors theses during their senior year, after they have firm footing in the lab (i.e., they have spent at least 1–2 semesters in the lab).
 Because the non-thesis capstones requires additional coursework, students may pursue this option earlier than their senior year.
 Please meet with Dr. Petersen to help decide which might make the most sense given your goals.
@@ -23,11 +23,12 @@ You are also encouraged to meet with the Lab Coordinator and graduate students.
 
 ## Non-Thesis Honors {#expectations-nonThesis}
 
-If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen to set up a meeting.
+If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen.
+You are expected to send Dr. Petersen a draft of the Pre-Launch Agreement before submitting, and to incorporate any edits/feedback from Dr. Petersen.
 Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, and your motivation.
 
 You are expected to follow the Department requirements for Honors in Psychology, including meeting all deadlines:
-https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major
+https://psychology.uiowa.edu/undergraduate/honors-psychology
 
 ## Honors Thesis {#expectations-thesis}
 
@@ -50,7 +51,7 @@ Dr. Petersen expects you to present a research poster on your thesis findings at
 It is your responsibility to keep track of the registration deadlines for the Undergraduate Research Festival so you do not miss it!
 
 You are expected to follow the Department requirements for Honors theses and for Honors in Psychology, including meeting all deadlines:
-https://psychology.uiowa.edu/undergraduate-program/research-opportunities/honors-psychology-major
+https://psychology.uiowa.edu/undergraduate/honors-psychology
 
 You must have two readers of the thesis who are familiar with the topic.
 One reader will be Dr. Petersen.
@@ -62,7 +63,7 @@ You must send the completed final draft of your thesis to both Dr. Petersen and 
 Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.
 
 UI Undergraduate Research Festival:
-https://icru.research.uiowa.edu/news/events/furf-and-surf-undergraduate-research-festivals
+https://our.research.uiowa.edu/events-0/undergraduate-research-festivals
 
 # Resources {#resources}
 
