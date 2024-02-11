@@ -76,7 +76,11 @@ You can find these resources at the following location on the lab drive:
 
 We also have a page the clarifies the difference between mediation and moderation [here](mediationModeration.html).
 
-For information on how to use `SPSS` for data analysis, see [here](https://devpsylab.github.io/DataAnalysis/SPSS.html).
+For information on how to use software for data analysis, see our data analysis guides:
+
+- [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html)
+- [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html)
+- [`R`](https://devpsylab.github.io/DataAnalysis/R.html)
 
 In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:
 
@@ -156,8 +160,16 @@ For instructions how to do each, see the [RA Remote Participation page](document
 # Statistical Analysis Software {#software}
 
 You can use whatever statistical software you prefer for your project.
-Students in the lab frequently use [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`Jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), though you are also welcome to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) or other software.
-The key goal is for your research to be reproducible (by you and others), so having analysis scripts that can reproduce your findings are important.
+Students in the lab frequently use [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), though you are also welcome to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) or other software.
+[`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) have point-and-click interfaces and thus are the easiest to learn and are the most commonly used for theses in the lab.
+Unlike [SPSS](spss.html), however, [jamovi](https://www.jamovi.org) is free, so you will be able to use it freely after you leave the university.
+[`R`](https://devpsylab.github.io/DataAnalysis/R.html) is also free, but it is code-based and has a steep learning curve.
+The key goal is for your research to be reproducible (by you and others), so—regardless of which software you use—having analysis scripts that can reproduce your findings is important.
+Please follow the Data Analysis Guide for the software package that you use to ensure you create analysis scripts for reproducibility:
+
+- [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html)
+- [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html)
+- [`R`](https://devpsylab.github.io/DataAnalysis/R.html)
 
 # Access SPSS/R for Data Analysis {#spss-R}
 
@@ -192,7 +204,7 @@ Lab data must remain on the lab drive.
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
 It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
 
-# Writing Guidelines
+# Writing Guidelines {#writing}
 
 Make sure to follow the lab's [writing guidelines](writing.html).
 You are also encouraged to take advantage of the [UI Writing Center](https://writingcenter.uiowa.edu).
