@@ -133,19 +133,19 @@ Therefore, if your parents/roommates/friends/etc. are in the room with you and c
 
 # How to Register Lab for Credit {#courseRegistration}
 
-## Regular Credit
+## Regular Credit {#regularCredit}
 
-Students who wish to receive credit for time spent in the lab may register for "PSY:3994:01IND – Research Practicum in Psychology" or "URES:3992".
-Generally, students enroll in "PSY:3994".
+Students who wish to receive credit for time spent in the lab may register for "`PSY:3994:01IND – Research Practicum in Psychology`", "[`HONR:3994:01IND – Honors Research Practicum`](#honorsCredit)", or "`URES:3992`".
+Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#honorsCredit), "[`HONR:3994`](#honorsCredit)".
 
-URES:3992 is 0-hour and has no tuition or fees associated.
-It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
-URES:3992 is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
+`URES:3992` is 0-hour and has no tuition or fees associated.
+It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
+`URES:3992` is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for PSY:4990 and HONR:3994.
-- Students receive a Pass/Fail grade for PSY:3994.
+- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for `PSY:4990` and `HONR:3994`.
+- Students receive a Pass/Fail grade for `PSY:3994`.
 
 There are several advantages to registering for course credit:
 
@@ -158,10 +158,10 @@ There are several advantages to registering for course credit:
 
 ## Honors Credit {#honorsCredit}
 
-Students who wish to receive Honors credit for participation in lab may register for "HONR:3994:01IND – Honors Research Practicum".
+Students who wish to receive Honors credit for participation in lab may register for "`HONR:3994:01IND – Honors Research Practicum`".
 In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
 
-If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for "PSY:4990 – Honors Thesis Research".
+If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for "`PSY:4990 – Honors Thesis Research`".
 Advantages for registering for honors course credit are:
 
 - Your work in the lab will be included on your transcript (letter graded), which can look good when apply to graduate/professional school and jobs
@@ -170,7 +170,7 @@ Advantages for registering for honors course credit are:
 
 Interested students may be able to conduct an Honors project or non-thesis capstone for Honors in the Psychology Major.
 For information on conducting an Honors thesis/project, see [here](honors.html).
-Note that conducting an Honors thesis/project is not a requirement for enrolling in HONR:3994.
+Note that conducting an Honors thesis/project is not a requirement for enrolling in `HONR:3994`.
 
 ![HONR:3994 Step 1](images/honr3994_1.png)
 ![HONR:3994 Step 2](images/honr3994_2.png)
