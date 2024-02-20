@@ -22,6 +22,9 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively.
 1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines#APA) (archived at https://perma.cc/7P53-DLVT), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation".
 1. When referring to reliability, validity, or stability, specify the aspect(s) of reliability/validity/stability you are referring to.
+1. Avoid "this", "that", "these", and "those".
+They are vague and make the reader work harder.
+Replace them with their referent.
 1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at https://perma.cc/3XQ6-DBNW).
     - [Unicode values](https://www.punctuationmatters.com/the-difference-between-a-dash-and-a-minus-sign/) (archived at https://perma.cc/Q9GM-SSCL) for each character:
       - hyphen (-): 002D or 2010
