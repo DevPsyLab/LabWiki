@@ -1,0 +1,51 @@
+---
+title: "Assessment of the Externalizing Spectrum Across the Lifespan"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  comment = "")
+```
+
+Identifying mechanisms in the long-term development of externalizing problems requires strong assessment.
+To address this, we are in the process of designing the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
+Externalizing problems change in behavioral manifestation across development.
+In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across the lifespan, so that we can identify children early on who are at risk of later, more severe problems.
+
+# Study Glossary
+
+# Sample
+
+## Inclusion Criteria
+
+## Exclusion Criteria
+
+# Research Design
+
+# Open Science Framework
+
+# Papers
+
+A bibliography of papers from the study is located here:
+https://docs.google.com/document/d/15NbSwITrDzzDDydnXcwL7X6x8kcJkadNZi8i58jO-hE/edit
+
+# Available Measures
+
+
+# Videos of Procedures
+
+# Data Dictionary
+
+# Pre-registered Hypotheses
+
+To see the pre-registered hypotheses for various stages of the study, see here:
+
+- (Adult Pilot): https://osf.io/jadb7
+
+# Documentation
+
+Documentation for the Externalizing Assessment Project is here:
+https://devpsylab.github.io/ExternalizingAssessmentProject/index.html
+

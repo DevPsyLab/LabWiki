@@ -76,9 +76,9 @@ These resources are available on the project page for the [School Readiness Stud
 
 Identifying mechanisms in the long-term development of externalizing problems requires strong assessment.
 Thus, my lab is also highly interested in psychometrics and measure development.
-In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.html), we are also in the process of designing another study, the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
+In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.html), we are also in the process of designing another study, the [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan).
 Externalizing problems change in behavioral manifestation across development.
-In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across infancy to adolescence, so that we can identify children early on who are at risk of later, more severe problems.
+In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across the lifespan, so that we can identify children early on who are at risk of later, more severe problems.
 
 Although the mechanisms we identify are relevant for intervention, my lab does not conduct research on interventions.
 
