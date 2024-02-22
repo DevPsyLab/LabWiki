@@ -68,6 +68,8 @@ navbar:
         href: writing.html
     - text: "Studies"
       menu:
+      - text: Externalizing Spectrum Across the Lifespan
+        href: study-externalizingSpectrumAcrossLifespan.html
       - text: School Readiness Study
         href: study-schoolReadinessStudy.html
     - text: "Prospective Applicants"
