@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
 ```
 
 Identifying mechanisms in the long-term development of externalizing problems requires strong assessment.
-To address this, we are in the process of designing the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
+To address this, we are in the process of designing and conducting the [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject).
 Externalizing problems change in behavioral manifestation across development.
 In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across the lifespan, so that we can identify children early on who are at risk of later, more severe problems.
 
