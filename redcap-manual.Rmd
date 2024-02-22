@@ -117,7 +117,7 @@ To designate forms as repeatable, follow the below steps:
 However, an instrument will not show up for entry until:
 
 1. The addition of the measure has been approved by Dr. Petersen.
-1. The instrument has been [designated to an event](#designateInstrument).
+1. The instrument has been [designated to an event](#designateInstruments).
 1. (As necessary, the instrument has been [designated as a survey](#survey).)
 1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
 1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")

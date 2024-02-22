@@ -193,7 +193,7 @@ However, these semester hours will not count toward the experiential learning re
 	A couple images, an author bio, and highlights of your experience are all required components of this piece. 
     b. https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57
 
-More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/experientiallearning
+More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/requirements/experiential-learning
 
 # RA Roles {#roles}
 
@@ -415,7 +415,7 @@ If unable to find a cover, it is the RA's responsibility to let the Lab Coordina
 
 For information regarding weekend visits, please refer to the section regarding the [Weekend On-Call Schedule](#schedulingWeekend).
 
-For general information regarding the scheduling expectations of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](#schedulingExpectations).
+For general information regarding the scheduling expectations for undergraduate RAs of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](expectations-undergradRA.html#schedulingExpectations).
 
 ## Weekend On-Call Schedule {#schedulingWeekend}
 
