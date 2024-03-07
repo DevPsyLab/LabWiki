@@ -335,6 +335,8 @@ Some advanced roles that can be pursued include (but are not limited to):
 **Collaborative research projects in the lab:** This can take many forms (e.g., poster, paper).
 You are encouraged to ask a current advanced RA, a graduate student in the lab, the Lab Coordinator, and/or Dr. Petersen about what this may entail.
 
+**Reduced availability expectation:** advanced RAs are expected to make themselves available 1 night per week & 5 weekend days per semester to train/coach new experimenters/run visits (when needed).
+
 **Registering for Advanced Research Practicum in Psychology (PSY:3995):** if the RA's role includes advanced participation in lab-related research projects in such a way that includes significant reading and writing (such as when performing an independent research project), the RA may register for PSY:3995: "Advanced Research Practicum in Psychology".
 However, RAs should seek permission from Dr. Petersen before enrolling in PSY:3995.
 
@@ -429,7 +431,7 @@ The Lab Coordinator may request volunteers to run visits that are scheduled "las
 If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Slack with the details of the visit.
 
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
-Ultimately everyone is expected to be on-call for at least 8 weekend days per semester.
+Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#advancement)).
 
 ### Preparation
 
