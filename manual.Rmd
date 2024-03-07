@@ -335,8 +335,6 @@ Some advanced roles that can be pursued include (but are not limited to):
 **Collaborative research projects in the lab:** This can take many forms (e.g., poster, paper).
 You are encouraged to ask a current advanced RA, a graduate student in the lab, the Lab Coordinator, and/or Dr. Petersen about what this may entail.
 
-**Reduced availability expectation:** advanced RAs are expected to make themselves available 1 night per week & 5 weekend days per semester to train/coach new experimenters/run visits (when needed).
-
 **Registering for Advanced Research Practicum in Psychology (PSY:3995):** if the RA's role includes advanced participation in lab-related research projects in such a way that includes significant reading and writing (such as when performing an independent research project), the RA may register for PSY:3995: "Advanced Research Practicum in Psychology".
 However, RAs should seek permission from Dr. Petersen before enrolling in PSY:3995.
 
@@ -430,7 +428,7 @@ The Lab Coordinator may request volunteers to run visits that are scheduled "las
 If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Slack with the details of the visit.
 
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
-Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#advancement)).
+Ultimately everyone is expected to be on-call for at least 8 weekend days per semester.
 
 ### Preparation
 
@@ -442,20 +440,19 @@ Bring a written list of the weekend days you cannot be on-call for that semester
 1. The Lab Coordinator will set up separate meetings with behavioral testing specialists, EEG testing specialists, and data specialists/new RAs during the first week of the semester.
 At these meetings, the Lab Coordinator will conduct the weekend scheduling.
 1. Everyone draws a number.
-1. Pass the sign-up sheet around your group once, starting with the person who drew the lowest number, and continuing in order from lowest to highest number, each person cross their name off of every weekend day they CANNOT be on-call (i.e., family engagement, work, doctor appointment, etc.). 
-1. Once the sheet has gone around the group once and everyone has had the opportunity to remove their name from days they cannot work, pass the sheet around, from lowest number to highest number, and every RA signs up for one day per turn.
+1. Pass the sign-up sheet around your group from lowest number to highest number, and every RA will sign up for one day per turn.
 Each round, the order reverses (i.e., snake order).
 That is, whoever gets the first pick in round 1 gets the last pick in round 2.
 Continue this process to sign up for days until everyone has signed up for at least 8 days each.
 Note that this may mean signing up for a day that you are unavailable (in order to sign up for 8 days).
-    a. Data Specialists and new RAs should sign up for Camera or RA slots—the Lab Coordinator may schedule these interchangeably (i.e., if your name is listed for either a Camera or RA slot, you may be scheduled in a Camera or an RA role for a visit, at the discretion of the Lab Coordinator).
+    a. Data Specialists and new RAs will sign up for RA slots—the Lab Coordinator will schedule RA and Camera roles interchangeably (i.e. RAs will be randomly assigned either a Camera or RA role by the Lab Coordinator).
     b. Trained returning RAs (Behavioral Testing Specialists, EEG Specialists, and Data Specialists) should prioritize signing up for visits earlier in the semester first, if possible.
     When the new RAs complete training for visit roles, they will be able to help with visits later in the semester.
-    c. To help ensure that RAs are available during the days they sign up, you are encouraged to sign up for days when your peers cannot be on-call.
-    Then, after everyone has signed up for 8 days, RAs will have an opportunity to trade days with each other (see below).
-1. Once this process is complete, the sign-up form will be left in the RA office and remain there for one week.
+    c. After everyone has signed up for 8 days, RAs will have an opportunity to trade days with each other (see below).
+1. Once this process is complete, the sign-up form will be kept in the Lab Coordinator's office and remain there for one week.
 During this one week, RAs will have the opportunity to make any final adjustments necessary (i.e., trade days with other RAs).
-However, at the end of the one week, everyone should still be signed up for a total of 8 days, and everyone will be responsible for helping run any visits that may be scheduled on those days.
+RAs must notify the Lab Coordinator of any trades/changes to their weekend sign ups within this week.
+Remember, at the end of the one week, everyone should still be signed up for a total of 8 days, and everyone will be responsible for helping run any visits that may be scheduled on those days.
 
 ## Shared Calendars
 
@@ -484,11 +481,13 @@ Here is a description of the different calendars and instructions how to use the
     It has lab events (e.g., participant visits, lab meeting, recruitment events).
     You can view but not edit this calendar.
 1. RES-DPL-Busy
-    - This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester.
-    In order to schedule visits, the Lab Coordinator needs to know your availability during the week.
-    You are expected to edit this calendar and keep it up to date with any scheduling conflicts as soon as possible.
-    Please make sure that you "categorize" the event with your name, so the event is given the proper color.
-	In the "Subject" line, you can simply note "Name Busy".
+    - This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester, this includes time you may be taking off from your normal scheduled hours.
+    Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar. 
+    To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the current LC as a required attendee.
+    This will notify the LC of your request for time off and allow them to accept or decline the request.
+    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e. over hours, doctors appointment). 
+    **If your request is within 48 hours of the day you wish to be off, you must create the calendar entry *AND* slack the current Lab Coordinator in the `#lab-time` channel.** 
+
 
 ## TimeClock 
 

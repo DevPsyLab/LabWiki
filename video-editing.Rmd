@@ -48,7 +48,6 @@ NOTE: This script will only work if you open the Lab Drive directly from the Des
 *You cannot open it from the Quick Access menu in File Explorer.*
 
 In the event that an LV1 video recorded side-by-side but the video was interrupted, resulting in two separate side-by-side video files that stop and start in the middle of a visit (e.g., if the camera box is accidentally kicked off during a visit, if the cameras crash and have to be restarted during the visit, etc.), they can be combined into one video file using Avidemux.
-See [Cute Moments Videos](recruitment-manual.html#cutemoments) above for a description of how to use this program.
 To combine two videos from a visit with interrupted recordings, follow these steps:
 
 1. Open the computer program Avidemux
