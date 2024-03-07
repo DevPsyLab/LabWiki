@@ -11,7 +11,7 @@
 
 
 
-<title>Visual Studio Code</title>
+<title>Social Media</title>
 
 <script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -476,78 +476,14 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Visual Studio Code</h1>
+<h1 class="title toc-ignore">Social Media</h1>
 
 </div>
 
 
-<div id="tips-and-tricks" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Tips and Tricks</h1>
-<ol style="list-style-type: decimal">
-<li>You can view the source code side-by-side with the Preview (after
-selecting the code type in the bottom right): <img
-src="images/vsCode.png" alt="Visual Studio Code" /></li>
-<li>To wrap code around the selected text (<a
-href="https://stackoverflow.com/a/73344832/2029527"
-class="uri">https://stackoverflow.com/a/73344832/2029527</a>; archived
-at <a href="https://perma.cc/P5JA-7DBC"
-class="uri">https://perma.cc/P5JA-7DBC</a>):
-<ol style="list-style-type: decimal">
-<li>Press <code>Ctrl</code>+<code>Shift</code>+<code>p</code></li>
-<li>Type and select “Open Keyboard Shortcuts (JSON)”</li>
-<li>Add the following item:</li>
-</ol>
-<pre><code>[
- {
-     &quot;key&quot;: &quot;alt+shift+e&quot;,
-     &quot;command&quot;: &quot;editor.action.insertSnippet&quot;,
-     &quot;when&quot;: &quot;editorTextFocus&quot;,
-     &quot;args&quot;: {
-         &quot;snippet&quot;: &quot;&lt;TEXT-BEFORE&gt;$TM_SELECTED_TEXT&lt;/TEXT-AFTER&gt;&quot;
-     }
- }
-]</code></pre>
-<ol style="list-style-type: decimal">
-<li>Save the <code>keybindings.json</code> file.</li>
-<li>Select the text you want to wrap, and press
-<code>Alt</code>+<code>Shift</code>+<code>e</code></li>
-</ol></li>
-</ol>
-</div>
-<div id="example-code-snippets" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Example Code
-Snippets</h1>
-<div id="template" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Template</h2>
-<pre><code>[
-    {
-        &quot;key&quot;: &quot;alt+shift+e&quot;,
-        &quot;command&quot;: &quot;editor.action.insertSnippet&quot;,
-        &quot;when&quot;: &quot;editorTextFocus&quot;,
-        &quot;args&quot;: {
-            &quot;snippet&quot;: &quot;&lt;TEXT-BEFORE&gt;$TM_SELECTED_TEXT&lt;/TEXT-AFTER&gt;&quot;
-        }
-    }
-]</code></pre>
-</div>
-<div id="beginequation...endequation" class="section level2"
-number="2.2">
-<h2><span class="header-section-number">2.2</span>
-<code>\begin{equation}...\end{equation}</code></h2>
-<pre><code>[
-    {
-        &quot;key&quot;: &quot;alt+shift+e&quot;,
-        &quot;command&quot;: &quot;editor.action.insertSnippet&quot;,
-        &quot;when&quot;: &quot;editorTextFocus&quot;,
-        &quot;args&quot;: {
-            &quot;snippet&quot;: &quot;\\begin{equation}\n$TM_SELECTED_TEXT\n\\end{equation}&quot;
-        }
-    }
-]</code></pre>
-</div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVmlzdWFsIFN0dWRpbyBDb2RlIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBlY2hvID0gVFJVRSwKICBlcnJvciA9IFRSVUUsCiAgY29tbWVudCA9ICIiLAogIGNsYXNzLnNvdXJjZSA9ICJmb2xkLXNob3ciKQpgYGAKCiMgVGlwcyBhbmQgVHJpY2tzCgoxLiBZb3UgY2FuIHZpZXcgdGhlIHNvdXJjZSBjb2RlIHNpZGUtYnktc2lkZSB3aXRoIHRoZSBQcmV2aWV3IChhZnRlciBzZWxlY3RpbmcgdGhlIGNvZGUgdHlwZSBpbiB0aGUgYm90dG9tIHJpZ2h0KToKIVtWaXN1YWwgU3R1ZGlvIENvZGVdKGltYWdlcy92c0NvZGUucG5nKQoxLiBUbyB3cmFwIGNvZGUgYXJvdW5kIHRoZSBzZWxlY3RlZCB0ZXh0IChodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvNzMzNDQ4MzIvMjAyOTUyNzsgYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9QNUpBLTdEQkMpOgogICAgMS4gUHJlc3MgYEN0cmxgK2BTaGlmdGArYHBgCiAgICAxLiBUeXBlIGFuZCBzZWxlY3QgIk9wZW4gS2V5Ym9hcmQgU2hvcnRjdXRzIChKU09OKSIKICAgIDEuIEFkZCB0aGUgZm9sbG93aW5nIGl0ZW06CmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICI8VEVYVC1CRUZPUkU+JFRNX1NFTEVDVEVEX1RFWFQ8L1RFWFQtQUZURVI+IgogICAgICAgIH0KICAgIH0KXQpgYGAKICAgIDEuIFNhdmUgdGhlIGBrZXliaW5kaW5ncy5qc29uYCBmaWxlLgogICAgMS4gU2VsZWN0IHRoZSB0ZXh0IHlvdSB3YW50IHRvIHdyYXAsIGFuZCBwcmVzcyBgQWx0YCtgU2hpZnRgK2BlYAoKIyBFeGFtcGxlIENvZGUgU25pcHBldHMKCiMjIFRlbXBsYXRlCgpgYGAKWwogICAgewogICAgICAgICJrZXkiOiAiYWx0K3NoaWZ0K2UiLAogICAgICAgICJjb21tYW5kIjogImVkaXRvci5hY3Rpb24uaW5zZXJ0U25pcHBldCIsCiAgICAgICAgIndoZW4iOiAiZWRpdG9yVGV4dEZvY3VzIiwKICAgICAgICAiYXJncyI6IHsKICAgICAgICAgICAgInNuaXBwZXQiOiAiPFRFWFQtQkVGT1JFPiRUTV9TRUxFQ1RFRF9URVhUPC9URVhULUFGVEVSPiIKICAgICAgICB9CiAgICB9Cl0KYGBgCgojIyAgYFxiZWdpbntlcXVhdGlvbn0uLi5cZW5ke2VxdWF0aW9ufWAKCmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICJcXGJlZ2lue2VxdWF0aW9ufVxuJFRNX1NFTEVDVEVEX1RFWFRcblxcZW5ke2VxdWF0aW9ufSIKICAgICAgICB9CiAgICB9Cl0KYGBgCg==</div>
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiU29jaWFsIE1lZGlhIgotLS0K</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
@@ -612,7 +548,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("vsCode.Rmd");
+  window.initializeSourceEmbed("social-media.Rmd");
   window.initializeCodeFolding("hide" === "show");
 });
 </script>
