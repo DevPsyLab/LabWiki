@@ -58,6 +58,8 @@ navbar:
         href: redcap-manual.html
       - text: Remote Participation
         href: documentation-remote.html
+      - text: Social Media
+        href: social-media.html
       - text: Studies
         href: studies.html
       - text: Video Editing
