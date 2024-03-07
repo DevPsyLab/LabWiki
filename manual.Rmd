@@ -133,19 +133,19 @@ Therefore, if your parents/roommates/friends/etc. are in the room with you and c
 
 # How to Register Lab for Credit {#courseRegistration}
 
-## Regular Credit
+## Regular Credit {#regularCredit}
 
-Students who wish to receive credit for time spent in the lab may register for "PSY:3994:01IND – Research Practicum in Psychology" or "URES:3992".
-Generally, students enroll in "PSY:3994".
+Students who wish to receive credit for time spent in the lab may register for "`PSY:3994:01IND – Research Practicum in Psychology`", "[`HONR:3994:01IND – Honors Research Practicum`](#honorsCredit)", or "`URES:3992`".
+Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#honorsCredit), "[`HONR:3994`](#honorsCredit)".
 
-URES:3992 is 0-hour and has no tuition or fees associated.
-It is recommended to enroll in URES:3992 when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
-URES:3992 is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
+`URES:3992` is 0-hour and has no tuition or fees associated.
+It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
+`URES:3992` is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for PSY:4990 and HONR:3994.
-- Students receive a Pass/Fail grade for PSY:3994.
+- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for `PSY:4990` and `HONR:3994`.
+- Students receive a Pass/Fail grade for `PSY:3994`.
 
 There are several advantages to registering for course credit:
 
@@ -158,10 +158,10 @@ There are several advantages to registering for course credit:
 
 ## Honors Credit {#honorsCredit}
 
-Students who wish to receive Honors credit for participation in lab may register for "HONR:3994:01IND – Honors Research Practicum".
-In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
+Students who wish to receive Honors credit for participation in lab may register for "`HONR:3994:01IND – Honors Research Practicum`".
+In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
 
-If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for "PSY:4990 – Honors Thesis Research".
+If you are completing an Honors project and thesis in the lab, with approval by Dr. Petersen, you may enroll for "`PSY:4990 – Honors Thesis Research`".
 Advantages for registering for honors course credit are:
 
 - Your work in the lab will be included on your transcript (letter graded), which can look good when apply to graduate/professional school and jobs
@@ -170,7 +170,7 @@ Advantages for registering for honors course credit are:
 
 Interested students may be able to conduct an Honors project or non-thesis capstone for Honors in the Psychology Major.
 For information on conducting an Honors thesis/project, see [here](honors.html).
-Note that conducting an Honors thesis/project is not a requirement for enrolling in HONR:3994.
+Note that conducting an Honors thesis/project is not a requirement for enrolling in `HONR:3994`.
 
 ![HONR:3994 Step 1](images/honr3994_1.png)
 ![HONR:3994 Step 2](images/honr3994_2.png)
@@ -193,7 +193,7 @@ However, these semester hours will not count toward the experiential learning re
 	A couple images, an author bio, and highlights of your experience are all required components of this piece. 
     b. https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57
 
-More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/experientiallearning
+More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/requirements/experiential-learning
 
 # RA Roles {#roles}
 
@@ -351,6 +351,7 @@ Advanced projects are given priority to RAs who have shown reliability and commi
 
 As mentioned above, there are a number of opportunities to gain advanced experiences in the lab.
 There may be an opportunity for some experiences to count for lab hours if:
+
    1. The project is assigned to the RA
    1. The project benefits the overall lab
    1. The RA has demonstrated proficiency in the skills needed to complete the project
@@ -412,7 +413,7 @@ If unable to find a cover, it is the RA's responsibility to let the Lab Coordina
 
 For information regarding weekend visits, please refer to the section regarding the [Weekend On-Call Schedule](#schedulingWeekend).
 
-For general information regarding the scheduling expectations of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](#schedulingExpectations).
+For general information regarding the scheduling expectations for undergraduate RAs of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](expectations-undergradRA.html#schedulingExpectations).
 
 ## Weekend On-Call Schedule {#schedulingWeekend}
 
@@ -549,7 +550,7 @@ If there are fewer days available than there are RAs, priority is given to newer
 By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Slack.
 For more information on how to find and access articles, see [here](honors.html#articles).
 For more information on APA formatting, see the resources on the lab drive:
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
 
 The RA who is leading the discussion of the article should structure the discussion following the format below:
 
@@ -764,7 +765,7 @@ Because the Lab Drive contains so many files across so many different tasks, TCs
 - For files within "*Coded Data*", coding form files should also include which coder the form is from (e.g., `1000_36_grasssnow_coder1`).
 - For files within "*Scoring*", scoring form files should also include which scorer the form is from (e.g., `1000_36_maps_scorer1`).
 - For visit-related files within "*Payments*", file names should also indicate which visit or caregiver the receipt is from (e.g., `1000_36_receipt_LV1`, `1000_36_W9_SC`).
-- Any IRB documents in the IRB folder (`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\IRB\`) that are stamped with an expiration date (e.g., recruitment materials, consents) should also indicate the year in which they are valid (e.g., `informedconsent_2018`).
+- Any IRB documents in the IRB folder (`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\IRB\`) that are stamped with an expiration date (e.g., recruitment materials, consents) should also indicate the year in which they are valid (e.g., `informedconsent_2018`).
 When these materials expire, they can be moved to the "00-Old" folder within the relevant parent folder.
 
 ### Folder Designations {#folderDesignations}
@@ -789,7 +790,7 @@ Member folders and lab report folders are named using the RA's `HawkID`.
 ### Member Folders
 
 Member folders can be found on the lab drive here:
-`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Members\`
 
 Member folders should be used for any lab-related work (excluding lab reports).
 They can be accessed by anyone in lab, including other RAs, so it is not advisable to save any personal or confidential documents within a member folder.
@@ -799,7 +800,7 @@ When RAs graduate from the lab, these folders are archived so if we ever need to
 ### Lab Report Folders
 
 Lab report folders can be found on the lab drive here:
-`\\iowa.uiowa.edu\shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Members\01-Lab Reports\`
 
 Lab report folders can only be accessed by the RA who owns it, the Lab Coordinator, and Dr. Petersen.
 This is where you should save your bi-weekly lab reports throughout the semester.
@@ -885,7 +886,7 @@ Follow these instructions when submitting lab reports:
 1. Write the lab report in Microsoft Word and save it as a `.docx` file.
 This is important so that Dr. Petersen can comment on the file.
 1. Save the reports in the "Lab Reports" folder:
-    a. `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Members\01-Lab Reports\[YOUR HAWKID]\`
+    a. `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Members\01-Lab Reports\[YOUR HAWKID]\`
     b. Name the lab reports so that they are ordered by date (e.g., `Lab Report_2017-12-31.docx`).
     c. When saving lab reports, please only leave the newest lab report in the main folder—your old lab reports should be moved to the "Past Lab Reports_hawkID" folder within your personal lab reports folder.
 1. Bi-weekly reports include:
@@ -922,7 +923,7 @@ If a family asks you a question such as:
 Our response could be: 
 
 "We want to simulate as close to a home and school environment as we can.
-We just ask you act normally."
+We just ask that you act normally."
 
 ### How to Give Praise
 
@@ -974,7 +975,7 @@ We just ask you act normally."
 -	"not touching the worms"
 -	"sorting the sheep"
 
-### How to Guide Children Through Difficult Tasks
+### How to Guide Children Through Difficult Tasks {#guideChildrenDifficultTasks}
 
 #### DOs
 
@@ -996,25 +997,32 @@ The following are "Do"s when working with children in the lab:
 - Praise effort, not outcome
     - "Thank you for trying so hard on these" instead of "Nice job answering these"
 - Use distraction and redirection (e.g., talking to the child about the movie when putting on the EEG net)
-- Model appropriate behavior (sit and watch the screen during the task)
+- Model appropriate behavior
+    - Sit and watch the screen during the task
+- Help the child feel more comfortable with the task
+    - Put the EEG cap on yourself (or on a parent)
+    - Let them touch the EEG cap
 - Give them choices we're okay with
     - "Would you rather wear the red cape or the blue cape?"
 - Use Grandma's Law:
     - "When you finish catching the fish, you can have some candy."
     - "First sit down in your chair, and then we'll play the game."
+- Have the child take breaks
+    - physical exercise (e.g., doing wiggles or jumping jacks) or playing a game can help children re-focus
+- Give the child juice/candy/snacks (if the parent is okay with that)
 
 #### DON'Ts
 
 The following are "Don't"s when working with children in the lab:
 
-- Ask commands in the form of a question ("Can you sit up in your chair?")
+- Don't ask commands in the form of a question ("Can you sit up in your chair?")
     - Instead: Be polite but firm.
     ("Sit up in your chair" or "Please sit up in your chair" or "Let's sit up in your chair.")
-- Frame things in the negative (or the absence of negative)—i.e., do not provide reassurance ("It's going to be okay" or "It's not going to hurt.")
+- Don't frame things in the negative (or the absence of negative)—i.e., don't provide reassurance ("It's going to be okay" or "It's not going to hurt.")
     - Instead: frame things in the positive ("Let's put on the special ocean cap to be just like Jamie so we can play the fun games!")
-- Ask yes/no questions to "no birds"
+- Don't ask yes/no questions to "no birds"
     - Instead: Give them choices we're okay with (see above)
-- Focus on the child's distress and/or apologize
+- Don't focus on the child's distress and/or apologize
     - Instead: Distract, redirect, and be positive—children respond to your verbal and nonverbal cues!
 
 ## Participant Payment
@@ -1046,7 +1054,7 @@ Receipt must include TCID/Wave, data of service, amount distributed, and signatu
 One of the goals of our lab is to advance the career and professional goals of our team members.
 We provide many professional development-related resources on the lab drive in the following location:
 
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Miscellaneous\Professional Development\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\`
 
 The resources include resources on applying to graduate school, internships, postbacs, and medical school, comparing different mental health fields (e.g., clinical psychology, counseling psychology, school psychology, clinical mental health counseling, marriage and family therapy, social work), how to find programs, and resources on academic skills (e.g., reading scientific articles), cover letters, CVs/resumes, personal statements, standardized tests (e.g., GRE), and prior lab workshops on topics such as statistics and interviews.
 Please take advantage of the many resources available to help you succeed.

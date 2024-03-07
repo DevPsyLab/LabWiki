@@ -117,7 +117,7 @@ To designate forms as repeatable, follow the below steps:
 However, an instrument will not show up for entry until:
 
 1. The addition of the measure has been approved by Dr. Petersen.
-1. The instrument has been [designated to an event](#designateInstrument).
+1. The instrument has been [designated to an event](#designateInstruments).
 1. (As necessary, the instrument has been [designated as a survey](#survey).)
 1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
 1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")
@@ -134,6 +134,11 @@ However, an instrument will not show up for entry until:
 -	For yes/no questions, use the "Yes - No" question type (rather than multiple choice radio buttons)
     1. No = 0	
     1. Yes = 1
+- For yes/no questions with additional options (e.g., "not applicable"), use multiple choice radio buttons where:
+    1. No = 0	
+    1. Yes = 1
+    1. Other = 9
+    1. Not applicable = -999
 
 - Time questions
    - Specific time (e.g., What is the child's bedtime?):
@@ -288,13 +293,16 @@ You can check for this by:
 
 ## Lab Universal Notations {#labUniversalNotations}
 
-- Correct = 2 (or 1, if there is no option for "initially incorrect, changed to correct")
-- Incorrect = 0
-- Initially incorrect, changed to correct = 1
-- No response = -9
-- Uncodeable = 9
-- Not Applicable = -999
+- Yes = 1, No = 0
+- True = 1, False = 0
 - Sex: Male = 0, Female = 1
+- Not Applicable = -999
+- Coding Options
+   - Correct = 2 (or 1, if there is no option for "initially incorrect, changed to correct")
+   - Incorrect = 0
+   - Initially incorrect, changed to correct = 1
+   - No response = -9
+   - Uncodeable = 9
 
 For Likert scales:
 

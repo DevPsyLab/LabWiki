@@ -186,25 +186,26 @@ Create a component in the OSF project repository for the following components:
 - Research Materials
 - Preprint
 
-### Pre-registration {#preregistration}
+### Pre-registration {#osfPreregistration}
 
-### Data {#data}
+### Data {#osfData}
 
 To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
 To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
 
 [https://devpsylab.github.io/DataAnalysis/osf.html#anonymizedID](https://devpsylab.github.io/DataAnalysis/osf.html#anonymizedID)
 
-### Data Dictionary {#dataDictionary}
+### Data Dictionary {#osfDataDictionary}
 
-For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#data-dictionary) variables used for that specific paper.
+For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#dataDictionary) variables used for that specific paper.
 We upload that `.csv` file to the OSF.
+The formatting of the Data Dictionary is described [here](#dataDictionary).
 
-### Analysis Code {#analysisCode}
+### Analysis Code {#osfAnalysisCode}
 
-### Research Materials {#materials}
+### Research Materials {#osfMaterials}
 
-### Preprint {#preprint}
+### Preprint {#osfPreprint}
 
 ## Create Anonymous View-Only Links for Anonymous Peer Review {#anonymousViewOnlyLink}
 
@@ -233,6 +234,7 @@ In the preprint submission, use the general OSF links (not the [anonymous view-o
 
 When the manuscript is accepted for publication:
 
+1. Let all of the authors know, and send them the full, (in-press) APA-style reference
 1. Make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it
 1. Submit the finalized manuscript (and any tables, figures, and the supplement) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.

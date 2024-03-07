@@ -58,14 +58,20 @@ navbar:
         href: redcap-manual.html
       - text: Remote Participation
         href: documentation-remote.html
+      - text: Social Media
+        href: social-media.html
       - text: Studies
         href: studies.html
       - text: Video Editing
         href: video-editing.html
+      - text: Visual Studio Code
+        href: vsCode.html
       - text: Writing Guidelines
         href: writing.html
     - text: "Studies"
       menu:
+      - text: Externalizing Spectrum Across the Lifespan
+        href: study-externalizingSpectrumAcrossLifespan.html
       - text: School Readiness Study
         href: study-schoolReadinessStudy.html
     - text: "Prospective Applicants"
