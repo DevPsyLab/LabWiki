@@ -239,6 +239,7 @@ When the manuscript is accepted for publication:
 1. Submit the finalized manuscript (and any tables, figures, and the supplement) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agences.
+1. Make sure the finalized manuscript (and any tables, figures, and the supplement) is uploaded as an updated version of the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
 
 # Adapting Open Science to Longitudinal Research {#longitudinal}
 
