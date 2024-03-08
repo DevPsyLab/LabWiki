@@ -236,10 +236,10 @@ When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
 1. Make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it
-1. Submit the finalized manuscript (and any tables, figures, and the supplement) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
+1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agences.
-1. Make sure the finalized manuscript (and any tables, figures, and the supplement) is uploaded as an updated version of the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
+1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
 
 # Adapting Open Science to Longitudinal Research {#longitudinal}
 
