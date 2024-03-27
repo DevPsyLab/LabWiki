@@ -247,3 +247,19 @@ Below is a list of potentially relevant conferences:
 - Society for Neuroscience (SFN)
 - Cognitive Development Society (CDS)
 - International Meeting of the Psychometric Society (IMPS)
+
+# Publishing {#publishing}
+
+It is not common (or expected) to publish a thesis.
+However, there may be opportunities to publish your thesis if you are interested.
+Please talk to Dr. Petersen if you are interested in pursuing this.
+
+Various options may include:
+
+- publishing the thesis in [Iowa Research Online](https://iro.uiowa.edu/)
+- posting a [preprint](openScience.html#preprint) on a preprint server
+- publishing the thesis in a [peer-reviewed journal for undergraduate theses](https://www.cur.org/resources-publications/student-resources/student-journals/undergraduate-research-journal-listing) (archived at https://perma.cc/SVP9-4HJD)
+- publishing the thesis in a standard peer-reviewed journal
+
+Publishing the thesis in a peer-reviewed journal will likely take extensive additional time to prepare the thesis in publication-ready format and quality.
+Thus, it may require close collaboration with a graduate student who is willing to support this endeavor.
