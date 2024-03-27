@@ -261,5 +261,5 @@ Various options may include:
 - publishing the thesis in a [peer-reviewed journal for undergraduate theses](https://www.cur.org/resources-publications/student-resources/student-journals/undergraduate-research-journal-listing) (archived at https://perma.cc/SVP9-4HJD)
 - publishing the thesis in a standard peer-reviewed journal
 
-Publishing the thesis in a peer-reviewed journal will likely take extensive additional time to prepare the thesis in publication-ready format and quality.
+Publishing the thesis in a peer-reviewed journal will likely take extensive additional time and work to prepare the thesis to be publication-ready in terms of format and quality.
 Thus, it may require close collaboration with a graduate student who is willing to support this endeavor.
