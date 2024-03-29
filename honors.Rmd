@@ -162,7 +162,7 @@ For instructions how to do each, see the [RA Remote Participation page](document
 You can use whatever statistical software you prefer for your project.
 Students in the lab frequently use [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), though you are also welcome to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) or other software.
 [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) have point-and-click interfaces and thus are the easiest to learn and are the most commonly used for theses in the lab.
-Unlike [SPSS](spss.html), however, [jamovi](https://www.jamovi.org) is free, so you will be able to use it freely after you leave the university.
+Unlike [`SPSS`](spss.html), however, [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) is free, so you will be able to use it freely after you leave the university.
 [`R`](https://devpsylab.github.io/DataAnalysis/R.html) is also free, but it is code-based and has a steep learning curve.
 The key goal is for your research to be reproducible (by you and others), so—regardless of which software you use—having analysis scripts that can reproduce your findings is important.
 Please follow the Data Analysis Guide for the software package that you use to ensure you create analysis scripts for reproducibility:
