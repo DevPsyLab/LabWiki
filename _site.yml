@@ -52,7 +52,7 @@ navbar:
         href: mediationModeration.html
       - text: Open Science
         href: openScience.html
-      - text: Oportunities
+      - text: Opportunities
         href: opportunities.html
       - text: REDCap
         href: redcap-manual.html
