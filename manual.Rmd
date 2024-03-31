@@ -625,22 +625,28 @@ We encourage you to express concerns to the chain of command if you feel the iss
 1. Enter the workspace URL "devpsy-lab.slack.com" (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding) 
 1. Make sure to add yourself to all the following "Channels"
  
--	`#announcements`
--	`#good-news`
--	`#irb`
--	`#lab-admin`
--	`#lab-design`
--	`#lab-meetings`
--	`#lab-time`
--	`#measures`
--	`#procedures`
--	`#quotes`
--	`#random`
--	`#recruitment`
--	`#redcap`
--	`#scheduling`
--   `#visits`
--	`#website-socialmedia `
+- `#announcements`
+- `#coding-scoring`
+- `#data-entry`
+- `#data-specialist`
+- `#good-news`
+- `#irb`
+- `#lab-admin`
+- `#lab-design`
+- `#lab-meetings`
+- `#lab-time`
+- `#measures`
+- `#opportunities`
+- `#procedures`
+- `#quotes`
+- `#random`
+- `#recruitment`
+- `#research`
+- `#redcap`
+- `#scheduling`
+- `#visits`
+- `#website-socialmedia`
+- `#wiki`
 
 #### How/When to Use
 
