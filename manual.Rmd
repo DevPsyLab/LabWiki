@@ -888,7 +888,7 @@ Follow these instructions when submitting lab reports:
 1. Write the lab report in Microsoft Word and save it as a `.docx` file.
 This is important so that Dr. Petersen can comment on the file.
 1. Save the reports to the the folder with your HawkID in the "Lab Reports" folder:
-    a. `https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive%2FLab%20Reports&view=0`
+    a. https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive%2FLab%20Reports&view=0
     b. Name the lab reports so that they are ordered by date (e.g., `Lab Report_2017-12-31.docx`).
     c. When saving lab reports, please leave only the newest lab report in the main folder—your old lab reports should be moved to the "Past Lab Reports_hawkID" folder within your personal lab reports folder.
 1. Bi-weekly reports include:
