@@ -717,7 +717,7 @@ The purpose of this Twitter account is to post updates with the outside world ab
 We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
 1. Log on to https://twitter.com using your personal credentials
-2. Follow `@devpsylab`
+2. Follow `@devpsylab` (https://twitter.com/devpsylab)
 
 #### Instagram
 
@@ -725,7 +725,7 @@ The purpose of this Instagram account is to post updates with the outside world 
 We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
 1. Log on to https://www.instagram.com using your personal credentials
-2. Follow `@dev_psy_lab`
+2. Follow `@devpsylab` (https://www.instagram.com/devpsylab)
 
 ## Lab Documentation
 
