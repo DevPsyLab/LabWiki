@@ -6,8 +6,8 @@ title: "Video Editing"
 
 ## General Video Editing
 
-* Search the computer for the *Avidemux* program.
-* <u> To combine videos: </u>
+- Search the computer for the *Avidemux* program.
+- <u> To combine videos: </u>
    1. Open first video that you want to merge (*File* > *Open* > Find file on lab drive).
    1. Save the first video clip
    1. Repeat steps 1 and 2, naming them numerically (clip2, clip3, etc.) in the order you want the videos to be combined.
@@ -17,14 +17,14 @@ title: "Video Editing"
    1. Open the desired clip as the first clip of the video (Clip1) from the *Converted* folder.
    1. Once the first video is open, go to "File", click "Append", then select the next clip to be added. Continue this process until they have all been added, in the order you want them to be in the finished video. 
    1. Once a full compilation video is completed, go to "File", click "Save"
-      * Name the video accordingly 
+      - Name the video accordingly 
    1. Delete the video clips from the *Converted* folder
-* <u> To clip videos: </u>
+- <u> To clip videos: </u>
    1. Open the video you want to clip (*File* > *Open* > Find file on lab drive). 
    1. On the bottom left-hand side of the window, drag the blue tab on the video duration bar to the desired start time then press the *A* button to set it.
    1. Once the clip start time is selected, again drag the same blue tab on the duration bar to the desired end time then press the *B* button to set it.
    1. Once the accurate clip time window is selected, go to "File", click "Save" 
-      * Name the clip accordingly 
+      - Name the clip accordingly 
    1. Go to *Avidemux* and clear program workspace (File > Close).
    1. Repeat steps 1-5 until you have created all the clips needed.
    
@@ -150,6 +150,6 @@ Select "Save"
 
 1. Under "Destination File," browse to map where the converted .mp4 file should be saved
    
-   * *Note:* If multiple files are being converted, "Destination File" cannot be altered, and the files will automatically be saved to the same location from which they are being pulled
+   - *Note:* If multiple files are being converted, "Destination File" cannot be altered, and the files will automatically be saved to the same location from which they are being pulled
 
 1. Click start to begin converting to .mp4

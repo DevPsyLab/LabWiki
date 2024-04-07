@@ -190,75 +190,78 @@ These variables should be entered at the end of each survey. For each survey, fo
 ### Timestamps {#timestamps}
 
 1. "Date/Timestamp in the rater's timezone"
-   * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
-   * Use variable name: `prefix_ratertimezone`
-   * Add the following action tags: 
-      * @HIDDEN-SURVEY
-      * @NOW
-      * @READONLY
+   - Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   - Use variable name: `prefix_ratertimezone`
+   - Add the following action tags: 
+      - @HIDDEN-SURVEY
+      - @NOW
+      - @READONLY
 1. "Date/Timestamp (REDCap server)"
-   * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
-   * Use variable name: `prefix_servertimezone`
-   * Add the following Action tags: 
-      * @HIDDEN-SURVEY
-      * @NOW-SERVER
-      * @READONLY
+   - Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   - Use variable name: `prefix_servertimezone`
+   - Add the following Action tags: 
+      - @HIDDEN-SURVEY
+      - @NOW-SERVER
+      - @READONLY
 1. "Date/Timestamp (UTC)"
-   * Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
-   * Use variable name: `prefix_centraltimezone`
-   * Add the following Action tags: 
-      * @HIDDEN-SURVEY
-      * @NOW-UTC
-      * @READONLY
+   - Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
+   - Use variable name: `prefix_centraltimezone`
+   - Add the following Action tags: 
+      - @HIDDEN-SURVEY
+      - @NOW-UTC
+      - @READONLY
 
 ### Date Completed, Time Completed and Survey Durations {#dateTimestampDuration}
 
-In the below section, it is necessary to identify the `instrument_name` for each variable added. In REDCap, open the `Designer` tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the *parenting_partner* instrument. 
+In the below section, it is necessary to identify the `instrument_name` for each variable added.
+In REDCap, open the `Designer` tab and navigate to the survey to be edited.
+In the URL on the webpage, identify the instrument name for the given survey.
+For example, the below URL corresponds to the *parenting_partner* instrument. 
 
-* https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&page=<mark>parenting_partner</mark>
+- https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&page=<mark>parenting_partner</mark>
 
 1. "Survey Time Started:"
-   * Add a "Text Box" field with no validation
-   * Use variable name: `prefix_timestarted`
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
-      * @READONLY 
-      * @CALCTEXT([survey-time-started:instrument_name])
+   - Add a "Text Box" field with no validation
+   - Use variable name: `prefix_timestarted`
+   - Add the following Action Tags 
+      - @HIDDEN-SURVEY 
+      - @READONLY 
+      - @CALCTEXT([survey-time-started:instrument_name])
 1. "Survey Date Started:"
-   * Add a "Text Box" field with no validation
-   * * Use variable name: `prefix_datestarted`
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
-      * @READONLY 
-      * @CALCTEXT([survey-date-started:instrument_name])
+   - Add a "Text Box" field with no validation
+   - Use variable name: `prefix_datestarted`
+   - Add the following Action Tags 
+      - @HIDDEN-SURVEY 
+      - @READONLY 
+      - @CALCTEXT([survey-date-started:instrument_name])
 1. "Survey Time Completed:"
-   * Add a "Text Box" field with no validation
-   * * Use variable name: `prefix_timecompleted`
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
-      * @READONLY 
-      * @CALCTEXT([survey-time-completed:instrument_name])
+   - Add a "Text Box" field with no validation
+   - Use variable name: `prefix_timecompleted`
+   - Add the following Action Tags 
+      - @HIDDEN-SURVEY 
+      - @READONLY 
+      - @CALCTEXT([survey-time-completed:instrument_name])
 1. "Survey Date Completed:"
-   * Add a "Text Box" field with no validation
-   * Use variable name: `prefix_datecompleted`
-   * Add the following Action Tags 
-      * @HIDDEN-SURVEY 
-      * @READONLY 
-      * @CALCTEXT([survey-date-completed:instrument_name])
+   - Add a "Text Box" field with no validation
+   - Use variable name: `prefix_datecompleted`
+   - Add the following Action Tags 
+      - @HIDDEN-SURVEY 
+      - @READONLY 
+      - @CALCTEXT([survey-date-completed:instrument_name])
 1. "Survey Duration:"
-   * Add a "Text Box" field with numeric validation
-   * Use variable name: `prefix_surveyduration`
-   * Add the following Action Tags
-      * @HIDDEN-SURVEY
-      * @READONLY
-      * @CALCTEXT([survey-duration:instrument_name:m])
+   - Add a "Text Box" field with numeric validation
+   - Use variable name: `prefix_surveyduration`
+   - Add the following Action Tags
+      - @HIDDEN-SURVEY
+      - @READONLY
+      - @CALCTEXT([survey-duration:instrument_name:m])
 1. "Survey Duration Completed:"
-   * Add a "Text Box" field with numeric validation
-   * Use variable name: `prefix_surveydurationcompleted`
-   * Add the following Action Tags
-      * @HIDDEN-SURVEY
-      * @READONLY
-      * @CALCTEXT([survey-duration-completed:instrument_name:m])
+   - Add a "Text Box" field with numeric validation
+   - Use variable name: `prefix_surveydurationcompleted`
+   - Add the following Action Tags
+      - @HIDDEN-SURVEY
+      - @READONLY
+      - @CALCTEXT([survey-duration-completed:instrument_name:m])
 1. Slack the Lab Coordinator for review
 
 ## Troubleshooting {#troubleshooting}
