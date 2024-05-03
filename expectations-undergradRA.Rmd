@@ -140,8 +140,6 @@ We expect RAs to submit their lab report by the deadline and in the correct loca
 
 We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.
 
-
-
 # Grading Scale {#grading}
 
 Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A–F] for their performance in the lab on the tasks assigned to them.
