@@ -32,7 +32,10 @@ knitr::opts_chunk$set(
 - Keep consistent naming conventions within (and across) forms
 - For fonts in the fields, in general, use auto.
 However, this can be changed if problematic. 
-- To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared. 
+- To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared.
+- Calculated fields should ***NOT*** be calculated off of already calculated fields.
+Fields should only be calculated off of fields that are manually inputted.
+For more information on this, see creating [time calculations](adobe.html#timecalculations)
 
 # Converting Word Documents to PDFs
 
@@ -71,6 +74,10 @@ To convert a Word document to a pdf, complete the following steps:
    - Check boxes allow for multiple selections within a group
    - Check boxes should **not** be used for trials fields within pdfs unless multiple answers can be selected for a given trial
    - Calculated fields can be derived from check boxes
+1. Action buttons should be implemented when a specific action is needed to be carried out.
+These actions typically include:
+   * Reseting a field(s)/form
+   * Hiding/Revealing a field(s)
 
 ## Naming Convention for Variables in Adobe {#namingvariables}
 
@@ -154,6 +161,51 @@ Within groups of radio buttons, as soon as a button is selected, the group of bu
 This usage of groups of check buttons may be useful going forward and should be considered when creating new coding forms.
    - *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](adobe.html#createcalculatedradiobuttons).
    Thus, it is important to ensure the export values for each check box follow the values listed in Step 3.
+
+
+## Hiding and Revealing Fields in Adobe {#hiddenfields}
+
+Fields can be hidden and revealed within Adobe documents.
+To do such, complete the following steps:
+
+1. Right click on the field to be hidden
+1. Select "Properties"
+1. Under the "General" tab, navigate to the "Common Properties" box at the bottom of the tab
+1. For "Form Field:" select `Hidden` from the drop-down menu
+1. Now, when previewing the document, the selected field should be hidden from user view
+1. In order to make the field visible to users again, complete steps 1-4, but instead of selecting `Hidden` for "Form Field:", select `Visible`
+1. The field should now be visible to users
+
+## Creating Actions in Adobe
+
+Radio buttons, check boxes, text fields, and action buttons can all be assigned specific actions upon clicking them. The most common actions used are:
+   * Clearing or reseting a field(s) or an entire form
+   * Hiding/revealing a field(s)
+
+To assign a radio button, check box, text field, or action button an action, complete the following steps:
+
+1. Right click on the object (the radio button/check box/text field/action button in question) to which an action is to be assigned
+1. Select the "Actions" tab
+1. Within the "Add an Action" interface, for "Select Trigger:" ensure the response of `Mouse Up` is selected
+   * This configures the action to be executed when the object is clicked upon with the user's mouse
+1. Within the "Add an Action" interface, for "Select Action:" choose the desired action to be assigned to the object from the drop-down menu
+   * To clear/reset a field:
+      * Select `Reset a form`
+   * To hide/reveal a field:
+      * Select `Show/hide a field`
+1. Within the "Add an Action" interface, select "Add..." to implement the chosen action to the object
+   * Upon clicking add, a separate window will appear asking you to specify which fields the action should be applied to
+   * If clearing/reseting a field:
+      * Mark all the check boxes of all the fields to be rest
+      * Select "OK"
+   * If hiding/revealing a field:
+      * Select the name of the field to be hidden/revealed
+      * On the right, select the radio button selection for whether the action should `Show` or `Hide` the field
+      * Select "OK"
+1. Upon selection of "OK," the action should now appear within the "Action" box at the bottom of the tab
+1. In order to edit the action, select the action to be edited and then select "Edit" at the bottom of the interface
+1. Multiple actions can be assigned to the same object.
+Thus, repeat steps 1-6 as many times as needed to assign the necessary actions to a given object
 
 
 # Creating Calculated Fields
@@ -1159,6 +1211,295 @@ if(v32 == 2){
 
 event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
 ```
+
+## Time Calculations in Adobe {#timecalculations}
+
+Calculating a time based on two other times can be accomplished within Adobe.
+To do this, custom calculation scripts using the language JavaScript must be implemented.
+
+### Creating Time Calculations in Adobe
+
+1. First, ensure all fields from which the time calculations are to be made from or applied to have been formatted into the desired time format.
+To do this:
+   1. Right click on the field and select "Properties"
+   1. Navigate to the "Format" tab
+   1. For "Select format category:" select `Time`
+   1. In the "Time Options" interface that appears, select the desired time format
+   1. Repeat this for every field that the time calculations will be made from or applied to
+   1. The following calculation script calculates time in the `HH:MM:ss` format
+1. Select the field in which the time calculation will occur
+1. Right click on the field and select "Properties"
+1. Select the "Calculate" tab
+1. Select the "Custom calculation script:" radio button
+1. Select "Edit..." and input the desired time calculation script
+
+The following script details how to calculate X second intervals based on an inputted starting time.
+The times within this script follow the `HH:MM:ss` time format.
+The following script can easily be modified to calculate different length intervals or to use different time formats.
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+   * Proceed to Breaking Down the Time Calculation Script to gain a greater understanding of the script
+
+### Breaking Down the Time Calculation Script
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+The time calculation script can be broken down into three parts:
+
+1. Defining the Start Time
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+```
+
+   * This portion of the script defines the initial time from which the time calculation is to be done
+   * The line `var timestarted = this.getField("start_time_field").valueAsString;` imports the desired start time from the variable `start_time_field`.
+   This imported time should be in the `HH:MM:ss` time format
+   * The line `var timeSplit = timestarted.split(":") ;` then removes the colons from this imported time, leaving the time as `HH MM ss`.
+   This is stored as a new variable, `timesplit`
+   * Finally, the line `var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));` converts this imported time to be all in *seconds*.
+   At this point in the script, the imported start time has now been converted to a total time in seconds
+      * The following operators are used in this line of code: `[0]`, `[1]`, and `[2]`
+      * `[0]` retrives the first portion of the variable `timesplit`
+         * Thus, `timeSplit[0]` returns the value of `HH` from the variable of `timesplit`
+         * Multiplying this value of hours by 3600 in turn converts the hours to seconds
+      * `[1]` retrieves the second portion of the variable `timesplit`
+         * Thus, `timeSplit[1]` returns the value of `MM` from the variable of `timesplit`
+         * Multiplying this value of minutes by 60 in turn converts the minutes to seconds
+      * `[2]` retrieves the second portion of the variable `timesplit`
+         * Thus, `timeSplit[2]` returns the value of `ss` from the variable of `timesplit`
+         * Multiplying this value of seconds by 1 leaves the time in seconds
+
+1. Defining the New Time
+
+```
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+```
+
+   * This portion of the script defines the new time to be calculated from the start time
+   * The line `var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");` calculates a new time in seconds by adding X amount of seconds to the initial start time in seconds
+      * `(timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1)` converts the initial start time to be a total of seconds
+      * `+ "INTERVAL LENGTH X"` adds X amount of seconds to this start time total of seconds to result in the new desired calculated time
+         * Thus, if the desired calculated time is to be 25 seconds after the start time, the line of code should look like the following:
+            * `var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + 25);`
+   * The lines of code following this line convert this new total of time of seconds into hours, minutes, and seconds
+      * `hours = Math.floor(newtotalSec/3600);` converts the new total start time in seconds into hours
+         * The function `Math.floor()` rounds the number in hours down, leaving only the number of hours with no decimal value
+         * Thus, if the new total time of seoonds converts into 2.56 hours, the `Math.floor()` returns a value of 2 hours
+      * `minutes = Math.floor((newtotalSec % 3600)/60);` converts the new total start time of seconds into minutes
+         * The operator `%` is the remainder operator and returns only the remainder after integer division is completed
+         * Thus, `newtotalSec % 3600` returns only the remainder of seconds that did not divide wholly into hours. Dividing this value by 60, leaves the remainder in minutes.
+      * `seconds = newtotalSec % 60;` returns the remainder of seconds that did not divide wholly into hours or minutes
+         * Thus, this leaves the number of seconds to be left in `HH:MM:ss` format
+      * After these three lines of code, three new variables have been created: the number of hours, minutes, and seconds in the new total start time of seconds
+
+1. Defining the Time Output
+
+```
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+   * This portion of the script defines the final time calculated in `HH:MM:ss` time format
+   * The line `timeOutput = hours + ":" + minutes + ":" + seconds;` defines a new variable of the new total time in `HH:MM:ss` time format
+      * This line takes the previously defined variables of `hours`, `minutes`, and `seconds` and adds colons between them to give the new total calculated time in `HH:MM:ss` time format
+   * The line `event.value = timeOutput` then defines the new total time in `HH:MM:ss` to be the output value of the field
+
+The following is an example script for creating a new calculated time 10 seconds after the start time:
+
+```
+var timestarted = this.getField("task_start_time").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + 10);
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+*Note.* When creating multiple time calculated fields, each field should be calculated off of the intitial time.
+Calculated time fields should ***NOT*** be calculated off each other.
+For example, if five calculated time fields must be created, each 10 seconds apart from each other, one should **not** calculate each time field 10 seconds based off the previously calculated time.
+Instead, each field should be calculated based off of the initial start time.
+Thus, the first calculated field should add 10 seconds to the initial start time.
+The second calculated field should add 20 seconds *based off the initial start time*.
+The third calculated field should add 30 seconds based off the initial start time.
+And so forth.
+This ensures that no errors occur from calculating times based off times in fields that are already being calculated.
+
+<br>
+
+*Note.* Time calculated fields cannot be overwritten.
+One cannot manually overwrite the calculated time in a field with an alternative time.
+The field will always read the time calculated according to the inputted script.
+This should be kept in mind when creating multiple field that feature X second consecutive intervals.
+If at any point the intervals should be interrupted and a new time must be manually entered, it cannot be done.
+A potential means to work around this issue is found in the Token/Bead Sort example.
+
+### The Perfect Example: Token/Bead Sort
+
+The Token/Bead Sort coding form provides a perfect example of time calculations, action buttons, and hidden fields at play.
+Token/Bead Sort consists of 18 ten second intervals.
+All of these intervals occur after a specified start time and should always be 10 seconds apart.
+However, if an interruption should occur during the task, a new start time must be entered into one of the intervals from which the following intervals should calculated from.
+Due to the time fields being calculated, the time values cannot be manually overwritten.
+The following solution is implemented to work around this:
+
+1. Time calculations are made for each of the initial 18 intervals
+   * Each of these intervals calculate from the intial start time
+      * Thus, the first interval calculates ten seconds from the initial start time, the second interval 20 seconds from the start time, the third interval 30 seconds from the start time, etc.
+   * When the initial time is inputted, each of these intervals calculate automatically
+1. A second set of text fields are made for each of these 18 intervals
+   * These fields have no calculations applied to them
+   * These 18 fields are set to be [hidden](adobe.html#hiddenfields) from user view
+   * These 18 fields serve to allow for manually entry of a time in case of an interruption
+   * The 18 fields are positioned over the initial 18 fields which do the contain the calculations
+1. A set of 18 buttons are created, one for each interval
+   * Each button corresponds to an interval and is configured with actions to hide the calculated time interval it corresponds to and show the second text time field which allows for manual entry that it corresponds to
+   * Each of these buttons serves to hide the calculated time field for the interval in which the interruption occurs and all the following intervals
+   * Each button also shows the second time text field which allows for manual entry and also reveals the manual entry fields for all the following intervals
+   * Each of these buttons is also set to be hidden from user view
+1. At the top of the coding form, the radio buttons for the "Was there an interruption in the task?" question are assigned actions
+   * If "Yes" is selected, the 18 buttons are revealed and shown to the user
+   * If "No" is selected, the 18 buttons are hidden
+   * Thus, when the user selects that an interruption occurred, the 18 buttons appear and allow the user to select the interval in which the interruption occurred.
+   When the button is pressed, the automatically calculated time fields are hidden for that interval and subsequent intervals, and the fields that allow for manual entry are shown for that interval and subsequent intervals.
+   This allows for time calculations to be implemented even when interruptions occur
+1. Refer to the Token/Bead Sort coding form in order to gain further understanding of this setup
+
+## Calculating the Highest Level from a Row of Values
+
+The following script returns the highest level of a behavior.
+For example, a behavior may be coded for the number of times it occurs at different levels of intensity.
+If one wants the highest level of intensity the behavior occurred at, regardless of the number of times it occurred, the following script can be utilized:
+
+*Note.* The following script was created for a unique situation.
+Essentially, the script utilizes multiple if/else statements.
+How to employ if/else statements and conditionals are outlines above.
+Thus the explanation of how this specific script operates is less technical and brief.
+The building blocks of how to understand this script at a more technical level are provided above.
+
+
+```
+var v1= getField("intensity_of_behavior_1").value
+var v2= getField("intensity_of_behavior_2").value
+var v3= getField("intensity_of_behavior_3").value
+var v4= getField("intensity_of_behavior_4").value
+var v5= getField("intensity_of_behavior_5").value
+var v6= getField("intensity_of_behavior_6").value
+
+
+if (v6 > 0) {
+  total6 = 6;
+} else {
+  total6 = 0;
+}
+
+
+if ((v5 > 0) && (v6 <= 0)) {
+  total5 = 5;
+} else {
+  total5 = 0;
+}
+
+
+if ((v4 > 0) && (v6 <= 0) && (v5 <= 0)) {
+  total4 = 4;
+} else {
+  total4 = 0;
+}
+
+if ((v3 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0)){
+  total3 = 3;
+} else {
+  total3 = 0;
+}
+
+if ((v2 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0) && (v3 <= 0)){
+  total2 = 2;
+} else {
+  total2 = 0;
+}
+
+if ((v1 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0) && (v3 <= 0) && (v2 <= 0)){
+  total = 1;
+} else {
+  total = 0;
+}
+
+event.value = total + total2 + total3 + total4 + total5 + total6
+```
+
+   * The above script uses if/else statements to determine the highest level at which the behaviors occurs
+      * Double ampersands are used to create conditional statements with multiple conditions
+   * Plainly, the above script asks whether the behavior occurs at least once at each level of intensity
+      * If the behavior occurs at the highest level of intensity, the total returns a 6 which signifies the highest level of intensity
+      * If the behavior does not occur at the highest level, it asks whether there is a value present for the second highest level.
+      If there is, the total returns a 5 which significes the second highest level of intensity
+      * If the behavior does not occur at the second highest level, it asks whether there is a value for the third highest.
+      If not at the third highest, it asks at the fourth highest, and so forth.
+   * This script may be modified to be employed in a variety of situations
+   * The above script can be found in the Parental Sensitivity and Parental Intrusiveness Coding Forms
+      * These forms should be studied in order to gain greater understanding of the specific context for which this script was created and how might it be applied to other contexts
+
 
 # How To Split PDF Files into Multiple Documents
 
