@@ -70,7 +70,8 @@ knitr::opts_chunk$set(
 Follow the instructions here to connect `VSCode` to `R`:
 https://stackoverflow.com/a/66069540/2029527 (archived at https://perma.cc/FCF5-26BT)
 
-1. Install the `R` extension
+1. Install `R` using the inital setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
+1. Install the `R` extension for `VSCode`
 1. Go into the `R` extension settings
 1. Set the `R` path to the path of your `R` installation:
     - e.g., `C:\\R\\R-4.3.1\\bin\\x64\\R.exe`
