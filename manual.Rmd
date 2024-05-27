@@ -924,7 +924,8 @@ If a family asks you a question such as:
 
 Our response could be:
 
-"We want to simulate as close to a home and school environment as we can.
+"We are interested in understanding the full range of differences between children and families.
+We want to simulate as close to a home and school environment as we can.
 We just ask that you act as you would normally."
 
 ### How to Give Praise {#praise}
