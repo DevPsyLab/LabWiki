@@ -911,22 +911,23 @@ Do not put personnel grievances in lab reports.
 
 ### When Interacting With Families in the Lab
 
+We treat our participants like royalty—we would not have a study without them.
 We strive to ensure families are as comfortable as possible in the lab.
-We want to be non-judgmental.
+To this aim, it is important to be non-judgmental.
 Families should not feel like they are being tested.
 If a family feels they are being tested, they may also feel they have failed if a task does not go as expected.
-For example, if we instruct a parent not to let their kids touch the toys and the kid does, we leave open the possibility a family could be embarrassed.
+For example, if we instruct a parent not to let their child touch the toys and the child does, we leave open the possibility that a family could be embarrassed.
 
 If a family asks you a question such as:
 
 "Do you ask us to stop our kids from touching the toys to see if they will do it?"
 
-Our response could be: 
+Our response could be:
 
 "We want to simulate as close to a home and school environment as we can.
-We just ask that you act normally."
+We just ask that you act as you would normally."
 
-### How to Give Praise
+### How to Give Praise {#praise}
 
 **Syntax**: Praise + Effort + Specific
 
