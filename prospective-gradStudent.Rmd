@@ -61,7 +61,7 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 - quantitative/statistical skills
 - academic preparedness for graduate school
 - whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html)
-  - for instance, my lab looks for students who will both benefit from—and contribute to—our team and the collaborative environment, and who will regularly be in the lab (as described in the [lab expectations for graduate students](expectations-gradStudent.html)); we are not looking for "lone wolves"
+  - for instance, my lab looks for students who will both benefit from—and contribute to—our team and the collaborative environment, and who will work in lab during the workday (as described in the [lab expectations for graduate students](expectations-gradStudent.html)); we are not looking for "lone wolves"
 
 In addition, successful applicants to my lab tend to have at least two years of research experience and to be involved in research when applying.
 
