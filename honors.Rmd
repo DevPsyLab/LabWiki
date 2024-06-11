@@ -249,6 +249,7 @@ Below is a list of potentially relevant conferences:
 - Society for Neuroscience (SFN)
 - Cognitive Development Society (CDS)
 - International Meeting of the Psychometric Society (IMPS)
+- Modern Modeling Methods (MMM)
 
 # Publishing {#publishing}
 
