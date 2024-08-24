@@ -34,11 +34,12 @@ Here are the expectations regarding your schedule:
 - You are in the office for 40 hours per week that are regularly scheduled between 9am–5pm Monday through Friday.
 - You may have to work outside those hours (early mornings/evenings/weekends) for the purpose of running participants.
 - You get approval from me for any deviations from this schedule (working outside those hours, working more than 40 hours, etc.), and update your schedule accordingly in the online calendar.
+- If your position requires you to log hours, you log hours worked using your Employee Self Service and submit them to Dr. Petersen—your log should not exceed 40 hours in a week.
 - The position involves fully in-person work.
 - You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
-- For time off, you get my approval with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
+- You submit time off requests to me with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
 
 # Communication {#communication}
 
