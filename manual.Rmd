@@ -376,6 +376,7 @@ Our buddy system is a knowledge-sharing method that we use when onboarding new R
 Each new RA is paired up with an existing RA who will guide them through their first weeks in their new role.
 The exchange of information goes both ways.
 New RAs are encouraged to share tips, knowledge, and techniques from previous experiences, while the existing RAs makes sure that new lab members feel welcome. 
+**Senior RAs are expected to reach out to their lab buddy at least twice a semester to check in on the junior RAs progress in lab.**
 
 During their first weeks, new RAs can feel very overwhelmed and lost, because they are presented with considerable new information in a short amount of time.
 Although new RAs typically have the essential skills and interests to succeed in the lab, they are unfamiliar with the work culture, the lab processes, and "unspoken rules[^1]."
@@ -666,25 +667,9 @@ You should simply choose the channel that seems most relevant to the question or
 It is important to remember that, even though different team members are assigned different tasks within the lab, it does not mean that it is any less important for the whole team to stay informed about the general projects of the lab.
 We are all collaborating on the same project, on the same team, and working toward the same general goals.
 
-### Trello
+### Tasks
 
-1. Log on to https://trello.com using your username and password
-1. On the "RAs" Board, there are categories of items that are performed in our lab
-    a. Each of these categories has a list of cards with a title
-        i. Within these cards, you can comment on what needs to be done, ideas for the titled item, etc. 
-        ii. Members, due dates, attachments can also be added; to assign a person to work on a card, add them to members 
-        iii. To notify specific people in comments, use `@username`
-    b. If you would like to add a card to the desired category, you can go to the bottom of the column and click on 'Add a card…' 
-1. When working on a card, move the specific card to the 'Doing' category, so that others know you are working on that task
-1. When the task is completed, and does not need to be followed up by another person, move the card from 'Doing' to 'Done'
-1. When you are assigned a task in Trello that requires another labmate to follow-up:
-    a. The 1st person is assigned task (member 1 icon shows on card)
-    b. 1st (member 1) completes task (i.e., enters questionnaire)
-    c. 1st assigns a reviewer (member 2 icon shows on card) 
-    d.	Reviewer makes comments and removes their icon—signaling to 1st that task is ready for updates 
-    e. 1st reads comments and makes updates 
-    f. 1st assigns final reviewer (member 3 icon shows on card)
-    g. Final reviewer makes additional comments and removes icon (signaling member 1 that changes have been reviewed and is ready for final updates) OR determines that task is complete and moves card to <u>**DONE**</u> column.
+1. 
 
 ### Social Media {#socialMedia}
 
