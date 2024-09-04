@@ -46,9 +46,10 @@ Here are what trainees can expect of me:
 
 # What I expect of trainees {#myExpectations}
 
-Here is what trainees I expect of trainees:
+Here is what I expect of trainees:
 
 1. Maintain good progress on research and training-related activities
+1. Work in lab during the workday (when you are not in class, teaching, or doing clinical work)
 1. Conduct all research and training-related activities responsibly
 1. Respect other lab members
 
@@ -399,7 +400,7 @@ For longer communication, please call or stop by my office.
 I find this much more efficient and pleasant than writing and reading lengthy communication.
 For sending manuscripts, personal information, and messages that do not need an urgent response, you may email me.
 Please limit your use of email as much as possible.
-[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid) (archived at https://perma.cc/9XJE-BM8N); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
+[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid) (archived at https://perma.cc/T855-U9MQ); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
 I encourage you to stop by my office or to call my office phone instead of relying on email, whenever possible.
 
 When you contact me or send me materials, you can expect me to respond promptly.
@@ -414,7 +415,7 @@ Allow a minimum of one week prior to submission deadlines for me to read and res
 Please do not assume I can read materials within a day or two, especially when I am traveling.
 Please only send drafts of manuscripts, grant proposals, dissertations, etc. when they are your <u>best possible work</u> (the Henry Kissinger criterion).
 That means going through multiple revisions, reading it out loud to yourself, etc.
-Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.21992)):
+Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://doi.org/10.1002/jwmg.21992)):
 
 > "Henry Kissinger, a former Secretary of State under President Nixon, understood the importance of continually improving writing skills.
 > Winston Lord was Kissinger's speech writer and during the late 1960s and early 1970s, Lord had been tasked with writing a speech about three important foreign policy projects: the opening of China to the West, bringing the Vietnam War to a close, and an attempt to improve relations with the Russians.
