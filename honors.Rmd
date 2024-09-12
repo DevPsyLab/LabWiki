@@ -16,7 +16,12 @@ You are encouraged to think about what research questions you have, what you are
 If you are unsure what are the kinds of questions you could ask, you are encouraged to examine prior [lab publications](https://developmental-psychopathology.lab.uiowa.edu/publications) and prior Honors theses by students in the lab (located at the following location on the lab drive: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\`).
 You may also meet with other members of the lab, including undergraduate RAs, graduate students, lab staff, and Dr. Petersen, to hone your research question(s) and hypotheses, to learn how to conduct and interpret the analyses, and to learn how to write about/present your findings, etc.
 Note: work related to independent projects is expected to take place \*outside\* of your regular 10 hours in the lab.
+
 If you are interested, you may pursue an Honors project and thesis, as long as you have a full year available (and the time necessary) to conduct the project and you meet the other expectations for Honors projects described [here](#expectations-thesis).
+However, you may also pursue an independent project without pursuing an Honors project/thesis.
+Regardless of which path your pursue, you are encouraged to present your findings at the UI Undergraduate Research Festival or other [conferences](#conferences).
+
+Please read all of the sections below; they provide resources to help you succeed in your independent project and provide important expectations regarding data confidentiality etc.
 
 # Overview of Honors Options {#options}
 
