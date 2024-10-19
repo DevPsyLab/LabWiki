@@ -20,9 +20,9 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
 1. Report numbers to two decimal places; report *p*-values to three decimal places.
 1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively.
-1. Know the difference between a "hypothesis" and a prediction—and use them correctly ([Eastwell, 2014](https://files.eric.ed.gov/fulltext/EJ1057150.pdf); archived at https://perma.cc/8EX4-8JYN).
+1. Know the difference between a "hypothesis" and a "prediction"—and use them correctly.
 A hypothesis is a proposed explanation.
-A prediction is the expected result of a test that is derived, by deduction, from a hypothesis or theory.
+A prediction is "the expected result of a test that is derived, by deduction, from a hypothesis or theory" ([Eastwell, 2014](https://files.eric.ed.gov/fulltext/EJ1057150.pdf); archived at https://perma.cc/8EX4-8JYN).
 Here is an example of a hypothesis and the resulting prediction:
 <br>
 "We <u>*hypothesize*</u> that poor language skills leads to physical aggression because of difficulties in (a) using language as a self-regulatory tool resulting in dysregulated behavior, in (b) interactions with peers leading to peer rejection and resulting frustration, and in (c) communicating one's needs and having one's needs met leading to frustration and to resorting to other methods to achieve one's goals.
