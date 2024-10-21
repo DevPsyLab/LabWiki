@@ -60,12 +60,14 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 - evidence of high-quality, independent research experience
     - e.g., Honors project, senior thesis, independent research project, first-authored publications in strong peer-reviewed journals, first-authored posters or presentations at strong national or international conferences, and grant/fellowship submissions—these are just examples (you are not expected to have all of these!)
     - In general, it is helpful for you to have strong experience with all aspects of the research process—including developing a research question, formulating a hypothesis, developing a study to test your question, conducting the statistical analysis, interpreting the findings, writing up the findings, and presenting the findings to others—so a) you know what you'd be signing up for by joining a [research-focused Ph.D. program](#fit-program) and b) you are [ready to hit the ground running](#fit-lab).
+    - Although experience with methods that are similar to the method my lab uses can be helpful, you are *not* expected to have experience with the methods we use.
+    If you have a strong foundational background dealing with scientific research, technology, statistics, etc., you will be able to learn our methods.
 - writing skills, especially in scientific writing
 - quantitative/statistical skills
 - academic preparedness for graduate school
 - intellectual curiosity
 - whether they will work well with others—including our team and others in the program
-- whether they are "hungry" and have a "[fire in the belly](https://en.wiktionary.org/wiki/fire_in_the_belly)": "the emotional stamina and vigor, passion, or inner drive to achieve something"
+- whether they have "drive" and a "[fire in the belly](https://en.wiktionary.org/wiki/fire_in_the_belly)": "the emotional stamina and vigor, passion, or inner drive to achieve something"
 - whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html)
   - for instance, my lab looks for students who will both benefit from—and contribute to—our team and the collaborative environment, and who will work regularly in the lab (i.e., during the workday, as described in the [lab expectations for graduate students](expectations-gradStudent.html)); we are not looking for "lone wolves"
 
