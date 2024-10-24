@@ -14,7 +14,8 @@ knitr::opts_chunk$set(
 Below are writing guidelines for the Developmental Psychopathology Lab:
 
 1. Follow APA style.
-1. Follow the style and author guidelines of the target journal; where the style of the target journal differs from APA style, follow the style of the target journal.
+1. If you are unsure about grammar, spelling, punctuation, capitalization, etc., follow the [UI Editorial Study Guide](https://brand.uiowa.edu/editorial-style-guide), where it does not conflict with APA style.
+1. Follow the style and author guidelines of the target journal; where the style of the target journal differs from APA style and/or the UI Editorial Study Guide, follow the style of the target journal.
 1. Use EndNote or Zotero for reference management.
 1. In empirical papers, include a correlation matrix with descriptive statistics for your model variables.
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
