@@ -594,9 +594,9 @@ Keeping lab-related communication on Slack helps our team work most effectively 
         - Slack communication can be informal!
         We want it to be a fun place to communicate and chat with the team.
         Feel free to post memes, set up lab-wide social gatherings, etc.
-1. Private lab-related communication 
+1. Private/personal lab-related communication 
     - Send to: devpsy-lab@uiowa.edu
-        - Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
+        - Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, requesting changes to your schedule, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
 1. Communication directed specifically to Dr. Petersen rather than to the lab (e.g., to set up a meeting to discuss career goals, honors projects, etc.)
     - Send email to [Dr. Petersen](https://psychology.uiowa.edu/people/isaac-petersen)
 1. Communication directed to the past members of the lab (e.g., to setup a social gathering)
