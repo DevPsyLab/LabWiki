@@ -116,7 +116,7 @@ With the exception of running participants or recruitment activities, lab hours 
 We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
 Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, in person or by email.
 We expect RAs to let us know, in advance and in person or by email, if they need to reschedule lab hours, and to let us know, as soon as possible and by Slack, if they will be late to a scheduled shift or visit.
-The changes to your lab schedule described above should be rare—other team members count on you being there during your scheduled shift.
+The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift.
 If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
 If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.
 
