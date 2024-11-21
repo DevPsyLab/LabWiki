@@ -39,7 +39,7 @@ We want to ensure that RAs get the most value out of their experience with our l
 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
 If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks. 
-Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person or via email to the lab email (devpsy-lab@uiowa.edu) by 5:00 pm the day prior to the requested time off.
+Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person, by phone, or via email to the lab email (devpsy-lab@uiowa.edu) by 5:00 pm the day prior to the requested time off.
 Do not send requests to change your schedule via Slack.
 
 Unless otherwise stated, running lab visits is always the top priority.
@@ -114,8 +114,8 @@ The RA will be encouraged to contribute to both the formulation of research ques
 
 With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
 We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
-Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, in person or by email.
-We expect RAs to let the Lab Coordinator know, in advance and in person or by email (devpsy-lab@uiowa.edu), if they need to reschedule lab hours, and to let the the Lab Coordinator and relevant team members know, as soon as possible and by Slack, if they are running late to a scheduled shift, visit, or meeting.
+Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, in person, by phone, or by email.
+We expect RAs to let the Lab Coordinator know, in advance and in person, by phone, or by email (devpsy-lab@uiowa.edu), if they need to reschedule lab hours, and to let the the Lab Coordinator and relevant team members know, as soon as possible and by Slack, if they are running late to a scheduled shift, visit, or meeting.
 The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift.
 If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
 If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.
