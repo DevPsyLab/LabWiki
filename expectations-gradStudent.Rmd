@@ -176,7 +176,7 @@ Work-life balance and vacation time are essential for creative thinking and good
 You can take three weeks of vacation time each year, and you are not expected to work during [university holidays](https://grad.uiowa.edu/graduate-student-employment-agreement/paid-leaves-and-holiday).
 In addition, I do not expect students to work between 12/15 and the first week of January.
 Please discuss your vacation plans with me before booking your trip.
-Submit requests for time off in person or via email, not by Slack.
+Submit requests for time off in person, by phone, or via email, not by Slack.
 Consult with me and notify fellow lab members in advance of any planned absences, with as much advance notice as possible—at least two weeks' notice or more if feasible.
 Please plan that if you are away, others will need to take over your responsibilities, so planning for adequate lead time and training may be necessary.
 Please discuss with me if you plan to take a summer internship or bootcamp.
