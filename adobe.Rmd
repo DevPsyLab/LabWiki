@@ -1,5 +1,8 @@
 ---
 title: "Adobe Best Practice Guide"
+output:
+  html_document:
+    code_folding: show
 ---
 
 ```{r setup, include = FALSE}
