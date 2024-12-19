@@ -489,9 +489,7 @@ Here is a description of the different calendars and instructions how to use the
     Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar. 
     To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the current LC as a required attendee.
     This will notify the LC of your request for time off and allow them to accept or decline the request.
-    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e. over hours, doctors appointment). 
-    **If your request is within 48 hours of the day you wish to be off, you must create the calendar entry *AND* slack the current Lab Coordinator in the `#lab-time` channel.** 
-
+    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e. over hours, doctors appointment).
 
 ## TimeClock 
 
@@ -637,7 +635,6 @@ We encourage you to express concerns to the chain of command if you feel the iss
 - `#lab-admin`
 - `#lab-design`
 - `#lab-meetings`
-- `#lab-time`
 - `#measures`
 - `#opportunities`
 - `#procedures`
