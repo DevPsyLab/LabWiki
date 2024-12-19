@@ -458,7 +458,7 @@ During this one week, RAs will have the opportunity to make any final adjustment
 RAs must notify the Lab Coordinator of any trades/changes to their weekend sign ups within this week.
 Remember, at the end of the one week, everyone should still be signed up for a total of 8 days, and everyone will be responsible for helping run any visits that may be scheduled on those days.
 
-## Shared Calendars
+## Shared Calendars {#sharedCalendar}
 
 How to add the shared calendars:
 
@@ -486,10 +486,8 @@ Here is a description of the different calendars and instructions how to use the
     You can view but not edit this calendar.
 1. RES-DPL-Busy
     - This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester, this includes time you may be taking off from your normal scheduled hours.
-    Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar. 
+    Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar once your request is approved by the Lab Coordinator.
     To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the current LC as a required attendee.
-    This will notify the LC of your request for time off and allow them to accept or decline the request.
-    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e. over hours, doctors appointment).
 
 ## TimeClock 
 
