@@ -66,6 +66,7 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 - quantitative/statistical skills
 - academic preparedness for graduate school
 - intellectual curiosity
+- English-language proficiency for scientific writing, [teaching](https://grad.admissions.uiowa.edu/international/english-proficiency-evaluation), and (if relevant) clinical work
 - whether they will work well with others—including our team and others in the program
 - whether they have "drive" and a "[fire in the belly](https://en.wiktionary.org/wiki/fire_in_the_belly)": "the emotional stamina and vigor, passion, or inner drive to achieve something"
 - whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html)
