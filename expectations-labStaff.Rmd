@@ -37,7 +37,7 @@ If we discuss the schedule changes in person or by phone, you email me after we 
 - You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.
 - You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
-- You submit time off requests to me and the Lab Coordinator, in person or by email, with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
+- You submit time off (or other) requests to me in person, by phone, or via email (not by Slack) with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
 
 # Communication {#communication}
 
