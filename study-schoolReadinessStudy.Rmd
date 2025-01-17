@@ -77,7 +77,7 @@ The exclusion criteria are:
 - The child has extremely poor expressive and receptive language skills in English (i.e., the child would not be able to speak or understand basic task instructions)
 - The child does not have a permanent guardian (i.e., the child is in foster care or is a ward of the State)
 
-# Research Design
+# Research Design {#researchDesign}
 
 Each participant is assessed every 9 months for each of 4 timepoints, a total of 2¼ years.
 Lab Visit 1 and Lab Visit 2 are completed approximately one week apart at each timepoint.

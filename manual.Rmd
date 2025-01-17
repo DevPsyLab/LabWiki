@@ -370,7 +370,7 @@ If you would like to learn more about either of these opportunities, or any othe
 
 For information on conducting an Honors Thesis/Project, see [here](honors.html).
 
-# Lab Buddy System
+# Lab Buddy System {#labBuddySystem}
 
 Our buddy system is a knowledge-sharing method that we use when onboarding new RAs into the lab.
 Each new RA is paired up with an existing RA who will guide them through their first weeks in their new role.
@@ -486,10 +486,14 @@ Here is a description of the different calendars and instructions how to use the
     You can view but not edit this calendar.
 1. RES-DPL-Busy
     - This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester, this includes time you may be taking off from your normal scheduled hours.
-    Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar once your request is approved by the Lab Coordinator.
+    Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar. 
     To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the current LC as a required attendee.
+    This will notify the LC of your request for time off and allow them to accept or decline the request.
+    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e. over hours, doctors appointment). 
+    **If your request is within 48 hours of the day you wish to be off, you must create the calendar entry *AND* slack the current Lab Coordinator in the `#lab-time` channel.** 
 
-## TimeClock 
+
+## TimeClock {#timeClock}
 
 `OpenTimeClock2008` is the program we use for keeping track of RA lab hours.
 Each RA is expected to clock in before beginning lab-related work (including running visits, but if you come in early to each lunch, visit with other RAs, or anything else NOT lab work-related, then do not clock in until you are ready to work), and to clock out when they have stopped lab-related work (e.g., if you leave to get lunch, please clock out then clock back in again when you return to work).
@@ -514,7 +518,7 @@ To use this program to view your current hours for the semester:
 There, you will find text that reads "total hours," and should list your total time clocked-in in hours and minutes.
 If you are unsure of how many total hours you need for a semester, ask the Lab Coordinator.
 
-# The Basics of Lab
+# The Basics of Lab {#basicsLab}
 
 ## Lab Meetings {#lab-meetings}
 
@@ -532,7 +536,6 @@ If you have questions or suggestions, please raise them.
 ### Article Discussion {#articleDiscussion}
 
 Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a <u>peer-reviewed, empirical research article</u> of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
-For info on how to find articles, see [here](honors.html#articles).
 Article discussions serve several purposes:
 
 - in the spirit of getting course credit for lab experience, article discussions provide a seminar forum for learning about science
@@ -590,9 +593,9 @@ Keeping lab-related communication on Slack helps our team work most effectively 
         - Slack communication can be informal!
         We want it to be a fun place to communicate and chat with the team.
         Feel free to post memes, set up lab-wide social gatherings, etc.
-1. Private/personal lab-related communication 
+1. Private lab-related communication 
     - Send to: devpsy-lab@uiowa.edu
-        - Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, requesting changes to your schedule, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
+        - Examples: Sending your course schedule for the upcoming semester, notifying Lab Coordinator of an absence due to personal reasons/illness, asking Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
 1. Communication directed specifically to Dr. Petersen rather than to the lab (e.g., to set up a meeting to discuss career goals, honors projects, etc.)
     - Send email to [Dr. Petersen](https://psychology.uiowa.edu/people/isaac-petersen)
 1. Communication directed to the past members of the lab (e.g., to setup a social gathering)
@@ -742,7 +745,7 @@ This folder includes:
 Lab report folders can only be accessed by the RA who owns it, the Lab Coordinator, and Dr. Petersen.
 Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which should be used to archive old lab reports—in other words, every time you save a new lab report to your root lab report folder, you should move the previous one to the "Past Lab Reports_HawkID" folder.
 
-## Lab Drive
+## Lab Drive {#labDrive}
 
 **&#35;1 Rule: Never delete any documents or data without explicit permission from the Lab Coordinator, graduate students, or Dr. Petersen first.**
 
