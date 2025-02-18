@@ -11,6 +11,11 @@ knitr::opts_chunk$set(
 
 # REDCap Data Management
 
+REDCap Support Contact: redcap@icts.uiowa.edu 
+
+REDCap also hosts virtual office hours.
+See [here](https://its.uiowa.edu/services/redcap-research-electric-data-capture) for schedule and additional information. 
+
 ## Updating instruments in REDCap {#updates}
 
 1. Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. 
