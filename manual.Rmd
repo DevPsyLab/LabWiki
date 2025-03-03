@@ -488,9 +488,6 @@ Here is a description of the different calendars and instructions how to use the
     - This is where you are expected to mark yourself as unavailable for any scheduling commitments that come up during the weekly availability you submitted at the beginning of the semester, this includes time you may be taking off from your normal scheduled hours.
     Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar once your request is approved by the Lab Coordinator.
     To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the Lab Coordinator as a required attendee.
-    This will notify the Lab Coordinator of your request for time off and allow them to accept or decline the request.
-    Additionally, you must put in the description the reason for why you are not available during your regularly scheduled hours (i.e., over hours, doctors appointment).
-    **If your request is within 48 hours of the day you wish to be off, you must create the calendar entry *AND* check with the Lab Coordinator in person, by phone, or by email.**
 
 ## TimeClock {#timeClock}
 
