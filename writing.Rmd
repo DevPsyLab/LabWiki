@@ -18,6 +18,8 @@ Below are writing guidelines for the Developmental Psychopathology Lab:
 1. Follow the style and author guidelines of the target journal; where the style of the target journal differs from APA style and/or the UI Editorial Study Guide, follow the style of the target journal.
 1. Use EndNote or Zotero for reference management.
 1. In empirical papers, include a correlation matrix with descriptive statistics for your model variables.
+1. Align decimal numbers in tables.
+For guidance on how to do this in Microsoft Word, see [here](https://wordribbon.tips.net/T011852_Aligning_Decimal_Numbers_in_Tables.html) (archived at https://perma.cc/KW6J-DQ3Z).
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
 1. Report numbers to two decimal places; report *p*-values to three decimal places.
 1. Know the difference between a "hypothesis" and a "prediction"—and use them correctly.
