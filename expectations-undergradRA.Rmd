@@ -48,7 +48,7 @@ Do not send requests to change your schedule via Slack.
 If the request is approved, create a calendar entry on the Busy calendar, as described [here](manual.html#sharedCalendar).
 
 Unless otherwise stated, running lab visits is always the top priority.
-You are expected to arrive 45 minutes before the scheduleld start time of visits.
+You are expected to arrive 45 minutes before the scheduled start time of visits.
 If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.
 If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.
 
