@@ -1,0 +1,180 @@
+---
+title: "Qualtrics Manual"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = TRUE,
+  comment = "")
+```
+
+# Using JavaScript {#javascript}
+
+The base structure of JavaScript syntax in Qualtrics is as follows:
+
+```javascript
+Qualtrics.SurveyEngine.addOnload(function()
+{
+	/*Place your JavaScript here to run when the page loads*/
+
+});
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+	/*Place your JavaScript here to run when the page is fully displayed*/
+
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+	/*Place your JavaScript here to run when the page is unloaded*/
+
+});
+```
+
+## Absolute Frequency Items {#absoluteFrequency}
+
+Absolute frequency items have three columns:
+
+1. "amount", i.e., number of times per interval
+1. "timeframe", i.e., per day/week, in the past month, in the past year
+1. "not in the past year"
+
+where respondents are expected to fill in the first two columns and check the third column if they have not experienced the event in the past year.
+That is, the respondent should fill in EITHER the first two columns OR check the third column.
+The JavaScript code below is used to ensure that if the third column is checked, the first two columns are hidden and cleared.
+It also ensures that at least one of the first two columns is filled in or that the third column is checked before allowing the survey next button to be clicked to advance the survey to the next page.
+
+```javascript
+Qualtrics.SurveyEngine.addOnReady(function () {
+    console.log("✅ JS is running!");
+
+    var matrix = this.getQuestionContainer();
+    var rows = matrix.querySelectorAll("tr.Choice");
+
+    // Widen the header (leftmost) column
+    var headerCell = matrix.querySelector("th");
+    if (headerCell) {
+        headerCell.style.width = "300px";
+    }
+
+    for (var r = 0; r < rows.length; r++) {
+        (function (row, rowIndex) {
+            var cells = row.querySelectorAll("td");
+            if (cells.length < 9) return;
+
+            var textCell = cells[2];       // SBS1: text input
+            var dropdownCell = cells[5];   // SBS2: dropdown
+            var checkboxCell = cells[8];   // SBS3: checkbox
+            var checkbox = checkboxCell.querySelector('input[type="checkbox"]');
+            var inputField = textCell.querySelector('input[type="text"]');
+            var dropdownField = dropdownCell.querySelector('select');
+
+            // Widen the leftmost item label column (first td)
+            var labelCell = row.querySelector("td:first-child");
+            if (labelCell) {
+                labelCell.style.width = "300px";
+            }
+
+            // Set column widths
+            textCell.style.width = "100px";        // Smaller input box
+            dropdownCell.style.width = "160px";    // Wider dropdown
+            checkboxCell.style.width = "120px";    // Checkbox column wider
+            checkboxCell.style.textAlign = "center";
+
+            // Prevent input cells from adding extra borders
+            textCell.style.borderRight = "none";
+            dropdownCell.style.borderRight = "none";
+
+            // Format separators
+            for (var i = 0; i < cells.length; i++) {
+                if (cells[i].className.indexOf("Separator1") !== -1 || cells[i].className.indexOf("Separator2") !== -1) {
+                    cells[i].style.display = "";
+                    cells[i].style.minWidth = "1px";
+                    cells[i].style.width = "1px";
+                    cells[i].style.borderRight = "1px solid #ccc";
+                    cells[i].style.borderLeft = "none";
+                    if (cells[i].innerHTML.trim() === "") {
+                        cells[i].innerHTML = "&nbsp;";
+                    }
+                }
+            }
+
+            if (checkbox && checkbox.checked) {
+                textCell.style.visibility = "hidden";
+                dropdownCell.style.visibility = "hidden";
+                textCell.style.border = "none";
+                dropdownCell.style.border = "none";
+                if (inputField) inputField.value = "";
+                if (dropdownField) dropdownField.selectedIndex = 0;
+            }
+
+            if (checkbox) {
+                checkbox.addEventListener("change", function () {
+                    var hide = checkbox.checked;
+
+                    textCell.style.visibility = hide ? "hidden" : "visible";
+                    dropdownCell.style.visibility = hide ? "hidden" : "visible";
+                    textCell.style.border = hide ? "none" : "";
+                    dropdownCell.style.border = hide ? "none" : "";
+
+                    if (hide) {
+                        if (inputField) inputField.value = "";
+                        if (dropdownField) dropdownField.selectedIndex = 0;
+                    }
+
+                    for (var i = 0; i < cells.length; i++) {
+                        if (cells[i].className.indexOf("Separator1") !== -1 || cells[i].className.indexOf("Separator2") !== -1) {
+                            cells[i].style.display = "";
+                            cells[i].style.minWidth = "1px";
+                            cells[i].style.width = "1px";
+                            cells[i].style.borderRight = "1px solid #ccc";
+                            cells[i].style.borderLeft = "none";
+                            if (cells[i].innerHTML.trim() === "") {
+                                cells[i].innerHTML = "&nbsp;";
+                            }
+                        }
+                    }
+                });
+            }
+        })(rows[r], r);
+    }
+
+    this.disableNextButton();
+    var that = this;
+
+    function validateRows() {
+        var allValid = true;
+
+        for (var r = 0; r < rows.length; r++) {
+            var cells = rows[r].querySelectorAll("td");
+            if (cells.length < 9) continue;
+
+            var textInput = cells[2].querySelector('input[type="text"]');
+            var dropdown = cells[5].querySelector('select');
+            var checkbox = cells[8].querySelector('input[type="checkbox"]');
+
+            var inputHasValue = textInput && textInput.value.trim() !== "";
+            var dropdownHasValue = dropdown && dropdown.value.trim() !== "";
+            var checkboxChecked = checkbox && checkbox.checked;
+
+            var rowIsValid = (inputHasValue && dropdownHasValue) || checkboxChecked;
+
+            if (!rowIsValid) {
+                allValid = false;
+            }
+        }
+
+        if (allValid) {
+            that.enableNextButton();
+        } else {
+            that.disableNextButton();
+        }
+    }
+
+    validateRows();
+    matrix.addEventListener("input", validateRows);
+    matrix.addEventListener("change", validateRows);
+});
+```
