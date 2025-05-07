@@ -65,6 +65,8 @@ You can get academic credit for your thesis research via the course entitled "Ho
 
 Dr. Petersen expects you to present a research poster on your thesis findings at the UI ICRU Undergraduate Research Festival during the final semester in which you complete your thesis.
 It is your responsibility to keep track of the registration deadlines for the Undergraduate Research Festival so you do not miss it!
+Here is information on the UI Undergraduate Research Festival:
+https://our.research.uiowa.edu/events-0/undergraduate-research-festivals
 
 You are expected to follow the Department requirements for Honors theses and for Honors in Psychology, including meeting all deadlines:
 https://psychology.uiowa.edu/undergraduate/honors-psychology
@@ -72,14 +74,19 @@ https://psychology.uiowa.edu/undergraduate/honors-psychology
 You must have two readers of the thesis who are familiar with the topic.
 One reader will be Dr. Petersen.
 You will work with Dr. Petersen to identify a second reader.
-The reader should be in the Department of Psychological and Brain Sciences.
-You should work with your readers to schedule your thesis defense.
+The second reader should be in the Department of Psychological and Brain Sciences.
+You have two options for the format of your thesis defense:
+
+1. You have a 30-minute public component followed by an hour-long closed defense.
+For the public component (i.e., it is open for others to attend), you give a 20-minute presentation of your thesis, followed by a 10-minute question-and-answer session with the attendees.
+After the public component, you have a closed defense with just your committee (Dr. Petersen and the second reader).
+2. You just have the hour-long closed defense, with no presentation or public component.
+
+Please let Dr. Petersen know which option you prefer for your defense format and schedule it accordingly (1.5 hours for option 1; 1 hour for option 2), making sure to book a room in SLP, PBSB, or STH.
+You should work with your committee to schedule your thesis defense.
 Your defense should take place no later than Finals week so you can get Honors credit when you graduate etc.
 You must send the completed final draft of your thesis to both Dr. Petersen and the second reader at least one week prior to your defense.
 Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.
-
-UI Undergraduate Research Festival:
-https://our.research.uiowa.edu/events-0/undergraduate-research-festivals
 
 # Resources {#resources}
 
