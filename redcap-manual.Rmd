@@ -281,7 +281,7 @@ You can check for this by:
 1. Navigating to a project, then in the side bar clicking "Data Quality" under "Applications"
 1. Under Rule #H "Incorrect values for calculated fields", click "Execute"
 1. You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".
-1. Click "Fix calcs now" to record the correct values in the  data.
+1. Click "Fix calcs now" to record the correct values in the data.
 
 ## How To {#howTo}
 
