@@ -45,137 +45,143 @@ where respondents are expected to fill in the first two columns and check the th
 That is, the respondent should fill in EITHER the first two columns OR check the third column.
 The JavaScript code below is used to ensure that if the third column is checked, the first two columns are hidden and cleared.
 It also ensures that at least one of the first two columns is filled in or that the third column is checked before allowing the survey next button to be clicked to advance the survey to the next page.
+It allows for this advancement logic to function for three blocks of absolute frequency questions on the same page.
+If you would like to add additional blocks, identify their QID by clicking Preview in Qualtrics, right clicking, and selecting "Inspect".
+Then click on the survey block you want to identify and enter the QID where it says "add any additional blocks here" below.
 
 ```javascript
 Qualtrics.SurveyEngine.addOnReady(function () {
-    console.log("✅ JS is running!");
+    console.log("✅ SBS script running for", this.questionId);
+
+    /* ------------------------------------------------------------------
+       1.  === per-row formatting + checkbox-hide logic ===
+    ------------------------------------------------------------------ */
 
     var matrix = this.getQuestionContainer();
-    var rows = matrix.querySelectorAll("tr.Choice");
+    var rows   = matrix.querySelectorAll("tr.Choice");
+    var that   = this;
 
-    // Widen the header (leftmost) column
     var headerCell = matrix.querySelector("th");
-    if (headerCell) {
-        headerCell.style.width = "300px";
-    }
+    if (headerCell) headerCell.style.width = "300px";
 
     for (var r = 0; r < rows.length; r++) {
-        (function (row, rowIndex) {
+        (function (row) {
             var cells = row.querySelectorAll("td");
             if (cells.length < 9) return;
 
-            var textCell = cells[2];       // SBS1: text input
-            var dropdownCell = cells[5];   // SBS2: dropdown
-            var checkboxCell = cells[8];   // SBS3: checkbox
-            var checkbox = checkboxCell.querySelector('input[type="checkbox"]');
-            var inputField = textCell.querySelector('input[type="text"]');
-            var dropdownField = dropdownCell.querySelector('select');
+            var textCell     = cells[2];      // text input
+            var dropdownCell = cells[5];      // dropdown
+            var checkboxCell = cells[8];      // checkbox
+            var checkbox     = checkboxCell.querySelector("input[type='checkbox']");
+            var inputField   = textCell.querySelector("input[type='text']");
+            var dropdownFld  = dropdownCell.querySelector("select");
 
-            // Widen the leftmost item label column (first td)
             var labelCell = row.querySelector("td:first-child");
-            if (labelCell) {
-                labelCell.style.width = "300px";
-            }
+            if (labelCell) labelCell.style.width = "300px";
 
-            // Set column widths
-            textCell.style.width = "100px";        // Smaller input box
-            dropdownCell.style.width = "160px";    // Wider dropdown
-            checkboxCell.style.width = "120px";    // Checkbox column wider
+            textCell.style.width     = "100px";
+            dropdownCell.style.width = "160px";
+            checkboxCell.style.width = "120px";
             checkboxCell.style.textAlign = "center";
-
-            // Prevent input cells from adding extra borders
-            textCell.style.borderRight = "none";
+            textCell.style.borderRight   = "none";
             dropdownCell.style.borderRight = "none";
 
-            // Format separators
             for (var i = 0; i < cells.length; i++) {
-                if (cells[i].className.indexOf("Separator1") !== -1 || cells[i].className.indexOf("Separator2") !== -1) {
-                    cells[i].style.display = "";
-                    cells[i].style.minWidth = "1px";
-                    cells[i].style.width = "1px";
+                if (cells[i].className.indexOf("Separator") !== -1) {
+                    cells[i].style.display   = "";
+                    cells[i].style.minWidth  = "1px";
+                    cells[i].style.width     = "1px";
                     cells[i].style.borderRight = "1px solid #ccc";
-                    cells[i].style.borderLeft = "none";
-                    if (cells[i].innerHTML.trim() === "") {
-                        cells[i].innerHTML = "&nbsp;";
-                    }
+                    cells[i].style.borderLeft  = "none";
+                    if (cells[i].innerHTML.trim() === "") cells[i].innerHTML = "&nbsp;";
                 }
             }
 
+            //  -- initial hide if checkbox pre-checked
             if (checkbox && checkbox.checked) {
-                textCell.style.visibility = "hidden";
+                textCell.style.visibility     = "hidden";
                 dropdownCell.style.visibility = "hidden";
-                textCell.style.border = "none";
-                dropdownCell.style.border = "none";
-                if (inputField) inputField.value = "";
-                if (dropdownField) dropdownField.selectedIndex = 0;
+                textCell.style.border         = "none";
+                dropdownCell.style.border     = "none";
+                if (inputField)  inputField.value          = "";
+                if (dropdownFld) dropdownFld.selectedIndex = 0;
             }
 
+            //  -- live hide/show when checkbox toggled
             if (checkbox) {
                 checkbox.addEventListener("change", function () {
                     var hide = checkbox.checked;
 
-                    textCell.style.visibility = hide ? "hidden" : "visible";
+                    textCell.style.visibility     = hide ? "hidden" : "visible";
                     dropdownCell.style.visibility = hide ? "hidden" : "visible";
-                    textCell.style.border = hide ? "none" : "";
-                    dropdownCell.style.border = hide ? "none" : "";
+                    textCell.style.border         = hide ? "none" : "";
+                    dropdownCell.style.border     = hide ? "none" : "";
 
                     if (hide) {
-                        if (inputField) inputField.value = "";
-                        if (dropdownField) dropdownField.selectedIndex = 0;
-                    }
-
-                    for (var i = 0; i < cells.length; i++) {
-                        if (cells[i].className.indexOf("Separator1") !== -1 || cells[i].className.indexOf("Separator2") !== -1) {
-                            cells[i].style.display = "";
-                            cells[i].style.minWidth = "1px";
-                            cells[i].style.width = "1px";
-                            cells[i].style.borderRight = "1px solid #ccc";
-                            cells[i].style.borderLeft = "none";
-                            if (cells[i].innerHTML.trim() === "") {
-                                cells[i].innerHTML = "&nbsp;";
-                            }
-                        }
+                        if (inputField)  inputField.value          = "";
+                        if (dropdownFld) dropdownFld.selectedIndex = 0;
                     }
                 });
             }
-        })(rows[r], r);
+        })(rows[r]);
     }
 
-    this.disableNextButton();
-    var that = this;
+    /* ------------------------------------------------------------------
+       2. === global “all 3 blocks must be complete” validation =========
+    ------------------------------------------------------------------ */
 
-    function validateRows() {
-        var allValid = true;
+    /* create the shared tracker once (first time any block loads) */
+    if (!window.SBSCompletion) {
+        window.SBSCompletion = { "QID1": false, "QID10": false, "QID12": false };
+    }
 
+    function rowIsValid(cells) {
+        var textInput  = cells[2].querySelector("input[type='text']");
+        var dropdown   = cells[5].querySelector("select");
+        var checkbox   = cells[8].querySelector("input[type='checkbox']");
+
+        var inputHas   = textInput  && textInput.value.trim() !== "";
+        var dropHas    = dropdown   && dropdown.value.trim()  !== "";
+        var checkHas   = checkbox   && checkbox.checked;
+
+        return (inputHas && dropHas) || checkHas;
+    }
+
+    function validateThisBlock() {
+        var everyRowValid = true;
         for (var r = 0; r < rows.length; r++) {
             var cells = rows[r].querySelectorAll("td");
             if (cells.length < 9) continue;
-
-            var textInput = cells[2].querySelector('input[type="text"]');
-            var dropdown = cells[5].querySelector('select');
-            var checkbox = cells[8].querySelector('input[type="checkbox"]');
-
-            var inputHasValue = textInput && textInput.value.trim() !== "";
-            var dropdownHasValue = dropdown && dropdown.value.trim() !== "";
-            var checkboxChecked = checkbox && checkbox.checked;
-
-            var rowIsValid = (inputHasValue && dropdownHasValue) || checkboxChecked;
-
-            if (!rowIsValid) {
-                allValid = false;
-            }
+            if (!rowIsValid(cells)) { everyRowValid = false; }
         }
 
-        if (allValid) {
-            that.enableNextButton();
-        } else {
-            that.disableNextButton();
-        }
+        /* store this block’s status */
+        window.SBSCompletion[that.questionId] = everyRowValid;
+
+        /* check all three blocks */
+        var allDone = window.SBSCompletion["QID1"] &&
+                      window.SBSCompletion["QID10"] &&
+                      window.SBSCompletion["QID12"]; /* add any additional blocks here */
+
+        if (allDone) { that.enableNextButton(); }
+        else         { that.disableNextButton(); }
     }
 
-    validateRows();
-    matrix.addEventListener("input", validateRows);
-    matrix.addEventListener("change", validateRows);
+    /* disable Next on first load */
+    that.disableNextButton();
+	
+    /* attach listeners */
+	setTimeout(validateThisBlock, 300);
+    matrix.addEventListener("input",  validateThisBlock);
+    matrix.addEventListener("change", validateThisBlock);
+	
+	    // set up interval for rechecking validation; this re-enables the script in case Qualtrics overrides it after some time interval
+    var validationInterval = setInterval(validateThisBlock, 5000);
+
+    // clean up interval on page unload
+    Qualtrics.SurveyEngine.addOnUnload(function () {
+        clearInterval(validationInterval);
+    });
 });
 ```
 
