@@ -1,5 +1,8 @@
 ---
 title: "Adobe Best Practice Guide"
+output:
+  html_document:
+    code_folding: show
 ---
 
 ```{r setup, include = FALSE}
@@ -12,27 +15,30 @@ knitr::opts_chunk$set(
 
 # Adobe Best Practices
 
-* Name variables all lowercase with no spaces; use underscores if separating words
-* Use radio buttons whenever possible
-* Use the `align` feature and `match size` to when creating variables
-* When creating forms in Word, give space for the Adobe buttons that will eventually be created
-* Make sure you are using same naming conventions
-    * `tcid`
-    * `wave`
-    * `coder_name`
-    * `date_coded`
-    * `coder` (for 1, 2, 3 variable)
-    * `given_opp_to_play`
-    * `play_task`
-    * `pc_present`
-    * `task_start_time`
-    * `task_stop_time`
-    * `task_length`
-* Keep it clean
-* Keep consistent naming conventions within (and across) forms
-* For fonts in the fields, in general, use auto.
+- Name variables all lowercase with no spaces; use underscores if separating words
+- Use radio buttons whenever possible
+- Use the `align` feature and `match size` to when creating variables
+- When creating forms in Word, give space for the Adobe buttons that will eventually be created
+- Make sure you are using same naming conventions
+    - `tcid`
+    - `wave`
+    - `coder_name`
+    - `date_coded`
+    - `coder` (for 1, 2, 3 variable)
+    - `given_opp_to_play`
+    - `play_task`
+    - `pc_present`
+    - `task_start_time`
+    - `task_stop_time`
+    - `task_length`
+- Keep it clean
+- Keep consistent naming conventions within (and across) forms
+- For fonts in the fields, in general, use auto.
 However, this can be changed if problematic. 
-* To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared. 
+- To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared.
+- Calculated fields should ***NOT*** be calculated off of already calculated fields.
+Fields should only be calculated off of fields that are manually inputted.
+For more information on this, see creating [time calculations](adobe.html#timecalculations)
 
 # Converting Word Documents to PDFs
 
@@ -49,7 +55,7 @@ To convert a Word document to a pdf, complete the following steps:
 
 1. Open pdf in Adobe Acrobat Pro 2020
 
-   * *Note:* Editing of pdfs must be done in Adobe Acrobat Pro 2020, ***not*** Adobe Acrobat
+   - *Note:* Editing of pdfs must be done in Adobe Acrobat Pro 2020, ***not*** Adobe Acrobat
 
 1. Under the "Tools" tab in the top left corner of the Adobe interface, find the heading "Forms & Signatures" and select "Prepare Form"
 
@@ -63,53 +69,57 @@ To convert a Word document to a pdf, complete the following steps:
    1. Textual or numeric information must be manually entered
    1. A calculated field is required
 1. Radio buttons should be implemented whenever possible
-   * Radio buttons allow for only one selection out of a group of options
-      * Radio buttons thus should be used for imitation, comprehension, practice, and test trial fields within pdfs
-   * In order to prevent human error, radio buttons should be applied to as many variables as possible
-   * Calculated fields can be derived from radio buttons
+   - Radio buttons allow for only one selection out of a group of options
+      - Radio buttons thus should be used for imitation, comprehension, practice, and test trial fields within pdfs
+   - In order to prevent human error, radio buttons should be applied to as many variables as possible
+   - Calculated fields can be derived from radio buttons
 1. Check boxes should only be used when necessary
-   * Check boxes allow for multiple selections within a group
-   * Check boxes should **not** be used for trials fields within pdfs unless multiple answers can be selected for a given trial
-   * Calculated fields can be derived from check boxes
+   - Check boxes allow for multiple selections within a group
+   - Check boxes should **not** be used for trials fields within pdfs unless multiple answers can be selected for a given trial
+   - Calculated fields can be derived from check boxes
+1. Action buttons should be implemented when a specific action is needed to be carried out.
+These actions typically include:
+   * Reseting a field(s)/form
+   * Hiding/Revealing a field(s)
 
 ## Naming Convention for Variables in Adobe {#namingvariables}
 
 1. Variable names should be in all lowercase with no spaces and underscores separating words
 1. Keep variable names as consistent as possible across forms with similar variables
 1. The following are common names for variables which should be used when applicable:
-   * Identifying information:
-      * TCID: `tcid`
-      * Wave: `wave`
-      * Coder Name: `coder_name`
-      * Date Coded: `date_coded`
-      * Coder: `coder` (for 1, 2, 3 variable)
-      * Was TC given the opportunity to play the task: `given_opp_to_play`
-      * Did TC play the task: `play_task`
-      * PC Present: `pc_present`
-      * Did TC pass the imitation trials: `pass_imitation`
-      * Did TC pass the comprehension check: `pass_comprehension`
-      * Did TC pass the practice trials: `pass_practiceX`
-      * Start time: `task_start_time`
-      * Stop time: `task_stop_time`
-      * Length of administration: `task_length`
-      * Coder 1/2/3: `initials_date_coderX`
-   * Task Trials
-      * Imitation Trials: `imitation_trials_x`
-      * Imitation Trials Second Administration: `imitation_trials_readmin_x`
-      * Comprehension Check: `comp_checkX_x`
-      * Practice Trials: `practice_trialsX_x`
-      * Test Trials: `test_trialsX_x`
-      * *Note:* "X" signifies the round/block of the trials while "x" signifies the trial number within that round/block (ex: `practice_trials2_7`).
+   - Identifying information:
+      - TCID: `tcid`
+      - Wave: `wave`
+      - Coder Name: `coder_name`
+      - Date Coded: `date_coded`
+      - Coder: `coder` (for 1, 2, 3 variable)
+      - Was TC given the opportunity to play the task: `given_opp_to_play`
+      - Did TC play the task: `play_task`
+      - PC Present: `pc_present`
+      - Did TC pass the imitation trials: `pass_imitation`
+      - Did TC pass the comprehension check: `pass_comprehension`
+      - Did TC pass the practice trials: `pass_practiceX`
+      - Start time: `task_start_time`
+      - Stop time: `task_stop_time`
+      - Length of administration: `task_length`
+      - Coder 1/2/3: `initials_date_coderX`
+   - Task Trials
+      - Imitation Trials: `imitation_trials_x`
+      - Imitation Trials Second Administration: `imitation_trials_readmin_x`
+      - Comprehension Check: `comp_checkX_x`
+      - Practice Trials: `practice_trialsX_x`
+      - Test Trials: `test_trialsX_x`
+      - *Note:* "X" signifies the round/block of the trials while "x" signifies the trial number within that round/block (ex: `practice_trials2_7`).
       An "X" within the variable name is only necessary if there are multiple rounds/blocks for the trial.
       Thus, if there is only one round of imitation trials, those trials should be simply named `test_trials` rather than `test_trials1`.
-   * Trial Totals
-      * Total Incorrect: `total_incorrect_task_trials`
-      * Total Initially incorrect, but changed to correct: `total_initially_task_trials`
-      * Total Correct: `total_correct_task_trials`
-      * Total No Response: `total_noresponse_task_trials`
-      * Total Uncodeable: `total_uncodeable_task_trials`
-      * Total # of Scoreable Trials Played: `total_scored_task_trials`
-      * *Note:* "task_trials" should be replaced with whether the round/block of trials is `imitation_trials`, `comp_check`, `practice_trials`, or `test_trials`.
+   - Trial Totals
+      - Total Incorrect: `total_incorrect_task_trials`
+      - Total Initially incorrect, but changed to correct: `total_initially_task_trials`
+      - Total Correct: `total_correct_task_trials`
+      - Total No Response: `total_noresponse_task_trials`
+      - Total Uncodeable: `total_uncodeable_task_trials`
+      - Total # of Scoreable Trials Played: `total_scored_task_trials`
+      - *Note:* "task_trials" should be replaced with whether the round/block of trials is `imitation_trials`, `comp_check`, `practice_trials`, or `test_trials`.
 
 ### Naming Convention for Radio Buttons {#namingconventionradiobuttons}
 
@@ -124,13 +134,13 @@ The Choice Values can then be set through the following steps:
    1. Select the entire column under a certain TC response (ex. select the entire column of radio buttons under "Correct")
    1. Right-click on the selected column of radio buttons and select "Properties"
    1. Under the "Options" tab, set the "Radio Button Choice" according to the following values:
-      * "Correct" column = 2
-      * "Incorrect" column = 0
-      * "Initially incorrect but changed response to correct" column = 1
-      * "No response" column = -9
-      * "Uncodeable" column = 9
+      - "Correct" column = 2
+      - "Incorrect" column = 0
+      - "Initially incorrect but changed response to correct" column = 1
+      - "No response" column = -9
+      - "Uncodeable" column = 9
    1. Set all columns with their appropriate radio button choice value
-   * *Note:* While calculated fields can be derived from different radio button choice values, it is imperative to assign the button choices according to these values.
+   - *Note:* While calculated fields can be derived from different radio button choice values, it is imperative to assign the button choices according to these values.
    This allows for consistency across pdfs and the ability to smoothly borrow code for calculated fields.
 
 ### Naming Convention for Check Boxes {#namingconventioncheckboxes}
@@ -141,19 +151,64 @@ A group of check boxes can be formatted as radio buttons through the following s
 1. Input the *same* variable name for each check box within the group to be formatted
 1. Right click on each check box and select "Properties"
 1. Under the "Options" tab, set the "Export Value" for each check box according to the following values:
-      * "Correct" column = 2
-      * "Incorrect" column = 0
-      * "Initially incorrect but changed response to correct" column = 1
-      * "No response" column = -9
-      * "Uncodeable" column = 9
+      - "Correct" column = 2
+      - "Incorrect" column = 0
+      - "Initially incorrect but changed response to correct" column = 1
+      - "No response" column = -9
+      - "Uncodeable" column = 9
 1. With each check box named the same but also each with a different export value, the group of check boxes should now operate similar to a group of radio buttons
-   * Within the group, only one check box should be able to be selected
-   * Additionally, the selection should be able to be unselected
+   - Within the group, only one check box should be able to be selected
+   - Additionally, the selection should be able to be unselected
 1. While both groups of radio buttons and this form of groups of check boxes operate the same way and permit only one selection within the group, groups of check boxes provide an advantage by allowing for deselection of the value.
 Within groups of radio buttons, as soon as a button is selected, the group of buttons cannot be reset or deselected.
 This usage of groups of check buttons may be useful going forward and should be considered when creating new coding forms.
-   * *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](adobe.html#createcalculatedradiobuttons).
+   - *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](adobe.html#createcalculatedradiobuttons).
    Thus, it is important to ensure the export values for each check box follow the values listed in Step 3.
+
+
+## Hiding and Revealing Fields in Adobe {#hiddenfields}
+
+Fields can be hidden and revealed within Adobe documents.
+To do such, complete the following steps:
+
+1. Right click on the field to be hidden
+1. Select "Properties"
+1. Under the "General" tab, navigate to the "Common Properties" box at the bottom of the tab
+1. For "Form Field:" select `Hidden` from the drop-down menu
+1. Now, when previewing the document, the selected field should be hidden from user view
+1. In order to make the field visible to users again, complete steps 1-4, but instead of selecting `Hidden` for "Form Field:", select `Visible`
+1. The field should now be visible to users
+
+## Creating Actions in Adobe
+
+Radio buttons, check boxes, text fields, and action buttons can all be assigned specific actions upon clicking them. The most common actions used are:
+   * Clearing or reseting a field(s) or an entire form
+   * Hiding/revealing a field(s)
+
+To assign a radio button, check box, text field, or action button an action, complete the following steps:
+
+1. Right click on the object (the radio button/check box/text field/action button in question) to which an action is to be assigned
+1. Select the "Actions" tab
+1. Within the "Add an Action" interface, for "Select Trigger:" ensure the response of `Mouse Up` is selected
+   * This configures the action to be executed when the object is clicked upon with the user's mouse
+1. Within the "Add an Action" interface, for "Select Action:" choose the desired action to be assigned to the object from the drop-down menu
+   * To clear/reset a field:
+      * Select `Reset a form`
+   * To hide/reveal a field:
+      * Select `Show/hide a field`
+1. Within the "Add an Action" interface, select "Add..." to implement the chosen action to the object
+   * Upon clicking add, a separate window will appear asking you to specify which fields the action should be applied to
+   * If clearing/reseting a field:
+      * Mark all the check boxes of all the fields to be rest
+      * Select "OK"
+   * If hiding/revealing a field:
+      * Select the name of the field to be hidden/revealed
+      * On the right, select the radio button selection for whether the action should `Show` or `Hide` the field
+      * Select "OK"
+1. Upon selection of "OK," the action should now appear within the "Action" box at the bottom of the tab
+1. In order to edit the action, select the action to be edited and then select "Edit" at the bottom of the interface
+1. Multiple actions can be assigned to the same object.
+Thus, repeat steps 1-6 as many times as needed to assign the necessary actions to a given object
 
 
 # Creating Calculated Fields
@@ -170,7 +225,7 @@ The following sections detail how to create different types of calculated fields
 1. Select the "Calculate" tab within the Properties menu
 1. Select the "Custom calculation script:" radio button
 1. Select "Edit..." and input the desired calculation script
-   * The following script should be applied in order to calculate radio buttons:
+   - The following script should be applied in order to calculate radio buttons:
 
    ```
    var v1 = getField("variable_group_name").value
@@ -204,8 +259,8 @@ The following sections detail how to create different types of calculated fields
 
    event.value = total + total2 + total3 + total4
    ```
-   * This script should be fit according to how many trials/variables must be calculated from
-   * Proceed to [Breaking Down the Calculation Script](adobe.html#breakingdownscript) to gain a greater understanding of the script
+   - This script should be fit according to how many trials/variables must be calculated from
+   - Proceed to [Breaking Down the Calculation Script](adobe.html#breakingdownscript) to gain a greater understanding of the script
 
 ## Creating Calculated Fields from Radio Buttons: Video
 
@@ -235,7 +290,7 @@ Watch the following video in order to observe an example of creating calculated 
 1. Right-click on the field and select "Properties"
 1. Select the "Calculate" tab within the Properties menu
 1. Select the "Value is the `mathematical operators` of the following fields" radio button
-   * *Note:* The appropriate `mathematical operator` should be selected according to the desired final calculation from the drop down list of "sum (+)," "product (x)," "average," "minimum," or "maximum"
+   - *Note:* The appropriate `mathematical operator` should be selected according to the desired final calculation from the drop down list of "sum (+)," "product (x)," "average," "minimum," or "maximum"
 1. Select "Pick..." and then check the variable names of the check boxes to be calculated
 
 ## Breaking Down the Calculation Script {#breakingdownscript}
@@ -283,13 +338,13 @@ The calculation script for radio buttons can be broken down into three parts:
    var v4 = getField("variable_group_name4").value
    ```
 
-   * This portion of the script defines the variables from which information is being pulled from.
+   - This portion of the script defines the variables from which information is being pulled from.
    In nearly all cases the variables being pulled from will be the groups of radio buttons for each trial.
-   * The line `var v1 = getField("variable_group_name").value` defines the selected radio button in "variable_group_name" as `var v1` (variable 1) within this script and pulls the **choice value** from each group
-      * Thus, within each `getField()`, the name of each group of radio buttons should be added in quotations
-      * *Note:* The number being pulled through this function directly corresponds to the choice value defined for each radio button in the group of radio of radio buttons.
+   - The line `var v1 = getField("variable_group_name").value` defines the selected radio button in "variable_group_name" as `var v1` (variable 1) within this script and pulls the **choice value** from each group
+      - Thus, within each `getField()`, the name of each group of radio buttons should be added in quotations
+      - *Note:* The number being pulled through this function directly corresponds to the choice value defined for each radio button in the group of radio of radio buttons.
       This is why it is crucial to define choice values according to the same [naming convention for radio buttons](adobe.html#namingconventionradiobuttons)
-   * Each `var vX` should reflect a trial on the form.
+   - Each `var vX` should reflect a trial on the form.
    Thus, if there are 15 test trials, there should be 15 lines of code from `var v1` to `var v15` with the name for each group of radio buttons inputed in `getField("")` for each variable
 
 2. Defining the Selected Values
@@ -319,9 +374,9 @@ The calculation script for radio buttons can be broken down into three parts:
    total4 = 0;
    }
    ```
-   * This portion of code utilizes if/else statements in order to create the total value for each field
-   * In `v1 == X` and each subsequent `v == X`, the `X` should be replaced with the **choice value** of the radio button from the group of radio buttons that corresponds to the desired field you are calculating
-      * For example, if a total correct field is being calculated, the code should read:
+   - This portion of code utilizes if/else statements in order to create the total value for each field
+   - In `v1 == X` and each subsequent `v == X`, the `X` should be replaced with the **choice value** of the radio button from the group of radio buttons that corresponds to the desired field you are calculating
+      - For example, if a total correct field is being calculated, the code should read:
 
          ```
          if (v1 == 2) { 
@@ -337,10 +392,10 @@ The calculation script for radio buttons can be broken down into three parts:
          }
          ```
 
-      * Because a total correct field is being calculated, the choice value of 2 should be inputed as this is the choice value which corresponds to "Correct" (see [naming convention for radio buttons](adobe.html#namingconventionradiobuttons))
-      * The value of 2 would be inputed for each if/else statement for each variable.
+      - Because a total correct field is being calculated, the choice value of 2 should be inputed as this is the choice value which corresponds to "Correct" (see [naming convention for radio buttons](adobe.html#namingconventionradiobuttons))
+      - The value of 2 would be inputed for each if/else statement for each variable.
       Thus, if there were 15 variables, there should be 15 if/else statements `v1 == 2` to `v15 == 2`
-   * The if/else statement for each variable defines that if the value pulled by the `getField()` function matches the inputted choice value for the variable then the total for that variable becomes equal to 1.
+   - The if/else statement for each variable defines that if the value pulled by the `getField()` function matches the inputted choice value for the variable then the total for that variable becomes equal to 1.
    If it does not match, the the total becomes equal to 0.
 
 3. Defining the Total
@@ -349,11 +404,11 @@ The calculation script for radio buttons can be broken down into three parts:
 event.value = total + total2 + total3 + total4
 ```
 
-* This portion of code defines the calculation to take place in the field
-   * The `event.value` determines what appears in the text box
-* This line of code adds together the totals defined in the if/else statements.
+- This portion of code defines the calculation to take place in the field
+   - The `event.value` determines what appears in the text box
+- This line of code adds together the totals defined in the if/else statements.
 This produces the final calculated value for the field.
-* The number of totals added together should correspond to the number of variables.
+- The number of totals added together should correspond to the number of variables.
 Thus, if there are 15 trials, then the final line of code should read:
    ```
    event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15
@@ -787,10 +842,10 @@ The conditional formatting calculation script features two major alterations:
    var v32= getField("variable_Y_group_name16").value
    ```
    
-   * This addition to the script is necessary in order to accomodate for the additional Variable Y by which the calculated total is contingent
-   * An additional 16 variables must be added, one for each of the 16 groups of Variable X (v1-v16).
+   - This addition to the script is necessary in order to accomodate for the additional Variable Y by which the calculated total is contingent
+   - An additional 16 variables must be added, one for each of the 16 groups of Variable X (v1-v16).
    Each of these new `var` commands corresponds to one of the original 16 `var` commands for Variable X and pulls each trial's value for Variable Y upon which the total is dependent.
-   * Thus for a form with 16 test trials, there should be 32 total lines of code: 16 which correspond to the original 16 groups of radio buttons for Variable X which reflect a response for each trial, and an additional 16 which correspond to the manually input response for Variable Y upon which the calculated total is conditional
+   - Thus for a form with 16 test trials, there should be 32 total lines of code: 16 which correspond to the original 16 groups of radio buttons for Variable X which reflect a response for each trial, and an additional 16 which correspond to the manually input response for Variable Y upon which the calculated total is conditional
 
 1. Creating the Conditional Formatting using If/Else Commands
 
@@ -825,8 +880,8 @@ The conditional formatting calculation script features two major alterations:
    ...
    ```
 
-   * This alteration to the script utilizes if/else commands to establish contingency on Variable Y
-   * As outlined in the [Breaking Down the Calculation Script](adobe.html#breakingdownscript) section, the if/else statements operate in the same manner and follow the same procedures.
+   - This alteration to the script utilizes if/else commands to establish contingency on Variable Y
+   - As outlined in the [Breaking Down the Calculation Script](adobe.html#breakingdownscript) section, the if/else statements operate in the same manner and follow the same procedures.
    However, notice an additional if/else statement is present for each trial and surrounds the original if/else statement:
    
       ```
@@ -846,18 +901,18 @@ The conditional formatting calculation script features two major alterations:
       
       ```
 
-   * The overarching if/else statement is centered around the variable which defines the conditional formatting, Variable Y, thus the `if(v == Y){` should only reference `var v17` to `var v32`
-   * Within the overarching if/else statement, `Y1` and `Y2` represent the **choice value** of the field being pulled from for Variable Y
+   - The overarching if/else statement is centered around the variable which defines the conditional formatting, Variable Y, thus the `if(v == Y){` should only reference `var v17` to `var v32`
+   - Within the overarching if/else statement, `Y1` and `Y2` represent the **choice value** of the field being pulled from for Variable Y
    
-      * For the original if/else statements within the overarching if/else statement, `X1` and `X2` still reflect the desired **choice value** of the radio button from the group of radio buttons that correspond to the desired field you are calculating for Variable X
+      - For the original if/else statements within the overarching if/else statement, `X1` and `X2` still reflect the desired **choice value** of the radio button from the group of radio buttons that correspond to the desired field you are calculating for Variable X
 
-   * The conditional formatting emerges from defining the `Y` in `if(v == Y){` as `Y1` or `Y2`
+   - The conditional formatting emerges from defining the `Y` in `if(v == Y){` as `Y1` or `Y2`
       
-      * Notice, there are two if/else statements within the overarching if/else statement.
+      - Notice, there are two if/else statements within the overarching if/else statement.
       Each of these secondary if/else statements define a different outcome - in this instance, the outcomes are "if `v1 == X2` then `total = 1`" and "if `v1 == X1` then `total = 1`"
       Which outcome is selected is dependent on the definition of `Y` in `if(v == Y){`.
-      * Thus, for the example script above, if `v17 == Y1`, then the first outcome of "if `v1 == X2` then `total = 1`" will be the result, but if `v17` equals anything else besides `Y1`, then the second outcome of "if `v1 == X1` then `total = 1`" will be the result
-      * The final result is conditional formatting as the calculated total for each trial of Variable X is ultimately dependent on the value of Variable Y
+      - Thus, for the example script above, if `v17 == Y1`, then the first outcome of "if `v1 == X2` then `total = 1`" will be the result, but if `v17` equals anything else besides `Y1`, then the second outcome of "if `v1 == X1` then `total = 1`" will be the result
+      - The final result is conditional formatting as the calculated total for each trial of Variable X is ultimately dependent on the value of Variable Y
    
 
 ## Conditional Formatting Calculation Script: An Example
@@ -884,12 +939,12 @@ As a result, conditional formatting is necessary in order to calculate the total
 
 ### The Variables
 
-* `Variable X` = participant's responses (the number of times the participant taps the table)
-* `Variable Y` = experimenter's administration (the number of times the experimenter tapped the table)
-* `X1` = choice value of radio button reflecting the action of the participant tapping the table once - in this case, **1**
-* `X2` = choice value of radio button reflecting the action of the participant tapping the table twice - in this case, **2**
-* `Y1` = choice value of the field reflecting the experimenter tapped the table once - in this case, **1**
-* `Y2` = choice value of the field reflecting the experimenter tapped the table once - in this case, **2**
+- `Variable X` = participant's responses (the number of times the participant taps the table)
+- `Variable Y` = experimenter's administration (the number of times the experimenter tapped the table)
+- `X1` = choice value of radio button reflecting the action of the participant tapping the table once - in this case, **1**
+- `X2` = choice value of radio button reflecting the action of the participant tapping the table twice - in this case, **2**
+- `Y1` = choice value of the field reflecting the experimenter tapped the table once - in this case, **1**
+- `Y2` = choice value of the field reflecting the experimenter tapped the table once - in this case, **2**
  
 ### The Script
 
@@ -1159,3 +1214,312 @@ if(v32 == 2){
 
 event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
 ```
+
+## Time Calculations in Adobe {#timecalculations}
+
+Calculating a time based on two other times can be accomplished within Adobe.
+To do this, custom calculation scripts using the language JavaScript must be implemented.
+
+### Creating Time Calculations in Adobe
+
+1. First, ensure all fields from which the time calculations are to be made from or applied to have been formatted into the desired time format.
+To do this:
+   1. Right click on the field and select "Properties"
+   1. Navigate to the "Format" tab
+   1. For "Select format category:" select `Time`
+   1. In the "Time Options" interface that appears, select the desired time format
+   1. Repeat this for every field that the time calculations will be made from or applied to
+   1. The following calculation script calculates time in the `HH:MM:ss` format
+1. Select the field in which the time calculation will occur
+1. Right click on the field and select "Properties"
+1. Select the "Calculate" tab
+1. Select the "Custom calculation script:" radio button
+1. Select "Edit..." and input the desired time calculation script
+
+The following script details how to calculate X second intervals based on an inputted starting time.
+The times within this script follow the `HH:MM:ss` time format.
+The following script can easily be modified to calculate different length intervals or to use different time formats.
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+   * Proceed to Breaking Down the Time Calculation Script to gain a greater understanding of the script
+
+### Breaking Down the Time Calculation Script
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+The time calculation script can be broken down into three parts:
+
+1. Defining the Start Time
+
+```
+var timestarted = this.getField("start_time_field").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+```
+
+   * This portion of the script defines the initial time from which the time calculation is to be done
+   * The line `var timestarted = this.getField("start_time_field").valueAsString;` imports the desired start time from the variable `start_time_field`.
+   This imported time should be in the `HH:MM:ss` time format
+   * The line `var timeSplit = timestarted.split(":") ;` then removes the colons from this imported time, leaving the time as `HH MM ss`.
+   This is stored as a new variable, `timesplit`
+   * Finally, the line `var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));` converts this imported time to be all in *seconds*.
+   At this point in the script, the imported start time has now been converted to a total time in seconds
+      * The following operators are used in this line of code: `[0]`, `[1]`, and `[2]`
+      * `[0]` retrives the first portion of the variable `timesplit`
+         * Thus, `timeSplit[0]` returns the value of `HH` from the variable of `timesplit`
+         * Multiplying this value of hours by 3600 in turn converts the hours to seconds
+      * `[1]` retrieves the second portion of the variable `timesplit`
+         * Thus, `timeSplit[1]` returns the value of `MM` from the variable of `timesplit`
+         * Multiplying this value of minutes by 60 in turn converts the minutes to seconds
+      * `[2]` retrieves the second portion of the variable `timesplit`
+         * Thus, `timeSplit[2]` returns the value of `ss` from the variable of `timesplit`
+         * Multiplying this value of seconds by 1 leaves the time in seconds
+
+1. Defining the New Time
+
+```
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+```
+
+   * This portion of the script defines the new time to be calculated from the start time
+   * The line `var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + "INTERVAL LENGTH X");` calculates a new time in seconds by adding X amount of seconds to the initial start time in seconds
+      * `(timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1)` converts the initial start time to be a total of seconds
+      * `+ "INTERVAL LENGTH X"` adds X amount of seconds to this start time total of seconds to result in the new desired calculated time
+         * Thus, if the desired calculated time is to be 25 seconds after the start time, the line of code should look like the following:
+            * `var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + 25);`
+   * The lines of code following this line convert this new total of time of seconds into hours, minutes, and seconds
+      * `hours = Math.floor(newtotalSec/3600);` converts the new total start time in seconds into hours
+         * The function `Math.floor()` rounds the number in hours down, leaving only the number of hours with no decimal value
+         * Thus, if the new total time of seoonds converts into 2.56 hours, the `Math.floor()` returns a value of 2 hours
+      * `minutes = Math.floor((newtotalSec % 3600)/60);` converts the new total start time of seconds into minutes
+         * The operator `%` is the remainder operator and returns only the remainder after integer division is completed
+         * Thus, `newtotalSec % 3600` returns only the remainder of seconds that did not divide wholly into hours. Dividing this value by 60, leaves the remainder in minutes.
+      * `seconds = newtotalSec % 60;` returns the remainder of seconds that did not divide wholly into hours or minutes
+         * Thus, this leaves the number of seconds to be left in `HH:MM:ss` format
+      * After these three lines of code, three new variables have been created: the number of hours, minutes, and seconds in the new total start time of seconds
+
+1. Defining the Time Output
+
+```
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+   * This portion of the script defines the final time calculated in `HH:MM:ss` time format
+   * The line `timeOutput = hours + ":" + minutes + ":" + seconds;` defines a new variable of the new total time in `HH:MM:ss` time format
+      * This line takes the previously defined variables of `hours`, `minutes`, and `seconds` and adds colons between them to give the new total calculated time in `HH:MM:ss` time format
+   * The line `event.value = timeOutput` then defines the new total time in `HH:MM:ss` to be the output value of the field
+
+The following is an example script for creating a new calculated time 10 seconds after the start time:
+
+```
+var timestarted = this.getField("task_start_time").valueAsString;
+
+var timeSplit = timestarted.split(":") ;
+
+var totalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1));
+
+var newtotalSec = ((timeSplit[0]*3600) + (timeSplit[1]*60) + (timeSplit[2]*1) + 10);
+
+hours = Math.floor(newtotalSec/3600);
+
+minutes = Math.floor((newtotalSec % 3600)/60);
+
+seconds = newtotalSec % 60;
+
+timeOutput = hours + ":" + minutes + ":" + seconds;
+
+event.value = timeOutput
+```
+
+*Note.* When creating multiple time calculated fields, each field should be calculated off of the intitial time.
+Calculated time fields should ***NOT*** be calculated off each other.
+For example, if five calculated time fields must be created, each 10 seconds apart from each other, one should **not** calculate each time field 10 seconds based off the previously calculated time.
+Instead, each field should be calculated based off of the initial start time.
+Thus, the first calculated field should add 10 seconds to the initial start time.
+The second calculated field should add 20 seconds *based off the initial start time*.
+The third calculated field should add 30 seconds based off the initial start time.
+And so forth.
+This ensures that no errors occur from calculating times based off times in fields that are already being calculated.
+
+<br>
+
+*Note.* Time calculated fields cannot be overwritten.
+One cannot manually overwrite the calculated time in a field with an alternative time.
+The field will always read the time calculated according to the inputted script.
+This should be kept in mind when creating multiple field that feature X second consecutive intervals.
+If at any point the intervals should be interrupted and a new time must be manually entered, it cannot be done.
+A potential means to work around this issue is found in the Token/Bead Sort example.
+
+### The Perfect Example: Token/Bead Sort
+
+The Token/Bead Sort coding form provides a perfect example of time calculations, action buttons, and hidden fields at play.
+Token/Bead Sort consists of 18 ten second intervals.
+All of these intervals occur after a specified start time and should always be 10 seconds apart.
+However, if an interruption should occur during the task, a new start time must be entered into one of the intervals from which the following intervals should calculated from.
+Due to the time fields being calculated, the time values cannot be manually overwritten.
+The following solution is implemented to work around this:
+
+1. Time calculations are made for each of the initial 18 intervals
+   * Each of these intervals calculate from the intial start time
+      * Thus, the first interval calculates ten seconds from the initial start time, the second interval 20 seconds from the start time, the third interval 30 seconds from the start time, etc.
+   * When the initial time is inputted, each of these intervals calculate automatically
+1. A second set of text fields are made for each of these 18 intervals
+   * These fields have no calculations applied to them
+   * These 18 fields are set to be [hidden](adobe.html#hiddenfields) from user view
+   * These 18 fields serve to allow for manually entry of a time in case of an interruption
+   * The 18 fields are positioned over the initial 18 fields which do the contain the calculations
+1. A set of 18 buttons are created, one for each interval
+   * Each button corresponds to an interval and is configured with actions to hide the calculated time interval it corresponds to and show the second text time field which allows for manual entry that it corresponds to
+   * Each of these buttons serves to hide the calculated time field for the interval in which the interruption occurs and all the following intervals
+   * Each button also shows the second time text field which allows for manual entry and also reveals the manual entry fields for all the following intervals
+   * Each of these buttons is also set to be hidden from user view
+1. At the top of the coding form, the radio buttons for the "Was there an interruption in the task?" question are assigned actions
+   * If "Yes" is selected, the 18 buttons are revealed and shown to the user
+   * If "No" is selected, the 18 buttons are hidden
+   * Thus, when the user selects that an interruption occurred, the 18 buttons appear and allow the user to select the interval in which the interruption occurred.
+   When the button is pressed, the automatically calculated time fields are hidden for that interval and subsequent intervals, and the fields that allow for manual entry are shown for that interval and subsequent intervals.
+   This allows for time calculations to be implemented even when interruptions occur
+1. Refer to the Token/Bead Sort coding form in order to gain further understanding of this setup
+
+## Calculating the Highest Level from a Row of Values
+
+The following script returns the highest level of a behavior.
+For example, a behavior may be coded for the number of times it occurs at different levels of intensity.
+If one wants the highest level of intensity the behavior occurred at, regardless of the number of times it occurred, the following script can be utilized:
+
+*Note.* The following script was created for a unique situation.
+Essentially, the script utilizes multiple if/else statements.
+How to employ if/else statements and conditionals are outlines above.
+Thus the explanation of how this specific script operates is less technical and brief.
+The building blocks of how to understand this script at a more technical level are provided above.
+
+
+```
+var v1= getField("intensity_of_behavior_1").value
+var v2= getField("intensity_of_behavior_2").value
+var v3= getField("intensity_of_behavior_3").value
+var v4= getField("intensity_of_behavior_4").value
+var v5= getField("intensity_of_behavior_5").value
+var v6= getField("intensity_of_behavior_6").value
+
+
+if (v6 > 0) {
+  total6 = 6;
+} else {
+  total6 = 0;
+}
+
+
+if ((v5 > 0) && (v6 <= 0)) {
+  total5 = 5;
+} else {
+  total5 = 0;
+}
+
+
+if ((v4 > 0) && (v6 <= 0) && (v5 <= 0)) {
+  total4 = 4;
+} else {
+  total4 = 0;
+}
+
+if ((v3 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0)){
+  total3 = 3;
+} else {
+  total3 = 0;
+}
+
+if ((v2 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0) && (v3 <= 0)){
+  total2 = 2;
+} else {
+  total2 = 0;
+}
+
+if ((v1 > 0) && (v6 <= 0) && (v5 <= 0) && (v4 <= 0) && (v3 <= 0) && (v2 <= 0)){
+  total = 1;
+} else {
+  total = 0;
+}
+
+event.value = total + total2 + total3 + total4 + total5 + total6
+```
+
+   * The above script uses if/else statements to determine the highest level at which the behaviors occurs
+      * Double ampersands are used to create conditional statements with multiple conditions
+   * Plainly, the above script asks whether the behavior occurs at least once at each level of intensity
+      * If the behavior occurs at the highest level of intensity, the total returns a 6 which signifies the highest level of intensity
+      * If the behavior does not occur at the highest level, it asks whether there is a value present for the second highest level.
+      If there is, the total returns a 5 which significes the second highest level of intensity
+      * If the behavior does not occur at the second highest level, it asks whether there is a value for the third highest.
+      If not at the third highest, it asks at the fourth highest, and so forth.
+   * This script may be modified to be employed in a variety of situations
+   * The above script can be found in the Parental Sensitivity and Parental Intrusiveness Coding Forms
+      * These forms should be studied in order to gain greater understanding of the specific context for which this script was created and how might it be applied to other contexts
+
+
+# How To Split PDF Files into Multiple Documents
+
+1. Open the PDF in Acrobat DC, and then choose Tools > Organize Pages or choose Organize Pages from the right pane.
+   - The Organize Pages toolset is displayed in the secondary toolbar.
+1. In the secondary toolbar, click “Split”.
+   - A new toolbar appears below the secondary toolbar with the commands specific to the Split operation.
+1. In this secondary toolbar, choose “Split” to see the document splitting options.
+1. In the “Split By” drop-down list, select the criteria for dividing the document:
+   - Number Of Pages: Specify the maximum number of pages for each document in the split.
+      - This is the most helpful option when trying to separate large scanned PDF packets into individual files.
+      Just specify the number of pages as “1” (if the individual documents are only one page),“2” (if the documents are double sided), etc.
+   - File Size: Specify the maximum file size for each document in the split.
+   - Top-level Bookmarks: If the document includes bookmarks, creates one document for every top-level bookmark.
+1. To specify a target folder for the split files and filename preferences, click “Output Options”.
+Specify the folder in the lab drive that the files should be saved to, and then click OK.
+
+*Optional:* To apply the same split to multiple documents, click “Split Multiple Files”.
+In the Split Documents dialog box, click either “Add Files”, and choose “Add Files”, “Add Folders”, or “Add Open Files”.
+Select the files or folder, and then click OK.

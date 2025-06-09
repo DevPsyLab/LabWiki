@@ -46,9 +46,10 @@ Here are what trainees can expect of me:
 
 # What I expect of trainees {#myExpectations}
 
-Here is what trainees I expect of trainees:
+Here is what I expect of trainees:
 
 1. Maintain good progress on research and training-related activities
+1. Work in lab during the workday (when you are not in class, teaching, or doing clinical work)
 1. Conduct all research and training-related activities responsibly
 1. Respect other lab members
 
@@ -81,9 +82,9 @@ I will push you to publish your research as you move through your training progr
 I expect trainees to be lead author on at least two journal paper submissions, preferably three or four (or more!).
 Productivity in terms of publishing high-quality papers and securing funding is crucial to be competitive for many jobs.
 
-I expect you to apply for external funding—examples include the National Science Foundation Graduate Research Fellowship Program (NSF-GRFP) and the National Institutes of Health National Research Service Award (NIH NRSA).
+I expect you to apply for external funding—examples include the National Science Foundation Graduate Research Fellowship Program (NSF-GRFP) and the National Institutes of Health National Research Service Award (NIH NRSA F31).
 I encourage students to submit a NSF-GRFP in their first semester.
-I encourage students to submit a NIH NRSA in their second or third year.
+I encourage students to submit a NIH NRSA (F31) in their second or third year.
 Getting a first-authored publication in your first or second year is important for these (and other) fellowships and for awards.
 
 For many jobs, presentation skills are also highly important, including skills in presenting research to broad audiences of scientists outside of your area.
@@ -173,8 +174,9 @@ Discuss policies on work hours, sick leave, and vacation with me directly.
 It is important to take time off to decompress from time to time.
 Work-life balance and vacation time are essential for creative thinking and good health, and I encourage you to take regular vacations.
 You can take three weeks of vacation time each year, and you are not expected to work during [university holidays](https://grad.uiowa.edu/graduate-student-employment-agreement/paid-leaves-and-holiday).
-In addition, I do not expect students to work between 12/15 and the first week of January.
+In addition, I do not expect students to work between mid-December (i.e., after the end of the Fall semester) and the first week of January.
 Please discuss your vacation plans with me before booking your trip.
+Submit requests for time off in person, by phone, or via email, not by Slack.
 Consult with me and notify fellow lab members in advance of any planned absences, with as much advance notice as possible—at least two weeks' notice or more if feasible.
 Please plan that if you are away, others will need to take over your responsibilities, so planning for adequate lead time and training may be necessary.
 Please discuss with me if you plan to take a summer internship or bootcamp.
@@ -266,7 +268,7 @@ I expect you to attend conferences, Clinical Rounds, Developmental Discussion, D
 When we go to conferences, I will introduce you to my professional network and encourage you to build skills in networking.
 
 We will discuss your training and career development plans.
-All program requirements are in the Department's [Graduate Handbook](https://psychology.uiowa.edu/grad-program/graduate-handbook) and/or the Graduate College's [Manual of Rules and Regulations](https://grad.uiowa.edu/academics/manual).
+All program requirements are in the Department's [Graduate Handbook](https://psychology.uiowa.edu/sites/psychology.uiowa.edu/files/2023-08/GradHandbook2023%20-%20August.pdf) and/or the Graduate College's [Manual of Rules and Regulations](https://grad.uiowa.edu/academics/manual).
 I include a suggested timeline for your research, clinical training, and coursework [below](#timelines).
 Please consult with me before selecting your courses, clinical practica, and other time-intensive training experiences.
 
@@ -344,7 +346,7 @@ Networking skills are important and can often lead to job opportunities.
 
 I strongly believe that the lab grows better with each trainee achieving their career goals.
 I respect and support each trainee's career choice and understand that things can change over time.
-At the same time, keep in mind that this is a [research-oriented training program](https://psychology.uiowa.edu/graduate-program) and is best aligned with careers in which research will be a key component.
+At the same time, keep in mind that this is a [research-oriented training program](https://psychology.uiowa.edu/graduate) and is best aligned with careers in which research will be a key component.
 For prospective graduate students, if you have goals of being a clinician, I would dissuade you from joining our program and this lab; you would not be happy here.
 
 We will discuss your career development plans and how I can best support them.
@@ -399,7 +401,7 @@ For longer communication, please call or stop by my office.
 I find this much more efficient and pleasant than writing and reading lengthy communication.
 For sending manuscripts, personal information, and messages that do not need an urgent response, you may email me.
 Please limit your use of email as much as possible.
-[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid) (archived at https://perma.cc/9XJE-BM8N); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
+[I hate email](https://www.chronicle.com/article/is-email-making-professors-stupid) (archived at https://perma.cc/T855-U9MQ); we get way too much of it, it is impersonal, it does not communicate tone well (often leading to misinterpretation and sometimes hurt feelings), and it is difficult for me to stay on top of my inbox.
 I encourage you to stop by my office or to call my office phone instead of relying on email, whenever possible.
 
 When you contact me or send me materials, you can expect me to respond promptly.
@@ -414,7 +416,7 @@ Allow a minimum of one week prior to submission deadlines for me to read and res
 Please do not assume I can read materials within a day or two, especially when I am traveling.
 Please only send drafts of manuscripts, grant proposals, dissertations, etc. when they are your <u>best possible work</u> (the Henry Kissinger criterion).
 That means going through multiple revisions, reading it out loud to yourself, etc.
-Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://wildlife.onlinelibrary.wiley.com/doi/10.1002/jwmg.21992)):
+Here is an excerpt about Dr. Kissinger ([Krausman, 2021](https://doi.org/10.1002/jwmg.21992)):
 
 > "Henry Kissinger, a former Secretary of State under President Nixon, understood the importance of continually improving writing skills.
 > Winston Lord was Kissinger's speech writer and during the late 1960s and early 1970s, Lord had been tasked with writing a speech about three important foreign policy projects: the opening of China to the West, bringing the Vietnam War to a close, and an attempt to improve relations with the Russians.

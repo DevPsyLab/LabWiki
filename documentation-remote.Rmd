@@ -34,15 +34,15 @@ https://its.uiowa.edu/support/article/1876 (archived at https://perma.cc/ST6R-PC
 
 The full drive path to our lab drive is: 
 
-- PC: `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\`
-- Mac: `smb://iowa.uiowa.edu/Shared/ResearchData/rdss_itpetersen/Lab/`
+- PC: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\`
+- Mac: `smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`
 
 # Map the Lab Drive Onto a Mac Computer {#mapLabDrive}
 
 1. [VPN](#vpn) into the university network
 1. In the upper task bar, click "Go"
 1. Select "Connect to Server" from the drop-down menu
-1. In the "Server Address" bar, type: `smb://iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen/Lab/`
+1. In the "Server Address" bar, type: `smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`
 1. Click on Connect.
 1. This should create a shortcut for the drive on the desktop
 1. Click on the + sign to add the address in permanently in your list of "Favorite Servers".
@@ -51,7 +51,7 @@ The full drive path to our lab drive is:
     1. Go to the Finder menu bar and click "File" then "Make Alias".
     1. A volume alias appears on your desktop.
     In the future, you can reconnect to the shared volume by double-clicking this alias.
-1. Then, you should be able to access the scripts on the lab share with `R` at the following location: `/Volumes/rdss_itpetersen`
+1. Then, you should be able to access the scripts on the lab share with `R` at the following location: `/Shared/lss_itpetersen`
 
 # Remote Access to a Lab Computer {#remoteAccess}
 
@@ -79,13 +79,13 @@ Visit Videos: can be accessed on the lab drive using VPN and should be watched u
 You can download VLC for free here: https://www.videolan.org/vlc/index.html
 
 Coding Forms: editable PDFs have been created for easier electronic completion—you can find your tasks' PDF coding forms on the lab drive here: 
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\`
 
 Coding forms should always be opened and edited using Adobe Acrobat.
 Adobe Acrobat Reader is available to download for free from the Adobe website: https://get.adobe.com/reader/
 
 Coding Folders: have been re-created as folders on the lab drive, which can be found here:
-`\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\`
+`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\`
 
 ## Confidentiality Consideration
 

@@ -11,9 +11,10 @@ knitr::opts_chunk$set(
 
 Studies:
 
-- [Externalizing Assessment Project](https://devpsylab.github.io/ExternalizingAssessmentProject)
+- [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan)
+    - Documentation for the Externalizing Assessment Project is here: https://devpsylab.github.io/ExternalizingAssessmentProject
 - [School Readiness Study](study-schoolReadinessStudy.html)
     - Documentation for the School Readiness Study is on the lab drive at the following location[^1]:
-    `\\iowa.uiowa.edu\Shared\ResearchData\rdss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html`
+    `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html`
 
 [^1]: Only accessible by team members.

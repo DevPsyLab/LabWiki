@@ -11,11 +11,11 @@ knitr::opts_chunk$set(
 
 # What Does SROP Entail? {#srop}
 
-The University of Iowa's Summer Research Opportunities Program (SROP) is an eight-week program designed to provide underrepresented undergraduate students with in-depth research experiences.
+The University of Iowa's Summer Research Opportunities Program (SROP) is an eight-week program designed to provide undergraduate students from underrepresented backgrounds with in-depth research experiences.
 As part of the SROP program, you will conduct an independent research project and will present your findings at a University of Iowa undergraduate research conference.
 To help you accomplish this, our goal is to get you set up as quickly as possible with our data so that you can formulate a research question and hypothesis, identify and extract the relevant data available, learn and perform the data analysis to test your question, and put together an abstract and poster for the SROP presentation—all on the eight-week timeline.
 
-For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/dei/srop
+For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/gsb/srop
 
 # Lab Expectations {#expectations}
 
@@ -31,7 +31,9 @@ The following are lab expectations for SROP students:
 The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
-For information on how to use SPSS for data analysis, see [here](https://devpsylab.github.io/DataAnalysis/SPSS.html).
+For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#statisticalDecisionTree) in the lab's Data Analysis Guides.
+For information on how to conduct data analysis, see the relevant sections of the lab's Data Analysis guides on [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html).
+For how to set up your folder structure, see the following page: https://devpsylab.github.io/LabWiki/honors.html
 
 # Expectations for Everyone in Lab {#expectationsForEveryone}
 
