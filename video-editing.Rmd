@@ -1,5 +1,8 @@
 ---
 title: "Video Editing"
+output:
+  html_document:
+    code_folding: show
 ---
 
 # Avidemux {#avidemux}
