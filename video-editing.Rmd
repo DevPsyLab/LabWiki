@@ -53,7 +53,7 @@ NOTE: This script will only work if you open the Lab Drive directly from the Des
 *You cannot open it from the Quick Access menu in File Explorer.*
 
 An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://unix.stackexchange.com/a/437044; archived at: https://perma.cc/DWR8-4LST).
-Using Command Prompt (`cmd.exe`), use the following syntax when in the target directory (use `cd DIRECTORY` to navigate to the target directory):
+After installing [ffmpeg](https://ffmpeg.org), use the following syntax in Command Prompt (`cmd.exe`) when in the target directory (use `cd DIRECTORY` to navigate to the target directory):
 
 ```bash
 ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4
@@ -73,7 +73,7 @@ To combine two videos from a visit with interrupted recordings, follow these ste
 
 An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://ma.ttias.be/use-ffmpeg-combine-multiple-videos/; archived at: https://perma.cc/F9P9-KS4D):
 
-First, using Command Prompt (`cmd.exe`), create a text file named `files.txt` in the same directory as the videos you want to combine (use `cd DIRECTORY` to navigate to the target directory) with the following content:
+First, after installing [ffmpeg](https://ffmpeg.org), use Command Prompt (`cmd.exe`) to create a text file named `files.txt` in the same directory as the videos you want to combine (use `cd DIRECTORY` to navigate to the target directory) with the following syntax:
 
 ```bash
 cat files.txt
