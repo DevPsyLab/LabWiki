@@ -53,7 +53,9 @@ NOTE: This script will only work if you open the Lab Drive directly from the Des
 *You cannot open it from the Quick Access menu in File Explorer.*
 
 An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://unix.stackexchange.com/a/437044; archived at: https://perma.cc/DWR8-4LST).
-After installing [ffmpeg](https://ffmpeg.org), use the following syntax in Command Prompt (`cmd.exe`) when in the target directory (use `cd DIRECTORY` to navigate to the target directory):
+To perform this approach, [ffmpeg](https://ffmpeg.org) must be installed on the computer.
+After installing [ffmpeg](https://ffmpeg.org), make sure the videos are on a local drive on the computer (i.e., not on the lab drive).
+Then, use the following syntax in Command Prompt (`cmd.exe`) when in the target directory (use `cd DIRECTORY` to navigate to the target directory):
 
 ```bash
 ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4
@@ -71,7 +73,8 @@ To combine two videos from a visit with interrupted recordings, follow these ste
 1. Drag the second video from the File Explorer Window straight into the Avidemux window, dropping it over the first video—you should see the video duration increase when it is added, indicating it is appending to the end of the previous video
 1. Save the new video in the TC's folder as TCID_Wave_LV1 (`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\`)
 
-An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://ma.ttias.be/use-ffmpeg-combine-multiple-videos/; archived at: https://perma.cc/F9P9-KS4D):
+An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://ma.ttias.be/use-ffmpeg-combine-multiple-videos/; archived at: https://perma.cc/F9P9-KS4D).
+To perform this approach, [ffmpeg](https://ffmpeg.org) must be installed on the computer.
 
 First, after installing [ffmpeg](https://ffmpeg.org), use Command Prompt (`cmd.exe`) to create a text file named `files.txt` in the same directory as the videos you want to combine (use `cd DIRECTORY` to navigate to the target directory) with the following syntax:
 
