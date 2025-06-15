@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Code"
+title: "Visual Studio Code (VS Code)"
 output:
   html_document:
     code_folding: show
@@ -13,10 +13,11 @@ knitr::opts_chunk$set(
   class.source = "fold-show")
 ```
 
-# Tips and Tricks
+# Tips and Tricks {#tipsAndTricks}
 
 1. You can view the source code side-by-side with the Preview (after selecting the code type in the bottom right):
 ![Visual Studio Code](images/vsCode.png)
+1. To create personalized CSS commands in VS Code, see [here](https://devpsylab.github.io/DataAnalysis/markdown.html#css).
 1. To wrap code around the selected text (https://stackoverflow.com/a/73344832/2029527; archived at https://perma.cc/P5JA-7DBC):
     1. Press `Ctrl`+`Shift`+`p`
     1. Type and select "Open Keyboard Shortcuts (JSON)"
@@ -36,9 +37,9 @@ knitr::opts_chunk$set(
     1. Save the `keybindings.json` file.
     1. Select the text you want to wrap, and press `Alt`+`Shift`+`e`
 
-# Example Code Snippets
+# Example Code Snippets {#exampleCodeSnippets}
 
-## Template
+## Template {#template}
 
 ```
 [
@@ -53,7 +54,7 @@ knitr::opts_chunk$set(
 ]
 ```
 
-##  `\begin{equation}...\end{equation}`
+## `\begin{equation}...\end{equation}` {#equation}
 
 ```
 [
@@ -68,12 +69,32 @@ knitr::opts_chunk$set(
 ]
 ```
 
-# Connect to `R`
+# Connect to `R` {#connectToR}
+
+1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
+1. Install the [`R` extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for `VSCode`
+1. Go into the `R` extension settings
+1. Set the `rpath` variable to be blank
+1. Set the `rterm` variables (e.g., `r.rterm.windows`) to be blank
+1. Close VS Code
+1. Set VS Code to Run as Administrator by default
+1. Open VS Code as Administrator
+1. Launch the R terminal (Ctrl+Shift+P → "R: Create R terminal").
+
+VS Code extensions to install:
+- [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+`R` packages to install:
+- `install.packages(c("languageserver","httpgd"))`
+    - `languageserver` is used for syntax highlighting and code completion
+    - `httpgd` is used for plotting in VS Code
+
+## Old Instructions {#oldInstructions}
 
 Follow the instructions here to connect `VSCode` to `R`:
 https://stackoverflow.com/a/66069540/2029527 (archived at https://perma.cc/FCF5-26BT)
 
-1. Install `R` using the inital setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
+1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
 1. Install the `R` extension for `VSCode`
 1. Go into the `R` extension settings
 1. Set the `R` path to the path of your `R` installation:
