@@ -74,7 +74,7 @@ knitr::opts_chunk$set(
 1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
 1. Install the [`R` extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for `VSCode`
 1. Go into the `R` extension settings
-1. Set the `rpath` variable to be blank
+1. Set the `rpath` variables (e.g., `r.rpath.windows`) to be blank
 1. Set the `rterm` variables (e.g., `r.rterm.windows`) to be blank
 1. Close VS Code
 1. Set VS Code to Run as Administrator by default
