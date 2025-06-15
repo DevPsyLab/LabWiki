@@ -11,7 +11,7 @@
 
 
 
-<title>Visual Studio Code</title>
+<title>Visual Studio Code (VS Code)</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -479,17 +479,19 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Visual Studio Code</h1>
+<h1 class="title toc-ignore">Visual Studio Code (VS Code)</h1>
 
 </div>
 
 
-<div id="tips-and-tricks" class="section level1" number="1">
+<div id="tipsAndTricks" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Tips and Tricks</h1>
 <ol style="list-style-type: decimal">
 <li>You can view the source code side-by-side with the Preview (after
 selecting the code type in the bottom right): <img
 src="images/vsCode.png" alt="Visual Studio Code" /></li>
+<li>To create personalized CSS commands in VS Code, see <a
+href="https://devpsylab.github.io/DataAnalysis/markdown.html#css">here</a>.</li>
 <li>To wrap code around the selected text (<a
 href="https://stackoverflow.com/a/73344832/2029527"
 class="uri">https://stackoverflow.com/a/73344832/2029527</a>; archived
@@ -517,7 +519,7 @@ class="uri">https://perma.cc/P5JA-7DBC</a>):
 </ol></li>
 </ol>
 </div>
-<div id="example-code-snippets" class="section level1" number="2">
+<div id="exampleCodeSnippets" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Example Code
 Snippets</h1>
 <div id="template" class="section level2" number="2.1">
@@ -533,8 +535,7 @@ Snippets</h1>
     }
 ]</code></pre>
 </div>
-<div id="beginequation...endequation" class="section level2"
-number="2.2">
+<div id="equation" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span>
 <code>\begin{equation}...\end{equation}</code></h2>
 <pre><code>[
@@ -549,17 +550,43 @@ number="2.2">
 ]</code></pre>
 </div>
 </div>
-<div id="connect-to-r" class="section level1" number="3">
+<div id="connectToR" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Connect to
 <code>R</code></h1>
+<ol style="list-style-type: decimal">
+<li>Install <code>R</code> using the initial setup instructions
+described here: <a
+href="https://devpsylab.github.io/DataAnalysis/R.html#setup"
+class="uri">https://devpsylab.github.io/DataAnalysis/R.html#setup</a></li>
+<li>Install the <a
+href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r"><code>R</code>
+extension</a> for <code>VSCode</code></li>
+<li>Go into the <code>R</code> extension settings</li>
+<li>Set the <code>rpath</code> variable to be blank</li>
+<li>Set the <code>rterm</code> variables (e.g.,
+<code>r.rterm.windows</code>) to be blank</li>
+<li>Close VS Code</li>
+<li>Set VS Code to Run as Administrator by default</li>
+<li>Open VS Code as Administrator</li>
+<li>Launch the R terminal (Ctrl+Shift+P → “R: Create R terminal”).</li>
+</ol>
+<p>VS Code extensions to install: - <a
+href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></p>
+<p><code>R</code> packages to install: -
+<code>install.packages(c("languageserver","httpgd"))</code> -
+<code>languageserver</code> is used for syntax highlighting and code
+completion - <code>httpgd</code> is used for plotting in VS Code</p>
+<div id="oldInstructions" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Old Instructions</h2>
 <p>Follow the instructions here to connect <code>VSCode</code> to
 <code>R</code>: <a href="https://stackoverflow.com/a/66069540/2029527"
 class="uri">https://stackoverflow.com/a/66069540/2029527</a> (archived
 at <a href="https://perma.cc/FCF5-26BT"
 class="uri">https://perma.cc/FCF5-26BT</a>)</p>
 <ol style="list-style-type: decimal">
-<li>Install <code>R</code> using the inital setup instructions described
-here: <a href="https://devpsylab.github.io/DataAnalysis/R.html#setup"
+<li>Install <code>R</code> using the initial setup instructions
+described here: <a
+href="https://devpsylab.github.io/DataAnalysis/R.html#setup"
 class="uri">https://devpsylab.github.io/DataAnalysis/R.html#setup</a></li>
 <li>Install the <code>R</code> extension for <code>VSCode</code></li>
 <li>Go into the <code>R</code> extension settings</li>
@@ -575,8 +602,9 @@ installation
 </ul></li>
 </ol>
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiVmlzdWFsIFN0dWRpbyBDb2RlIgpvdXRwdXQ6CiAgaHRtbF9kb2N1bWVudDoKICAgIGNvZGVfZm9sZGluZzogc2hvdwotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBlY2hvID0gVFJVRSwKICBlcnJvciA9IFRSVUUsCiAgY29tbWVudCA9ICIiLAogIGNsYXNzLnNvdXJjZSA9ICJmb2xkLXNob3ciKQpgYGAKCiMgVGlwcyBhbmQgVHJpY2tzCgoxLiBZb3UgY2FuIHZpZXcgdGhlIHNvdXJjZSBjb2RlIHNpZGUtYnktc2lkZSB3aXRoIHRoZSBQcmV2aWV3IChhZnRlciBzZWxlY3RpbmcgdGhlIGNvZGUgdHlwZSBpbiB0aGUgYm90dG9tIHJpZ2h0KToKIVtWaXN1YWwgU3R1ZGlvIENvZGVdKGltYWdlcy92c0NvZGUucG5nKQoxLiBUbyB3cmFwIGNvZGUgYXJvdW5kIHRoZSBzZWxlY3RlZCB0ZXh0IChodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvNzMzNDQ4MzIvMjAyOTUyNzsgYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9QNUpBLTdEQkMpOgogICAgMS4gUHJlc3MgYEN0cmxgK2BTaGlmdGArYHBgCiAgICAxLiBUeXBlIGFuZCBzZWxlY3QgIk9wZW4gS2V5Ym9hcmQgU2hvcnRjdXRzIChKU09OKSIKICAgIDEuIEFkZCB0aGUgZm9sbG93aW5nIGl0ZW06CmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICI8VEVYVC1CRUZPUkU+JFRNX1NFTEVDVEVEX1RFWFQ8L1RFWFQtQUZURVI+IgogICAgICAgIH0KICAgIH0KXQpgYGAKICAgIDEuIFNhdmUgdGhlIGBrZXliaW5kaW5ncy5qc29uYCBmaWxlLgogICAgMS4gU2VsZWN0IHRoZSB0ZXh0IHlvdSB3YW50IHRvIHdyYXAsIGFuZCBwcmVzcyBgQWx0YCtgU2hpZnRgK2BlYAoKIyBFeGFtcGxlIENvZGUgU25pcHBldHMKCiMjIFRlbXBsYXRlCgpgYGAKWwogICAgewogICAgICAgICJrZXkiOiAiYWx0K3NoaWZ0K2UiLAogICAgICAgICJjb21tYW5kIjogImVkaXRvci5hY3Rpb24uaW5zZXJ0U25pcHBldCIsCiAgICAgICAgIndoZW4iOiAiZWRpdG9yVGV4dEZvY3VzIiwKICAgICAgICAiYXJncyI6IHsKICAgICAgICAgICAgInNuaXBwZXQiOiAiPFRFWFQtQkVGT1JFPiRUTV9TRUxFQ1RFRF9URVhUPC9URVhULUFGVEVSPiIKICAgICAgICB9CiAgICB9Cl0KYGBgCgojIyAgYFxiZWdpbntlcXVhdGlvbn0uLi5cZW5ke2VxdWF0aW9ufWAKCmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICJcXGJlZ2lue2VxdWF0aW9ufVxuJFRNX1NFTEVDVEVEX1RFWFRcblxcZW5ke2VxdWF0aW9ufSIKICAgICAgICB9CiAgICB9Cl0KYGBgCgojIENvbm5lY3QgdG8gYFJgCgpGb2xsb3cgdGhlIGluc3RydWN0aW9ucyBoZXJlIHRvIGNvbm5lY3QgYFZTQ29kZWAgdG8gYFJgOgpodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvNjYwNjk1NDAvMjAyOTUyNyAoYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9GQ0Y1LTI2QlQpCgoxLiBJbnN0YWxsIGBSYCB1c2luZyB0aGUgaW5pdGFsIHNldHVwIGluc3RydWN0aW9ucyBkZXNjcmliZWQgaGVyZTogaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0RhdGFBbmFseXNpcy9SLmh0bWwjc2V0dXAKMS4gSW5zdGFsbCB0aGUgYFJgIGV4dGVuc2lvbiBmb3IgYFZTQ29kZWAKMS4gR28gaW50byB0aGUgYFJgIGV4dGVuc2lvbiBzZXR0aW5ncwoxLiBTZXQgdGhlIGBSYCBwYXRoIHRvIHRoZSBwYXRoIG9mIHlvdXIgYFJgIGluc3RhbGxhdGlvbjoKICAgIC0gZS5nLiwgYEM6XFxSXFxSLTQuMy4xXFxiaW5cXHg2NFxcUi5leGVgCjEuIFNldCB0aGUgYFJ0ZXJtYCBwYXRoIHRvIHRoZSBwYXRoIG9mIHlvdXIgYFJgIGluc3RhbGxhdGlvbgogICAgLSBlLmcuLCBgQzpcXFJcXFItNC4zLjFcXGJpblxceDY0XFxSdGVybS5leGVgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiVmlzdWFsIFN0dWRpbyBDb2RlIChWUyBDb2RlKSIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICBjb2RlX2ZvbGRpbmc6IHNob3cKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIiwKICBjbGFzcy5zb3VyY2UgPSAiZm9sZC1zaG93IikKYGBgCgojIFRpcHMgYW5kIFRyaWNrcyB7I3RpcHNBbmRUcmlja3N9CgoxLiBZb3UgY2FuIHZpZXcgdGhlIHNvdXJjZSBjb2RlIHNpZGUtYnktc2lkZSB3aXRoIHRoZSBQcmV2aWV3IChhZnRlciBzZWxlY3RpbmcgdGhlIGNvZGUgdHlwZSBpbiB0aGUgYm90dG9tIHJpZ2h0KToKIVtWaXN1YWwgU3R1ZGlvIENvZGVdKGltYWdlcy92c0NvZGUucG5nKQoxLiBUbyBjcmVhdGUgcGVyc29uYWxpemVkIENTUyBjb21tYW5kcyBpbiBWUyBDb2RlLCBzZWUgW2hlcmVdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9EYXRhQW5hbHlzaXMvbWFya2Rvd24uaHRtbCNjc3MpLgoxLiBUbyB3cmFwIGNvZGUgYXJvdW5kIHRoZSBzZWxlY3RlZCB0ZXh0IChodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvNzMzNDQ4MzIvMjAyOTUyNzsgYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9QNUpBLTdEQkMpOgogICAgMS4gUHJlc3MgYEN0cmxgK2BTaGlmdGArYHBgCiAgICAxLiBUeXBlIGFuZCBzZWxlY3QgIk9wZW4gS2V5Ym9hcmQgU2hvcnRjdXRzIChKU09OKSIKICAgIDEuIEFkZCB0aGUgZm9sbG93aW5nIGl0ZW06CmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICI8VEVYVC1CRUZPUkU+JFRNX1NFTEVDVEVEX1RFWFQ8L1RFWFQtQUZURVI+IgogICAgICAgIH0KICAgIH0KXQpgYGAKICAgIDEuIFNhdmUgdGhlIGBrZXliaW5kaW5ncy5qc29uYCBmaWxlLgogICAgMS4gU2VsZWN0IHRoZSB0ZXh0IHlvdSB3YW50IHRvIHdyYXAsIGFuZCBwcmVzcyBgQWx0YCtgU2hpZnRgK2BlYAoKIyBFeGFtcGxlIENvZGUgU25pcHBldHMgeyNleGFtcGxlQ29kZVNuaXBwZXRzfQoKIyMgVGVtcGxhdGUgeyN0ZW1wbGF0ZX0KCmBgYApbCiAgICB7CiAgICAgICAgImtleSI6ICJhbHQrc2hpZnQrZSIsCiAgICAgICAgImNvbW1hbmQiOiAiZWRpdG9yLmFjdGlvbi5pbnNlcnRTbmlwcGV0IiwKICAgICAgICAid2hlbiI6ICJlZGl0b3JUZXh0Rm9jdXMiLAogICAgICAgICJhcmdzIjogewogICAgICAgICAgICAic25pcHBldCI6ICI8VEVYVC1CRUZPUkU+JFRNX1NFTEVDVEVEX1RFWFQ8L1RFWFQtQUZURVI+IgogICAgICAgIH0KICAgIH0KXQpgYGAKCiMjIGBcYmVnaW57ZXF1YXRpb259Li4uXGVuZHtlcXVhdGlvbn1gIHsjZXF1YXRpb259CgpgYGAKWwogICAgewogICAgICAgICJrZXkiOiAiYWx0K3NoaWZ0K2UiLAogICAgICAgICJjb21tYW5kIjogImVkaXRvci5hY3Rpb24uaW5zZXJ0U25pcHBldCIsCiAgICAgICAgIndoZW4iOiAiZWRpdG9yVGV4dEZvY3VzIiwKICAgICAgICAiYXJncyI6IHsKICAgICAgICAgICAgInNuaXBwZXQiOiAiXFxiZWdpbntlcXVhdGlvbn1cbiRUTV9TRUxFQ1RFRF9URVhUXG5cXGVuZHtlcXVhdGlvbn0iCiAgICAgICAgfQogICAgfQpdCmBgYAoKIyBDb25uZWN0IHRvIGBSYCB7I2Nvbm5lY3RUb1J9CgoxLiBJbnN0YWxsIGBSYCB1c2luZyB0aGUgaW5pdGlhbCBzZXR1cCBpbnN0cnVjdGlvbnMgZGVzY3JpYmVkIGhlcmU6IGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9EYXRhQW5hbHlzaXMvUi5odG1sI3NldHVwCjEuIEluc3RhbGwgdGhlIFtgUmAgZXh0ZW5zaW9uXShodHRwczovL21hcmtldHBsYWNlLnZpc3VhbHN0dWRpby5jb20vaXRlbXM/aXRlbU5hbWU9UkVkaXRvclN1cHBvcnQucikgZm9yIGBWU0NvZGVgCjEuIEdvIGludG8gdGhlIGBSYCBleHRlbnNpb24gc2V0dGluZ3MKMS4gU2V0IHRoZSBgcnBhdGhgIHZhcmlhYmxlIHRvIGJlIGJsYW5rCjEuIFNldCB0aGUgYHJ0ZXJtYCB2YXJpYWJsZXMgKGUuZy4sIGByLnJ0ZXJtLndpbmRvd3NgKSB0byBiZSBibGFuawoxLiBDbG9zZSBWUyBDb2RlCjEuIFNldCBWUyBDb2RlIHRvIFJ1biBhcyBBZG1pbmlzdHJhdG9yIGJ5IGRlZmF1bHQKMS4gT3BlbiBWUyBDb2RlIGFzIEFkbWluaXN0cmF0b3IKMS4gTGF1bmNoIHRoZSBSIHRlcm1pbmFsIChDdHJsK1NoaWZ0K1Ag4oaSICJSOiBDcmVhdGUgUiB0ZXJtaW5hbCIpLgoKVlMgQ29kZSBleHRlbnNpb25zIHRvIGluc3RhbGw6Ci0gW1F1YXJ0b10oaHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPXF1YXJ0by5xdWFydG8pCgpgUmAgcGFja2FnZXMgdG8gaW5zdGFsbDoKLSBgaW5zdGFsbC5wYWNrYWdlcyhjKCJsYW5ndWFnZXNlcnZlciIsImh0dHBnZCIpKWAKICAgIC0gYGxhbmd1YWdlc2VydmVyYCBpcyB1c2VkIGZvciBzeW50YXggaGlnaGxpZ2h0aW5nIGFuZCBjb2RlIGNvbXBsZXRpb24KICAgIC0gYGh0dHBnZGAgaXMgdXNlZCBmb3IgcGxvdHRpbmcgaW4gVlMgQ29kZQoKIyMgT2xkIEluc3RydWN0aW9ucyB7I29sZEluc3RydWN0aW9uc30KCkZvbGxvdyB0aGUgaW5zdHJ1Y3Rpb25zIGhlcmUgdG8gY29ubmVjdCBgVlNDb2RlYCB0byBgUmA6Cmh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vYS82NjA2OTU0MC8yMDI5NTI3IChhcmNoaXZlZCBhdCBodHRwczovL3Blcm1hLmNjL0ZDRjUtMjZCVCkKCjEuIEluc3RhbGwgYFJgIHVzaW5nIHRoZSBpbml0aWFsIHNldHVwIGluc3RydWN0aW9ucyBkZXNjcmliZWQgaGVyZTogaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0RhdGFBbmFseXNpcy9SLmh0bWwjc2V0dXAKMS4gSW5zdGFsbCB0aGUgYFJgIGV4dGVuc2lvbiBmb3IgYFZTQ29kZWAKMS4gR28gaW50byB0aGUgYFJgIGV4dGVuc2lvbiBzZXR0aW5ncwoxLiBTZXQgdGhlIGBSYCBwYXRoIHRvIHRoZSBwYXRoIG9mIHlvdXIgYFJgIGluc3RhbGxhdGlvbjoKICAgIC0gZS5nLiwgYEM6XFxSXFxSLTQuMy4xXFxiaW5cXHg2NFxcUi5leGVgCjEuIFNldCB0aGUgYFJ0ZXJtYCBwYXRoIHRvIHRoZSBwYXRoIG9mIHlvdXIgYFJgIGluc3RhbGxhdGlvbgogICAgLSBlLmcuLCBgQzpcXFJcXFItNC4zLjFcXGJpblxceDY0XFxSdGVybS5leGVgCg==</div>
 <script type="text/javascript" src="includes/external-links.js"></script>
 
 <br>
