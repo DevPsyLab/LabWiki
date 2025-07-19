@@ -23,7 +23,7 @@ For guidance on how to do this in Microsoft Word, see [here](https://wordribbon.
 1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
 1. Report numbers to two decimal places; report *p*-values to three decimal places; report percentages to one decimal place.
 1. Know the difference between a "hypothesis" and a "prediction"—and use them correctly.
-A hypothesis is a proposed explanation.
+A hypothesis is a proposed explanation; it specifies the causal relation between processes.
 A prediction is "the expected result of a test that is derived, by deduction, from a hypothesis or theory" ([Eastwell, 2014](https://files.eric.ed.gov/fulltext/EJ1057150.pdf); archived at https://perma.cc/8EX4-8JYN).
 Here is an example of a hypothesis and the resulting prediction:
 <br>
