@@ -264,11 +264,11 @@ Clinical science is not a research area—clinical science uses basic science (e
 
 I expect all trainees to comply with their respective training plans (e.g., training plans of your degree program), such as taking required courses, maintaining passing grades, fulfilling teaching assistant duties, clinical training, and organizing committee meetings.
 You are expected to attend and actively participate in all group meetings and in seminars that are part of your educational program.
-I expect you to attend conferences, Clinical Rounds, Developmental Discussion, Data Team and lab meetings, DeLTA Center, Friday colloquia series, and other relevant brownbags such as Cognition, Behavioral & Cognitive Neuroscience (BCN), and the Iowa Neuroscience Institute (INI).
+I expect you to attend conferences, as well as meetings of the lab (including Data Team and lab meetings), the Area (e.g., [Clinical Science Area](https://psychology.uiowa.edu/clinical-science) Rounds), the [Department](https://psychology.uiowa.edu) (including the Friday Departmental colloquia series and other relevant brownbags such as Cognition and Behavioral & Cognitive Neuroscience [BCN]), and the University (including the [DeLTA Center](https://deltacenter.uiowa.edu) and [Iowa Neuroscience Institute](https://iowaneuroscience.medicine.uiowa.edu) [INI]).
 When we go to conferences, I will introduce you to my professional network and encourage you to build skills in networking.
 
 We will discuss your training and career development plans.
-All program requirements are in the Department's [Graduate Handbook](https://psychology.uiowa.edu/sites/psychology.uiowa.edu/files/2023-08/GradHandbook2023%20-%20August.pdf) and/or the Graduate College's [Manual of Rules and Regulations](https://grad.uiowa.edu/academics/manual).
+All program requirements are in the Department's [Graduate Handbook](https://psychology.uiowa.edu/sites/psychology.uiowa.edu/files/2025-08/GradHandbook2025%20-%207-1-25.pdf) and/or the Graduate College's [Manual of Rules and Regulations](https://grad.uiowa.edu/academics/manual).
 I include a suggested timeline for your research, clinical training, and coursework [below](#timelines).
 Please consult with me before selecting your courses, clinical practica, and other time-intensive training experiences.
 
@@ -291,11 +291,11 @@ I am a licensed clinical psychologist, so assessment hours in my research lab co
 
 ## Software {#software}
 
-My lab primarily uses `R` for data management and analysis because it is free, open source, open platform, code-based (which increases share-ability and reproducibility of analyses), and supports advanced statistics and state-of-the-art graphics from packages designed by statistical experts all over the world, and to which anyone (including you) can contribute.
-We also use `MATLAB` for processing of event-related potential data and `Mplus` for structural equation modeling.
-You are encouraged to learn `R` and any other specialized software that will allow you to answer the research questions you are pursuing.
+My lab primarily uses [`R`](https://devpsylab.github.io/DataAnalysis/R.html) for data management and analysis because it is free, open source, open platform, code-based (which increases share-ability and reproducibility of analyses), and supports advanced statistics and state-of-the-art graphics from packages designed by statistical experts all over the world, and to which anyone (including you) can contribute.
+We also use `MATLAB` for [processing of event-related potential data](https://devpsylab.github.io/DataAnalysis/eegERP.html) and [`Mplus`](https://devpsylab.github.io/DataAnalysis/mplus.html) for [structural equation modeling](https://devpsylab.github.io/DataAnalysis/sem.html).
+You are encouraged to learn [`R`](https://devpsylab.github.io/DataAnalysis/R.html) and any other specialized software that will allow you to answer the research questions you are pursuing.
 If there's another tool or software package that can do something easier, better, more efficiently, or with greater reproducibility than what we are using, feel free to use it—though I may not be able to provide formal guidance.
-For instance, `Python` is a free programming language that is emerging as a nice complement to `R` for statistical programming.
+For instance, [`Python`](https://devpsylab.github.io/pythonDataAnalysisGuides/) is a free programming language that is emerging as a nice complement to `R` for statistical programming.
 No matter which software you use, you should be able to understand and explain what the analysis is doing and be able to interpret and explain the output.
 
 ## Best practices {#bestPractices}
@@ -641,40 +641,40 @@ Note: Breadth courses can be completed with directed readings.
 
 | **Semester**   | **Clinical Task Goal(s)**                                                                       |
 |----------------|-------------------------------------------------------------------------------------------------|
-| Year 1: Fall   | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+| Year 1: Fall   | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Work with advanced graduate students on assessment skills                                       |
 |                | Interviewing practicum with Clinic Director                                                     |
-| Year 1: Spring | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+| Year 1: Spring | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Work with advanced graduate students on assessment                                              |
 |                | Begin completing intellectual disability assessments in clinic                                  |
 |                | Interviewing practicum with Clinic Director                                                     |
 | Year 2: Summer | Continue intellectual disability assessments, begin SDS assessments                             |
 | Year 2: Fall   | Complete SDS and DHS assessments in Seashore Clinic                                             |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Weekly 2nd-year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 2: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Begin taking therapy cases in Seashore Clinic                                                   |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Weekly 2nd-year seminar with Clinic Director (Motivational Interviewing, Behavioral Activation) |
 | Year 3: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 3: Fall   | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Weekly 3rd-year seminar (Exposure Therapy and other approaches)                                 |
 | Year 3: Spring | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Weekly 3rd-year seminar (Exposure Therapy and other approaches)                                 |
 | Year 4: Summer | Complete assessments in Seashore Clinic                                                         |
 |                | Work with therapy cases in Seashore Clinic                                                      |
 | Year 4: Fall   | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 | Year 4: Spring | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 | Year 5: Summer | Seashore Clinic work and/or External Practicum                                                  |
 | Year 5: Fall   | Seashore Clinic work and/or External Practicum                                                  |
-|                | Attend Clinical Rounds (Mondays from 12:30–1:20)                                                |
+|                | Attend Clinical Science Area Rounds (Mondays from 12:30–1:20)                                   |
 |                | Apply for internship                                                                            |
 | Year 5: Spring | Interview for Internship                                                                        |
 | Year 6         | APA-Accredited Internship                                                                       |
