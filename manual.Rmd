@@ -663,21 +663,20 @@ You should simply choose the channel that seems most relevant to the question or
 It is important to remember that, even though different team members are assigned different tasks within the lab, it does not mean that it is any less important for the whole team to stay informed about the general projects of the lab.
 We are all collaborating on the same project, on the same team, and working toward the same general goals.
 
-### Notion {#Notion}
+### Notion {#notion}
 
 Notion is a shared project management and note-taking workspace. 
 The primary purpose of our Notion board is to have a shared space to organize ongoing coding, scoring, and entry tasks. 
 
 <u>Expected Use:</u>
 
-* Coding and scoring teams should use the `Coding`, `Entry`, or `Scoring` teamspaces to keep track of videos that are actively being coded
-* RAs should keep track of comments and questions to be referenced during coding team meetings
+- Coding and scoring teams should use the `Coding`, `Entry`, or `Scoring` teamspaces to keep track of videos that are actively being coded
+- RAs should keep track of comments and questions to be referenced during coding team meetings
 
 <u>Optional Use:</u>
 
-* RAs may use the `Personal Tasks` teamspace to keep track of their own to-do list related to lab work
-* RAs may choose to keep track of their training progress in the `Training Progress` teamspace
-
+- RAs may use the `Personal Tasks` teamspace to keep track of their own to-do list related to lab work
+- RAs may choose to keep track of their training progress in the `Training Progress` teamspace
 
 ### Social Media {#socialMedia}
 
