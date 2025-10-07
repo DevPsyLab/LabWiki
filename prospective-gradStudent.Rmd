@@ -98,7 +98,7 @@ Although the mechanisms we identify are relevant for intervention, my lab does n
 Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s) (which are described [above](#currentFocus)).
 For instance, if your primary research interests are in any of the following domains, my lab would *not* be a good fit for your interests:
 
-- depression/anxiety
+- depression/anxiety/internalizing problems
 - autism
 - psychosis/schizophrenia
 - trauma
