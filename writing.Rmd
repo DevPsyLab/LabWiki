@@ -45,9 +45,9 @@ Replace them with their referent.
       - em dash (—): 2014
 1. When submitting a manuscript to a journal, submit any supplemental appendices as a PDF (not as a Word file).
 1. When submitting a manuscript to a journal, follow the lab's [open science](openScience.html) guidelines.
-  - For instance, see the section on "[Manuscript Submission to a Journal](openScience.html#journal)."
-  - When the manuscript is accepted for publication, follow the guidelines in the section on "[When the Manuscript is Accepted for Publication](openScience.html#accepted)"
-1. You are expected to follow the [Henry Kissinger criterion](#communication)—before sending a manuscript to Dr. Petersen, make sure it is your <u>best possible work</u>.
+    - For instance, see the section on "[Manuscript Submission to a Journal](openScience.html#journal)."
+    - When the manuscript is accepted for publication, follow the guidelines in the section on "[When the Manuscript is Accepted for Publication](openScience.html#accepted)"
+1. You are expected to follow the [Henry Kissinger criterion](expectations-gradStudent.html#communication)—before sending a manuscript to Dr. Petersen, make sure it is your <u>best possible work</u>.
 That means going through multiple revisions.
 Before sending it to Dr. Petersen, you should print (yes, <u>print</u>) it and read it out loud to yourself, making any necessary revisions.
 You will frequently catch additional typos and grammatical mistakes by doing so.
