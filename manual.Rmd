@@ -757,6 +757,9 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 
 **&#35;1 Rule: Never delete any documents or data without explicit permission from the Lab Coordinator, graduate students, or Dr. Petersen first.**
 
+**&#35;2 Rule: If you accidentally delete or move documents, folders, etc., contact the Lab Coordinator, graduate students, or Dr. Petersen <u>IMMEDIATELY</u>. 
+We are able to recover deleted items for up to 4 months.** 
+
 If there is an old or outdated document, like an outdated checklist or an old coding form that has since been re-coded, do not delete it.
 You may move it to an "00-Old" folder (see [Folder Designations](#folderDesignations) below), or, if you are unsure where it should be saved, consult your fellow lab members or the Lab Coordinator.
 
