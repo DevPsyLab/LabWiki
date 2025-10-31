@@ -37,6 +37,9 @@ If the hypothesis is true, we <u>*predict*</u> that children with poorer languag
 1. Avoid "this", "that", "these", and "those".
 They are vague and make the reader work harder.
 Replace them with their referent.
+1. "Increase" (or increased) and "decrease" (or decreased) imply change over time.
+Do not use them to describe differences between groups or associations, unless you are specifically referring to change over time (e.g., greater language ability was associated with decreases in behavior problems over time).
+Instead, use words such as "higher"/"greater"/"stronger"/"better" and "lower"/"smaller/"weaker"/"poorer", etc.
 1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at https://perma.cc/3XQ6-DBNW).
     - [Unicode values](https://www.punctuationmatters.com/the-difference-between-a-dash-and-a-minus-sign/) (archived at https://perma.cc/Q9GM-SSCL) for each character:
       - hyphen (-): 002D or 2010
