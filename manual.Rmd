@@ -801,7 +801,7 @@ Member folders can be found on the lab drive here:
 
 Member folders should be used for any lab-related work (excluding lab reports).
 They can be accessed by anyone in lab, including other RAs, so it is not advisable to save any personal or confidential documents within a member folder.
-However, if you ever work on a lab-related project (e.g., recruitment material, helping to develop a new task or coding system, etc.) any relevant documents should be saved in your member folder.
+**However, if you ever work on a lab-related project (e.g., recruitment material, helping to develop a new task or coding system, etc.) any relevant documents should be saved in your member folder.**
 When RAs graduate from the lab, these folders are archived so if we ever need to go back and find documents used in previous projects we have them saved.
 
 ### Lab Drive Directory—Frequently Used Folders
