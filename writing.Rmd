@@ -42,6 +42,7 @@ Do not use them to describe differences between groups or associations, unless y
 Instead, use words such as "higher"/"greater"/"stronger"/"better" and "lower"/"smaller/"weaker"/"poorer", etc.
 1. When writing the Limitations section, provide *thoughtful* limitations.
 As described by [Patrick Curran](https://quantitudepod.org/s2e13-you-want-me-to-do-a-quant-review/), don't include a limitation that, if you reversed it, only an ignoramus would endorse it:
+
     > **Curran**: I would love to take credit for this, but a colleague of mine years ago had this great description of, he doesn't want to see a limitation that if you reversed it, only an ignoramus would endorse it.
     > So he said if the limitations were: "*Future research needs to use smaller sample sizes, more homogeneous samples, higher SES*".
     > You reverse the limitation, only an ignoramus would endorse it.
@@ -61,6 +62,7 @@ As described by [Patrick Curran](https://quantitudepod.org/s2e13-you-want-me-to-
     >
     > **Curran**: But when you do that, throw a bone as to why that's not a critical issue for this paper.
     > What I would then say is, "*We conducted a series of sensitivity analyses, none of which indicated such functional heterogeneity existed, and we do not view this as a significant limitation here.*"
+
 1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at https://perma.cc/3XQ6-DBNW).
     - [Unicode values](https://www.punctuationmatters.com/the-difference-between-a-dash-and-a-minus-sign/) (archived at https://perma.cc/Q9GM-SSCL) for each character:
       - hyphen (-): 002D or 2010
