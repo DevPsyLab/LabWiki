@@ -43,24 +43,25 @@ Instead, use words such as "higher"/"greater"/"stronger"/"better" and "lower"/"s
 1. When writing the Limitations section, provide *thoughtful* limitations.
 As described by [Patrick Curran](https://quantitudepod.org/s2e13-you-want-me-to-do-a-quant-review/), don't include a limitation that, if you reversed it, only an ignoramus would endorse it:
 
-    > **Curran**: I would love to take credit for this, but a colleague of mine years ago had this great description of, he doesn't want to see a limitation that if you reversed it, only an ignoramus would endorse it.
+    > **Curran:** I would love to take credit for this, but a colleague of mine years ago had this great description of.
+    > He doesn't want to see a limitation that if you reversed it, only an ignoramus would endorse it.
     > So he said if the limitations were: "*Future research needs to use smaller sample sizes, more homogeneous samples, higher SES*".
     > You reverse the limitation, only an ignoramus would endorse it.
     > That's not really a limitation.
     > I wanna see real, legitimate, thoughtful limitations.
     > Communicate to me that you're aware of the limits of what you're doing, but be thoughtful and realistic, both so that you can telegraph that, but also that you can legitimately lay out where we need to go next.
     >
-    > **Hancock**: So give me an example of one or two of those limitations that you would think, yep, that's the kind of thing I wanna see right here.
+    > **Hancock:** So give me an example of one or two of those limitations that you would think, yep, that's the kind of thing I wanna see right here.
     >
-    > **Curran**: [Jokingly] "We need larger sample sizes and more items."
+    > **Curran:** [Jokingly] "We need larger sample sizes and more items."
     > So maybe we used a series of latent curve models to fit nonlinear trajectories to adolescent substance use over time.
     > This analytic method assumes that all subjects are governed by the same underlying trajectory and only differ in magnitude.
     > "*It may be that there are subgroups within the sample that are governed by different forms of trajectories that are not captured by a single common functional form.
     > Future work would do well to examine these alternative functions in other settings*", something like that.
     >
-    > **Hancock**: That was really, really nice.
+    > **Hancock:** That was really, really nice.
     >
-    > **Curran**: But when you do that, throw a bone as to why that's not a critical issue for this paper.
+    > **Curran:** But when you do that, throw a bone as to why that's not a critical issue for this paper.
     > What I would then say is, "*We conducted a series of sensitivity analyses, none of which indicated such functional heterogeneity existed, and we do not view this as a significant limitation here.*"
 
 1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at https://perma.cc/3XQ6-DBNW).
