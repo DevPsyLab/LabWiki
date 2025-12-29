@@ -188,7 +188,7 @@ However, an instrument will not show up for entry until:
 
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
 Variable names should follow the appropriate naming convention that is used for each survey.
-After you have added variables, slack the Lab Coordinator for review.
+After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review.
 **Do not add variables to more than three surveys at a time.**
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
@@ -267,7 +267,7 @@ For example, the below URL corresponds to the *parenting_partner* instrument.
       - @HIDDEN-SURVEY
       - @READONLY
       - @CALCTEXT([survey-duration-completed:instrument_name:m])
-1. Slack the Lab Coordinator for review
+1. Send a (team-facing) message in Discord to the Lab Coordinator for review.
 
 ## Troubleshooting {#troubleshooting}
 

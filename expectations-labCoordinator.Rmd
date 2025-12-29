@@ -39,21 +39,21 @@ It is important to me to help protect your time, and I will work with you to try
 If we discuss the schedule changes in person or by phone, you email me after we discuss to confirm the changes.
 - If your position requires you to log hours, you log hours worked using your Employee Self Service and submit them to Dr. Petersen—your log should not exceed 40 hours in a week.
 - The position involves fully in-person work.
-- You let me and the relevant team members know by Slack if you will not be able to make it in for your regularly scheduled hours.
-- You let me and the relevant team members know in person or by Slack if you are leaving the office (running lab errands, etc.).
+- You let me and the relevant team members know by Discord if you will not be able to make it in for your regularly scheduled hours.
+- You let me and the relevant team members know in person or by Discord if you are leaving the office (running lab errands, etc.).
 - You keep your schedule in the online calendar up-to-date with any changes.
-- You submit time off (or other) requests to me in person, by phone, or via email (not by Slack) with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
+- You submit time off (or other) requests to me in person, by phone, or via email (not by Discord) with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
 
 # Communication {#communication}
 
-- You will use Slack (or in person/phone) for most communication (see lab communication guidelines [here](manual.html#labCommunication)), but you will use the lab email (i.e., devpsy-lab@uiowa.edu; not your personal email) for all lab-relevant email communication.
+- You will use Discord (or in person/phone) for most communication (see lab communication guidelines [here](manual.html#labCommunication)), but you will use the lab email (i.e., devpsy-lab@uiowa.edu; not your personal email) for all lab-relevant email communication.
 This makes it easier for us to keep a record of lab-related communication for Dr. Petersen and future lab staff.
 For personal communication (e.g., asking for time off) or ***non-lab*** related email communication, you will use your personal university email (i.e., firstname-lastname@uiowa.edu).
 If someone contacts your personal university email with lab-related communication, you should reply using the lab email.
-- You respond to team members promptly by email, Slack, or in person (within one business day).
+- You respond to team members promptly by email, Discord, or in person (within one business day).
 - 
-If you need time to gather information in response to a Slack message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
-At times, I may contact you by email or Slack after hours (if that is when it is most convenient, so that I do not forget to).
+If you need time to gather information in response to a Discord message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
+At times, I may contact you by email or Discord after hours (if that is when it is most convenient, so that I do not forget to).
 However, you are \*not\* expected to respond after hours.
 I will call you if something is urgent.
 

@@ -119,7 +119,7 @@ Therefore, you should never use participant names, addresses, physical descripti
 
 No one should ever take photos, screenshots, Snapchats, or any other kind of video recording of lab data, including visit videos.
 Additionally, no data or identifying information should be shared on social media, through email, etc.
-Even when using Slack to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.
+Even when using Discord to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.
 
 ## Remote Access {#remote}
 
@@ -410,7 +410,7 @@ It is acceptable for an RA's available evenings to vary week to week, but all RA
 RAs are responsible for any visit they may be scheduled to run during the availability they provide at the beginning of the semester.
 Therefore, it is imperative that all appointments and events that occur during their normal weekly availability are shared with the Lab Coordinator via the "Busy Calendar" as soon as possible.
 
-If an RA has been scheduled for a visit during their availability (including available time on weekdays, available evenings, and chosen weekend days), has been notified of this visit, and cannot run the visit due to an unexpected conflict, the RA is responsible for posting on the `#scheduling` channel on Slack to ask for a cover.
+If an RA has been scheduled for a visit during their availability (including available time on weekdays, available evenings, and chosen weekend days), has been notified of this visit, and cannot run the visit due to an unexpected conflict, the RA is responsible for posting on the `#scheduling` channel on Discord to ask for a cover.
 It is the RA's responsibility to let the Lab Coordinator know who will cover the visit.
 If unable to find a cover, it is the RA's responsibility to let the Lab Coordinator know by at least 48 hours before the visit.
 
@@ -429,7 +429,7 @@ This does mean that if a visit needs to be scheduled on a weekend day, the Lab C
 You are expected to stay available to run visits on the days you are signed up for until 24 hours prior.
 The Lab Coordinator will not automatically schedule you for a weekend or evening visit without 24 hours' notice to lab members.
 The Lab Coordinator may request volunteers to run visits that are scheduled "last minute" (i.e., within 24 hours), but you are not expected to be available for "last-minute" visits unless they occur during your scheduled lab hours.
-If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Slack with the details of the visit.
+If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Discord with the details of the visit.
 
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
 Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#advancement)).
@@ -547,7 +547,7 @@ The list of those who will be presenting and when they will presenting can be fo
 If there are fewer days available than there are RAs, priority is given to newer RAs or to RAs who have had fewer opportunities to lead the discussion of an article.
 **All lab members are expected to contribute to each discussion.**
 
-By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Slack.
+By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Discord.
 For more information on how to find and access articles, see [here](honors.html#articles).
 For more information on APA formatting, see the resources on the lab drive:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
@@ -564,7 +564,7 @@ You can also mention critiques you have, but keep it as question-oriented as pos
 
 An RA will be designated (usually on a volunteer basis) each semester to be the lab meeting scribe.
 The scribe is responsible for taking notes throughout the meeting.
-The scribe also sends a brief summary of the important information from the meeting to the entire team via the `#lab-meetings` channel in Slack after the lab meeting has ended.
+The scribe also sends a brief summary of the important information from the meeting to the entire team via the `#lab-meetings` channel in Discord after the lab meeting has ended.
 The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [lab's OneDrive](#onedrive).
 
 ### Attendance and Absence Policies {#lab-meeting-attendance}
@@ -578,15 +578,15 @@ The RA is also responsible for reading the lab meeting agenda and summary notes 
 ## Lab Communication {#labCommunication}
 
 Forms of lab communication are described below.
-**Please use Slack for as much communication as possible!**
-Keeping lab-related communication on Slack helps our team work most effectively and efficiently, and it saves time for the Lab Coordinator, Dr. Petersen, and your team members because it allows other RAs to answer questions and allows people to jump in to provide corrective feedback, as necessary.
+**Please use Discord for as much communication as possible!**
+Keeping lab-related communication on Discord helps our team work most effectively and efficiently, and it saves time for the Lab Coordinator, Dr. Petersen, and your team members because it allows other RAs to answer questions and allows people to jump in to provide corrective feedback, as necessary.
 
 1. Non-private lab-related communication (almost all communication)
-    - Use Slack
-        - See the [Slack Checklist](#slack)
+    - Use Discord
+        - See the [Discord Checklist](#discord)
         - Feel free to send messages and you can notify particular people if the message is for particular people (@isaac-petersen).
-        - You can send pictures and attachments in Slack by using the plus sign next to the message.
-        - Slack communication can be informal!
+        - You can send pictures and attachments in Discord by using the plus sign next to the message.
+        - Discord communication can be informal!
         We want it to be a fun place to communicate and chat with the team.
         Feel free to post memes, set up lab-wide social gatherings, etc.
 1. Private lab-related communication 
@@ -613,14 +613,16 @@ Please express personnel concerns directly (in person or by email).
 Do not put personnel grievances in lab reports.
 We encourage you to express concerns to the chain of command if you feel the issues impair your or the team's functioning.
 
-### Slack {#slack}
+### Discord {#discord}
 
 #### Getting Started
 
-1. Download the "Slack" App to your mobile phone (it is free!)
-1. You can also access Slack on any internet browser (https://slack.com) 
-1. Create an account with your university e-mail and a password you will remember 
-1. Enter the workspace URL "devpsy-lab.slack.com" (the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding) 
+1. Download the "Discord" App to your mobile phone (it is free!)
+1. You can also access Discord on any internet browser (https://discord.com): https://discord.com/channels/@me
+1. If you do not already have a Discord account, create a Discord account with a password you will remember.
+You can use either your university email address or a non-university email address.
+However, regardless of which email you use, make sure that your notifications are set up so that you will receive notifications for lab-related messages.
+1. Open the Discord server for the Developmental Psychopathology Lab (Dr. Petersen or the Lab Coordinator should have added you to the workspace prior to your start in lab as part of your onboarding).
 1. Make sure to add yourself to all the following "Channels"
  
 - `#announcements`
@@ -653,10 +655,11 @@ We encourage you to express concerns to the chain of command if you feel the iss
         1. `@channel` notifies everyone in the channel 
     b. `#random`: Use this channel if you are running late to lab, or if you have a question or comment that does not fall within the other channel categories; can also put memes or random funny things here!
 1. Attachments: Send pictures and attachments by clicking the plus sign next to the message
-1. Direct Messages: Do not use direct messaging in Slack.
+1. Direct Messages: Do not use direct messages or private threads in Discord.
+All Discord communication should be in team-facing channels so others can benefit from the information and so we can go back and reference it later.
 If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#labCommunication) for more information)
 
-Slack channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic.
+Discord channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic.
 For example, the `#coding` channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between.
 Think of each channel as a "theme" rather than a specific "topic of conversation."
 You should simply choose the channel that seems most relevant to the question or comment you want to share and have at it!

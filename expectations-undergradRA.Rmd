@@ -44,7 +44,7 @@ Please give as much advance notice as possible.
 In case of emergency requests, please reach out to the Lab Coordinator in person or by phone call (319-353-1977).
 Requests must first be approved by the Lab Coordinator.
 It is your responsibility to follow up with the Lab Coordinator regarding requests.
-Do not send requests to change your schedule via Slack.
+Do not send requests to change your schedule via Discord.
 If the request is approved, create a calendar entry on the Busy calendar, as described [here](manual.html#sharedCalendar).
 
 Unless otherwise stated, running lab visits is always the top priority.
@@ -120,7 +120,7 @@ The RA will be encouraged to contribute to both the formulation of research ques
 With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
 We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
 Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, and in person, by phone call (319-353-1977), or via email to the lab email (devpsy-lab@uiowa.edu).
-We expect RAs to let the Lab Coordinator and relevant team members know, as soon as possible and by Slack, if they are running late to a scheduled shift, visit, or meeting.
+We expect RAs to let the Lab Coordinator and relevant team members know, as soon as possible and by Discord, if they are running late to a scheduled shift, visit, or meeting.
 The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift.
 If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
 If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.

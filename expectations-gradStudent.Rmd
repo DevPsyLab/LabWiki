@@ -176,7 +176,7 @@ Work-life balance and vacation time are essential for creative thinking and good
 You can take three weeks of vacation time each year, and you are not expected to work during [university holidays](https://grad.uiowa.edu/graduate-student-employment-agreement/paid-leaves-and-holiday).
 In addition, I do not expect students to work between mid-December (i.e., after the end of the Fall semester) and the first week of January.
 Please discuss your vacation plans with me before booking your trip.
-Submit requests for time off in person, by phone, or via email, not by Slack.
+Submit requests for time off in person, by phone, or via email, not by Discord.
 Consult with me and notify fellow lab members in advance of any planned absences, with as much advance notice as possible—at least two weeks' notice or more if feasible.
 Please plan that if you are away, others will need to take over your responsibilities, so planning for adequate lead time and training may be necessary.
 Please discuss with me if you plan to take a summer internship or bootcamp.
@@ -394,9 +394,9 @@ I will provide honest letters of evaluation for you when you request them.
 
 ## Communication {#communication}
 
-Feel free to use Slack for brief communication with me.
-However, we do not use direct messages in Slack (see the lab manual).
-All Slack communication should be in team-facing channels so others can benefit from the information and so we can go back and reference it later.
+Feel free to use Discord for brief communication with me.
+However, we do not use direct messages in Discord (see the lab manual).
+All Discord communication should be in team-facing channels so others can benefit from the information and so we can go back and reference it later.
 For longer communication, please call or stop by my office.
 I find this much more efficient and pleasant than writing and reading lengthy communication.
 For sending manuscripts, personal information, and messages that do not need an urgent response, you may email me.
@@ -406,8 +406,8 @@ I encourage you to stop by my office or to call my office phone instead of relyi
 
 When you contact me or send me materials, you can expect me to respond promptly.
 Likewise, I expect you to respond promptly when I or another lab member contacts you (in most cases, within 48 hours).
-If you need time to gather information in response to a Slack message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
-At times, I may contact you by email or Slack after hours (if that is when it is most convenient, so that I do not forget to).
+If you need time to gather information in response to a Discord message or email, please acknowledge receipt of the message and indicate when you will be able to provide the requested information.
+At times, I may contact you by email or Discord after hours (if that is when it is most convenient, so that I do not forget to).
 However, you are \*not\* expected to respond after hours.
 I will call you if something is urgent.
 
@@ -466,7 +466,7 @@ Show up on time, fully prepared for meetings.
 If you will need to miss a meeting, let the relevant team members know in advance, with as much advance notice as possible.
 Unexcused absences are not acceptable in a professional environment.
 
-If you have critical thoughts to share with someone, do not send them in Slack or in email; instead, call or talk to the person directly.
+If you have critical thoughts to share with someone, do not send them in Discord or in email; instead, call or talk to the person directly.
 Be responsive to advice and constructive criticism.
 The feedback you get from me, your colleagues, your committee members, your course instructors, your clinical supervisors, and your teaching supervisors is intended to improve your work and help you succeed.
 Do your best not to take it personally.
