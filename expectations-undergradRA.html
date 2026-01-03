@@ -1,786 +1,459 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<html>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="author" content="Isaac T. Petersen">
+<meta name="dcterms.date" content="today">
 
-
-
-
-<title>Lab Expectations for Undergraduate Research Assistants</title>
-
-<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/navigation-1.1/sourceembed.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8JSDTYMH7P');
-</script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+<title>Lab Expectations for Undergraduate Research Assistants – Lab Wiki for the Developmental Psychopathology Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-</script>
-
-
-
-
-<style type="text/css">
-#rmd-source-code {
-  display: none;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-</style>
-
-
-<link rel="stylesheet" href="includes/custom.css" type="text/css" />
-<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-
-
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
 @media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
   }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
 </style>
 
 
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9278de052701f0b3f1191ef96b26c196.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
 
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="includes/custom.css">
+<link rel="stylesheet" href="font/css/roboto.css">
 </head>
 
-<body>
+<body class="nav-fixed quarto-light">
 
-
-<div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo light-content">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab Wiki for the Developmental Psychopathology Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab-manual.html"> 
+<span class="menu-text">Lab Manual</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-expectations" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Expectations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-expectations">    
         <li>
-  <a href="manual.html">Lab Manual</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Expectations
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="expectations-everyone.html">Everyone</a>
-    </li>
-    <li>
-      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="expectations-SROP.html">SROP Students</a>
-    </li>
-    <li>
-      <a href="expectations-gradStudent.html">Graduate Students</a>
-    </li>
-    <li>
-      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
-    </li>
-    <li>
-      <a href="expectations-labStaff.html">Lab Staff</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Documentation
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="adobe.html">Adobe</a>
-    </li>
-    <li>
-      <a href="https://devpsylab.github.io/DataAnalysis">Data Analysis Guides</a>
-    </li>
-    <li>
-      <a href="honors.html">Honors Projects</a>
-    </li>
-    <li>
-      <a href="mediationModeration.html">Mediation and Moderation</a>
-    </li>
-    <li>
-      <a href="openScience.html">Open Science</a>
-    </li>
-    <li>
-      <a href="opportunities.html">Opportunities</a>
-    </li>
-    <li>
-      <a href="redcap-manual.html">REDCap</a>
-    </li>
-    <li>
-      <a href="qualtrics-manual.html">Qualtrics</a>
-    </li>
-    <li>
-      <a href="documentation-remote.html">Remote Participation</a>
-    </li>
-    <li>
-      <a href="social-media.html">Social Media</a>
-    </li>
-    <li>
-      <a href="studies.html">Studies</a>
-    </li>
-    <li>
-      <a href="video-editing.html">Video Editing</a>
-    </li>
-    <li>
-      <a href="vsCode.html">Visual Studio Code</a>
-    </li>
-    <li>
-      <a href="writing.html">Writing Guidelines</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Studies
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="study-externalizingSpectrumAcrossLifespan.html">Externalizing Spectrum Across the Lifespan</a>
-    </li>
-    <li>
-      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Prospective Applicants
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="about.html">About</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <a class="dropdown-item" href="./expectations-everyone.html">
+ <span class="dropdown-text">Everyone</span></a>
+  </li>  
         <li>
-  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-<li role="separator" class="divider"></li>
-<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+    <a class="dropdown-item" href="./expectations-undergradRA.html">
+ <span class="dropdown-text">Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-SROP.html">
+ <span class="dropdown-text">SROP Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-gradStudent.html">
+ <span class="dropdown-text">Graduate Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labCoordinator.html">
+ <span class="dropdown-text">Lab Coordinator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labStaff.html">
+ <span class="dropdown-text">Lab Staff</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Documentation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
+        <li>
+    <a class="dropdown-item" href="./adobe.html">
+ <span class="dropdown-text">Adobe</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://devpsylab.github.io/DataAnalysis">
+ <span class="dropdown-text">Data Analysis Guides</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./honors.html">
+ <span class="dropdown-text">Honors Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mediationModeration.html">
+ <span class="dropdown-text">Mediation and Moderation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./openScience.html">
+ <span class="dropdown-text">Open Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./opportunities.html">
+ <span class="dropdown-text">Opportunities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./redcap-manual.html">
+ <span class="dropdown-text">REDCap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./qualtrics-manual.html">
+ <span class="dropdown-text">Qualtrics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./documentation-remote.html">
+ <span class="dropdown-text">Remote Participation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./social-media.html">
+ <span class="dropdown-text">Social Media</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./studies.html">
+ <span class="dropdown-text">Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./video-editing.html">
+ <span class="dropdown-text">Video Editing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vsCode.html">
+ <span class="dropdown-text">Visual Studio Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing.html">
+ <span class="dropdown-text">Writing Guidelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-studies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Studies</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-studies">    
+        <li>
+    <a class="dropdown-item" href="./study-externalizingSpectrumAcrossLifespan.html">
+ <span class="dropdown-text">Externalizing Spectrum Across the Lifespan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./study-schoolReadinessStudy.html">
+ <span class="dropdown-text">School Readiness Study</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-prospective-applicants" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Prospective Applicants</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-prospective-applicants">    
+        <li>
+    <a class="dropdown-item" href="./prospective-undergradRA.html">
+ <span class="dropdown-text">Prospective Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./prospective-gradStudent.html">
+ <span class="dropdown-text">Prospective Graduate Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About This Website</span></a>
+  </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://developmental-psychopathology.lab.uiowa.edu"> 
+<span class="menu-text">Lab Website</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki/issues/new">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://twitter.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://www.facebook.com/DevPsyLab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-schedulingExpectations" id="toc-sec-schedulingExpectations" class="nav-link active" data-scroll-target="#sec-schedulingExpectations"><span class="header-section-number">1</span> Scheduling Expectations</a>
+  <ul>
+  <li><a href="#sec-atAGlance" id="toc-sec-atAGlance" class="nav-link" data-scroll-target="#sec-atAGlance"><span class="header-section-number">1.1</span> At a Glance</a></li>
+  <li><a href="#sec-yourSchedulingResponsibilities" id="toc-sec-yourSchedulingResponsibilities" class="nav-link" data-scroll-target="#sec-yourSchedulingResponsibilities"><span class="header-section-number">1.2</span> Your responsibilities as an RA</a></li>
+  <li><a href="#sec-ourResponsibilitiesToYou" id="toc-sec-ourResponsibilitiesToYou" class="nav-link" data-scroll-target="#sec-ourResponsibilitiesToYou"><span class="header-section-number">1.3</span> Our responsibilities to you</a></li>
+  </ul></li>
+  <li><a href="#sec-ra" id="toc-sec-ra" class="nav-link" data-scroll-target="#sec-ra"><span class="header-section-number">2</span> RA Duties: What Does Work as a Research Assistant Entail?</a></li>
+  <li><a href="#sec-expectations" id="toc-sec-expectations" class="nav-link" data-scroll-target="#sec-expectations"><span class="header-section-number">3</span> Lab Expectations</a></li>
+  <li><a href="#sec-grading" id="toc-sec-grading" class="nav-link" data-scroll-target="#sec-grading"><span class="header-section-number">4</span> Grading Scale</a></li>
+  <li><a href="#sec-expectationsForEveryone" id="toc-sec-expectationsForEveryone" class="nav-link" data-scroll-target="#sec-expectationsForEveryone"><span class="header-section-number">5</span> Expectations for Everyone in Lab</a></li>
+  <li><a href="#sec-signature" id="toc-sec-signature" class="nav-link" data-scroll-target="#sec-signature"><span class="header-section-number">6</span> Signature</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/expectations-undergradRA.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/expectations-undergradRA.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Lab Expectations for Undergraduate Research Assistants</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
-<h1 class="title toc-ignore">Lab Expectations for Undergraduate Research
-Assistants</h1>
+<div class="quarto-title-meta">
 
-</div>
+    
+  
+    
+  </div>
+  
 
 
-<div id="schedulingExpectations" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Scheduling
-Expectations</h1>
-<div id="atAGlance" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> At a Glance</h2>
+</header>
+
+
+<section id="sec-schedulingExpectations" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Scheduling Expectations</h1>
+<section id="sec-atAGlance" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-atAGlance"><span class="header-section-number">1.1</span> At a Glance</h2>
 <p><strong>General Commitment:</strong></p>
-<p>We want to ensure that RAs get the most value out of their experience
-with our lab.</p>
+<p>We want to ensure that RAs get the most value out of their experience with our lab.</p>
 <ul>
-<li>Given the extensive training required, <u>RAs are expected to commit
-to <strong>at least</strong> 2 semesters of working in lab</u></li>
-<li>RAs interested in a <a
-href="manual.html#specializedRoles">specialized role</a> must commit to
-<strong>at least</strong> 3 semesters in order to account for the
-extensive training process</li>
+<li>Given the extensive training required, <u>RAs are expected to commit to <strong>at least</strong> 2 semesters of working in lab</u></li>
+<li>RAs interested in a <a href="./lab-manual.html#sec-specializedRoles">specialized role</a> must commit to <strong>at least</strong> 3 semesters in order to account for the extensive training process</li>
 </ul>
 <p><strong>Each Week:</strong></p>
 <ul>
-<li>RAs are expected to be in lab for 10 regularly scheduled hours (1 of
-these hours will be from the weekly lab meeting)
+<li>RAs are expected to be in lab for 10 regularly scheduled hours (1 of these hours will be from the weekly lab meeting)
 <ul>
-<li>These hours are regularly scheduled (between 9 AM – 5 PM), so we ask
-that RAs have substantial chunks of time (i.e., 2–4 hours) within the
-week where their hours can be properly distributed</li>
+<li>These hours are regularly scheduled (between 9 AM – 5 PM), so we ask that RAs have substantial chunks of time (i.e., 2–4 hours) within the week where their hours can be properly distributed</li>
 </ul></li>
-<li>RAs are expected to provide <strong>at least</strong> 2 days in the
-week (Monday–Friday) that they would be available past 5 PM to run
-visits (to accommodate children and families’ schedules)
+<li>RAs are expected to provide <strong>at least</strong> 2 days in the week (Monday–Friday) that they would be available past 5 PM to run visits (to accommodate children and families’ schedules)
 <ul>
-<li><em>This does not mean you will always run visits on these days, it
-simply means that you are available to if need be.</em></li>
+<li><em>This does not mean you will always run visits on these days, it simply means that you are available to if need be.</em></li>
 </ul></li>
-<li>If you work in the lab more than 10 hours in a given week (e.g., to
-run an evening/weekend visit), you may cut down the following week to
-stay at an average of 10 hours per week.</li>
+<li>If you work in the lab more than 10 hours in a given week (e.g., to run an evening/weekend visit), you may cut down the following week to stay at an average of 10 hours per week.</li>
 </ul>
 <p><strong>Each Semester:</strong></p>
 <ul>
-<li>RAs are expected to provide ~8 weekend days in the semester that
-they are available to run visits (to accommodate children and families’
-schedules)
+<li>RAs are expected to provide ~8 weekend days in the semester that they are available to run visits (to accommodate children and families’ schedules)
 <ul>
-<li>This means that RAs signed up for a specific day will be “on-call”
-for any visits that are scheduled for that day
+<li>This means that RAs signed up for a specific day will be “on-call” for any visits that are scheduled for that day
 <ul>
-<li><em>This does not mean you will always run visits on these days, it
-simply means that you are available to if need be.</em></li>
-<li><em>RAs will be notified of a weekend visit no later than 24 hours
-before the scheduled visit.</em></li>
+<li><em>This does not mean you will always run visits on these days, it simply means that you are available to if need be.</em></li>
+<li><em>RAs will be notified of a weekend visit no later than 24 hours before the scheduled visit.</em></li>
 </ul></li>
 </ul></li>
 </ul>
-</div>
-<div id="yourSchedulingResponsibilities" class="section level2"
-number="1.2">
-<h2><span class="header-section-number">1.2</span> Your responsibilities
-as an RA</h2>
-<p>You are expected to be in lab for 10 regularly scheduled hours per
-week, on average, during the semester (excluding university holidays,
-breaks, and finals week). If you exceed 10 hours during any given week
-(e.g., helping run lab visits outside of your normal hours), you should
-work with the Lab Coordinator to determine when you may cut back your
-lab hours in later weeks. Any request to cut back on hours or change
-your schedule should be submitted to the Lab Coordinator in person, by
-phone call (319-353-1977), or via email to the lab email (<a
-href="mailto:devpsy-lab@uiowa.edu"
-class="email">devpsy-lab@uiowa.edu</a>) by 4:00 pm the day prior to the
-requested time off. Please give as much advance notice as possible. In
-case of emergency requests, please reach out to the Lab Coordinator in
-person or by phone call (319-353-1977). Requests must first be approved
-by the Lab Coordinator. It is your responsibility to follow up with the
-Lab Coordinator regarding requests. Do not send requests to change your
-schedule via Discord. If the request is approved, create a calendar
-entry on the Busy calendar, as described <a
-href="manual.html#sharedCalendar">here</a>.</p>
-<p>Unless otherwise stated, running lab visits is always the top
-priority. You are expected to arrive 45 minutes before the scheduled
-start time of visits. If you are asked to help run a lab visit in a
-given week, then running the lab visit is the prioritized use of your
-allotted weekly hours. If you are able to run a lab visit, and are asked
-to do so, we expect that you run the lab visit, even if it means not
-completing other lab responsibilities for the week; for example, it is
-okay for coding and entry duties to “pile up” if you are running lab
-visits.</p>
-<p>You are responsible for keeping the “RES-DPL-Busy” calendar up to
-date, including evenings and weekends, and to keep the Lab Coordinator
-informed of any changes as they occur.</p>
-<p>You are expected to track your lab hours honestly using the
-electronic scheduling system. You should diligently clock in and clock
-out every time you are in lab, and should only be “on the clock” while
-you are doing scheduled lab-related work or activities.</p>
-<p>If you come into lab to help run lab visits during university breaks,
-the hours can count as hours for either the current semester (if you are
-“under hours” for the semester), or toward the following semester (if
-you are “over hours” for the semester). Completed lab-related hours
-count as lab hours no matter when they occur as long as they occur when
-they are scheduled. Lab hours must be scheduled/arranged with the Lab
-Coordinator in advance.</p>
-<p>You are NOT expected to be in lab for regularly scheduled lab hours
-on university holidays. If holidays occur during the week when lab hours
-are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter
-hours for that day.</p>
-<p>You are expected to schedule non-lab activities (course-related,
-therapy/medical appointments, extra-curricular, etc.) outside of your
-scheduled lab hours. However, we understand that this is occasionally
-not possible. If scheduling an outside activity during your regular lab
-hours is necessary, you are expected to first discuss this with the Lab
-Coordinator, to mark yourself as unavailable on the calendar
-(RES-DPL-Busy), and to work with the Lab Coordinator to determine when
-to make up the missed hours.</p>
-<p>You are expected to be available at least two weekday evenings (M–F)
-per week and at least 8 weekend days per semester to run lab visits that
-may extend or be scheduled outside of the lab’s normal business hours,
-which are 9:00am to 5:00pm Monday through Friday. You will be considered
-“on call” the evenings and weekend days you mark as available (i.e.,
-your scheduled “on-call days”). It is unlikely you will run a lab visit
-on all of your on-call days, but we may schedule a lab visit on any of
-your on-call days, in which case you would be expected to help run the
-lab visit. You are expected to hold your scheduled on-call days
-available until 24 hours beforehand. If you can no longer help run a
-visit you have been scheduled for, it is your responsibility to find
-another RA to trade with you. Both parties are then required to inform
-the Lab Coordinator of the trade before it is finalized. We will do our
-best to schedule families during your regular lab hours, however this
-may not always be possible. We want to ensure, as much as possible, (a)
-adequate coverage to accommodate families’ schedules and (b) equitable
-distribution of “after-hours” lab visits. These are the minimum
-expectations for evening and weekend availability. You are welcome to
-make yourself available more than two evenings per week and three
-weekend days per month to help us better meet families’ needs.</p>
-<p>If you miss lab for an acute illness, the missed hours should be made
-up during the same semester the missing hours occurred. If you have
-concerns making up these hours, please reach out to the Lab
-Coordinator.</p>
-</div>
-<div id="ourResponsibilitiesToYou" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Our responsibilities
-to you</h2>
-<p>We appreciate that your classes—including exams and course prep—come
-first. We will work with you so that your lab schedule does not
-interfere with your other classes.</p>
-<p>It is greatly appreciated when RAs are able to run lab visits during
-breaks because breaks are often when families are available and thus it
-is very helpful to the lab. RAs who are available and willing to run lab
-visits during breaks will accrue those hours either for the current or
-following semester. Running lab visits during breaks is not an
-expectation of RAs.</p>
-<p>We will schedule lab visits using the availability schedule you
-submitted to the Lab Coordinator at the beginning of the semester and
-the RES-DPL-Busy calendar. We will never expect you to help run lab
-visits when you have marked yourself as unavailable on the calendar.</p>
-<p>We will do our best to schedule a similar number of lab visits across
-RAs. This will ensure RAs receive a similar amount of experience with
-children/families and that a small set of RAs are not overburdened by
-lab visits and unable to tend to their other lab responsibilities.</p>
-<p>We will do our best to schedule families during your regular lab
-hours. We will only schedule families outside regular lab hours (e.g.,
-evenings/weekends) if necessary.</p>
-<p>We will never schedule a lab visit outside of normal lab hours with
-less than 24 hours’ notice to the RAs scheduled to run it.</p>
-<p>We will work with you to help you identify when you can “cut back”
-when you let us know that you are over the expected number of hours for
-that point in the semester.</p>
-</div>
-</div>
-<div id="ra" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> RA Duties: What Does
-Work as a Research Assistant Entail?</h1>
-<p>The undergraduate research assistant (RA) will participate in ongoing
-research within the Developmental Psychopathology Lab. The RA will work
-in lab for 10 hours per week during the semester (9 hours of work in the
-lab plus a one-hour weekly lab meeting). Work assigned may include (but
-is not limited to): making the lab space child and family friendly,
-helping with recruitment, running participants, video coding, database
-management, data entry, and developing new procedures/devices. Each
-week, the RA is expected to read critically an empirical research
-article for lab meeting and come prepared to contribute to the
-discussion with questions and comments. Every other week, the RA will
-submit a report of their progress in lab, tasks they found interesting,
-and any questions or suggestions they have. Instructions for lab reports
-are described in the lab manual (click <a
-href="manual.html#resolvingConflicts">here</a>). Throughout the course
-of their time in lab, the RA will have meetings with and work closely
-with the Principal Investigator (PI), Lab Coordinator, graduate
-students, and/or undergraduate students to ensure assigned work is
-completed as requested with the highest quality performance possible.
-The RA will be encouraged to contribute to both the formulation of
-research questions as well as research implementation.</p>
-</div>
-<div id="expectations" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Lab Expectations</h1>
-<p>With the exception of running participants or recruitment activities,
-lab hours will be regularly scheduled and will take place during regular
-business hours: between 9am–5pm Monday through Friday. We expect the RA
-to be reliable and consistently arrive on time for scheduled lab hours
-and visits. Any changes to an RA’s weekly lab schedule need to be
-arranged with the Lab Coordinator, in advance, and in person, by phone
-call (319-353-1977), or via email to the lab email (<a
-href="mailto:devpsy-lab@uiowa.edu"
-class="email">devpsy-lab@uiowa.edu</a>). We expect RAs to let the Lab
-Coordinator and relevant team members know, as soon as possible and by
-Discord, if they are running late to a scheduled shift, visit, or
-meeting. The changes to your shifts and deviations from your regularly
-scheduled hours (that are described above) should be rare—other team
-members count on you being there during your scheduled shift. If the RA
-does not complete their 10 scheduled hours in any given week, they are
-expected to make up missed hours later in the semester in arrangement
-with the Lab Coordinator, and will not be given a passing grade until
-they have fully made up their hours. If the RA works more than their
-scheduled hours in a given week (e.g., if they work during a weekend or
-evening), they are expected to cut back on their scheduled hours (in
-accordance with the availability described above); however, these cuts
-must be approved by the Lab Coordinator in advance.</p>
-<p>We expect the RA to have flexibility to accommodate participants’
-schedules for lab visits. For instance, the RA is expected to be
-available to run lab visits on evenings and weekends (see the section on
-<a href="#schedulingExpectations">Scheduling Expectations</a> below). We
-expect that the RA keeps eight weekend days available per semester
-(three weekend days per month) for the purposes of working with
-families. In addition, we expect that each RA keeps two weekday evenings
-available for the purposes of working with families. We will do our best
-to fairly distribute the evening and weekend hours across the team.</p>
-<p>We expect RAs to regularly communicate with the team, using the
-appropriate methods of communication, as described in the <a
-href="manual.html#labCommunication">Lab Communication</a> section of the
-Lab Manual. Methods for resolving conflicts and personnel issues are
-described in the Lab Communication section of the Lab Manual (click <a
-href="manual.html#resolvingConflicts">here</a>). We expect the RA to
-take personal responsibility for the work they are assigned. Assigned
-work will always coincide with the 10 hours the RA is already scheduled
-for. With the exception of lab visits, we will not assign work beyond
-the 10 hours per week expectation as long as the RA is meeting their
-expectation for lab hours. We expect the RA to ask the PI or Lab
-Coordinator if they have questions about their assigned work or
-expectations. Any non-assigned work (e.g., independent research
-projects, Honors projects, etc.) is expected to take place outside of
-scheduled hours, unless given explicit permission from the PI.</p>
-<p>We expect the RA to show an interest in the work and to, throughout
-the course of the semester, gain greater independence in the laboratory,
-to take on a greater leadership role, and to contribute to the overall
-improvement of the lab and its research. After an extended display of
-commitment and dedication to the lab, RAs are welcome to meet with
-Dr. Petersen to discuss the possibility of doing an Honor’s thesis in
-conjunction with lab participation.</p>
-<p>We expect RAs to contribute to each weekly lab meeting discussion. We
-expect RAs to submit their lab report by the deadline and in the correct
-location.</p>
-<p>We expect RAs to register for the Research Practicum in Psychology
-course (PSY:3994 or HONR:3994) to account for the time demands of lab
-participation in their schedule.</p>
-</div>
-<div id="grading" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Grading Scale</h1>
-<p>Based on the expectations above and the grading scale below, RAs will
-be assigned a letter grade [A–F] for their performance in the lab on the
-tasks assigned to them. (*Note: Enrolling in certain courses will result
-in a Pass/Fail grade rather than a letter grade. See the section of the
-Lab Manual that describes course options and how to register (click <a
-href="manual.html#courseRegistration">here</a>)).</p>
-<p>A: 100% attendance, consistently on time, and meeting all of the lab
-expectations<br />
-B: &lt; 100% attendance, or late cancellations for visits for which you
-were scheduled, or inconsistently on time, or mostly meeting the lab
-expectations<br />
-C: &lt; 80% attendance, or late cancellations for visits for which you
-were scheduled, or mostly not on time, or sometimes meeting the lab
-expectations<br />
-D: &lt; 70% attendance, or late cancellations for visits for which you
-were scheduled, or rarely on time, or only occasionally meeting the lab
-expectations<br />
-F: &lt;= 50 attendance, or frequent late cancellations for visits for
-which you were scheduled, or never on time, or generally failing to meet
-the lab expectations</p>
-</div>
-<div id="expectationsForEveryone" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Expectations for
-Everyone in Lab</h1>
-<p>In addition to the expectations described above for undergraduate
-RAs, please also read the <a
-href="expectations-everyone.html">expectations for everyone in the
-lab</a>.</p>
-</div>
-<div id="signature" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Signature</h1>
-<p>Please download, sign, and email the below document to the Lab
-Coordinator (<a href="mailto:devpsy-lab@uiowa.edu"
-class="email">devpsy-lab@uiowa.edu</a>) and Dr. Petersen prior to your
-first day in lab.</p>
+</section>
+<section id="sec-yourSchedulingResponsibilities" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-yourSchedulingResponsibilities"><span class="header-section-number">1.2</span> Your responsibilities as an RA</h2>
+<p>You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week). If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks. Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person, by phone call (319-353-1977), or via email to the lab email (<a href="mailto:devpsy-lab@uiowa.edu">devpsy-lab@uiowa.edu</a>) by 4:00 pm the day prior to the requested time off. Please give as much advance notice as possible. In case of emergency requests, please reach out to the Lab Coordinator in person or by phone call (319-353-1977). Requests must first be approved by the Lab Coordinator. It is your responsibility to follow up with the Lab Coordinator regarding requests. Do not send requests to change your schedule via Discord. If the request is approved, create a calendar entry on the Busy calendar, as described <a href="./lab-manual.html#sec-sharedCalendar">here</a>.</p>
+<p>Unless otherwise stated, running lab visits is always the top priority. You are expected to arrive 45 minutes before the scheduled start time of visits. If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours. If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to “pile up” if you are running lab visits.</p>
+<p>You are responsible for keeping the “RES-DPL-Busy” calendar up to date, including evenings and weekends, and to keep the Lab Coordinator informed of any changes as they occur.</p>
+<p>You are expected to track your lab hours honestly using the electronic scheduling system. You should diligently clock in and clock out every time you are in lab, and should only be “on the clock” while you are doing scheduled lab-related work or activities.</p>
+<p>If you come into lab to help run lab visits during university breaks, the hours can count as hours for either the current semester (if you are “under hours” for the semester), or toward the following semester (if you are “over hours” for the semester). Completed lab-related hours count as lab hours no matter when they occur as long as they occur when they are scheduled. Lab hours must be scheduled/arranged with the Lab Coordinator in advance.</p>
+<p>You are NOT expected to be in lab for regularly scheduled lab hours on university holidays. If holidays occur during the week when lab hours are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter hours for that day.</p>
+<p>You are expected to schedule non-lab activities (course-related, therapy/medical appointments, extra-curricular, etc.) outside of your scheduled lab hours. However, we understand that this is occasionally not possible. If scheduling an outside activity during your regular lab hours is necessary, you are expected to first discuss this with the Lab Coordinator, to mark yourself as unavailable on the calendar (RES-DPL-Busy), and to work with the Lab Coordinator to determine when to make up the missed hours.</p>
+<p>You are expected to be available at least two weekday evenings (M–F) per week and at least 8 weekend days per semester to run lab visits that may extend or be scheduled outside of the lab’s normal business hours, which are 9:00am to 5:00pm Monday through Friday. You will be considered “on call” the evenings and weekend days you mark as available (i.e., your scheduled “on-call days”). It is unlikely you will run a lab visit on all of your on-call days, but we may schedule a lab visit on any of your on-call days, in which case you would be expected to help run the lab visit. You are expected to hold your scheduled on-call days available until 24 hours beforehand. If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you. Both parties are then required to inform the Lab Coordinator of the trade before it is finalized. We will do our best to schedule families during your regular lab hours, however this may not always be possible. We want to ensure, as much as possible, (a) adequate coverage to accommodate families’ schedules and (b) equitable distribution of “after-hours” lab visits. These are the minimum expectations for evening and weekend availability. You are welcome to make yourself available more than two evenings per week and three weekend days per month to help us better meet families’ needs.</p>
+<p>If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred. If you have concerns making up these hours, please reach out to the Lab Coordinator.</p>
+</section>
+<section id="sec-ourResponsibilitiesToYou" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-ourResponsibilitiesToYou"><span class="header-section-number">1.3</span> Our responsibilities to you</h2>
+<p>We appreciate that your classes—including exams and course prep—come first. We will work with you so that your lab schedule does not interfere with your other classes.</p>
+<p>It is greatly appreciated when RAs are able to run lab visits during breaks because breaks are often when families are available and thus it is very helpful to the lab. RAs who are available and willing to run lab visits during breaks will accrue those hours either for the current or following semester. Running lab visits during breaks is not an expectation of RAs.</p>
+<p>We will schedule lab visits using the availability schedule you submitted to the Lab Coordinator at the beginning of the semester and the RES-DPL-Busy calendar. We will never expect you to help run lab visits when you have marked yourself as unavailable on the calendar.</p>
+<p>We will do our best to schedule a similar number of lab visits across RAs. This will ensure RAs receive a similar amount of experience with children/families and that a small set of RAs are not overburdened by lab visits and unable to tend to their other lab responsibilities.</p>
+<p>We will do our best to schedule families during your regular lab hours. We will only schedule families outside regular lab hours (e.g., evenings/weekends) if necessary.</p>
+<p>We will never schedule a lab visit outside of normal lab hours with less than 24 hours’ notice to the RAs scheduled to run it.</p>
+<p>We will work with you to help you identify when you can “cut back” when you let us know that you are over the expected number of hours for that point in the semester.</p>
+</section>
+</section>
+<section id="sec-ra" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> RA Duties: What Does Work as a Research Assistant Entail?</h1>
+<p>The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab. The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting). Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices. Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments. Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have. Instructions for lab reports are described in the lab manual (click <a href="./lab-manual.html#sec-resolvingConflicts">here</a>). Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible. The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.</p>
+</section>
+<section id="sec-expectations" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Lab Expectations</h1>
+<p>With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday. We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits. Any changes to an RA’s weekly lab schedule need to be arranged with the Lab Coordinator, in advance, and in person, by phone call (319-353-1977), or via email to the lab email (<a href="mailto:devpsy-lab@uiowa.edu">devpsy-lab@uiowa.edu</a>). We expect RAs to let the Lab Coordinator and relevant team members know, as soon as possible and by Discord, if they are running late to a scheduled shift, visit, or meeting. The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift. If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours. If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.</p>
+<p>We expect the RA to have flexibility to accommodate participants’ schedules for lab visits. For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on <a href="#sec-schedulingExpectations">Scheduling Expectations</a> below). We expect that the RA keeps eight weekend days available per semester (three weekend days per month) for the purposes of working with families. In addition, we expect that each RA keeps two weekday evenings available for the purposes of working with families. We will do our best to fairly distribute the evening and weekend hours across the team.</p>
+<p>We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the <a href="./lab-manual.html#sec-labCommunication">Lab Communication</a> section of the Lab Manual. Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click <a href="./lab-manual.html#sec-resolvingConflicts">here</a>). We expect the RA to take personal responsibility for the work they are assigned. Assigned work will always coincide with the 10 hours the RA is already scheduled for. With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours. We expect the RA to ask the PI or Lab Coordinator if they have questions about their assigned work or expectations. Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.</p>
+<p>We expect the RA to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research. After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr.&nbsp;Petersen to discuss the possibility of doing an Honor’s thesis in conjunction with lab participation.</p>
+<p>We expect RAs to contribute to each weekly lab meeting discussion. We expect RAs to submit their lab report by the deadline and in the correct location.</p>
+<p>We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.</p>
+</section>
+<section id="sec-grading" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Grading Scale</h1>
+<p>Based on the expectations above and the grading scale below, RAs will be assigned a letter grade [A–F] for their performance in the lab on the tasks assigned to them. (*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade. See the section of the Lab Manual that describes course options and how to register (click <a href="./lab-manual.html#sec-courseRegistration">here</a>)).</p>
+<p>A: 100% attendance, consistently on time, and meeting all of the lab expectations<br>
+B: &lt; 100% attendance, or late cancellations for visits for which you were scheduled, or inconsistently on time, or mostly meeting the lab expectations<br>
+C: &lt; 80% attendance, or late cancellations for visits for which you were scheduled, or mostly not on time, or sometimes meeting the lab expectations<br>
+D: &lt; 70% attendance, or late cancellations for visits for which you were scheduled, or rarely on time, or only occasionally meeting the lab expectations<br>
+F: &lt;= 50 attendance, or frequent late cancellations for visits for which you were scheduled, or never on time, or generally failing to meet the lab expectations</p>
+</section>
+<section id="sec-expectationsForEveryone" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Expectations for Everyone in Lab</h1>
+<p>In addition to the expectations described above for undergraduate RAs, please also read the <a href="./expectations-everyone.html">expectations for everyone in the lab</a>.</p>
+</section>
+<section id="sec-signature" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Signature</h1>
+<p>Please download, sign, and email the below document to the Lab Coordinator (<a href="mailto:devpsy-lab@uiowa.edu">devpsy-lab@uiowa.edu</a>) and Dr.&nbsp;Petersen prior to your first day in lab.</p>
 <embed src="Files/signature_page.pdf" width="1000" height="600">
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIEV4cGVjdGF0aW9ucyBmb3IgVW5kZXJncmFkdWF0ZSBSZXNlYXJjaCBBc3Npc3RhbnRzIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBlY2hvID0gVFJVRSwKICBlcnJvciA9IFRSVUUsCiAgY29tbWVudCA9ICIiKQpgYGAKCiMgU2NoZWR1bGluZyBFeHBlY3RhdGlvbnMgeyNzY2hlZHVsaW5nRXhwZWN0YXRpb25zfQoKIyMgQXQgYSBHbGFuY2UgeyNhdEFHbGFuY2V9CgoqKkdlbmVyYWwgQ29tbWl0bWVudDoqKgoKV2Ugd2FudCB0byBlbnN1cmUgdGhhdCBSQXMgZ2V0IHRoZSBtb3N0IHZhbHVlIG91dCBvZiB0aGVpciBleHBlcmllbmNlIHdpdGggb3VyIGxhYi4KCi0gR2l2ZW4gdGhlIGV4dGVuc2l2ZSB0cmFpbmluZyByZXF1aXJlZCwgPHU+UkFzIGFyZSBleHBlY3RlZCB0byBjb21taXQgdG8gKiphdCBsZWFzdCoqIDIgc2VtZXN0ZXJzIG9mIHdvcmtpbmcgaW4gbGFiPC91PgotIFJBcyBpbnRlcmVzdGVkIGluIGEgW3NwZWNpYWxpemVkIHJvbGVdKG1hbnVhbC5odG1sI3NwZWNpYWxpemVkUm9sZXMpIG11c3QgY29tbWl0IHRvICoqYXQgbGVhc3QqKiAzIHNlbWVzdGVycyBpbiBvcmRlciB0byBhY2NvdW50IGZvciB0aGUgZXh0ZW5zaXZlIHRyYWluaW5nIHByb2Nlc3MKCioqRWFjaCBXZWVrOioqCiAgIAotIFJBcyBhcmUgZXhwZWN0ZWQgdG8gYmUgaW4gbGFiIGZvciAxMCByZWd1bGFybHkgc2NoZWR1bGVkIGhvdXJzICgxIG9mIHRoZXNlIGhvdXJzIHdpbGwgYmUgZnJvbSB0aGUgd2Vla2x5IGxhYiBtZWV0aW5nKQogIC0gVGhlc2UgaG91cnMgYXJlIHJlZ3VsYXJseSBzY2hlZHVsZWQgKGJldHdlZW4gOSBBTSDigJMgNSBQTSksIHNvIHdlIGFzayB0aGF0IFJBcyBoYXZlIHN1YnN0YW50aWFsIGNodW5rcyBvZiB0aW1lIChpLmUuLCAy4oCTNCBob3Vycykgd2l0aGluIHRoZSB3ZWVrIHdoZXJlIHRoZWlyIGhvdXJzIGNhbiBiZSBwcm9wZXJseSBkaXN0cmlidXRlZAotIFJBcyBhcmUgZXhwZWN0ZWQgdG8gcHJvdmlkZSAqKmF0IGxlYXN0KiogMiBkYXlzIGluIHRoZSB3ZWVrIChNb25kYXnigJNGcmlkYXkpIHRoYXQgdGhleSB3b3VsZCBiZSBhdmFpbGFibGUgcGFzdCA1IFBNIHRvIHJ1biB2aXNpdHMgKHRvIGFjY29tbW9kYXRlIGNoaWxkcmVuIGFuZCBmYW1pbGllcycgc2NoZWR1bGVzKQogIC0gKlRoaXMgZG9lcyBub3QgbWVhbiB5b3Ugd2lsbCBhbHdheXMgcnVuIHZpc2l0cyBvbiB0aGVzZSBkYXlzLCBpdCBzaW1wbHkgbWVhbnMgdGhhdCB5b3UgYXJlIGF2YWlsYWJsZSB0byBpZiBuZWVkIGJlLioKLSBJZiB5b3Ugd29yayBpbiB0aGUgbGFiIG1vcmUgdGhhbiAxMCBob3VycyBpbiBhIGdpdmVuIHdlZWsgKGUuZy4sIHRvIHJ1biBhbiBldmVuaW5nL3dlZWtlbmQgdmlzaXQpLCB5b3UgbWF5IGN1dCBkb3duIHRoZSBmb2xsb3dpbmcgd2VlayB0byBzdGF5IGF0IGFuIGF2ZXJhZ2Ugb2YgMTAgaG91cnMgcGVyIHdlZWsuCgoqKkVhY2ggU2VtZXN0ZXI6KioKICAgCi0gUkFzIGFyZSBleHBlY3RlZCB0byBwcm92aWRlIH44IHdlZWtlbmQgZGF5cyBpbiB0aGUgc2VtZXN0ZXIgdGhhdCB0aGV5IGFyZSBhdmFpbGFibGUgdG8gcnVuIHZpc2l0cyAodG8gYWNjb21tb2RhdGUgY2hpbGRyZW4gYW5kIGZhbWlsaWVzJyBzY2hlZHVsZXMpCiAgLSBUaGlzIG1lYW5zIHRoYXQgUkFzIHNpZ25lZCB1cCBmb3IgYSBzcGVjaWZpYyBkYXkgd2lsbCBiZSAib24tY2FsbCIgZm9yIGFueSB2aXNpdHMgdGhhdCBhcmUgc2NoZWR1bGVkIGZvciB0aGF0IGRheQogICAgLSAqVGhpcyBkb2VzIG5vdCBtZWFuIHlvdSB3aWxsIGFsd2F5cyBydW4gdmlzaXRzIG9uIHRoZXNlIGRheXMsIGl0IHNpbXBseSBtZWFucyB0aGF0IHlvdSBhcmUgYXZhaWxhYmxlIHRvIGlmIG5lZWQgYmUuKgogICAgLSAqUkFzIHdpbGwgYmUgbm90aWZpZWQgb2YgYSB3ZWVrZW5kIHZpc2l0IG5vIGxhdGVyIHRoYW4gMjQgaG91cnMgYmVmb3JlIHRoZSBzY2hlZHVsZWQgdmlzaXQuKgoKIyMgWW91ciByZXNwb25zaWJpbGl0aWVzIGFzIGFuIFJBIHsjeW91clNjaGVkdWxpbmdSZXNwb25zaWJpbGl0aWVzfQoKWW91IGFyZSBleHBlY3RlZCB0byBiZSBpbiBsYWIgZm9yIDEwIHJlZ3VsYXJseSBzY2hlZHVsZWQgaG91cnMgcGVyIHdlZWssIG9uIGF2ZXJhZ2UsIGR1cmluZyB0aGUgc2VtZXN0ZXIgKGV4Y2x1ZGluZyB1bml2ZXJzaXR5IGhvbGlkYXlzLCBicmVha3MsIGFuZCBmaW5hbHMgd2VlaykuCklmIHlvdSBleGNlZWQgMTAgaG91cnMgZHVyaW5nIGFueSBnaXZlbiB3ZWVrIChlLmcuLCBoZWxwaW5nIHJ1biBsYWIgdmlzaXRzIG91dHNpZGUgb2YgeW91ciBub3JtYWwgaG91cnMpLCB5b3Ugc2hvdWxkIHdvcmsgd2l0aCB0aGUgTGFiIENvb3JkaW5hdG9yIHRvIGRldGVybWluZSB3aGVuIHlvdSBtYXkgY3V0IGJhY2sgeW91ciBsYWIgaG91cnMgaW4gbGF0ZXIgd2Vla3MuIApBbnkgcmVxdWVzdCB0byBjdXQgYmFjayBvbiBob3VycyBvciBjaGFuZ2UgeW91ciBzY2hlZHVsZSBzaG91bGQgYmUgc3VibWl0dGVkIHRvIHRoZSBMYWIgQ29vcmRpbmF0b3IgaW4gcGVyc29uLCBieSBwaG9uZSBjYWxsICgzMTktMzUzLTE5NzcpLCBvciB2aWEgZW1haWwgdG8gdGhlIGxhYiBlbWFpbCAoZGV2cHN5LWxhYkB1aW93YS5lZHUpIGJ5IDQ6MDAgcG0gdGhlIGRheSBwcmlvciB0byB0aGUgcmVxdWVzdGVkIHRpbWUgb2ZmLgpQbGVhc2UgZ2l2ZSBhcyBtdWNoIGFkdmFuY2Ugbm90aWNlIGFzIHBvc3NpYmxlLgpJbiBjYXNlIG9mIGVtZXJnZW5jeSByZXF1ZXN0cywgcGxlYXNlIHJlYWNoIG91dCB0byB0aGUgTGFiIENvb3JkaW5hdG9yIGluIHBlcnNvbiBvciBieSBwaG9uZSBjYWxsICgzMTktMzUzLTE5NzcpLgpSZXF1ZXN0cyBtdXN0IGZpcnN0IGJlIGFwcHJvdmVkIGJ5IHRoZSBMYWIgQ29vcmRpbmF0b3IuCkl0IGlzIHlvdXIgcmVzcG9uc2liaWxpdHkgdG8gZm9sbG93IHVwIHdpdGggdGhlIExhYiBDb29yZGluYXRvciByZWdhcmRpbmcgcmVxdWVzdHMuCkRvIG5vdCBzZW5kIHJlcXVlc3RzIHRvIGNoYW5nZSB5b3VyIHNjaGVkdWxlIHZpYSBEaXNjb3JkLgpJZiB0aGUgcmVxdWVzdCBpcyBhcHByb3ZlZCwgY3JlYXRlIGEgY2FsZW5kYXIgZW50cnkgb24gdGhlIEJ1c3kgY2FsZW5kYXIsIGFzIGRlc2NyaWJlZCBbaGVyZV0obWFudWFsLmh0bWwjc2hhcmVkQ2FsZW5kYXIpLgoKVW5sZXNzIG90aGVyd2lzZSBzdGF0ZWQsIHJ1bm5pbmcgbGFiIHZpc2l0cyBpcyBhbHdheXMgdGhlIHRvcCBwcmlvcml0eS4KWW91IGFyZSBleHBlY3RlZCB0byBhcnJpdmUgNDUgbWludXRlcyBiZWZvcmUgdGhlIHNjaGVkdWxlZCBzdGFydCB0aW1lIG9mIHZpc2l0cy4KSWYgeW91IGFyZSBhc2tlZCB0byBoZWxwIHJ1biBhIGxhYiB2aXNpdCBpbiBhIGdpdmVuIHdlZWssIHRoZW4gcnVubmluZyB0aGUgbGFiIHZpc2l0IGlzIHRoZSBwcmlvcml0aXplZCB1c2Ugb2YgeW91ciBhbGxvdHRlZCB3ZWVrbHkgaG91cnMuCklmIHlvdSBhcmUgYWJsZSB0byBydW4gYSBsYWIgdmlzaXQsIGFuZCBhcmUgYXNrZWQgdG8gZG8gc28sIHdlIGV4cGVjdCB0aGF0IHlvdSBydW4gdGhlIGxhYiB2aXNpdCwgZXZlbiBpZiBpdCBtZWFucyBub3QgY29tcGxldGluZyBvdGhlciBsYWIgcmVzcG9uc2liaWxpdGllcyBmb3IgdGhlIHdlZWs7IGZvciBleGFtcGxlLCBpdCBpcyBva2F5IGZvciBjb2RpbmcgYW5kIGVudHJ5IGR1dGllcyB0byAicGlsZSB1cCIgaWYgeW91IGFyZSBydW5uaW5nIGxhYiB2aXNpdHMuCgpZb3UgYXJlIHJlc3BvbnNpYmxlIGZvciBrZWVwaW5nIHRoZSAiUkVTLURQTC1CdXN5IiBjYWxlbmRhciB1cCB0byBkYXRlLCBpbmNsdWRpbmcgZXZlbmluZ3MgYW5kIHdlZWtlbmRzLCBhbmQgdG8ga2VlcCB0aGUgTGFiIENvb3JkaW5hdG9yIGluZm9ybWVkIG9mIGFueSBjaGFuZ2VzIGFzIHRoZXkgb2NjdXIuCgpZb3UgYXJlIGV4cGVjdGVkIHRvIHRyYWNrIHlvdXIgbGFiIGhvdXJzIGhvbmVzdGx5IHVzaW5nIHRoZSBlbGVjdHJvbmljIHNjaGVkdWxpbmcgc3lzdGVtLgpZb3Ugc2hvdWxkIGRpbGlnZW50bHkgY2xvY2sgaW4gYW5kIGNsb2NrIG91dCBldmVyeSB0aW1lIHlvdSBhcmUgaW4gbGFiLCBhbmQgc2hvdWxkIG9ubHkgYmUgIm9uIHRoZSBjbG9jayIgd2hpbGUgeW91IGFyZSBkb2luZyBzY2hlZHVsZWQgbGFiLXJlbGF0ZWQgd29yayBvciBhY3Rpdml0aWVzLgoKSWYgeW91IGNvbWUgaW50byBsYWIgdG8gaGVscCBydW4gbGFiIHZpc2l0cyBkdXJpbmcgdW5pdmVyc2l0eSBicmVha3MsIHRoZSBob3VycyBjYW4gY291bnQgYXMgaG91cnMgZm9yIGVpdGhlciB0aGUgY3VycmVudCBzZW1lc3RlciAoaWYgeW91IGFyZSAidW5kZXIgaG91cnMiIGZvciB0aGUgc2VtZXN0ZXIpLCBvciB0b3dhcmQgdGhlIGZvbGxvd2luZyBzZW1lc3RlciAoaWYgeW91IGFyZSAib3ZlciBob3VycyIgZm9yIHRoZSBzZW1lc3RlcikuCkNvbXBsZXRlZCBsYWItcmVsYXRlZCBob3VycyBjb3VudCBhcyBsYWIgaG91cnMgbm8gbWF0dGVyIHdoZW4gdGhleSBvY2N1ciBhcyBsb25nIGFzIHRoZXkgb2NjdXIgd2hlbiB0aGV5IGFyZSBzY2hlZHVsZWQuCkxhYiBob3VycyBtdXN0IGJlIHNjaGVkdWxlZC9hcnJhbmdlZCB3aXRoIHRoZSBMYWIgQ29vcmRpbmF0b3IgaW4gYWR2YW5jZS4KCllvdSBhcmUgTk9UIGV4cGVjdGVkIHRvIGJlIGluIGxhYiBmb3IgcmVndWxhcmx5IHNjaGVkdWxlZCBsYWIgaG91cnMgb24gdW5pdmVyc2l0eSBob2xpZGF5cy4KSWYgaG9saWRheXMgb2NjdXIgZHVyaW5nIHRoZSB3ZWVrIHdoZW4gbGFiIGhvdXJzIGFyZSBzY2hlZHVsZWQgKGUuZy4sIExhYm9yIERheSksIHRoZSBMYWIgQ29vcmRpbmF0b3Igd2lsbCBtYW51YWxseSBlbnRlciBob3VycyBmb3IgdGhhdCBkYXkuCgpZb3UgYXJlIGV4cGVjdGVkIHRvIHNjaGVkdWxlIG5vbi1sYWIgYWN0aXZpdGllcyAoY291cnNlLXJlbGF0ZWQsIHRoZXJhcHkvbWVkaWNhbCBhcHBvaW50bWVudHMsIGV4dHJhLWN1cnJpY3VsYXIsIGV0Yy4pIG91dHNpZGUgb2YgeW91ciBzY2hlZHVsZWQgbGFiIGhvdXJzLgpIb3dldmVyLCB3ZSB1bmRlcnN0YW5kIHRoYXQgdGhpcyBpcyBvY2Nhc2lvbmFsbHkgbm90IHBvc3NpYmxlLgpJZiBzY2hlZHVsaW5nIGFuIG91dHNpZGUgYWN0aXZpdHkgZHVyaW5nIHlvdXIgcmVndWxhciBsYWIgaG91cnMgaXMgbmVjZXNzYXJ5LCB5b3UgYXJlIGV4cGVjdGVkIHRvIGZpcnN0IGRpc2N1c3MgdGhpcyB3aXRoIHRoZSBMYWIgQ29vcmRpbmF0b3IsIHRvIG1hcmsgeW91cnNlbGYgYXMgdW5hdmFpbGFibGUgb24gdGhlIGNhbGVuZGFyIChSRVMtRFBMLUJ1c3kpLCBhbmQgdG8gd29yayB3aXRoIHRoZSBMYWIgQ29vcmRpbmF0b3IgdG8gZGV0ZXJtaW5lIHdoZW4gdG8gbWFrZSB1cCB0aGUgbWlzc2VkIGhvdXJzLgoKWW91IGFyZSBleHBlY3RlZCB0byBiZSBhdmFpbGFibGUgYXQgbGVhc3QgdHdvIHdlZWtkYXkgZXZlbmluZ3MgKE3igJNGKSBwZXIgd2VlayBhbmQgYXQgbGVhc3QgOCB3ZWVrZW5kIGRheXMgcGVyIHNlbWVzdGVyIHRvIHJ1biBsYWIgdmlzaXRzIHRoYXQgbWF5IGV4dGVuZCBvciBiZSBzY2hlZHVsZWQgb3V0c2lkZSBvZiB0aGUgbGFiJ3Mgbm9ybWFsIGJ1c2luZXNzIGhvdXJzLCB3aGljaCBhcmUgOTowMGFtIHRvIDU6MDBwbSBNb25kYXkgdGhyb3VnaCBGcmlkYXkuCllvdSB3aWxsIGJlIGNvbnNpZGVyZWQgIm9uIGNhbGwiIHRoZSBldmVuaW5ncyBhbmQgd2Vla2VuZCBkYXlzIHlvdSBtYXJrIGFzIGF2YWlsYWJsZSAoaS5lLiwgeW91ciBzY2hlZHVsZWQgIm9uLWNhbGwgZGF5cyIpLgpJdCBpcyB1bmxpa2VseSB5b3Ugd2lsbCBydW4gYSBsYWIgdmlzaXQgb24gYWxsIG9mIHlvdXIgb24tY2FsbCBkYXlzLCBidXQgd2UgbWF5IHNjaGVkdWxlIGEgbGFiIHZpc2l0IG9uIGFueSBvZiB5b3VyIG9uLWNhbGwgZGF5cywgaW4gd2hpY2ggY2FzZSB5b3Ugd291bGQgYmUgZXhwZWN0ZWQgdG8gaGVscCBydW4gdGhlIGxhYiB2aXNpdC4KWW91IGFyZSBleHBlY3RlZCB0byBob2xkIHlvdXIgc2NoZWR1bGVkIG9uLWNhbGwgZGF5cyBhdmFpbGFibGUgdW50aWwgMjQgaG91cnMgYmVmb3JlaGFuZC4KSWYgeW91IGNhbiBubyBsb25nZXIgaGVscCBydW4gYSB2aXNpdCB5b3UgaGF2ZSBiZWVuIHNjaGVkdWxlZCBmb3IsIGl0IGlzIHlvdXIgcmVzcG9uc2liaWxpdHkgdG8gZmluZCBhbm90aGVyIFJBIHRvIHRyYWRlIHdpdGggeW91LgpCb3RoIHBhcnRpZXMgYXJlIHRoZW4gcmVxdWlyZWQgdG8gaW5mb3JtIHRoZSBMYWIgQ29vcmRpbmF0b3Igb2YgdGhlIHRyYWRlIGJlZm9yZSBpdCBpcyBmaW5hbGl6ZWQuCldlIHdpbGwgZG8gb3VyIGJlc3QgdG8gc2NoZWR1bGUgZmFtaWxpZXMgZHVyaW5nIHlvdXIgcmVndWxhciBsYWIgaG91cnMsIGhvd2V2ZXIgdGhpcyBtYXkgbm90IGFsd2F5cyBiZSBwb3NzaWJsZS4KV2Ugd2FudCB0byBlbnN1cmUsIGFzIG11Y2ggYXMgcG9zc2libGUsIChhKSBhZGVxdWF0ZSBjb3ZlcmFnZSB0byBhY2NvbW1vZGF0ZSBmYW1pbGllcycgc2NoZWR1bGVzIGFuZCAoYikgZXF1aXRhYmxlIGRpc3RyaWJ1dGlvbiBvZiAiYWZ0ZXItaG91cnMiIGxhYiB2aXNpdHMuClRoZXNlIGFyZSB0aGUgbWluaW11bSBleHBlY3RhdGlvbnMgZm9yIGV2ZW5pbmcgYW5kIHdlZWtlbmQgYXZhaWxhYmlsaXR5LgpZb3UgYXJlIHdlbGNvbWUgdG8gbWFrZSB5b3Vyc2VsZiBhdmFpbGFibGUgbW9yZSB0aGFuIHR3byBldmVuaW5ncyBwZXIgd2VlayBhbmQgdGhyZWUgd2Vla2VuZCBkYXlzIHBlciBtb250aCB0byBoZWxwIHVzIGJldHRlciBtZWV0IGZhbWlsaWVzJyBuZWVkcy4KCklmIHlvdSBtaXNzIGxhYiBmb3IgYW4gYWN1dGUgaWxsbmVzcywgdGhlIG1pc3NlZCBob3VycyBzaG91bGQgYmUgbWFkZSB1cCBkdXJpbmcgdGhlIHNhbWUgc2VtZXN0ZXIgdGhlIG1pc3NpbmcgaG91cnMgb2NjdXJyZWQuCklmIHlvdSBoYXZlIGNvbmNlcm5zIG1ha2luZyB1cCB0aGVzZSBob3VycywgcGxlYXNlIHJlYWNoIG91dCB0byB0aGUgTGFiIENvb3JkaW5hdG9yLgoKIyMgT3VyIHJlc3BvbnNpYmlsaXRpZXMgdG8geW91IHsjb3VyUmVzcG9uc2liaWxpdGllc1RvWW91fQoKV2UgYXBwcmVjaWF0ZSB0aGF0IHlvdXIgY2xhc3Nlc+KAlGluY2x1ZGluZyBleGFtcyBhbmQgY291cnNlIHByZXDigJRjb21lIGZpcnN0LgpXZSB3aWxsIHdvcmsgd2l0aCB5b3Ugc28gdGhhdCB5b3VyIGxhYiBzY2hlZHVsZSBkb2VzIG5vdCBpbnRlcmZlcmUgd2l0aCB5b3VyIG90aGVyIGNsYXNzZXMuCgpJdCBpcyBncmVhdGx5IGFwcHJlY2lhdGVkIHdoZW4gUkFzIGFyZSBhYmxlIHRvIHJ1biBsYWIgdmlzaXRzIGR1cmluZyBicmVha3MgYmVjYXVzZSBicmVha3MgYXJlIG9mdGVuIHdoZW4gZmFtaWxpZXMgYXJlIGF2YWlsYWJsZSBhbmQgdGh1cyBpdCBpcyB2ZXJ5IGhlbHBmdWwgdG8gdGhlIGxhYi4KUkFzIHdobyBhcmUgYXZhaWxhYmxlIGFuZCB3aWxsaW5nIHRvIHJ1biBsYWIgdmlzaXRzIGR1cmluZyBicmVha3Mgd2lsbCBhY2NydWUgdGhvc2UgaG91cnMgZWl0aGVyIGZvciB0aGUgY3VycmVudCBvciBmb2xsb3dpbmcgc2VtZXN0ZXIuClJ1bm5pbmcgbGFiIHZpc2l0cyBkdXJpbmcgYnJlYWtzIGlzIG5vdCBhbiBleHBlY3RhdGlvbiBvZiBSQXMuCgpXZSB3aWxsIHNjaGVkdWxlIGxhYiB2aXNpdHMgdXNpbmcgdGhlIGF2YWlsYWJpbGl0eSBzY2hlZHVsZSB5b3Ugc3VibWl0dGVkIHRvIHRoZSBMYWIgQ29vcmRpbmF0b3IgYXQgdGhlIGJlZ2lubmluZyBvZiB0aGUgc2VtZXN0ZXIgYW5kIHRoZSBSRVMtRFBMLUJ1c3kgY2FsZW5kYXIuCldlIHdpbGwgbmV2ZXIgZXhwZWN0IHlvdSB0byBoZWxwIHJ1biBsYWIgdmlzaXRzIHdoZW4geW91IGhhdmUgbWFya2VkIHlvdXJzZWxmIGFzIHVuYXZhaWxhYmxlIG9uIHRoZSBjYWxlbmRhci4KCldlIHdpbGwgZG8gb3VyIGJlc3QgdG8gc2NoZWR1bGUgYSBzaW1pbGFyIG51bWJlciBvZiBsYWIgdmlzaXRzIGFjcm9zcyBSQXMuClRoaXMgd2lsbCBlbnN1cmUgUkFzIHJlY2VpdmUgYSBzaW1pbGFyIGFtb3VudCBvZiBleHBlcmllbmNlIHdpdGggY2hpbGRyZW4vZmFtaWxpZXMgYW5kIHRoYXQgYSBzbWFsbCBzZXQgb2YgUkFzIGFyZSBub3Qgb3ZlcmJ1cmRlbmVkIGJ5IGxhYiB2aXNpdHMgYW5kIHVuYWJsZSB0byB0ZW5kIHRvIHRoZWlyIG90aGVyIGxhYiByZXNwb25zaWJpbGl0aWVzLgoKV2Ugd2lsbCBkbyBvdXIgYmVzdCB0byBzY2hlZHVsZSBmYW1pbGllcyBkdXJpbmcgeW91ciByZWd1bGFyIGxhYiBob3Vycy4KV2Ugd2lsbCBvbmx5IHNjaGVkdWxlIGZhbWlsaWVzIG91dHNpZGUgcmVndWxhciBsYWIgaG91cnMgKGUuZy4sIGV2ZW5pbmdzL3dlZWtlbmRzKSBpZiBuZWNlc3NhcnkuCgpXZSB3aWxsIG5ldmVyIHNjaGVkdWxlIGEgbGFiIHZpc2l0IG91dHNpZGUgb2Ygbm9ybWFsIGxhYiBob3VycyB3aXRoIGxlc3MgdGhhbiAyNCBob3Vycycgbm90aWNlIHRvIHRoZSBSQXMgc2NoZWR1bGVkIHRvIHJ1biBpdC4KCldlIHdpbGwgd29yayB3aXRoIHlvdSB0byBoZWxwIHlvdSBpZGVudGlmeSB3aGVuIHlvdSBjYW4gImN1dCBiYWNrIiB3aGVuIHlvdSBsZXQgdXMga25vdyB0aGF0IHlvdSBhcmUgb3ZlciB0aGUgZXhwZWN0ZWQgbnVtYmVyIG9mIGhvdXJzIGZvciB0aGF0IHBvaW50IGluIHRoZSBzZW1lc3Rlci4KCiMgUkEgRHV0aWVzOiBXaGF0IERvZXMgV29yayBhcyBhIFJlc2VhcmNoIEFzc2lzdGFudCBFbnRhaWw/IHsjcmF9CgpUaGUgdW5kZXJncmFkdWF0ZSByZXNlYXJjaCBhc3Npc3RhbnQgKFJBKSB3aWxsIHBhcnRpY2lwYXRlIGluIG9uZ29pbmcgcmVzZWFyY2ggd2l0aGluIHRoZSBEZXZlbG9wbWVudGFsIFBzeWNob3BhdGhvbG9neSBMYWIuClRoZSBSQSB3aWxsIHdvcmsgaW4gbGFiIGZvciAxMCBob3VycyBwZXIgd2VlayBkdXJpbmcgdGhlIHNlbWVzdGVyICg5IGhvdXJzIG9mIHdvcmsgaW4gdGhlIGxhYiBwbHVzIGEgb25lLWhvdXIgd2Vla2x5IGxhYiBtZWV0aW5nKS4KV29yayBhc3NpZ25lZCBtYXkgaW5jbHVkZSAoYnV0IGlzIG5vdCBsaW1pdGVkIHRvKTogbWFraW5nIHRoZSBsYWIgc3BhY2UgY2hpbGQgYW5kIGZhbWlseSBmcmllbmRseSwgaGVscGluZyB3aXRoIHJlY3J1aXRtZW50LCBydW5uaW5nIHBhcnRpY2lwYW50cywgdmlkZW8gY29kaW5nLCBkYXRhYmFzZSBtYW5hZ2VtZW50LCBkYXRhIGVudHJ5LCBhbmQgZGV2ZWxvcGluZyBuZXcgcHJvY2VkdXJlcy9kZXZpY2VzLgpFYWNoIHdlZWssIHRoZSBSQSBpcyBleHBlY3RlZCB0byByZWFkIGNyaXRpY2FsbHkgYW4gZW1waXJpY2FsIHJlc2VhcmNoIGFydGljbGUgZm9yIGxhYiBtZWV0aW5nIGFuZCBjb21lIHByZXBhcmVkIHRvIGNvbnRyaWJ1dGUgdG8gdGhlIGRpc2N1c3Npb24gd2l0aCBxdWVzdGlvbnMgYW5kIGNvbW1lbnRzLgpFdmVyeSBvdGhlciB3ZWVrLCB0aGUgUkEgd2lsbCBzdWJtaXQgYSByZXBvcnQgb2YgdGhlaXIgcHJvZ3Jlc3MgaW4gbGFiLCB0YXNrcyB0aGV5IGZvdW5kIGludGVyZXN0aW5nLCBhbmQgYW55IHF1ZXN0aW9ucyBvciBzdWdnZXN0aW9ucyB0aGV5IGhhdmUuCkluc3RydWN0aW9ucyBmb3IgbGFiIHJlcG9ydHMgYXJlIGRlc2NyaWJlZCBpbiB0aGUgbGFiIG1hbnVhbCAoY2xpY2sgW2hlcmVdKG1hbnVhbC5odG1sI3Jlc29sdmluZ0NvbmZsaWN0cykpLgpUaHJvdWdob3V0IHRoZSBjb3Vyc2Ugb2YgdGhlaXIgdGltZSBpbiBsYWIsIHRoZSBSQSB3aWxsIGhhdmUgbWVldGluZ3Mgd2l0aCBhbmQgd29yayBjbG9zZWx5IHdpdGggdGhlIFByaW5jaXBhbCBJbnZlc3RpZ2F0b3IgKFBJKSwgTGFiIENvb3JkaW5hdG9yLCBncmFkdWF0ZSBzdHVkZW50cywgYW5kL29yIHVuZGVyZ3JhZHVhdGUgc3R1ZGVudHMgdG8gZW5zdXJlIGFzc2lnbmVkIHdvcmsgaXMgY29tcGxldGVkIGFzIHJlcXVlc3RlZCB3aXRoIHRoZSBoaWdoZXN0IHF1YWxpdHkgcGVyZm9ybWFuY2UgcG9zc2libGUuClRoZSBSQSB3aWxsIGJlIGVuY291cmFnZWQgdG8gY29udHJpYnV0ZSB0byBib3RoIHRoZSBmb3JtdWxhdGlvbiBvZiByZXNlYXJjaCBxdWVzdGlvbnMgYXMgd2VsbCBhcyByZXNlYXJjaCBpbXBsZW1lbnRhdGlvbi4KCiMgTGFiIEV4cGVjdGF0aW9ucyB7I2V4cGVjdGF0aW9uc30KCldpdGggdGhlIGV4Y2VwdGlvbiBvZiBydW5uaW5nIHBhcnRpY2lwYW50cyBvciByZWNydWl0bWVudCBhY3Rpdml0aWVzLCBsYWIgaG91cnMgd2lsbCBiZSByZWd1bGFybHkgc2NoZWR1bGVkIGFuZCB3aWxsIHRha2UgcGxhY2UgZHVyaW5nIHJlZ3VsYXIgYnVzaW5lc3MgaG91cnM6IGJldHdlZW4gOWFt4oCTNXBtIE1vbmRheSB0aHJvdWdoIEZyaWRheS4KV2UgZXhwZWN0IHRoZSBSQSB0byBiZSByZWxpYWJsZSBhbmQgY29uc2lzdGVudGx5IGFycml2ZSBvbiB0aW1lIGZvciBzY2hlZHVsZWQgbGFiIGhvdXJzIGFuZCB2aXNpdHMuCkFueSBjaGFuZ2VzIHRvIGFuIFJBJ3Mgd2Vla2x5IGxhYiBzY2hlZHVsZSBuZWVkIHRvIGJlIGFycmFuZ2VkIHdpdGggdGhlIExhYiBDb29yZGluYXRvciwgaW4gYWR2YW5jZSwgYW5kIGluIHBlcnNvbiwgYnkgcGhvbmUgY2FsbCAoMzE5LTM1My0xOTc3KSwgb3IgdmlhIGVtYWlsIHRvIHRoZSBsYWIgZW1haWwgKGRldnBzeS1sYWJAdWlvd2EuZWR1KS4KV2UgZXhwZWN0IFJBcyB0byBsZXQgdGhlIExhYiBDb29yZGluYXRvciBhbmQgcmVsZXZhbnQgdGVhbSBtZW1iZXJzIGtub3csIGFzIHNvb24gYXMgcG9zc2libGUgYW5kIGJ5IERpc2NvcmQsIGlmIHRoZXkgYXJlIHJ1bm5pbmcgbGF0ZSB0byBhIHNjaGVkdWxlZCBzaGlmdCwgdmlzaXQsIG9yIG1lZXRpbmcuClRoZSBjaGFuZ2VzIHRvIHlvdXIgc2hpZnRzIGFuZCBkZXZpYXRpb25zIGZyb20geW91ciByZWd1bGFybHkgc2NoZWR1bGVkIGhvdXJzICh0aGF0IGFyZSBkZXNjcmliZWQgYWJvdmUpIHNob3VsZCBiZSByYXJl4oCUb3RoZXIgdGVhbSBtZW1iZXJzIGNvdW50IG9uIHlvdSBiZWluZyB0aGVyZSBkdXJpbmcgeW91ciBzY2hlZHVsZWQgc2hpZnQuCklmIHRoZSBSQSBkb2VzIG5vdCBjb21wbGV0ZSB0aGVpciAxMCBzY2hlZHVsZWQgaG91cnMgaW4gYW55IGdpdmVuIHdlZWssIHRoZXkgYXJlIGV4cGVjdGVkIHRvIG1ha2UgdXAgbWlzc2VkIGhvdXJzIGxhdGVyIGluIHRoZSBzZW1lc3RlciBpbiBhcnJhbmdlbWVudCB3aXRoIHRoZSBMYWIgQ29vcmRpbmF0b3IsIGFuZCB3aWxsIG5vdCBiZSBnaXZlbiBhIHBhc3NpbmcgZ3JhZGUgdW50aWwgdGhleSBoYXZlIGZ1bGx5IG1hZGUgdXAgdGhlaXIgaG91cnMuCklmIHRoZSBSQSB3b3JrcyBtb3JlIHRoYW4gdGhlaXIgc2NoZWR1bGVkIGhvdXJzIGluIGEgZ2l2ZW4gd2VlayAoZS5nLiwgaWYgdGhleSB3b3JrIGR1cmluZyBhIHdlZWtlbmQgb3IgZXZlbmluZyksIHRoZXkgYXJlIGV4cGVjdGVkIHRvIGN1dCBiYWNrIG9uIHRoZWlyIHNjaGVkdWxlZCBob3VycyAoaW4gYWNjb3JkYW5jZSB3aXRoIHRoZSBhdmFpbGFiaWxpdHkgZGVzY3JpYmVkIGFib3ZlKTsgaG93ZXZlciwgdGhlc2UgY3V0cyBtdXN0IGJlIGFwcHJvdmVkIGJ5IHRoZSBMYWIgQ29vcmRpbmF0b3IgaW4gYWR2YW5jZS4KCldlIGV4cGVjdCB0aGUgUkEgdG8gaGF2ZSBmbGV4aWJpbGl0eSB0byBhY2NvbW1vZGF0ZSBwYXJ0aWNpcGFudHMnIHNjaGVkdWxlcyBmb3IgbGFiIHZpc2l0cy4KRm9yIGluc3RhbmNlLCB0aGUgUkEgaXMgZXhwZWN0ZWQgdG8gYmUgYXZhaWxhYmxlIHRvIHJ1biBsYWIgdmlzaXRzIG9uIGV2ZW5pbmdzIGFuZCB3ZWVrZW5kcyAoc2VlIHRoZSBzZWN0aW9uIG9uIFtTY2hlZHVsaW5nIEV4cGVjdGF0aW9uc10oI3NjaGVkdWxpbmdFeHBlY3RhdGlvbnMpIGJlbG93KS4KV2UgZXhwZWN0IHRoYXQgdGhlIFJBIGtlZXBzIGVpZ2h0IHdlZWtlbmQgZGF5cyBhdmFpbGFibGUgcGVyIHNlbWVzdGVyICh0aHJlZSB3ZWVrZW5kIGRheXMgcGVyIG1vbnRoKSBmb3IgdGhlIHB1cnBvc2VzIG9mIHdvcmtpbmcgd2l0aCBmYW1pbGllcy4KSW4gYWRkaXRpb24sIHdlIGV4cGVjdCB0aGF0IGVhY2ggUkEga2VlcHMgdHdvIHdlZWtkYXkgZXZlbmluZ3MgYXZhaWxhYmxlIGZvciB0aGUgcHVycG9zZXMgb2Ygd29ya2luZyB3aXRoIGZhbWlsaWVzLgpXZSB3aWxsIGRvIG91ciBiZXN0IHRvIGZhaXJseSBkaXN0cmlidXRlIHRoZSBldmVuaW5nIGFuZCB3ZWVrZW5kIGhvdXJzIGFjcm9zcyB0aGUgdGVhbS4KCldlIGV4cGVjdCBSQXMgdG8gcmVndWxhcmx5IGNvbW11bmljYXRlIHdpdGggdGhlIHRlYW0sIHVzaW5nIHRoZSBhcHByb3ByaWF0ZSBtZXRob2RzIG9mIGNvbW11bmljYXRpb24sIGFzIGRlc2NyaWJlZCBpbiB0aGUgW0xhYiBDb21tdW5pY2F0aW9uXShtYW51YWwuaHRtbCNsYWJDb21tdW5pY2F0aW9uKSBzZWN0aW9uIG9mIHRoZSBMYWIgTWFudWFsLgpNZXRob2RzIGZvciByZXNvbHZpbmcgY29uZmxpY3RzIGFuZCBwZXJzb25uZWwgaXNzdWVzIGFyZSBkZXNjcmliZWQgaW4gdGhlIExhYiBDb21tdW5pY2F0aW9uIHNlY3Rpb24gb2YgdGhlIExhYiBNYW51YWwgKGNsaWNrIFtoZXJlXShtYW51YWwuaHRtbCNyZXNvbHZpbmdDb25mbGljdHMpKS4KV2UgZXhwZWN0IHRoZSBSQSB0byB0YWtlIHBlcnNvbmFsIHJlc3BvbnNpYmlsaXR5IGZvciB0aGUgd29yayB0aGV5IGFyZSBhc3NpZ25lZC4KQXNzaWduZWQgd29yayB3aWxsIGFsd2F5cyBjb2luY2lkZSB3aXRoIHRoZSAxMCBob3VycyB0aGUgUkEgaXMgYWxyZWFkeSBzY2hlZHVsZWQgZm9yLgpXaXRoIHRoZSBleGNlcHRpb24gb2YgbGFiIHZpc2l0cywgd2Ugd2lsbCBub3QgYXNzaWduIHdvcmsgYmV5b25kIHRoZSAxMCBob3VycyBwZXIgd2VlayBleHBlY3RhdGlvbiBhcyBsb25nIGFzIHRoZSBSQSBpcyBtZWV0aW5nIHRoZWlyIGV4cGVjdGF0aW9uIGZvciBsYWIgaG91cnMuCldlIGV4cGVjdCB0aGUgUkEgdG8gYXNrIHRoZSBQSSBvciBMYWIgQ29vcmRpbmF0b3IgaWYgdGhleSBoYXZlIHF1ZXN0aW9ucyBhYm91dCB0aGVpciBhc3NpZ25lZCB3b3JrIG9yIGV4cGVjdGF0aW9ucy4KQW55IG5vbi1hc3NpZ25lZCB3b3JrIChlLmcuLCBpbmRlcGVuZGVudCByZXNlYXJjaCBwcm9qZWN0cywgSG9ub3JzIHByb2plY3RzLCBldGMuKSBpcyBleHBlY3RlZCB0byB0YWtlIHBsYWNlIG91dHNpZGUgb2Ygc2NoZWR1bGVkIGhvdXJzLCB1bmxlc3MgZ2l2ZW4gZXhwbGljaXQgcGVybWlzc2lvbiBmcm9tIHRoZSBQSS4KCldlIGV4cGVjdCB0aGUgUkEgdG8gc2hvdyBhbiBpbnRlcmVzdCBpbiB0aGUgd29yayBhbmQgdG8sIHRocm91Z2hvdXQgdGhlIGNvdXJzZSBvZiB0aGUgc2VtZXN0ZXIsIGdhaW4gZ3JlYXRlciBpbmRlcGVuZGVuY2UgaW4gdGhlIGxhYm9yYXRvcnksIHRvIHRha2Ugb24gYSBncmVhdGVyIGxlYWRlcnNoaXAgcm9sZSwgYW5kIHRvIGNvbnRyaWJ1dGUgdG8gdGhlIG92ZXJhbGwgaW1wcm92ZW1lbnQgb2YgdGhlIGxhYiBhbmQgaXRzIHJlc2VhcmNoLgpBZnRlciBhbiBleHRlbmRlZCBkaXNwbGF5IG9mIGNvbW1pdG1lbnQgYW5kIGRlZGljYXRpb24gdG8gdGhlIGxhYiwgUkFzIGFyZSB3ZWxjb21lIHRvIG1lZXQgd2l0aCBEci4gUGV0ZXJzZW4gdG8gZGlzY3VzcyB0aGUgcG9zc2liaWxpdHkgb2YgZG9pbmcgYW4gSG9ub3IncyB0aGVzaXMgaW4gY29uanVuY3Rpb24gd2l0aCBsYWIgcGFydGljaXBhdGlvbi4KCldlIGV4cGVjdCBSQXMgdG8gY29udHJpYnV0ZSB0byBlYWNoIHdlZWtseSBsYWIgbWVldGluZyBkaXNjdXNzaW9uLgpXZSBleHBlY3QgUkFzIHRvIHN1Ym1pdCB0aGVpciBsYWIgcmVwb3J0IGJ5IHRoZSBkZWFkbGluZSBhbmQgaW4gdGhlIGNvcnJlY3QgbG9jYXRpb24uCgpXZSBleHBlY3QgUkFzIHRvIHJlZ2lzdGVyIGZvciB0aGUgUmVzZWFyY2ggUHJhY3RpY3VtIGluIFBzeWNob2xvZ3kgY291cnNlIChQU1k6Mzk5NCBvciBIT05SOjM5OTQpIHRvIGFjY291bnQgZm9yIHRoZSB0aW1lIGRlbWFuZHMgb2YgbGFiIHBhcnRpY2lwYXRpb24gaW4gdGhlaXIgc2NoZWR1bGUuCgojIEdyYWRpbmcgU2NhbGUgeyNncmFkaW5nfQoKQmFzZWQgb24gdGhlIGV4cGVjdGF0aW9ucyBhYm92ZSBhbmQgdGhlIGdyYWRpbmcgc2NhbGUgYmVsb3csIFJBcyB3aWxsIGJlIGFzc2lnbmVkIGEgbGV0dGVyIGdyYWRlIFtB4oCTRl0gZm9yIHRoZWlyIHBlcmZvcm1hbmNlIGluIHRoZSBsYWIgb24gdGhlIHRhc2tzIGFzc2lnbmVkIHRvIHRoZW0uCigqTm90ZTogRW5yb2xsaW5nIGluIGNlcnRhaW4gY291cnNlcyB3aWxsIHJlc3VsdCBpbiBhIFBhc3MvRmFpbCBncmFkZSByYXRoZXIgdGhhbiBhIGxldHRlciBncmFkZS4KU2VlIHRoZSBzZWN0aW9uIG9mIHRoZSBMYWIgTWFudWFsIHRoYXQgZGVzY3JpYmVzIGNvdXJzZSBvcHRpb25zIGFuZCBob3cgdG8gcmVnaXN0ZXIgKGNsaWNrIFtoZXJlXShtYW51YWwuaHRtbCNjb3Vyc2VSZWdpc3RyYXRpb24pKSkuCgpBOiAxMDAlIGF0dGVuZGFuY2UsIGNvbnNpc3RlbnRseSBvbiB0aW1lLCBhbmQgbWVldGluZyBhbGwgb2YgdGhlIGxhYiBleHBlY3RhdGlvbnNcCkI6IDwgMTAwJSBhdHRlbmRhbmNlLCBvciBsYXRlIGNhbmNlbGxhdGlvbnMgZm9yIHZpc2l0cyBmb3Igd2hpY2ggeW91IHdlcmUgc2NoZWR1bGVkLCBvciBpbmNvbnNpc3RlbnRseSBvbiB0aW1lLCBvciBtb3N0bHkgbWVldGluZyB0aGUgbGFiIGV4cGVjdGF0aW9uc1wKQzogPCA4MCUgYXR0ZW5kYW5jZSwgb3IgbGF0ZSBjYW5jZWxsYXRpb25zIGZvciB2aXNpdHMgZm9yIHdoaWNoIHlvdSB3ZXJlIHNjaGVkdWxlZCwgb3IgbW9zdGx5IG5vdCBvbiB0aW1lLCBvciBzb21ldGltZXMgbWVldGluZyB0aGUgbGFiIGV4cGVjdGF0aW9uc1wKRDogPCA3MCUgYXR0ZW5kYW5jZSwgb3IgbGF0ZSBjYW5jZWxsYXRpb25zIGZvciB2aXNpdHMgZm9yIHdoaWNoIHlvdSB3ZXJlIHNjaGVkdWxlZCwgb3IgcmFyZWx5IG9uIHRpbWUsIG9yIG9ubHkgb2NjYXNpb25hbGx5IG1lZXRpbmcgdGhlIGxhYiBleHBlY3RhdGlvbnNcCkY6IDw9IDUwIGF0dGVuZGFuY2UsIG9yIGZyZXF1ZW50IGxhdGUgY2FuY2VsbGF0aW9ucyBmb3IgdmlzaXRzIGZvciB3aGljaCB5b3Ugd2VyZSBzY2hlZHVsZWQsIG9yIG5ldmVyIG9uIHRpbWUsIG9yIGdlbmVyYWxseSBmYWlsaW5nIHRvIG1lZXQgdGhlIGxhYiBleHBlY3RhdGlvbnMKCiMgRXhwZWN0YXRpb25zIGZvciBFdmVyeW9uZSBpbiBMYWIgeyNleHBlY3RhdGlvbnNGb3JFdmVyeW9uZX0KCkluIGFkZGl0aW9uIHRvIHRoZSBleHBlY3RhdGlvbnMgZGVzY3JpYmVkIGFib3ZlIGZvciB1bmRlcmdyYWR1YXRlIFJBcywgcGxlYXNlIGFsc28gcmVhZCB0aGUgW2V4cGVjdGF0aW9ucyBmb3IgZXZlcnlvbmUgaW4gdGhlIGxhYl0oZXhwZWN0YXRpb25zLWV2ZXJ5b25lLmh0bWwpLgoKIyBTaWduYXR1cmUgeyNzaWduYXR1cmV9CgpQbGVhc2UgZG93bmxvYWQsIHNpZ24sIGFuZCBlbWFpbCB0aGUgYmVsb3cgZG9jdW1lbnQgdG8gdGhlIExhYiBDb29yZGluYXRvciAoZGV2cHN5LWxhYkB1aW93YS5lZHUpIGFuZCBEci4gUGV0ZXJzZW4gcHJpb3IgdG8geW91ciBmaXJzdCBkYXkgaW4gbGFiLgoKPGVtYmVkIHNyYz0iRmlsZXMvc2lnbmF0dXJlX3BhZ2UucGRmIiB3aWR0aD0iMTAwMCIgaGVpZ2h0PSI2MDAiPgo=</div>
-<script type="text/javascript" src="includes/external-links.js"></script>
 
+<!-- -->
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add lab logo -->
@@ -791,7 +464,7 @@ first day in lab.</p>
 </p>
 
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add icon library -->
@@ -804,87 +477,629 @@ first day in lab.</p>
     <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
 	<a href="https://www.instagram.com/devpsylab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
 </p>
-
-
-</div>
-</div>
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("expectations-undergradRA.Rmd");
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
-
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    options.showAndHide = true;
-    options.smoothScroll = true;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/DevPsyLab\.github\.io\/LabWiki\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Lab Expectations for Undergraduate Research Assistants"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Scheduling Expectations {#sec-schedulingExpectations}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## At a Glance {#sec-atAGlance}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>**General Commitment:**</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>We want to ensure that RAs get the most value out of their experience with our lab.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given the extensive training required, <span class="dt">&lt;</span><span class="kw">u</span><span class="dt">&gt;</span>RAs are expected to commit to **at least** 2 semesters of working in lab<span class="dt">&lt;/</span><span class="kw">u</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RAs interested in a <span class="co">[</span><span class="ot">specialized role</span><span class="co">](lab-manual.qmd#sec-specializedRoles)</span> must commit to **at least** 3 semesters in order to account for the extensive training process</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>**Each Week:**</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RAs are expected to be in lab for 10 regularly scheduled hours (1 of these hours will be from the weekly lab meeting)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>These hours are regularly scheduled (between 9 AM – 5 PM), so we ask that RAs have substantial chunks of time (i.e., 2–4 hours) within the week where their hours can be properly distributed</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RAs are expected to provide **at least** 2 days in the week (Monday–Friday) that they would be available past 5 PM to run visits (to accommodate children and families' schedules)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>*This does not mean you will always run visits on these days, it simply means that you are available to if need be.*</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you work in the lab more than 10 hours in a given week (e.g., to run an evening/weekend visit), you may cut down the following week to stay at an average of 10 hours per week.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>**Each Semester:**</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RAs are expected to provide ~8 weekend days in the semester that they are available to run visits (to accommodate children and families' schedules)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>This means that RAs signed up for a specific day will be "on-call" for any visits that are scheduled for that day</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>*This does not mean you will always run visits on these days, it simply means that you are available to if need be.*</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>*RAs will be notified of a weekend visit no later than 24 hours before the scheduled visit.*</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your responsibilities as an RA {#sec-yourSchedulingResponsibilities}</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks. </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person, by phone call (319-353-1977), or via email to the lab email (<span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span>) by 4:00 pm the day prior to the requested time off.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Please give as much advance notice as possible.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>In case of emergency requests, please reach out to the Lab Coordinator in person or by phone call (319-353-1977).</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Requests must first be approved by the Lab Coordinator.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>It is your responsibility to follow up with the Lab Coordinator regarding requests.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>Do not send requests to change your schedule via Discord.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>If the request is approved, create a calendar entry on the Busy calendar, as described <span class="co">[</span><span class="ot">here</span><span class="co">](lab-manual.qmd#sec-sharedCalendar)</span>.</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>Unless otherwise stated, running lab visits is always the top priority.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>You are expected to arrive 45 minutes before the scheduled start time of visits.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>You are responsible for keeping the "RES-DPL-Busy" calendar up to date, including evenings and weekends, and to keep the Lab Coordinator informed of any changes as they occur.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>You are expected to track your lab hours honestly using the electronic scheduling system.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>You should diligently clock in and clock out every time you are in lab, and should only be "on the clock" while you are doing scheduled lab-related work or activities.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>If you come into lab to help run lab visits during university breaks, the hours can count as hours for either the current semester (if you are "under hours" for the semester), or toward the following semester (if you are "over hours" for the semester).</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>Completed lab-related hours count as lab hours no matter when they occur as long as they occur when they are scheduled.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Lab hours must be scheduled/arranged with the Lab Coordinator in advance.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>You are NOT expected to be in lab for regularly scheduled lab hours on university holidays.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>If holidays occur during the week when lab hours are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter hours for that day.</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>You are expected to schedule non-lab activities (course-related, therapy/medical appointments, extra-curricular, etc.) outside of your scheduled lab hours.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>However, we understand that this is occasionally not possible.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>If scheduling an outside activity during your regular lab hours is necessary, you are expected to first discuss this with the Lab Coordinator, to mark yourself as unavailable on the calendar (RES-DPL-Busy), and to work with the Lab Coordinator to determine when to make up the missed hours.</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>You are expected to be available at least two weekday evenings (M–F) per week and at least 8 weekend days per semester to run lab visits that may extend or be scheduled outside of the lab's normal business hours, which are 9:00am to 5:00pm Monday through Friday.</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>You will be considered "on call" the evenings and weekend days you mark as available (i.e., your scheduled "on-call days").</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>It is unlikely you will run a lab visit on all of your on-call days, but we may schedule a lab visit on any of your on-call days, in which case you would be expected to help run the lab visit.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>You are expected to hold your scheduled on-call days available until 24 hours beforehand.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>Both parties are then required to inform the Lab Coordinator of the trade before it is finalized.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>We will do our best to schedule families during your regular lab hours, however this may not always be possible.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>We want to ensure, as much as possible, (a) adequate coverage to accommodate families' schedules and (b) equitable distribution of "after-hours" lab visits.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>These are the minimum expectations for evening and weekend availability.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>You are welcome to make yourself available more than two evenings per week and three weekend days per month to help us better meet families' needs.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>If you have concerns making up these hours, please reach out to the Lab Coordinator.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## Our responsibilities to you {#sec-ourResponsibilitiesToYou}</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>We appreciate that your classes—including exams and course prep—come first.</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>We will work with you so that your lab schedule does not interfere with your other classes.</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>It is greatly appreciated when RAs are able to run lab visits during breaks because breaks are often when families are available and thus it is very helpful to the lab.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>RAs who are available and willing to run lab visits during breaks will accrue those hours either for the current or following semester.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>Running lab visits during breaks is not an expectation of RAs.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>We will schedule lab visits using the availability schedule you submitted to the Lab Coordinator at the beginning of the semester and the RES-DPL-Busy calendar.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>We will never expect you to help run lab visits when you have marked yourself as unavailable on the calendar.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>We will do our best to schedule a similar number of lab visits across RAs.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>This will ensure RAs receive a similar amount of experience with children/families and that a small set of RAs are not overburdened by lab visits and unable to tend to their other lab responsibilities.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>We will do our best to schedule families during your regular lab hours.</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>We will only schedule families outside regular lab hours (e.g., evenings/weekends) if necessary.</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>We will never schedule a lab visit outside of normal lab hours with less than 24 hours' notice to the RAs scheduled to run it.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>We will work with you to help you identify when you can "cut back" when you let us know that you are over the expected number of hours for that point in the semester.</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu"># RA Duties: What Does Work as a Research Assistant Entail? {#sec-ra}</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>Instructions for lab reports are described in the lab manual (click <span class="co">[</span><span class="ot">here</span><span class="co">](lab-manual.qmd#sec-resolvingConflicts)</span>).</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="fu"># Lab Expectations {#sec-expectations}</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, and in person, by phone call (319-353-1977), or via email to the lab email (<span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span>).</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>We expect RAs to let the Lab Coordinator and relevant team members know, as soon as possible and by Discord, if they are running late to a scheduled shift, visit, or meeting.</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>We expect the RA to have flexibility to accommodate participants' schedules for lab visits.</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on <span class="co">[</span><span class="ot">Scheduling Expectations</span><span class="co">](#sec-schedulingExpectations)</span> below).</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>We expect that the RA keeps eight weekend days available per semester (three weekend days per month) for the purposes of working with families.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>In addition, we expect that each RA keeps two weekday evenings available for the purposes of working with families.</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>We will do our best to fairly distribute the evening and weekend hours across the team.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the <span class="co">[</span><span class="ot">Lab Communication</span><span class="co">](lab-manual.qmd#sec-labCommunication)</span> section of the Lab Manual.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click <span class="co">[</span><span class="ot">here</span><span class="co">](lab-manual.qmd#sec-resolvingConflicts)</span>).</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>We expect the RA to take personal responsibility for the work they are assigned.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>Assigned work will always coincide with the 10 hours the RA is already scheduled for.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>We expect the RA to ask the PI or Lab Coordinator if they have questions about their assigned work or expectations.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>We expect the RA to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research.</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr. Petersen to discuss the possibility of doing an Honor's thesis in conjunction with lab participation.</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>We expect RAs to contribute to each weekly lab meeting discussion.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>We expect RAs to submit their lab report by the deadline and in the correct location.</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="fu"># Grading Scale {#sec-grading}</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>Based on the expectations above and the grading scale below, RAs will be assigned a letter grade <span class="co">[</span><span class="ot">A–F</span><span class="co">]</span> for their performance in the lab on the tasks assigned to them.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>(*Note: Enrolling in certain courses will result in a Pass/Fail grade rather than a letter grade.</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>See the section of the Lab Manual that describes course options and how to register (click <span class="co">[</span><span class="ot">here</span><span class="co">](lab-manual.qmd#sec-courseRegistration)</span>)).</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>A: 100% attendance, consistently on time, and meeting all of the lab expectations\</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>B: &lt; 100% attendance, or late cancellations for visits for which you were scheduled, or inconsistently on time, or mostly meeting the lab expectations\</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>C: &lt; 80% attendance, or late cancellations for visits for which you were scheduled, or mostly not on time, or sometimes meeting the lab expectations\</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>D: &lt; 70% attendance, or late cancellations for visits for which you were scheduled, or rarely on time, or only occasionally meeting the lab expectations\</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>F: &lt;= 50 attendance, or frequent late cancellations for visits for which you were scheduled, or never on time, or generally failing to meet the lab expectations</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="fu"># Expectations for Everyone in Lab {#sec-expectationsForEveryone}</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>In addition to the expectations described above for undergraduate RAs, please also read the <span class="co">[</span><span class="ot">expectations for everyone in the lab</span><span class="co">](expectations-everyone.qmd)</span>.</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="fu"># Signature {#sec-signature}</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>Please download, sign, and email the below document to the Lab Coordinator (<span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span>) and Dr. Petersen prior to your first day in lab.</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">embed</span><span class="ot"> src</span><span class="op">=</span><span class="st">"Files/signature_page.pdf"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1000"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"600"</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
 
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
-</body>
-</html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/expectations-undergradRA.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/expectations-undergradRA.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

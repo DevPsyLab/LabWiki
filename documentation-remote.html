@@ -1,748 +1,493 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<html>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="author" content="Isaac T. Petersen">
+<meta name="dcterms.date" content="today">
 
-
-
-
-<title>Remote Participation</title>
-
-<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/navigation-1.1/sourceembed.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8JSDTYMH7P');
-</script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+<title>Remote Participation – Lab Wiki for the Developmental Psychopathology Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-</script>
-
-
-
-
-<style type="text/css">
-#rmd-source-code {
-  display: none;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-</style>
-
-
-<link rel="stylesheet" href="includes/custom.css" type="text/css" />
-<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-
-
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
 @media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
   }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
 </style>
 
 
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9278de052701f0b3f1191ef96b26c196.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
 
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="includes/custom.css">
+<link rel="stylesheet" href="font/css/roboto.css">
 </head>
 
-<body>
+<body class="nav-fixed quarto-light">
 
-
-<div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo light-content">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab Wiki for the Developmental Psychopathology Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab-manual.html"> 
+<span class="menu-text">Lab Manual</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-expectations" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Expectations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-expectations">    
         <li>
-  <a href="manual.html">Lab Manual</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Expectations
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="expectations-everyone.html">Everyone</a>
-    </li>
-    <li>
-      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="expectations-SROP.html">SROP Students</a>
-    </li>
-    <li>
-      <a href="expectations-gradStudent.html">Graduate Students</a>
-    </li>
-    <li>
-      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
-    </li>
-    <li>
-      <a href="expectations-labStaff.html">Lab Staff</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Documentation
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="adobe.html">Adobe</a>
-    </li>
-    <li>
-      <a href="https://devpsylab.github.io/DataAnalysis">Data Analysis Guides</a>
-    </li>
-    <li>
-      <a href="honors.html">Honors Projects</a>
-    </li>
-    <li>
-      <a href="mediationModeration.html">Mediation and Moderation</a>
-    </li>
-    <li>
-      <a href="openScience.html">Open Science</a>
-    </li>
-    <li>
-      <a href="opportunities.html">Opportunities</a>
-    </li>
-    <li>
-      <a href="redcap-manual.html">REDCap</a>
-    </li>
-    <li>
-      <a href="qualtrics-manual.html">Qualtrics</a>
-    </li>
-    <li>
-      <a href="documentation-remote.html">Remote Participation</a>
-    </li>
-    <li>
-      <a href="social-media.html">Social Media</a>
-    </li>
-    <li>
-      <a href="studies.html">Studies</a>
-    </li>
-    <li>
-      <a href="video-editing.html">Video Editing</a>
-    </li>
-    <li>
-      <a href="vsCode.html">Visual Studio Code</a>
-    </li>
-    <li>
-      <a href="writing.html">Writing Guidelines</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Studies
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="study-externalizingSpectrumAcrossLifespan.html">Externalizing Spectrum Across the Lifespan</a>
-    </li>
-    <li>
-      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Prospective Applicants
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="about.html">About</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <a class="dropdown-item" href="./expectations-everyone.html">
+ <span class="dropdown-text">Everyone</span></a>
+  </li>  
         <li>
-  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-<li role="separator" class="divider"></li>
-<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+    <a class="dropdown-item" href="./expectations-undergradRA.html">
+ <span class="dropdown-text">Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-SROP.html">
+ <span class="dropdown-text">SROP Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-gradStudent.html">
+ <span class="dropdown-text">Graduate Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labCoordinator.html">
+ <span class="dropdown-text">Lab Coordinator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labStaff.html">
+ <span class="dropdown-text">Lab Staff</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Documentation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
+        <li>
+    <a class="dropdown-item" href="./adobe.html">
+ <span class="dropdown-text">Adobe</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://devpsylab.github.io/DataAnalysis">
+ <span class="dropdown-text">Data Analysis Guides</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./honors.html">
+ <span class="dropdown-text">Honors Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mediationModeration.html">
+ <span class="dropdown-text">Mediation and Moderation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./openScience.html">
+ <span class="dropdown-text">Open Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./opportunities.html">
+ <span class="dropdown-text">Opportunities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./redcap-manual.html">
+ <span class="dropdown-text">REDCap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./qualtrics-manual.html">
+ <span class="dropdown-text">Qualtrics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./documentation-remote.html">
+ <span class="dropdown-text">Remote Participation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./social-media.html">
+ <span class="dropdown-text">Social Media</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./studies.html">
+ <span class="dropdown-text">Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./video-editing.html">
+ <span class="dropdown-text">Video Editing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vsCode.html">
+ <span class="dropdown-text">Visual Studio Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing.html">
+ <span class="dropdown-text">Writing Guidelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-studies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Studies</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-studies">    
+        <li>
+    <a class="dropdown-item" href="./study-externalizingSpectrumAcrossLifespan.html">
+ <span class="dropdown-text">Externalizing Spectrum Across the Lifespan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./study-schoolReadinessStudy.html">
+ <span class="dropdown-text">School Readiness Study</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-prospective-applicants" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Prospective Applicants</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-prospective-applicants">    
+        <li>
+    <a class="dropdown-item" href="./prospective-undergradRA.html">
+ <span class="dropdown-text">Prospective Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./prospective-gradStudent.html">
+ <span class="dropdown-text">Prospective Graduate Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About This Website</span></a>
+  </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://developmental-psychopathology.lab.uiowa.edu"> 
+<span class="menu-text">Lab Website</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki/issues/new">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://twitter.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://www.facebook.com/DevPsyLab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#join-the-weekly-lab-meeting" id="toc-join-the-weekly-lab-meeting" class="nav-link active" data-scroll-target="#join-the-weekly-lab-meeting"><span class="header-section-number">1</span> Join the Weekly Lab Meeting</a></li>
+  <li><a href="#sec-vpn" id="toc-sec-vpn" class="nav-link" data-scroll-target="#sec-vpn"><span class="header-section-number">2</span> VPN Access to the Lab Drive</a></li>
+  <li><a href="#sec-mapLabDrive" id="toc-sec-mapLabDrive" class="nav-link" data-scroll-target="#sec-mapLabDrive"><span class="header-section-number">3</span> Map the Lab Drive Onto a Mac Computer</a></li>
+  <li><a href="#sec-remoteAccess" id="toc-sec-remoteAccess" class="nav-link" data-scroll-target="#sec-remoteAccess"><span class="header-section-number">4</span> Remote Access to a Lab Computer</a></li>
+  <li><a href="#perform-coding-from-home" id="toc-perform-coding-from-home" class="nav-link" data-scroll-target="#perform-coding-from-home"><span class="header-section-number">5</span> Perform Coding from Home</a>
+  <ul>
+  <li><a href="#remote-access-changes" id="toc-remote-access-changes" class="nav-link" data-scroll-target="#remote-access-changes"><span class="header-section-number">5.1</span> Remote Access Changes</a></li>
+  <li><a href="#confidentiality-consideration" id="toc-confidentiality-consideration" class="nav-link" data-scroll-target="#confidentiality-consideration"><span class="header-section-number">5.2</span> Confidentiality Consideration</a></li>
+  <li><a href="#remote-coding-system-for-coding-pairs" id="toc-remote-coding-system-for-coding-pairs" class="nav-link" data-scroll-target="#remote-coding-system-for-coding-pairs"><span class="header-section-number">5.3</span> Remote Coding System for Coding Pairs</a></li>
+  <li><a href="#remote-coding-system-for-3-coders" id="toc-remote-coding-system-for-3-coders" class="nav-link" data-scroll-target="#remote-coding-system-for-3-coders"><span class="header-section-number">5.4</span> Remote Coding System for 3 Coders</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/documentation-remote.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/documentation-remote.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Remote Participation</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
-<h1 class="title toc-ignore">Remote Participation</h1>
+<div class="quarto-title-meta">
 
-</div>
+    
+  
+    
+  </div>
+  
 
 
-<p>The following sections provide instructions for how to participate in
-the lab remotely. As described in the <a href="manual.html#remote">lab
-manual</a>, RAs should never access lab data remotely without permission
-or direction from the Lab Coordinator, a graduate student, or the PI.
-These instructions applied mainly during the earlier parts of the
-COVID-19 pandemic. We are now working fully in-person. Nevertheless,
-students who are conducting <a href="honors.html">Honors Projects</a>
-may need to access their projects during off-hours.</p>
+</header>
+
+
+<p>The following sections provide instructions for how to participate in the lab remotely. As described in the <a href="./lab-manual.html#sec-remote">lab manual</a>, RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI. These instructions applied mainly during the earlier parts of the COVID-19 pandemic. We are now working fully in-person. Nevertheless, students who are conducting <a href="./honors.html">Honors Projects</a> may need to access their projects during off-hours.</p>
 <p><strong>How To…</strong></p>
-<div id="join-the-weekly-lab-meeting" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Join the Weekly Lab
-Meeting</h1>
+<section id="join-the-weekly-lab-meeting" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Join the Weekly Lab Meeting</h1>
 <ul>
-<li>Open the lab calendar in Outlook (see the lab manual for how to do
-this)</li>
+<li>Open the lab calendar in Outlook (see the lab manual for how to do this)</li>
 <li>Click on the link in the lab meeting event on the calendar
-<ol style="list-style-type: decimal">
-<li>Alternatively, go to: <a href="https://uiowa.zoom.us/join"
-class="uri">https://uiowa.zoom.us/join</a></li>
+<ol type="1">
+<li>Alternatively, go to: <a href="https://uiowa.zoom.us/join" class="uri">https://uiowa.zoom.us/join</a></li>
 <li>Enter the meeting ID (as shown in the calendar)</li>
 </ol></li>
 <li>You should be muted by default when you first enter the meeting</li>
-<li>If you are unable to “attend” this week’s lab meeting due to a
-scheduling conflict or limited access to the internet, please reach out
-to the Lab Coordinator at the <a href="mailto:devpsy-lab@uiowa.edu"
-class="email">devpsy-lab@uiowa.edu</a> email.</li>
+<li>If you are unable to “attend” this week’s lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the <a href="mailto:devpsy-lab@uiowa.edu">devpsy-lab@uiowa.edu</a> email.</li>
 </ul>
-</div>
-<div id="vpn" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> VPN Access to the Lab
-Drive</h1>
-<p>To access the lab drive, you must connect to the university’s VPN
-using Cisco AnyConnect. Visit this website to learn how to set up VPN
-access to the lab drive: <a
-href="https://its.uiowa.edu/support/article/1876"
-class="uri">https://its.uiowa.edu/support/article/1876</a> (archived at
-<a href="https://perma.cc/ST6R-PCJU"
-class="uri">https://perma.cc/ST6R-PCJU</a>)</p>
+</section>
+<section id="sec-vpn" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> VPN Access to the Lab Drive</h1>
+<p>To access the lab drive, you must connect to the university’s VPN using Cisco AnyConnect. Visit this website to learn how to set up VPN access to the lab drive: <a href="https://its.uiowa.edu/support/article/1876" class="uri">https://its.uiowa.edu/support/article/1876</a> (archived at <a href="https://perma.cc/ST6R-PCJU" class="uri">https://perma.cc/ST6R-PCJU</a>)</p>
 <p>The full drive path to our lab drive is:</p>
 <ul>
-<li>PC:
-<code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\</code></li>
-<li>Mac:
-<code>smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/</code></li>
+<li>PC: <code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\</code></li>
+<li>Mac: <code>smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/</code></li>
 </ul>
-</div>
-<div id="mapLabDrive" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Map the Lab Drive Onto
-a Mac Computer</h1>
-<ol style="list-style-type: decimal">
-<li><a href="#vpn">VPN</a> into the university network</li>
+</section>
+<section id="sec-mapLabDrive" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Map the Lab Drive Onto a Mac Computer</h1>
+<ol type="1">
+<li><a href="#sec-vpn">VPN</a> into the university network</li>
 <li>In the upper task bar, click “Go”</li>
 <li>Select “Connect to Server” from the drop-down menu</li>
-<li>In the “Server Address” bar, type:
-<code>smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/</code></li>
+<li>In the “Server Address” bar, type: <code>smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/</code></li>
 <li>Click on Connect.</li>
 <li>This should create a shortcut for the drive on the desktop</li>
-<li>Click on the + sign to add the address in permanently in your list
-of “Favorite Servers”.</li>
-<li>To create an alias of the volume so that you can easily reconnect
-without repeating steps 2–6 above:
-<ol style="list-style-type: decimal">
+<li>Click on the + sign to add the address in permanently in your list of “Favorite Servers”.</li>
+<li>To create an alias of the volume so that you can easily reconnect without repeating steps 2–6 above:
+<ol type="1">
 <li>Select the volume icon</li>
 <li>Go to the Finder menu bar and click “File” then “Make Alias”.</li>
-<li>A volume alias appears on your desktop. In the future, you can
-reconnect to the shared volume by double-clicking this alias.</li>
+<li>A volume alias appears on your desktop. In the future, you can reconnect to the shared volume by double-clicking this alias.</li>
 </ol></li>
-<li>Then, you should be able to access the scripts on the lab share with
-<code>R</code> at the following location:
-<code>/Shared/lss_itpetersen</code></li>
+<li>Then, you should be able to access the scripts on the lab share with <code>R</code> at the following location: <code>/Shared/lss_itpetersen</code></li>
 </ol>
-</div>
-<div id="remoteAccess" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Remote Access to a Lab
-Computer</h1>
-<p>A possibility may be to “remote in” to a lab computer. This allows
-you to use a lab computer from anywhere, so you can access all of the
-programs on our lab computers without having to install them on your
-personal machine. Remoting in to a lab computer might also be easier for
-accessing large lab files (e.g., videos for coding). However, you should
-only remote in to a lab computer if nobody in the lab is using the
-computer and nobody in the lab will need to use the computer. You can
-remote in to a lab computer using a program called “Remote Desktop.”
-Visit this website to learn how to set up Remote Desktop access on your
-computer: <a href="https://its.uiowa.edu/remotedesktop"
-class="uri">https://its.uiowa.edu/remotedesktop</a></p>
+</section>
+<section id="sec-remoteAccess" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Remote Access to a Lab Computer</h1>
+<p>A possibility may be to “remote in” to a lab computer. This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine. Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding). However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer. You can remote in to a lab computer using a program called “Remote Desktop.” Visit this website to learn how to set up Remote Desktop access on your computer: <a href="https://its.uiowa.edu/remotedesktop" class="uri">https://its.uiowa.edu/remotedesktop</a></p>
 <p>To gain remote access to a lab computer:</p>
-<ol style="list-style-type: decimal">
-<li><a href="#vpn">VPN</a> into the lab drive</li>
-<li>When prompted for the computer’s name in the Remote Desktop client,
-follow this format:
+<ol type="1">
+<li><a href="#sec-vpn">VPN</a> into the lab drive</li>
+<li>When prompted for the computer’s name in the Remote Desktop client, follow this format:
 <ul>
 <li><code>PSYC-S###.iowa.uiowa.edu</code></li>
-<li>Then, enter your username using this format:
-<code>iowa\HawkID</code></li>
+<li>Then, enter your username using this format: <code>iowa\HawkID</code></li>
 </ul></li>
 </ol>
-</div>
-<div id="perform-coding-from-home" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Perform Coding from
-Home</h1>
-<div id="remote-access-changes" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Remote Access
-Changes</h2>
-<p>Task Timing Sheet: can be accessed through your student Office 365
-OneDrive—the Lab Coordinator will share a link so everyone has
-access</p>
-<p>Visit Videos: can be accessed on the lab drive using VPN and should
-be watched using VLC media player. You can download VLC for free here:
-<a href="https://www.videolan.org/vlc/index.html"
-class="uri">https://www.videolan.org/vlc/index.html</a></p>
-<p>Coding Forms: editable PDFs have been created for easier electronic
-completion—you can find your tasks’ PDF coding forms on the lab drive
-here:
-<code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\</code></p>
-<p>Coding forms should always be opened and edited using Adobe Acrobat.
-Adobe Acrobat Reader is available to download for free from the Adobe
-website: <a href="https://get.adobe.com/reader/"
-class="uri">https://get.adobe.com/reader/</a></p>
-<p>Coding Folders: have been re-created as folders on the lab drive,
-which can be found here:
-<code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\</code></p>
-</div>
-<div id="confidentiality-consideration" class="section level2"
-number="5.2">
-<h2><span class="header-section-number">5.2</span> Confidentiality
-Consideration</h2>
-<p>Because it is imperative that we maintain participant
-confidentiality, regardless of our current working situation, you must
-ALWAYS ensure that you are in a private space when you open visit
-videos. Therefore, if your parents/roommates/friends/etc. are in the
-room with you and can see or hear the videos, DO NOT OPEN THEM. It is
-also important that you do not save any visit videos or lab files of any
-kind to your personal computer, or take screenshots, Snapchats, etc. of
-any lab-related documents. The University’s IT department only provides
-protection to data and files saved on University equipment or within
-University programs (like the Office 365 OneDrive associated with your
-<code>HawkID</code>).</p>
-</div>
-<div id="remote-coding-system-for-coding-pairs" class="section level2"
-number="5.3">
-<h2><span class="header-section-number">5.3</span> Remote Coding System
-for Coding Pairs</h2>
-<ol style="list-style-type: decimal">
-<li>Coder 1 adds the start/stop and total task time to the Task Timing
-Sheet; initials when complete</li>
-<li>Coder 1 opens the editable PDF coding form for their task, then
-follows these steps to save a copy of the form BEFORE BEGINNING TO EDIT
-THE FORM:
-<ol style="list-style-type: lower-alpha">
-<li>Click “File” in the upper left-hand corner of the screen, then click
-“Save As”</li>
-<li>Navigate to your coding folder (i.e., Remote Coding → Coding Folders
-→ Your Task → Coder 1/2, and save the form with the appropriate name for
-the video you’re about to code (i.e., TCID_wave_coder#)</li>
-<li>Then you can begin to code your new copy of the coding form without
-making changes to the original templates in the Coding Forms
-folder!</li>
+</section>
+<section id="perform-coding-from-home" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Perform Coding from Home</h1>
+<section id="remote-access-changes" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="remote-access-changes"><span class="header-section-number">5.1</span> Remote Access Changes</h2>
+<p>Task Timing Sheet: can be accessed through your student Office 365 OneDrive—the Lab Coordinator will share a link so everyone has access</p>
+<p>Visit Videos: can be accessed on the lab drive using VPN and should be watched using VLC media player. You can download VLC for free here: <a href="https://www.videolan.org/vlc/index.html" class="uri">https://www.videolan.org/vlc/index.html</a></p>
+<p>Coding Forms: editable PDFs have been created for easier electronic completion—you can find your tasks’ PDF coding forms on the lab drive here: <code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\</code></p>
+<p>Coding forms should always be opened and edited using Adobe Acrobat. Adobe Acrobat Reader is available to download for free from the Adobe website: <a href="https://get.adobe.com/reader/" class="uri">https://get.adobe.com/reader/</a></p>
+<p>Coding Folders: have been re-created as folders on the lab drive, which can be found here: <code>\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\</code></p>
+</section>
+<section id="confidentiality-consideration" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="confidentiality-consideration"><span class="header-section-number">5.2</span> Confidentiality Consideration</h2>
+<p>Because it is imperative that we maintain participant confidentiality, regardless of our current working situation, you must ALWAYS ensure that you are in a private space when you open visit videos. Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM. It is also important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents. The University’s IT department only provides protection to data and files saved on University equipment or within University programs (like the Office 365 OneDrive associated with your <code>HawkID</code>).</p>
+</section>
+<section id="remote-coding-system-for-coding-pairs" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="remote-coding-system-for-coding-pairs"><span class="header-section-number">5.3</span> Remote Coding System for Coding Pairs</h2>
+<ol type="1">
+<li>Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete</li>
+<li>Coder 1 opens the editable PDF coding form for their task, then follows these steps to save a copy of the form BEFORE BEGINNING TO EDIT THE FORM:
+<ol type="a">
+<li>Click “File” in the upper left-hand corner of the screen, then click “Save As”</li>
+<li>Navigate to your coding folder (i.e., Remote Coding → Coding Folders → Your Task → Coder 1/2, and save the form with the appropriate name for the video you’re about to code (i.e., TCID_wave_coder#)</li>
+<li>Then you can begin to code your new copy of the coding form without making changes to the original templates in the Coding Forms folder!</li>
 </ol></li>
-<li>Coder 1 puts own form in the “Reliability Check” folder (this is in
-Coder 1’s folder)</li>
-<li>Coder 2 verifies the start/stop and total task time identified by
-Coder 1 on Task Timing Sheet, then codes video; initials Task Timing
-Sheet when complete</li>
-<li>Coder 2 puts completed coding form into the “Reliability Check”
-folder (in Coder 1’s folder)</li>
-<li>When both coding forms are complete and in the “Reliability Check”
-folder, Coder 1 checks forms against each other for interrater
-reliability</li>
+<li>Coder 1 puts own form in the “Reliability Check” folder (this is in Coder 1’s folder)</li>
+<li>Coder 2 verifies the start/stop and total task time identified by Coder 1 on Task Timing Sheet, then codes video; initials Task Timing Sheet when complete</li>
+<li>Coder 2 puts completed coding form into the “Reliability Check” folder (in Coder 1’s folder)</li>
+<li>When both coding forms are complete and in the “Reliability Check” folder, Coder 1 checks forms against each other for interrater reliability</li>
 <li>Coder 1 moves Coder 1’s form to Coder 2’s “Enter” folder</li>
-<li>Coder 1 enters Coder 2’s form into REDCap, initials and dates the
-top corner of the paper coding form, then moves Coder 2’s form back to
-Coder 2’s “Check” folder for final data entry check</li>
-<li>Coder 2 enters Coder 1’s form into REDCap, initials and dates the
-top corner of the paper coding form, then moves Coder 1’s form back to
-Coder 1’s “Check” folder for final data entry check</li>
-<li>Coder 1 and Coder 2 compare their coding forms against the data
-entered in REDCap to ensure accurate data entry, then initial and date
-the top corner of their paper coding form to confirm they have checked
-it against their partner’s data entry</li>
-<li>After you have completed a coding form, it can be saved here: Lab →
-School Readiness Study → Coding → Coded Data → select the appropriate
-task → select the appropriate cohort (Cohort 1, Cohort 2, Cohort 3,
-Cohort 4) → select the appropriate TCID → Save as
-<code>TCID_Wave_taskinitials_coder#</code> (e.g.,
-<code>1001_36_bd_coder1</code>).</li>
+<li>Coder 1 enters Coder 2’s form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 2’s form back to Coder 2’s “Check” folder for final data entry check</li>
+<li>Coder 2 enters Coder 1’s form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 1’s form back to Coder 1’s “Check” folder for final data entry check</li>
+<li>Coder 1 and Coder 2 compare their coding forms against the data entered in REDCap to ensure accurate data entry, then initial and date the top corner of their paper coding form to confirm they have checked it against their partner’s data entry</li>
+<li>After you have completed a coding form, it can be saved here: Lab → School Readiness Study → Coding → Coded Data → select the appropriate task → select the appropriate cohort (Cohort 1, Cohort 2, Cohort 3, Cohort 4) → select the appropriate TCID → Save as <code>TCID_Wave_taskinitials_coder#</code> (e.g., <code>1001_36_bd_coder1</code>).</li>
 </ol>
-</div>
-<div id="remote-coding-system-for-3-coders" class="section level2"
-number="5.4">
-<h2><span class="header-section-number">5.4</span> Remote Coding System
-for 3 Coders</h2>
-<ol style="list-style-type: decimal">
-<li>Coder 1 adds the start/stop and total task time to the Task Timing
-Sheet; initials when complete.</li>
+</section>
+<section id="remote-coding-system-for-3-coders" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="remote-coding-system-for-3-coders"><span class="header-section-number">5.4</span> Remote Coding System for 3 Coders</h2>
+<ol type="1">
+<li>Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete.</li>
 <li>Coder 1 codes video.</li>
-<li>Coder 1 puts own form in the Reliability Check folder (this is in
-Coder 1’s folder).</li>
-<li>Coder 2 and Coder 3 check the task timing sheet to determine which
-videos they should code. Coder 2 will be the second coder for all even
-numbered TCID videos, and Coder 3 will be the second coder for all odd
-numbered TCID videos.</li>
-<li>After determining which videos they each should code, Coder 2 and
-Coder 3 verify the start/stop times and total task time for their
-respective videos. Coder 2 and Coder 3 code these respective
-videos.</li>
-<li>Once coded, Coder 2 and Coder 3 put their completed coding forms
-into Coder 1’s Reliability Check folder.</li>
-<li>When both coding forms for a single video are complete and in the
-“Reliability Check” folder, Coder 1 checks forms against each other for
-interrater reliability.</li>
-<li>Coder 1 moves Coder 1’s even numbered forms into Coder 2’s “Enter”
-folder, and Coder 1 moves Coder 1’s odd numbered forms into Coder 3’s
-“Enter” folder.</li>
-<li>Coder 1 moves Coder 2’s even numbered forms into Coder 3’s “Enter”
-folder, and Coder 1 moves Coder 3’s odd numbered forms into Coder 2’s
-“Enter” folder.</li>
+<li>Coder 1 puts own form in the Reliability Check folder (this is in Coder 1’s folder).</li>
+<li>Coder 2 and Coder 3 check the task timing sheet to determine which videos they should code. Coder 2 will be the second coder for all even numbered TCID videos, and Coder 3 will be the second coder for all odd numbered TCID videos.</li>
+<li>After determining which videos they each should code, Coder 2 and Coder 3 verify the start/stop times and total task time for their respective videos. Coder 2 and Coder 3 code these respective videos.</li>
+<li>Once coded, Coder 2 and Coder 3 put their completed coding forms into Coder 1’s Reliability Check folder.</li>
+<li>When both coding forms for a single video are complete and in the “Reliability Check” folder, Coder 1 checks forms against each other for interrater reliability.</li>
+<li>Coder 1 moves Coder 1’s even numbered forms into Coder 2’s “Enter” folder, and Coder 1 moves Coder 1’s odd numbered forms into Coder 3’s “Enter” folder.</li>
+<li>Coder 1 moves Coder 2’s even numbered forms into Coder 3’s “Enter” folder, and Coder 1 moves Coder 3’s odd numbered forms into Coder 2’s “Enter” folder.</li>
 <li>Entry of Coded Data
-<ol style="list-style-type: lower-alpha">
+<ol type="a">
 <li>Coder 2
-<ol style="list-style-type: lower-roman">
-<li>Coder 2 enters Coder 1’s even numbered form into REDCap, initials
-and dates the top corner of the coding form, then moves Coder 1’s form
-back to Coder 1’s “Check” folder for final data entry check.</li>
-<li>Coder 2 enters Coder 3’s odd numbered form into REDCap, initials and
-dates the top corner of the coding form, then moves Coder 3’s form back
-to Coder 3’s “Check” folder for final data entry check.</li>
+<ol type="i">
+<li>Coder 2 enters Coder 1’s even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1’s form back to Coder 1’s “Check” folder for final data entry check.</li>
+<li>Coder 2 enters Coder 3’s odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 3’s form back to Coder 3’s “Check” folder for final data entry check.</li>
 </ol></li>
 <li>Coder 3
-<ol style="list-style-type: lower-roman">
-<li>Coder 3 enters Coder 1’s odd numbered form into REDCap, initials and
-dates the top corner of the coding form, then moves Coder 1’s form back
-to Coder 1’s “Check” folder for final data entry check.</li>
-<li>Coder 3 enters Coder 2’s even numbered form into REDCap, initials
-and dates the top corner of the coding form, then moves Coder 2’s form
-back to Coder 2’s “Check” folder for final data entry check.</li>
+<ol type="i">
+<li>Coder 3 enters Coder 1’s odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1’s form back to Coder 1’s “Check” folder for final data entry check.</li>
+<li>Coder 3 enters Coder 2’s even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 2’s form back to Coder 2’s “Check” folder for final data entry check.</li>
 </ol></li>
 </ol></li>
-<li>All coders compare their own forms against the data that was entered
-in REDCap to ensure accurate data entry (see Checking REDCap Coding
-Entries below), then initial and date the top corner of their coding
-form to confirm they have checked it against their partner’s data
-entry.</li>
-<li>Each coder can put their forms into their “To Be Scanned” folder to
-scan their own form onto the Lab Drive (see Saving the Form below), then
-file the form in TC’s permanent folder under the appropriate wave.</li>
-<li>For remote coding: Each coder saves their completed form in the
-appropriate TCID folder with the file name:
-<code>TCID_wave_taskabbreviation_coder1/2/3</code> (save as the correct
-coder number).</li>
+<li>All coders compare their own forms against the data that was entered in REDCap to ensure accurate data entry (see Checking REDCap Coding Entries below), then initial and date the top corner of their coding form to confirm they have checked it against their partner’s data entry.</li>
+<li>Each coder can put their forms into their “To Be Scanned” folder to scan their own form onto the Lab Drive (see Saving the Form below), then file the form in TC’s permanent folder under the appropriate wave.</li>
+<li>For remote coding: Each coder saves their completed form in the appropriate TCID folder with the file name: <code>TCID_wave_taskabbreviation_coder1/2/3</code> (save as the correct coder number).</li>
 </ol>
-</div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUmVtb3RlIFBhcnRpY2lwYXRpb24iCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGUgPSBGQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KAogIGVjaG8gPSBUUlVFLAogIGVycm9yID0gVFJVRSwKICBjb21tZW50ID0gIiIpCmBgYAoKVGhlIGZvbGxvd2luZyBzZWN0aW9ucyBwcm92aWRlIGluc3RydWN0aW9ucyBmb3IgaG93IHRvIHBhcnRpY2lwYXRlIGluIHRoZSBsYWIgcmVtb3RlbHkuCkFzIGRlc2NyaWJlZCBpbiB0aGUgW2xhYiBtYW51YWxdKG1hbnVhbC5odG1sI3JlbW90ZSksIFJBcyBzaG91bGQgbmV2ZXIgYWNjZXNzIGxhYiBkYXRhIHJlbW90ZWx5IHdpdGhvdXQgcGVybWlzc2lvbiBvciBkaXJlY3Rpb24gZnJvbSB0aGUgTGFiIENvb3JkaW5hdG9yLCBhIGdyYWR1YXRlIHN0dWRlbnQsIG9yIHRoZSBQSS4KVGhlc2UgaW5zdHJ1Y3Rpb25zIGFwcGxpZWQgbWFpbmx5IGR1cmluZyB0aGUgZWFybGllciBwYXJ0cyBvZiB0aGUgQ09WSUQtMTkgcGFuZGVtaWMuCldlIGFyZSBub3cgd29ya2luZyBmdWxseSBpbi1wZXJzb24uCk5ldmVydGhlbGVzcywgc3R1ZGVudHMgd2hvIGFyZSBjb25kdWN0aW5nIFtIb25vcnMgUHJvamVjdHNdKGhvbm9ycy5odG1sKSBtYXkgbmVlZCB0byBhY2Nlc3MgdGhlaXIgcHJvamVjdHMgZHVyaW5nIG9mZi1ob3Vycy4KCioqSG93IFRv4oCmKioKCiMgSm9pbiB0aGUgV2Vla2x5IExhYiBNZWV0aW5nCgotIE9wZW4gdGhlIGxhYiBjYWxlbmRhciBpbiBPdXRsb29rIChzZWUgdGhlIGxhYiBtYW51YWwgZm9yIGhvdyB0byBkbyB0aGlzKQotIENsaWNrIG9uIHRoZSBsaW5rIGluIHRoZSBsYWIgbWVldGluZyBldmVudCBvbiB0aGUgY2FsZW5kYXIKICAgIDEuIEFsdGVybmF0aXZlbHksIGdvIHRvOiBodHRwczovL3Vpb3dhLnpvb20udXMvam9pbgogICAgMS4gRW50ZXIgdGhlIG1lZXRpbmcgSUQgKGFzIHNob3duIGluIHRoZSBjYWxlbmRhcikKLSBZb3Ugc2hvdWxkIGJlIG11dGVkIGJ5IGRlZmF1bHQgd2hlbiB5b3UgZmlyc3QgZW50ZXIgdGhlIG1lZXRpbmcKLSBJZiB5b3UgYXJlIHVuYWJsZSB0byAiYXR0ZW5kIiB0aGlzIHdlZWsncyBsYWIgbWVldGluZyBkdWUgdG8gYSBzY2hlZHVsaW5nIGNvbmZsaWN0IG9yIGxpbWl0ZWQgYWNjZXNzIHRvIHRoZSBpbnRlcm5ldCwgcGxlYXNlIHJlYWNoIG91dCB0byB0aGUgTGFiIENvb3JkaW5hdG9yIGF0IHRoZSBkZXZwc3ktbGFiQHVpb3dhLmVkdSBlbWFpbC4KCiMgVlBOIEFjY2VzcyB0byB0aGUgTGFiIERyaXZlIHsjdnBufQoKVG8gYWNjZXNzIHRoZSBsYWIgZHJpdmUsIHlvdSBtdXN0IGNvbm5lY3QgdG8gdGhlIHVuaXZlcnNpdHkncyBWUE4gdXNpbmcgQ2lzY28gQW55Q29ubmVjdC4KVmlzaXQgdGhpcyB3ZWJzaXRlIHRvIGxlYXJuIGhvdyB0byBzZXQgdXAgVlBOIGFjY2VzcyB0byB0aGUgbGFiIGRyaXZlOgpodHRwczovL2l0cy51aW93YS5lZHUvc3VwcG9ydC9hcnRpY2xlLzE4NzYgKGFyY2hpdmVkIGF0IGh0dHBzOi8vcGVybWEuY2MvU1Q2Ui1QQ0pVKQoKVGhlIGZ1bGwgZHJpdmUgcGF0aCB0byBvdXIgbGFiIGRyaXZlIGlzOiAKCi0gUEM6IGBcXGxjLXJzLXN0b3JlMjQuaHBjLnVpb3dhLmVkdVxsc3NfaXRwZXRlcnNlblxMYWJcYAotIE1hYzogYHNtYjovL2xjLXJzLXN0b3JlMjQuaHBjLnVpb3dhLmVkdS9sc3NfaXRwZXRlcnNlbi9MYWIvYAoKIyBNYXAgdGhlIExhYiBEcml2ZSBPbnRvIGEgTWFjIENvbXB1dGVyIHsjbWFwTGFiRHJpdmV9CgoxLiBbVlBOXSgjdnBuKSBpbnRvIHRoZSB1bml2ZXJzaXR5IG5ldHdvcmsKMS4gSW4gdGhlIHVwcGVyIHRhc2sgYmFyLCBjbGljayAiR28iCjEuIFNlbGVjdCAiQ29ubmVjdCB0byBTZXJ2ZXIiIGZyb20gdGhlIGRyb3AtZG93biBtZW51CjEuIEluIHRoZSAiU2VydmVyIEFkZHJlc3MiIGJhciwgdHlwZTogYHNtYjovL2xjLXJzLXN0b3JlMjQuaHBjLnVpb3dhLmVkdS9sc3NfaXRwZXRlcnNlbi9MYWIvYAoxLiBDbGljayBvbiBDb25uZWN0LgoxLiBUaGlzIHNob3VsZCBjcmVhdGUgYSBzaG9ydGN1dCBmb3IgdGhlIGRyaXZlIG9uIHRoZSBkZXNrdG9wCjEuIENsaWNrIG9uIHRoZSArIHNpZ24gdG8gYWRkIHRoZSBhZGRyZXNzIGluIHBlcm1hbmVudGx5IGluIHlvdXIgbGlzdCBvZiAiRmF2b3JpdGUgU2VydmVycyIuCjEuIFRvIGNyZWF0ZSBhbiBhbGlhcyBvZiB0aGUgdm9sdW1lIHNvIHRoYXQgeW91IGNhbiBlYXNpbHkgcmVjb25uZWN0IHdpdGhvdXQgcmVwZWF0aW5nIHN0ZXBzIDLigJM2IGFib3ZlOgogICAgMS4gU2VsZWN0IHRoZSB2b2x1bWUgaWNvbgogICAgMS4gR28gdG8gdGhlIEZpbmRlciBtZW51IGJhciBhbmQgY2xpY2sgIkZpbGUiIHRoZW4gIk1ha2UgQWxpYXMiLgogICAgMS4gQSB2b2x1bWUgYWxpYXMgYXBwZWFycyBvbiB5b3VyIGRlc2t0b3AuCiAgICBJbiB0aGUgZnV0dXJlLCB5b3UgY2FuIHJlY29ubmVjdCB0byB0aGUgc2hhcmVkIHZvbHVtZSBieSBkb3VibGUtY2xpY2tpbmcgdGhpcyBhbGlhcy4KMS4gVGhlbiwgeW91IHNob3VsZCBiZSBhYmxlIHRvIGFjY2VzcyB0aGUgc2NyaXB0cyBvbiB0aGUgbGFiIHNoYXJlIHdpdGggYFJgIGF0IHRoZSBmb2xsb3dpbmcgbG9jYXRpb246IGAvU2hhcmVkL2xzc19pdHBldGVyc2VuYAoKIyBSZW1vdGUgQWNjZXNzIHRvIGEgTGFiIENvbXB1dGVyIHsjcmVtb3RlQWNjZXNzfQoKQSBwb3NzaWJpbGl0eSBtYXkgYmUgdG8gInJlbW90ZSBpbiIgdG8gYSBsYWIgY29tcHV0ZXIuClRoaXMgYWxsb3dzIHlvdSB0byB1c2UgYSBsYWIgY29tcHV0ZXIgZnJvbSBhbnl3aGVyZSwgc28geW91IGNhbiBhY2Nlc3MgYWxsIG9mIHRoZSBwcm9ncmFtcyBvbiBvdXIgbGFiIGNvbXB1dGVycyB3aXRob3V0IGhhdmluZyB0byBpbnN0YWxsIHRoZW0gb24geW91ciBwZXJzb25hbCBtYWNoaW5lLgpSZW1vdGluZyBpbiB0byBhIGxhYiBjb21wdXRlciBtaWdodCBhbHNvIGJlIGVhc2llciBmb3IgYWNjZXNzaW5nIGxhcmdlIGxhYiBmaWxlcyAoZS5nLiwgdmlkZW9zIGZvciBjb2RpbmcpLgpIb3dldmVyLCB5b3Ugc2hvdWxkIG9ubHkgcmVtb3RlIGluIHRvIGEgbGFiIGNvbXB1dGVyIGlmIG5vYm9keSBpbiB0aGUgbGFiIGlzIHVzaW5nIHRoZSBjb21wdXRlciBhbmQgbm9ib2R5IGluIHRoZSBsYWIgd2lsbCBuZWVkIHRvIHVzZSB0aGUgY29tcHV0ZXIuCllvdSBjYW4gcmVtb3RlIGluIHRvIGEgbGFiIGNvbXB1dGVyIHVzaW5nIGEgcHJvZ3JhbSBjYWxsZWQgIlJlbW90ZSBEZXNrdG9wLiIKVmlzaXQgdGhpcyB3ZWJzaXRlIHRvIGxlYXJuIGhvdyB0byBzZXQgdXAgUmVtb3RlIERlc2t0b3AgYWNjZXNzIG9uIHlvdXIgY29tcHV0ZXI6IGh0dHBzOi8vaXRzLnVpb3dhLmVkdS9yZW1vdGVkZXNrdG9wCgpUbyBnYWluIHJlbW90ZSBhY2Nlc3MgdG8gYSBsYWIgY29tcHV0ZXI6CgoxLiBbVlBOXSgjdnBuKSBpbnRvIHRoZSBsYWIgZHJpdmUKMS4gV2hlbiBwcm9tcHRlZCBmb3IgdGhlIGNvbXB1dGVyJ3MgbmFtZSBpbiB0aGUgUmVtb3RlIERlc2t0b3AgY2xpZW50LCBmb2xsb3cgdGhpcyBmb3JtYXQ6IAogICAgLSBgUFNZQy1TIyMjLmlvd2EudWlvd2EuZWR1YAogICAgLSBUaGVuLCBlbnRlciB5b3VyIHVzZXJuYW1lIHVzaW5nIHRoaXMgZm9ybWF0OiBgaW93YVxIYXdrSURgCgojIFBlcmZvcm0gQ29kaW5nIGZyb20gSG9tZQoKIyMgUmVtb3RlIEFjY2VzcyBDaGFuZ2VzCgpUYXNrIFRpbWluZyBTaGVldDogY2FuIGJlIGFjY2Vzc2VkIHRocm91Z2ggeW91ciBzdHVkZW50IE9mZmljZSAzNjUgT25lRHJpdmXigJR0aGUgTGFiIENvb3JkaW5hdG9yIHdpbGwgc2hhcmUgYSBsaW5rIHNvIGV2ZXJ5b25lIGhhcyBhY2Nlc3MKClZpc2l0IFZpZGVvczogY2FuIGJlIGFjY2Vzc2VkIG9uIHRoZSBsYWIgZHJpdmUgdXNpbmcgVlBOIGFuZCBzaG91bGQgYmUgd2F0Y2hlZCB1c2luZyBWTEMgbWVkaWEgcGxheWVyLgpZb3UgY2FuIGRvd25sb2FkIFZMQyBmb3IgZnJlZSBoZXJlOiBodHRwczovL3d3dy52aWRlb2xhbi5vcmcvdmxjL2luZGV4Lmh0bWwKCkNvZGluZyBGb3JtczogZWRpdGFibGUgUERGcyBoYXZlIGJlZW4gY3JlYXRlZCBmb3IgZWFzaWVyIGVsZWN0cm9uaWMgY29tcGxldGlvbuKAlHlvdSBjYW4gZmluZCB5b3VyIHRhc2tzJyBQREYgY29kaW5nIGZvcm1zIG9uIHRoZSBsYWIgZHJpdmUgaGVyZTogCmBcXGxjLXJzLXN0b3JlMjQuaHBjLnVpb3dhLmVkdVxsc3NfaXRwZXRlcnNlblxMYWJcU3R1ZGllc1xTY2hvb2wgUmVhZGluZXNzIFN0dWR5XERhdGFcQ29kaW5nXFJlbW90ZSBDb2RpbmdcQ29kaW5nIEZvcm1zXGAKCkNvZGluZyBmb3JtcyBzaG91bGQgYWx3YXlzIGJlIG9wZW5lZCBhbmQgZWRpdGVkIHVzaW5nIEFkb2JlIEFjcm9iYXQuCkFkb2JlIEFjcm9iYXQgUmVhZGVyIGlzIGF2YWlsYWJsZSB0byBkb3dubG9hZCBmb3IgZnJlZSBmcm9tIHRoZSBBZG9iZSB3ZWJzaXRlOiBodHRwczovL2dldC5hZG9iZS5jb20vcmVhZGVyLwoKQ29kaW5nIEZvbGRlcnM6IGhhdmUgYmVlbiByZS1jcmVhdGVkIGFzIGZvbGRlcnMgb24gdGhlIGxhYiBkcml2ZSwgd2hpY2ggY2FuIGJlIGZvdW5kIGhlcmU6CmBcXGxjLXJzLXN0b3JlMjQuaHBjLnVpb3dhLmVkdVxsc3NfaXRwZXRlcnNlblxMYWJcU3R1ZGllc1xTY2hvb2wgUmVhZGluZXNzIFN0dWR5XERhdGFcQ29kaW5nXFJlbW90ZSBDb2RpbmdcQ29kZXIgRm9sZGVyc1xgCgojIyBDb25maWRlbnRpYWxpdHkgQ29uc2lkZXJhdGlvbgoKQmVjYXVzZSBpdCBpcyBpbXBlcmF0aXZlIHRoYXQgd2UgbWFpbnRhaW4gcGFydGljaXBhbnQgY29uZmlkZW50aWFsaXR5LCByZWdhcmRsZXNzIG9mIG91ciBjdXJyZW50IHdvcmtpbmcgc2l0dWF0aW9uLCB5b3UgbXVzdCBBTFdBWVMgZW5zdXJlIHRoYXQgeW91IGFyZSBpbiBhIHByaXZhdGUgc3BhY2Ugd2hlbiB5b3Ugb3BlbiB2aXNpdCB2aWRlb3MuClRoZXJlZm9yZSwgaWYgeW91ciBwYXJlbnRzL3Jvb21tYXRlcy9mcmllbmRzL2V0Yy4gYXJlIGluIHRoZSByb29tIHdpdGggeW91IGFuZCBjYW4gc2VlIG9yIGhlYXIgdGhlIHZpZGVvcywgRE8gTk9UIE9QRU4gVEhFTS4KSXQgaXMgYWxzbyBpbXBvcnRhbnQgdGhhdCB5b3UgZG8gbm90IHNhdmUgYW55IHZpc2l0IHZpZGVvcyBvciBsYWIgZmlsZXMgb2YgYW55IGtpbmQgdG8geW91ciBwZXJzb25hbCBjb21wdXRlciwgb3IgdGFrZSBzY3JlZW5zaG90cywgU25hcGNoYXRzLCBldGMuIG9mIGFueSBsYWItcmVsYXRlZCBkb2N1bWVudHMuClRoZSBVbml2ZXJzaXR5J3MgSVQgZGVwYXJ0bWVudCBvbmx5IHByb3ZpZGVzIHByb3RlY3Rpb24gdG8gZGF0YSBhbmQgZmlsZXMgc2F2ZWQgb24gVW5pdmVyc2l0eSBlcXVpcG1lbnQgb3Igd2l0aGluIFVuaXZlcnNpdHkgcHJvZ3JhbXMgKGxpa2UgdGhlIE9mZmljZSAzNjUgT25lRHJpdmUgYXNzb2NpYXRlZCB3aXRoIHlvdXIgYEhhd2tJRGApLgoKIyMgUmVtb3RlIENvZGluZyBTeXN0ZW0gZm9yIENvZGluZyBQYWlycwoKMS4gQ29kZXIgMSBhZGRzIHRoZSBzdGFydC9zdG9wIGFuZCB0b3RhbCB0YXNrIHRpbWUgdG8gdGhlIFRhc2sgVGltaW5nIFNoZWV0OyBpbml0aWFscyB3aGVuIGNvbXBsZXRlCjEuIENvZGVyIDEgb3BlbnMgdGhlIGVkaXRhYmxlIFBERiBjb2RpbmcgZm9ybSBmb3IgdGhlaXIgdGFzaywgdGhlbiBmb2xsb3dzIHRoZXNlIHN0ZXBzIHRvIHNhdmUgYSBjb3B5IG9mIHRoZSBmb3JtIEJFRk9SRSBCRUdJTk5JTkcgVE8gRURJVCBUSEUgRk9STToKICAgIGEuIENsaWNrICJGaWxlIiBpbiB0aGUgdXBwZXIgbGVmdC1oYW5kIGNvcm5lciBvZiB0aGUgc2NyZWVuLCB0aGVuIGNsaWNrICJTYXZlIEFzIgogICAgYi4gTmF2aWdhdGUgdG8geW91ciBjb2RpbmcgZm9sZGVyIChpLmUuLCBSZW1vdGUgQ29kaW5nIOKGkiBDb2RpbmcgRm9sZGVycyDihpIgWW91ciBUYXNrIOKGkiBDb2RlciAxLzIsIGFuZCBzYXZlIHRoZSBmb3JtIHdpdGggdGhlIGFwcHJvcHJpYXRlIG5hbWUgZm9yIHRoZSB2aWRlbyB5b3UncmUgYWJvdXQgdG8gY29kZSAoaS5lLiwgVENJRF93YXZlX2NvZGVyIykKICAgIGMuIFRoZW4geW91IGNhbiBiZWdpbiB0byBjb2RlIHlvdXIgbmV3IGNvcHkgb2YgdGhlIGNvZGluZyBmb3JtIHdpdGhvdXQgbWFraW5nIGNoYW5nZXMgdG8gdGhlIG9yaWdpbmFsIHRlbXBsYXRlcyBpbiB0aGUgQ29kaW5nIEZvcm1zIGZvbGRlciEKMS4gQ29kZXIgMSBwdXRzIG93biBmb3JtIGluIHRoZSAiUmVsaWFiaWxpdHkgQ2hlY2siIGZvbGRlciAodGhpcyBpcyBpbiBDb2RlciAxJ3MgZm9sZGVyKQoxLiBDb2RlciAyIHZlcmlmaWVzIHRoZSBzdGFydC9zdG9wIGFuZCB0b3RhbCB0YXNrIHRpbWUgaWRlbnRpZmllZCBieSBDb2RlciAxIG9uIFRhc2sgVGltaW5nIFNoZWV0LCB0aGVuIGNvZGVzIHZpZGVvOyBpbml0aWFscyBUYXNrIFRpbWluZyBTaGVldCB3aGVuIGNvbXBsZXRlCjEuIENvZGVyIDIgcHV0cyBjb21wbGV0ZWQgY29kaW5nIGZvcm0gaW50byB0aGUgIlJlbGlhYmlsaXR5IENoZWNrIiBmb2xkZXIgKGluIENvZGVyIDEncyBmb2xkZXIpCjEuIFdoZW4gYm90aCBjb2RpbmcgZm9ybXMgYXJlIGNvbXBsZXRlIGFuZCBpbiB0aGUgIlJlbGlhYmlsaXR5IENoZWNrIiBmb2xkZXIsIENvZGVyIDEgY2hlY2tzIGZvcm1zIGFnYWluc3QgZWFjaCBvdGhlciBmb3IgaW50ZXJyYXRlciByZWxpYWJpbGl0eQoxLiBDb2RlciAxIG1vdmVzIENvZGVyIDEncyBmb3JtIHRvIENvZGVyIDIncyAiRW50ZXIiIGZvbGRlciAKMS4gQ29kZXIgMSBlbnRlcnMgQ29kZXIgMidzIGZvcm0gaW50byBSRURDYXAsIGluaXRpYWxzIGFuZCBkYXRlcyB0aGUgdG9wIGNvcm5lciBvZiB0aGUgcGFwZXIgY29kaW5nIGZvcm0sIHRoZW4gbW92ZXMgQ29kZXIgMidzIGZvcm0gYmFjayB0byBDb2RlciAyJ3MgIkNoZWNrIiBmb2xkZXIgZm9yIGZpbmFsIGRhdGEgZW50cnkgY2hlY2sKMS4gQ29kZXIgMiBlbnRlcnMgQ29kZXIgMSdzIGZvcm0gaW50byBSRURDYXAsIGluaXRpYWxzIGFuZCBkYXRlcyB0aGUgdG9wIGNvcm5lciBvZiB0aGUgcGFwZXIgY29kaW5nIGZvcm0sIHRoZW4gbW92ZXMgQ29kZXIgMSdzIGZvcm0gYmFjayB0byBDb2RlciAxJ3MgIkNoZWNrIiBmb2xkZXIgZm9yIGZpbmFsIGRhdGEgZW50cnkgY2hlY2sKMS4gQ29kZXIgMSBhbmQgQ29kZXIgMiBjb21wYXJlIHRoZWlyIGNvZGluZyBmb3JtcyBhZ2FpbnN0IHRoZSBkYXRhIGVudGVyZWQgaW4gUkVEQ2FwIHRvIGVuc3VyZSBhY2N1cmF0ZSBkYXRhIGVudHJ5LCB0aGVuIGluaXRpYWwgYW5kIGRhdGUgdGhlIHRvcCBjb3JuZXIgb2YgdGhlaXIgcGFwZXIgY29kaW5nIGZvcm0gdG8gY29uZmlybSB0aGV5IGhhdmUgY2hlY2tlZCBpdCBhZ2FpbnN0IHRoZWlyIHBhcnRuZXIncyBkYXRhIGVudHJ5CjEuIEFmdGVyIHlvdSBoYXZlIGNvbXBsZXRlZCBhIGNvZGluZyBmb3JtLCBpdCBjYW4gYmUgc2F2ZWQgaGVyZTogTGFiIOKGkiBTY2hvb2wgUmVhZGluZXNzIFN0dWR5IOKGkiBDb2Rpbmcg4oaSIENvZGVkIERhdGEg4oaSIHNlbGVjdCB0aGUgYXBwcm9wcmlhdGUgdGFzayDihpIgc2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBjb2hvcnQgKENvaG9ydCAxLCBDb2hvcnQgMiwgQ29ob3J0IDMsIENvaG9ydCA0KSDihpIgc2VsZWN0IHRoZSBhcHByb3ByaWF0ZSBUQ0lEIOKGkiBTYXZlIGFzIGBUQ0lEX1dhdmVfdGFza2luaXRpYWxzX2NvZGVyI2AgKGUuZy4sIGAxMDAxXzM2X2JkX2NvZGVyMWApLgoKIyMgUmVtb3RlIENvZGluZyBTeXN0ZW0gZm9yIDMgQ29kZXJzCgoxLiBDb2RlciAxIGFkZHMgdGhlIHN0YXJ0L3N0b3AgYW5kIHRvdGFsIHRhc2sgdGltZSB0byB0aGUgVGFzayBUaW1pbmcgU2hlZXQ7IGluaXRpYWxzIHdoZW4gY29tcGxldGUuCjEuIENvZGVyIDEgY29kZXMgdmlkZW8uCjEuIENvZGVyIDEgcHV0cyBvd24gZm9ybSBpbiB0aGUgUmVsaWFiaWxpdHkgQ2hlY2sgZm9sZGVyICh0aGlzIGlzIGluIENvZGVyIDEncyBmb2xkZXIpLgoxLiBDb2RlciAyIGFuZCBDb2RlciAzIGNoZWNrIHRoZSB0YXNrIHRpbWluZyBzaGVldCB0byBkZXRlcm1pbmUgd2hpY2ggdmlkZW9zIHRoZXkgc2hvdWxkIGNvZGUuCkNvZGVyIDIgd2lsbCBiZSB0aGUgc2Vjb25kIGNvZGVyIGZvciBhbGwgZXZlbiBudW1iZXJlZCBUQ0lEIHZpZGVvcywgYW5kIENvZGVyIDMgd2lsbCBiZSB0aGUgc2Vjb25kIGNvZGVyIGZvciBhbGwgb2RkIG51bWJlcmVkIFRDSUQgdmlkZW9zLgoxLiBBZnRlciBkZXRlcm1pbmluZyB3aGljaCB2aWRlb3MgdGhleSBlYWNoIHNob3VsZCBjb2RlLCBDb2RlciAyIGFuZCBDb2RlciAzIHZlcmlmeSB0aGUgc3RhcnQvc3RvcCB0aW1lcyBhbmQgdG90YWwgdGFzayB0aW1lIGZvciB0aGVpciByZXNwZWN0aXZlIHZpZGVvcy4KQ29kZXIgMiBhbmQgQ29kZXIgMyBjb2RlIHRoZXNlIHJlc3BlY3RpdmUgdmlkZW9zLgoxLiBPbmNlIGNvZGVkLCBDb2RlciAyIGFuZCBDb2RlciAzIHB1dCB0aGVpciBjb21wbGV0ZWQgY29kaW5nIGZvcm1zIGludG8gQ29kZXIgMSdzIFJlbGlhYmlsaXR5IENoZWNrIGZvbGRlci4KMS4gV2hlbiBib3RoIGNvZGluZyBmb3JtcyBmb3IgYSBzaW5nbGUgdmlkZW8gYXJlIGNvbXBsZXRlIGFuZCBpbiB0aGUgIlJlbGlhYmlsaXR5IENoZWNrIiBmb2xkZXIsIENvZGVyIDEgY2hlY2tzIGZvcm1zIGFnYWluc3QgZWFjaCBvdGhlciBmb3IgaW50ZXJyYXRlciByZWxpYWJpbGl0eS4KMS4gQ29kZXIgMSBtb3ZlcyBDb2RlciAxJ3MgZXZlbiBudW1iZXJlZCBmb3JtcyBpbnRvIENvZGVyIDIncyAiRW50ZXIiIGZvbGRlciwgYW5kIENvZGVyIDEgbW92ZXMgQ29kZXIgMSdzIG9kZCBudW1iZXJlZCBmb3JtcyBpbnRvIENvZGVyIDMncyAiRW50ZXIiIGZvbGRlci4KMS4gQ29kZXIgMSBtb3ZlcyBDb2RlciAyJ3MgZXZlbiBudW1iZXJlZCBmb3JtcyBpbnRvIENvZGVyIDMncyAiRW50ZXIiIGZvbGRlciwgYW5kIENvZGVyIDEgbW92ZXMgQ29kZXIgMydzIG9kZCBudW1iZXJlZCBmb3JtcyBpbnRvIENvZGVyIDIncyAiRW50ZXIiIGZvbGRlci4KMS4gRW50cnkgb2YgQ29kZWQgRGF0YQogICAgYS4gQ29kZXIgMgogICAgICAgIGkuIENvZGVyIDIgZW50ZXJzIENvZGVyIDEncyBldmVuIG51bWJlcmVkIGZvcm0gaW50byBSRURDYXAsIGluaXRpYWxzIGFuZCBkYXRlcyB0aGUgdG9wIGNvcm5lciBvZiB0aGUgY29kaW5nIGZvcm0sIHRoZW4gbW92ZXMgQ29kZXIgMSdzIGZvcm0gYmFjayB0byBDb2RlciAxJ3MgIkNoZWNrIiBmb2xkZXIgZm9yIGZpbmFsIGRhdGEgZW50cnkgY2hlY2suCiAgICAgICAgaWkuCUNvZGVyIDIgZW50ZXJzIENvZGVyIDMncyBvZGQgbnVtYmVyZWQgZm9ybSBpbnRvIFJFRENhcCwgaW5pdGlhbHMgYW5kIGRhdGVzIHRoZSB0b3AgY29ybmVyIG9mIHRoZSBjb2RpbmcgZm9ybSwgdGhlbiBtb3ZlcyBDb2RlciAzJ3MgZm9ybSBiYWNrIHRvIENvZGVyIDMncyAiQ2hlY2siIGZvbGRlciBmb3IgZmluYWwgZGF0YSBlbnRyeSBjaGVjay4KICAgIGIuIENvZGVyIDMKICAgICAgICBpLiBDb2RlciAzIGVudGVycyBDb2RlciAxJ3Mgb2RkIG51bWJlcmVkIGZvcm0gaW50byBSRURDYXAsIGluaXRpYWxzIGFuZCBkYXRlcyB0aGUgdG9wIGNvcm5lciBvZiB0aGUgY29kaW5nIGZvcm0sIHRoZW4gbW92ZXMgQ29kZXIgMSdzIGZvcm0gYmFjayB0byBDb2RlciAxJ3MgIkNoZWNrIiBmb2xkZXIgZm9yIGZpbmFsIGRhdGEgZW50cnkgY2hlY2suCiAgICAgICAgaWkuCUNvZGVyIDMgZW50ZXJzIENvZGVyIDIncyBldmVuIG51bWJlcmVkIGZvcm0gaW50byBSRURDYXAsIGluaXRpYWxzIGFuZCBkYXRlcyB0aGUgdG9wIGNvcm5lciBvZiB0aGUgY29kaW5nIGZvcm0sIHRoZW4gbW92ZXMgQ29kZXIgMidzIGZvcm0gYmFjayB0byBDb2RlciAyJ3MgIkNoZWNrIiBmb2xkZXIgZm9yIGZpbmFsIGRhdGEgZW50cnkgY2hlY2suCjEuIEFsbCBjb2RlcnMgY29tcGFyZSB0aGVpciBvd24gZm9ybXMgYWdhaW5zdCB0aGUgZGF0YSB0aGF0IHdhcyBlbnRlcmVkIGluIFJFRENhcCB0byBlbnN1cmUgYWNjdXJhdGUgZGF0YSBlbnRyeSAoc2VlIENoZWNraW5nIFJFRENhcCBDb2RpbmcgRW50cmllcyBiZWxvdyksIHRoZW4gaW5pdGlhbCBhbmQgZGF0ZSB0aGUgdG9wIGNvcm5lciBvZiB0aGVpciBjb2RpbmcgZm9ybSB0byBjb25maXJtIHRoZXkgaGF2ZSBjaGVja2VkIGl0IGFnYWluc3QgdGhlaXIgcGFydG5lcidzIGRhdGEgZW50cnkuCjEuIEVhY2ggY29kZXIgY2FuIHB1dCB0aGVpciBmb3JtcyBpbnRvIHRoZWlyICJUbyBCZSBTY2FubmVkIiBmb2xkZXIgdG8gc2NhbiB0aGVpciBvd24gZm9ybSBvbnRvIHRoZSBMYWIgRHJpdmUgKHNlZSBTYXZpbmcgdGhlIEZvcm0gYmVsb3cpLCB0aGVuIGZpbGUgdGhlIGZvcm0gaW4gVEMncyBwZXJtYW5lbnQgZm9sZGVyIHVuZGVyIHRoZSBhcHByb3ByaWF0ZSB3YXZlLgoxLiBGb3IgcmVtb3RlIGNvZGluZzogRWFjaCBjb2RlciBzYXZlcyB0aGVpciBjb21wbGV0ZWQgZm9ybSBpbiB0aGUgYXBwcm9wcmlhdGUgVENJRCBmb2xkZXIgd2l0aCB0aGUgZmlsZSBuYW1lOiBgVENJRF93YXZlX3Rhc2thYmJyZXZpYXRpb25fY29kZXIxLzIvM2AgKHNhdmUgYXMgdGhlIGNvcnJlY3QgY29kZXIgbnVtYmVyKS4K</div>
-<script type="text/javascript" src="includes/external-links.js"></script>
 
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add lab logo -->
@@ -753,7 +498,7 @@ coder number).</li>
 </p>
 
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add icon library -->
@@ -766,87 +511,595 @@ coder number).</li>
     <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
 	<a href="https://www.instagram.com/devpsylab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
 </p>
-
-
-</div>
-</div>
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("documentation-remote.Rmd");
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
-
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    options.showAndHide = true;
-    options.smoothScroll = true;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/DevPsyLab\.github\.io\/LabWiki\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Remote Participation"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>The following sections provide instructions for how to participate in the lab remotely.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>As described in the <span class="co">[</span><span class="ot">lab manual</span><span class="co">](lab-manual.qmd#sec-remote)</span>, RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>These instructions applied mainly during the earlier parts of the COVID-19 pandemic.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>We are now working fully in-person.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Nevertheless, students who are conducting <span class="co">[</span><span class="ot">Honors Projects</span><span class="co">](honors.qmd)</span> may need to access their projects during off-hours.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>**How To…**</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu"># Join the Weekly Lab Meeting</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open the lab calendar in Outlook (see the lab manual for how to do this)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Click on the link in the lab meeting event on the calendar</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Alternatively, go to: <span class="ot">&lt;https://uiowa.zoom.us/join&gt;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Enter the meeting ID (as shown in the calendar)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You should be muted by default when you first enter the meeting</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you are unable to "attend" this week's lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the <span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span> email.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># VPN Access to the Lab Drive {#sec-vpn}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Visit this website to learn how to set up VPN access to the lab drive:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://its.uiowa.edu/support/article/1876&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/ST6R-PCJU&gt;</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The full drive path to our lab drive is: </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PC: <span class="in">`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\`</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mac: <span class="in">`smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Map the Lab Drive Onto a Mac Computer {#sec-mapLabDrive}</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">VPN</span><span class="co">](#sec-vpn)</span> into the university network</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In the upper task bar, click "Go"</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select "Connect to Server" from the drop-down menu</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In the "Server Address" bar, type: <span class="in">`smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click on Connect.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>This should create a shortcut for the drive on the desktop</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click on the + sign to add the address in permanently in your list of "Favorite Servers".</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To create an alias of the volume so that you can easily reconnect without repeating steps 2–6 above:</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Select the volume icon</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Go to the Finder menu bar and click "File" then "Make Alias".</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>A volume alias appears on your desktop.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    In the future, you can reconnect to the shared volume by double-clicking this alias.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Then, you should be able to access the scripts on the lab share with <span class="in">`R`</span> at the following location: <span class="in">`/Shared/lss_itpetersen`</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu"># Remote Access to a Lab Computer {#sec-remoteAccess}</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>A possibility may be to "remote in" to a lab computer.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>You can remote in to a lab computer using a program called "Remote Desktop."</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Visit this website to learn how to set up Remote Desktop access on your computer: <span class="ot">&lt;https://its.uiowa.edu/remotedesktop&gt;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>To gain remote access to a lab computer:</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">VPN</span><span class="co">](#sec-vpn)</span> into the lab drive</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>When prompted for the computer's name in the Remote Desktop client, follow this format: </span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`PSYC-S###.iowa.uiowa.edu`</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Then, enter your username using this format: <span class="in">`iowa\HawkID`</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu"># Perform Coding from Home</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="fu">## Remote Access Changes</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>Task Timing Sheet: can be accessed through your student Office 365 OneDrive—the Lab Coordinator will share a link so everyone has access</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>Visit Videos: can be accessed on the lab drive using VPN and should be watched using VLC media player.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>You can download VLC for free here: <span class="ot">&lt;https://www.videolan.org/vlc/index.html&gt;</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>Coding Forms: editable PDFs have been created for easier electronic completion—you can find your tasks' PDF coding forms on the lab drive here: </span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="in">`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\`</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>Coding forms should always be opened and edited using Adobe Acrobat.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Adobe Acrobat Reader is available to download for free from the Adobe website: <span class="ot">&lt;https://get.adobe.com/reader/&gt;</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>Coding Folders: have been re-created as folders on the lab drive, which can be found here:</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="in">`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\`</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Confidentiality Consideration</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>Because it is imperative that we maintain participant confidentiality, regardless of our current working situation, you must ALWAYS ensure that you are in a private space when you open visit videos.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>It is also important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>The University's IT department only provides protection to data and files saved on University equipment or within University programs (like the Office 365 OneDrive associated with your <span class="in">`HawkID`</span>).</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="fu">## Remote Coding System for Coding Pairs</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 opens the editable PDF coding form for their task, then follows these steps to save a copy of the form BEFORE BEGINNING TO EDIT THE FORM:</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>    a. Click "File" in the upper left-hand corner of the screen, then click "Save As"</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>    b. Navigate to your coding folder (i.e., Remote Coding → Coding Folders → Your Task → Coder 1/2, and save the form with the appropriate name for the video you're about to code (i.e., TCID_wave_coder#)</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>    c. Then you can begin to code your new copy of the coding form without making changes to the original templates in the Coding Forms folder!</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 puts own form in the "Reliability Check" folder (this is in Coder 1's folder)</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 2 verifies the start/stop and total task time identified by Coder 1 on Task Timing Sheet, then codes video; initials Task Timing Sheet when complete</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 2 puts completed coding form into the "Reliability Check" folder (in Coder 1's folder)</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>When both coding forms are complete and in the "Reliability Check" folder, Coder 1 checks forms against each other for interrater reliability</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 moves Coder 1's form to Coder 2's "Enter" folder </span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 enters Coder 2's form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 2's form back to Coder 2's "Check" folder for final data entry check</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 2 enters Coder 1's form into REDCap, initials and dates the top corner of the paper coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 and Coder 2 compare their coding forms against the data entered in REDCap to ensure accurate data entry, then initial and date the top corner of their paper coding form to confirm they have checked it against their partner's data entry</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>After you have completed a coding form, it can be saved here: Lab → School Readiness Study → Coding → Coded Data → select the appropriate task → select the appropriate cohort (Cohort 1, Cohort 2, Cohort 3, Cohort 4) → select the appropriate TCID → Save as <span class="in">`TCID_Wave_taskinitials_coder#`</span> (e.g., <span class="in">`1001_36_bd_coder1`</span>).</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="fu">## Remote Coding System for 3 Coders</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 adds the start/stop and total task time to the Task Timing Sheet; initials when complete.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 codes video.</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 puts own form in the Reliability Check folder (this is in Coder 1's folder).</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 2 and Coder 3 check the task timing sheet to determine which videos they should code.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>Coder 2 will be the second coder for all even numbered TCID videos, and Coder 3 will be the second coder for all odd numbered TCID videos.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>After determining which videos they each should code, Coder 2 and Coder 3 verify the start/stop times and total task time for their respective videos.</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>Coder 2 and Coder 3 code these respective videos.</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Once coded, Coder 2 and Coder 3 put their completed coding forms into Coder 1's Reliability Check folder.</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>When both coding forms for a single video are complete and in the "Reliability Check" folder, Coder 1 checks forms against each other for interrater reliability.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 moves Coder 1's even numbered forms into Coder 2's "Enter" folder, and Coder 1 moves Coder 1's odd numbered forms into Coder 3's "Enter" folder.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Coder 1 moves Coder 2's even numbered forms into Coder 3's "Enter" folder, and Coder 1 moves Coder 3's odd numbered forms into Coder 2's "Enter" folder.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Entry of Coded Data</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>    a. Coder 2</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>        i. Coder 2 enters Coder 1's even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check.</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>        ii. Coder 2 enters Coder 3's odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 3's form back to Coder 3's "Check" folder for final data entry check.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>    b. Coder 3</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>        i. Coder 3 enters Coder 1's odd numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 1's form back to Coder 1's "Check" folder for final data entry check.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>        ii. Coder 3 enters Coder 2's even numbered form into REDCap, initials and dates the top corner of the coding form, then moves Coder 2's form back to Coder 2's "Check" folder for final data entry check.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>All coders compare their own forms against the data that was entered in REDCap to ensure accurate data entry (see Checking REDCap Coding Entries below), then initial and date the top corner of their coding form to confirm they have checked it against their partner's data entry.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Each coder can put their forms into their "To Be Scanned" folder to scan their own form onto the Lab Drive (see Saving the Form below), then file the form in TC's permanent folder under the appropriate wave.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>For remote coding: Each coder saves their completed form in the appropriate TCID folder with the file name: <span class="in">`TCID_wave_taskabbreviation_coder1/2/3`</span> (save as the correct coder number).</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
 
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
-</body>
-</html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/documentation-remote.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/documentation-remote.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

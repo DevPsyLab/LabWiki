@@ -1,520 +1,393 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<html>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="author" content="Isaac T. Petersen">
+<meta name="dcterms.date" content="today">
 
-
-
-
-<title>Open Science</title>
-
-<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/navigation-1.1/sourceembed.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8JSDTYMH7P');
-</script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+<title>Open Science – Lab Wiki for the Developmental Psychopathology Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-</script>
-
-
-
-
-<style type="text/css">
-#rmd-source-code {
-  display: none;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-</style>
-
-
-<link rel="stylesheet" href="includes/custom.css" type="text/css" />
-<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-
-
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
 @media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
   }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
 </style>
 
 
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9278de052701f0b3f1191ef96b26c196.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
 
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="includes/custom.css">
+<link rel="stylesheet" href="font/css/roboto.css">
 </head>
 
-<body>
+<body class="nav-fixed quarto-light">
 
-
-<div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo light-content">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab Wiki for the Developmental Psychopathology Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab-manual.html"> 
+<span class="menu-text">Lab Manual</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-expectations" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Expectations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-expectations">    
         <li>
-  <a href="manual.html">Lab Manual</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Expectations
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="expectations-everyone.html">Everyone</a>
-    </li>
-    <li>
-      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="expectations-SROP.html">SROP Students</a>
-    </li>
-    <li>
-      <a href="expectations-gradStudent.html">Graduate Students</a>
-    </li>
-    <li>
-      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
-    </li>
-    <li>
-      <a href="expectations-labStaff.html">Lab Staff</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Documentation
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="adobe.html">Adobe</a>
-    </li>
-    <li>
-      <a href="https://devpsylab.github.io/DataAnalysis">Data Analysis Guides</a>
-    </li>
-    <li>
-      <a href="honors.html">Honors Projects</a>
-    </li>
-    <li>
-      <a href="mediationModeration.html">Mediation and Moderation</a>
-    </li>
-    <li>
-      <a href="openScience.html">Open Science</a>
-    </li>
-    <li>
-      <a href="opportunities.html">Opportunities</a>
-    </li>
-    <li>
-      <a href="redcap-manual.html">REDCap</a>
-    </li>
-    <li>
-      <a href="qualtrics-manual.html">Qualtrics</a>
-    </li>
-    <li>
-      <a href="documentation-remote.html">Remote Participation</a>
-    </li>
-    <li>
-      <a href="social-media.html">Social Media</a>
-    </li>
-    <li>
-      <a href="studies.html">Studies</a>
-    </li>
-    <li>
-      <a href="video-editing.html">Video Editing</a>
-    </li>
-    <li>
-      <a href="vsCode.html">Visual Studio Code</a>
-    </li>
-    <li>
-      <a href="writing.html">Writing Guidelines</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Studies
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="study-externalizingSpectrumAcrossLifespan.html">Externalizing Spectrum Across the Lifespan</a>
-    </li>
-    <li>
-      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Prospective Applicants
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="about.html">About</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <a class="dropdown-item" href="./expectations-everyone.html">
+ <span class="dropdown-text">Everyone</span></a>
+  </li>  
         <li>
-  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-<li role="separator" class="divider"></li>
-<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+    <a class="dropdown-item" href="./expectations-undergradRA.html">
+ <span class="dropdown-text">Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-SROP.html">
+ <span class="dropdown-text">SROP Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-gradStudent.html">
+ <span class="dropdown-text">Graduate Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labCoordinator.html">
+ <span class="dropdown-text">Lab Coordinator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labStaff.html">
+ <span class="dropdown-text">Lab Staff</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Documentation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
+        <li>
+    <a class="dropdown-item" href="./adobe.html">
+ <span class="dropdown-text">Adobe</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://devpsylab.github.io/DataAnalysis">
+ <span class="dropdown-text">Data Analysis Guides</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./honors.html">
+ <span class="dropdown-text">Honors Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mediationModeration.html">
+ <span class="dropdown-text">Mediation and Moderation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./openScience.html">
+ <span class="dropdown-text">Open Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./opportunities.html">
+ <span class="dropdown-text">Opportunities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./redcap-manual.html">
+ <span class="dropdown-text">REDCap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./qualtrics-manual.html">
+ <span class="dropdown-text">Qualtrics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./documentation-remote.html">
+ <span class="dropdown-text">Remote Participation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./social-media.html">
+ <span class="dropdown-text">Social Media</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./studies.html">
+ <span class="dropdown-text">Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./video-editing.html">
+ <span class="dropdown-text">Video Editing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vsCode.html">
+ <span class="dropdown-text">Visual Studio Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing.html">
+ <span class="dropdown-text">Writing Guidelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-studies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Studies</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-studies">    
+        <li>
+    <a class="dropdown-item" href="./study-externalizingSpectrumAcrossLifespan.html">
+ <span class="dropdown-text">Externalizing Spectrum Across the Lifespan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./study-schoolReadinessStudy.html">
+ <span class="dropdown-text">School Readiness Study</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-prospective-applicants" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Prospective Applicants</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-prospective-applicants">    
+        <li>
+    <a class="dropdown-item" href="./prospective-undergradRA.html">
+ <span class="dropdown-text">Prospective Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./prospective-gradStudent.html">
+ <span class="dropdown-text">Prospective Graduate Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About This Website</span></a>
+  </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://developmental-psychopathology.lab.uiowa.edu"> 
+<span class="menu-text">Lab Website</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki/issues/new">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://twitter.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://www.facebook.com/DevPsyLab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#sec-overview" id="toc-sec-overview" class="nav-link active" data-scroll-target="#sec-overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#sec-preregistration" id="toc-sec-preregistration" class="nav-link" data-scroll-target="#sec-preregistration"><span class="header-section-number">2</span> Pre-Registration (or Co-Registration)</a></li>
+  <li><a href="#sec-sharing" id="toc-sec-sharing" class="nav-link" data-scroll-target="#sec-sharing"><span class="header-section-number">3</span> Sharing Data, Analysis Scripts, and Research Materials</a>
+  <ul>
+  <li><a href="#sec-dataDictionary" id="toc-sec-dataDictionary" class="nav-link" data-scroll-target="#sec-dataDictionary"><span class="header-section-number">3.1</span> Data Dictionary</a>
+  <ul>
+  <li><a href="#sec-styleGuide" id="toc-sec-styleGuide" class="nav-link" data-scroll-target="#sec-styleGuide"><span class="header-section-number">3.1.1</span> Style Guide</a></li>
+  <li><a href="#sec-columns" id="toc-sec-columns" class="nav-link" data-scroll-target="#sec-columns"><span class="header-section-number">3.1.2</span> Columns</a>
+  <ul class="collapse">
+  <li><a href="#sec-dataTypes" id="toc-sec-dataTypes" class="nav-link" data-scroll-target="#sec-dataTypes"><span class="header-section-number">3.1.2.1</span> Data Types</a></li>
+  <li><a href="#sec-variableTypes" id="toc-sec-variableTypes" class="nav-link" data-scroll-target="#sec-variableTypes"><span class="header-section-number">3.1.2.2</span> Variable Types</a></li>
+  <li><a href="#sec-measurementUnits" id="toc-sec-measurementUnits" class="nav-link" data-scroll-target="#sec-measurementUnits"><span class="header-section-number">3.1.2.3</span> Measurement Units</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-versionControl" id="toc-sec-versionControl" class="nav-link" data-scroll-target="#sec-versionControl"><span class="header-section-number">4</span> Version Control</a></li>
+  <li><a href="#sec-preprint" id="toc-sec-preprint" class="nav-link" data-scroll-target="#sec-preprint"><span class="header-section-number">5</span> Preprint</a></li>
+  <li><a href="#sec-osf" id="toc-sec-osf" class="nav-link" data-scroll-target="#sec-osf"><span class="header-section-number">6</span> OSF</a>
+  <ul>
+  <li><a href="#sec-components" id="toc-sec-components" class="nav-link" data-scroll-target="#sec-components"><span class="header-section-number">6.1</span> Components</a>
+  <ul>
+  <li><a href="#sec-osfPreregistration" id="toc-sec-osfPreregistration" class="nav-link" data-scroll-target="#sec-osfPreregistration"><span class="header-section-number">6.1.1</span> Pre-registration</a></li>
+  <li><a href="#sec-osfData" id="toc-sec-osfData" class="nav-link" data-scroll-target="#sec-osfData"><span class="header-section-number">6.1.2</span> Data</a></li>
+  <li><a href="#sec-osfDataDictionary" id="toc-sec-osfDataDictionary" class="nav-link" data-scroll-target="#sec-osfDataDictionary"><span class="header-section-number">6.1.3</span> Data Dictionary</a></li>
+  <li><a href="#sec-osfAnalysisCode" id="toc-sec-osfAnalysisCode" class="nav-link" data-scroll-target="#sec-osfAnalysisCode"><span class="header-section-number">6.1.4</span> Analysis Code</a></li>
+  <li><a href="#sec-osfMaterials" id="toc-sec-osfMaterials" class="nav-link" data-scroll-target="#sec-osfMaterials"><span class="header-section-number">6.1.5</span> Research Materials</a></li>
+  <li><a href="#sec-osfPreprint" id="toc-sec-osfPreprint" class="nav-link" data-scroll-target="#sec-osfPreprint"><span class="header-section-number">6.1.6</span> Preprint</a></li>
+  </ul></li>
+  <li><a href="#sec-anonymousViewOnlyLink" id="toc-sec-anonymousViewOnlyLink" class="nav-link" data-scroll-target="#sec-anonymousViewOnlyLink"><span class="header-section-number">6.2</span> Create Anonymous View-Only Links for Anonymous Peer Review</a></li>
+  </ul></li>
+  <li><a href="#sec-journal" id="toc-sec-journal" class="nav-link" data-scroll-target="#sec-journal"><span class="header-section-number">7</span> Manuscript Submission to a Journal</a></li>
+  <li><a href="#sec-accepted" id="toc-sec-accepted" class="nav-link" data-scroll-target="#sec-accepted"><span class="header-section-number">8</span> When the Manuscript is Accepted for Publication</a></li>
+  <li><a href="#sec-longitudinal" id="toc-sec-longitudinal" class="nav-link" data-scroll-target="#sec-longitudinal"><span class="header-section-number">9</span> Adapting Open Science to Longitudinal Research</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/openScience.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/openScience.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Open Science</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
-<h1 class="title toc-ignore">Open Science</h1>
+<div class="quarto-title-meta">
 
-</div>
+    
+  
+    
+  </div>
+  
 
 
-<div id="overview" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Overview</h1>
-<p>We, as a lab, value and strive to advance the mission of <a
-href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315">open
-science</a> to improve the accessibility, reproducibility, and
-replicability of science. As such, all lab members are expected to
-conduct research transparently and to promote reproducibility. This
-includes, but is not limited to, <a href="#preregistration">pre- or
-co-registering</a> studies, <a href="#sharing">sharing analysis scripts
-and data</a>, using <a href="#versionControl">version control</a>
-(GitLab), submitting <a href="https://psyarxiv.com">preprints</a> when
-submitting a manuscript to a journal, and providing support for other
-labs’ attempts to replicate and reproduce our findings. Our lab’s
-template for projects on the <a href="https://osf.io">Open Science
-Framework</a> (OSF) is located here<a href="#fn1" class="footnote-ref"
-id="fnref1"><sup>1</sup></a>: <a href="https://osf.io/4w9sv"
-class="uri">https://osf.io/4w9sv</a>.</p>
-</div>
-<div id="preregistration" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Pre-Registration (or
-Co-Registration)</h1>
-<p>There is a continuum of registration approaches. Pre-registration
-involves publicly posting aspects of a study (e.g., study design,
-hypotheses, methods, materials, and analysis plan) before data
-collection begins. Co-registration involves specifying aspects of your
-study after data collection starts but before analysis.
-Post-registration involves specifying aspects of your study after after
-analysis has begun.</p>
-<p>Pre-registration is often considered the gold-standard. However,
-co-registration and post-registration are better than no
-registration.</p>
+</header>
+
+
+<section id="sec-overview" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
+<p>We, as a lab, value and strive to advance the mission of <a href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315">open science</a> to improve the accessibility, reproducibility, and replicability of science. As such, all lab members are expected to conduct research transparently and to promote reproducibility. This includes, but is not limited to, <a href="#sec-preregistration">pre- or co-registering</a> studies, <a href="#sec-sharing">sharing analysis scripts and data</a>, using <a href="#sec-versionControl">version control</a> (GitLab), submitting <a href="https://psyarxiv.com">preprints</a> when submitting a manuscript to a journal, and providing support for other labs’ attempts to replicate and reproduce our findings. Our lab’s template for projects on the <a href="https://osf.io">Open Science Framework</a> (OSF) is located here<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: <a href="https://osf.io/4w9sv" class="uri">https://osf.io/4w9sv</a>.</p>
+</section>
+<section id="sec-preregistration" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Pre-Registration (or Co-Registration)</h1>
+<p>There is a continuum of registration approaches. Pre-registration involves publicly posting aspects of a study (e.g., study design, hypotheses, methods, materials, and analysis plan) before data collection begins. Co-registration involves specifying aspects of your study after data collection starts but before analysis. Post-registration involves specifying aspects of your study after after analysis has begun.</p>
+<p>Pre-registration is often considered the gold-standard. However, co-registration and post-registration are better than no registration.</p>
 <p>Here are elements of a study that can be registered:</p>
 <ul>
 <li>study design</li>
@@ -523,35 +396,26 @@ registration.</p>
 <li>materials</li>
 <li>analysis plan</li>
 </ul>
-<p>When analysis decisions are contingent upon prior steps that may
-influence which decision to take, the analysis plan can include decision
-trees (e.g., if X, then Y; if A, then B). For example, you can specify
-how you would proceed if the measures do not demonstrate longitudinal
-factorial invariance, or how you would handle poorly fitting models.</p>
-</div>
-<div id="sharing" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Sharing Data, Analysis
-Scripts, and Research Materials</h1>
-<div id="dataDictionary" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Data Dictionary</h2>
-<p>For each study, we create a Data Dictionary. A Data Dictionary is a
-metadata file that tells people the meaning of variables in the data
-file and how to interpret them.</p>
-<div id="styleGuide" class="section level3" number="3.1.1">
-<h3><span class="header-section-number">3.1.1</span> Style Guide</h3>
+<p>When analysis decisions are contingent upon prior steps that may influence which decision to take, the analysis plan can include decision trees (e.g., if X, then Y; if A, then B). For example, you can specify how you would proceed if the measures do not demonstrate longitudinal factorial invariance, or how you would handle poorly fitting models.</p>
+</section>
+<section id="sec-sharing" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Sharing Data, Analysis Scripts, and Research Materials</h1>
+<section id="sec-dataDictionary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-dataDictionary"><span class="header-section-number">3.1</span> Data Dictionary</h2>
+<p>For each study, we create a Data Dictionary. A Data Dictionary is a metadata file that tells people the meaning of variables in the data file and how to interpret them.</p>
+<section id="sec-styleGuide" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-styleGuide"><span class="header-section-number">3.1.1</span> Style Guide</h3>
 <ul>
 <li>Use Roboto font size 10</li>
-<li>Use an en dash (<code>–</code>; i.e., not a hyphen) to indicate a
-range:
+<li>Use an en dash (<code>–</code>; i.e., not a hyphen) to indicate a range:
 <ul>
 <li>e.g., 1–18 (not 1-18)</li>
-<li>an en dash is technically correct; in addition, spreadsheets often
-read 3-7 as March 7th, but they correctly read 3–7</li>
+<li>an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7</li>
 </ul></li>
 </ul>
-</div>
-<div id="columns" class="section level3" number="3.1.2">
-<h3><span class="header-section-number">3.1.2</span> Columns</h3>
+</section>
+<section id="sec-columns" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="sec-columns"><span class="header-section-number">3.1.2</span> Columns</h3>
 <p>The Data Dictionary should have the following columns:</p>
 <ul>
 <li>Variable Name
@@ -568,23 +432,19 @@ read 3-7 as March 7th, but they correctly read 3–7</li>
 </ul></li>
 <li>Data Type
 <ul>
-<li>the format of the values in the column (e.g., string, binary,
-integer, numeric, date, time, etc.)</li>
+<li>the format of the values in the column (e.g., string, binary, integer, numeric, date, time, etc.)</li>
 </ul></li>
 <li>Variable Type
 <ul>
-<li>whether the scale of measurement is nominal, ordinal, interval, or
-ratio</li>
+<li>whether the scale of measurement is nominal, ordinal, interval, or ratio</li>
 </ul></li>
 <li>Measurement Unit
 <ul>
-<li>the conceptual unit that is being measured (e.g., seconds, level,
-count)</li>
+<li>the conceptual unit that is being measured (e.g., seconds, level, count)</li>
 </ul></li>
 <li>Allowed Values
 <ul>
-<li>the allowed values for a variable and (if possible), what conceptual
-level each value corresponds to (e.g., 0 = Male; 1 = Female)</li>
+<li>the allowed values for a variable and (if possible), what conceptual level each value corresponds to (e.g., 0 = Male; 1 = Female)</li>
 </ul></li>
 <li>Description
 <ul>
@@ -592,8 +452,7 @@ level each value corresponds to (e.g., 0 = Male; 1 = Female)</li>
 </ul></li>
 <li>Definition
 <ul>
-<li>definitions of abbreviations, conceptual defintions of terms,
-mathematical definitions of how a variable is calculated, etc.</li>
+<li>definitions of abbreviations, conceptual defintions of terms, mathematical definitions of how a variable is calculated, etc.</li>
 </ul></li>
 <li>Notes
 <ul>
@@ -604,8 +463,8 @@ mathematical definitions of how a variable is calculated, etc.</li>
 <li>references for the measure and/or variable</li>
 </ul></li>
 </ul>
-<div id="dataTypes" class="section level4" number="3.1.2.1">
-<h4><span class="header-section-number">3.1.2.1</span> Data Types</h4>
+<section id="sec-dataTypes" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="sec-dataTypes"><span class="header-section-number">3.1.2.1</span> Data Types</h4>
 <p>Data Types include:</p>
 <ul>
 <li>string
@@ -634,18 +493,16 @@ mathematical definitions of how a variable is calculated, etc.</li>
 </ul></li>
 <li>time
 <ul>
-<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g.,
-05:24), or <code>MM:SS</code></li>
+<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g., 05:24), or <code>MM:SS</code></li>
 </ul></li>
 <li>date-time
 <ul>
 <li><code>MM/DD/YYYY HH:MM:SS</code> (e.g., 06/24/2020 01:30:24)</li>
 </ul></li>
 </ul>
-</div>
-<div id="variableTypes" class="section level4" number="3.1.2.2">
-<h4><span class="header-section-number">3.1.2.2</span> Variable
-Types</h4>
+</section>
+<section id="sec-variableTypes" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="sec-variableTypes"><span class="header-section-number">3.1.2.2</span> Variable Types</h4>
 <p>Variable Types include:</p>
 <ul>
 <li>nominal
@@ -665,10 +522,9 @@ Types</h4>
 <li>ordered with meaningful distances and an absolute zero</li>
 </ul></li>
 </ul>
-</div>
-<div id="measurementUnits" class="section level4" number="3.1.2.3">
-<h4><span class="header-section-number">3.1.2.3</span> Measurement
-Units</h4>
+</section>
+<section id="sec-measurementUnits" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="sec-measurementUnits"><span class="header-section-number">3.1.2.3</span> Measurement Units</h4>
 <p>Measurement Units include:</p>
 <ul>
 <li>ID
@@ -693,8 +549,7 @@ Units</h4>
 </ul></li>
 <li>ratio
 <ul>
-<li>ratio of two variables (one variable divided by another
-variable)</li>
+<li>ratio of two variables (one variable divided by another variable)</li>
 </ul></li>
 <li>USD
 <ul>
@@ -702,8 +557,7 @@ variable)</li>
 </ul></li>
 <li>option
 <ul>
-<li>categories that reflect participant’s choice among multiple
-options</li>
+<li>categories that reflect participant’s choice among multiple options</li>
 </ul></li>
 <li>location
 <ul>
@@ -731,8 +585,7 @@ options</li>
 </ul></li>
 <li>time
 <ul>
-<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g.,
-05:24), or <code>MM:SS</code></li>
+<li><code>HH:MM:SS</code> (e.g., 01:30:24), or <code>HH:MM</code> (e.g., 05:24), or <code>MM:SS</code></li>
 </ul></li>
 <li>date-time
 <ul>
@@ -748,41 +601,24 @@ options</li>
 <li>percentile</li>
 <li>item</li>
 </ul>
-</div>
-</div>
-</div>
-</div>
-<div id="versionControl" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Version Control</h1>
-<p>We use <a href="https://research-git.uiowa.edu">GitLab</a> for
-version control. See our <a
-href="https://devpsylab.github.io/DataAnalysis/git.html">lab’s guide for
-using GitLab</a>. Our lab’s template for GitLab repositories is located
-here<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>: <a
-href="https://research-git.uiowa.edu/PetersenLab/Template"
-class="uri">https://research-git.uiowa.edu/PetersenLab/Template</a>.</p>
-</div>
-<div id="preprint" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Preprint</h1>
-<p>When submitting a manuscript to a journal, also submit a preprint to
-<a href="https://psyarxiv.com">PsyArXiv</a>. Combine the supplemental
-material and manuscript into one PDF file when posting.</p>
-</div>
-<div id="osf" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> OSF</h1>
-<p>The <a href="https://osf.io">Open Science Framework</a> (OSF) is a
-website for hosting pre-registrations, data, analysis code,
-research-related materials, and pre-prints to improve replicability and
-reproducibility of findings. For each paper project, create a new
-repository on the OSF and add the relevant contributors, including
-Dr. Petersen. Our lab’s template for projects on the Open Science
-Framework (OSF) can be found here<a href="#fn3" class="footnote-ref"
-id="fnref3"><sup>3</sup></a>: <a href="https://osf.io/4w9sv"
-class="uri">https://osf.io/4w9sv</a>.</p>
-<div id="components" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Components</h2>
-<p>Create a component in the OSF project repository for the following
-components:</p>
+</section>
+</section>
+</section>
+</section>
+<section id="sec-versionControl" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Version Control</h1>
+<p>We use <a href="https://research-git.uiowa.edu">GitLab</a> for version control. See our <a href="https://devpsylab.github.io/DataAnalysis/git.html">lab’s guide for using GitLab</a>. Our lab’s template for GitLab repositories is located here<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: <a href="https://research-git.uiowa.edu/PetersenLab/Template" class="uri">https://research-git.uiowa.edu/PetersenLab/Template</a>.</p>
+</section>
+<section id="sec-preprint" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Preprint</h1>
+<p>When submitting a manuscript to a journal, also submit a preprint to <a href="https://psyarxiv.com">PsyArXiv</a>. Combine the supplemental material and manuscript into one PDF file when posting.</p>
+</section>
+<section id="sec-osf" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> OSF</h1>
+<p>The <a href="https://osf.io">Open Science Framework</a> (OSF) is a website for hosting pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings. For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr.&nbsp;Petersen. Our lab’s template for projects on the Open Science Framework (OSF) can be found here<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>: <a href="https://osf.io/4w9sv" class="uri">https://osf.io/4w9sv</a>.</p>
+<section id="sec-components" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="sec-components"><span class="header-section-number">6.1</span> Components</h2>
+<p>Create a component in the OSF project repository for the following components:</p>
 <ul>
 <li>Pre-registration (or Co-registration)</li>
 <li>Data</li>
@@ -791,136 +627,74 @@ components:</p>
 <li>Research Materials</li>
 <li>Preprint</li>
 </ul>
-<div id="osfPreregistration" class="section level3" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span>
-Pre-registration</h3>
-</div>
-<div id="osfData" class="section level3" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Data</h3>
-<p>To help protect participant anonymity, it is important to anonymize
-participant IDs so their data cannot be stitched together across papers.
-To anonymize participant IDs, use the following script and change the
-seed for every paper so that a given participant gets a different
-anonymized code each time.</p>
-<p><a
-href="https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID">https://devpsylab.github.io/DataAnalysis/osf.html#anonymizedID</a></p>
-</div>
-<div id="osfDataDictionary" class="section level3" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Data
-Dictionary</h3>
-<p>For each paper project, we export a <code>.csv</code> file with the
-subset of the <a href="#dataDictionary">Data Dictionary</a> variables
-used for that specific paper. We upload that <code>.csv</code> file to
-the OSF. The formatting of the Data Dictionary is described <a
-href="#dataDictionary">here</a>.</p>
-</div>
-<div id="osfAnalysisCode" class="section level3" number="6.1.4">
-<h3><span class="header-section-number">6.1.4</span> Analysis Code</h3>
-</div>
-<div id="osfMaterials" class="section level3" number="6.1.5">
-<h3><span class="header-section-number">6.1.5</span> Research
-Materials</h3>
-</div>
-<div id="osfPreprint" class="section level3" number="6.1.6">
-<h3><span class="header-section-number">6.1.6</span> Preprint</h3>
-</div>
-</div>
-<div id="anonymousViewOnlyLink" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Create Anonymous
-View-Only Links for Anonymous Peer Review</h2>
-<p>With your project open, go to Settings (top-right) → View-Only Links
-→ Add. Then check “Anonymize”. Then you can share that URL. For detailed
-instructions, see here: <a
-href="https://help.osf.io/article/201-create-a-view-only-link-for-a-project"
-class="uri">https://help.osf.io/article/201-create-a-view-only-link-for-a-project</a>
-(archived at <a href="https://perma.cc/AGJ9-V487"
-class="uri">https://perma.cc/AGJ9-V487</a>)</p>
-</div>
-</div>
-<div id="journal" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Manuscript Submission
-to a Journal</h1>
-<p>Before submitting a manuscript to a journal, make sure to post the
-relevant materials on the <a href="#osf">OSF</a>, as described <a
-href="#osf">here</a>, and post the preprint, as described <a
-href="#preprint">here</a>. When preparing a manuscript for submission to
-a journal, make sure to follow the Author Guidelines for each journal.
-After finalizing the manuscript in accordance with journal guidelines
-and when you are ready to submit the paper to the journal (but before
-submission), post the <a href="#preprint">preprint</a> on <a
-href="https://psyarxiv.com">PsyArXiv</a>. Include the link to the
-preprint in the cover letter to the journal. In the method section and
-on the title page, include the relevant OSF links to the
-pre-registration, data, data dictionary, analysis code, computational
-notebook, and research materials, etc. For example:</p>
-<blockquote>
-<p>Hypotheses and measures for the School Readiness Study were
-pre-registered: <a href="https://osf.io/jzxb8"
-class="uri">https://osf.io/jzxb8</a>. Hypotheses methods, and a data
-analysis plan for the present study were also pre-registered: <a
-href="https://osf.io/pny26" class="uri">https://osf.io/pny26</a>. Data
-files, a data dictionary, analysis scripts, and a computational notebook
-for the present study are published online: <a
-href="https://osf.io/zs2bn" class="uri">https://osf.io/zs2bn</a>.</p>
+<section id="sec-osfPreregistration" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="sec-osfPreregistration"><span class="header-section-number">6.1.1</span> Pre-registration</h3>
+</section>
+<section id="sec-osfData" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="sec-osfData"><span class="header-section-number">6.1.2</span> Data</h3>
+<p>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers. To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</p>
+<p><a href="https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID" class="uri">https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID</a></p>
+</section>
+<section id="sec-osfDataDictionary" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="sec-osfDataDictionary"><span class="header-section-number">6.1.3</span> Data Dictionary</h3>
+<p>For each paper project, we export a <code>.csv</code> file with the subset of the <a href="#sec-dataDictionary">Data Dictionary</a> variables used for that specific paper. We upload that <code>.csv</code> file to the OSF. The formatting of the Data Dictionary is described <a href="#sec-dataDictionary">here</a>.</p>
+</section>
+<section id="sec-osfAnalysisCode" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="sec-osfAnalysisCode"><span class="header-section-number">6.1.4</span> Analysis Code</h3>
+</section>
+<section id="sec-osfMaterials" class="level3" data-number="6.1.5">
+<h3 data-number="6.1.5" class="anchored" data-anchor-id="sec-osfMaterials"><span class="header-section-number">6.1.5</span> Research Materials</h3>
+</section>
+<section id="sec-osfPreprint" class="level3" data-number="6.1.6">
+<h3 data-number="6.1.6" class="anchored" data-anchor-id="sec-osfPreprint"><span class="header-section-number">6.1.6</span> Preprint</h3>
+</section>
+</section>
+<section id="sec-anonymousViewOnlyLink" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sec-anonymousViewOnlyLink"><span class="header-section-number">6.2</span> Create Anonymous View-Only Links for Anonymous Peer Review</h2>
+<p>With your project open, go to Settings (top-right) → View-Only Links → Add. Then check “Anonymize”. Then you can share that URL. For detailed instructions, see here: <a href="https://help.osf.io/article/201-create-a-view-only-link-for-a-project" class="uri">https://help.osf.io/article/201-create-a-view-only-link-for-a-project</a> (archived at <a href="https://perma.cc/AGJ9-V487" class="uri">https://perma.cc/AGJ9-V487</a>)</p>
+</section>
+</section>
+<section id="sec-journal" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Manuscript Submission to a Journal</h1>
+<p>Before submitting a manuscript to a journal, make sure to post the relevant materials on the <a href="#sec-osf">OSF</a>, as described <a href="#sec-osf">here</a>, and post the preprint, as described <a href="#sec-preprint">here</a>. When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal. After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the <a href="#sec-preprint">preprint</a> on <a href="https://psyarxiv.com">PsyArXiv</a>. Include the link to the preprint in the cover letter to the journal. In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc. For example:</p>
+<blockquote class="blockquote">
+<p>Hypotheses and measures for the School Readiness Study were pre-registered: <a href="https://osf.io/jzxb8" class="uri">https://osf.io/jzxb8</a>. Hypotheses methods, and a data analysis plan for the present study were also pre-registered: <a href="https://osf.io/pny26" class="uri">https://osf.io/pny26</a>. Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: <a href="https://osf.io/zs2bn" class="uri">https://osf.io/zs2bn</a>.</p>
 </blockquote>
-<p>In the manuscript submission, create and use <a
-href="#anonymousViewOnlyLink">anonymous view-only OSF links</a> (for
-blind review). In the preprint submission, use the general OSF links
-(not the <a href="#anonymousViewOnlyLink">anonymous view-only OSF
-links</a>) that will become viewable when the manuscript is accepted for
-publication (i.e., when you make the OSF repo public).</p>
-</div>
-<div id="accepted" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> When the Manuscript is
-Accepted for Publication</h1>
+<p>In the manuscript submission, create and use <a href="#sec-anonymousViewOnlyLink">anonymous view-only OSF links</a> (for blind review). In the preprint submission, use the general OSF links (not the <a href="#sec-anonymousViewOnlyLink">anonymous view-only OSF links</a>) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).</p>
+</section>
+<section id="sec-accepted" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> When the Manuscript is Accepted for Publication</h1>
 <p>When the manuscript is accepted for publication:</p>
-<ol style="list-style-type: decimal">
-<li>Let all of the authors know, and send them the full, (in-press)
-APA-style reference</li>
-<li>Make the OSF repo public and <a
-href="https://help.osf.io/article/220-create-dois">create a DOI link</a>
-for the repository that can be used for citing it</li>
-<li>Submit the finalized, unblinded manuscript (and any tables, figures,
-and the supplement; with the public OSF link; removing any highlighting
-or tracked changes) to the NIHMS system: <a
-href="https://www.nihms.nih.gov/submission/create/"
-class="uri">https://www.nihms.nih.gov/submission/create/</a>
+<ol type="1">
+<li>Let all of the authors know, and send them the full, (in-press) APA-style reference</li>
+<li>Make the OSF repo public and <a href="https://help.osf.io/article/220-create-dois">create a DOI link</a> for the repository that can be used for citing it</li>
+<li>Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <a href="https://www.nihms.nih.gov/submission/create/" class="uri">https://www.nihms.nih.gov/submission/create/</a>
 <ul>
-<li>After you submit the manuscript to NIHMS, send Dr. Petersen the
-NIHMS ID for the submission. We are required to report published papers
-to funding agences.</li>
+<li>After you submit the manuscript to NIHMS, send Dr.&nbsp;Petersen the NIHMS ID for the submission. We are required to report published papers to funding agences.</li>
 </ul></li>
-<li>Make sure the finalized, unblinded manuscript (and any tables,
-figures, and the supplement; with the public OSF link; removing any
-highlighting or tracked changes) is uploaded as an updated version of
-the <a href="#preprint">preprint</a> on <a
-href="https://psyarxiv.com">PsyArXiv</a>.</li>
+<li>Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the <a href="#sec-preprint">preprint</a> on <a href="https://psyarxiv.com">PsyArXiv</a>.</li>
 </ol>
-</div>
-<div id="longitudinal" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Adapting Open Science
-to Longitudinal Research</h1>
-<p>See our paper on adapting open science to longitudinal research: <a
-href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315"
-class="uri">https://onlinelibrary.wiley.com/doi/10.1002/icd.2315</a></p>
-</div>
-<div class="footnotes footnotes-end-of-document">
-<hr />
+</section>
+<section id="sec-longitudinal" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Adapting Open Science to Longitudinal Research</h1>
+<p>See our paper on adapting open science to longitudinal research: <a href="https://onlinelibrary.wiley.com/doi/10.1002/icd.2315" class="uri">https://onlinelibrary.wiley.com/doi/10.1002/icd.2315</a></p>
+
+
+<!-- -->
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
 <ol>
-<li id="fn1"><p>Ask Dr. Petersen to give you access.<a href="#fnref1"
-class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>Ask Dr. Petersen to give you access.<a href="#fnref2"
-class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>Ask Dr. Petersen to give you access.<a href="#fnref3"
-class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>Ask Dr.&nbsp;Petersen to give you access.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ask Dr.&nbsp;Petersen to give you access.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Ask Dr.&nbsp;Petersen to give you access.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</div>
-
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiT3BlbiBTY2llbmNlIgotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBlY2hvID0gVFJVRSwKICBlcnJvciA9IFRSVUUsCiAgY29tbWVudCA9ICIiKQpgYGAKCiMgT3ZlcnZpZXcgeyNvdmVydmlld30KCldlLCBhcyBhIGxhYiwgdmFsdWUgYW5kIHN0cml2ZSB0byBhZHZhbmNlIHRoZSBtaXNzaW9uIG9mIFtvcGVuIHNjaWVuY2VdKGh0dHBzOi8vb25saW5lbGlicmFyeS53aWxleS5jb20vZG9pLzEwLjEwMDIvaWNkLjIzMTUpIHRvIGltcHJvdmUgdGhlIGFjY2Vzc2liaWxpdHksIHJlcHJvZHVjaWJpbGl0eSwgYW5kIHJlcGxpY2FiaWxpdHkgb2Ygc2NpZW5jZS4KQXMgc3VjaCwgYWxsIGxhYiBtZW1iZXJzIGFyZSBleHBlY3RlZCB0byBjb25kdWN0IHJlc2VhcmNoIHRyYW5zcGFyZW50bHkgYW5kIHRvIHByb21vdGUgcmVwcm9kdWNpYmlsaXR5LgpUaGlzIGluY2x1ZGVzLCBidXQgaXMgbm90IGxpbWl0ZWQgdG8sIFtwcmUtIG9yIGNvLXJlZ2lzdGVyaW5nXSgjcHJlcmVnaXN0cmF0aW9uKSBzdHVkaWVzLCBbc2hhcmluZyBhbmFseXNpcyBzY3JpcHRzIGFuZCBkYXRhXSgjc2hhcmluZyksIHVzaW5nIFt2ZXJzaW9uIGNvbnRyb2xdKCN2ZXJzaW9uQ29udHJvbCkgKEdpdExhYiksIHN1Ym1pdHRpbmcgW3ByZXByaW50c10oaHR0cHM6Ly9wc3lhcnhpdi5jb20pIHdoZW4gc3VibWl0dGluZyBhIG1hbnVzY3JpcHQgdG8gYSBqb3VybmFsLCBhbmQgcHJvdmlkaW5nIHN1cHBvcnQgZm9yIG90aGVyIGxhYnMnIGF0dGVtcHRzIHRvIHJlcGxpY2F0ZSBhbmQgcmVwcm9kdWNlIG91ciBmaW5kaW5ncy4KT3VyIGxhYidzIHRlbXBsYXRlIGZvciBwcm9qZWN0cyBvbiB0aGUgW09wZW4gU2NpZW5jZSBGcmFtZXdvcmtdKGh0dHBzOi8vb3NmLmlvKSAoT1NGKSBpcyBsb2NhdGVkIGhlcmVbXjFdOiBodHRwczovL29zZi5pby80dzlzdi4KCiMgUHJlLVJlZ2lzdHJhdGlvbiAob3IgQ28tUmVnaXN0cmF0aW9uKSB7I3ByZXJlZ2lzdHJhdGlvbn0KClRoZXJlIGlzIGEgY29udGludXVtIG9mIHJlZ2lzdHJhdGlvbiBhcHByb2FjaGVzLgpQcmUtcmVnaXN0cmF0aW9uIGludm9sdmVzIHB1YmxpY2x5IHBvc3RpbmcgYXNwZWN0cyBvZiBhIHN0dWR5IChlLmcuLCBzdHVkeSBkZXNpZ24sIGh5cG90aGVzZXMsIG1ldGhvZHMsIG1hdGVyaWFscywgYW5kIGFuYWx5c2lzIHBsYW4pIGJlZm9yZSBkYXRhIGNvbGxlY3Rpb24gYmVnaW5zLgpDby1yZWdpc3RyYXRpb24gaW52b2x2ZXMgc3BlY2lmeWluZyBhc3BlY3RzIG9mIHlvdXIgc3R1ZHkgYWZ0ZXIgZGF0YSBjb2xsZWN0aW9uIHN0YXJ0cyBidXQgYmVmb3JlIGFuYWx5c2lzLgpQb3N0LXJlZ2lzdHJhdGlvbiBpbnZvbHZlcyBzcGVjaWZ5aW5nIGFzcGVjdHMgb2YgeW91ciBzdHVkeSBhZnRlciBhZnRlciBhbmFseXNpcyBoYXMgYmVndW4uCgpQcmUtcmVnaXN0cmF0aW9uIGlzIG9mdGVuIGNvbnNpZGVyZWQgdGhlIGdvbGQtc3RhbmRhcmQuCkhvd2V2ZXIsIGNvLXJlZ2lzdHJhdGlvbiBhbmQgcG9zdC1yZWdpc3RyYXRpb24gYXJlIGJldHRlciB0aGFuIG5vIHJlZ2lzdHJhdGlvbi4KCkhlcmUgYXJlIGVsZW1lbnRzIG9mIGEgc3R1ZHkgdGhhdCBjYW4gYmUgcmVnaXN0ZXJlZDoKCi0gc3R1ZHkgZGVzaWduCi0gaHlwb3RoZXNlcwotIG1ldGhvZHMKLSBtYXRlcmlhbHMKLSBhbmFseXNpcyBwbGFuCgpXaGVuIGFuYWx5c2lzIGRlY2lzaW9ucyBhcmUgY29udGluZ2VudCB1cG9uIHByaW9yIHN0ZXBzIHRoYXQgbWF5IGluZmx1ZW5jZSB3aGljaCBkZWNpc2lvbiB0byB0YWtlLCB0aGUgYW5hbHlzaXMgcGxhbiBjYW4gaW5jbHVkZSBkZWNpc2lvbiB0cmVlcyAoZS5nLiwgaWYgWCwgdGhlbiBZOyBpZiBBLCB0aGVuIEIpLgpGb3IgZXhhbXBsZSwgeW91IGNhbiBzcGVjaWZ5IGhvdyB5b3Ugd291bGQgcHJvY2VlZCBpZiB0aGUgbWVhc3VyZXMgZG8gbm90IGRlbW9uc3RyYXRlIGxvbmdpdHVkaW5hbCBmYWN0b3JpYWwgaW52YXJpYW5jZSwgb3IgaG93IHlvdSB3b3VsZCBoYW5kbGUgcG9vcmx5IGZpdHRpbmcgbW9kZWxzLgoKIyBTaGFyaW5nIERhdGEsIEFuYWx5c2lzIFNjcmlwdHMsIGFuZCBSZXNlYXJjaCBNYXRlcmlhbHMgeyNzaGFyaW5nfQoKIyMgRGF0YSBEaWN0aW9uYXJ5IHsjZGF0YURpY3Rpb25hcnl9CgpGb3IgZWFjaCBzdHVkeSwgd2UgY3JlYXRlIGEgRGF0YSBEaWN0aW9uYXJ5LgpBIERhdGEgRGljdGlvbmFyeSBpcyBhIG1ldGFkYXRhIGZpbGUgdGhhdCB0ZWxscyBwZW9wbGUgdGhlIG1lYW5pbmcgb2YgdmFyaWFibGVzIGluIHRoZSBkYXRhIGZpbGUgYW5kIGhvdyB0byBpbnRlcnByZXQgdGhlbS4KCiMjIyBTdHlsZSBHdWlkZSB7I3N0eWxlR3VpZGV9CgotIFVzZSBSb2JvdG8gZm9udCBzaXplIDEwCi0gVXNlIGFuIGVuIGRhc2ggKGDigJNgOyBpLmUuLCBub3QgYSBoeXBoZW4pIHRvIGluZGljYXRlIGEgcmFuZ2U6CiAgICAtIGUuZy4sIDHigJMxOCAobm90IDEtMTgpCiAgICAtIGFuIGVuIGRhc2ggaXMgdGVjaG5pY2FsbHkgY29ycmVjdDsgaW4gYWRkaXRpb24sIHNwcmVhZHNoZWV0cyBvZnRlbiByZWFkIDMtNyBhcyBNYXJjaCA3dGgsIGJ1dCB0aGV5IGNvcnJlY3RseSByZWFkIDPigJM3CgojIyMgQ29sdW1ucyB7I2NvbHVtbnN9CgpUaGUgRGF0YSBEaWN0aW9uYXJ5IHNob3VsZCBoYXZlIHRoZSBmb2xsb3dpbmcgY29sdW1uczoKCi0gVmFyaWFibGUgTmFtZQogICAgLSB0aGUgdmFyaWFibGUgbmFtZSBpbiB0aGUgZGF0YSBmaWxlCi0gRm9ybSBOYW1lCiAgICAtIHRoZSBpbnN0cnVtZW50IG9yIG1lYXN1cmUgdGhhdCB0aGUgdmFyaWFibGUgY29tZXMgZnJvbQotIEh1bWFuLVJlYWRhYmxlIFZhcmlhYmxlIE5hbWUKICAgIC0gYSBtb3JlIGVhc2lseSByZWFkYWJsZSB2ZXJzaW9uIG9mIHRoZSB2YXJpYWJsZSBuYW1lCi0gRGF0YSBUeXBlCiAgICAtIHRoZSBmb3JtYXQgb2YgdGhlIHZhbHVlcyBpbiB0aGUgY29sdW1uIChlLmcuLCBzdHJpbmcsIGJpbmFyeSwgaW50ZWdlciwgbnVtZXJpYywgZGF0ZSwgdGltZSwgZXRjLikKLSBWYXJpYWJsZSBUeXBlCiAgICAtIHdoZXRoZXIgdGhlIHNjYWxlIG9mIG1lYXN1cmVtZW50IGlzIG5vbWluYWwsIG9yZGluYWwsIGludGVydmFsLCBvciByYXRpbwotIE1lYXN1cmVtZW50IFVuaXQKICAgIC0gdGhlIGNvbmNlcHR1YWwgdW5pdCB0aGF0IGlzIGJlaW5nIG1lYXN1cmVkIChlLmcuLCBzZWNvbmRzLCBsZXZlbCwgY291bnQpCi0gQWxsb3dlZCBWYWx1ZXMKICAgIC0gdGhlIGFsbG93ZWQgdmFsdWVzIGZvciBhIHZhcmlhYmxlIGFuZCAoaWYgcG9zc2libGUpLCB3aGF0IGNvbmNlcHR1YWwgbGV2ZWwgZWFjaCB2YWx1ZSBjb3JyZXNwb25kcyB0byAoZS5nLiwgMCA9IE1hbGU7IDEgPSBGZW1hbGUpCi0gRGVzY3JpcHRpb24KICAgIC0gY29uY2VwdHVhbCBkZXNjcmlwdGlvbiBvZiB0aGUgdmFyaWFibGUKLSBEZWZpbml0aW9uCiAgICAtIGRlZmluaXRpb25zIG9mIGFiYnJldmlhdGlvbnMsIGNvbmNlcHR1YWwgZGVmaW50aW9ucyBvZiB0ZXJtcywgbWF0aGVtYXRpY2FsIGRlZmluaXRpb25zIG9mIGhvdyBhIHZhcmlhYmxlIGlzIGNhbGN1bGF0ZWQsIGV0Yy4KLSBOb3RlcwogICAgLSBhZGRpdGlvbmFsIG5vdGVzIGFib3V0IHRoZSB2YXJpYWJsZSBhbmQgaG93IGl0IGlzIGNhbGN1bGF0ZWQKLSBSZWZlcmVuY2VzCiAgICAtIHJlZmVyZW5jZXMgZm9yIHRoZSBtZWFzdXJlIGFuZC9vciB2YXJpYWJsZQoKIyMjIyBEYXRhIFR5cGVzIHsjZGF0YVR5cGVzfQoKRGF0YSBUeXBlcyBpbmNsdWRlOgoKLSBzdHJpbmcKICAgIC0gaW5jbHVkZSBsZXR0ZXJzIG9yIG90aGVyIGNoYXJhY3RlcnMgKGFuZCBwb3NzaWJseSBudW1iZXJzKQotIGZhY3RvcgogICAgLSBjYXRlZ29yaWNhbCB2YXJpYWJsZSB3aXRoIGxldHRlcnMgYW5kL29yIG51bWJlcnMKLSBiaW5hcnkKICAgIC0gMC8xCi0gaW50ZWdlcgogICAgLSB3aG9sZSBudW1iZXJzIChuZXZlciBkZWNpbWFscykKLSBudW1lcmljCiAgICAtIG51bWJlcnMKLSBkYXRlCiAgICAtIGBNTS9ERC9ZWVlZYDsgZS5nLiwgMDYvMjQvMjAyMAotIHRpbWUKICAgIC0gYEhIOk1NOlNTYCAoZS5nLiwgMDE6MzA6MjQpLCBvciBgSEg6TU1gIChlLmcuLCAwNToyNCksIG9yIGBNTTpTU2AKLSBkYXRlLXRpbWUKICAgIC0gYE1NL0REL1lZWVkgSEg6TU06U1NgIChlLmcuLCAwNi8yNC8yMDIwIDAxOjMwOjI0KQoKIyMjIyBWYXJpYWJsZSBUeXBlcyB7I3ZhcmlhYmxlVHlwZXN9CgpWYXJpYWJsZSBUeXBlcyBpbmNsdWRlOgoKLSBub21pbmFsCiAgICAtIGRpc3RpbmN0IGNhdGVnb3JpZXMKLSBvcmRpbmFsCiAgICAtIG9yZGVyZWQgY2F0ZWdvcmllcwotIGludGVydmFsCiAgICAtIG9yZGVyZWQgd2l0aCBtZWFuaW5nZnVsIGRpc3RhbmNlcwotIHJhdGlvCiAgICAtIG9yZGVyZWQgd2l0aCBtZWFuaW5nZnVsIGRpc3RhbmNlcyBhbmQgYW4gYWJzb2x1dGUgemVybwoKIyMjIyBNZWFzdXJlbWVudCBVbml0cyB7I21lYXN1cmVtZW50VW5pdHN9CgpNZWFzdXJlbWVudCBVbml0cyBpbmNsdWRlOgoKLSBJRAogICAgLSBwYXJ0aWNpcGFudCBpZGVudGlmaWNhdGlvbiAoSUQpIG51bWJlcnMKLSBjb3VudAogICAgLSBudW1iZXIgb2Ygc29tZXRoaW5nIChlLmcuLCBudW1iZXIgb2YgY2hpbGRyZW4gaW4gdGhlIGhvdXNlaG9sZCkKLSBncm91cAogICAgLSBjYXRlZ29yaWVzIHRoYXQgcmVmbGVjdCBkaWZmZXJlbnQgZ3JvdXBzIChlLmcuLCBmZW1hbGUgdnMgbWFsZSkKLSBpbnN0YW5jZQogICAgLSBub21pbmFsIGNhdGVnb3JpZXMgdGhhdCBkbyBub3QgcmVmbGVjdCBncm91cHMKLSB5ZXMvbm8KICAgIC0gMCA9IE5vOyAxID0gWWVzCi0gcmF0aW8KICAgIC0gcmF0aW8gb2YgdHdvIHZhcmlhYmxlcyAob25lIHZhcmlhYmxlIGRpdmlkZWQgYnkgYW5vdGhlciB2YXJpYWJsZSkKLSBVU0QKICAgIC0gVS5TLiBkb2xsYXJzICgkKQotIG9wdGlvbgogICAgLSBjYXRlZ29yaWVzIHRoYXQgcmVmbGVjdCBwYXJ0aWNpcGFudCdzIGNob2ljZSBhbW9uZyBtdWx0aXBsZSBvcHRpb25zCi0gbG9jYXRpb24KICAgIC0gY2F0ZWdvcmllcyB0aGF0IHJlZmxlY3QgZGlmZmVyZW50IGxvY2F0aW9ucwotIHN0YXRlCiAgICAtIGNhdGVnb3JpZXMgdGhhdCByZWZsZWN0IGEgc3RhdHVzCi0gZGVncmVlCiAgICAtIHRoZSBkZWdyZWUgb2YKLSBsZXZlbAogICAgLSB0aGUgbGV2ZWwgb2YKLSBncmFkZQogICAgLSBzY2hvb2wgZ3JhZGUKLSBkYXRlCiAgICAtIGBNTS9ERC9ZWVlZYDsgZS5nLiwgMDYvMjQvMjAyMAotIHRpbWUKICAgIC0gYEhIOk1NOlNTYCAoZS5nLiwgMDE6MzA6MjQpLCBvciBgSEg6TU1gIChlLmcuLCAwNToyNCksIG9yIGBNTTpTU2AKLSBkYXRlLXRpbWUKICAgIC0gYE1NL0REL1lZWVkgSEg6TU06U1NgIChlLmcuLCAwNi8yNC8yMDIwIDAxOjMwOjI0KQotIG1pbGxpc2Vjb25kcwotIHNlY29uZHMKLSBtaW51dGVzCi0gaG91cnMKLSBkYXlzCi0gbW9udGhzCi0geWVhcnMKLSBwZXJjZW50aWxlCi0gaXRlbQoKIyBWZXJzaW9uIENvbnRyb2wgeyN2ZXJzaW9uQ29udHJvbH0KCldlIHVzZSBbR2l0TGFiXShodHRwczovL3Jlc2VhcmNoLWdpdC51aW93YS5lZHUpIGZvciB2ZXJzaW9uIGNvbnRyb2wuClNlZSBvdXIgW2xhYidzIGd1aWRlIGZvciB1c2luZyBHaXRMYWJdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9EYXRhQW5hbHlzaXMvZ2l0Lmh0bWwpLgpPdXIgbGFiJ3MgdGVtcGxhdGUgZm9yIEdpdExhYiByZXBvc2l0b3JpZXMgaXMgbG9jYXRlZCBoZXJlW14xXTogaHR0cHM6Ly9yZXNlYXJjaC1naXQudWlvd2EuZWR1L1BldGVyc2VuTGFiL1RlbXBsYXRlLgoKIyBQcmVwcmludCB7I3ByZXByaW50fQoKV2hlbiBzdWJtaXR0aW5nIGEgbWFudXNjcmlwdCB0byBhIGpvdXJuYWwsIGFsc28gc3VibWl0IGEgcHJlcHJpbnQgdG8gW1BzeUFyWGl2XShodHRwczovL3BzeWFyeGl2LmNvbSkuCkNvbWJpbmUgdGhlIHN1cHBsZW1lbnRhbCBtYXRlcmlhbCBhbmQgbWFudXNjcmlwdCBpbnRvIG9uZSBQREYgZmlsZSB3aGVuIHBvc3RpbmcuCgojIE9TRiB7I29zZn0KClRoZSBbT3BlbiBTY2llbmNlIEZyYW1ld29ya10oaHR0cHM6Ly9vc2YuaW8pIChPU0YpIGlzIGEgd2Vic2l0ZSBmb3IgaG9zdGluZyBwcmUtcmVnaXN0cmF0aW9ucywgZGF0YSwgYW5hbHlzaXMgY29kZSwgcmVzZWFyY2gtcmVsYXRlZCBtYXRlcmlhbHMsIGFuZCBwcmUtcHJpbnRzIHRvIGltcHJvdmUgcmVwbGljYWJpbGl0eSBhbmQgcmVwcm9kdWNpYmlsaXR5IG9mIGZpbmRpbmdzLgpGb3IgZWFjaCBwYXBlciBwcm9qZWN0LCBjcmVhdGUgYSBuZXcgcmVwb3NpdG9yeSBvbiB0aGUgT1NGIGFuZCBhZGQgdGhlIHJlbGV2YW50IGNvbnRyaWJ1dG9ycywgaW5jbHVkaW5nIERyLiBQZXRlcnNlbi4KT3VyIGxhYidzIHRlbXBsYXRlIGZvciBwcm9qZWN0cyBvbiB0aGUgT3BlbiBTY2llbmNlIEZyYW1ld29yayAoT1NGKSBjYW4gYmUgZm91bmQgaGVyZVteMV06IGh0dHBzOi8vb3NmLmlvLzR3OXN2LgoKIyMgQ29tcG9uZW50cyB7I2NvbXBvbmVudHN9CgpDcmVhdGUgYSBjb21wb25lbnQgaW4gdGhlIE9TRiBwcm9qZWN0IHJlcG9zaXRvcnkgZm9yIHRoZSBmb2xsb3dpbmcgY29tcG9uZW50czoKCi0gUHJlLXJlZ2lzdHJhdGlvbiAob3IgQ28tcmVnaXN0cmF0aW9uKQotIERhdGEKLSBEYXRhIERpY3Rpb25hcnkKLSBBbmFseXNpcyBDb2RlCi0gUmVzZWFyY2ggTWF0ZXJpYWxzCi0gUHJlcHJpbnQKCiMjIyBQcmUtcmVnaXN0cmF0aW9uIHsjb3NmUHJlcmVnaXN0cmF0aW9ufQoKIyMjIERhdGEgeyNvc2ZEYXRhfQoKVG8gaGVscCBwcm90ZWN0IHBhcnRpY2lwYW50IGFub255bWl0eSwgaXQgaXMgaW1wb3J0YW50IHRvIGFub255bWl6ZSBwYXJ0aWNpcGFudCBJRHMgc28gdGhlaXIgZGF0YSBjYW5ub3QgYmUgc3RpdGNoZWQgdG9nZXRoZXIgYWNyb3NzIHBhcGVycy4KVG8gYW5vbnltaXplIHBhcnRpY2lwYW50IElEcywgdXNlIHRoZSBmb2xsb3dpbmcgc2NyaXB0IGFuZCBjaGFuZ2UgdGhlIHNlZWQgZm9yIGV2ZXJ5IHBhcGVyIHNvIHRoYXQgYSBnaXZlbiBwYXJ0aWNpcGFudCBnZXRzIGEgZGlmZmVyZW50IGFub255bWl6ZWQgY29kZSBlYWNoIHRpbWUuCgpbaHR0cHM6Ly9kZXZwc3lsYWIuZ2l0aHViLmlvL0RhdGFBbmFseXNpcy9vc2YuaHRtbCNhbm9ueW1pemVkSURdKGh0dHBzOi8vZGV2cHN5bGFiLmdpdGh1Yi5pby9EYXRhQW5hbHlzaXMvb3NmLmh0bWwjc2VjLWFub255bWl6ZWRJRCkKCiMjIyBEYXRhIERpY3Rpb25hcnkgeyNvc2ZEYXRhRGljdGlvbmFyeX0KCkZvciBlYWNoIHBhcGVyIHByb2plY3QsIHdlIGV4cG9ydCBhIGAuY3N2YCBmaWxlIHdpdGggdGhlIHN1YnNldCBvZiB0aGUgW0RhdGEgRGljdGlvbmFyeV0oI2RhdGFEaWN0aW9uYXJ5KSB2YXJpYWJsZXMgdXNlZCBmb3IgdGhhdCBzcGVjaWZpYyBwYXBlci4KV2UgdXBsb2FkIHRoYXQgYC5jc3ZgIGZpbGUgdG8gdGhlIE9TRi4KVGhlIGZvcm1hdHRpbmcgb2YgdGhlIERhdGEgRGljdGlvbmFyeSBpcyBkZXNjcmliZWQgW2hlcmVdKCNkYXRhRGljdGlvbmFyeSkuCgojIyMgQW5hbHlzaXMgQ29kZSB7I29zZkFuYWx5c2lzQ29kZX0KCiMjIyBSZXNlYXJjaCBNYXRlcmlhbHMgeyNvc2ZNYXRlcmlhbHN9CgojIyMgUHJlcHJpbnQgeyNvc2ZQcmVwcmludH0KCiMjIENyZWF0ZSBBbm9ueW1vdXMgVmlldy1Pbmx5IExpbmtzIGZvciBBbm9ueW1vdXMgUGVlciBSZXZpZXcgeyNhbm9ueW1vdXNWaWV3T25seUxpbmt9CgpXaXRoIHlvdXIgcHJvamVjdCBvcGVuLCBnbyB0byBTZXR0aW5ncyAodG9wLXJpZ2h0KSDihpIgVmlldy1Pbmx5IExpbmtzIOKGkiBBZGQuClRoZW4gY2hlY2sgIkFub255bWl6ZSIuClRoZW4geW91IGNhbiBzaGFyZSB0aGF0IFVSTC4KRm9yIGRldGFpbGVkIGluc3RydWN0aW9ucywgc2VlIGhlcmU6IGh0dHBzOi8vaGVscC5vc2YuaW8vYXJ0aWNsZS8yMDEtY3JlYXRlLWEtdmlldy1vbmx5LWxpbmstZm9yLWEtcHJvamVjdCAoYXJjaGl2ZWQgYXQgaHR0cHM6Ly9wZXJtYS5jYy9BR0o5LVY0ODcpCgojIE1hbnVzY3JpcHQgU3VibWlzc2lvbiB0byBhIEpvdXJuYWwgeyNqb3VybmFsfQoKQmVmb3JlIHN1Ym1pdHRpbmcgYSBtYW51c2NyaXB0IHRvIGEgam91cm5hbCwgbWFrZSBzdXJlIHRvIHBvc3QgdGhlIHJlbGV2YW50IG1hdGVyaWFscyBvbiB0aGUgW09TRl0oI29zZiksIGFzIGRlc2NyaWJlZCBbaGVyZV0oI29zZiksIGFuZCBwb3N0IHRoZSBwcmVwcmludCwgYXMgZGVzY3JpYmVkIFtoZXJlXSgjcHJlcHJpbnQpLgpXaGVuIHByZXBhcmluZyBhIG1hbnVzY3JpcHQgZm9yIHN1Ym1pc3Npb24gdG8gYSBqb3VybmFsLCBtYWtlIHN1cmUgdG8gZm9sbG93IHRoZSBBdXRob3IgR3VpZGVsaW5lcyBmb3IgZWFjaCBqb3VybmFsLgpBZnRlciBmaW5hbGl6aW5nIHRoZSBtYW51c2NyaXB0IGluIGFjY29yZGFuY2Ugd2l0aCBqb3VybmFsIGd1aWRlbGluZXMgYW5kIHdoZW4geW91IGFyZSByZWFkeSB0byBzdWJtaXQgdGhlIHBhcGVyIHRvIHRoZSBqb3VybmFsIChidXQgYmVmb3JlIHN1Ym1pc3Npb24pLCBwb3N0IHRoZSBbcHJlcHJpbnRdKCNwcmVwcmludCkgb24gW1BzeUFyWGl2XShodHRwczovL3BzeWFyeGl2LmNvbSkuCkluY2x1ZGUgdGhlIGxpbmsgdG8gdGhlIHByZXByaW50IGluIHRoZSBjb3ZlciBsZXR0ZXIgdG8gdGhlIGpvdXJuYWwuCkluIHRoZSBtZXRob2Qgc2VjdGlvbiBhbmQgb24gdGhlIHRpdGxlIHBhZ2UsIGluY2x1ZGUgdGhlIHJlbGV2YW50IE9TRiBsaW5rcyB0byB0aGUgcHJlLXJlZ2lzdHJhdGlvbiwgZGF0YSwgZGF0YSBkaWN0aW9uYXJ5LCBhbmFseXNpcyBjb2RlLCBjb21wdXRhdGlvbmFsIG5vdGVib29rLCBhbmQgcmVzZWFyY2ggbWF0ZXJpYWxzLCBldGMuCkZvciBleGFtcGxlOgoKPiBIeXBvdGhlc2VzIGFuZCBtZWFzdXJlcyBmb3IgdGhlIFNjaG9vbCBSZWFkaW5lc3MgU3R1ZHkgd2VyZSBwcmUtcmVnaXN0ZXJlZDogaHR0cHM6Ly9vc2YuaW8vanp4YjguCj4gSHlwb3RoZXNlcyBtZXRob2RzLCBhbmQgYSBkYXRhIGFuYWx5c2lzIHBsYW4gZm9yIHRoZSBwcmVzZW50IHN0dWR5IHdlcmUgYWxzbyBwcmUtcmVnaXN0ZXJlZDogaHR0cHM6Ly9vc2YuaW8vcG55MjYuCj4gRGF0YSBmaWxlcywgYSBkYXRhIGRpY3Rpb25hcnksIGFuYWx5c2lzIHNjcmlwdHMsIGFuZCBhIGNvbXB1dGF0aW9uYWwgbm90ZWJvb2sgZm9yIHRoZSBwcmVzZW50IHN0dWR5IGFyZSBwdWJsaXNoZWQgb25saW5lOiBodHRwczovL29zZi5pby96czJibi4KCkluIHRoZSBtYW51c2NyaXB0IHN1Ym1pc3Npb24sIGNyZWF0ZSBhbmQgdXNlIFthbm9ueW1vdXMgdmlldy1vbmx5IE9TRiBsaW5rc10oI2Fub255bW91c1ZpZXdPbmx5TGluaykgKGZvciBibGluZCByZXZpZXcpLgpJbiB0aGUgcHJlcHJpbnQgc3VibWlzc2lvbiwgdXNlIHRoZSBnZW5lcmFsIE9TRiBsaW5rcyAobm90IHRoZSBbYW5vbnltb3VzIHZpZXctb25seSBPU0YgbGlua3NdKCNhbm9ueW1vdXNWaWV3T25seUxpbmspKSB0aGF0IHdpbGwgYmVjb21lIHZpZXdhYmxlIHdoZW4gdGhlIG1hbnVzY3JpcHQgaXMgYWNjZXB0ZWQgZm9yIHB1YmxpY2F0aW9uIChpLmUuLCB3aGVuIHlvdSBtYWtlIHRoZSBPU0YgcmVwbyBwdWJsaWMpLgoKIyBXaGVuIHRoZSBNYW51c2NyaXB0IGlzIEFjY2VwdGVkIGZvciBQdWJsaWNhdGlvbiB7I2FjY2VwdGVkfQoKV2hlbiB0aGUgbWFudXNjcmlwdCBpcyBhY2NlcHRlZCBmb3IgcHVibGljYXRpb246CgoxLiBMZXQgYWxsIG9mIHRoZSBhdXRob3JzIGtub3csIGFuZCBzZW5kIHRoZW0gdGhlIGZ1bGwsIChpbi1wcmVzcykgQVBBLXN0eWxlIHJlZmVyZW5jZQoxLiBNYWtlIHRoZSBPU0YgcmVwbyBwdWJsaWMgYW5kIFtjcmVhdGUgYSBET0kgbGlua10oaHR0cHM6Ly9oZWxwLm9zZi5pby9hcnRpY2xlLzIyMC1jcmVhdGUtZG9pcykgZm9yIHRoZSByZXBvc2l0b3J5IHRoYXQgY2FuIGJlIHVzZWQgZm9yIGNpdGluZyBpdAoxLiBTdWJtaXQgdGhlIGZpbmFsaXplZCwgdW5ibGluZGVkIG1hbnVzY3JpcHQgKGFuZCBhbnkgdGFibGVzLCBmaWd1cmVzLCBhbmQgdGhlIHN1cHBsZW1lbnQ7IHdpdGggdGhlIHB1YmxpYyBPU0YgbGluazsgcmVtb3ZpbmcgYW55IGhpZ2hsaWdodGluZyBvciB0cmFja2VkIGNoYW5nZXMpIHRvIHRoZSBOSUhNUyBzeXN0ZW06IGh0dHBzOi8vd3d3Lm5paG1zLm5paC5nb3Yvc3VibWlzc2lvbi9jcmVhdGUvCiAgICAtIEFmdGVyIHlvdSBzdWJtaXQgdGhlIG1hbnVzY3JpcHQgdG8gTklITVMsIHNlbmQgRHIuIFBldGVyc2VuIHRoZSBOSUhNUyBJRCBmb3IgdGhlIHN1Ym1pc3Npb24uCiAgICBXZSBhcmUgcmVxdWlyZWQgdG8gcmVwb3J0IHB1Ymxpc2hlZCBwYXBlcnMgdG8gZnVuZGluZyBhZ2VuY2VzLgoxLiBNYWtlIHN1cmUgdGhlIGZpbmFsaXplZCwgdW5ibGluZGVkIG1hbnVzY3JpcHQgKGFuZCBhbnkgdGFibGVzLCBmaWd1cmVzLCBhbmQgdGhlIHN1cHBsZW1lbnQ7IHdpdGggdGhlIHB1YmxpYyBPU0YgbGluazsgcmVtb3ZpbmcgYW55IGhpZ2hsaWdodGluZyBvciB0cmFja2VkIGNoYW5nZXMpIGlzIHVwbG9hZGVkIGFzIGFuIHVwZGF0ZWQgdmVyc2lvbiBvZiB0aGUgW3ByZXByaW50XSgjcHJlcHJpbnQpIG9uIFtQc3lBclhpdl0oaHR0cHM6Ly9wc3lhcnhpdi5jb20pLgoKIyBBZGFwdGluZyBPcGVuIFNjaWVuY2UgdG8gTG9uZ2l0dWRpbmFsIFJlc2VhcmNoIHsjbG9uZ2l0dWRpbmFsfQoKU2VlIG91ciBwYXBlciBvbiBhZGFwdGluZyBvcGVuIHNjaWVuY2UgdG8gbG9uZ2l0dWRpbmFsIHJlc2VhcmNoOiBodHRwczovL29ubGluZWxpYnJhcnkud2lsZXkuY29tL2RvaS8xMC4xMDAyL2ljZC4yMzE1CgpbXjFdOiBBc2sgRHIuIFBldGVyc2VuIHRvIGdpdmUgeW91IGFjY2Vzcy4K</div>
-<script type="text/javascript" src="includes/external-links.js"></script>
-
+</section><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add lab logo -->
@@ -931,7 +705,7 @@ class="footnote-back">↩︎</a></p></li>
 </p>
 
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add icon library -->
@@ -944,87 +718,707 @@ class="footnote-back">↩︎</a></p></li>
     <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
 	<a href="https://www.instagram.com/devpsylab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
 </p>
-
-
-</div>
-</div>
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("openScience.Rmd");
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
-
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    options.showAndHide = true;
-    options.smoothScroll = true;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/DevPsyLab\.github\.io\/LabWiki\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Open Science"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Overview {#sec-overview}</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>We, as a lab, value and strive to advance the mission of <span class="co">[</span><span class="ot">open science</span><span class="co">](https://onlinelibrary.wiley.com/doi/10.1002/icd.2315)</span> to improve the accessibility, reproducibility, and replicability of science.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>As such, all lab members are expected to conduct research transparently and to promote reproducibility.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>This includes, but is not limited to, <span class="co">[</span><span class="ot">pre- or co-registering</span><span class="co">](#sec-preregistration)</span> studies, <span class="co">[</span><span class="ot">sharing analysis scripts and data</span><span class="co">](#sec-sharing)</span>, using <span class="co">[</span><span class="ot">version control</span><span class="co">](#sec-versionControl)</span> (GitLab), submitting <span class="co">[</span><span class="ot">preprints</span><span class="co">](https://psyarxiv.com)</span> when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Our lab's template for projects on the <span class="co">[</span><span class="ot">Open Science Framework</span><span class="co">](https://osf.io)</span> (OSF) is located here<span class="ot">[^1]</span>: <span class="ot">&lt;https://osf.io/4w9sv&gt;</span>.</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pre-Registration (or Co-Registration) {#sec-preregistration}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>There is a continuum of registration approaches.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Pre-registration involves publicly posting aspects of a study (e.g., study design, hypotheses, methods, materials, and analysis plan) before data collection begins.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Co-registration involves specifying aspects of your study after data collection starts but before analysis.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Post-registration involves specifying aspects of your study after after analysis has begun.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Pre-registration is often considered the gold-standard.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>However, co-registration and post-registration are better than no registration.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Here are elements of a study that can be registered:</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>study design</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>hypotheses</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>methods</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>materials</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>analysis plan</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>When analysis decisions are contingent upon prior steps that may influence which decision to take, the analysis plan can include decision trees (e.g., if X, then Y; if A, then B).</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>For example, you can specify how you would proceed if the measures do not demonstrate longitudinal factorial invariance, or how you would handle poorly fitting models.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Sharing Data, Analysis Scripts, and Research Materials {#sec-sharing}</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Dictionary {#sec-dataDictionary}</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>For each study, we create a Data Dictionary.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>A Data Dictionary is a metadata file that tells people the meaning of variables in the data file and how to interpret them.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Style Guide {#sec-styleGuide}</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use Roboto font size 10</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use an en dash (<span class="in">`–`</span>; i.e., not a hyphen) to indicate a range:</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>e.g., 1–18 (not 1-18)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### Columns {#sec-columns}</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>The Data Dictionary should have the following columns:</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variable Name</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the variable name in the data file</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Form Name</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the instrument or measure that the variable comes from</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Human-Readable Variable Name</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>a more easily readable version of the variable name</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Type</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the format of the values in the column (e.g., string, binary, integer, numeric, date, time, etc.)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variable Type</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>whether the scale of measurement is nominal, ordinal, interval, or ratio</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Measurement Unit</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the conceptual unit that is being measured (e.g., seconds, level, count)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Allowed Values</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the allowed values for a variable and (if possible), what conceptual level each value corresponds to (e.g., 0 = Male; 1 = Female)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Description</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>conceptual description of the variable</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Definition</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>definitions of abbreviations, conceptual defintions of terms, mathematical definitions of how a variable is calculated, etc.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Notes</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>additional notes about the variable and how it is calculated</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>References</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>references for the measure and/or variable</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Data Types {#sec-dataTypes}</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>Data Types include:</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>string</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>include letters or other characters (and possibly numbers)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>factor</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>categorical variable with letters and/or numbers</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>binary</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>0/1</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>integer</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>whole numbers (never decimals)</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>numeric</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>numbers</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>date</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`MM/DD/YYYY`</span>; e.g., 06/24/2020</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>time</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`HH:MM:SS`</span> (e.g., 01<span class="sc">:30:</span>24), or <span class="in">`HH:MM`</span> (e.g., 05:24), or <span class="in">`MM:SS`</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>date-time</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`MM/DD/YYYY HH:MM:SS`</span> (e.g., 06/24/2020 01<span class="sc">:30:</span>24)</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Variable Types {#sec-variableTypes}</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>Variable Types include:</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>nominal</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>distinct categories</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ordinal</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>ordered categories</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>interval</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>ordered with meaningful distances</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ratio</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>ordered with meaningful distances and an absolute zero</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Measurement Units {#sec-measurementUnits}</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>Measurement Units include:</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ID</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>participant identification (ID) numbers</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>count</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>number of something (e.g., number of children in the household)</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>group</span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>categories that reflect different groups (e.g., female vs male)</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>instance</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>nominal categories that do not reflect groups</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>yes/no</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>0 = No; 1 = Yes</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ratio</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>ratio of two variables (one variable divided by another variable)</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>USD</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>U.S. dollars ($)</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>option</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>categories that reflect participant's choice among multiple options</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>location</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>categories that reflect different locations</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>state</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>categories that reflect a status</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>degree</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the degree of</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>level</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>the level of</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>grade</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>school grade</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>date</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`MM/DD/YYYY`</span>; e.g., 06/24/2020</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>time</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`HH:MM:SS`</span> (e.g., 01<span class="sc">:30:</span>24), or <span class="in">`HH:MM`</span> (e.g., 05:24), or <span class="in">`MM:SS`</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>date-time</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`MM/DD/YYYY HH:MM:SS`</span> (e.g., 06/24/2020 01<span class="sc">:30:</span>24)</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>milliseconds</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>seconds</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>minutes</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>hours</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>days</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>months</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>years</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>percentile</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>item</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="fu"># Version Control {#sec-versionControl}</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>We use <span class="co">[</span><span class="ot">GitLab</span><span class="co">](https://research-git.uiowa.edu)</span> for version control.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>See our <span class="co">[</span><span class="ot">lab's guide for using GitLab</span><span class="co">](https://devpsylab.github.io/DataAnalysis/git.html)</span>.</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>Our lab's template for GitLab repositories is located here<span class="ot">[^1]</span>: <span class="ot">&lt;https://research-git.uiowa.edu/PetersenLab/Template&gt;</span>.</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preprint {#sec-preprint}</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>When submitting a manuscript to a journal, also submit a preprint to <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>Combine the supplemental material and manuscript into one PDF file when posting.</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="fu"># OSF {#sec-osf}</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">Open Science Framework</span><span class="co">](https://osf.io)</span> (OSF) is a website for hosting pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen.</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>Our lab's template for projects on the Open Science Framework (OSF) can be found here<span class="ot">[^1]</span>: <span class="ot">&lt;https://osf.io/4w9sv&gt;</span>.</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## Components {#sec-components}</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>Create a component in the OSF project repository for the following components:</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pre-registration (or Co-registration)</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data Dictionary</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analysis Code</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Research Materials</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Preprint</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Pre-registration {#sec-osfPreregistration}</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data {#sec-osfData}</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID&gt;</span></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Dictionary {#sec-osfDataDictionary}</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>For each paper project, we export a <span class="in">`.csv`</span> file with the subset of the <span class="co">[</span><span class="ot">Data Dictionary</span><span class="co">](#sec-dataDictionary)</span> variables used for that specific paper.</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>We upload that <span class="in">`.csv`</span> file to the OSF.</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>The formatting of the Data Dictionary is described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-dataDictionary)</span>.</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Analysis Code {#sec-osfAnalysisCode}</span></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research Materials {#sec-osfMaterials}</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preprint {#sec-osfPreprint}</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="fu">## Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>With your project open, go to Settings (top-right) → View-Only Links → Add.</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>Then check "Anonymize".</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>Then you can share that URL.</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>For detailed instructions, see here: <span class="ot">&lt;https://help.osf.io/article/201-create-a-view-only-link-for-a-project&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/AGJ9-V487&gt;</span>)</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu"># Manuscript Submission to a Journal {#sec-journal}</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>Before submitting a manuscript to a journal, make sure to post the relevant materials on the <span class="co">[</span><span class="ot">OSF</span><span class="co">](#sec-osf)</span>, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-osf)</span>, and post the preprint, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-preprint)</span>.</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>Include the link to the preprint in the cover letter to the journal.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>For example:</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses and measures for the School Readiness Study were pre-registered: </span><span class="ot">&lt;https://osf.io/jzxb8&gt;</span><span class="at">.</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses methods, and a data analysis plan for the present study were also pre-registered: </span><span class="ot">&lt;https://osf.io/pny26&gt;</span><span class="at">.</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: </span><span class="ot">&lt;https://osf.io/zs2bn&gt;</span><span class="at">.</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>In the manuscript submission, create and use <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span> (for blind review).</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>In the preprint submission, use the general OSF links (not the <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span>) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="fu"># When the Manuscript is Accepted for Publication {#sec-accepted}</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>When the manuscript is accepted for publication:</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Let all of the authors know, and send them the full, (in-press) APA-style reference</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make the OSF repo public and <span class="co">[</span><span class="ot">create a DOI link</span><span class="co">](https://help.osf.io/article/220-create-dois)</span> for the repository that can be used for citing it</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <span class="ot">&lt;https://www.nihms.nih.gov/submission/create/&gt;</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    We are required to report published papers to funding agences.</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu"># Adapting Open Science to Longitudinal Research {#sec-longitudinal}</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>See our paper on adapting open science to longitudinal research: <span class="ot">&lt;https://onlinelibrary.wiley.com/doi/10.1002/icd.2315&gt;</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Ask Dr. Petersen to give you access.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
 
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
-</body>
-</html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/openScience.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/openScience.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

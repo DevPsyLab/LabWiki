@@ -1,560 +1,426 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<html>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
 
-<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="author" content="Isaac T. Petersen">
+<meta name="dcterms.date" content="today">
 
-
-
-
-<title>REDCap Manual</title>
-
-<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/navigation-1.1/sourceembed.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8JSDTYMH7P');
-</script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
+<title>REDCap Manual – Lab Wiki for the Developmental Psychopathology Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
 }
-</script>
-
-
-
-
-<style type="text/css">
-#rmd-source-code {
-  display: none;
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-</style>
-
-
-<link rel="stylesheet" href="includes/custom.css" type="text/css" />
-<link rel="stylesheet" href="font/css/roboto.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-details > summary > p:only-child {
-  display: inline;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-
-
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
 @media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
   }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
 </style>
 
 
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-9278de052701f0b3f1191ef96b26c196.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8JSDTYMH7P"></script>
 
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="includes/custom.css">
+<link rel="stylesheet" href="font/css/roboto.css">
 </head>
 
-<body>
+<body class="nav-fixed quarto-light">
 
-
-<div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Lab Wiki for the Developmental Psychopathology Lab</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo light-content">
+    <img src="./images/labLogo.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lab Wiki for the Developmental Psychopathology Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab-manual.html"> 
+<span class="menu-text">Lab Manual</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-expectations" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Expectations</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-expectations">    
         <li>
-  <a href="manual.html">Lab Manual</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Expectations
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="expectations-everyone.html">Everyone</a>
-    </li>
-    <li>
-      <a href="expectations-undergradRA.html">Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="expectations-SROP.html">SROP Students</a>
-    </li>
-    <li>
-      <a href="expectations-gradStudent.html">Graduate Students</a>
-    </li>
-    <li>
-      <a href="expectations-labCoordinator.html">Lab Coordinator</a>
-    </li>
-    <li>
-      <a href="expectations-labStaff.html">Lab Staff</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Documentation
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="adobe.html">Adobe</a>
-    </li>
-    <li>
-      <a href="https://devpsylab.github.io/DataAnalysis">Data Analysis Guides</a>
-    </li>
-    <li>
-      <a href="honors.html">Honors Projects</a>
-    </li>
-    <li>
-      <a href="mediationModeration.html">Mediation and Moderation</a>
-    </li>
-    <li>
-      <a href="openScience.html">Open Science</a>
-    </li>
-    <li>
-      <a href="opportunities.html">Opportunities</a>
-    </li>
-    <li>
-      <a href="redcap-manual.html">REDCap</a>
-    </li>
-    <li>
-      <a href="qualtrics-manual.html">Qualtrics</a>
-    </li>
-    <li>
-      <a href="documentation-remote.html">Remote Participation</a>
-    </li>
-    <li>
-      <a href="social-media.html">Social Media</a>
-    </li>
-    <li>
-      <a href="studies.html">Studies</a>
-    </li>
-    <li>
-      <a href="video-editing.html">Video Editing</a>
-    </li>
-    <li>
-      <a href="vsCode.html">Visual Studio Code</a>
-    </li>
-    <li>
-      <a href="writing.html">Writing Guidelines</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Studies
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="study-externalizingSpectrumAcrossLifespan.html">Externalizing Spectrum Across the Lifespan</a>
-    </li>
-    <li>
-      <a href="study-schoolReadinessStudy.html">School Readiness Study</a>
-    </li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Prospective Applicants
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="prospective-undergradRA.html">Prospective Undergraduate Research Assistants</a>
-    </li>
-    <li>
-      <a href="prospective-gradStudent.html">Prospective Graduate Students</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="about.html">About</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+    <a class="dropdown-item" href="./expectations-everyone.html">
+ <span class="dropdown-text">Everyone</span></a>
+  </li>  
         <li>
-  <a href="https://developmental-psychopathology.lab.uiowa.edu">Lab Website</a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div id="header">
-
-<div class="btn-group pull-right float-right">
-<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-<li role="separator" class="divider"></li>
-<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+    <a class="dropdown-item" href="./expectations-undergradRA.html">
+ <span class="dropdown-text">Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-SROP.html">
+ <span class="dropdown-text">SROP Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-gradStudent.html">
+ <span class="dropdown-text">Graduate Students</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labCoordinator.html">
+ <span class="dropdown-text">Lab Coordinator</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./expectations-labStaff.html">
+ <span class="dropdown-text">Lab Staff</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-documentation" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Documentation</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-documentation">    
+        <li>
+    <a class="dropdown-item" href="./adobe.html">
+ <span class="dropdown-text">Adobe</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://devpsylab.github.io/DataAnalysis">
+ <span class="dropdown-text">Data Analysis Guides</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./honors.html">
+ <span class="dropdown-text">Honors Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mediationModeration.html">
+ <span class="dropdown-text">Mediation and Moderation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./openScience.html">
+ <span class="dropdown-text">Open Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./opportunities.html">
+ <span class="dropdown-text">Opportunities</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./redcap-manual.html">
+ <span class="dropdown-text">REDCap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./qualtrics-manual.html">
+ <span class="dropdown-text">Qualtrics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./documentation-remote.html">
+ <span class="dropdown-text">Remote Participation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./social-media.html">
+ <span class="dropdown-text">Social Media</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./studies.html">
+ <span class="dropdown-text">Studies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./video-editing.html">
+ <span class="dropdown-text">Video Editing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./vsCode.html">
+ <span class="dropdown-text">Visual Studio Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing.html">
+ <span class="dropdown-text">Writing Guidelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-studies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Studies</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-studies">    
+        <li>
+    <a class="dropdown-item" href="./study-externalizingSpectrumAcrossLifespan.html">
+ <span class="dropdown-text">Externalizing Spectrum Across the Lifespan</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./study-schoolReadinessStudy.html">
+ <span class="dropdown-text">School Readiness Study</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-prospective-applicants" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Prospective Applicants</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-prospective-applicants">    
+        <li>
+    <a class="dropdown-item" href="./prospective-undergradRA.html">
+ <span class="dropdown-text">Prospective Undergraduate Research Assistants</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./prospective-gradStudent.html">
+ <span class="dropdown-text">Prospective Graduate Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About This Website</span></a>
+  </li>  
 </ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://developmental-psychopathology.lab.uiowa.edu"> 
+<span class="menu-text">Lab Website</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/DevPsyLab/LabWiki/issues/new">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+    <a href="https://twitter.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <a href="https://www.facebook.com/DevPsyLab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/devpsylab" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-instagram"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#redcap-data-management" id="toc-redcap-data-management" class="nav-link active" data-scroll-target="#redcap-data-management"><span class="header-section-number">1</span> REDCap Data Management</a>
+  <ul>
+  <li><a href="#sec-updates" id="toc-sec-updates" class="nav-link" data-scroll-target="#sec-updates"><span class="header-section-number">1.1</span> Updating instruments in REDCap</a></li>
+  <li><a href="#sec-addPersonnel" id="toc-sec-addPersonnel" class="nav-link" data-scroll-target="#sec-addPersonnel"><span class="header-section-number">1.2</span> Adding new RAs to REDCap/tasks</a></li>
+  <li><a href="#sec-addFields" id="toc-sec-addFields" class="nav-link" data-scroll-target="#sec-addFields"><span class="header-section-number">1.3</span> Adding fields to an instrument</a></li>
+  <li><a href="#sec-branchingLogic" id="toc-sec-branchingLogic" class="nav-link" data-scroll-target="#sec-branchingLogic"><span class="header-section-number">1.4</span> Branching Logic</a></li>
+  <li><a href="#sec-fieldEmbedding" id="toc-sec-fieldEmbedding" class="nav-link" data-scroll-target="#sec-fieldEmbedding"><span class="header-section-number">1.5</span> Field Embedding</a></li>
+  <li><a href="#sec-survey" id="toc-sec-survey" class="nav-link" data-scroll-target="#sec-survey"><span class="header-section-number">1.6</span> Designating Instruments as a Survey</a></li>
+  <li><a href="#sec-designateInstruments" id="toc-sec-designateInstruments" class="nav-link" data-scroll-target="#sec-designateInstruments"><span class="header-section-number">1.7</span> Designating Instruments to Events</a></li>
+  <li><a href="#sec-repeatableInstrument" id="toc-sec-repeatableInstrument" class="nav-link" data-scroll-target="#sec-repeatableInstrument"><span class="header-section-number">1.8</span> Designating Instruments as Repeatable</a></li>
+  </ul></li>
+  <li><a href="#sec-createInstrument" id="toc-sec-createInstrument" class="nav-link" data-scroll-target="#sec-createInstrument"><span class="header-section-number">2</span> Creating Instruments in REDCap</a>
+  <ul>
+  <li><a href="#sec-newInstrumentSteps" id="toc-sec-newInstrumentSteps" class="nav-link" data-scroll-target="#sec-newInstrumentSteps"><span class="header-section-number">2.1</span> Steps to Add a New Instrument</a></li>
+  <li><a href="#sec-goodPractices" id="toc-sec-goodPractices" class="nav-link" data-scroll-target="#sec-goodPractices"><span class="header-section-number">2.2</span> Good Practices</a></li>
+  <li><a href="#sec-creatingVariables" id="toc-sec-creatingVariables" class="nav-link" data-scroll-target="#sec-creatingVariables"><span class="header-section-number">2.3</span> Creating Variables</a></li>
+  <li><a href="#sec-smartVariables" id="toc-sec-smartVariables" class="nav-link" data-scroll-target="#sec-smartVariables"><span class="header-section-number">2.4</span> Adding Smart Variables to Questionnaires</a>
+  <ul>
+  <li><a href="#sec-timestamps" id="toc-sec-timestamps" class="nav-link" data-scroll-target="#sec-timestamps"><span class="header-section-number">2.4.1</span> Timestamps</a></li>
+  <li><a href="#sec-dateTimestampDuration" id="toc-sec-dateTimestampDuration" class="nav-link" data-scroll-target="#sec-dateTimestampDuration"><span class="header-section-number">2.4.2</span> Date Completed, Time Completed and Survey Durations</a></li>
+  </ul></li>
+  <li><a href="#sec-troubleshooting" id="toc-sec-troubleshooting" class="nav-link" data-scroll-target="#sec-troubleshooting"><span class="header-section-number">2.5</span> Troubleshooting</a></li>
+  <li><a href="#sec-howTo" id="toc-sec-howTo" class="nav-link" data-scroll-target="#sec-howTo"><span class="header-section-number">2.6</span> How To</a></li>
+  <li><a href="#sec-labUniversalNotations" id="toc-sec-labUniversalNotations" class="nav-link" data-scroll-target="#sec-labUniversalNotations"><span class="header-section-number">2.7</span> Lab Universal Notations</a></li>
+  <li><a href="#sec-dataDictionary" id="toc-sec-dataDictionary" class="nav-link" data-scroll-target="#sec-dataDictionary"><span class="header-section-number">2.8</span> Editing the Data Dictionary</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/redcap-manual.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/redcap-manual.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">REDCap Manual</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
-<h1 class="title toc-ignore">REDCap Manual</h1>
+<div class="quarto-title-meta">
 
-</div>
+    
+  
+    
+  </div>
+  
 
 
-<div id="redcap-data-management" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> REDCap Data
-Management</h1>
-<p>REDCap Support Contact: <a href="mailto:redcap@icts.uiowa.edu"
-class="email">redcap@icts.uiowa.edu</a></p>
-<p>REDCap also hosts virtual office hours. See <a
-href="https://its.uiowa.edu/services/redcap-research-electric-data-capture">here</a>
-for schedule and additional information.</p>
-<div id="updates" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Updating instruments
-in REDCap</h2>
-<ol style="list-style-type: decimal">
-<li>Should you need to make any <strong><em>IMMEDIATE</em></strong>
-changes on RedCap, create those alterations and then notify Dr. Petersen
-to push changes.</li>
+</header>
+
+
+<section id="redcap-data-management" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> REDCap Data Management</h1>
+<p>REDCap Support Contact: redcap@icts.uiowa.edu</p>
+<p>REDCap also hosts virtual office hours. See <a href="https://its.uiowa.edu/services/redcap-research-electric-data-capture">here</a> for schedule and additional information.</p>
+<section id="sec-updates" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-updates"><span class="header-section-number">1.1</span> Updating instruments in REDCap</h2>
+<ol type="1">
+<li>Should you need to make any <strong><em>IMMEDIATE</em></strong> changes on RedCap, create those alterations and then notify Dr.&nbsp;Petersen to push changes.</li>
 </ol>
-</div>
-<div id="addPersonnel" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Adding new RAs to
-REDCap/tasks</h2>
-<ol style="list-style-type: decimal">
+</section>
+<section id="sec-addPersonnel" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-addPersonnel"><span class="header-section-number">1.2</span> Adding new RAs to REDCap/tasks</h2>
+<ol type="1">
 <li>Go to “User Rights” on the left side (under “Applications”).</li>
-<li>In the text box labeled “Assign new user”, type the new lab member’s
-HawkID and click “Assign to Role” (e.g., “RA”, “Grad Student”).
+<li>In the text box labeled “Assign new user”, type the new lab member’s HawkID and click “Assign to Role” (e.g., “RA”, “Grad Student”).
 <ul>
-<li>“RA Analyst” is for RAs conducting honors projects who need to do
-data analysis.</li>
+<li>“RA Analyst” is for RAs conducting honors projects who need to do data analysis.</li>
 <li>“Project Manager” is for the Lab Coordinator.</li>
-<li>“Add Measures” is for selected RAs who are deemed ready by
-Dr. Petersen to make edits/additions to measures in REDCap</li>
-<li>After assigning them to the correct role, go to “DAGs” on the left
-side (under “Applications”).</li>
+<li>“Add Measures” is for selected RAs who are deemed ready by Dr.&nbsp;Petersen to make edits/additions to measures in REDCap</li>
+<li>After assigning them to the correct role, go to “DAGs” on the left side (under “Applications”).</li>
 </ul></li>
-<li>To add an RA to their specific task, go to Project Home → Project
-Setup → Online Designer → click on name of required task in the left
-column</li>
+<li>To add an RA to their specific task, go to Project Home → Project Setup → Online Designer → click on name of required task in the left column</li>
 <li>Select “Edit” on the “Coder Name” field.</li>
-<li>Under “Choices (one choice per line)”, add the subsequent number
-followed by a comma and the RA’s name.</li>
+<li>Under “Choices (one choice per line)”, add the subsequent number followed by a comma and the RA’s name.</li>
 <li>Click “Save”.</li>
 </ol>
-</div>
-<div id="addFields" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Adding fields to an
-instrument</h2>
-<ol style="list-style-type: decimal">
-<li>To edit an instrument, go to: Project Home → Project Setup → Online
-Designer → click on name of required task in the left column</li>
-<li>Select the correct location where question needs to be added and
-select “Add Field”</li>
+</section>
+<section id="sec-addFields" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-addFields"><span class="header-section-number">1.3</span> Adding fields to an instrument</h2>
+<ol type="1">
+<li>To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column</li>
+<li>Select the correct location where question needs to be added and select “Add Field”</li>
 <li>Select field type—the most frequently we use are:
 <ul>
 <li>Text Box</li>
 <li>Multiple Choice</li>
 <li>Yes/No</li>
 <li>True/False</li>
-<li><strong>Note</strong>: For Multiple Choice Questions and Checkboxes,
-enter one answer choice per line in the box labeled “Choices”</li>
+<li><strong>Note</strong>: For Multiple Choice Questions and Checkboxes, enter one answer choice per line in the box labeled “Choices”</li>
 </ul></li>
 <li>Add variable name:
 <ul>
 <li>Variable names must be unique</li>
-<li>Variable names within the same instrument should have the same
-beginning (e.g. all variables within the school information instrument
-start with “school_”)</li>
+<li>Variable names within the same instrument should have the same beginning (e.g.&nbsp;all variables within the school information instrument start with “school_”)</li>
 </ul></li>
 <li>Indicate whether question is required</li>
-<li>Add data validation (if possible) to reduce the possibility of human
-error in data entry</li>
-<li>Questions within the same instrument may belong to different
-sections. To add a new section:
+<li>Add data validation (if possible) to reduce the possibility of human error in data entry</li>
+<li>Questions within the same instrument may belong to different sections. To add a new section:
 <ul>
 <li>Click “Add Field”</li>
 <li>As field type select “Begin New Section (with optional text)</li>
@@ -562,147 +428,100 @@ sections. To add a new section:
 <li>Save</li>
 </ul></li>
 </ol>
-</div>
-<div id="branchingLogic" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Branching Logic</h2>
-<p>Branching logic is a method to link two questions with each other.
-The answer of Question A will determine whether Question B will be
-displayed. Typically question A is a checkbox or multiple-choice
-question. Follow the below steps to use branching logic:</p>
-<ol style="list-style-type: decimal">
+</section>
+<section id="sec-branchingLogic" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="sec-branchingLogic"><span class="header-section-number">1.4</span> Branching Logic</h2>
+<p>Branching logic is a method to link two questions with each other. The answer of Question A will determine whether Question B will be displayed. Typically question A is a checkbox or multiple-choice question. Follow the below steps to use branching logic:</p>
+<ol type="1">
 <li>Create all questions to be linked</li>
 <li>Click on the green arrow to begin using branching logic
 <ul>
 <li>Use the drag and drop builder to create questions to be linked</li>
 <li>Use the code to link questions together
 <ul>
-<li>Example: When, <code>[other_instrument_name] = '1'</code>, show this
-question</li>
+<li>Example: When, <code>[other_instrument_name] = '1'</code>, show this question</li>
 </ul></li>
 </ul></li>
 </ol>
-</div>
-<div id="fieldEmbedding" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Field Embedding</h2>
-<p>Filed embedding is an advanced branching logic method which allows
-Question B to be directly embedded in Question A, if the relevant answer
-choice is selected.</p>
-<ol style="list-style-type: decimal">
-<li>Use branching logic to link Question B to Question A, so Question B
-will only appear if the participant selects “other” for Question A (in
-our example, variable name for Question A would be college, variable
-name for Question B: college_other)</li>
-<li>Make sure that answer choice “Other” is coded as “9” (see figure
-1)</li>
-<li>Return to Question A and add several spaces behind the answer choice
-you would like to embed.</li>
-<li>Insert variable you would like to embed in curly brackets {var_name}
-(in our example this would be {college_other}; see figure 1)</li>
+</section>
+<section id="sec-fieldEmbedding" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="sec-fieldEmbedding"><span class="header-section-number">1.5</span> Field Embedding</h2>
+<p>Filed embedding is an advanced branching logic method which allows Question B to be directly embedded in Question A, if the relevant answer choice is selected.</p>
+<ol type="1">
+<li>Use branching logic to link Question B to Question A, so Question B will only appear if the participant selects “other” for Question A (in our example, variable name for Question A would be college, variable name for Question B: college_other)</li>
+<li>Make sure that answer choice “Other” is coded as “9” (see figure 1)</li>
+<li>Return to Question A and add several spaces behind the answer choice you would like to embed.</li>
+<li>Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1)</li>
 <li>Save</li>
-<li>When testing the instrument, a textbox should now appear directly
-behind the answer choice, when selecting “Other” (see below
-example)</li>
+<li>When testing the instrument, a textbox should now appear directly behind the answer choice, when selecting “Other” (see below example)</li>
 </ol>
-<p><img src="images/redcapExample1.png" alt="RedcapExample1" /> <img
-src="images/redcapExample2.png" alt="RedcapExample2" /></p>
-</div>
-<div id="survey" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Designating
-Instruments as a Survey</h2>
-<p>If an instrument is intended to be completed by participants as a
-survey (as opposed to a data entry instrument for entry of data by lab
-members), the instrument will need to be designated as a survey. To
-designate an instrument as a survey, go to Project Home → Project Setup
-→ Online Designer → click on “Enable” under the “Enabled as Survey”
-column for the relevant instrument.</p>
-</div>
-<div id="designateInstruments" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Designating
-Instruments to Events</h2>
-<p>Most instruments in longitudinal studies will need to be desigated
-across events. Instruments should already be created and approved before
-designating to events.</p>
+<p><img src="images/redcapExample1.png" class="img-fluid" alt="RedcapExample1"> <img src="images/redcapExample2.png" class="img-fluid" alt="RedcapExample2"></p>
+</section>
+<section id="sec-survey" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="sec-survey"><span class="header-section-number">1.6</span> Designating Instruments as a Survey</h2>
+<p>If an instrument is intended to be completed by participants as a survey (as opposed to a data entry instrument for entry of data by lab members), the instrument will need to be designated as a survey. To designate an instrument as a survey, go to Project Home → Project Setup → Online Designer → click on “Enable” under the “Enabled as Survey” column for the relevant instrument.</p>
+</section>
+<section id="sec-designateInstruments" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="sec-designateInstruments"><span class="header-section-number">1.7</span> Designating Instruments to Events</h2>
+<p>Most instruments in longitudinal studies will need to be desigated across events. Instruments should already be created and approved before designating to events.</p>
 <p>To designate events, follow the below steps:</p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Go to “Designer” → “Project Setup”</li>
-<li>Under the <em>“Define your events and designate instruments for
-them”</em> section, select
-<code>Designate Instrument for my events</code></li>
-<li>Select, <code>begin editing</code> and select checkboxes for each
-event to designate the instrument to</li>
-<li><strong>Important:</strong> Update the roles in
-<code>User Rights</code> to be able to view and edit the newly
-designated instrument</li>
+<li>Under the <em>“Define your events and designate instruments for them”</em> section, select <code>Designate Instrument for my events</code></li>
+<li>Select, <code>begin editing</code> and select checkboxes for each event to designate the instrument to</li>
+<li><strong>Important:</strong> Update the roles in <code>User Rights</code> to be able to view and edit the newly designated instrument</li>
 </ol>
-</div>
-<div id="repeatableInstrument" class="section level2" number="1.8">
-<h2><span class="header-section-number">1.8</span> Designating
-Instruments as Repeatable</h2>
-<p>Some instruments will be designated as repeatable. These events will
-first need to be designated across events (See section on <a
-href="#designateInstruments">designating events</a>). Tasks that require
-multiple people to create the same form will often need to be
-repeatable. For example, coding tasks that require multiple people to
-check across forms for reliability.</p>
+</section>
+<section id="sec-repeatableInstrument" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="sec-repeatableInstrument"><span class="header-section-number">1.8</span> Designating Instruments as Repeatable</h2>
+<p>Some instruments will be designated as repeatable. These events will first need to be designated across events (See section on <a href="#sec-designateInstruments">designating events</a>). Tasks that require multiple people to create the same form will often need to be repeatable. For example, coding tasks that require multiple people to check across forms for reliability.</p>
 <p>To designate forms as repeatable, follow the below steps:</p>
-<ol style="list-style-type: decimal">
-<li>Under <em>“Enable optional modules and customizations”</em>, select
-<code>Repeatable instruments and events</code></li>
+<ol type="1">
+<li>Under <em>“Enable optional modules and customizations”</em>, select <code>Repeatable instruments and events</code></li>
 <li>Select instruments to be designated repeatable</li>
 </ol>
-</div>
-</div>
-<div id="createInstrument" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Creating Instruments in
-REDCap</h1>
-<div id="newInstrumentSteps" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Steps to Add a New
-Instrument</h2>
-<ol style="list-style-type: decimal">
+</section>
+</section>
+<section id="sec-createInstrument" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Creating Instruments in REDCap</h1>
+<section id="sec-newInstrumentSteps" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-newInstrumentSteps"><span class="header-section-number">2.1</span> Steps to Add a New Instrument</h2>
+<ol type="1">
 <li>Project Home → Project Setup → Online Designer</li>
-<li>In grey box (Data Collection Instruments), click on “+ Create” to
-create a new instrument from scratch</li>
+<li>In grey box (Data Collection Instruments), click on “+ Create” to create a new instrument from scratch</li>
 </ol>
 <p>However, an instrument will not show up for entry until:</p>
-<ol style="list-style-type: decimal">
-<li>The addition of the measure has been approved by Dr. Petersen.</li>
-<li>The instrument has been <a href="#designateInstruments">designated
-to an event</a>.</li>
-<li>(As necessary, the instrument has been <a href="#survey">designated
-as a survey</a>.)</li>
-<li>(As necessary, the instrument has been <a
-href="#repeatableInstrument">designated as repeatable</a>).</li>
-<li>User rights are updated to allow users to view the instrument (i.e.,
-“Read Only” or “View and Edit”)</li>
+<ol type="1">
+<li>The addition of the measure has been approved by Dr.&nbsp;Petersen.</li>
+<li>The instrument has been <a href="#sec-designateInstruments">designated to an event</a>.</li>
+<li>(As necessary, the instrument has been <a href="#sec-survey">designated as a survey</a>.)</li>
+<li>(As necessary, the instrument has been <a href="#sec-repeatableInstrument">designated as repeatable</a>).</li>
+<li>User rights are updated to allow users to view the instrument (i.e., “Read Only” or “View and Edit”)</li>
 </ol>
-</div>
-<div id="goodPractices" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Good Practices</h2>
+</section>
+<section id="sec-goodPractices" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-goodPractices"><span class="header-section-number">2.2</span> Good Practices</h2>
 <ul>
 <li>Include relevant instructions where applicable</li>
-<li>Omit “introductory” variables (e.g., date of birth) that are
-collected from other measures</li>
+<li>Omit “introductory” variables (e.g., date of birth) that are collected from other measures</li>
 <li>Field Labels are the same across instruments where applicable</li>
 <li>Choices are the same across instruments where applicable
 <ul>
-<li>Include numbers (if relevant) in parentheses in row below column
-choices</li>
+<li>Include numbers (if relevant) in parentheses in row below column choices</li>
 </ul></li>
 <li>Choices follow correct format: Number, Choice
 <ul>
 <li>(e.g., 1, female)</li>
 </ul></li>
-<li>For yes/no questions, use the “Yes - No” question type (rather than
-multiple choice radio buttons)
-<ol style="list-style-type: decimal">
-<li>No = 0<br />
+<li>For yes/no questions, use the “Yes - No” question type (rather than multiple choice radio buttons)
+<ol type="1">
+<li>No = 0<br>
 </li>
 <li>Yes = 1</li>
 </ol></li>
-<li>For yes/no questions with additional options (e.g., “not
-applicable”), use multiple choice radio buttons where:
-<ol style="list-style-type: decimal">
-<li>No = 0<br />
+<li>For yes/no questions with additional options (e.g., “not applicable”), use multiple choice radio buttons where:
+<ol type="1">
+<li>No = 0<br>
 </li>
 <li>Yes = 1</li>
 <li>Other = 9</li>
@@ -712,10 +531,7 @@ applicable”), use multiple choice radio buttons where:
 <ul>
 <li>Specific time (e.g., What is the child’s bedtime?):
 <ul>
-<li><strong>Begin question with instructions:</strong> Below you will
-enter your child’s bedtime. Please specify in 12-hour time (AM/PM). For
-example, if your child’s bedtime is 10:30 PM, please enter 10 hours and
-30 minutes like the example below. (show example image below)</li>
+<li><strong>Begin question with instructions:</strong> Below you will enter your child’s bedtime. Please specify in 12-hour time (AM/PM). For example, if your child’s bedtime is 10:30 PM, please enter 10 hours and 30 minutes like the example below. (show example image below)</li>
 <li>Have three variables for every time question:
 <ul>
 <li>AM/PM (Radio Button)</li>
@@ -730,16 +546,12 @@ example, if your child’s bedtime is 10:30 PM, please enter 10 hours and
 </ul></li>
 <li>Specify 12-hour time in the question
 <ul>
-<li><strong>Example</strong>: What is the child’s bedtime? Please
-specify in 12-hour time (AM/PM).</li>
+<li><strong>Example</strong>: What is the child’s bedtime? Please specify in 12-hour time (AM/PM).</li>
 </ul></li>
 </ul></li>
 <li>Duration: (e.g., How long does the child nap each day?)
 <ul>
-<li>Below you will enter how long your child naps each day. Please
-specify in hours and minutes. For example, if your child naps 2 hours
-and 30 minutes each day, please enter 2 hours and 30 minutes like the
-example below (show example image below).</li>
+<li>Below you will enter how long your child naps each day. Please specify in hours and minutes. For example, if your child naps 2 hours and 30 minutes each day, please enter 2 hours and 30 minutes like the example below (show example image below).</li>
 <li>Have two variables for every time question:
 <ul>
 <li>hours (text box), italicized.
@@ -754,112 +566,83 @@ example below (show example image below).</li>
 </ul></li>
 </ul></li>
 </ul>
-</div>
-<div id="creatingVariables" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Creating
-Variables</h2>
+</section>
+<section id="sec-creatingVariables" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-creatingVariables"><span class="header-section-number">2.3</span> Creating Variables</h2>
 <ul>
-<li>Variable names follow the lab conventions (measure_item): use
-abbreviated measure name, all lowercase, less than 26 characters</li>
+<li>Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters</li>
 <li><strong>Validation is used wherever possible</strong></li>
-<li>For variables with identifying information (e.g., name, address),
-select the checkbox labeled “Identifier”</li>
-<li>Branching logic is used to give questions only to relevant
-participants</li>
-<li>A “Matrix of Fields” is used to group together items with common
-response options</li>
-<li>For “Matrix of Fields,” only select “Ranking” if you want the
-participant to select only one response per column</li>
+<li>For variables with identifying information (e.g., name, address), select the checkbox labeled “Identifier”</li>
+<li>Branching logic is used to give questions only to relevant participants</li>
+<li>A “Matrix of Fields” is used to group together items with common response options</li>
+<li>For “Matrix of Fields,” only select “Ranking” if you want the participant to select only one response per column</li>
 <li>Where helpful, “Sections” are used to break up the questions</li>
 <li>Radio buttons are used rather than drop-down lists</li>
 <li>For crucial variables, “Required” is selected</li>
 <li>If necessary, piping is used</li>
-<li>Add the following verbatim to the end of every questionnaire (in
-italics): “Please be sure you answered all items.”
+<li>Add the following verbatim to the end of every questionnaire (in italics): “Please be sure you answered all items.”
 <ul>
-<li>Name the variable: measure_allitems (where “measure” is the
-abbreviated measure name)</li>
+<li>Name the variable: measure_allitems (where “measure” is the abbreviated measure name)</li>
 </ul></li>
 </ul>
-</div>
-<div id="smartVariables" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Adding Smart
-Variables to Questionnaires</h2>
-<p>In every surey, we want to add the following “Smart Variables”. These
-variables automatically calculate the survey start time, survey start
-date, and duration survey was completed. Variable names should follow
-the appropriate naming convention that is used for each survey. After
-you have added variables, send a (team-facing) message in Discord to the
-Lab Coordinator for review. <strong>Do not add variables to more than
-three surveys at a time.</strong> These variables should be entered at
-the end of each survey. For each survey, follow the instructions below
-to add the required smart variables:</p>
-<div id="timestamps" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Timestamps</h3>
-<ol style="list-style-type: decimal">
+</section>
+<section id="sec-smartVariables" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-smartVariables"><span class="header-section-number">2.4</span> Adding Smart Variables to Questionnaires</h2>
+<p>In every surey, we want to add the following “Smart Variables”. These variables automatically calculate the survey start time, survey start date, and duration survey was completed. Variable names should follow the appropriate naming convention that is used for each survey. After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review. <strong>Do not add variables to more than three surveys at a time.</strong> These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables:</p>
+<section id="sec-timestamps" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="sec-timestamps"><span class="header-section-number">2.4.1</span> Timestamps</h3>
+<ol type="1">
 <li>“Date/Timestamp in the rater’s timezone”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
-H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
 <li>Use variable name: <code>prefix_ratertimezone</code></li>
 <li>Add the following action tags:
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@NOW</span></li>
-<li><span class="citation">@READONLY</span></li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="NOW">@NOW</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
 </ul></li>
 </ul></li>
 <li>“Date/Timestamp (REDCap server)”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
-H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
 <li>Use variable name: <code>prefix_servertimezone</code></li>
 <li>Add the following Action tags:
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@NOW-SERVER</span></li>
-<li><span class="citation">@READONLY</span></li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="NOW-SERVER">@NOW-SERVER</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
 </ul></li>
 </ul></li>
 <li>“Date/Timestamp (UTC)”
 <ul>
-<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D
-H:M:S)</li>
+<li>Add a “Text Box” field with validation “Datetime w/seconds (Y-M-D H:M:S)</li>
 <li>Use variable name: <code>prefix_centraltimezone</code></li>
 <li>Add the following Action tags:
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@NOW-UTC</span></li>
-<li><span class="citation">@READONLY</span></li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="NOW-UTC">@NOW-UTC</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
 </ul></li>
 </ul></li>
 </ol>
-</div>
-<div id="dateTimestampDuration" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Date Completed,
-Time Completed and Survey Durations</h3>
-<p>In the below section, it is necessary to identify the
-<code>instrument_name</code> for each variable added. In REDCap, open
-the <code>Designer</code> tab and navigate to the survey to be edited.
-In the URL on the webpage, identify the instrument name for the given
-survey. For example, the below URL corresponds to the
-<em>parenting_partner</em> instrument.</p>
+</section>
+<section id="sec-dateTimestampDuration" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="sec-dateTimestampDuration"><span class="header-section-number">2.4.2</span> Date Completed, Time Completed and Survey Durations</h3>
+<p>In the below section, it is necessary to identify the <code>instrument_name</code> for each variable added. In REDCap, open the <code>Designer</code> tab and navigate to the survey to be edited. In the URL on the webpage, identify the instrument name for the given survey. For example, the below URL corresponds to the <em>parenting_partner</em> instrument.</p>
 <ul>
-<li><a
-href="https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page="
-class="uri">https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=</a><mark>parenting_partner</mark></li>
+<li>https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=<mark>parenting_partner</mark></li>
 </ul>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>“Survey Time Started:”
 <ul>
 <li>Add a “Text Box” field with no validation</li>
 <li>Use variable name: <code>prefix_timestarted</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-time-started:instrument_name])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-time-started:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Date Started:”
@@ -868,10 +651,9 @@ class="citation">@CALCTEXT</span>([survey-time-started:instrument_name])</li>
 <li>Use variable name: <code>prefix_datestarted</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-date-started:instrument_name])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-date-started:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Time Completed:”
@@ -880,10 +662,9 @@ class="citation">@CALCTEXT</span>([survey-date-started:instrument_name])</li>
 <li>Use variable name: <code>prefix_timecompleted</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-time-completed:instrument_name])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-time-completed:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Date Completed:”
@@ -892,10 +673,9 @@ class="citation">@CALCTEXT</span>([survey-time-completed:instrument_name])</li>
 <li>Use variable name: <code>prefix_datecompleted</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-date-completed:instrument_name])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-date-completed:instrument_name])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Duration:”
@@ -904,10 +684,9 @@ class="citation">@CALCTEXT</span>([survey-date-completed:instrument_name])</li>
 <li>Use variable name: <code>prefix_surveyduration</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-duration:instrument_name:m])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-duration:instrument_name:m])</li>
 </ul></li>
 </ul></li>
 <li>“Survey Duration Completed:”
@@ -916,55 +695,38 @@ class="citation">@CALCTEXT</span>([survey-duration:instrument_name:m])</li>
 <li>Use variable name: <code>prefix_surveydurationcompleted</code></li>
 <li>Add the following Action Tags
 <ul>
-<li><span class="citation">@HIDDEN-SURVEY</span></li>
-<li><span class="citation">@READONLY</span></li>
-<li><span
-class="citation">@CALCTEXT</span>([survey-duration-completed:instrument_name:m])</li>
+<li><span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span></li>
+<li><span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li><span class="citation" data-cites="CALCTEXT">@CALCTEXT</span>([survey-duration-completed:instrument_name:m])</li>
 </ul></li>
 </ul></li>
-<li>Send a (team-facing) message in Discord to the Lab Coordinator for
-review.</li>
+<li>Send a (team-facing) message in Discord to the Lab Coordinator for review.</li>
 </ol>
-</div>
-</div>
-<div id="troubleshooting" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> Troubleshooting</h2>
+</section>
+</section>
+<section id="sec-troubleshooting" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-troubleshooting"><span class="header-section-number">2.5</span> Troubleshooting</h2>
 <ul>
-<li>When a field that will be hidden by branching logic has a value,
-REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
+<li>When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: “ERASE CURRENT VALUE OF THE FIELD?”
 <ul>
-<li><a
-href="http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf"
-class="uri">http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf</a>
-(archived at <a href="https://perma.cc/6NBY-3Y5R"
-class="uri">https://perma.cc/6NBY-3Y5R</a>)</li>
-<li>If you do not want the field hidden once it contains data, add the
-following as an “OR” condition on the existing branching
+<li><a href="http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf" class="uri">http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf</a> (archived at <a href="https://perma.cc/6NBY-3Y5R" class="uri">https://perma.cc/6NBY-3Y5R</a>)</li>
+<li>If you do not want the field hidden once it contains data, add the following as an “OR” condition on the existing branching
 <ul>
 <li>logic: [field_name] &lt;&gt; “”</li>
 </ul></li>
-<li>Note: The <span class="citation">@DEFAULT</span> action tag
-<strong>cannot</strong> be used for fields that are hidden by branching
-logic</li>
+<li>Note: The <span class="citation" data-cites="DEFAULT">@DEFAULT</span> action tag <strong>cannot</strong> be used for fields that are hidden by branching logic</li>
 </ul></li>
-<li>Sometimes REDCap may record incorrect values or may fail to record
-values at all. You can check for this by:</li>
+<li>Sometimes REDCap may record incorrect values or may fail to record values at all. You can check for this by:</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>Navigating to a project, then in the side bar clicking “Data
-Quality” under “Applications”</li>
-<li>Under Rule #H “Incorrect values for calculated fields”, click
-“Execute”</li>
-<li>You will see a table with any incorrect calculated values (including
-missing values). Check the table to make sure the discrepant fields are
-what you expect. Also check to make sure there are no rows that suggest
-overwriting legitimate values. If a row looks like it is actually
-correct, click “exclude”.</li>
+<ol type="1">
+<li>Navigating to a project, then in the side bar clicking “Data Quality” under “Applications”</li>
+<li>Under Rule #H “Incorrect values for calculated fields”, click “Execute”</li>
+<li>You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click “exclude”.</li>
 <li>Click “Fix calcs now” to record the correct values in the data.</li>
 </ol>
-</div>
-<div id="howTo" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> How To</h2>
+</section>
+<section id="sec-howTo" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-howTo"><span class="header-section-number">2.6</span> How To</h2>
 <ul>
 <li>Em dash (—):
 <ul>
@@ -982,20 +744,17 @@ correct, click “exclude”.</li>
 <li>Change font size:
 <ul>
 <li><code>&lt;font size="6"&gt;This is some text!&lt;/font&gt;</code></li>
-<li><strong>Example</strong>: <font size="6">This is some
-text!</font></li>
+<li><strong>Example</strong>: <font size="6">This is some text!</font></li>
 </ul></li>
 <li>Change font color:
 <ul>
 <li><code>&lt;font color="red"&gt;This color will be red.&lt;/font&gt;</code></li>
-<li><strong>Example</strong>: <font color="red">This color will be
-red.</font></li>
+<li><strong>Example</strong>: <font color="red">This color will be red.</font></li>
 </ul></li>
 </ul>
-</div>
-<div id="labUniversalNotations" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Lab Universal
-Notations</h2>
+</section>
+<section id="sec-labUniversalNotations" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sec-labUniversalNotations"><span class="header-section-number">2.7</span> Lab Universal Notations</h2>
 <ul>
 <li>Yes = 1, No = 0</li>
 <li>True = 1, False = 0</li>
@@ -1003,8 +762,7 @@ Notations</h2>
 <li>Not Applicable = -999</li>
 <li>Coding Options
 <ul>
-<li>Correct = 2 (or 1, if there is no option for “initially incorrect,
-changed to correct”)</li>
+<li>Correct = 2 (or 1, if there is no option for “initially incorrect, changed to correct”)</li>
 <li>Incorrect = 0</li>
 <li>Initially incorrect, changed to correct = 1</li>
 <li>No response = -9</li>
@@ -1013,34 +771,31 @@ changed to correct”)</li>
 </ul>
 <p>For Likert scales:</p>
 <ul>
-<li>If there are numbers listed for the Likert scale options, use those
-numbers as the values</li>
-<li>If there are not numbers listed, check with Dr. Petersen for what
-numbers to use as the values</li>
-<li>In general, values start with number 1 (not 0—unless the value
-actually reflects complete absence of something)</li>
+<li>If there are numbers listed for the Likert scale options, use those numbers as the values</li>
+<li>If there are not numbers listed, check with Dr.&nbsp;Petersen for what numbers to use as the values</li>
+<li>In general, values start with number 1 (not 0—unless the value actually reflects complete absence of something)</li>
 <li>If there is an “Other” option, code it as “9”, if possible</li>
 <li>If there is a “N/A” option, code it as “-999”</li>
 </ul>
-</div>
-<div id="dataDictionary" class="section level2" number="2.8">
-<h2><span class="header-section-number">2.8</span> Editing the Data
-Dictionary</h2>
+</section>
+<section id="sec-dataDictionary" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sec-dataDictionary"><span class="header-section-number">2.8</span> Editing the Data Dictionary</h2>
 <ul>
-<li>If editing the data dictionary, do not use Excel!—Excel truncates
-values in cells
+<li>If editing the data dictionary, do not use Excel!—Excel truncates values in cells
 <ul>
 <li>Instead, use LibreOffice with UTF-8 encoding</li>
 </ul></li>
 </ul>
-</div>
-</div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUkVEQ2FwIE1hbnVhbCIKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZSA9IEZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZWNobyA9IFRSVUUsCiAgZXJyb3IgPSBUUlVFLAogIGNvbW1lbnQgPSAiIikKYGBgCgojIFJFRENhcCBEYXRhIE1hbmFnZW1lbnQKClJFRENhcCBTdXBwb3J0IENvbnRhY3Q6IHJlZGNhcEBpY3RzLnVpb3dhLmVkdSAKClJFRENhcCBhbHNvIGhvc3RzIHZpcnR1YWwgb2ZmaWNlIGhvdXJzLgpTZWUgW2hlcmVdKGh0dHBzOi8vaXRzLnVpb3dhLmVkdS9zZXJ2aWNlcy9yZWRjYXAtcmVzZWFyY2gtZWxlY3RyaWMtZGF0YS1jYXB0dXJlKSBmb3Igc2NoZWR1bGUgYW5kIGFkZGl0aW9uYWwgaW5mb3JtYXRpb24uIAoKIyMgVXBkYXRpbmcgaW5zdHJ1bWVudHMgaW4gUkVEQ2FwIHsjdXBkYXRlc30KCjEuIFNob3VsZCB5b3UgbmVlZCB0byBtYWtlIGFueSAqKipJTU1FRElBVEUqKiogY2hhbmdlcyBvbiBSZWRDYXAsIGNyZWF0ZSB0aG9zZSBhbHRlcmF0aW9ucyBhbmQgdGhlbiBub3RpZnkgRHIuIFBldGVyc2VuIHRvIHB1c2ggY2hhbmdlcy4gCgojIyBBZGRpbmcgbmV3IFJBcyB0byBSRURDYXAvdGFza3MgeyNhZGRQZXJzb25uZWx9CgoxLiBHbyB0byAiVXNlciBSaWdodHMiIG9uIHRoZSBsZWZ0IHNpZGUgKHVuZGVyICJBcHBsaWNhdGlvbnMiKS4KMS4gSW4gdGhlIHRleHQgYm94IGxhYmVsZWQgIkFzc2lnbiBuZXcgdXNlciIsIHR5cGUgdGhlIG5ldyBsYWIgbWVtYmVyJ3MgSGF3a0lEIGFuZCBjbGljayAiQXNzaWduIHRvIFJvbGUiIChlLmcuLCAiUkEiLCAiR3JhZCBTdHVkZW50IikuCiAgIC0gIlJBIEFuYWx5c3QiIGlzIGZvciBSQXMgY29uZHVjdGluZyBob25vcnMgcHJvamVjdHMgd2hvIG5lZWQgdG8gZG8gZGF0YSBhbmFseXNpcy4KICAgLSAiUHJvamVjdCBNYW5hZ2VyIiBpcyBmb3IgdGhlIExhYiBDb29yZGluYXRvci4KICAgLSAiQWRkIE1lYXN1cmVzIiBpcyBmb3Igc2VsZWN0ZWQgUkFzIHdobyBhcmUgZGVlbWVkIHJlYWR5IGJ5IERyLiBQZXRlcnNlbiB0byBtYWtlIGVkaXRzL2FkZGl0aW9ucyB0byBtZWFzdXJlcyBpbiBSRURDYXAKICAgLSBBZnRlciBhc3NpZ25pbmcgdGhlbSB0byB0aGUgY29ycmVjdCByb2xlLCBnbyB0byAiREFHcyIgb24gdGhlIGxlZnQgc2lkZSAodW5kZXIgIkFwcGxpY2F0aW9ucyIpLgoxLiAgVG8gYWRkIGFuIFJBIHRvIHRoZWlyIHNwZWNpZmljIHRhc2ssIGdvIHRvIFByb2plY3QgSG9tZSDihpIgUHJvamVjdCBTZXR1cCDihpIgT25saW5lIERlc2lnbmVyIOKGkiBjbGljayBvbiBuYW1lIG9mIHJlcXVpcmVkIHRhc2sgaW4gdGhlIGxlZnQgY29sdW1uCjEuIFNlbGVjdCAiRWRpdCIgb24gdGhlICJDb2RlciBOYW1lIiBmaWVsZC4KMS4gVW5kZXIgIkNob2ljZXMgKG9uZSBjaG9pY2UgcGVyIGxpbmUpIiwgYWRkIHRoZSBzdWJzZXF1ZW50IG51bWJlciBmb2xsb3dlZCBieSBhIGNvbW1hIGFuZCB0aGUgUkEncyBuYW1lLgoxLiBDbGljayAiU2F2ZSIuCgojIyBBZGRpbmcgZmllbGRzIHRvIGFuIGluc3RydW1lbnQgeyNhZGRGaWVsZHN9CgoxLiBUbyBlZGl0IGFuIGluc3RydW1lbnQsIGdvIHRvOiBQcm9qZWN0IEhvbWUg4oaSIFByb2plY3QgU2V0dXAg4oaSIE9ubGluZSBEZXNpZ25lciDihpIgY2xpY2sgb24gbmFtZSBvZiByZXF1aXJlZCB0YXNrIGluIHRoZSBsZWZ0IGNvbHVtbgoxLiBTZWxlY3QgdGhlIGNvcnJlY3QgbG9jYXRpb24gd2hlcmUgcXVlc3Rpb24gbmVlZHMgdG8gYmUgYWRkZWQgYW5kIHNlbGVjdCAiQWRkIEZpZWxkIgoxLiBTZWxlY3QgZmllbGQgdHlwZeKAlHRoZSBtb3N0IGZyZXF1ZW50bHkgd2UgdXNlIGFyZToKICAgLSBUZXh0IEJveAogICAtIE11bHRpcGxlIENob2ljZQogICAtIFllcy9ObwogICAtIFRydWUvRmFsc2UKICAgLSAqKk5vdGUqKjogRm9yIE11bHRpcGxlIENob2ljZSBRdWVzdGlvbnMgYW5kIENoZWNrYm94ZXMsIGVudGVyIG9uZSBhbnN3ZXIgY2hvaWNlIHBlciBsaW5lIGluIHRoZSBib3ggbGFiZWxlZCAiQ2hvaWNlcyIKMS4gQWRkIHZhcmlhYmxlIG5hbWU6CiAgIC0gVmFyaWFibGUgbmFtZXMgbXVzdCBiZSB1bmlxdWUKICAgLSBWYXJpYWJsZSBuYW1lcyB3aXRoaW4gdGhlIHNhbWUgaW5zdHJ1bWVudCBzaG91bGQgaGF2ZSB0aGUgc2FtZSBiZWdpbm5pbmcgKGUuZy4gYWxsIHZhcmlhYmxlcyB3aXRoaW4gdGhlIHNjaG9vbCBpbmZvcm1hdGlvbiBpbnN0cnVtZW50IHN0YXJ0IHdpdGggInNjaG9vbF8iKQoxLiBJbmRpY2F0ZSB3aGV0aGVyIHF1ZXN0aW9uIGlzIHJlcXVpcmVkCjEuIEFkZCBkYXRhIHZhbGlkYXRpb24gKGlmIHBvc3NpYmxlKSB0byByZWR1Y2UgdGhlIHBvc3NpYmlsaXR5IG9mIGh1bWFuIGVycm9yIGluIGRhdGEgZW50cnkKMS4gUXVlc3Rpb25zIHdpdGhpbiB0aGUgc2FtZSBpbnN0cnVtZW50IG1heSBiZWxvbmcgdG8gZGlmZmVyZW50IHNlY3Rpb25zLgpUbyBhZGQgYSBuZXcgc2VjdGlvbjoKICAgLSBDbGljayAiQWRkIEZpZWxkIgogICAtIEFzIGZpZWxkIHR5cGUgc2VsZWN0ICJCZWdpbiBOZXcgU2VjdGlvbiAod2l0aCBvcHRpb25hbCB0ZXh0KQogICAtIEFzIGZpZWxkIGxhYmVsLCBuYW1lIHRoZSBuZXcgc2VjdGlvbgogICAtIFNhdmUKCiMjIEJyYW5jaGluZyBMb2dpYyB7I2JyYW5jaGluZ0xvZ2ljfQoKQnJhbmNoaW5nIGxvZ2ljIGlzIGEgbWV0aG9kIHRvIGxpbmsgdHdvIHF1ZXN0aW9ucyB3aXRoIGVhY2ggb3RoZXIuClRoZSBhbnN3ZXIgb2YgUXVlc3Rpb24gQSB3aWxsIGRldGVybWluZSB3aGV0aGVyIFF1ZXN0aW9uIEIgd2lsbCBiZSBkaXNwbGF5ZWQuClR5cGljYWxseSBxdWVzdGlvbiBBIGlzIGEgY2hlY2tib3ggb3IgbXVsdGlwbGUtY2hvaWNlIHF1ZXN0aW9uLgpGb2xsb3cgdGhlIGJlbG93IHN0ZXBzIHRvIHVzZSBicmFuY2hpbmcgbG9naWM6CgoxLiBDcmVhdGUgYWxsIHF1ZXN0aW9ucyB0byBiZSBsaW5rZWQKMS4gQ2xpY2sgb24gdGhlIGdyZWVuIGFycm93IHRvIGJlZ2luIHVzaW5nIGJyYW5jaGluZyBsb2dpYwogICAtIFVzZSB0aGUgZHJhZyBhbmQgZHJvcCBidWlsZGVyIHRvIGNyZWF0ZSBxdWVzdGlvbnMgdG8gYmUgbGlua2VkCiAgIC0gVXNlIHRoZSBjb2RlIHRvIGxpbmsgcXVlc3Rpb25zIHRvZ2V0aGVyCiAgICAgIC0gRXhhbXBsZTogV2hlbiwgYFtvdGhlcl9pbnN0cnVtZW50X25hbWVdID0gJzEnYCwgc2hvdyB0aGlzIHF1ZXN0aW9uCgojIyBGaWVsZCBFbWJlZGRpbmcgeyNmaWVsZEVtYmVkZGluZ30KCkZpbGVkIGVtYmVkZGluZyBpcyBhbiBhZHZhbmNlZCBicmFuY2hpbmcgbG9naWMgbWV0aG9kIHdoaWNoIGFsbG93cyBRdWVzdGlvbiBCIHRvIGJlIGRpcmVjdGx5IGVtYmVkZGVkIGluIFF1ZXN0aW9uIEEsIGlmIHRoZSByZWxldmFudCBhbnN3ZXIgY2hvaWNlIGlzIHNlbGVjdGVkLgoKMS4gVXNlIGJyYW5jaGluZyBsb2dpYyB0byBsaW5rIFF1ZXN0aW9uIEIgdG8gUXVlc3Rpb24gQSwgc28gUXVlc3Rpb24gQiB3aWxsIG9ubHkgYXBwZWFyIGlmIHRoZSBwYXJ0aWNpcGFudCBzZWxlY3RzICJvdGhlciIgZm9yIFF1ZXN0aW9uIEEKKGluIG91ciBleGFtcGxlLCB2YXJpYWJsZSBuYW1lIGZvciBRdWVzdGlvbiBBIHdvdWxkIGJlIGNvbGxlZ2UsIHZhcmlhYmxlIG5hbWUgZm9yIFF1ZXN0aW9uIEI6IGNvbGxlZ2Vfb3RoZXIpCjEuIE1ha2Ugc3VyZSB0aGF0IGFuc3dlciBjaG9pY2UgIk90aGVyIiBpcyBjb2RlZCBhcyAiOSIgKHNlZSBmaWd1cmUgMSkKMS4JUmV0dXJuIHRvIFF1ZXN0aW9uIEEgYW5kIGFkZCBzZXZlcmFsIHNwYWNlcyBiZWhpbmQgdGhlIGFuc3dlciBjaG9pY2UgeW91IHdvdWxkIGxpa2UgdG8gZW1iZWQuCjEuIEluc2VydCB2YXJpYWJsZSB5b3Ugd291bGQgbGlrZSB0byBlbWJlZCBpbiBjdXJseSBicmFja2V0cyB7dmFyX25hbWV9IChpbiBvdXIgZXhhbXBsZSB0aGlzIHdvdWxkIGJlIHtjb2xsZWdlX290aGVyfTsgc2VlIGZpZ3VyZSAxKQoxLiBTYXZlCjEuIFdoZW4gdGVzdGluZyB0aGUgaW5zdHJ1bWVudCwgYSB0ZXh0Ym94IHNob3VsZCBub3cgYXBwZWFyIGRpcmVjdGx5IGJlaGluZCB0aGUgYW5zd2VyIGNob2ljZSwgd2hlbiBzZWxlY3RpbmcgIk90aGVyIiAoc2VlIGJlbG93IGV4YW1wbGUpCgohW1JlZGNhcEV4YW1wbGUxXShpbWFnZXMvcmVkY2FwRXhhbXBsZTEucG5nKQohW1JlZGNhcEV4YW1wbGUyXShpbWFnZXMvcmVkY2FwRXhhbXBsZTIucG5nKQoKIyMgRGVzaWduYXRpbmcgSW5zdHJ1bWVudHMgYXMgYSBTdXJ2ZXkgeyNzdXJ2ZXl9CgpJZiBhbiBpbnN0cnVtZW50IGlzIGludGVuZGVkIHRvIGJlIGNvbXBsZXRlZCBieSBwYXJ0aWNpcGFudHMgYXMgYSBzdXJ2ZXkgKGFzIG9wcG9zZWQgdG8gYSBkYXRhIGVudHJ5IGluc3RydW1lbnQgZm9yIGVudHJ5IG9mIGRhdGEgYnkgbGFiIG1lbWJlcnMpLCB0aGUgaW5zdHJ1bWVudCB3aWxsIG5lZWQgdG8gYmUgZGVzaWduYXRlZCBhcyBhIHN1cnZleS4KVG8gZGVzaWduYXRlIGFuIGluc3RydW1lbnQgYXMgYSBzdXJ2ZXksIGdvIHRvIFByb2plY3QgSG9tZSDihpIgUHJvamVjdCBTZXR1cCDihpIgT25saW5lIERlc2lnbmVyIOKGkiBjbGljayBvbiAiRW5hYmxlIiB1bmRlciB0aGUgIkVuYWJsZWQgYXMgU3VydmV5IiBjb2x1bW4gZm9yIHRoZSByZWxldmFudCBpbnN0cnVtZW50LgoKIyMgRGVzaWduYXRpbmcgSW5zdHJ1bWVudHMgdG8gRXZlbnRzIHsjZGVzaWduYXRlSW5zdHJ1bWVudHN9CgpNb3N0IGluc3RydW1lbnRzIGluIGxvbmdpdHVkaW5hbCBzdHVkaWVzIHdpbGwgbmVlZCB0byBiZSBkZXNpZ2F0ZWQgYWNyb3NzIGV2ZW50cy4KSW5zdHJ1bWVudHMgc2hvdWxkIGFscmVhZHkgYmUgY3JlYXRlZCBhbmQgYXBwcm92ZWQgYmVmb3JlIGRlc2lnbmF0aW5nIHRvIGV2ZW50cy4KClRvIGRlc2lnbmF0ZSBldmVudHMsIGZvbGxvdyB0aGUgYmVsb3cgc3RlcHM6CgoxLiBHbyB0byAiRGVzaWduZXIiIOKGkiAiUHJvamVjdCBTZXR1cCIKMS4gVW5kZXIgdGhlICoiRGVmaW5lIHlvdXIgZXZlbnRzIGFuZCBkZXNpZ25hdGUgaW5zdHJ1bWVudHMgZm9yIHRoZW0iKiBzZWN0aW9uLCBzZWxlY3QgYERlc2lnbmF0ZSBJbnN0cnVtZW50IGZvciBteSBldmVudHNgCjEuIFNlbGVjdCwgYGJlZ2luIGVkaXRpbmdgIGFuZCBzZWxlY3QgY2hlY2tib3hlcyBmb3IgZWFjaCBldmVudCB0byBkZXNpZ25hdGUgdGhlIGluc3RydW1lbnQgdG8KMS4gKipJbXBvcnRhbnQ6KiogVXBkYXRlIHRoZSByb2xlcyBpbiBgVXNlciBSaWdodHNgIHRvIGJlIGFibGUgdG8gdmlldyBhbmQgZWRpdCB0aGUgbmV3bHkgZGVzaWduYXRlZCBpbnN0cnVtZW50CgojIyBEZXNpZ25hdGluZyBJbnN0cnVtZW50cyBhcyBSZXBlYXRhYmxlIHsjcmVwZWF0YWJsZUluc3RydW1lbnR9CgpTb21lIGluc3RydW1lbnRzIHdpbGwgYmUgZGVzaWduYXRlZCBhcyByZXBlYXRhYmxlLgpUaGVzZSBldmVudHMgd2lsbCBmaXJzdCBuZWVkIHRvIGJlIGRlc2lnbmF0ZWQgYWNyb3NzIGV2ZW50cyAoU2VlIHNlY3Rpb24gb24gW2Rlc2lnbmF0aW5nIGV2ZW50c10oI2Rlc2lnbmF0ZUluc3RydW1lbnRzKSkuClRhc2tzIHRoYXQgcmVxdWlyZSBtdWx0aXBsZSBwZW9wbGUgdG8gY3JlYXRlIHRoZSBzYW1lIGZvcm0gd2lsbCBvZnRlbiBuZWVkIHRvIGJlIHJlcGVhdGFibGUuCkZvciBleGFtcGxlLCBjb2RpbmcgdGFza3MgdGhhdCByZXF1aXJlIG11bHRpcGxlIHBlb3BsZSB0byBjaGVjayBhY3Jvc3MgZm9ybXMgZm9yIHJlbGlhYmlsaXR5LgoKVG8gZGVzaWduYXRlIGZvcm1zIGFzIHJlcGVhdGFibGUsIGZvbGxvdyB0aGUgYmVsb3cgc3RlcHM6CgoxLiBVbmRlciAqIkVuYWJsZSBvcHRpb25hbCBtb2R1bGVzIGFuZCBjdXN0b21pemF0aW9ucyIqLCBzZWxlY3QgYFJlcGVhdGFibGUgaW5zdHJ1bWVudHMgYW5kIGV2ZW50c2AKMS4gU2VsZWN0IGluc3RydW1lbnRzIHRvIGJlIGRlc2lnbmF0ZWQgcmVwZWF0YWJsZQoKIyBDcmVhdGluZyBJbnN0cnVtZW50cyBpbiBSRURDYXAgeyNjcmVhdGVJbnN0cnVtZW50fQoKIyMgU3RlcHMgdG8gQWRkIGEgTmV3IEluc3RydW1lbnQgeyNuZXdJbnN0cnVtZW50U3RlcHN9CgoxLiBQcm9qZWN0IEhvbWUg4oaSIFByb2plY3QgU2V0dXAg4oaSIE9ubGluZSBEZXNpZ25lcgoxLiBJbiBncmV5IGJveCAoRGF0YSBDb2xsZWN0aW9uIEluc3RydW1lbnRzKSwgY2xpY2sgb24gIisgQ3JlYXRlIiB0byBjcmVhdGUgYSBuZXcgaW5zdHJ1bWVudCBmcm9tIHNjcmF0Y2gKCkhvd2V2ZXIsIGFuIGluc3RydW1lbnQgd2lsbCBub3Qgc2hvdyB1cCBmb3IgZW50cnkgdW50aWw6CgoxLiBUaGUgYWRkaXRpb24gb2YgdGhlIG1lYXN1cmUgaGFzIGJlZW4gYXBwcm92ZWQgYnkgRHIuIFBldGVyc2VuLgoxLiBUaGUgaW5zdHJ1bWVudCBoYXMgYmVlbiBbZGVzaWduYXRlZCB0byBhbiBldmVudF0oI2Rlc2lnbmF0ZUluc3RydW1lbnRzKS4KMS4gKEFzIG5lY2Vzc2FyeSwgdGhlIGluc3RydW1lbnQgaGFzIGJlZW4gW2Rlc2lnbmF0ZWQgYXMgYSBzdXJ2ZXldKCNzdXJ2ZXkpLikKMS4gKEFzIG5lY2Vzc2FyeSwgdGhlIGluc3RydW1lbnQgaGFzIGJlZW4gW2Rlc2lnbmF0ZWQgYXMgcmVwZWF0YWJsZV0oI3JlcGVhdGFibGVJbnN0cnVtZW50KSkuCjEuIFVzZXIgcmlnaHRzIGFyZSB1cGRhdGVkIHRvIGFsbG93IHVzZXJzIHRvIHZpZXcgdGhlIGluc3RydW1lbnQgKGkuZS4sICJSZWFkIE9ubHkiIG9yICJWaWV3IGFuZCBFZGl0IikKCiMjIEdvb2QgUHJhY3RpY2VzIHsjZ29vZFByYWN0aWNlc30KCi0JSW5jbHVkZSByZWxldmFudCBpbnN0cnVjdGlvbnMgd2hlcmUgYXBwbGljYWJsZQotCU9taXQgImludHJvZHVjdG9yeSIgdmFyaWFibGVzIChlLmcuLCBkYXRlIG9mIGJpcnRoKSB0aGF0IGFyZSBjb2xsZWN0ZWQgZnJvbSBvdGhlciBtZWFzdXJlcwotCUZpZWxkIExhYmVscyBhcmUgdGhlIHNhbWUgYWNyb3NzIGluc3RydW1lbnRzIHdoZXJlIGFwcGxpY2FibGUKLQlDaG9pY2VzIGFyZSB0aGUgc2FtZSBhY3Jvc3MgaW5zdHJ1bWVudHMgd2hlcmUgYXBwbGljYWJsZSAKICAgIC0gSW5jbHVkZSBudW1iZXJzIChpZiByZWxldmFudCkgaW4gcGFyZW50aGVzZXMgaW4gcm93IGJlbG93IGNvbHVtbiBjaG9pY2VzCi0JQ2hvaWNlcyBmb2xsb3cgY29ycmVjdCBmb3JtYXQ6IE51bWJlciwgQ2hvaWNlCiAgICAtIChlLmcuLCAxLCBmZW1hbGUpCi0JRm9yIHllcy9ubyBxdWVzdGlvbnMsIHVzZSB0aGUgIlllcyAtIE5vIiBxdWVzdGlvbiB0eXBlIChyYXRoZXIgdGhhbiBtdWx0aXBsZSBjaG9pY2UgcmFkaW8gYnV0dG9ucykKICAgIDEuIE5vID0gMAkKICAgIDEuIFllcyA9IDEKLSBGb3IgeWVzL25vIHF1ZXN0aW9ucyB3aXRoIGFkZGl0aW9uYWwgb3B0aW9ucyAoZS5nLiwgIm5vdCBhcHBsaWNhYmxlIiksIHVzZSBtdWx0aXBsZSBjaG9pY2UgcmFkaW8gYnV0dG9ucyB3aGVyZToKICAgIDEuIE5vID0gMAkKICAgIDEuIFllcyA9IDEKICAgIDEuIE90aGVyID0gOQogICAgMS4gTm90IGFwcGxpY2FibGUgPSAtOTk5CgotIFRpbWUgcXVlc3Rpb25zCiAgIC0gU3BlY2lmaWMgdGltZSAoZS5nLiwgV2hhdCBpcyB0aGUgY2hpbGQncyBiZWR0aW1lPyk6CiAgICAgIC0gKipCZWdpbiBxdWVzdGlvbiB3aXRoIGluc3RydWN0aW9uczoqKiBCZWxvdyB5b3Ugd2lsbCBlbnRlciB5b3VyIGNoaWxkJ3MgYmVkdGltZS4gCiAgICAgIFBsZWFzZSBzcGVjaWZ5IGluIDEyLWhvdXIgdGltZSAoQU0vUE0pLiAKICAgICAgRm9yIGV4YW1wbGUsIGlmIHlvdXIgY2hpbGQncyBiZWR0aW1lIGlzIDEwOjMwIFBNLCBwbGVhc2UgZW50ZXIgMTAgaG91cnMgYW5kIDMwIG1pbnV0ZXMgbGlrZSB0aGUgZXhhbXBsZSBiZWxvdy4gKHNob3cgZXhhbXBsZSBpbWFnZSBiZWxvdykKICAgICAgLSBIYXZlIHRocmVlIHZhcmlhYmxlcyBmb3IgZXZlcnkgdGltZSBxdWVzdGlvbjoJCiAgICAgICAgIC0gQU0vUE0gKFJhZGlvIEJ1dHRvbikKICAgICAgICAgLSBob3VycyAodGV4dCBib3gpLCBpdGFsaWNpemVkCiAgICAgICAgICAgICAtIFZhbGlkYXRpb246IGludGVnZXIgZnJvbSAx4oCTMTIKICAgICAgICAgLSBtaW51dGVzICh0ZXh0IGJveCksIGl0YWxpY2l6ZWQKICAgICAgICAgICAgIC0gVmFsaWRhdGlvbjogaW50ZWdlciBmcm9tIDDigJM1OQogICAgICAtIFNwZWNpZnkgMTItaG91ciB0aW1lIGluIHRoZSBxdWVzdGlvbgogICAgICAgICAtICoqRXhhbXBsZSoqOiBXaGF0IGlzIHRoZSBjaGlsZCdzIGJlZHRpbWU/CiAgICAgICAgIFBsZWFzZSBzcGVjaWZ5IGluIDEyLWhvdXIgdGltZSAoQU0vUE0pLgogICAtIER1cmF0aW9uOiAoZS5nLiwgSG93IGxvbmcgZG9lcyB0aGUgY2hpbGQgbmFwIGVhY2ggZGF5PykKICAgICAgLSBCZWxvdyB5b3Ugd2lsbCBlbnRlciBob3cgbG9uZyB5b3VyIGNoaWxkIG5hcHMgZWFjaCBkYXkuCiAgICAgIFBsZWFzZSBzcGVjaWZ5IGluIGhvdXJzIGFuZCBtaW51dGVzLiAKICAgICAgRm9yIGV4YW1wbGUsIGlmIHlvdXIgY2hpbGQgbmFwcyAyIGhvdXJzIGFuZCAzMCBtaW51dGVzIGVhY2ggZGF5LCBwbGVhc2UgZW50ZXIgMiBob3VycyBhbmQgMzAgbWludXRlcyBsaWtlIHRoZSBleGFtcGxlIGJlbG93IChzaG93IGV4YW1wbGUgaW1hZ2UgYmVsb3cpLgogICAgICAtIEhhdmUgdHdvIHZhcmlhYmxlcyBmb3IgZXZlcnkgdGltZSBxdWVzdGlvbjoKICAgICAgICAgLSBob3VycyAodGV4dCBib3gpLCBpdGFsaWNpemVkLgogICAgICAgICAgICAtIFZhbGlkYXRpb246IGludGVnZXIgKG1pbmltdW0gMDsgbWF4aW11beKAlGNhc2Ugc3BlY2lmaWMpCiAgICAgICAgIC0gbWludXRlcyAodGV4dCBib3gpLCBpdGFsaWNpemVkCiAgICAgICAgICAgIC0gVmFsaWRhdGlvbjogaW50ZWdlciAobWluaW11bSAwOyBtYXhpbXVtIDU5KQoKIyMgQ3JlYXRpbmcgVmFyaWFibGVzICB7I2NyZWF0aW5nVmFyaWFibGVzfQoKLSBWYXJpYWJsZSBuYW1lcyBmb2xsb3cgdGhlIGxhYiBjb252ZW50aW9ucyAobWVhc3VyZV9pdGVtKTogdXNlIGFiYnJldmlhdGVkIG1lYXN1cmUgbmFtZSwgYWxsIGxvd2VyY2FzZSwgbGVzcyB0aGFuIDI2IGNoYXJhY3RlcnMKLSAqKlZhbGlkYXRpb24gaXMgdXNlZCB3aGVyZXZlciBwb3NzaWJsZSoqCi0gRm9yIHZhcmlhYmxlcyB3aXRoIGlkZW50aWZ5aW5nIGluZm9ybWF0aW9uIChlLmcuLCBuYW1lLCBhZGRyZXNzKSwgc2VsZWN0IHRoZSBjaGVja2JveCBsYWJlbGVkICJJZGVudGlmaWVyIgotIEJyYW5jaGluZyBsb2dpYyBpcyB1c2VkIHRvIGdpdmUgcXVlc3Rpb25zIG9ubHkgdG8gcmVsZXZhbnQgcGFydGljaXBhbnRzCi0gQSAiTWF0cml4IG9mIEZpZWxkcyIgaXMgdXNlZCB0byBncm91cCB0b2dldGhlciBpdGVtcyB3aXRoIGNvbW1vbiByZXNwb25zZSBvcHRpb25zCi0gRm9yICJNYXRyaXggb2YgRmllbGRzLCIgb25seSBzZWxlY3QgIlJhbmtpbmciIGlmIHlvdSB3YW50IHRoZSBwYXJ0aWNpcGFudCB0byBzZWxlY3Qgb25seSBvbmUgcmVzcG9uc2UgcGVyIGNvbHVtbgotCVdoZXJlIGhlbHBmdWwsICJTZWN0aW9ucyIgYXJlIHVzZWQgdG8gYnJlYWsgdXAgdGhlIHF1ZXN0aW9ucwotCVJhZGlvIGJ1dHRvbnMgYXJlIHVzZWQgcmF0aGVyIHRoYW4gZHJvcC1kb3duIGxpc3RzCi0JRm9yIGNydWNpYWwgdmFyaWFibGVzLCAiUmVxdWlyZWQiIGlzIHNlbGVjdGVkCi0JSWYgbmVjZXNzYXJ5LCBwaXBpbmcgaXMgdXNlZAotIEFkZCB0aGUgZm9sbG93aW5nIHZlcmJhdGltIHRvIHRoZSBlbmQgb2YgZXZlcnkgcXVlc3Rpb25uYWlyZSAoaW4gaXRhbGljcyk6ICJQbGVhc2UgYmUgc3VyZSB5b3UgYW5zd2VyZWQgYWxsIGl0ZW1zLiIKICAgLSBOYW1lIHRoZSB2YXJpYWJsZTogbWVhc3VyZV9hbGxpdGVtcyAod2hlcmUgIm1lYXN1cmUiIGlzIHRoZSBhYmJyZXZpYXRlZCBtZWFzdXJlIG5hbWUpCgojIyBBZGRpbmcgU21hcnQgVmFyaWFibGVzIHRvIFF1ZXN0aW9ubmFpcmVzIHsjc21hcnRWYXJpYWJsZXN9CgpJbiBldmVyeSBzdXJleSwgd2Ugd2FudCB0byBhZGQgdGhlIGZvbGxvd2luZyAiU21hcnQgVmFyaWFibGVzIi4gVGhlc2UgdmFyaWFibGVzIGF1dG9tYXRpY2FsbHkgY2FsY3VsYXRlIHRoZSBzdXJ2ZXkgc3RhcnQgdGltZSwgc3VydmV5IHN0YXJ0IGRhdGUsIGFuZCBkdXJhdGlvbiBzdXJ2ZXkgd2FzIGNvbXBsZXRlZC4KVmFyaWFibGUgbmFtZXMgc2hvdWxkIGZvbGxvdyB0aGUgYXBwcm9wcmlhdGUgbmFtaW5nIGNvbnZlbnRpb24gdGhhdCBpcyB1c2VkIGZvciBlYWNoIHN1cnZleS4KQWZ0ZXIgeW91IGhhdmUgYWRkZWQgdmFyaWFibGVzLCBzZW5kIGEgKHRlYW0tZmFjaW5nKSBtZXNzYWdlIGluIERpc2NvcmQgdG8gdGhlIExhYiBDb29yZGluYXRvciBmb3IgcmV2aWV3LgoqKkRvIG5vdCBhZGQgdmFyaWFibGVzIHRvIG1vcmUgdGhhbiB0aHJlZSBzdXJ2ZXlzIGF0IGEgdGltZS4qKgpUaGVzZSB2YXJpYWJsZXMgc2hvdWxkIGJlIGVudGVyZWQgYXQgdGhlIGVuZCBvZiBlYWNoIHN1cnZleS4gRm9yIGVhY2ggc3VydmV5LCBmb2xsb3cgdGhlIGluc3RydWN0aW9ucyBiZWxvdyB0byBhZGQgdGhlIHJlcXVpcmVkIHNtYXJ0IHZhcmlhYmxlczogCgojIyMgVGltZXN0YW1wcyB7I3RpbWVzdGFtcHN9CgoxLiAiRGF0ZS9UaW1lc3RhbXAgaW4gdGhlIHJhdGVyJ3MgdGltZXpvbmUiCiAgIC0gQWRkIGEgIlRleHQgQm94IiBmaWVsZCB3aXRoIHZhbGlkYXRpb24gIkRhdGV0aW1lIHcvc2Vjb25kcyAoWS1NLUQgSDpNOlMpCiAgIC0gVXNlIHZhcmlhYmxlIG5hbWU6IGBwcmVmaXhfcmF0ZXJ0aW1lem9uZWAKICAgLSBBZGQgdGhlIGZvbGxvd2luZyBhY3Rpb24gdGFnczogCiAgICAgIC0gQEhJRERFTi1TVVJWRVkKICAgICAgLSBATk9XCiAgICAgIC0gQFJFQURPTkxZCjEuICJEYXRlL1RpbWVzdGFtcCAoUkVEQ2FwIHNlcnZlcikiCiAgIC0gQWRkIGEgIlRleHQgQm94IiBmaWVsZCB3aXRoIHZhbGlkYXRpb24gIkRhdGV0aW1lIHcvc2Vjb25kcyAoWS1NLUQgSDpNOlMpCiAgIC0gVXNlIHZhcmlhYmxlIG5hbWU6IGBwcmVmaXhfc2VydmVydGltZXpvbmVgCiAgIC0gQWRkIHRoZSBmb2xsb3dpbmcgQWN0aW9uIHRhZ3M6IAogICAgICAtIEBISURERU4tU1VSVkVZCiAgICAgIC0gQE5PVy1TRVJWRVIKICAgICAgLSBAUkVBRE9OTFkKMS4gIkRhdGUvVGltZXN0YW1wIChVVEMpIgogICAtIEFkZCBhICJUZXh0IEJveCIgZmllbGQgd2l0aCB2YWxpZGF0aW9uICJEYXRldGltZSB3L3NlY29uZHMgKFktTS1EIEg6TTpTKQogICAtIFVzZSB2YXJpYWJsZSBuYW1lOiBgcHJlZml4X2NlbnRyYWx0aW1lem9uZWAKICAgLSBBZGQgdGhlIGZvbGxvd2luZyBBY3Rpb24gdGFnczogCiAgICAgIC0gQEhJRERFTi1TVVJWRVkKICAgICAgLSBATk9XLVVUQwogICAgICAtIEBSRUFET05MWQoKIyMjIERhdGUgQ29tcGxldGVkLCBUaW1lIENvbXBsZXRlZCBhbmQgU3VydmV5IER1cmF0aW9ucyB7I2RhdGVUaW1lc3RhbXBEdXJhdGlvbn0KCkluIHRoZSBiZWxvdyBzZWN0aW9uLCBpdCBpcyBuZWNlc3NhcnkgdG8gaWRlbnRpZnkgdGhlIGBpbnN0cnVtZW50X25hbWVgIGZvciBlYWNoIHZhcmlhYmxlIGFkZGVkLgpJbiBSRURDYXAsIG9wZW4gdGhlIGBEZXNpZ25lcmAgdGFiIGFuZCBuYXZpZ2F0ZSB0byB0aGUgc3VydmV5IHRvIGJlIGVkaXRlZC4KSW4gdGhlIFVSTCBvbiB0aGUgd2VicGFnZSwgaWRlbnRpZnkgdGhlIGluc3RydW1lbnQgbmFtZSBmb3IgdGhlIGdpdmVuIHN1cnZleS4KRm9yIGV4YW1wbGUsIHRoZSBiZWxvdyBVUkwgY29ycmVzcG9uZHMgdG8gdGhlICpwYXJlbnRpbmdfcGFydG5lciogaW5zdHJ1bWVudC4gCgotIGh0dHBzOi8vcmVkY2FwLmljdHMudWlvd2EuZWR1L3JlZGNhcC9yZWRjYXBfdjEyLjUuMi9EZXNpZ24vb25saW5lX2Rlc2lnbmVyLnBocD9waWQ9NTM0NyZwYWdlPTxtYXJrPnBhcmVudGluZ19wYXJ0bmVyPC9tYXJrPgoKMS4gIlN1cnZleSBUaW1lIFN0YXJ0ZWQ6IgogICAtIEFkZCBhICJUZXh0IEJveCIgZmllbGQgd2l0aCBubyB2YWxpZGF0aW9uCiAgIC0gVXNlIHZhcmlhYmxlIG5hbWU6IGBwcmVmaXhfdGltZXN0YXJ0ZWRgCiAgIC0gQWRkIHRoZSBmb2xsb3dpbmcgQWN0aW9uIFRhZ3MgCiAgICAgIC0gQEhJRERFTi1TVVJWRVkgCiAgICAgIC0gQFJFQURPTkxZIAogICAgICAtIEBDQUxDVEVYVChbc3VydmV5LXRpbWUtc3RhcnRlZDppbnN0cnVtZW50X25hbWVdKQoxLiAiU3VydmV5IERhdGUgU3RhcnRlZDoiCiAgIC0gQWRkIGEgIlRleHQgQm94IiBmaWVsZCB3aXRoIG5vIHZhbGlkYXRpb24KICAgLSBVc2UgdmFyaWFibGUgbmFtZTogYHByZWZpeF9kYXRlc3RhcnRlZGAKICAgLSBBZGQgdGhlIGZvbGxvd2luZyBBY3Rpb24gVGFncyAKICAgICAgLSBASElEREVOLVNVUlZFWSAKICAgICAgLSBAUkVBRE9OTFkgCiAgICAgIC0gQENBTENURVhUKFtzdXJ2ZXktZGF0ZS1zdGFydGVkOmluc3RydW1lbnRfbmFtZV0pCjEuICJTdXJ2ZXkgVGltZSBDb21wbGV0ZWQ6IgogICAtIEFkZCBhICJUZXh0IEJveCIgZmllbGQgd2l0aCBubyB2YWxpZGF0aW9uCiAgIC0gVXNlIHZhcmlhYmxlIG5hbWU6IGBwcmVmaXhfdGltZWNvbXBsZXRlZGAKICAgLSBBZGQgdGhlIGZvbGxvd2luZyBBY3Rpb24gVGFncyAKICAgICAgLSBASElEREVOLVNVUlZFWSAKICAgICAgLSBAUkVBRE9OTFkgCiAgICAgIC0gQENBTENURVhUKFtzdXJ2ZXktdGltZS1jb21wbGV0ZWQ6aW5zdHJ1bWVudF9uYW1lXSkKMS4gIlN1cnZleSBEYXRlIENvbXBsZXRlZDoiCiAgIC0gQWRkIGEgIlRleHQgQm94IiBmaWVsZCB3aXRoIG5vIHZhbGlkYXRpb24KICAgLSBVc2UgdmFyaWFibGUgbmFtZTogYHByZWZpeF9kYXRlY29tcGxldGVkYAogICAtIEFkZCB0aGUgZm9sbG93aW5nIEFjdGlvbiBUYWdzIAogICAgICAtIEBISURERU4tU1VSVkVZIAogICAgICAtIEBSRUFET05MWSAKICAgICAgLSBAQ0FMQ1RFWFQoW3N1cnZleS1kYXRlLWNvbXBsZXRlZDppbnN0cnVtZW50X25hbWVdKQoxLiAiU3VydmV5IER1cmF0aW9uOiIKICAgLSBBZGQgYSAiVGV4dCBCb3giIGZpZWxkIHdpdGggbnVtZXJpYyB2YWxpZGF0aW9uCiAgIC0gVXNlIHZhcmlhYmxlIG5hbWU6IGBwcmVmaXhfc3VydmV5ZHVyYXRpb25gCiAgIC0gQWRkIHRoZSBmb2xsb3dpbmcgQWN0aW9uIFRhZ3MKICAgICAgLSBASElEREVOLVNVUlZFWQogICAgICAtIEBSRUFET05MWQogICAgICAtIEBDQUxDVEVYVChbc3VydmV5LWR1cmF0aW9uOmluc3RydW1lbnRfbmFtZTptXSkKMS4gIlN1cnZleSBEdXJhdGlvbiBDb21wbGV0ZWQ6IgogICAtIEFkZCBhICJUZXh0IEJveCIgZmllbGQgd2l0aCBudW1lcmljIHZhbGlkYXRpb24KICAgLSBVc2UgdmFyaWFibGUgbmFtZTogYHByZWZpeF9zdXJ2ZXlkdXJhdGlvbmNvbXBsZXRlZGAKICAgLSBBZGQgdGhlIGZvbGxvd2luZyBBY3Rpb24gVGFncwogICAgICAtIEBISURERU4tU1VSVkVZCiAgICAgIC0gQFJFQURPTkxZCiAgICAgIC0gQENBTENURVhUKFtzdXJ2ZXktZHVyYXRpb24tY29tcGxldGVkOmluc3RydW1lbnRfbmFtZTptXSkKMS4gU2VuZCBhICh0ZWFtLWZhY2luZykgbWVzc2FnZSBpbiBEaXNjb3JkIHRvIHRoZSBMYWIgQ29vcmRpbmF0b3IgZm9yIHJldmlldy4KCiMjIFRyb3VibGVzaG9vdGluZyB7I3Ryb3VibGVzaG9vdGluZ30KCi0gV2hlbiBhIGZpZWxkIHRoYXQgd2lsbCBiZSBoaWRkZW4gYnkgYnJhbmNoaW5nIGxvZ2ljIGhhcyBhIHZhbHVlLCBSRURDYXAgb2ZmZXJzIHRvIGRlbGV0ZSB0aGUgdmFsdWU6ICJFUkFTRSBDVVJSRU5UIFZBTFVFIE9GIFRIRSBGSUVMRD8iCiAgIC0gaHR0cDovL2NyaS51Y2hpY2Fnby5lZHUvd3AtY29udGVudC91cGxvYWRzLzIwMTYvMDQvUkVEQ2FwLUF2b2lkLUNvbW1vbi1QaXRmYWxscy5wZGYgKGFyY2hpdmVkIGF0IGh0dHBzOi8vcGVybWEuY2MvNk5CWS0zWTVSKQogICAtIElmIHlvdSBkbyBub3Qgd2FudCB0aGUgZmllbGQgaGlkZGVuIG9uY2UgaXQgY29udGFpbnMgZGF0YSwgYWRkIHRoZSBmb2xsb3dpbmcgYXMgYW4gIk9SIiBjb25kaXRpb24gb24gdGhlIGV4aXN0aW5nIGJyYW5jaGluZyAgICAgIAogICAgICAtIGxvZ2ljOiBbZmllbGRfbmFtZV0gPD4gIiIKICAgLSBOb3RlOiBUaGUgQERFRkFVTFQgYWN0aW9uIHRhZyAqKmNhbm5vdCoqIGJlIHVzZWQgZm9yIGZpZWxkcyB0aGF0IGFyZSBoaWRkZW4gYnkgYnJhbmNoaW5nIGxvZ2ljCi0gU29tZXRpbWVzIFJFRENhcCBtYXkgcmVjb3JkIGluY29ycmVjdCB2YWx1ZXMgb3IgbWF5IGZhaWwgdG8gcmVjb3JkIHZhbHVlcyBhdCBhbGwuCllvdSBjYW4gY2hlY2sgZm9yIHRoaXMgYnk6CjEuIE5hdmlnYXRpbmcgdG8gYSBwcm9qZWN0LCB0aGVuIGluIHRoZSBzaWRlIGJhciBjbGlja2luZyAiRGF0YSBRdWFsaXR5IiB1bmRlciAiQXBwbGljYXRpb25zIgoxLiBVbmRlciBSdWxlICNIICJJbmNvcnJlY3QgdmFsdWVzIGZvciBjYWxjdWxhdGVkIGZpZWxkcyIsIGNsaWNrICJFeGVjdXRlIgoxLiBZb3Ugd2lsbCBzZWUgYSB0YWJsZSB3aXRoIGFueSBpbmNvcnJlY3QgY2FsY3VsYXRlZCB2YWx1ZXMgKGluY2x1ZGluZyBtaXNzaW5nIHZhbHVlcykuIENoZWNrIHRoZSB0YWJsZSB0byBtYWtlIHN1cmUgdGhlIGRpc2NyZXBhbnQgZmllbGRzIGFyZSB3aGF0IHlvdSBleHBlY3QuIEFsc28gY2hlY2sgdG8gbWFrZSBzdXJlIHRoZXJlIGFyZSBubyByb3dzIHRoYXQgc3VnZ2VzdCBvdmVyd3JpdGluZyBsZWdpdGltYXRlIHZhbHVlcy4gSWYgYSByb3cgbG9va3MgbGlrZSBpdCBpcyBhY3R1YWxseSBjb3JyZWN0LCBjbGljayAiZXhjbHVkZSIuCjEuIENsaWNrICJGaXggY2FsY3Mgbm93IiB0byByZWNvcmQgdGhlIGNvcnJlY3QgdmFsdWVzIGluIHRoZSBkYXRhLgoKIyMgSG93IFRvIHsjaG93VG99CgotIEVtIGRhc2ggKOKAlCk6CiAgIC0gYCZtZGFzaDtgCi0gTGluZSBCcmVhawogICAtIGA8YnI+YAotIEl0YWxpYyBmb250OgogICAtIGA8aT5UaGlzIGlzIHNvbWUgdGV4dCE8L2k+YAogICAtICoqRXhhbXBsZSoqOiA8aT5UaGlzIGlzIHNvbWUgdGV4dCE8L2k+Ci0gQ2hhbmdlIGZvbnQgc2l6ZToKICAgLSBgPGZvbnQgc2l6ZT0iNiI+VGhpcyBpcyBzb21lIHRleHQhPC9mb250PmAKICAgLSAqKkV4YW1wbGUqKjogPGZvbnQgc2l6ZT0iNiI+VGhpcyBpcyBzb21lIHRleHQhPC9mb250PgotIENoYW5nZSBmb250IGNvbG9yOgogICAtIGA8Zm9udCBjb2xvcj0icmVkIj5UaGlzIGNvbG9yIHdpbGwgYmUgcmVkLjwvZm9udD5gCiAgIC0gKipFeGFtcGxlKio6IDxmb250IGNvbG9yPSJyZWQiPlRoaXMgY29sb3Igd2lsbCBiZSByZWQuPC9mb250PgoKIyMgTGFiIFVuaXZlcnNhbCBOb3RhdGlvbnMgeyNsYWJVbml2ZXJzYWxOb3RhdGlvbnN9CgotIFllcyA9IDEsIE5vID0gMAotIFRydWUgPSAxLCBGYWxzZSA9IDAKLSBTZXg6IE1hbGUgPSAwLCBGZW1hbGUgPSAxCi0gTm90IEFwcGxpY2FibGUgPSAtOTk5Ci0gQ29kaW5nIE9wdGlvbnMKICAgLSBDb3JyZWN0ID0gMiAob3IgMSwgaWYgdGhlcmUgaXMgbm8gb3B0aW9uIGZvciAiaW5pdGlhbGx5IGluY29ycmVjdCwgY2hhbmdlZCB0byBjb3JyZWN0IikKICAgLSBJbmNvcnJlY3QgPSAwCiAgIC0gSW5pdGlhbGx5IGluY29ycmVjdCwgY2hhbmdlZCB0byBjb3JyZWN0ID0gMQogICAtIE5vIHJlc3BvbnNlID0gLTkKICAgLSBVbmNvZGVhYmxlID0gOQoKRm9yIExpa2VydCBzY2FsZXM6CgotIElmIHRoZXJlIGFyZSBudW1iZXJzIGxpc3RlZCBmb3IgdGhlIExpa2VydCBzY2FsZSBvcHRpb25zLCB1c2UgdGhvc2UgbnVtYmVycyBhcyB0aGUgdmFsdWVzCi0gSWYgdGhlcmUgYXJlIG5vdCBudW1iZXJzIGxpc3RlZCwgY2hlY2sgd2l0aCBEci4gUGV0ZXJzZW4gZm9yIHdoYXQgbnVtYmVycyB0byB1c2UgYXMgdGhlIHZhbHVlcwotIEluIGdlbmVyYWwsIHZhbHVlcyBzdGFydCB3aXRoIG51bWJlciAxIChub3QgMOKAlHVubGVzcyB0aGUgdmFsdWUgYWN0dWFsbHkgcmVmbGVjdHMgY29tcGxldGUgYWJzZW5jZSBvZiBzb21ldGhpbmcpCi0gSWYgdGhlcmUgaXMgYW4gIk90aGVyIiBvcHRpb24sIGNvZGUgaXQgYXMgIjkiLCBpZiBwb3NzaWJsZQotIElmIHRoZXJlIGlzIGEgIk4vQSIgb3B0aW9uLCBjb2RlIGl0IGFzICItOTk5IgoKIyMgRWRpdGluZyB0aGUgRGF0YSBEaWN0aW9uYXJ5IHsjZGF0YURpY3Rpb25hcnl9CgotIElmIGVkaXRpbmcgdGhlIGRhdGEgZGljdGlvbmFyeSwgZG8gbm90IHVzZSBFeGNlbCHigJRFeGNlbCB0cnVuY2F0ZXMgdmFsdWVzIGluIGNlbGxzCiAgIC0gSW5zdGVhZCwgdXNlIExpYnJlT2ZmaWNlIHdpdGggVVRGLTggZW5jb2RpbmcK</div>
-<script type="text/javascript" src="includes/external-links.js"></script>
 
+<!-- -->
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add lab logo -->
@@ -1051,7 +806,7 @@ values in cells
 </p>
 
 <br>
-<hr>
+<br>
 <br>
 
 <!-- Add icon library -->
@@ -1064,87 +819,785 @@ values in cells
     <a href="https://www.facebook.com/DevPsyLab" target="_blank" class="fa fa-facebook fa-fw fa-3x"></a>
 	<a href="https://www.instagram.com/devpsylab" target="_blank" class="fa fa-instagram fa-fw fa-3x"></a>
 </p>
-
-
-</div>
-</div>
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("redcap-manual.Rmd");
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
-
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    options.showAndHide = true;
-    options.smoothScroll = true;
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/DevPsyLab\.github\.io\/LabWiki\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "REDCap Manual"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># REDCap Data Management</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>REDCap Support Contact: redcap@icts.uiowa.edu </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>REDCap also hosts virtual office hours.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>See <span class="co">[</span><span class="ot">here</span><span class="co">](https://its.uiowa.edu/services/redcap-research-electric-data-capture)</span> for schedule and additional information. </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Updating instruments in REDCap {#sec-updates}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding new RAs to REDCap/tasks {#sec-addPersonnel}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to "User Rights" on the left side (under "Applications").</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In the text box labeled "Assign new user", type the new lab member's HawkID and click "Assign to Role" (e.g., "RA", "Grad Student").</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>"RA Analyst" is for RAs conducting honors projects who need to do data analysis.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>"Project Manager" is for the Lab Coordinator.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>"Add Measures" is for selected RAs who are deemed ready by Dr. Petersen to make edits/additions to measures in REDCap</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>After assigning them to the correct role, go to "DAGs" on the left side (under "Applications").</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>To add an RA to their specific task, go to Project Home → Project Setup → Online Designer → click on name of required task in the left column</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select "Edit" on the "Coder Name" field.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Under "Choices (one choice per line)", add the subsequent number followed by a comma and the RA's name.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click "Save".</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding fields to an instrument {#sec-addFields}</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select the correct location where question needs to be added and select "Add Field"</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select field type—the most frequently we use are:</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Text Box</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Multiple Choice</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Yes/No</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>True/False</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Note**: For Multiple Choice Questions and Checkboxes, enter one answer choice per line in the box labeled "Choices"</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add variable name:</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Variable names must be unique</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Variable names within the same instrument should have the same beginning (e.g. all variables within the school information instrument start with "school_")</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Indicate whether question is required</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Add data validation (if possible) to reduce the possibility of human error in data entry</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Questions within the same instrument may belong to different sections.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>To add a new section:</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Click "Add Field"</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>As field type select "Begin New Section (with optional text)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>As field label, name the new section</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Save</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Branching Logic {#sec-branchingLogic}</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>Branching logic is a method to link two questions with each other.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The answer of Question A will determine whether Question B will be displayed.</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>Typically question A is a checkbox or multiple-choice question.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>Follow the below steps to use branching logic:</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create all questions to be linked</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click on the green arrow to begin using branching logic</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use the drag and drop builder to create questions to be linked</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use the code to link questions together</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Example: When, <span class="in">`[other_instrument_name] = '1'`</span>, show this question</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## Field Embedding {#sec-fieldEmbedding}</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>Filed embedding is an advanced branching logic method which allows Question B to be directly embedded in Question A, if the relevant answer choice is selected.</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use branching logic to link Question B to Question A, so Question B will only appear if the participant selects "other" for Question A</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>(in our example, variable name for Question A would be college, variable name for Question B: college_other)</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make sure that answer choice "Other" is coded as "9" (see figure 1)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Return to Question A and add several spaces behind the answer choice you would like to embed.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Insert variable you would like to embed in curly brackets {var_name} (in our example this would be {college_other}; see figure 1)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Save</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>When testing the instrument, a textbox should now appear directly behind the answer choice, when selecting "Other" (see below example)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="al">![RedcapExample1](images/redcapExample1.png)</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="al">![RedcapExample2](images/redcapExample2.png)</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">## Designating Instruments as a Survey {#sec-survey}</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>If an instrument is intended to be completed by participants as a survey (as opposed to a data entry instrument for entry of data by lab members), the instrument will need to be designated as a survey.</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>To designate an instrument as a survey, go to Project Home → Project Setup → Online Designer → click on "Enable" under the "Enabled as Survey" column for the relevant instrument.</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Designating Instruments to Events {#sec-designateInstruments}</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>Most instruments in longitudinal studies will need to be desigated across events.</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Instruments should already be created and approved before designating to events.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>To designate events, follow the below steps:</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to "Designer" → "Project Setup"</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Under the *"Define your events and designate instruments for them"* section, select <span class="in">`Designate Instrument for my events`</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select, <span class="in">`begin editing`</span> and select checkboxes for each event to designate the instrument to</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Important:** Update the roles in <span class="in">`User Rights`</span> to be able to view and edit the newly designated instrument</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Designating Instruments as Repeatable {#sec-repeatableInstrument}</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>Some instruments will be designated as repeatable.</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>These events will first need to be designated across events (See section on <span class="co">[</span><span class="ot">designating events</span><span class="co">](#sec-designateInstruments)</span>).</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>Tasks that require multiple people to create the same form will often need to be repeatable.</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>For example, coding tasks that require multiple people to check across forms for reliability.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>To designate forms as repeatable, follow the below steps:</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Under *"Enable optional modules and customizations"*, select <span class="in">`Repeatable instruments and events`</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Select instruments to be designated repeatable</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu"># Creating Instruments in REDCap {#sec-createInstrument}</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Steps to Add a New Instrument {#sec-newInstrumentSteps}</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Project Home → Project Setup → Online Designer</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In grey box (Data Collection Instruments), click on "+ Create" to create a new instrument from scratch</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>However, an instrument will not show up for entry until:</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The addition of the measure has been approved by Dr. Petersen.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The instrument has been <span class="co">[</span><span class="ot">designated to an event</span><span class="co">](#sec-designateInstruments)</span>.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>(As necessary, the instrument has been <span class="co">[</span><span class="ot">designated as a survey</span><span class="co">](#sec-survey)</span>.)</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>(As necessary, the instrument has been <span class="co">[</span><span class="ot">designated as repeatable</span><span class="co">](#sec-repeatableInstrument)</span>).</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="fu">## Good Practices {#sec-goodPractices}</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Include relevant instructions where applicable</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Omit "introductory" variables (e.g., date of birth) that are collected from other measures</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Field Labels are the same across instruments where applicable</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Choices are the same across instruments where applicable </span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Include numbers (if relevant) in parentheses in row below column choices</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Choices follow correct format: Number, Choice</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>(e.g., 1, female)</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>For yes/no questions, use the "Yes - No" question type (rather than multiple choice radio buttons)</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>No = 0   </span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Yes = 1</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For yes/no questions with additional options (e.g., "not applicable"), use multiple choice radio buttons where:</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>No = 0   </span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Yes = 1</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Other = 9</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. </span>Not applicable = -999</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Time questions</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Specific time (e.g., What is the child's bedtime?):</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>**Begin question with instructions:** Below you will enter your child's bedtime. </span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>      Please specify in 12-hour time (AM/PM). </span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>      For example, if your child's bedtime is 10:30 PM, please enter 10 hours and 30 minutes like the example below. (show example image below)</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Have three variables for every time question:   </span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>AM/PM (Radio Button)</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>hours (text box), italicized</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="ss">             - </span>Validation: integer from 1–12</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>minutes (text box), italicized</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="ss">             - </span>Validation: integer from 0–59</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Specify 12-hour time in the question</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>**Example**: What is the child's bedtime?</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>         Please specify in 12-hour time (AM/PM).</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Duration: (e.g., How long does the child nap each day?)</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Below you will enter how long your child naps each day.</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>      Please specify in hours and minutes. </span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>      For example, if your child naps 2 hours and 30 minutes each day, please enter 2 hours and 30 minutes like the example below (show example image below).</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>Have two variables for every time question:</span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>hours (text box), italicized.</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">            - </span>Validation: integer (minimum 0; maximum—case specific)</span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">         - </span>minutes (text box), italicized</span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="ss">            - </span>Validation: integer (minimum 0; maximum 59)</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## Creating Variables  {#sec-creatingVariables}</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Validation is used wherever possible**</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For variables with identifying information (e.g., name, address), select the checkbox labeled "Identifier"</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Branching logic is used to give questions only to relevant participants</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A "Matrix of Fields" is used to group together items with common response options</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>For "Matrix of Fields," only select "Ranking" if you want the participant to select only one response per column</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Where helpful, "Sections" are used to break up the questions</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Radio buttons are used rather than drop-down lists</span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>For crucial variables, "Required" is selected</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If necessary, piping is used</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add the following verbatim to the end of every questionnaire (in italics): "Please be sure you answered all items."</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Name the variable: measure_allitems (where "measure" is the abbreviated measure name)</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding Smart Variables to Questionnaires {#sec-smartVariables}</span></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>Variable names should follow the appropriate naming convention that is used for each survey.</span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>**Do not add variables to more than three surveys at a time.**</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: </span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="fu">### Timestamps {#sec-timestamps}</span></span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Date/Timestamp in the rater's timezone"</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H<span class="sc">:M:</span>S)</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_ratertimezone`</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following action tags: </span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@NOW</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Date/Timestamp (REDCap server)"</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H<span class="sc">:M:</span>S)</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_servertimezone`</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action tags: </span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@NOW-SERVER</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Date/Timestamp (UTC)"</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H<span class="sc">:M:</span>S)</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_centraltimezone`</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action tags: </span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@NOW-UTC</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### Date Completed, Time Completed and Survey Durations {#sec-dateTimestampDuration}</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>In the below section, it is necessary to identify the <span class="in">`instrument_name`</span> for each variable added.</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>In REDCap, open the <span class="in">`Designer`</span> tab and navigate to the survey to be edited.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>In the URL on the webpage, identify the instrument name for the given survey.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>For example, the below URL corresponds to the *parenting_partner* instrument. </span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>https://redcap.icts.uiowa.edu/redcap/redcap_v12.5.2/Design/online_designer.php?pid=5347&amp;page=<span class="dt">&lt;</span><span class="kw">mark</span><span class="dt">&gt;</span>parenting_partner<span class="dt">&lt;/</span><span class="kw">mark</span><span class="dt">&gt;</span></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Time Started:"</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with no validation</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_timestarted`</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags </span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY </span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY </span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-time-started:instrument_name</span><span class="co">]</span>)</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Date Started:"</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with no validation</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_datestarted`</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags </span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY </span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY </span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-date-started:instrument_name</span><span class="co">]</span>)</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Time Completed:"</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with no validation</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_timecompleted`</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags </span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY </span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY </span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-time-completed:instrument_name</span><span class="co">]</span>)</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Date Completed:"</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with no validation</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_datecompleted`</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags </span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY </span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY </span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-date-completed:instrument_name</span><span class="co">]</span>)</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Duration:"</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with numeric validation</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_surveyduration`</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-duration:instrument_name:m</span><span class="co">]</span>)</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>"Survey Duration Completed:"</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add a "Text Box" field with numeric validation</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Use variable name: <span class="in">`prefix_surveydurationcompleted`</span></span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Add the following Action Tags</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@HIDDEN-SURVEY</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@READONLY</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>@CALCTEXT(<span class="co">[</span><span class="ot">survey-duration-completed:instrument_name:m</span><span class="co">]</span>)</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Send a (team-facing) message in Discord to the Lab Coordinator for review.</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## Troubleshooting {#sec-troubleshooting}</span></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: "ERASE CURRENT VALUE OF THE FIELD?"</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="ot">&lt;http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/6NBY-3Y5R&gt;</span>)</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      </span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">      - </span>logic: <span class="co">[</span><span class="ot">field_name</span><span class="co">]</span> &lt;&gt; ""</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Note: The @DEFAULT action tag **cannot** be used for fields that are hidden by branching logic</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sometimes REDCap may record incorrect values or may fail to record values at all.</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>You can check for this by:</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Navigating to a project, then in the side bar clicking "Data Quality" under "Applications"</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Under Rule #H "Incorrect values for calculated fields", click "Execute"</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click "Fix calcs now" to record the correct values in the data.</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">## How To {#sec-howTo}</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Em dash (—):</span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="in">`&amp;mdash;`</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Line Break</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="in">`&lt;br&gt;`</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Italic font:</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="in">`&lt;i&gt;This is some text!&lt;/i&gt;`</span></span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Example**: <span class="dt">&lt;</span><span class="kw">i</span><span class="dt">&gt;</span>This is some text!<span class="dt">&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Change font size:</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="in">`&lt;font size="6"&gt;This is some text!&lt;/font&gt;`</span></span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Example**: <span class="dt">&lt;</span><span class="kw">font</span><span class="ot"> size</span><span class="op">=</span><span class="st">"6"</span><span class="dt">&gt;</span>This is some text!<span class="dt">&lt;/</span><span class="kw">font</span><span class="dt">&gt;</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Change font color:</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span><span class="in">`&lt;font color="red"&gt;This color will be red.&lt;/font&gt;`</span></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>**Example**: <span class="dt">&lt;</span><span class="kw">font</span><span class="ot"> color</span><span class="op">=</span><span class="st">"red"</span><span class="dt">&gt;</span>This color will be red.<span class="dt">&lt;/</span><span class="kw">font</span><span class="dt">&gt;</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lab Universal Notations {#sec-labUniversalNotations}</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Yes = 1, No = 0</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>True = 1, False = 0</span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sex: Male = 0, Female = 1</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Not Applicable = -999</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Coding Options</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Correct = 2 (or 1, if there is no option for "initially incorrect, changed to correct")</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Incorrect = 0</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Initially incorrect, changed to correct = 1</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>No response = -9</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Uncodeable = 9</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>For Likert scales:</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If there are numbers listed for the Likert scale options, use those numbers as the values</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If there are not numbers listed, check with Dr. Petersen for what numbers to use as the values</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In general, values start with number 1 (not 0—unless the value actually reflects complete absence of something)</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If there is an "Other" option, code it as "9", if possible</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If there is a "N/A" option, code it as "-999"</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## Editing the Data Dictionary {#sec-dataDictionary}</span></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If editing the data dictionary, do not use Excel!—Excel truncates values in cells</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Instead, use LibreOffice with UTF-8 encoding</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
 
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
-</body>
-</html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/redcap-manual.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/redcap-manual.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
