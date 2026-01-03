@@ -2,8 +2,11 @@ Package: placeholder
 Title: LabWiki
 Version: 1.0.0
 Imports:
+  quarto,
   rmarkdown,
   blogdown,
+  downlit,
+  xml2,
   remotes,
   petersenlab
 Remotes:

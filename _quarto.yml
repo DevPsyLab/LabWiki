@@ -1,0 +1,124 @@
+project:
+  type: website
+
+website:
+  title: "Lab Wiki for the Developmental Psychopathology Lab"
+  repo-url: https://github.com/DevPsyLab/LabWiki
+  repo-actions: [edit, source, issue]
+  google-analytics: G-8JSDTYMH7P
+  navbar:
+    logo: images/labLogo.png
+    search: true
+    tools:
+      - icon: github
+        menu:
+          - text: "Source Code"
+            href: https://github.com/DevPsyLab/LabWiki
+          - text: "Report a Bug"
+            href: https://github.com/DevPsyLab/LabWiki/issues/new
+      - icon: twitter
+        href: https://twitter.com/devpsylab
+      - icon: facebook
+        href: https://www.facebook.com/DevPsyLab
+      - icon: instagram
+        href: https://www.instagram.com/devpsylab
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Lab Manual"
+        href: lab-manual.qmd
+      - text: "Expectations"
+        menu:
+        - text: Everyone
+          href: expectations-everyone.qmd
+        - text: Undergraduate Research Assistants
+          href: expectations-undergradRA.qmd
+        - text: SROP Students
+          href: expectations-SROP.qmd
+        - text: Graduate Students
+          href: expectations-gradStudent.qmd
+        #- text: Postdoctoral Scholars
+        #  href: expectations-postdoc.qmd
+        - text: Lab Coordinator
+          href: expectations-labCoordinator.qmd
+        - text: Lab Staff
+          href: expectations-labStaff.qmd
+      - text: "Documentation"
+        menu:
+        - text: Adobe
+          href: adobe.qmd
+        - text: Data Analysis Guides
+          href: https://devpsylab.github.io/DataAnalysis
+        - text: Honors Projects
+          href: honors.qmd
+        - text: Mediation and Moderation
+          href: mediationModeration.qmd
+        - text: Open Science
+          href: openScience.qmd
+        - text: Opportunities
+          href: opportunities.qmd
+        - text: REDCap
+          href: redcap-manual.qmd
+        - text: Qualtrics
+          href: qualtrics-manual.qmd
+        - text: Remote Participation
+          href: documentation-remote.qmd
+        - text: Social Media
+          href: social-media.qmd
+        - text: Studies
+          href: studies.qmd
+        - text: Video Editing
+          href: video-editing.qmd
+        - text: Visual Studio Code
+          href: vsCode.qmd
+        - text: Writing Guidelines
+          href: writing.qmd
+      - text: "Studies"
+        menu:
+        - text: Externalizing Spectrum Across the Lifespan
+          href: study-externalizingSpectrumAcrossLifespan.qmd
+        - text: School Readiness Study
+          href: study-schoolReadinessStudy.qmd
+      - text: "Prospective Applicants"
+        menu:
+        - text: Prospective Undergraduate Research Assistants
+          href: prospective-undergradRA.qmd
+        - text: Prospective Graduate Students
+          href: prospective-gradStudent.qmd
+      - text: "About"
+        href: about.qmd
+      - about.qmd
+    right:
+    - text: "Lab Website"
+      href: https://developmental-psychopathology.lab.uiowa.edu
+
+format:
+  html:
+    highlight-style: a11y
+    theme: cosmo
+    css: ["styles.css", "includes/custom.css", "font/css/roboto.css"]
+    toc: true
+    toc-depth: 5
+    toc-title: Contents
+    toc-location: right
+    execute:
+      error: true
+      warning: false
+    code-link: true
+    number-sections: true
+    code-fold: show
+    df-print: paged
+    code-tools:
+      source: true
+      toggle: true
+    link-external-newwindow: true
+    #include-in-header:
+    #  - "includes/google_analytics.html"
+    include-after-body:
+      - "includes/footer.html"
+    license: CC BY
+    author-meta: "Isaac T. Petersen"
+    date-meta: today
+
+lightbox: 
+  match: auto

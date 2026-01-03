@@ -95,3 +95,5 @@ rsconnect/
 rsconnect
 
 _site/
+
+/.quarto/
