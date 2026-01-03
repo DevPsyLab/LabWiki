@@ -2,22 +2,15 @@
 title: "Expectations for Everyone in the Lab"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
+# Working Together Toward Our Mission {#sec-mission}
 
-# Working Together Toward Our Mission {#mission}
+Everyone is expected to follow our [mission statements](lab-manual.qmd#sec-missionStatement), including our [internal](lab-manual.qmd#sec-missionStatement-internal) and [external](lab-manual.qmd#sec-missionStatement-external) mission statement, in addition to our [diversity statement](lab-manual.qmd#sec-diversityStatement).
 
-Everyone is expected to follow our [mission statements](manual.html#missionStatement), including our [internal](manual.html#missionStatement-internal) and [external](manual.html#missionStatement-external) mission statement, in addition to our [diversity statement](manual.html#diversityStatement).
+# Confidentiality {#sec-confidentiality}
 
-# Confidentiality {#confidentiality}
+Everyone is expected to treat data confidentially, as described in the [Confidentiality](lab-manual.qmd#sec-confidentiality) section of the Lab Manual.
 
-Everyone is expected to treat data confidentially, as described in the [Confidentiality](manual.html#confidentiality) section of the Lab Manual.
-
-# Professionalism {#professionalism}
+# Professionalism {#sec-professionalism}
 
 Everyone is expected to act professionally.
 This is especially critical when participants are in the lab.
@@ -25,11 +18,11 @@ When a participant is in the lab, they should not be able to hear anyone in eith
 In longitudinal research, each visit is exponentially more important than the last.
 Treating participants like royalty is not only the right thing to do, but significantly increases the likelihood of retention.
 
-# Communication {#communication}
+# Communication {#sec-communication}
 
-Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](manual.html#labCommunication) section of the Lab Manual.
+Everyone is expected to communicate regularly with the team, using the appropriate methods of communication, as described in the [Lab Communication](lab-manual.qmd#sec-labCommunication) section of the Lab Manual.
 
-# Interactions with Others {#interactions}
+# Interactions with Others {#sec-interactions}
 
 We succeed (and fail) as a team.
 All lab members are expected to respect each other.
@@ -39,10 +32,10 @@ Statements and behaviors that are demeaning or aggressive will not be tolerated.
 Likewise, lab members are also expected to respect colleagues in the Department and the University, and our participants.
 
 If another member of the lab is not complying with these policies, please first attempt to speak to the person directly.
-The [APA Code of Ethics](https://www.apa.org/ethics/code) (archived at https://perma.cc/359S-V6Z2) advises that this is a first step toward resolution.
+The [APA Code of Ethics](https://www.apa.org/ethics/code) (archived at <https://perma.cc/359S-V6Z2>) advises that this is a first step toward resolution.
 If that is not possible, appropriate, or proves ineffective (i.e., does not change behavior), please speak to Lab Coordinator or Dr. Petersen about the problem immediately.
 
-# Lab Publications and Presentations {#labPublications}
+# Lab Publications and Presentations {#sec-labPublications}
 
 Whenever you have a lab-related submission accepted for presentation or publication, please send the full APA-style reference to Dr. Petersen.
 We have a repository of lab publications on the lab drive so they can be helpful to the team:
@@ -59,7 +52,7 @@ Please upload the PDF of the poster, abstract, and/or paper to the lab repositor
 - Journal articles: please add the PDF of the paper to the following location:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\Papers\`
 
-# Dress Code {#dressCode}
+# Dress Code {#sec-dressCode}
 
 While in lab and on days when you do *not* have lab-related meetings outside of the Department:
 
@@ -71,12 +64,12 @@ Shorts are permitted if they are twill or chino material and reach *at least* to
 The following are NOT allowed: short-shorts, low-cut shirts, strapless tops, visible undergarments (including bralettes, sports bras, or underwear/boxers), or workout/gym clothes (e.g., sweatpants, yoga pants).
 Additionally, clothing that reveals the stomach or midriff area of the body are not allowed.
 Strapped tops are not allowed unless they are considered business casual/professional (e.g., sleeveless blouse).
-For guidance on shorts guidelines, see the [DevPsy Lab Summerwear Guide](#summerwear) (below).
+For guidance on shorts guidelines, see the [DevPsy Lab Summerwear Guide](#sec-summerwear) (below).
 
 You are expected to dress more nicely on days that you have meetings outside of the department (such as with community partners).
 On these days, you should wear a nice pair of pants/dress/skirt and shirt; you should not wear jeans or shorts.
 
-## DevPsy Lab Summerwear Guide {#summerwear}
+## DevPsy Lab Summerwear Guide {#sec-summerwear}
 
 Shorts are allowed if they are twill or chino material and reach at least to your mid-thigh (Bermuda-length shorts, however, are more appropriate).
 This also applies to dresses and skirts—they must reach at least your mid-thigh, and are not advised for LV1 Es on visit days.
@@ -95,7 +88,7 @@ Opt for a flowy fit with a simple graphic print.
 While we know cut-offs and tight spandex styles are fun, these should be saved for after-work wear.
 A sophisticated fabric, such as chino shorts, will help keep your ensemble fresh and professional.
 
-https://www.stitchfix.com/women/blog/ask-a-stylist/are-there-work-appropriate-shorts (archived at https://perma.cc/3DAB-5MUP)
+<https://www.stitchfix.com/women/blog/ask-a-stylist/are-there-work-appropriate-shorts> (archived at <https://perma.cc/3DAB-5MUP>)
 
 To pull off shorts at the office without raising alarm or workplace scorn, we compiled an Atkin-approved guideline of dos (and one don't).
 
@@ -109,15 +102,15 @@ I like tailored shorts that have structure, but are also lightweight."
 - Do seek out special detailing.
 Pleats down the front, a clean hem, or a high-waisted silhouette are great examples.
 
-https://web.archive.org/web/20210303123710/https://www.instyle.com/news/summer-wear-shorts-office
+<https://web.archive.org/web/20210303123710/https://www.instyle.com/news/summer-wear-shorts-office>
 
 The cardinal rule: Stay away from cutoffs, which are almost universally considered too casual for any workplace, and opt instead for a tailored pair of Bermuda-length shorts, which offer conservative hemlines and an overall more polished look.
 
-https://www.realsimple.com/beauty-fashion/clothing/are-shorts-work-appropriate (archived at https://perma.cc/U92L-QCS2)
+<https://www.realsimple.com/beauty-fashion/clothing/are-shorts-work-appropriate> (archived at <https://perma.cc/U92L-QCS2>)
 
 ![Dress Code: Shorts](images/dressCode_shorts.png)
 
-# Consequences of Non-compliance {#noncompliance}
+# Consequences of Non-compliance {#sec-noncompliance}
 
 If we become aware of violations of our values, policies, or expectations, Dr. Petersen and/or the Lab Coordinator will discuss the matter with the person directly and in close temporal proximity to being made aware of the situation.
 We will first attempt to understand the situation, including both the behaviors and the antecedents.
@@ -125,6 +118,6 @@ We will also try to clarify expectations and provide constructive feedback aroun
 Discussion will center on prevention of such behaviors in the future.
 The consequences will vary based on the specific behavior, and may include consequences such as: meeting individually with Dr. Petersen and/or the Lab Coordinator and possibly other departmental leadership, making repairs with the other party, development of a plan to monitor and correct the behavior so it does not recur, dismissal from the lab, and dismissal from the program.
 
-# Role-Specific Expectations {#roles}
+# Role-Specific Expectations {#sec-roles}
 
-In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.html), [SROP students](expectations-SROP.html), [graduate students](expectations-gradStudent.html), [postdoctoral scholars](expectations-postdoc.html), the [Lab Coordinator](expectations-labCoordinator.html), and [lab staff](expectations-labStaff.html).
+In addition, people are expected to follow their expectations for the role, including expectations for [undergraduate research assistants](expectations-undergradRA.qmd), [SROP students](expectations-SROP.qmd), [graduate students](expectations-gradStudent.qmd), [postdoctoral scholars](expectations-postdoc.qmd), the [Lab Coordinator](expectations-labCoordinator.qmd), and [lab staff](expectations-labStaff.qmd).

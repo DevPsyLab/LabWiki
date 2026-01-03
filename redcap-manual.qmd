@@ -2,13 +2,6 @@
 title: "REDCap Manual"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 # REDCap Data Management
 
 REDCap Support Contact: redcap@icts.uiowa.edu 
@@ -16,11 +9,11 @@ REDCap Support Contact: redcap@icts.uiowa.edu
 REDCap also hosts virtual office hours.
 See [here](https://its.uiowa.edu/services/redcap-research-electric-data-capture) for schedule and additional information. 
 
-## Updating instruments in REDCap {#updates}
+## Updating instruments in REDCap {#sec-updates}
 
 1. Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. 
 
-## Adding new RAs to REDCap/tasks {#addPersonnel}
+## Adding new RAs to REDCap/tasks {#sec-addPersonnel}
 
 1. Go to "User Rights" on the left side (under "Applications").
 1. In the text box labeled "Assign new user", type the new lab member's HawkID and click "Assign to Role" (e.g., "RA", "Grad Student").
@@ -33,7 +26,7 @@ See [here](https://its.uiowa.edu/services/redcap-research-electric-data-capture)
 1. Under "Choices (one choice per line)", add the subsequent number followed by a comma and the RA's name.
 1. Click "Save".
 
-## Adding fields to an instrument {#addFields}
+## Adding fields to an instrument {#sec-addFields}
 
 1. To edit an instrument, go to: Project Home → Project Setup → Online Designer → click on name of required task in the left column
 1. Select the correct location where question needs to be added and select "Add Field"
@@ -55,7 +48,7 @@ To add a new section:
    - As field label, name the new section
    - Save
 
-## Branching Logic {#branchingLogic}
+## Branching Logic {#sec-branchingLogic}
 
 Branching logic is a method to link two questions with each other.
 The answer of Question A will determine whether Question B will be displayed.
@@ -68,7 +61,7 @@ Follow the below steps to use branching logic:
    - Use the code to link questions together
       - Example: When, `[other_instrument_name] = '1'`, show this question
 
-## Field Embedding {#fieldEmbedding}
+## Field Embedding {#sec-fieldEmbedding}
 
 Filed embedding is an advanced branching logic method which allows Question B to be directly embedded in Question A, if the relevant answer choice is selected.
 
@@ -83,12 +76,12 @@ Filed embedding is an advanced branching logic method which allows Question B to
 ![RedcapExample1](images/redcapExample1.png)
 ![RedcapExample2](images/redcapExample2.png)
 
-## Designating Instruments as a Survey {#survey}
+## Designating Instruments as a Survey {#sec-survey}
 
 If an instrument is intended to be completed by participants as a survey (as opposed to a data entry instrument for entry of data by lab members), the instrument will need to be designated as a survey.
 To designate an instrument as a survey, go to Project Home → Project Setup → Online Designer → click on "Enable" under the "Enabled as Survey" column for the relevant instrument.
 
-## Designating Instruments to Events {#designateInstruments}
+## Designating Instruments to Events {#sec-designateInstruments}
 
 Most instruments in longitudinal studies will need to be desigated across events.
 Instruments should already be created and approved before designating to events.
@@ -100,10 +93,10 @@ To designate events, follow the below steps:
 1. Select, `begin editing` and select checkboxes for each event to designate the instrument to
 1. **Important:** Update the roles in `User Rights` to be able to view and edit the newly designated instrument
 
-## Designating Instruments as Repeatable {#repeatableInstrument}
+## Designating Instruments as Repeatable {#sec-repeatableInstrument}
 
 Some instruments will be designated as repeatable.
-These events will first need to be designated across events (See section on [designating events](#designateInstruments)).
+These events will first need to be designated across events (See section on [designating events](#sec-designateInstruments)).
 Tasks that require multiple people to create the same form will often need to be repeatable.
 For example, coding tasks that require multiple people to check across forms for reliability.
 
@@ -112,9 +105,9 @@ To designate forms as repeatable, follow the below steps:
 1. Under *"Enable optional modules and customizations"*, select `Repeatable instruments and events`
 1. Select instruments to be designated repeatable
 
-# Creating Instruments in REDCap {#createInstrument}
+# Creating Instruments in REDCap {#sec-createInstrument}
 
-## Steps to Add a New Instrument {#newInstrumentSteps}
+## Steps to Add a New Instrument {#sec-newInstrumentSteps}
 
 1. Project Home → Project Setup → Online Designer
 1. In grey box (Data Collection Instruments), click on "+ Create" to create a new instrument from scratch
@@ -122,12 +115,12 @@ To designate forms as repeatable, follow the below steps:
 However, an instrument will not show up for entry until:
 
 1. The addition of the measure has been approved by Dr. Petersen.
-1. The instrument has been [designated to an event](#designateInstruments).
-1. (As necessary, the instrument has been [designated as a survey](#survey).)
-1. (As necessary, the instrument has been [designated as repeatable](#repeatableInstrument)).
+1. The instrument has been [designated to an event](#sec-designateInstruments).
+1. (As necessary, the instrument has been [designated as a survey](#sec-survey).)
+1. (As necessary, the instrument has been [designated as repeatable](#sec-repeatableInstrument)).
 1. User rights are updated to allow users to view the instrument (i.e., "Read Only" or "View and Edit")
 
-## Good Practices {#goodPractices}
+## Good Practices {#sec-goodPractices}
 
 -	Include relevant instructions where applicable
 -	Omit "introductory" variables (e.g., date of birth) that are collected from other measures
@@ -169,7 +162,7 @@ However, an instrument will not show up for entry until:
          - minutes (text box), italicized
             - Validation: integer (minimum 0; maximum 59)
 
-## Creating Variables  {#creatingVariables}
+## Creating Variables  {#sec-creatingVariables}
 
 - Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters
 - **Validation is used wherever possible**
@@ -184,7 +177,7 @@ However, an instrument will not show up for entry until:
 - Add the following verbatim to the end of every questionnaire (in italics): "Please be sure you answered all items."
    - Name the variable: measure_allitems (where "measure" is the abbreviated measure name)
 
-## Adding Smart Variables to Questionnaires {#smartVariables}
+## Adding Smart Variables to Questionnaires {#sec-smartVariables}
 
 In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
 Variable names should follow the appropriate naming convention that is used for each survey.
@@ -192,7 +185,7 @@ After you have added variables, send a (team-facing) message in Discord to the L
 **Do not add variables to more than three surveys at a time.**
 These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables: 
 
-### Timestamps {#timestamps}
+### Timestamps {#sec-timestamps}
 
 1. "Date/Timestamp in the rater's timezone"
    - Add a "Text Box" field with validation "Datetime w/seconds (Y-M-D H:M:S)
@@ -216,7 +209,7 @@ These variables should be entered at the end of each survey. For each survey, fo
       - @NOW-UTC
       - @READONLY
 
-### Date Completed, Time Completed and Survey Durations {#dateTimestampDuration}
+### Date Completed, Time Completed and Survey Durations {#sec-dateTimestampDuration}
 
 In the below section, it is necessary to identify the `instrument_name` for each variable added.
 In REDCap, open the `Designer` tab and navigate to the survey to be edited.
@@ -269,10 +262,10 @@ For example, the below URL corresponds to the *parenting_partner* instrument.
       - @CALCTEXT([survey-duration-completed:instrument_name:m])
 1. Send a (team-facing) message in Discord to the Lab Coordinator for review.
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting {#sec-troubleshooting}
 
 - When a field that will be hidden by branching logic has a value, REDCap offers to delete the value: "ERASE CURRENT VALUE OF THE FIELD?"
-   - http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf (archived at https://perma.cc/6NBY-3Y5R)
+   - <http://cri.uchicago.edu/wp-content/uploads/2016/04/REDCap-Avoid-Common-Pitfalls.pdf> (archived at <https://perma.cc/6NBY-3Y5R>)
    - If you do not want the field hidden once it contains data, add the following as an "OR" condition on the existing branching      
       - logic: [field_name] <> ""
    - Note: The @DEFAULT action tag **cannot** be used for fields that are hidden by branching logic
@@ -283,7 +276,7 @@ You can check for this by:
 1. You will see a table with any incorrect calculated values (including missing values). Check the table to make sure the discrepant fields are what you expect. Also check to make sure there are no rows that suggest overwriting legitimate values. If a row looks like it is actually correct, click "exclude".
 1. Click "Fix calcs now" to record the correct values in the data.
 
-## How To {#howTo}
+## How To {#sec-howTo}
 
 - Em dash (—):
    - `&mdash;`
@@ -299,7 +292,7 @@ You can check for this by:
    - `<font color="red">This color will be red.</font>`
    - **Example**: <font color="red">This color will be red.</font>
 
-## Lab Universal Notations {#labUniversalNotations}
+## Lab Universal Notations {#sec-labUniversalNotations}
 
 - Yes = 1, No = 0
 - True = 1, False = 0
@@ -320,7 +313,7 @@ For Likert scales:
 - If there is an "Other" option, code it as "9", if possible
 - If there is a "N/A" option, code it as "-999"
 
-## Editing the Data Dictionary {#dataDictionary}
+## Editing the Data Dictionary {#sec-dataDictionary}
 
 - If editing the data dictionary, do not use Excel!—Excel truncates values in cells
    - Instead, use LibreOffice with UTF-8 encoding

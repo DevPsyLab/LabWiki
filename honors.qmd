@@ -2,14 +2,7 @@
 title: "Honors In Psychology: Expectations and Resources"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
-# Independent Projects {#independentProjects}
+# Independent Projects {#sec-independentProjects}
 
 Anyone in the lab is able (and encouraged!) to pursue an independent project—or a collaborative project with others, as long as they are on the IRB for that project and are meeting their regular lab expectations.
 You are encouraged to think about what research questions you have, what you are curious about, and what you want to know the answer to.
@@ -17,25 +10,25 @@ If you are unsure what are the kinds of questions you could ask, you are encoura
 You may also meet with other members of the lab, including undergraduate RAs, graduate students, lab staff, and Dr. Petersen, to hone your research question(s) and hypotheses, to learn how to conduct and interpret the analyses, and to learn how to write about/present your findings, etc.
 Note: work related to independent projects is expected to take place \*outside\* of your regular 10 hours in the lab.
 
-If you are interested, you may pursue an Honors project and thesis, as long as you have a full year available (and the time necessary) to conduct the project and you meet the other expectations for Honors projects described [here](#expectations-thesis).
+If you are interested, you may pursue an Honors project and thesis, as long as you have a full year available (and the time necessary) to conduct the project and you meet the other expectations for Honors projects described [here](#sec-expectations-thesis).
 However, you may also pursue an independent project without pursuing an Honors project/thesis.
-Regardless of which path your pursue, you are encouraged to present your findings at the UI Undergraduate Research Festival or other [conferences](#conferences).
+Regardless of which path your pursue, you are encouraged to present your findings at the UI Undergraduate Research Festival or other [conferences](#sec-conferences).
 
 Please read all of the sections below; they provide resources to help you succeed in your independent project and provide important expectations regarding data confidentiality etc.
 
-# Overview of Honors Options {#options}
+# Overview of Honors Options {#sec-options}
 
 Students may pursue Honors in the Psychology major through lab-related work, either through a thesis or a non-thesis route.
 For more information, see here:
-https://psychology.uiowa.edu/undergraduate/honors-psychology.
+<https://psychology.uiowa.edu/undergraduate/honors-psychology>.
 In general, students complete Honors theses during their senior year, after they have firm footing in the lab (i.e., they have spent at least 1–2 semesters in the lab).
 Because the non-thesis capstones requires additional coursework, students may pursue this option earlier than their senior year.
 Please meet with Dr. Petersen to help decide which might make the most sense given your goals.
 You are also encouraged to meet with the Lab Coordinator and graduate students.
 
-# Expectations {#expectations}
+# Expectations {#sec-expectations}
 
-## Non-Thesis Honors {#expectations-nonThesis}
+## Non-Thesis Honors {#sec-expectations-nonThesis}
 
 If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen.
 You are expected to send Dr. Petersen a draft of the Pre-Launch Agreement for approval, and to incorporate any edits/feedback from Dr. Petersen before submitting.
@@ -44,9 +37,9 @@ As a result, you should not use lab- or study-specific terms or abbreviations wi
 Dr. Petersen's decision whether to approve your proposal will depend on factors such as whether you are meeting your regular lab expectations, whether you have the time necessary, and your motivation.
 
 You are expected to follow the Department requirements for Honors in Psychology, including meeting all deadlines:
-https://psychology.uiowa.edu/undergraduate/honors-psychology
+<https://psychology.uiowa.edu/undergraduate/honors-psychology>
 
-## Honors Thesis {#expectations-thesis}
+## Honors Thesis {#sec-expectations-thesis}
 
 The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
@@ -66,10 +59,10 @@ You can get academic credit for your thesis research via the course entitled "Ho
 Dr. Petersen expects you to present a research poster on your thesis findings at the UI ICRU Undergraduate Research Festival during the final semester in which you complete your thesis.
 It is your responsibility to keep track of the registration deadlines for the Undergraduate Research Festival so you do not miss it!
 Here is information on the UI Undergraduate Research Festival:
-https://our.research.uiowa.edu/events-0/undergraduate-research-festivals
+<https://our.research.uiowa.edu/events-0/undergraduate-research-festivals>
 
 You are expected to follow the Department requirements for Honors theses and for Honors in Psychology, including meeting all deadlines:
-https://psychology.uiowa.edu/undergraduate/honors-psychology
+<https://psychology.uiowa.edu/undergraduate/honors-psychology>
 
 You must have two readers of the thesis who are familiar with the topic.
 One reader will be Dr. Petersen.
@@ -88,16 +81,16 @@ Your defense should take place no later than Finals week so you can get Honors c
 You must send the completed final draft of your thesis to both Dr. Petersen and the second reader at least one week prior to your defense.
 Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.
 
-# Resources {#resources}
+# Resources {#sec-resources}
 
-For more information on the [School Readiness Study](study-schoolReadinessStudy.html), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
-These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
+For more information on the [School Readiness Study](study-schoolReadinessStudy.qmd), you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
+These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.qmd).
 
 There are many helpful resources on the lab drive for thesis projects, including resources for data analysis, example theses, example posters, cover page instructions, and helpful readings.
 You can find these resources at the following location on the lab drive:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Honors Thesis\`
 
-We also have a page the clarifies the difference between mediation and moderation [here](mediationModeration.html).
+We also have a page the clarifies the difference between mediation and moderation [here](mediationModeration.qmd).
 
 For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#sec-statisticalDecisionTree) in the lab's Data Analysis Guides.
 For information on how to use software for data analysis, see our data analysis guides:
@@ -109,26 +102,26 @@ For information on how to use software for data analysis, see our data analysis 
 In conducting your Honors thesis, you are expected to obtain and use the following must-have general resources:
 
 1. "Writing Empirical Research Reports: A Basic Guide for Students of the Social and Behavioral Sciences", 8th Edition (Fred Pyrczak)\
-https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361
+<https://www.amazon.com/Writing-Empirical-Research-Reports-Behavioral/dp/1936523361>
 1. "Publication Manual of the American Psychological Association", 7th Edition\
-https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X
+<https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/143383216X>
 1. "Discovering Statistics using SPSS", 5th Edition (Andy Field)\
-https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566
+<https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1526436566>
 1. EndNote or Zotero—software for organizing your articles and for writing your References section\
-[https://its.uiowa.edu/endnote](https://its.uiowa.edu/endnote)\
-https://www.zotero.org
+<https://its.uiowa.edu/endnote>\
+<https://www.zotero.org>
 
 Please note that we do not want these resources to be financial barriers to completing an Honors thesis.
 You may be able to find many of these at the library, and Dr. Petersen may be able to lend you a copy, as well.
 Please talk with Dr. Petersen if these resources would be a financial barrier.
 
-# Steps to Get Started {#getstarted}
+# Steps to Get Started {#sec-getstarted}
 
-## Non-Thesis Honors {#getstarted-nonThesis}
+## Non-Thesis Honors {#sec-getstarted-nonThesis}
 
 Before you meet with Dr. Petersen, send Dr. Petersen a draft of your pre-launch agreement form.
 
-## Honors Thesis {#getstarted-thesis}
+## Honors Thesis {#sec-getstarted-thesis}
 
 Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
 
@@ -144,7 +137,7 @@ Following the steps above will help structure your conversation with Dr. Peterse
 
 In addition, send Dr. Petersen a draft of your pre-launch agreement form before you meet with him.
 
-# Accessing the Lab Drive {#labdrive}
+# Accessing the Lab Drive {#sec-labdrive}
 
 Your member folder on the lab drive (`\Lab\Members\`) should be used for all thesis-related work.
 This is where you will find your data file(s), and where you should save all writing and analysis files.
@@ -162,9 +155,9 @@ Please organize all thesis-related files into subfolders within your member fold
 					          \Thesis\ -- put your Thesis document here (i.e., your paper)
 
 To access the lab drive off-campus, you will need to set up VPN.
-For instructions to set up VPN, see [here](documentation-remote.html#vpn).
+For instructions to set up VPN, see [here](documentation-remote.qmd#sec-vpn).
 
-# Accessing Articles through the UI Libraries {#articles}
+# Accessing Articles through the UI Libraries {#sec-articles}
 
 You should be able to access many, if not most, articles using [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch).
 Other databases include [PsycInfo](https://purl.lib.uiowa.edu/apa/psycinfo) and [PubMed](https://purl.lib.uiowa.edu/nlm/pubmed).
@@ -172,22 +165,22 @@ However, even if an article is not freely available online and the university do
 If the PDF of article is not available on [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch), you can easily get article PDFs through the university library system.
 First, see if the university has access to the electronic/online version of the journal by searching the name of the journal in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
 For instance, here is a search for the journal `Developmental Neuropsychology`:\
-https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&search_scope=default_scope&vid=01IOWA
+<https://search.lib.uiowa.edu/primo-explore/search?query=any,contains,Developmental%20Neuropsychology&search_scope=default_scope&vid=01IOWA>
 
 If the university does not have access to the journal, you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
 
-# Working on Your Thesis {#working}
+# Working on Your Thesis {#sec-working}
 
 The easiest way to work on your thesis is to work on it in the lab.
-If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.html#remoteAccess).
-For instructions how to do each, see the [RA Remote Participation page](documentation-remote.html).
+If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.qmd#sec-remoteAccess).
+For instructions how to do each, see the [RA Remote Participation page](documentation-remote.qmd).
 
-# Statistical Analysis Software {#software}
+# Statistical Analysis Software {#sec-software}
 
 You can use whatever statistical software you prefer for your project.
 Students in the lab frequently use [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), though you are also welcome to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) or other software.
 [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) have point-and-click interfaces and thus are the easiest to learn and are the most commonly used for theses in the lab.
-Unlike [`SPSS`](spss.html), however, [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) is free, so you will be able to use it freely after you leave the university.
+Unlike [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html), however, [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html) is free, so you will be able to use it freely after you leave the university.
 [`R`](https://devpsylab.github.io/DataAnalysis/R.html) is also free, but it is code-based and has a steep learning curve.
 The key goal is for your research to be reproducible (by you and others), so—regardless of which software you use—having analysis scripts that can reproduce your findings is important.
 Please follow the Data Analysis Guide for the software package that you use to ensure you create analysis scripts for reproducibility:
@@ -196,15 +189,15 @@ Please follow the Data Analysis Guide for the software package that you use to e
 - [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html)
 - [`R`](https://devpsylab.github.io/DataAnalysis/R.html)
 
-# Access SPSS/R for Data Analysis {#spss-R}
+# Access SPSS/R for Data Analysis {#sec-spss-R}
 
 You can access [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) and [`R`](https://devpsylab.github.io/DataAnalysis/R.html) through an online platform called UI Virtual Desktop.
 You can use Virtual Desktop on campus or from home, but if you are off-campus, VPN is required.
-For instructions to set up VPN, see [here](documentation-remote.html#vpn).
+For instructions to set up VPN, see [here](documentation-remote.html#sec-vpn).
 Follow the steps below to set up Virtual Desktop for the first time.
 
-1. Connect to [VPN](documentation-remote.html#vpn) using Cisco AnyConnect.
-1. Go to: https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb
+1. Connect to [VPN](documentation-remote.html#sec-vpn) using Cisco AnyConnect.
+1. Go to: <https://virtualdesktop.uiowa.edu/Citrix/VirtualDesktopWeb>
 1. If this is your first time accessing Virtual Desktop on your computer, you will need to install an application called Citrix Receiver.
 In the process of logging into Virtual Desktop, you will encounter a window that prompts you to install Citrix Receiver.
 Follow the prompts on the screen to install the application.
@@ -223,18 +216,18 @@ This will prompt a new window.
 Once you have selected your data file, click "Open."
 1. Then, you are ready to analyze your data!
 
-# Important {#confidentiality}
+# Important {#sec-confidentiality}
 
 Lab data must remain on the lab drive.
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
 It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
 
-# Writing Guidelines {#writing}
+# Writing Guidelines {#sec-writing}
 
-Make sure to follow the lab's [writing guidelines](writing.html).
+Make sure to follow the lab's [writing guidelines](writing.qmd).
 You are also encouraged to take advantage of the [UI Writing Center](https://writingcenter.uiowa.edu).
 
-# Presenting Work at Conferences {#conferences}
+# Presenting Work at Conferences {#sec-conferences}
 
 You are expected to present a research poster on your thesis findings at the UI Undergraduate Research Festival.
 You are encouraged (but not required) to additionally present your research at other conferences, as well.
@@ -277,7 +270,7 @@ Below is a list of potentially relevant conferences:
 - World Association for Infant Mental Health (WAIMH)
 - International Association for Youth Mental Health (IAYMH)
 
-# Publishing {#publishing}
+# Publishing {#sec-publishing}
 
 It is not common (or expected) to publish a thesis.
 However, there may be opportunities to publish your thesis if you are interested.
@@ -285,9 +278,9 @@ Please talk to Dr. Petersen if you are interested in pursuing this.
 
 Various options may include:
 
-- publishing the thesis in [Iowa Research Online](https://iro.uiowa.edu/)
-- posting a [preprint](openScience.html#preprint) on a preprint server
-- publishing the thesis in a [peer-reviewed journal for undergraduate theses](https://www.cur.org/resources-publications/student-resources/student-journals/undergraduate-research-journal-listing) (archived at https://perma.cc/SVP9-4HJD)
+- publishing the thesis in [Iowa Research Online](https://iro.uiowa.edu)
+- posting a [preprint](openScience.html#sec-preprint) on a preprint server
+- publishing the thesis in a [peer-reviewed journal for undergraduate theses](https://www.cur.org/resources-publications/student-resources/student-journals/undergraduate-research-journal-listing) (archived at <https://perma.cc/SVP9-4HJD>)
 - publishing the thesis in a standard peer-reviewed journal
 
 Publishing the thesis in a peer-reviewed journal will likely take extensive additional time and work to prepare the thesis to be publication-ready in terms of format and quality.

@@ -2,20 +2,13 @@
 title: "Lab Expectations for Postdoctoral Scholars"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 Coming soon!
 
-# Expectations for Everyone in Lab {#expectationsForEveryone}
+# Expectations for Everyone in Lab {#sec-expectationsForEveryone}
 
-In addition to the expectations described above for postdoctoral scholars, please also read the [expectations for everyone in the lab](expectations-everyone.html).
+In addition to the expectations described above for postdoctoral scholars, please also read the [expectations for everyone in the lab](expectations-everyone.qmd).
 
-# Signature {#signature}
+# Signature {#sec-signature}
 
 Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.
 

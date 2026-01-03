@@ -2,13 +2,6 @@
 title: "Application Guidelines for Prospective Undergraduate Research Assistants"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 We invite you to apply to join the Developmental Psychopathology Lab!
 
 # About Being a Research Assistant in Our Lab
@@ -19,7 +12,7 @@ There are also opportunities to complete honors theses for students who are inte
 Positions in our laboratory may be particularly interesting and greatly beneficial for those who plan to enter graduate programs in clinical psychology or developmental psychology.
 Experience with young children is highly desirable.
 Completion of introductory courses in research methods and statistics is desirable but not required.
-Expectations for undergraduate RAs are described [here](expectations-undergradRA.html).
+Expectations for undergraduate RAs are described [here](expectations-undergradRA.qmd).
 
 # How Long Am I Expected to Stay in Lab?
 
@@ -34,4 +27,4 @@ To apply, please submit the following application: [Undergrad Research Assistant
 
 # Questions
 
-If you have questions, please contact the Developmental Psychopathology Lab at: devpsy-lab@uiowa.edu.
+If you have questions, please contact the Developmental Psychopathology Lab at: [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu).

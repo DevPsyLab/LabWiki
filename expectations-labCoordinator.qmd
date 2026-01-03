@@ -2,14 +2,7 @@
 title: "Lab Expectations for Lab Coordinator"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
-# Duties {#duties}
+# Duties {#sec-duties}
 
 Duties for the Lab Coordinator include the following:
 
@@ -27,7 +20,7 @@ Duties for the Lab Coordinator include the following:
 - Leading lab meeting
 - Lab report
 
-# Your Schedule {#schedule}
+# Your Schedule {#sec-schedule}
 
 Here are the expectations regarding your schedule:
 
@@ -44,9 +37,9 @@ If we discuss the schedule changes in person or by phone, you email me after we 
 - You keep your schedule in the online calendar up-to-date with any changes.
 - You submit time off (or other) requests to me in person, by phone, or via email (not by Discord) with as much advance notice as possible—and at least 24 hours in advance, if at all possible.
 
-# Communication {#communication}
+# Communication {#sec-communication}
 
-- You will use Discord (or in person/phone) for most communication (see lab communication guidelines [here](manual.html#labCommunication)), but you will use the lab email (i.e., devpsy-lab@uiowa.edu; not your personal email) for all lab-relevant email communication.
+- You will use Discord (or in person/phone) for most communication (see lab communication guidelines [here](lab-manual.qmd#sec-labCommunication)), but you will use the lab email (i.e., [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu); not your personal email) for all lab-relevant email communication.
 This makes it easier for us to keep a record of lab-related communication for Dr. Petersen and future lab staff.
 For personal communication (e.g., asking for time off) or ***non-lab*** related email communication, you will use your personal university email (i.e., firstname-lastname@uiowa.edu).
 If someone contacts your personal university email with lab-related communication, you should reply using the lab email.
@@ -57,7 +50,7 @@ At times, I may contact you by email or Discord after hours (if that is when it 
 However, you are \*not\* expected to respond after hours.
 I will call you if something is urgent.
 
-# Lab Report {#labReport}
+# Lab Report {#sec-labReport}
 
 - We will have a weekly scheduled one-on-one meeting (in addition to other times I meet with you in the lab).
 - You will submit a report no later than the day before so I can review it before our meeting and come prepared.
@@ -66,11 +59,11 @@ I will call you if something is urgent.
     1. What you plan to accomplish in the next week
     1. Items to discuss, including problems, recommended solutions, and questions
 
-# Expectations for Everyone in Lab {#expectationsForEveryone}
+# Expectations for Everyone in Lab {#sec-expectationsForEveryone}
 
-In addition to the expectations described above for the Lab Coordinator, please also read the [expectations for everyone in the lab](expectations-everyone.html).
+In addition to the expectations described above for the Lab Coordinator, please also read the [expectations for everyone in the lab](expectations-everyone.qmd).
 
-# Signature {#signature}
+# Signature {#sec-signature}
 
 Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.
 

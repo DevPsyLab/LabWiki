@@ -2,18 +2,11 @@
 title: "Studies"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 Studies:
 
-- [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan)
-    - Documentation for the Externalizing Assessment Project is here: https://devpsylab.github.io/ExternalizingAssessmentProject
-- [School Readiness Study](study-schoolReadinessStudy.html)
+- [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan.qmd)
+    - Documentation for the Externalizing Assessment Project is here: <https://devpsylab.github.io/ExternalizingAssessmentProject>
+- [School Readiness Study](study-schoolReadinessStudy.qmd)
     - Documentation for the School Readiness Study is on the lab drive at the following location[^1]:
     `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Wiki\_site\index.html`
 

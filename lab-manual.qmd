@@ -2,22 +2,15 @@
 title: "Lab Manual"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
+# Mission Statement {#sec-missionStatement}
 
-# Mission Statement {#missionStatement}
-
-## External Mission Statement {#missionStatement-external}
+## External Mission Statement {#sec-missionStatement-external}
 
 We are striving to improve the health and well-being of families and communities by conducting research to advance the understanding of human development.
 
 Date drafted: May 2018
 
-## Internal Mission Statement {#missionStatement-internal}
+## Internal Mission Statement {#sec-missionStatement-internal}
 
 As members of the Developmental Psychopathology Lab, we strive to create, maintain, and improve a fun and collaborative culture.
 We commit to bettering ourselves and others through respect, hard work, ethical practices, support, and meaningful, lasting relationships.
@@ -25,7 +18,7 @@ As a team, we cultivate a supportive environment for a free exchange of ideas an
 
 Date drafted: August 2018
 
-## Diversity Statement {#diversityStatement}
+## Diversity Statement {#sec-diversityStatement}
 
 We seek to include members of various cultural, ethnic, and socioeconomic backgrounds so that our research might best represent the families which make up our diverse communities.
 We aim to provide a welcoming and respectful environment for people of all backgrounds.
@@ -66,9 +59,9 @@ Before you can interact with any data in the lab (including observing visits) yo
 This means completing the CITI training, which will upload to the IRB.
 You will need to complete the **Group 1 – Biomedical Research – IRB-01** course.
 Instructions are below.
-If you have questions, please follow this link: https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi
+If you have questions, please follow this link: <https://hso.research.uiowa.edu/certifications-human-subjects-protections-citi>
 
-1. Enter the CITI program at https://www.citiprogram.org
+1. Enter the CITI program at <https://www.citiprogram.org>
 1. On the Main Menu screen, under the 'University of Iowa Courses' tab, in the 'My Learner Tools for University of Iowa' box, select the 'Add a Course or Update Learner Groups' link 
 1. Select the "I am required to complete human subjects' research training." to complete the IRB required course for certification in Human Subjects Protections.
 Click on the 'Next' button.
@@ -96,7 +89,7 @@ The basic information they may ask you to confirm is:
 *PI*: Dr. Isaac Petersen\
 *Which study or training*: the IRB-01 study
 
-# Confidentiality {#confidentiality}
+# Confidentiality {#sec-confidentiality}
 
 As part of every participant's consent process, we promise that we will protect their information.
 Therefore, it is imperative that all identifying information related to our participants remains confidential.
@@ -121,7 +114,7 @@ No one should ever take photos, screenshots, Snapchats, or any other kind of vid
 Additionally, no data or identifying information should be shared on social media, through email, etc.
 Even when using Discord to communicate with team members about visits or lab-related tasks, team members should always use TCIDs and waves, which are de-identified, to refer to specific participants/videos.
 
-## Remote Access {#remote}
+## Remote Access {#sec-remote}
 
 RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
 This is to ensure that the RA has received all of the requisite training, instructions, and resources to properly access data remotely.
@@ -131,12 +124,12 @@ After receiving permission or direction to work on lab tasks remotely, it is cri
 - All lab-related data or documents should only be opened when no one else can see your computer screen or hear visit videos.
 Therefore, if your parents/roommates/friends/etc. are in the room with you and can see or hear the videos, DO NOT OPEN THEM.
 
-# How to Register Lab for Credit {#courseRegistration}
+# How to Register Lab for Credit {#sec-courseRegistration}
 
-## Regular Credit {#regularCredit}
+## Regular Credit {#sec-regularCredit}
 
-Students who wish to receive credit for time spent in the lab may register for "`PSY:3994:01IND – Research Practicum in Psychology`", "[`HONR:3994:01IND – Honors Research Practicum`](#honorsCredit)", or "`URES:3992`".
-Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#honorsCredit), "[`HONR:3994`](#honorsCredit)".
+Students who wish to receive credit for time spent in the lab may register for "`PSY:3994:01IND – Research Practicum in Psychology`", "[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)", or "`URES:3992`".
+Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#sec-honorsCredit), "[`HONR:3994`](#sec-honorsCredit)".
 
 `URES:3992` is 0-hour and has no tuition or fees associated.
 It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
@@ -144,7 +137,7 @@ It is recommended to enroll in `URES:3992` when you cannot take credit-bearing c
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see the section on [Honors Credit](#honorsCredit)) for `PSY:4990` and `HONR:3994`.
+- Students receive a letter grade (see the section on [Honors Credit](#sec-honorsCredit)) for `PSY:4990` and `HONR:3994`.
 - Students receive a Pass/Fail grade for `PSY:3994`.
 
 There are several advantages to registering for course credit:
@@ -156,7 +149,7 @@ There are several advantages to registering for course credit:
 ![PSY:3994 Step 1](images/psy3994_1.png)
 ![PSY:3994 Step 2](images/psy3994_2.png)
 
-## Honors Credit {#honorsCredit}
+## Honors Credit {#sec-honorsCredit}
 
 Students who wish to receive Honors credit for participation in lab may register for "`HONR:3994:01IND – Honors Research Practicum`".
 In addition to enrolling on MyUI, you can find the Honors Research Practicum syllabus on the lab drive (to be read and signed by the RA and Dr. Petersen) here: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Course Syllabi\`
@@ -169,7 +162,7 @@ Advantages for registering for honors course credit are:
 - The hours accumulated in the lab can count towards your honors experiential learning (up to 12 semester hours)
 
 Interested students may be able to conduct an Honors project or non-thesis capstone for Honors in the Psychology Major.
-For information on conducting an Honors thesis/project, see [here](honors.html).
+For information on conducting an Honors thesis/project, see [here](honors.qmd).
 Note that conducting an Honors thesis/project is not a requirement for enrolling in `HONR:3994`.
 
 ![HONR:3994 Step 1](images/honr3994_1.png)
@@ -183,23 +176,23 @@ A student can still receive Honors credit by registering for URES:3992 or by par
 However, these semester hours will not count toward the experiential learning requirement unless additional steps are taken.
 
 1. Complete the Pre-Experience Questionnaire before the semester begins
-    a. https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit
+    a. <https://uiowa.qualtrics.com/jfe/form/SV_6SGzYkFp1wQJJit>
 1. Complete your lab responsibilities and engage in your 10 hours of research each week!
 1. Complete the Post-Experience Questionnaire after the semester ends (within the next 5 weeks)
-    a. https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF
+    a. <https://uiowa.qualtrics.com/jfe/form/SV_d1le3qR9toEIyCF>
 1. Submit a Narrative (within 5 weeks of semester end)
     a. This final project is flexible in its formatting, but an essay (the typical choice) should be 500–1,000 words in length.
 	This will allow you to reflect on your experiences and how you grew.
 	A couple images, an author bio, and highlights of your experience are all required components of this piece. 
-    b. https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57
+    b. <https://uiowa.qualtrics.com/jfe/form/SV_cDaXMAsEr3pHY57>
 
-More information on the Honors experiential learning process for research involvement can be found here: https://honors.uiowa.edu/requirements/experiential-learning
+More information on the Honors experiential learning process for research involvement can be found here: <https://honors.uiowa.edu/requirements/experiential-learning>
 
-# RA Roles {#roles}
+# RA Roles {#sec-roles}
 
 The Developmental Psychopathology Lab uses a "generalist with specialization" approach—there are some tasks that all RAs are trained to perform, and there are other tasks that RAs specialize in.
-We have three specialized tracks or roles that RAs can train in after completing basic lab training: [Behavioral Testing Specialist](#behavioralTestingSpecialist), [Electroencephalography (EEG)
- Specialist](#eegSpecialist), and [Data Specialist](#dataSpecialist).
+We have three specialized tracks or roles that RAs can train in after completing basic lab training: [Behavioral Testing Specialist](#sec-behavioralTestingSpecialist), [Electroencephalography (EEG)
+ Specialist](#sec-eegSpecialist), and [Data Specialist](#sec-dataSpecialist).
  **Every role is important**.
 Placement in these roles depends on each RA's (a) interests, (b) aptitude, and (c) fit, in addition to (d) the team's needs.
 We take into consideration the desired placement of every RA, but ultimately Dr. Petersen and the Lab Coordinator make this determination based on a, b, c, and d from above.
@@ -217,9 +210,9 @@ Below are cross-cutting responsibilities that all RAs are expected to contribute
 - auditing "Question and Answer" (Q&A) and "Quality Control Improvement" (QCI) documents
 - providing answers to coding questions when applicable
 
-## Specialized Roles {#specializedRoles}
+## Specialized Roles {#sec-specializedRoles}
 
-### Behavioral Testing Specialist {#behavioralTestingSpecialist}
+### Behavioral Testing Specialist {#sec-behavioralTestingSpecialist}
 
 Below are necessary characteristics and potential responsibilities for Behavioral Testing Specialists:
 
@@ -243,7 +236,7 @@ Below are necessary characteristics and potential responsibilities for Behaviora
 - keeping LV1 observation room stocked and prepped for visits
 - having a lighter focus on coding
 
-### EEG Specialist {#eegSpecialist}
+### EEG Specialist {#sec-eegSpecialist}
 
 Below are necessary characteristics and potential responsibilities for EEG Specialists:
 
@@ -263,7 +256,7 @@ Below are necessary characteristics and potential responsibilities for EEG Speci
 - assuring procedural adherence for LV2 (including coaching RA roles, collaborating with other Es to trouble-shoot technical issues and assure procedural adherence)
 - editing/updating LV2 manual procedures and scripts as needed
 
-### Data Specialist {#dataSpecialist}
+### Data Specialist {#sec-dataSpecialist}
 
 Below are necessary characteristics and potential responsibilities for Data Specialists:
 
@@ -287,7 +280,7 @@ Below are necessary characteristics and potential responsibilities for Data Spec
 - recruitment and retention, including helping to develop/improve current recruitment and retention systems and devising new recruitment and retention possibilities, updating social media pages
 - helping to develop new coding systems
 
-# RA Advancement in Lab {#advancement}
+# RA Advancement in Lab {#sec-advancement}
 
 The DevPsy lab is happy to offer exceptional RAs the opportunity to gain advanced research experience in the form of leadership roles within the lab.
 Eligibility is at the discretion of the Lab Coordinator and Dr. Petersen.
@@ -342,7 +335,7 @@ However, RAs should seek permission from Dr. Petersen before enrolling in PSY:39
 
 ## A Note About Other Opportunities for Advancement
 
-In addition to opportunities for advancement in lab, there may also be opportunities to conduct independent research projects, to conduct an [Honors project/thesis](honors.html), or to contribute to papers, grants, or conference poster presentations.
+In addition to opportunities for advancement in lab, there may also be opportunities to conduct independent research projects, to conduct an [Honors project/thesis](honors.qmd), or to contribute to papers, grants, or conference poster presentations.
 An important part of professional development is learning to advocate for yourself and to inquire about opportunities that are available.
 If you are interested in gaining experience in a certain area of lab work, taking on a leadership role, or if you are interested in an opportunity to take on a more advanced role in the project, just ask!
 There may be opportunities available for RAs to gain experience in specialized areas of lab work (e.g., recruitment of participants, data processing) or even to earn authorship on a paper or poster for an ongoing project.
@@ -357,7 +350,7 @@ There may be an opportunity for some experiences to count for lab hours if:
    1. The project is assigned to the RA
    1. The project benefits the overall lab
    1. The RA has demonstrated proficiency in the skills needed to complete the project
-   1. The project is not part of an [Honors project/thesis](honors.html), or another independent research experience
+   1. The project is not part of an [Honors project/thesis](honors.qmd), or another independent research experience
 
 For example, our lab leverages [`R`](https://devpsylab.github.io/DataAnalysis/R.html) for a variety of tasks.
 RAs may be able to use [`R`](https://devpsylab.github.io/DataAnalysis/R.html) to complete lab projects if they take the time outside of lab hours to tackle the learning curve of [`R`](https://devpsylab.github.io/DataAnalysis/R.html).
@@ -368,9 +361,9 @@ If you would like to learn more about either of these opportunities, or any othe
 
 ## Honors Theses/Projects
 
-For information on conducting an Honors Thesis/Project, see [here](honors.html).
+For information on conducting an Honors Thesis/Project, see [here](honors.qmd).
 
-# Lab Buddy System {#labBuddySystem}
+# Lab Buddy System {#sec-labBuddySystem}
 
 Our buddy system is a knowledge-sharing method that we use when onboarding new RAs into the lab.
 Each new RA is paired up with an existing RA who will guide them through their first weeks in their new role.
@@ -384,9 +377,9 @@ While the coding team teaches the RA the coding and entry skills, a lab buddy he
 The goal of the buddy system is that new RAs feel welcome and have someone in the lab they can connect with.
 New RAs should be introduced to their buddy at the end of their orientation session.
 
-# Scheduling {#scheduling}
+# Scheduling {#sec-scheduling}
 
-## Scheduling System Overview {#schedulingOverview}
+## Scheduling System Overview {#sec-schedulingOverview}
 
 After course registration at the end of each semester, RAs are to submit their course schedules for the following semester to the Lab Coordinator.
 If an RA has a strict, set work schedule, this can be included with the course schedule.
@@ -414,11 +407,11 @@ If an RA has been scheduled for a visit during their availability (including ava
 It is the RA's responsibility to let the Lab Coordinator know who will cover the visit.
 If unable to find a cover, it is the RA's responsibility to let the Lab Coordinator know by at least 48 hours before the visit.
 
-For information regarding weekend visits, please refer to the section regarding the [Weekend On-Call Schedule](#schedulingWeekend).
+For information regarding weekend visits, please refer to the section regarding the [Weekend On-Call Schedule](#sec-schedulingWeekend).
 
-For general information regarding the scheduling expectations for undergraduate RAs of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](expectations-undergradRA.html#schedulingExpectations).
+For general information regarding the scheduling expectations for undergraduate RAs of the Developmental Psychopathology Lab, please refer to the section on [Scheduling Expectations](expectations-undergradRA.qmd#sec-schedulingExpectations).
 
-## Weekend On-Call Schedule {#schedulingWeekend}
+## Weekend On-Call Schedule {#sec-schedulingWeekend}
 
 ### Introduction
 
@@ -432,7 +425,7 @@ The Lab Coordinator may request volunteers to run visits that are scheduled "las
 If a weekend visit is scheduled and you are on-call that day, the Lab Coordinator will tag you in a Discord with the details of the visit.
 
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
-Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#advancement)).
+Ultimately everyone is expected to be on-call for at least 8 weekend days per semester (apart from Advanced Specialists; see the section on [RA Advancement](#sec-advancement)).
 
 ### Preparation
 
@@ -458,7 +451,7 @@ During this one week, RAs will have the opportunity to make any final adjustment
 RAs must notify the Lab Coordinator of any trades/changes to their weekend sign ups within this week.
 Remember, at the end of the one week, everyone should still be signed up for a total of 8 days, and everyone will be responsible for helping run any visits that may be scheduled on those days.
 
-## Shared Calendars {#sharedCalendar}
+## Shared Calendars {#sec-sharedCalendar}
 
 How to add the shared calendars:
 
@@ -489,14 +482,14 @@ Here is a description of the different calendars and instructions how to use the
     Thus, if you are going to be unavailable during your regularly scheduled hours you must update this calendar once your request is approved by the Lab Coordinator.
     To do so, you will create a calendar entry that is titled "[Your Name] Busy" and add the Lab Coordinator as a required attendee.
 
-## TimeClock {#timeClock}
+## TimeClock {#sec-timeClock}
 
 `OpenTimeClock2008` is the program we use for keeping track of RA lab hours.
 Each RA is expected to clock in before beginning lab-related work (including running visits, but if you come in early to each lunch, visit with other RAs, or anything else NOT lab work-related, then do not clock in until you are ready to work), and to clock out when they have stopped lab-related work (e.g., if you leave to get lunch, please clock out then clock back in again when you return to work).
 The Lab Coordinator will add you to the system using your `HawkID`.
 To set up your profile the first time you use the program, follow the steps below:
 
-1. Click the TimeClock shortcut on your lab computer desktop (or go to https://www.opentimeclock.com/2008/free.html).
+1. Click the TimeClock shortcut on your lab computer desktop (or go to <https://www.opentimeclock.com/2008/free.html>).
 1. In the "Company Name" textbox, type `devpsylab` and click the blue "Sign In" button
 1. Enter your `HawkID` in the "Username" field and click the "Login" button.
 1. Go to "My settings" at the top of the page.
@@ -514,9 +507,9 @@ To use this program to view your current hours for the semester:
 There, you will find text that reads "total hours," and should list your total time clocked-in in hours and minutes.
 If you are unsure of how many total hours you need for a semester, ask the Lab Coordinator.
 
-# The Basics of Lab {#basicsLab}
+# The Basics of Lab {#sec-basicsLab}
 
-## Lab Meetings {#lab-meetings}
+## Lab Meetings {#sec-lab-meetings}
 
 Lab meetings will take place once per week at a pre-determined time.
 The Lab Coordinator will choose the weekly lab meeting time based on everyone's schedules and will try to schedule the meeting for a time when all lab members are available.
@@ -529,7 +522,7 @@ The lab meeting is generally divided into two sections:
 If you have questions or suggestions, please raise them.
 1. The second half of the meeting is reserved for an article discussion or a professional development workshop. 
 
-### Article Discussion {#articleDiscussion}
+### Article Discussion {#sec-articleDiscussion}
 
 Each lab meeting (with the exception of the meetings reserved for professional development workshops), an RA is expected to lead the discussion of a <u>peer-reviewed, empirical research article</u> of their choosing that is related to the interests (broadly defined) of the Developmental Psychopathology Lab.
 Article discussions serve several purposes:
@@ -548,7 +541,7 @@ If there are fewer days available than there are RAs, priority is given to newer
 **All lab members are expected to contribute to each discussion.**
 
 By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Discord.
-For more information on how to find and access articles, see [here](honors.html#articles).
+For more information on how to find and access articles, see [here](honors.qmd#sec-articles).
 For more information on APA formatting, see the resources on the lab drive:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
 
@@ -560,22 +553,22 @@ The RA who is leading the discussion of the article should structure the discuss
 You can also mention critiques you have, but keep it as question-oriented as possible to elicit discussion.
 1. Save time (~10 minutes) for big-picture questions pertaining to the implications of the findings for science/practice/policy/life, etc.
 
-### Lab Meeting Scribe {#labScribe}
+### Lab Meeting Scribe {#sec-labScribe}
 
 An RA will be designated (usually on a volunteer basis) each semester to be the lab meeting scribe.
 The scribe is responsible for taking notes throughout the meeting.
 The scribe also sends a brief summary of the important information from the meeting to the entire team via the `#lab-meetings` channel in Discord after the lab meeting has ended.
-The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [lab's OneDrive](#onedrive).
+The scribe also adds the summary to the "Lab Meeting Agendas – Team" in the [lab's OneDrive](#sec-onedrive).
 
-### Attendance and Absence Policies {#lab-meeting-attendance}
+### Attendance and Absence Policies {#sec-lab-meeting-attendance}
 
 All members of the team are expected to attend every lab meeting.
 If an RA is unable to attend a meeting, they are responsible for letting the Lab Coordinator know as far in advance as possible so that the Lab Coordinator can work with the RA to arrange how they will make up the time.
-They are also responsible for emailing several detailed questions or comments on the article to the presenting student AND to the lab email (devpsy-lab@uiowa.edu) by the day before the meeting to help contribute to the discussion.
+They are also responsible for emailing several detailed questions or comments on the article to the presenting student AND to the lab email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)) by the day before the meeting to help contribute to the discussion.
 If advanced notice is not possible, contact the Lab Coordinator as soon as you are able to and explain the absence.
 The RA is also responsible for reading the lab meeting agenda and summary notes after the meeting to learn what they missed.
 
-## Lab Communication {#labCommunication}
+## Lab Communication {#sec-labCommunication}
 
 Forms of lab communication are described below.
 **Please use Discord for as much communication as possible!**
@@ -583,25 +576,25 @@ Keeping lab-related communication on Discord helps our team work most effectivel
 
 1. Non-private lab-related communication (almost all communication)
     - Use Discord
-        - See the [Discord Checklist](#discord)
+        - See the [Discord Checklist](#sec-discord)
         - Feel free to send messages and you can notify particular people if the message is for particular people (@isaac-petersen).
         - You can send pictures and attachments in Discord by using the plus sign next to the message.
         - Discord communication can be informal!
         We want it to be a fun place to communicate and chat with the team.
         Feel free to post memes, set up lab-wide social gatherings, etc.
 1. Private lab-related communication 
-    - Send to: devpsy-lab@uiowa.edu
+    - Send to: [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)
         - Examples: Sending your course schedule for the upcoming semester, notifying the Lab Coordinator of an absence due to personal reasons/illness, requesting changes to your schedule, asking the Lab Coordinator for a reference, responding to an email that the Lab Coordinator sent to you.
 1. Communication directed specifically to Dr. Petersen rather than to the lab (e.g., to set up a meeting to discuss career goals, honors projects, etc.)
     - Send email to [Dr. Petersen](https://psychology.uiowa.edu/people/isaac-petersen)
 1. Communication directed to the past members of the lab (e.g., to setup a social gathering)
     - Use Facebook
-        - See the [Social Media Checklist](#socialMedia)
+        - See the [Social Media Checklist](#sec-socialMedia)
 1. Communication directed to the public (e.g., to communicate results from a published study)
     - Use Twitter and Instagram
-        - See the [Social Media Checklist](#socialMedia)
+        - See the [Social Media Checklist](#sec-socialMedia)
 
-### Resolving Conflicts and Personnel Issues {#resolvingConflicts}
+### Resolving Conflicts and Personnel Issues {#sec-resolvingConflicts}
 
 It is inappropriate and unprofessional to gossip about lab personnel (i.e., complaining about someone behind their back to other RAs).
 If someone gossips to you about concerns/conflicts/complaints with lab personnel, please ask them to deal with the person directly, or to address the issue directly with the chain of command (see below).
@@ -613,12 +606,12 @@ Please express personnel concerns directly (in person or by email).
 Do not put personnel grievances in lab reports.
 We encourage you to express concerns to the chain of command if you feel the issues impair your or the team's functioning.
 
-### Discord {#discord}
+### Discord {#sec-discord}
 
 #### Getting Started
 
 1. Download the "Discord" App to your mobile phone (it is free!)
-1. You can also access Discord on any internet browser (https://discord.com): https://discord.com/channels/@me
+1. You can also access Discord on any internet browser (<https://discord.com>): <https://discord.com/channels/@me>
 1. If you do not already have a Discord account, create a Discord account with a password you will remember.
 You can use either your university email address or a non-university email address.
 However, regardless of which email you use, make sure that your notifications are set up so that you will receive notifications for lab-related messages.
@@ -657,7 +650,7 @@ However, regardless of which email you use, make sure that your notifications ar
 1. Attachments: Send pictures and attachments by clicking the plus sign next to the message
 1. Direct Messages: Do not use direct messages or private threads in Discord.
 All Discord communication should be in team-facing channels so others can benefit from the information and so we can go back and reference it later.
-If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#labCommunication) for more information)
+If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#sec-labCommunication) for more information)
 
 Discord channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic.
 For example, the `#coding` channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between.
@@ -666,7 +659,7 @@ You should simply choose the channel that seems most relevant to the question or
 It is important to remember that, even though different team members are assigned different tasks within the lab, it does not mean that it is any less important for the whole team to stay informed about the general projects of the lab.
 We are all collaborating on the same project, on the same team, and working toward the same general goals.
 
-### Notion {#notion}
+### Notion {#sec-notion}
 
 Notion is a shared project management and note-taking workspace. 
 The primary purpose of our Notion board is to have a shared space to organize ongoing coding, scoring, and entry tasks. 
@@ -681,10 +674,10 @@ The primary purpose of our Notion board is to have a shared space to organize on
 - RAs may use the `Personal Tasks` teamspace to keep track of their own to-do list related to lab work
 - RAs may choose to keep track of their training progress in the `Training Progress` teamspace
 
-### Social Media {#socialMedia}
+### Social Media {#sec-socialMedia}
 
 The purpose of our social media pages is to inform the outside world of our research.
-One to two members of the [Data Specialist team](#dataSpecialist) are responsible for creating posts.
+One to two members of the [Data Specialist team](#sec-dataSpecialist) are responsible for creating posts.
 All posts must be approved by the Lab Coordinator.
 
 #### Facebook
@@ -693,9 +686,9 @@ All posts must be approved by the Lab Coordinator.
 
 The purpose of this private group is to communicate with past and future RAs, as well as to organize fun activities outside of lab.
 
-1. Log on to https://www.facebook.com using your email and password
+1. Log on to <https://www.facebook.com> using your email and password
 2. Go to 'Groups'
-3. Click on 'Developmental Psychopathology Lab' (https://www.facebook.com/groups/1483289471691634)
+3. Click on 'Developmental Psychopathology Lab' (<https://www.facebook.com/groups/1483289471691634>)
 4. You will have to request permission to join the group
 5. Once you have been added to the group, you can access the discussion, the members, events, and photos shared to this group
 
@@ -703,24 +696,24 @@ The purpose of this private group is to communicate with past and future RAs, as
 
 The purpose of this page is to inform the outside world about the research, inform about changes (e.g., safety precautions, new team members) and provide updates (e.g., new research findings, conferences, grants, events in the lab).
 
-1. Log on to https://www.facebook.com using your email and password
-2. Like the lab page: https://www.facebook.com/DevPsyLab
+1. Log on to <https://www.facebook.com> using your email and password
+2. Like the lab page: <https://www.facebook.com/DevPsyLab>
 
 #### Twitter
 
 The purpose of this Twitter account is to post updates with the outside world about things we are working on in the lab.
 We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
-1. Log on to https://twitter.com using your personal credentials
-2. Follow `@devpsylab` (https://twitter.com/devpsylab)
+1. Log on to <https://twitter.com> using your personal credentials
+2. Follow `@devpsylab` (<https://twitter.com/devpsylab>)
 
 #### Instagram
 
 The purpose of this Instagram account is to post updates with the outside world about things we are working on in the lab.
 We invite everyone to follow us on this platform, so we can get the word out about what we do!
 
-1. Log on to https://www.instagram.com using your personal credentials
-2. Follow `@devpsylab` (https://www.instagram.com/devpsylab)
+1. Log on to <https://www.instagram.com> using your personal credentials
+2. Follow `@devpsylab` (<https://www.instagram.com/devpsylab>)
 
 ## Lab Documentation
 
@@ -729,24 +722,24 @@ Written documentation is important for many reasons, including that it facilitat
 If we are missing written documentation for something, please let us know and help us create a manual or checklist!
 
 Just as important as creating written documentation is using it!
-[Checklists to remind surgeons to wash their hands significantly reduce infection rates](https://www.newyorker.com/magazine/2007/12/10/the-checklist) (archived at https://perma.cc/4Q62-ER5T); we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists.
+[Checklists to remind surgeons to wash their hands significantly reduce infection rates](https://www.newyorker.com/magazine/2007/12/10/the-checklist) (archived at <https://perma.cc/4Q62-ER5T>); we are doing much more complicated work than washing hands, so it is crucial to follow our manuals and checklists.
 When you are training in a new procedure, do not rely just on what other RAs tell you.
 Despite their best efforts to help you, RAs may sometimes describe procedures incorrectly to you, and it is important to follow what is in the manual.
 If something is missing, incorrect, or out-of-date in the manual, please let us know so we can fix it.
 
-## Lab OneDrive {#onedrive}
+## Lab OneDrive {#sec-onedrive}
 
 We have an online folder shared with the team through Office 365 OneDrive.
 In order to access this folder, you have to first be granted permission by Dr. Petersen or the Lab Coordinator (which should happen as part of your onboarding when you first join the lab).
 Once you have permission, you can access the folder here: 
-https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive
+<https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive>
 
 This folder contains three subfolders:
 
 1. "For RA Edit": The documents in this folder allow for editing by all team members.
 This folder includes:
     - `Lab Meeting Agendas – Team.docx`: This is the running agenda for our weekly lab meetings.
-    Every week, the [lab scribe](#labScribe) will add detailed meeting notes to this document
+    Every week, the [lab scribe](#sec-labScribe) will add detailed meeting notes to this document
     - `Lab Meeting Article Sign-Up.docx`: This document is used by every RA at the beginning of every semester to sign up for the day they lead the article discussion.
     RAs can then access it throughout the semester to check which day they are scheduled to present on, but should not alter their sign-up day without first obtaining permission from the Lab Coordinator
     - `Task Timing Sheet.xlsx`: This Excel document is used by all RAs to record their coding progress (see `Coding Manual` for more information)
@@ -755,7 +748,7 @@ This folder includes:
 Lab report folders can only be accessed by the RA who owns it, the Lab Coordinator, and Dr. Petersen.
 Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which should be used to archive old lab reports—in other words, every time you save a new lab report to your root lab report folder, you should move the previous one to the "Past Lab Reports_HawkID" folder.
 
-## Lab Drive {#labDrive}
+## Lab Drive {#sec-labDrive}
 
 **&#35;1 Rule: Never delete any documents or data without explicit permission from the Lab Coordinator, graduate students, or Dr. Petersen first.**
 
@@ -763,7 +756,7 @@ Each lab report folder has a subfolder named "Past Lab Reports_HawkID" which sho
 We are able to recover deleted items for up to 4 months.** 
 
 If there is an old or outdated document, like an outdated checklist or an old coding form that has since been re-coded, do not delete it.
-You may move it to an "00-Old" folder (see [Folder Designations](#folderDesignations) below), or, if you are unsure where it should be saved, consult your fellow lab members or the Lab Coordinator.
+You may move it to an "00-Old" folder (see [Folder Designations](#sec-folderDesignations) below), or, if you are unsure where it should be saved, consult your fellow lab members or the Lab Coordinator.
 
 ### File Naming Conventions
 
@@ -777,7 +770,7 @@ Because the Lab Drive contains so many files across so many different tasks, TCs
 - Any IRB documents in the IRB folder (`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\IRB\`) that are stamped with an expiration date (e.g., recruitment materials, consents) should also indicate the year in which they are valid (e.g., `informedconsent_2018`).
 When these materials expire, they can be moved to the "00-Old" folder within the relevant parent folder.
 
-### Folder Designations {#folderDesignations}
+### Folder Designations {#sec-folderDesignations}
 
 *Old*: This file designation is used to store versions of documents that are outdated—this applies both to previous versions of active, updated documents as well as documents that are no longer in use.
 
@@ -829,7 +822,7 @@ When RAs graduate from the lab, these folders are archived so if we ever need to
 |               |                                  | Pictures                                                    |                                                                                                                 |
 |               |                                  | Tabs                                                        |                                                                                                                 |
 
-### Google Drive {#googleDrive}
+### Google Drive {#sec-googleDrive}
 
 Sometimes, the lab creates documents in Google Drive for purposes such as sharing, professional development workshops, etc.
 So the lab retains access to these documents, please transfer ownership to Dr. Petersen when creating them.
@@ -871,7 +864,7 @@ If the RA is unable to retrieve the key from the lockbox, follow the steps below
     a. Write who called, and their message, on the "While you were out" cards that are next to the phone in the RA room.
     b. If they would like to call back later, and you know when they (the Lab Coordinator and Dr. Petersen) will be back, let them know when would be a good time for them to call back
 
-## Bi-Weekly Lab Reports {#labReport}
+## Bi-Weekly Lab Reports {#sec-labReport}
 
 Lab reports serve important purposes:
 
@@ -885,7 +878,7 @@ Follow these instructions when submitting lab reports:
 1. Write the lab report in Microsoft Word and save it as a `.docx` file.
 This is important so that Dr. Petersen can comment on the file.
 1. Save the reports to the the folder with your HawkID in the "Lab Reports" folder:
-    a. https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive%2FLab%20Reports&view=0
+    a. <https://iowa-my.sharepoint.com/personal/itpetersen_uiowa_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fitpetersen%5Fuiowa%5Fedu%2FDocuments%2FResearch%2FLab%2FOneDrive%2FLab%20Reports&view=0>
     b. Name the lab reports so that they are ordered by date (e.g., `Lab Report_2017-12-31.docx`).
     c. When saving lab reports, please leave only the newest lab report in the main folder—your old lab reports should be moved to the "Past Lab Reports_hawkID" folder within your personal lab reports folder.
 1. Bi-weekly reports include:
@@ -906,7 +899,7 @@ Notes:
 Do not put personnel grievances in lab reports.
 - **Lab report due dates can be found on the lab schedule that is shared via OneDrive under the "Lab Article" tab!**
 
-## Tips and Tricks for Interacting with Children in Lab {#interactingWithChildren}
+## Tips and Tricks for Interacting with Children in Lab {#sec-interactingWithChildren}
 
 ### When Interacting With Families in the Lab
 
@@ -927,7 +920,7 @@ Our response could be:
 We want to simulate as close to a home and school environment as we can.
 We just ask that you act as you would normally."
 
-### How to Give Praise {#praise}
+### How to Give Praise {#sec-praise}
 
 **Syntax**: Praise + Effort + Specific
 
@@ -977,7 +970,7 @@ We just ask that you act as you would normally."
 -	"not touching the worms"
 -	"sorting the sheep"
 
-### How to Guide Children Through Difficult Tasks {#guideChildrenDifficultTasks}
+### How to Guide Children Through Difficult Tasks {#sec-guideChildrenDifficultTasks}
 
 #### DOs
 
@@ -1059,7 +1052,7 @@ The Lab Coordinator is responsible for entering cash data in the ledger.
 - Each participant and the RA will sign a payment receipt form confirming that they received payment.
 Receipt must include TCID/Wave, data of service, amount distributed, and signatures of both participant and RA handling payment.
 
-# Professional Development {#professionalDevelopment}
+# Professional Development {#sec-professionalDevelopment}
 
 One of the goals of our lab is to advance the career and professional goals of our team members.
 We provide many professional development-related resources on the lab drive in the following location:
@@ -1070,7 +1063,7 @@ The resources include resources on applying to graduate school, internships, pos
 Please take advantage of the many resources available to help you succeed.
 And, if you have helpful resources, please give back by sharing them on the lab drive.
 
-# Lab Organizational Chart {#organizationalChart}
+# Lab Organizational Chart {#sec-organizationalChart}
 
 ![Lab Organizational Chart](images/labOrgChart.png)
 

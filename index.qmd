@@ -2,42 +2,35 @@
 title: "Lab Wiki for the Developmental Psychopathology Lab"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 <u>Lab Contacts</u>
 
 **Principal Investigator**\
 [Dr. Isaac Petersen, Ph.D.](https://psychology.uiowa.edu/people/isaac-petersen)\
 Office: 175 Psychological and Brain Sciences Building (PBSB)\
-Email: isaac-t-petersen@uiowa.edu
+Email: [isaac-t-petersen@uiowa.edu](mailto:isaac-t-petersen@uiowa.edu)
 
 **Lab Coordinator**\
 [Madeline Metz](https://developmental-psychopathology.lab.uiowa.edu/people/madeline-metz)\
 Office: 111 Spence Labs (SLP)\
-Lab Email (preferred for lab-relevant communication): devpsy-lab@uiowa.edu\
-Personal Email: madeline-metz@uiowa.edu
+Lab Email (preferred for lab-relevant communication): [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)\
+Personal Email: [madeline-metz@uiowa.edu](mailto:madeline-metz@uiowa.edu)
 
 **Graduate Students**\
 [Jordan Harris, M.A.](https://developmental-psychopathology.lab.uiowa.edu/people/jordan-harris)\
 Office: 109 Spence Labs (SLP)\
-Email: jordan-l-harris@uiowa.edu
+Email: [jordan-l-harris@uiowa.edu](mailto:jordan-l-harris@uiowa.edu)
 
 [Alexis Hosch, M.A.](https://developmental-psychopathology.lab.uiowa.edu/people/alexis-hosch)\
 Office: 109 Spence Labs (SLP)\
-Email: alexis-hosch@uiowa.edu
+Email: [alexis-hosch@uiowa.edu](mailto:alexis-hosch@uiowa.edu)
 
-[Zachary Demko, B.A.](https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko)\
+[Zachary Demko, M.A.](https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko)\
 Office: 119 Spence Labs (SLP)\
-Email: zachary-demko@uiowa.edu
+Email: [zachary-demko@uiowa.edu](mailto:zachary-demko@uiowa.edu)
 
 [Megan Schumer, B.S.](https://developmental-psychopathology.lab.uiowa.edu/people/megan-schumer)\
 Office: 119 Spence Labs (SLP)\
-Email: megan-schumer@uiowa.edu
+Email: [megan-schumer@uiowa.edu](mailto:megan-schumer@uiowa.edu)
 
 **Location**:
 
@@ -47,10 +40,10 @@ Spence Labs 109–119\
 University of Iowa\
 Iowa City, IA 52242
 
-**Lab Email**: devpsy-lab@uiowa.edu\
-**Website**: [https://developmental-psychopathology.lab.uiowa.edu](https://developmental-psychopathology.lab.uiowa.edu)\
+**Lab Email**: [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)\
+**Website**: <https://developmental-psychopathology.lab.uiowa.edu>\
 **Social Media**:
 
-- Facebook: https://www.facebook.com/DevPsyLab
-- Twitter: https://twitter.com/devpsylab
-- Instagram: https://www.instagram.com/devpsylab
+- Facebook: <https://www.facebook.com/DevPsyLab>
+- Twitter: <https://twitter.com/devpsylab>
+- Instagram: <https://www.instagram.com/devpsylab>

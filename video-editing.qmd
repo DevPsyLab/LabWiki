@@ -1,13 +1,10 @@
 ---
 title: "Video Editing"
-output:
-  html_document:
-    code_folding: show
 ---
 
-# Avidemux {#avidemux}
+# Avidemux {#sec-avidemux}
 
-## General Video Editing {#generalVideoEditing}
+## General Video Editing {#sec-generalVideoEditing}
 
 - Search the computer for the *Avidemux* program.
 - <u> To combine videos: </u>
@@ -31,9 +28,9 @@ output:
    1. Go to *Avidemux* and clear program workspace (File > Close).
    1. Repeat steps 1-5 until you have created all the clips needed.
    
-## Combining Videos {#combiningVideos}
+## Combining Videos {#sec-combiningVideos}
 
-### Stitching Two Videos Together Side-By-Side {#sideBySideVideos}
+### Stitching Two Videos Together Side-By-Side {#sec-sideBySideVideos}
 
 LV1 videos should be a side-by-side combination of recordings from Cameras 1 and 2 in the LV1 Experimenter Room.
 The Observation Room computer has been set up to combine these recordings into one video file when it saves.
@@ -52,7 +49,7 @@ When it is done, there will be a saved video file named "Combined.mp4" in the sa
 NOTE: This script will only work if you open the Lab Drive directly from the Desktop to navigate to the Side by Side folder.
 *You cannot open it from the Quick Access menu in File Explorer.*
 
-An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://unix.stackexchange.com/a/437044; archived at: https://perma.cc/DWR8-4LST).
+An alternative approach is to use [ffmpeg](https://ffmpeg.org) (<https://unix.stackexchange.com/a/437044>; archived at: <https://perma.cc/DWR8-4LST>).
 To perform this approach, [ffmpeg](https://ffmpeg.org) must be installed on the computer.
 After installing [ffmpeg](https://ffmpeg.org), make sure the videos are on a local drive on the computer (i.e., not on the lab drive).
 Then, use the following syntax in Command Prompt (`cmd.exe`) when in the target directory (use `cd DIRECTORY` to navigate to the target directory):
@@ -61,7 +58,7 @@ Then, use the following syntax in Command Prompt (`cmd.exe`) when in the target 
 ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4
 ```
 
-### Stitching Two Videos Together One After The Other {#stitchingVideosOneAfterOther}
+### Stitching Two Videos Together One After The Other {#sec-stitchingVideosOneAfterOther}
 
 In the event that an LV1 video recorded side-by-side but the video was interrupted, resulting in two separate side-by-side video files that stop and start in the middle of a visit (e.g., if the camera box is accidentally kicked off during a visit, if the cameras crash and have to be restarted during the visit, etc.), they can be combined into one video file using Avidemux.
 See the "Cute Moments Videos" section of the School Readiness Wiki for a description of how to use this program.
@@ -73,7 +70,7 @@ To combine two videos from a visit with interrupted recordings, follow these ste
 1. Drag the second video from the File Explorer Window straight into the Avidemux window, dropping it over the first video—you should see the video duration increase when it is added, indicating it is appending to the end of the previous video
 1. Save the new video in the TC's folder as TCID_Wave_LV1 (`\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Videos\Lab Visit 1\`)
 
-An alternative approach is to use [ffmpeg](https://ffmpeg.org) (https://ma.ttias.be/use-ffmpeg-combine-multiple-videos/; archived at: https://perma.cc/F9P9-KS4D).
+An alternative approach is to use [ffmpeg](https://ffmpeg.org) (<https://ma.ttias.be/use-ffmpeg-combine-multiple-videos/>; archived at: <https://perma.cc/F9P9-KS4D>).
 To perform this approach, [ffmpeg](https://ffmpeg.org) must be installed on the computer.
 
 First, after installing [ffmpeg](https://ffmpeg.org), use Command Prompt (`cmd.exe`) to create a text file named `files.txt` in the same directory as the videos you want to combine (use `cd DIRECTORY` to navigate to the target directory) with the following syntax:
@@ -92,9 +89,9 @@ Then, run the following command in the Command Prompt to combine the videos list
 ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4
 ```
 
-# Handbrake {#handbrake}
+# Handbrake {#sec-handbrake}
 
-## Cutting and Creating Clips {#cuttingAndCreatingClips}
+## Cutting and Creating Clips {#sec-cuttingAndCreatingClips}
 
 When a video requires cutting and subsequent clips must be created, the software, Handbrake, should be utilized.
 Handbrake allows for easy creation of video clips in .mp4 format from a source video in the .mp4 format.
@@ -123,7 +120,7 @@ Also verify that the name ends in `.mp4`
 1. After selecting the save location for the video, at the top of the Handbrake display, select the large green play button titled, `Start Encode`, in order to create the clip
 1. Upon completion of encoding, view the created video in order to ensure the clip was successfully made with desired start and end times
 
-### Creating Multiple Clips from the Same Video Simultaneously {#creatingMultipleClips}
+### Creating Multiple Clips from the Same Video Simultaneously {#sec-creatingMultipleClips}
 
 Multiple clips can be made from the same source video and processed simultaneously in Handbrake.
 <br>
@@ -149,7 +146,7 @@ Ensure the start and end times are changed appropriately for each clip and the f
 1. Once all clips desired to be made have been added to the queue, select the large green play button titled, `Start Queue`, in order to create all the clips listed within the queue
 1. Upon completion of encoding, view the created videos in order to ensure the clips were saved to the correct file location(s) and each clip was successfully made with desired start and end times
 
-# Converting Media Files to .mp4 {#convertToMp4}
+# Converting Media Files to .mp4 {#sec-convertToMp4}
 
 To convert video of alternate file type to .mp4, complete the following steps:
 
