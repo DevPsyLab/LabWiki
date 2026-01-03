@@ -31,7 +31,7 @@ The following are lab expectations for SROP students:
 The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
 These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
-For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#statisticalDecisionTree) in the lab's Data Analysis Guides.
+For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#sec-statisticalDecisionTree) in the lab's Data Analysis Guides.
 For information on how to conduct data analysis, see the relevant sections of the lab's Data Analysis guides on [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html).
 For how to set up your folder structure, see the following page: https://devpsylab.github.io/LabWiki/honors.html
 

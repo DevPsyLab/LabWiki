@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 1. You can view the source code side-by-side with the Preview (after selecting the code type in the bottom right):
 ![Visual Studio Code](images/vsCode.png)
-1. To create personalized CSS commands in VS Code, see [here](https://devpsylab.github.io/DataAnalysis/markdown.html#css).
+1. To create personalized CSS commands in VS Code, see [here](https://devpsylab.github.io/DataAnalysis/markdown.html#sec-css).
 1. To wrap code around the selected text (https://stackoverflow.com/a/73344832/2029527; archived at https://perma.cc/P5JA-7DBC):
     1. Press `Ctrl`+`Shift`+`p`
     1. Type and select "Open Keyboard Shortcuts (JSON)"
@@ -71,7 +71,7 @@ knitr::opts_chunk$set(
 
 # Connect to `R` {#connectToR}
 
-1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
+1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#sec-setup
 1. Install the [`R` extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for `VSCode`
 1. Go into the `R` extension settings
 1. Set the `rpath` variables (e.g., `r.rpath.windows`) to be blank
@@ -94,7 +94,7 @@ VS Code extensions to install:
 Follow the instructions here to connect `VSCode` to `R`:
 https://stackoverflow.com/a/66069540/2029527 (archived at https://perma.cc/FCF5-26BT)
 
-1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#setup
+1. Install `R` using the initial setup instructions described here: https://devpsylab.github.io/DataAnalysis/R.html#sec-setup
 1. Install the `R` extension for `VSCode`
 1. Go into the `R` extension settings
 1. Set the `R` path to the path of your `R` installation:

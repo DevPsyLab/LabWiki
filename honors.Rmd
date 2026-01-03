@@ -99,7 +99,7 @@ You can find these resources at the following location on the lab drive:
 
 We also have a page the clarifies the difference between mediation and moderation [here](mediationModeration.html).
 
-For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#statisticalDecisionTree) in the lab's Data Analysis Guides.
+For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#sec-statisticalDecisionTree) in the lab's Data Analysis Guides.
 For information on how to use software for data analysis, see our data analysis guides:
 
 - [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html)
