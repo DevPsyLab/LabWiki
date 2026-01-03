@@ -85,8 +85,6 @@ website:
           href: prospective-undergradRA.qmd
         - text: Prospective Graduate Students
           href: prospective-gradStudent.qmd
-      - text: "About"
-        href: about.qmd
       - about.qmd
     right:
     - text: "Lab Website"
