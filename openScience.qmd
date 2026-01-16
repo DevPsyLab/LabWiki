@@ -2,21 +2,14 @@
 title: "Open Science"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
-# Overview {#overview}
+# Overview {#sec-overview}
 
 We, as a lab, value and strive to advance the mission of [open science](https://onlinelibrary.wiley.com/doi/10.1002/icd.2315) to improve the accessibility, reproducibility, and replicability of science.
 As such, all lab members are expected to conduct research transparently and to promote reproducibility.
-This includes, but is not limited to, [pre- or co-registering](#preregistration) studies, [sharing analysis scripts and data](#sharing), using [version control](#versionControl) (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
-Our lab's template for projects on the [Open Science Framework](https://osf.io) (OSF) is located here[^1]: https://osf.io/4w9sv.
+This includes, but is not limited to, [pre- or co-registering](#sec-preregistration) studies, [sharing analysis scripts and data](#sec-sharing), using [version control](#sec-versionControl) (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
+Our lab's template for projects on the [Open Science Framework](https://osf.io) (OSF) is located here[^1]: <https://osf.io/4w9sv>.
 
-# Pre-Registration (or Co-Registration) {#preregistration}
+# Pre-Registration (or Co-Registration) {#sec-preregistration}
 
 There is a continuum of registration approaches.
 Pre-registration involves publicly posting aspects of a study (e.g., study design, hypotheses, methods, materials, and analysis plan) before data collection begins.
@@ -37,21 +30,21 @@ Here are elements of a study that can be registered:
 When analysis decisions are contingent upon prior steps that may influence which decision to take, the analysis plan can include decision trees (e.g., if X, then Y; if A, then B).
 For example, you can specify how you would proceed if the measures do not demonstrate longitudinal factorial invariance, or how you would handle poorly fitting models.
 
-# Sharing Data, Analysis Scripts, and Research Materials {#sharing}
+# Sharing Data, Analysis Scripts, and Research Materials {#sec-sharing}
 
-## Data Dictionary {#dataDictionary}
+## Data Dictionary {#sec-dataDictionary}
 
 For each study, we create a Data Dictionary.
 A Data Dictionary is a metadata file that tells people the meaning of variables in the data file and how to interpret them.
 
-### Style Guide {#styleGuide}
+### Style Guide {#sec-styleGuide}
 
 - Use Roboto font size 10
 - Use an en dash (`–`; i.e., not a hyphen) to indicate a range:
     - e.g., 1–18 (not 1-18)
     - an en dash is technically correct; in addition, spreadsheets often read 3-7 as March 7th, but they correctly read 3–7
 
-### Columns {#columns}
+### Columns {#sec-columns}
 
 The Data Dictionary should have the following columns:
 
@@ -78,7 +71,7 @@ The Data Dictionary should have the following columns:
 - References
     - references for the measure and/or variable
 
-#### Data Types {#dataTypes}
+#### Data Types {#sec-dataTypes}
 
 Data Types include:
 
@@ -99,7 +92,7 @@ Data Types include:
 - date-time
     - `MM/DD/YYYY HH:MM:SS` (e.g., 06/24/2020 01:30:24)
 
-#### Variable Types {#variableTypes}
+#### Variable Types {#sec-variableTypes}
 
 Variable Types include:
 
@@ -112,7 +105,7 @@ Variable Types include:
 - ratio
     - ordered with meaningful distances and an absolute zero
 
-#### Measurement Units {#measurementUnits}
+#### Measurement Units {#sec-measurementUnits}
 
 Measurement Units include:
 
@@ -158,24 +151,24 @@ Measurement Units include:
 - percentile
 - item
 
-# Version Control {#versionControl}
+# Version Control {#sec-versionControl}
 
 We use [GitLab](https://research-git.uiowa.edu) for version control.
 See our [lab's guide for using GitLab](https://devpsylab.github.io/DataAnalysis/git.html).
-Our lab's template for GitLab repositories is located here[^1]: https://research-git.uiowa.edu/PetersenLab/Template.
+Our lab's template for GitLab repositories is located here[^1]: <https://research-git.uiowa.edu/PetersenLab/Template>.
 
-# Preprint {#preprint}
+# Preprint {#sec-preprint}
 
 When submitting a manuscript to a journal, also submit a preprint to [PsyArXiv](https://psyarxiv.com).
 Combine the supplemental material and manuscript into one PDF file when posting.
 
-# OSF {#osf}
+# OSF {#sec-osf}
 
 The [Open Science Framework](https://osf.io) (OSF) is a website for hosting pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
 For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen.
-Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: https://osf.io/4w9sv.
+Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: <https://osf.io/4w9sv>.
 
-## Components {#components}
+## Components {#sec-components}
 
 Create a component in the OSF project repository for the following components:
 
@@ -186,63 +179,63 @@ Create a component in the OSF project repository for the following components:
 - Research Materials
 - Preprint
 
-### Pre-registration {#osfPreregistration}
+### Pre-registration {#sec-osfPreregistration}
 
-### Data {#osfData}
+### Data {#sec-osfData}
 
 To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
 To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
 
-[https://devpsylab.github.io/DataAnalysis/osf.html#anonymizedID](https://devpsylab.github.io/DataAnalysis/osf.html#anonymizedID)
+<https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID>
 
-### Data Dictionary {#osfDataDictionary}
+### Data Dictionary {#sec-osfDataDictionary}
 
-For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#dataDictionary) variables used for that specific paper.
+For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#sec-dataDictionary) variables used for that specific paper.
 We upload that `.csv` file to the OSF.
-The formatting of the Data Dictionary is described [here](#dataDictionary).
+The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
-### Analysis Code {#osfAnalysisCode}
+### Analysis Code {#sec-osfAnalysisCode}
 
-### Research Materials {#osfMaterials}
+### Research Materials {#sec-osfMaterials}
 
-### Preprint {#osfPreprint}
+### Preprint {#sec-osfPreprint}
 
-## Create Anonymous View-Only Links for Anonymous Peer Review {#anonymousViewOnlyLink}
+## Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}
 
 With your project open, go to Settings (top-right) → View-Only Links → Add.
 Then check "Anonymize".
 Then you can share that URL.
-For detailed instructions, see here: https://help.osf.io/article/201-create-a-view-only-link-for-a-project (archived at https://perma.cc/AGJ9-V487)
+For detailed instructions, see here: <https://help.osf.io/article/201-create-a-view-only-link-for-a-project> (archived at <https://perma.cc/AGJ9-V487>)
 
-# Manuscript Submission to a Journal {#journal}
+# Manuscript Submission to a Journal {#sec-journal}
 
-Before submitting a manuscript to a journal, make sure to post the relevant materials on the [OSF](#osf), as described [here](#osf), and post the preprint, as described [here](#preprint).
+Before submitting a manuscript to a journal, make sure to post the relevant materials on the [OSF](#sec-osf), as described [here](#sec-osf), and post the preprint, as described [here](#sec-preprint).
 When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.
-After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
+After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
 Include the link to the preprint in the cover letter to the journal.
 In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc.
 For example:
 
-> Hypotheses and measures for the School Readiness Study were pre-registered: https://osf.io/jzxb8.
-> Hypotheses methods, and a data analysis plan for the present study were also pre-registered: https://osf.io/pny26.
-> Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: https://osf.io/zs2bn.
+> Hypotheses and measures for the School Readiness Study were pre-registered: <https://osf.io/jzxb8>.
+> Hypotheses methods, and a data analysis plan for the present study were also pre-registered: <https://osf.io/pny26>.
+> Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: <https://osf.io/zs2bn>.
 
-In the manuscript submission, create and use [anonymous view-only OSF links](#anonymousViewOnlyLink) (for blind review).
-In the preprint submission, use the general OSF links (not the [anonymous view-only OSF links](#anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
+In the manuscript submission, create and use [anonymous view-only OSF links](#sec-anonymousViewOnlyLink) (for blind review).
+In the preprint submission, use the general OSF links (not the [anonymous view-only OSF links](#sec-anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
 
-# When the Manuscript is Accepted for Publication {#accepted}
+# When the Manuscript is Accepted for Publication {#sec-accepted}
 
 When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
 1. Make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it
-1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: https://www.nihms.nih.gov/submission/create/
+1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agences.
-1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#preprint) on [PsyArXiv](https://psyarxiv.com).
+1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
 
-# Adapting Open Science to Longitudinal Research {#longitudinal}
+# Adapting Open Science to Longitudinal Research {#sec-longitudinal}
 
-See our paper on adapting open science to longitudinal research: https://onlinelibrary.wiley.com/doi/10.1002/icd.2315
+See our paper on adapting open science to longitudinal research: <https://onlinelibrary.wiley.com/doi/10.1002/icd.2315>
 
 [^1]: Ask Dr. Petersen to give you access.

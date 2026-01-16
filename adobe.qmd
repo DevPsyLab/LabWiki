@@ -1,17 +1,6 @@
 ---
 title: "Adobe Best Practice Guide"
-output:
-  html_document:
-    code_folding: show
 ---
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "",
-  class.source = "fold-show")
-```
 
 # Adobe Best Practices
 
@@ -38,7 +27,7 @@ However, this can be changed if problematic.
 - To reset forms, copy and paste the variables, then delete what you pasted, and it will be cleared.
 - Calculated fields should ***NOT*** be calculated off of already calculated fields.
 Fields should only be calculated off of fields that are manually inputted.
-For more information on this, see creating [time calculations](adobe.html#timecalculations)
+For more information on this, see creating [time calculations](#sec-timecalculations)
 
 # Converting Word Documents to PDFs
 
@@ -82,7 +71,7 @@ These actions typically include:
    * Reseting a field(s)/form
    * Hiding/Revealing a field(s)
 
-## Naming Convention for Variables in Adobe {#namingvariables}
+## Naming Convention for Variables in Adobe {#sec-namingvariables}
 
 1. Variable names should be in all lowercase with no spaces and underscores separating words
 1. Keep variable names as consistent as possible across forms with similar variables
@@ -121,7 +110,7 @@ These actions typically include:
       - Total # of Scoreable Trials Played: `total_scored_task_trials`
       - *Note:* "task_trials" should be replaced with whether the round/block of trials is `imitation_trials`, `comp_check`, `practice_trials`, or `test_trials`.
 
-### Naming Convention for Radio Buttons {#namingconventionradiobuttons}
+### Naming Convention for Radio Buttons {#sec-namingconventionradiobuttons}
 
 1. In order to create calculated fields for trial totals, radio button "Choice Values" must be manually set.
 To facilitate the process, this should be done after aligning each group of radio buttons for each trial under each TC response for the trial.
@@ -143,7 +132,7 @@ The Choice Values can then be set through the following steps:
    - *Note:* While calculated fields can be derived from different radio button choice values, it is imperative to assign the button choices according to these values.
    This allows for consistency across pdfs and the ability to smoothly borrow code for calculated fields.
 
-### Naming Convention for Check Boxes {#namingconventioncheckboxes}
+### Naming Convention for Check Boxes {#sec-namingconventioncheckboxes}
 
 Check boxes can be named in such a way that they act similar to radio buttons, allowing only one selection out of a group of check boxes.=
 A group of check boxes can be formatted as radio buttons through the following steps:
@@ -162,11 +151,11 @@ A group of check boxes can be formatted as radio buttons through the following s
 1. While both groups of radio buttons and this form of groups of check boxes operate the same way and permit only one selection within the group, groups of check boxes provide an advantage by allowing for deselection of the value.
 Within groups of radio buttons, as soon as a button is selected, the group of buttons cannot be reset or deselected.
 This usage of groups of check buttons may be useful going forward and should be considered when creating new coding forms.
-   - *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](adobe.html#createcalculatedradiobuttons).
+   - *Note:* Creating calculated fields from groups of check boxes will follow the same procedure as [creating calcuated fields from radio buttons](#sec-createcalculatedradiobuttons).
    Thus, it is important to ensure the export values for each check box follow the values listed in Step 3.
 
 
-## Hiding and Revealing Fields in Adobe {#hiddenfields}
+## Hiding and Revealing Fields in Adobe {#sec-hiddenfields}
 
 Fields can be hidden and revealed within Adobe documents.
 To do such, complete the following steps:
@@ -210,16 +199,15 @@ To assign a radio button, check box, text field, or action button an action, com
 1. Multiple actions can be assigned to the same object.
 Thus, repeat steps 1-6 as many times as needed to assign the necessary actions to a given object
 
-
 # Creating Calculated Fields
 
 Adobe Acrobat both includes its own functions for creating calculated fields and allows for the implementation of custom calculation scripts within forms.
 While the calculation features are built-in to Adobe, the custom calculation scripts must be written using the programming language JavaScript.
 The following sections detail how to create different types of calculated fields.
 
-## Creating Calculated Fields from Radio Buttons {#createcalculatedradiobuttons}
+## Creating Calculated Fields from Radio Buttons {#sec-createcalculatedradiobuttons}
 
-1. First, ensure the radio buttons and their choice values are appropriately set according to the [naming convention for radio buttons](adobe.html#namingconventionradiobuttons)
+1. First, ensure the radio buttons and their choice values are appropriately set according to the [naming convention for radio buttons](#sec-namingconventionradiobuttons)
 1. Select the text field which must be turned into a calculated field
 1. Right-click on the field and select "Properties"
 1. Select the "Calculate" tab within the Properties menu
@@ -260,7 +248,7 @@ The following sections detail how to create different types of calculated fields
    event.value = total + total2 + total3 + total4
    ```
    - This script should be fit according to how many trials/variables must be calculated from
-   - Proceed to [Breaking Down the Calculation Script](adobe.html#breakingdownscript) to gain a greater understanding of the script
+   - Proceed to [Breaking Down the Calculation Script](#sec-breakingdownscript) to gain a greater understanding of the script
 
 ## Creating Calculated Fields from Radio Buttons: Video
 
@@ -276,7 +264,7 @@ Watch the following video in order to observe an example of creating calculated 
 
 1. Prepare the check boxes for calculation:
 
-   1. Provide the check boxes from which the field will be calculated with appropriate variable names, closely following standard [naming convention for variables](adobe.html#namingvariables) when possible
+   1. Provide the check boxes from which the field will be calculated with appropriate variable names, closely following standard [naming convention for variables](#sec-namingvariables) when possible
    
    1. For each check box, an export value must be assigned.
    The export value will determine what numeric value the check box will carry throughout calculation.
@@ -293,7 +281,7 @@ Watch the following video in order to observe an example of creating calculated 
    - *Note:* The appropriate `mathematical operator` should be selected according to the desired final calculation from the drop down list of "sum (+)," "product (x)," "average," "minimum," or "maximum"
 1. Select "Pick..." and then check the variable names of the check boxes to be calculated
 
-## Breaking Down the Calculation Script {#breakingdownscript}
+## Breaking Down the Calculation Script {#sec-breakingdownscript}
 
 ```
 var v1 = getField("variable_group_name").value
@@ -343,7 +331,7 @@ The calculation script for radio buttons can be broken down into three parts:
    - The line `var v1 = getField("variable_group_name").value` defines the selected radio button in "variable_group_name" as `var v1` (variable 1) within this script and pulls the **choice value** from each group
       - Thus, within each `getField()`, the name of each group of radio buttons should be added in quotations
       - *Note:* The number being pulled through this function directly corresponds to the choice value defined for each radio button in the group of radio of radio buttons.
-      This is why it is crucial to define choice values according to the same [naming convention for radio buttons](adobe.html#namingconventionradiobuttons)
+      This is why it is crucial to define choice values according to the same [naming convention for radio buttons](#sec-namingconventionradiobuttons)
    - Each `var vX` should reflect a trial on the form.
    Thus, if there are 15 test trials, there should be 15 lines of code from `var v1` to `var v15` with the name for each group of radio buttons inputed in `getField("")` for each variable
 
@@ -392,7 +380,7 @@ The calculation script for radio buttons can be broken down into three parts:
          }
          ```
 
-      - Because a total correct field is being calculated, the choice value of 2 should be inputed as this is the choice value which corresponds to "Correct" (see [naming convention for radio buttons](adobe.html#namingconventionradiobuttons))
+      - Because a total correct field is being calculated, the choice value of 2 should be inputed as this is the choice value which corresponds to "Correct" (see [naming convention for radio buttons](#sec-namingconventionradiobuttons))
       - The value of 2 would be inputed for each if/else statement for each variable.
       Thus, if there were 15 variables, there should be 15 if/else statements `v1 == 2` to `v15 == 2`
    - The if/else statement for each variable defines that if the value pulled by the `getField()` function matches the inputted choice value for the variable then the total for that variable becomes equal to 1.
@@ -812,9 +800,9 @@ event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total1
 
 ## Breaking Down the Conditional Formatting Calculation Script
 
-Notice the [traditional calculation script](adobe.html#breakingdownscript) is present within this script.
+Notice the [traditional calculation script](#sec-breakingdownscript) is present within this script.
 However, additional if/else commands are implemented in order to account for the dependence on another variable.
-Before proceeding with this section, an understanding of the [traditional calculation script](adobe.html#breakingdownscript) should be obtained.
+Before proceeding with this section, an understanding of the [traditional calculation script](#sec-breakingdownscript) should be obtained.
 In the following section, Variable X refers to the variable which is contingent on the value of another variable, Variable Y.
 Thus, the conditional formatting is described in such a way that the value of a Variable X is dependent on the value of Variable Y.
 <br>
@@ -881,7 +869,7 @@ The conditional formatting calculation script features two major alterations:
    ```
 
    - This alteration to the script utilizes if/else commands to establish contingency on Variable Y
-   - As outlined in the [Breaking Down the Calculation Script](adobe.html#breakingdownscript) section, the if/else statements operate in the same manner and follow the same procedures.
+   - As outlined in the [Breaking Down the Calculation Script](#sec-breakingdownscript) section, the if/else statements operate in the same manner and follow the same procedures.
    However, notice an additional if/else statement is present for each trial and surrounds the original if/else statement:
    
       ```
@@ -1215,7 +1203,7 @@ if(v32 == 2){
 event.value=total+total2+total3+total4+total5+total6+total7+total8+total9+total10+total11+total12+total13+total14+total15+total16
 ```
 
-## Time Calculations in Adobe {#timecalculations}
+## Time Calculations in Adobe {#sec-timecalculations}
 
 Calculating a time based on two other times can be accomplished within Adobe.
 To do this, custom calculation scripts using the language JavaScript must be implemented.
@@ -1412,7 +1400,7 @@ The following solution is implemented to work around this:
    * When the initial time is inputted, each of these intervals calculate automatically
 1. A second set of text fields are made for each of these 18 intervals
    * These fields have no calculations applied to them
-   * These 18 fields are set to be [hidden](adobe.html#hiddenfields) from user view
+   * These 18 fields are set to be [hidden](#sec-hiddenfields) from user view
    * These 18 fields serve to allow for manually entry of a time in case of an interruption
    * The 18 fields are positioned over the initial 18 fields which do the contain the calculations
 1. A set of 18 buttons are created, one for each interval

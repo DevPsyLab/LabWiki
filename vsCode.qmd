@@ -1,0 +1,92 @@
+---
+title: "Visual Studio Code (VS Code)"
+---
+
+# Tips and Tricks {#sec-tipsAndTricks}
+
+1. You can view the source code side-by-side with the Preview (after selecting the code type in the bottom right):
+![Visual Studio Code](images/vsCode.png)
+1. To create personalized CSS commands in VS Code, see [here](https://devpsylab.github.io/DataAnalysis/markdown.html#sec-css).
+1. To wrap code around the selected text (<https://stackoverflow.com/a/73344832/2029527>; archived at <https://perma.cc/P5JA-7DBC>):
+    1. Press `Ctrl`+`Shift`+`p`
+    1. Type and select "Open Keyboard Shortcuts (JSON)"
+    1. Add the following item:
+```
+[
+    {
+        "key": "alt+shift+e",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "<TEXT-BEFORE>$TM_SELECTED_TEXT</TEXT-AFTER>"
+        }
+    }
+]
+```
+    1. Save the `keybindings.json` file.
+    1. Select the text you want to wrap, and press `Alt`+`Shift`+`e`
+
+# Example Code Snippets {#sec-exampleCodeSnippets}
+
+## Template {#sec-template}
+
+```
+[
+    {
+        "key": "alt+shift+e",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "<TEXT-BEFORE>$TM_SELECTED_TEXT</TEXT-AFTER>"
+        }
+    }
+]
+```
+
+## `\begin{equation}...\end{equation}` {#sec-equation}
+
+```
+[
+    {
+        "key": "alt+shift+e",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "\\begin{equation}\n$TM_SELECTED_TEXT\n\\end{equation}"
+        }
+    }
+]
+```
+
+# Connect to `R` {#sec-connectToR}
+
+1. Install `R` using the initial setup instructions described here: <https://devpsylab.github.io/DataAnalysis/R.html#sec-setup>
+1. Install the [`R` extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) for `VSCode`
+1. Go into the `R` extension settings
+1. Set the `rpath` variables (e.g., `r.rpath.windows`) to be blank
+1. Set the `rterm` variables (e.g., `r.rterm.windows`) to be blank
+1. Close VS Code
+1. Set VS Code to Run as Administrator by default
+1. Open VS Code as Administrator
+1. Launch the R terminal (Ctrl+Shift+P → "R: Create R terminal").
+
+VS Code extensions to install:
+- [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
+`R` packages to install:
+- `install.packages(c("languageserver","httpgd"))`
+    - `languageserver` is used for syntax highlighting and code completion
+    - `httpgd` is used for plotting in VS Code
+
+## Old Instructions {#sec-oldInstructions}
+
+Follow the instructions here to connect `VSCode` to `R`:
+<https://stackoverflow.com/a/66069540/2029527> (archived at <https://perma.cc/FCF5-26BT>)
+
+1. Install `R` using the initial setup instructions described here: <https://devpsylab.github.io/DataAnalysis/R.html#sec-setup>
+1. Install the `R` extension for `VSCode`
+1. Go into the `R` extension settings
+1. Set the `R` path to the path of your `R` installation:
+    - e.g., `C:\\R\\R-4.3.1\\bin\\x64\\R.exe`
+1. Set the `Rterm` path to the path of your `R` installation
+    - e.g., `C:\\R\\R-4.3.1\\bin\\x64\\Rterm.exe`

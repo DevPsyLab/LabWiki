@@ -2,14 +2,7 @@
 title: "Application Guidelines for Prospective Graduate Students"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
-# Am I a good fit for the Psychological and Brain Sciences Ph.D. Program at the University of Iowa? {#fit-program}
+# Am I a good fit for the Psychological and Brain Sciences Ph.D. Program at the University of Iowa? {#sec-fit-program}
 
 The Psychological and Brain Sciences Ph.D. Program at the University of Iowa is a [<u>***research-focused***</u> training program](https://psychology.uiowa.edu/graduate).
 Thus, our program is best aligned with careers in which research will be a key component.
@@ -18,10 +11,10 @@ If you have career goals of being a clinician, our program would not be a good f
 
 Given our research-focused training, applicants will be most competitive if they have strong research experiences.
 What will make you most competitive for our program is having lots of high-quality research experience and showing evidence of capabilities to conduct independent research.
-In general, it is helpful for you to have strong experience with all aspects of the research process—including developing a research question, formulating a hypothesis, developing a study to test your question, conducting the statistical analysis, interpreting the findings, writing up the findings, and presenting the findings to others—so a) you know what you'd be signing up for by joining a [research-focused Ph.D. program](https://psychology.uiowa.edu/graduate) and b) you are [ready to hit the ground running](#fit-lab).
+In general, it is helpful for you to have strong experience with all aspects of the research process—including developing a research question, formulating a hypothesis, developing a study to test your question, conducting the statistical analysis, interpreting the findings, writing up the findings, and presenting the findings to others—so a) you know what you'd be signing up for by joining a [research-focused Ph.D. program](https://psychology.uiowa.edu/graduate) and b) you are [ready to hit the ground running](#sec-fit-lab).
 You will want to show evidence of independent research experiences, such as an Honors project, senior thesis, independent research project, first-authored publications in strong peer-reviewed journals, first-authored posters or presentations at strong national or international conferences, and grant/fellowship submissions—these are just examples (you are not expected to have all of these!).
 
-# What graduate training tracks should I apply to in order to join the Developmental Psychopathology Lab? {#tracks}
+# What graduate training tracks should I apply to in order to join the Developmental Psychopathology Lab? {#sec-tracks}
 
 Prospective graduate students interested in joining the lab can apply to <u>***any***</u> of the [graduate training tracks](https://psychology.uiowa.edu/graduate) of the Department:
 
@@ -48,18 +41,18 @@ Dr. Petersen is a member of the following [research groups](https://psychology.u
 
 Students who are interested in joining the [Developmental Psychopathology Research Group](https://psychology.uiowa.edu/research/research-groups/developmental-psychopathology) and who do not want clinical training requirements are encouraged to apply to the [Individualized Graduate Training Track](https://psychology.uiowa.edu/graduate/individualized-graduate-training).
 
-# Criteria used for evaluation of graduate applications {#application-criteria}
+# Criteria used for evaluation of graduate applications {#sec-application-criteria}
 
 Your application will be reviewed closely by me and by the relevant training track.
 So you have a sense of how graduate applications are evaluated, here are the criteria that I consider most strongly when evaluating applicants for graduate school and my lab:
 
-- fit of interests with the Developmental Psychopathology Lab, including [the lab's current studies and focus](#currentFocus)
+- fit of interests with the Developmental Psychopathology Lab, including [the lab's current studies and focus](#sec-currentFocus)
 - fit of career goals with the mission of the program and the relevant training track
     - i.e., career goals in research
         - if you have goals of being a clinician, I would dissuade you from joining our program and this lab; you would not be happy here.
 - evidence of high-quality, independent research experience
     - e.g., Honors project, senior thesis, independent research project, first-authored publications in strong peer-reviewed journals, first-authored posters or presentations at strong national or international conferences, and grant/fellowship submissions—these are just examples (you are not expected to have all of these!)
-    - In general, it is helpful for you to have strong experience with all aspects of the research process—including developing a research question, formulating a hypothesis, developing a study to test your question, conducting the statistical analysis, interpreting the findings, writing up the findings, and presenting the findings to others—so a) you know what you'd be signing up for by joining a [research-focused Ph.D. program](#fit-program) and b) you are [ready to hit the ground running](#fit-lab).
+    - In general, it is helpful for you to have strong experience with all aspects of the research process—including developing a research question, formulating a hypothesis, developing a study to test your question, conducting the statistical analysis, interpreting the findings, writing up the findings, and presenting the findings to others—so a) you know what you'd be signing up for by joining a [research-focused Ph.D. program](#sec-fit-program) and b) you are [ready to hit the ground running](#sec-fit-lab).
     - Although experience with methods that are similar to the method my lab uses can be helpful, you are *not* expected to have experience with the methods we use.
     If you have a strong foundational background dealing with scientific research, technology, statistics, etc., you will be able to learn our methods.
 - writing skills, especially in scientific writing
@@ -69,36 +62,36 @@ So you have a sense of how graduate applications are evaluated, here are the cri
 - English-language proficiency for scientific writing, [teaching](https://grad.admissions.uiowa.edu/international/english-proficiency-evaluation), and (if relevant) clinical work
 - whether they will work well with others—including our team and others in the program
 - whether they have "drive" and a "[fire in the belly](https://en.wiktionary.org/wiki/fire_in_the_belly)": "the emotional stamina and vigor, passion, or inner drive to achieve something"
-- whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html)
-  - for instance, my lab looks for students who will both benefit from—and contribute to—our team and the collaborative environment, and who will work regularly in the lab (i.e., during the workday, as described in the [lab expectations for graduate students](expectations-gradStudent.html)); we are not looking for "lone wolves"
+- whether the trainee will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.qmd)
+  - for instance, my lab looks for students who will both benefit from—and contribute to—our team and the collaborative environment, and who will work regularly in the lab (i.e., during the workday, as described in the [lab expectations for graduate students](expectations-gradStudent.qmd)); we are not looking for "lone wolves"
 
 In addition, successful applicants to my lab tend to have at least two years of research experience and to be involved in research when applying.
 Moreover, successful applicants to my lab generally do NOT come from the University of Iowa—unless they have already worked in my lab.
 
-# The current focus of the Developmental Psychopathology Lab {#currentFocus}
+# The current focus of the Developmental Psychopathology Lab {#sec-currentFocus}
 
 The broader mission of the Developmental Psychopathology Lab is to advance understanding of how self-regulation develops so that we as a society can better treat or even prevent the development of externalizing problems.
 That is, we are interested in identifiying *mechanisms* in the development of self-regulation and externalizing problems.
 
-To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+To this aim, the focal project of the lab's work is an ongoing NIH-funded longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.qmd), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 In this project, we place special emphasis on the development of neural functioning, as measured by EEG/ERP, and how neural development influences the development of children's self-regulation and externalizing problems.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
-These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
+These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.qmd).
 
 Identifying mechanisms in the long-term development of externalizing problems requires strong assessment.
 Thus, my lab is also highly interested in psychometrics and measure development.
-In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.html), we are also in the process of designing and conducting another study, the [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan).
+In addition to the ongoing [School Readiness Study](study-schoolReadinessStudy.qmd), we are also in the process of designing and conducting another study, the [Externalizing Assessment Project](study-externalizingSpectrumAcrossLifespan.qmd).
 Externalizing problems change in behavioral manifestation across development.
 In this project, we aim to develop a novel assessment system to assess the externalizing spectrum in comparable and developmentally sensitive ways across the lifespan, so that we can identify children early on who are at risk of later, more severe problems.
 
 Although the mechanisms we identify are relevant for intervention, my lab does not conduct research on interventions.
 
-# Am I a good fit for the Developmental Psychopathology Lab? {#fit-lab}
+# Am I a good fit for the Developmental Psychopathology Lab? {#sec-fit-lab}
 
-Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s) (which are described [above](#currentFocus)).
+Our program does not look for "mini-me"s whose interests are exactly the same as ours; at the same time, we do look for a core fit of research interests with the direction of the prospective lab(s) (which are described [above](#sec-currentFocus)).
 For instance, if your primary research interests are in any of the following domains, my lab would *not* be a good fit for your interests:
 
-- depression/anxiety
+- depression/anxiety/internalizing problems
 - autism
 - psychosis/schizophrenia
 - trauma
@@ -114,27 +107,27 @@ This leads to a highly collaborative environment in which we can be more product
 Within the broader umbrella of our large longitudinal study, graduate students carve out their unique niche.
 Graduate students in my lab lead projects that are part of the broader study.
 As a result, to be a good fit for my lab, it is important that your interests align with our current study and work.
-In general, I look for graduate students (a) who will "hit the ground running" in my lab, in terms of data analysis and writing papers, (b) whose interests closely align with the lab's current study and focus (as described [above](#currentFocus)), and (c) who will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.html).
+In general, I look for graduate students (a) who will "hit the ground running" in my lab, in terms of data analysis and writing papers, (b) whose interests closely align with the lab's current study and focus (as described [above](#sec-currentFocus)), and (c) who will not only meet, but will exceed the [lab expectations for graduate students](expectations-gradStudent.qmd).
  
-# What to do before applying {#before-applying}
+# What to do before applying {#sec-before-applying}
 
 Before applying, I encourage you to:
 
 1. Read some of our [publications](https://developmental-psychopathology.lab.uiowa.edu/publications) to gain a sense of the type of work we do.
-Especially relevant are the publications from our [current studies](#currentFocus).
-1. Read the [lab expectations for graduate students](expectations-gradStudent.html) to make sure the lab would be a good fit for you.
-1. Contact Dr. Petersen by email at isaac-t-petersen@uiowa.edu for more information about the lab; express your interests and send your CV to see if the lab would be a good fit for your interests.
+Especially relevant are the publications from our [current studies](#sec-currentFocus).
+1. Read the [lab expectations for graduate students](expectations-gradStudent.qmd) to make sure the lab would be a good fit for you.
+1. Contact Dr. Petersen by email at [isaac-t-petersen@uiowa.edu](mailto:isaac-t-petersen@uiowa.edu) for more information about the lab; express your interests and send your CV to see if the lab would be a good fit for your interests.
 
-# What to do when applying {#when-applying}
+# What to do when applying {#sec-when-applying}
 
 To make your application as strong as possible, I encourage you to:
 
-1. Make sure your application—including your CV, professional statement, letters of recommendation, coursework, experiences, writing sample, etc.—addresses the above [criteria used for evaluation of applications](#application-criteria).
+1. Make sure your application—including your CV, professional statement, letters of recommendation, coursework, experiences, writing sample, etc.—addresses the above [criteria used for evaluation of applications](#sec-application-criteria).
 1. Include a writing sample in your application (separate from your professional statement).
 It is preferable for the writing sample to be an example of scientific writing (e.g., APA-style manuscript), and for you to be the sole- or lead-author.
 1. If there are weaknesses in your application (e.g., a period of poor grades, dropping out from a program) or things that merit explanation (e.g., if you are looking to switch programs/mentors), it is helpful for you to address them in your professional statement and to have your (relevant) letter writers address them in their letter.
 
-# What to include in the Professional Statement as part of the application {#professional-statement}
+# What to include in the Professional Statement as part of the application {#sec-professional-statement}
 
 I find it helpful when applicants include the following in their professional statements[^1]:
 
@@ -144,6 +137,6 @@ I find it helpful when applicants include the following in their professional st
 1. Discussions of your independent research experience(s) and what you learned from them.
 In these discussions, I suggest emphasizing (1) the skills you developed from working on each project (e.g., data collection; behavioral coding; statistical analysis; computer programming; neural or biopsychology methods such as EEG/ERP; software such as R, REDCap, MATLAB, E-Prime, and Datavyu; writing certain sections of a paper; submitting/presenting a poster), and (2) what your "takeaways" were from the project—e.g., new research ideas or questions your work inspired.
 
-In addition, make sure to follow the Department instructions for the application and personal statement: https://psychology.uiowa.edu/graduate/admissions#step-3-submit-yourprogram-specific-materials
+In addition, make sure to follow the Department instructions for the application and personal statement: <https://psychology.uiowa.edu/graduate/admissions#step-3-submit-yourprogram-specific-materials>
 
 [^1]: This was borrowed from a [document](https://docs.google.com/document/d/1sQysBbb_dWhicWRlAUnRv-UWeJZgt-RmBxJPOfPIf9c/edit) by Prof. Jessica Schleider.

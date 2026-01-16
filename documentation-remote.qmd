@@ -2,18 +2,11 @@
 title: "Remote Participation"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
 The following sections provide instructions for how to participate in the lab remotely.
-As described in the [lab manual](manual.html#remote), RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
+As described in the [lab manual](lab-manual.qmd#sec-remote), RAs should never access lab data remotely without permission or direction from the Lab Coordinator, a graduate student, or the PI.
 These instructions applied mainly during the earlier parts of the COVID-19 pandemic.
 We are now working fully in-person.
-Nevertheless, students who are conducting [Honors Projects](honors.html) may need to access their projects during off-hours.
+Nevertheless, students who are conducting [Honors Projects](honors.qmd) may need to access their projects during off-hours.
 
 **How To…**
 
@@ -21,25 +14,25 @@ Nevertheless, students who are conducting [Honors Projects](honors.html) may nee
 
 - Open the lab calendar in Outlook (see the lab manual for how to do this)
 - Click on the link in the lab meeting event on the calendar
-    1. Alternatively, go to: https://uiowa.zoom.us/join
+    1. Alternatively, go to: <https://uiowa.zoom.us/join>
     1. Enter the meeting ID (as shown in the calendar)
 - You should be muted by default when you first enter the meeting
-- If you are unable to "attend" this week's lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the devpsy-lab@uiowa.edu email.
+- If you are unable to "attend" this week's lab meeting due to a scheduling conflict or limited access to the internet, please reach out to the Lab Coordinator at the [devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu) email.
 
-# VPN Access to the Lab Drive {#vpn}
+# VPN Access to the Lab Drive {#sec-vpn}
 
 To access the lab drive, you must connect to the university's VPN using Cisco AnyConnect.
 Visit this website to learn how to set up VPN access to the lab drive:
-https://its.uiowa.edu/support/article/1876 (archived at https://perma.cc/ST6R-PCJU)
+<https://its.uiowa.edu/support/article/1876> (archived at <https://perma.cc/ST6R-PCJU>)
 
 The full drive path to our lab drive is: 
 
 - PC: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\`
 - Mac: `smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`
 
-# Map the Lab Drive Onto a Mac Computer {#mapLabDrive}
+# Map the Lab Drive Onto a Mac Computer {#sec-mapLabDrive}
 
-1. [VPN](#vpn) into the university network
+1. [VPN](#sec-vpn) into the university network
 1. In the upper task bar, click "Go"
 1. Select "Connect to Server" from the drop-down menu
 1. In the "Server Address" bar, type: `smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab/`
@@ -53,18 +46,18 @@ The full drive path to our lab drive is:
     In the future, you can reconnect to the shared volume by double-clicking this alias.
 1. Then, you should be able to access the scripts on the lab share with `R` at the following location: `/Shared/lss_itpetersen`
 
-# Remote Access to a Lab Computer {#remoteAccess}
+# Remote Access to a Lab Computer {#sec-remoteAccess}
 
 A possibility may be to "remote in" to a lab computer.
 This allows you to use a lab computer from anywhere, so you can access all of the programs on our lab computers without having to install them on your personal machine.
 Remoting in to a lab computer might also be easier for accessing large lab files (e.g., videos for coding).
 However, you should only remote in to a lab computer if nobody in the lab is using the computer and nobody in the lab will need to use the computer.
 You can remote in to a lab computer using a program called "Remote Desktop."
-Visit this website to learn how to set up Remote Desktop access on your computer: https://its.uiowa.edu/remotedesktop
+Visit this website to learn how to set up Remote Desktop access on your computer: <https://its.uiowa.edu/remotedesktop>
 
 To gain remote access to a lab computer:
 
-1. [VPN](#vpn) into the lab drive
+1. [VPN](#sec-vpn) into the lab drive
 1. When prompted for the computer's name in the Remote Desktop client, follow this format: 
     - `PSYC-S###.iowa.uiowa.edu`
     - Then, enter your username using this format: `iowa\HawkID`
@@ -76,13 +69,13 @@ To gain remote access to a lab computer:
 Task Timing Sheet: can be accessed through your student Office 365 OneDrive—the Lab Coordinator will share a link so everyone has access
 
 Visit Videos: can be accessed on the lab drive using VPN and should be watched using VLC media player.
-You can download VLC for free here: https://www.videolan.org/vlc/index.html
+You can download VLC for free here: <https://www.videolan.org/vlc/index.html>
 
 Coding Forms: editable PDFs have been created for easier electronic completion—you can find your tasks' PDF coding forms on the lab drive here: 
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coding Forms\`
 
 Coding forms should always be opened and edited using Adobe Acrobat.
-Adobe Acrobat Reader is available to download for free from the Adobe website: https://get.adobe.com/reader/
+Adobe Acrobat Reader is available to download for free from the Adobe website: <https://get.adobe.com/reader/>
 
 Coding Folders: have been re-created as folders on the lab drive, which can be found here:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Studies\School Readiness Study\Data\Coding\Remote Coding\Coder Folders\`

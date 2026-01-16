@@ -1,0 +1,74 @@
+---
+title: "Writing Guidelines"
+---
+
+# Writing Guidelines
+
+Below are writing guidelines for the Developmental Psychopathology Lab:
+
+1. Follow APA style.
+1. If you are unsure about grammar, spelling, punctuation, capitalization, etc., follow the [UI Editorial Study Guide](https://brand.uiowa.edu/editorial-style-guide), where it does not conflict with APA style.
+1. Follow the style and author guidelines of the target journal; where the style of the target journal differs from APA style and/or the UI Editorial Study Guide, follow the style of the target journal.
+1. Use EndNote or Zotero for reference management.
+1. In empirical papers, include a correlation matrix with descriptive statistics for your model variables.
+1. Align decimal numbers in tables.
+For guidance on how to do this in Microsoft Word, see [here](https://wordribbon.tips.net/T011852_Aligning_Decimal_Numbers_in_Tables.html) (archived at <https://perma.cc/KW6J-DQ3Z>).
+1. Provide and interpret effect sizes (e.g., *r*s, *d*s, betas), and not just statistical significance.
+1. Report numbers to two decimal places; report *p*-values to three decimal places; report percentages to one decimal place.
+1. Know the difference between a "hypothesis" and a "prediction"—and use them correctly.
+A hypothesis is a proposed explanation; it specifies the causal relation between processes.
+A prediction is "the expected result of a test that is derived, by deduction, from a hypothesis or theory" ([Eastwell, 2014](https://files.eric.ed.gov/fulltext/EJ1057150.pdf); archived at <https://perma.cc/8EX4-8JYN>).
+Here is an example of a hypothesis and the resulting prediction:
+<br>
+"We <u>*hypothesize*</u> that poor language skills lead to physical aggression because they lead to difficulties in (a) using language as a self-regulatory tool resulting in dysregulated behavior, in (b) interactions with peers leading to peer rejection and resulting frustration, and in (c) communicating one's needs and having one's needs met leading to frustration and to resorting to other methods to achieve one's goals.
+If the hypothesis is true, we <u>*predict*</u> that children with poorer language skills will show more physical aggression than children with greater language skills."
+1. Per APA style (4.22), "while" and "since" should be reserved strictly for their temporal meaning; for non-temporal meanings, use terms such as "whereas" and "because", respectively.
+1. Per [author guidelines of *Child Development*](https://www.srcd.org/research/journals/child-development/child-development-submission-guidelines#APA) (archived at <https://perma.cc/7P53-DLVT>), use "relationship" to describe social bonds between people, not variables; to describe associations between variables, use "association", "relation", "covariation", or "correlation".
+1. Report relevant aspects of [reliability](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#typesOfReliability) (e.g., [internal consistency](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#internalConsistency-reliability), [inter-rater](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#interrater-reliability), [test–retest](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#testRetest-reliability)/cross-time [stability](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#stability) and [repeatability](https://isaactpetersen.github.io/Principles-Psychological-Assessment/reliability.html#repeatability)) and [validity](https://isaactpetersen.github.io/Principles-Psychological-Assessment/validity.html#measurementValidity) (e.g., [convergent](https://isaactpetersen.github.io/Principles-Psychological-Assessment/validity.html#convergentValidity), [discriminant](https://isaactpetersen.github.io/Principles-Psychological-Assessment/validity.html#discriminantValidity), [incremental](https://isaactpetersen.github.io/Principles-Psychological-Assessment/validity.html#incrementalValidity), [criterion-related](https://isaactpetersen.github.io/Principles-Psychological-Assessment/validity.html#criterionValidity)) for the measures you are using, including based on evidence from prior studies and based on estimates in the present study—in particular, those that are most relevant to the particular population, context, purpose, etc.
+1. When referring to reliability, validity, or stability, specify the aspect(s) of reliability/validity/stability you are referring to.
+    - For example, it is important to distinguish between stability of people's **level** on a construct across time, or of the **mean**, **variance**, or **rank-order** (individual differences) of a group's scores on a construct across time, or the stability of the **structure of a construct** or of the **strength of an effect**.
+1. Avoid "this", "that", "these", and "those".
+They are vague and make the reader work harder.
+Replace them with their referent.
+1. "Increase" (or increased) and "decrease" (or decreased) imply change over time.
+Do not use them to describe differences between groups or associations, unless you are specifically referring to change over time (e.g., greater language ability was associated with decreases in behavior problems over time).
+Instead, use words such as "higher"/"greater"/"stronger"/"better" and "lower"/"smaller/"weaker"/"poorer", etc.
+1. When writing the Limitations section, provide *thoughtful* limitations.
+As described by [Patrick Curran](https://quantitudepod.org/s2e13-you-want-me-to-do-a-quant-review/), don't include a limitation that, if you reversed it, only an ignoramus would endorse it:
+
+    > **Curran:** I would love to take credit for this, but a colleague of mine years ago had this great description of.
+    > He doesn't want to see a limitation that if you reversed it, only an ignoramus would endorse it.
+    > So he said if the limitations were: "*Future research needs to use smaller sample sizes, more homogeneous samples, higher SES*".
+    > You reverse the limitation, only an ignoramus would endorse it.
+    > That's not really a limitation.
+    > I wanna see real, legitimate, thoughtful limitations.
+    > Communicate to me that you're aware of the limits of what you're doing, but be thoughtful and realistic, both so that you can telegraph that, but also that you can legitimately lay out where we need to go next.
+    >
+    > **Hancock:** So give me an example of one or two of those limitations that you would think, yep, that's the kind of thing I wanna see right here.
+    >
+    > **Curran:** [Jokingly] "We need larger sample sizes and more items."
+    > So maybe we used a series of latent curve models to fit nonlinear trajectories to adolescent substance use over time.
+    > This analytic method assumes that all subjects are governed by the same underlying trajectory and only differ in magnitude.
+    > "*It may be that there are subgroups within the sample that are governed by different forms of trajectories that are not captured by a single common functional form.
+    > Future work would do well to examine these alternative functions in other settings*", something like that.
+    >
+    > **Hancock:** That was really, really nice.
+    >
+    > **Curran:** But when you do that, throw a bone as to why that's not a critical issue for this paper.
+    > What I would then say is, "*We conducted a series of sensitivity analyses, none of which indicated such functional heterogeneity existed, and we do not view this as a significant limitation here.*"
+
+1. Know the difference between a hyphen (-), minus sign (−), en dash (–), and em dash (—), and use them correctly (see [here](https://jakubmarian.com/hyphen-minus-en-dash-and-em-dash-difference-and-usage-in-english/); archived at <https://perma.cc/3XQ6-DBNW>).
+    - [Unicode values](https://www.punctuationmatters.com/the-difference-between-a-dash-and-a-minus-sign/) (archived at <https://perma.cc/Q9GM-SSCL>) for each character:
+      - hyphen (-): 002D or 2010
+      - minus sign (−): 2212
+      - en dash (–): 2013
+      - em dash (—): 2014
+1. When submitting a manuscript to a journal, submit any supplemental appendices as a PDF (not as a Word file).
+1. When submitting a manuscript to a journal, follow the lab's [open science](openScience.qmd) guidelines.
+    - For instance, see the section on "[Manuscript Submission to a Journal](openScience.qmd#sec-journal)."
+    - When the manuscript is accepted for publication, follow the guidelines in the section on "[When the Manuscript is Accepted for Publication](openScience.qmd#sec-accepted)"
+1. You are expected to follow the [Henry Kissinger criterion](expectations-gradStudent.qmd#sec-communication)—before sending a manuscript to Dr. Petersen, make sure it is your <u>best possible work</u>.
+That means going through multiple revisions.
+Before sending it to Dr. Petersen, you should print (yes, <u>print</u>) it and read it out loud to yourself, making any necessary revisions.
+You will frequently catch additional typos and grammatical mistakes by doing so.
+If you send me a version with many mistakes/typos/misspellings/grammatical errors, I will send it back to you without reading it.

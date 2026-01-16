@@ -2,22 +2,15 @@
 title: "Lab Expectations for SROP Students"
 ---
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  echo = TRUE,
-  error = TRUE,
-  comment = "")
-```
-
-# What Does SROP Entail? {#srop}
+# What Does SROP Entail? {#sec-srop}
 
 The University of Iowa's Summer Research Opportunities Program (SROP) is an eight-week program designed to provide undergraduate students from underrepresented backgrounds with in-depth research experiences.
 As part of the SROP program, you will conduct an independent research project and will present your findings at a University of Iowa undergraduate research conference.
 To help you accomplish this, our goal is to get you set up as quickly as possible with our data so that you can formulate a research question and hypothesis, identify and extract the relevant data available, learn and perform the data analysis to test your question, and put together an abstract and poster for the SROP presentation—all on the eight-week timeline.
 
-For more informaton on the UI SROP Program, see here: https://grad.uiowa.edu/gsb/srop
+For more informaton on the UI SROP Program, see here: <https://grad.uiowa.edu/gsb/srop>
 
-# Lab Expectations {#expectations}
+# Lab Expectations {#sec-expectations}
 
 The following are lab expectations for SROP students:
 
@@ -26,20 +19,20 @@ The following are lab expectations for SROP students:
 - Whenever you are not in a SROP program meeting, you will be working in the lab (during regular business hours; 9am–5pm Monday through Friday)
 - You will let us know, in advance, if you will be late to your scheduled shift or will not be able to make your scheduled shift
 
-# Resources {#resources}
+# Resources {#sec-resources}
 
-The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.html), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
+The focal project of the lab's work is an ongoing longitudinal study, the [School Readiness Study](study-schoolReadinessStudy.qmd), that follows children from 3–7 years of age to better understand how self-regulation and externalizing problems develop, from a bio-psycho-social perspective.
 For more information on the study, you are encouraged to read papers from the project, view the available measures, examine the Data Dictionary, and see the pre-registered hypotheses.
-These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.html).
-For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#statisticalDecisionTree) in the lab's Data Analysis Guides.
+These resources are available on the project page for the [School Readiness Study](study-schoolReadinessStudy.qmd).
+For information on which statistical test to use, see the [statistical decision tree](https://devpsylab.github.io/DataAnalysis/statistics.html#sec-statisticalDecisionTree) in the lab's Data Analysis Guides.
 For information on how to conduct data analysis, see the relevant sections of the lab's Data Analysis guides on [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html) or [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html).
-For how to set up your folder structure, see the following page: https://devpsylab.github.io/LabWiki/honors.html
+For how to set up your folder structure, see the following page: <https://devpsylab.github.io/LabWiki/honors.html>
 
-# Expectations for Everyone in Lab {#expectationsForEveryone}
+# Expectations for Everyone in Lab {#sec-expectationsForEveryone}
 
-In addition to the expectations described above for SROP students, please also read the [expectations for everyone in the lab](expectations-everyone.html).
+In addition to the expectations described above for SROP students, please also read the [expectations for everyone in the lab](expectations-everyone.qmd).
 
-# Signature {#signature}
+# Signature {#sec-signature}
 
 Please download, sign, and email the below document to Dr. Petersen prior to your first day in lab.
 
