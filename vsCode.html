@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d640c705e8c17715bca3574aa719063f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-b754b9fd3853d7e56faef54c29c5d52b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-9278de052701f0b3f1191ef96b26c196.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -422,8 +422,18 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <li>Open VS Code as Administrator</li>
 <li>Launch the R terminal (Ctrl+Shift+P → “R: Create R terminal”).</li>
 </ol>
-<p>VS Code extensions to install: - <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></p>
-<p><code>R</code> packages to install: - <code>install.packages(c("languageserver","httpgd"))</code> - <code>languageserver</code> is used for syntax highlighting and code completion - <code>httpgd</code> is used for plotting in VS Code</p>
+<p>VS Code extensions to install:</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a></li>
+</ul>
+<p><code>R</code> packages to install:</p>
+<ul>
+<li><code>install.packages(c("languageserver","httpgd"))</code>
+<ul>
+<li><code>languageserver</code> is used for syntax highlighting and code completion</li>
+<li><code>httpgd</code> is used for plotting in VS Code</li>
+</ul></li>
+</ul>
 <section id="sec-oldInstructions" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-oldInstructions"><span class="header-section-number">3.1</span> Old Instructions</h2>
 <p>Follow the instructions here to connect <code>VSCode</code> to <code>R</code>: <a href="https://stackoverflow.com/a/66069540/2029527" class="uri">https://stackoverflow.com/a/66069540/2029527</a> (archived at <a href="https://perma.cc/FCF5-26BT" class="uri">https://perma.cc/FCF5-26BT</a>)</p>
@@ -1002,25 +1012,27 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Launch the R terminal (Ctrl+Shift+P → "R: Create R terminal").</span>
 <span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>VS Code extensions to install:</span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)</span></span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="in">`R`</span> packages to install:</span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`install.packages(c("languageserver","httpgd"))`</span></span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`languageserver`</span> is used for syntax highlighting and code completion</span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`httpgd`</span> is used for plotting in VS Code</span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Old Instructions {#sec-oldInstructions}</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="in">`R`</span> packages to install:</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`install.packages(c("languageserver","httpgd"))`</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`languageserver`</span> is used for syntax highlighting and code completion</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span><span class="in">`httpgd`</span> is used for plotting in VS Code</span>
 <span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>Follow the instructions here to connect <span class="in">`VSCode`</span> to <span class="in">`R`</span>:</span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://stackoverflow.com/a/66069540/2029527&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/FCF5-26BT&gt;</span>)</span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install <span class="in">`R`</span> using the initial setup instructions described here: <span class="ot">&lt;https://devpsylab.github.io/DataAnalysis/R.html#sec-setup&gt;</span></span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install the <span class="in">`R`</span> extension for <span class="in">`VSCode`</span></span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go into the <span class="in">`R`</span> extension settings</span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Set the <span class="in">`R`</span> path to the path of your <span class="in">`R`</span> installation:</span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>e.g., <span class="in">`C:\\R\\R-4.3.1\\bin\\x64\\R.exe`</span></span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Set the <span class="in">`Rterm`</span> path to the path of your <span class="in">`R`</span> installation</span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>e.g., <span class="in">`C:\\R\\R-4.3.1\\bin\\x64\\Rterm.exe`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="fu">## Old Instructions {#sec-oldInstructions}</span></span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>Follow the instructions here to connect <span class="in">`VSCode`</span> to <span class="in">`R`</span>:</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://stackoverflow.com/a/66069540/2029527&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/FCF5-26BT&gt;</span>)</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install <span class="in">`R`</span> using the initial setup instructions described here: <span class="ot">&lt;https://devpsylab.github.io/DataAnalysis/R.html#sec-setup&gt;</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Install the <span class="in">`R`</span> extension for <span class="in">`VSCode`</span></span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go into the <span class="in">`R`</span> extension settings</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Set the <span class="in">`R`</span> path to the path of your <span class="in">`R`</span> installation:</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>e.g., <span class="in">`C:\\R\\R-4.3.1\\bin\\x64\\R.exe`</span></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Set the <span class="in">`Rterm`</span> path to the path of your <span class="in">`R`</span> installation</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>e.g., <span class="in">`C:\\R\\R-4.3.1\\bin\\x64\\Rterm.exe`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
