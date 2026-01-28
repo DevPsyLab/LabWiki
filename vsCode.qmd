@@ -71,9 +71,11 @@ title: "Visual Studio Code (VS Code)"
 1. Launch the R terminal (Ctrl+Shift+P → "R: Create R terminal").
 
 VS Code extensions to install:
+
 - [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
 
 `R` packages to install:
+
 - `install.packages(c("languageserver","httpgd"))`
     - `languageserver` is used for syntax highlighting and code completion
     - `httpgd` is used for plotting in VS Code
