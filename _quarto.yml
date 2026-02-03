@@ -63,8 +63,12 @@ website:
           href: qualtrics-manual.qmd
         - text: Remote Participation
           href: documentation-remote.qmd
+        - text: ResearchMatch
+          href: researchmatch.qmd
         - text: Social Media
           href: social-media.qmd
+        - text: Sona Systems
+          href: sona.qmd
         - text: Studies
           href: studies.qmd
         - text: Video Editing
