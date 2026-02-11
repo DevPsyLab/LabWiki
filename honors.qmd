@@ -160,7 +160,7 @@ For instructions to set up VPN, see [here](documentation-remote.qmd#sec-vpn).
 # Accessing Articles through the UI Libraries {#sec-articles}
 
 You should be able to access many, if not most, articles using [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch).
-Other databases include [PsycInfo](https://purl.lib.uiowa.edu/apa/psycinfo), [Web of Science](https://www.webofscience.com/wos/woscc/smart-search), and [PubMed](https://purl.lib.uiowa.edu/nlm/pubmed).
+Other databases include [PsycInfo](https://purl.lib.uiowa.edu/apa/psycinfo), [Web of Science](http://purl.lib.uiowa.edu/wos), and [PubMed](https://purl.lib.uiowa.edu/nlm/pubmed).
 However, even if an article is not freely available online and the university does not provide access to the journal, you should be able to obtain the PDF of *any* scientific article.
 If the PDF of article is not available on [Google Scholar](https://purl.lib.uiowa.edu/GoogleSch), you can easily get article PDFs through the university library system.
 First, see if the university has access to the electronic/online version of the journal by searching the name of the journal in [Infohawk](https://search.lib.uiowa.edu/primo-explore/search?vid=01IOWA).
