@@ -18,7 +18,7 @@ Thus, a primary goal of our work is publishing our findings in scientific journa
 
 # The broad goals of mentoring {#sec-goals-mentoring}
 
-The goals of mentoring in this lab are for each trainee *to receive theoretical and technical training, to work productively on interesting research projects, and to best prepare themselves for their future career*.
+The goals of mentoring in this lab are for each trainee *to receive theoretical and technical training, to work productively on interesting research projects, to develop a cohesive research program, and to best prepare themselves for their future career*.
 Thus, a major emphasis of your work will be data analysis, writing, and publishing papers in strong journals.
 Here I list some expectations to help you understand how the lab operates and how we can achieve these goals together.
 
