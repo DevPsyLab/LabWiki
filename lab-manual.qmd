@@ -131,23 +131,29 @@ Therefore, if your parents/roommates/friends/etc. are in the room with you and c
 Students who wish to receive credit for time spent in the lab may register for credit. 
 
 "`PSY:3994:01IND – Research Practicum in Psychology`" 
+
 - Small-group participation in faculty research projects; literature review, study planning, data collection, analysis, interpretation, write-up.
 - *Recommended for students' first two semesters in lab (except summer semester).* 
 
 "`PSY:3995:01IND – Advanced Research Practicum in Psychology`"
+
 - Individual participation in faculty research projects; significant reading and writing. Requirements: two semesters of PSY:3994 or HONR:3994. 
 - *Recommended for students after completing their first two semesters in lab.*
 
 "`PSY:3999:01IND – Independent Research in Neuroscience`"
+
 - Independent scientific research related to the field of neuroscience.
 
 "[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)"
+
 - Individual research performed in conjunction with a faculty member's research.
 
 "[`PSY:4990:01IND – Honors Thesis Research`](#sec-honorsCredit)"
+
 - Supervised original project; leads to written thesis, oral defense.
 
 "`URES:3992 – Undergraduate Research and Creative Projects`"
+
 - A 0-hour and has no tuition or fees associated.
 It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
 `URES:3992` is also useful for students in the **summer** so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
