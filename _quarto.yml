@@ -47,6 +47,8 @@ website:
         menu:
         - text: Adobe
           href: adobe.qmd
+        - text: AI Policy
+          href: ai-policy.qmd
         - text: Data Analysis Guides
           href: https://devpsylab.github.io/DataAnalysis
         - text: Honors Projects

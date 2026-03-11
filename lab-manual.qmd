@@ -1095,6 +1095,10 @@ The resources include resources on applying to graduate school, internships, pos
 Please take advantage of the many resources available to help you succeed.
 And, if you have helpful resources, please give back by sharing them on the lab drive.
 
+# AI {#sec-ai}
+
+Please read and follow the lab's [AI policy](ai-policy.qmd).
+
 # Lab Organizational Chart {#sec-organizationalChart}
 
 ![Lab Organizational Chart](images/labOrgChart.png)

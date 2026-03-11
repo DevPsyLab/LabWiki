@@ -57,6 +57,10 @@ Please upload the PDF of the poster, abstract, and/or paper to the lab repositor
 - Journal articles: please add the PDF of the paper to the following location:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\Papers\`
 
+# AI {#sec-ai}
+
+Everyone is expected to follow the lab's [AI policy](ai-policy.qmd).
+
 # Dress Code {#sec-dressCode}
 
 While in lab and on days when you do *not* have lab-related meetings outside of the Department:
@@ -115,7 +119,7 @@ The cardinal rule: Stay away from cutoffs, which are almost universally consider
 
 ![Dress Code: Shorts](images/dressCode_shorts.png)
 
-# Consequences of Non-compliance {#sec-noncompliance}
+# Consequences of Non-Compliance {#sec-noncompliance}
 
 If we become aware of violations of our values, policies, or expectations, Dr. Petersen and/or the Lab Coordinator will discuss the matter with the person directly and in close temporal proximity to being made aware of the situation.
 We will first attempt to understand the situation, including both the behaviors and the antecedents.

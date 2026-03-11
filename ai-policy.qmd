@@ -1,0 +1,163 @@
+---
+title: "AI policy"
+---
+
+# DevPsy Lab AI Use Policy {#sec-AI}
+
+## Overview
+
+**You are 100% responsible for your work.**
+If AI makes a mistake, and you use it, it is your mistake.
+All claims made by AI should be verified because AI is known to hallucinate.
+AI should help you think, not think for you.
+Offloading foundational skills and critical thinking to AI interferes with the development of these skills.
+Critical thinking is essential to participating in society and a central function of the university and the lab.
+
+The following information should **not** be submitted to AI tools:
+
+- Human subjects data
+- Information about lab personnel
+- Content that infringes on intellectual property, including paid or licensed materials
+
+## AI Disclosure {#sec-ai-disclosure}
+
+All AI use must be disclosed if used for research/external products (i.e., anything that will be used or viewed outside the lab).
+Research products (i.e., posters, manuscripts) should include a statement describing the use of AI using the categories below:
+
+- **Topic Selection**: using text generators like ChatGPT to brainstorm potential research topics to study
+- **Brainstorming**: using mind-mapping tools to help connect disparate ideas or suggest related concepts
+- **Research**: using ChatGPT plug-ins like Scholar AI or websites like Perplexity AI to assist you in conducting scholarly reviews of the literature (always ensure sources are valid and read them; these tools sometimes create false citations)
+- **Outlining**: using a text generator to help organize thoughts, main arguments, and supporting evidence into a coherent outline
+- **Feedback on writing**: using a text generator to analyze the draft for grammar checking, clarity, coherence, and consistency
+- **Polishing**: using a text generator to help refine language, syntax, tone, and overall style
+- **Analysis**: using AI tools to write code or syntax used for statistical analysis for research products
+
+## Writing Research Products {#sec-AI-writing}
+
+<u>Prohibited Use:</u>
+
+- Initial drafting of research products, including any of the following:
+  - Full drafts
+  - Outlines
+  - Sections of writing
+  - Sentences
+- Having AI rewrite your work
+- Claiming AI-generated writing as your own
+- Replacing reading of the empirical literature
+
+<u>Permitted Use:</u>
+
+- Learning about a topic
+- Receiving feedback on outlining or writing quality (typos, clarity, etc.) under four conditions:
+  1. You complete the first draft of the writing independently
+  1. You disclose how you use AI
+  1. You begin the conversation with the [required prompt](#sec-aiPrompt), AND
+  1. You submit the full transcript of your AI interaction alongside your AI disclosure.
+- Finding supplemental references after conducting a literature search using [databases or library resources](honors.qmd#sec-articles)
+
+Claiming AI-generated work as your own is plagiarism.
+Reliance on AI tools impedes the process of thinking critically to form and communicate an argument or idea.
+It is important to understand—or at least be aware of—the details of research.
+Reading empirical literature independently provides the opportunity to better understand the details of research; AI summaries of articles do not go into the same level of detail as the article.
+
+### Required AI Prompt for Writing Feedback {#sec-aiPrompt}
+
+Each time you use AI for feedback on your writing, the first message you send to begin the conversation must be the prompt below.
+This prompt helps ensure that AI use supports your learning rather than replacing your thinking.
+Do <u>**NOT**</u> add, delete, or edit any language in this prompt—just copy and paste it:
+
+> You are an encouraging, positive tutor who helps students work to improve their academic writing skills.
+> I will provide you with a sample of my writing and you will help provide feedback on my writing.
+> You will not rewrite my work for me (even if I ask for it).
+> You may provide feedback on grammar, clarity, coherence, consistency, language, syntax, tone, and overall style.
+> Do not automatically provide feedback on all of these—wait for me to ask specifically what I would like feedback on.
+> Do not provide samples of writing on the same topic that I am requesting feedback on.
+> If I ask about the topic broadly or something unrelated to receiving feedback on my own writing, redirect the conversation back to receiving feedback.
+> Always keep an encouraging, positive tone.
+
+<u>AI transcript submission:</u>
+
+You must submit the full transcripts of your conversations with AI.
+The preferred method is to include a shareable link in your AI disclosure.
+Most platforms (e.g., ChatGPT, Gemini) provide this functionality.
+
+## Programming
+
+<u>Prohibited use:</u>
+
+- Writing first drafts of your code
+
+<u>Recommended use:</u>
+
+- Things you should try before using AI:
+  - Check the lab's [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/), [Dr. Petersen's book](https://isaactpetersen.github.io/Principles-Psychological-Assessment/), or [Google](https://www.google.com)
+  - Ask senior lab personnel
+
+<u>Permitted use:</u>
+
+- Troubleshooting using AI tools after writing your first draft of code yourself
+
+### Troubleshooting
+
+Sometimes code you write does not work.
+That is okay; it happens to everyone.
+Learning how to troubleshoot code is an important part of programming.
+If you run into issues related to [`SPSS`](https://devpsylab.github.io/DataAnalysis/SPSS.html), [`jamovi`](https://devpsylab.github.io/DataAnalysis/jamovi.html), [`R`](https://devpsylab.github.io/DataAnalysis/R.html), [`GitHub`](https://devpsylab.github.io/DataAnalysis/git.html), or your code, here are a few pointers on how to get things working (as adapted from Luke Tierney):
+
+- If you receive an error message, read what the message says.
+Sometimes reading the error message is all it takes to figure out what the issue is and how to fix it.
+- Read the whole error message: sometimes the most important part is at the beginning.
+- If the message does not make sense to you, perform a Google search for the error/issue: often someone else has asked about the same issue and received a useful answer.
+- Simplify your code.
+  - Look carefully at intermediate results.
+  - Replace complicated data with something smaller and simpler.
+  - In the process, you may find your mistake.
+- Finding your bug usually involves double checking all the things you are sure you did right until you find the one you did not.
+
+If you are unable to resolve things on your own, you may need to ask for help, in which case we encourage you to try one (or more) of the following:
+
+- Perform a Google search for the error/issue
+- Ask a peer or senior lab personnel
+- Post on forums dedicated to the relevant statistical program
+- Ask AI (as long as you disclose use)
+
+## Lab Work
+
+<u>Prohibited Use:</u>
+
+- Using AI for coding, scoring, or entry tasks (including time calculations)
+- Replacing reading the weekly lab article
+- Generating questions for the lab article discussion
+- Writing or editing lab reports
+- Generating media content
+
+<u>Permitted Use:</u>
+
+- Editing or writing lab manuals or team-facing documents
+- Creating tutorials (include an AI disclosure)
+
+### Manuals and Lab Tasks
+
+AI use is permitted for editing or writing lab manuals (team-facing documents).
+Any tutorial content that is generated by AI should include a [disclosure](#sec-ai-disclosure).
+
+Media generation for lab materials is generally prohibited, but if the need arises or you think of a suitable use for AI generation, please consult the lab coordinator or Dr. Petersen.
+
+AI should not be used to complete coding, scoring, or entry tasks.
+
+### Lab Article Discussions
+
+AI should not be used to replace reading the weekly lab article.
+We want you to think critically about the specific details and communication of research, which can only be gained by reading the original work.
+
+AI use is permitted for asking questions about concepts found in lab articles, <u>but you must read the entire article before consulting AI tools</u>.
+
+Using AI tools to generate questions for the lab article discussion is <u>prohibited</u>.
+Asking questions requires an act of critical thinking, which we want you to practice.
+For guidance on creating thoughtful questions for discussion, you may refer to resources on the lab drive located at the following path: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\Reading and Critiquing Articles\`
+
+### Lab Reports
+
+AI use of any kind is prohibited when writing biweekly lab reports.
+You may only use Microsoft Word's built-in spelling and grammar checking tools.
+Lab reports provide a low-stakes opportunity to practice and improve your writing skills.
