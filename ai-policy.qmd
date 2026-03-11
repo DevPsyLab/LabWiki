@@ -1,5 +1,5 @@
 ---
-title: "AI policy"
+title: "AI Policy"
 ---
 
 # DevPsy Lab AI Use Policy {#sec-AI}
