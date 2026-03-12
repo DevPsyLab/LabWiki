@@ -26,7 +26,7 @@ Research products (i.e., posters, manuscripts) should include a statement descri
 
 - **Topic Selection**: using text generators like ChatGPT to brainstorm potential research topics to study
 - **Brainstorming**: using mind-mapping tools to help connect disparate ideas or suggest related concepts
-- **Research**: using ChatGPT plug-ins like Scholar AI or websites like Perplexity AI to assist you in conducting scholarly reviews of the literature (always ensure sources are valid and read them; these tools sometimes create false citations)
+- **Research**: using ChatGPT plug-ins like Scholar AI or websites like Perplexity AI to assist you in conducting scholarly reviews of the literature (always ensure sources are valid and read any articles you cite; these tools sometimes create false citations)
 - **Outlining**: using a text generator to help organize thoughts, main arguments, and supporting evidence into a coherent outline
 - **Feedback on writing**: using a text generator to analyze the draft for grammar checking, clarity, coherence, and consistency
 - **Polishing**: using a text generator to help refine language, syntax, tone, and overall style
