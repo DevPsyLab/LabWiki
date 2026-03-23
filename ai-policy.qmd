@@ -12,10 +12,14 @@ All claims made by AI should be verified because AI is known to hallucinate.
 AI should help you think, not think for you.
 Offloading foundational skills and critical thinking to AI interferes with the development of these skills.
 Critical thinking is essential to participating in society and a central function of the university and the lab.
+Thus, developing your own writing, analytical, and critical thinking skills is a key learning goal.
+Like building muscles at the gym, these skills require effort—you don't get stronger if someone else (AI) lifts the weights for you.
+Ultimately, strong independent skills in writing, analysis, and critical thinking will set you apart in a competitive workplace.
 
-Just because you can use AI (for some things) does not mean you should!
+In the sections below, we specify permitted and prohibited use in various domains in the lab (e.g., writing, programming, lab tasks).
+However, just because you can use AI (for some things) in the lab does not mean you should!
 Learning things "the hard way" leads to better understanding than being given the answer (even if the answer may in some cases be right).
-Thus, in addition to specifying permitted and prohibited use in various domains (e.g., writing, programming, lab tasks), we also specify recommended use.
+Thus, in addition to specifying permitted and prohibited use, we also specify recommended use (or non-use).
 
 The following information should **not** be submitted to AI tools:
 
