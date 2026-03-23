@@ -13,6 +13,10 @@ AI should help you think, not think for you.
 Offloading foundational skills and critical thinking to AI interferes with the development of these skills.
 Critical thinking is essential to participating in society and a central function of the university and the lab.
 
+Just because you can use AI (for some things) does not mean you should!
+Learning things "the hard way" leads to better understanding than being given the answer (even if the answer may in some cases be right).
+Thus, in addition to specifying permitted and prohibited use in various domains (e.g., writing, programming, lab tasks), we also specify recommended use.
+
 The following information should **not** be submitted to AI tools:
 
 - Human subjects data
@@ -89,15 +93,18 @@ Most platforms (e.g., ChatGPT, Gemini) provide this functionality.
 
 <u>Recommended use:</u>
 
-- Things you should try before using AI:
-  - Check the lab's [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/), [Dr. Petersen's book](https://isaactpetersen.github.io/Principles-Psychological-Assessment/), or [Google](https://www.google.com)
+- Struggle through programming on your own without using AI.
+This will make you a stronger programmer.
+Here are things you should try before using AI:
+  - Check the lab's [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/), [Dr. Petersen's Assessment book](https://isaactpetersen.github.io/Principles-Psychological-Assessment), [Dr. Petersen's statistics book](https://isaactpetersen.github.io/Fantasy-Football-Analytics-Textbook), [other statistical resources](https://devpsylab.github.io/DataAnalysis/statistics.html), or [Google](https://www.google.com)
+  - Follow our [troubleshooting guide](#sec-troubleshooting) (see below)
   - Ask senior lab personnel
 
 <u>Permitted use:</u>
 
 - Troubleshooting using AI tools after writing your first draft of code yourself
 
-### Troubleshooting
+### Troubleshooting {#sec-troubleshooting}
 
 Sometimes code you write does not work.
 That is okay; it happens to everyone.
