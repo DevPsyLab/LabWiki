@@ -32,13 +32,23 @@ The following information should **not** be submitted to AI tools:
 All AI use must be disclosed if used for research/external products (i.e., anything that will be used or viewed outside the lab).
 Research products (i.e., posters, manuscripts) should include a statement describing the use of AI using the categories below:
 
-- **Topic Selection**: using text generators like ChatGPT to brainstorm potential research topics to study
+- **Topic Selection**: using text generators like ChatGPT to help brainstorm potential research topics to study
 - **Brainstorming**: using mind-mapping tools to help connect disparate ideas or suggest related concepts
-- **Research**: using ChatGPT plug-ins like Scholar AI or websites like Perplexity AI to assist you in conducting scholarly reviews of the literature (always ensure sources are valid and read any articles you cite; these tools sometimes create false citations)
+- **Literature Search**: using ChatGPT plug-ins like Scholar AI or websites like Perplexity AI to assist you in conducting scholarly reviews of the literature (always ensure sources are valid and read any articles you cite; these tools sometimes create false citations)
 - **Outlining**: using a text generator to help organize thoughts, main arguments, and supporting evidence into a coherent outline
-- **Feedback on writing**: using a text generator to analyze the draft for grammar checking, clarity, coherence, and consistency
-- **Polishing**: using a text generator to help refine language, syntax, tone, and overall style
-- **Analysis**: using AI tools to write code or syntax used for statistical analysis for research products
+- **Feedback on writing**: using a text generator to analyze the draft for grammar checking, clarity, coherence, and consistency, or to help polish or refine language, syntax, tone, and overall style
+- **Programming**: using AI tools to help write code or syntax
+- **Analysis**: using AI tools to help with data analysis (besides mere programming)
+
+Here is an example attestation for a research product that used AI:
+
+"*I have reviewed the lab's AI policy and attest that I fully report (below) the ways I used AI: Literature Search, Programming, and Analysis.*
+*I attest that I am responsible for the content of this project.*"
+
+Here is an example attestation that did not use AI:
+
+"*I have reviewed the lab's AI policy and attest that I did not use AI for creating this project.*
+*I attest that I am responsible for the content of this project.*"
 
 ## Writing Research Products {#sec-AI-writing}
 
