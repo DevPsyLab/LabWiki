@@ -318,7 +318,7 @@ For Likert scales:
 - If editing the data dictionary, do not use Excel!—Excel truncates values in cells
    - Instead, use LibreOffice with UTF-8 encoding
    
-## Adding linking parameters across cognitive tasks and SONA
+# Adding linking parameters across cognitive tasks and SONA
 
 The parameters &subid=9999&sonaid=99999 auto-populate with the participant's ID.
 For that to function, you'll need to add the &sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA.
