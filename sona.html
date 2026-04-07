@@ -80,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-d2129a7e7dd2af44e706c654bf7868d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -327,8 +330,15 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#linking-to-redcap" id="toc-linking-to-redcap" class="nav-link active" data-scroll-target="#linking-to-redcap"><span class="header-section-number">1</span> Linking to REDCap</a></li>
+  <li><a href="#linking-to-cognitive-tasks" id="toc-linking-to-cognitive-tasks" class="nav-link" data-scroll-target="#linking-to-cognitive-tasks"><span class="header-section-number">2</span> Linking to cognitive tasks</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/sona.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/sona.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -352,10 +362,25 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 </header>
 
 
+<section id="linking-to-redcap" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Linking to REDCap</h1>
+<p>You can add parameters to REDCap links to automatically grant extra credit to SONA participants after they complete a survey. To do so, you’ll need to add &amp;sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA. The full link should look like this: https://redcap.icts.uiowa.edu/redcap/surveys/?s=xxxx&amp;sona_id=%SURVEY_CODE%&amp;src=sona with the xxxx swapped out for the REDCap survey URL. You can find the REDCap survey URL in REDCap. This video shows were to put the link in SONA:</p>
+<p><a href="images/Embedding Link to Survey in SONA.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><video src="images/Embedding%20Link%20to%20Survey%20in%20SONA.mp4" class="img-fluid" controls=""></video></a><a href="images/Embedding Link to Survey in SONA.mp4">Video</a></p>
+<p>You’ll also need to add these two fields to the landing page of your REDCap questionnaire if they aren’t already there:</p>
+<p><a href="images/sona_id_field.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/sona_id_field.png" class="img-fluid"></a></p>
+<p><a href="images/sonaid_field.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/sonaid_field.png" class="img-fluid"></a></p>
+</section>
+<section id="linking-to-cognitive-tasks" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Linking to cognitive tasks</h1>
+<p>You can also link from LAMP server tasks to SONA, but this is more complex. You’ll need to redirect the participant to the cognitive tasks and pipe the SONA parameters. It’s easiest to put these at the end, after they finish the questionnaires. This video shows where to put the link:</p>
+<p><a href="images/Linking from Questionnaire to Tasks.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><video src="images/Linking%20from%20Questionnaire%20to%20Tasks.mp4" class="img-fluid" controls=""></video></a><a href="images/Linking from Questionnaire to Tasks.mp4">Video</a></p>
+<p>Please do note that the link in the screen recording contains the parameters &amp;subid=[subid]&amp;sonaid=[sonaid]. This is how you pipe the SONA ID back to SONA to award credit, and uses the two fields created in those screenshots above. Last but not least, you’ll need to alter the task script with your local SONA experiment ID, credit token, and the SONA ID parameter. This video shows how to do this:</p>
+<p><a href="images/Embedding Parameters in Tasks.mp4" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><video src="images/Embedding%20Parameters%20in%20Tasks.mp4" class="img-fluid" controls=""></video></a><a href="images/Embedding Parameters in Tasks.mp4">Video</a></p>
 
 
 <!-- -->
 
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
@@ -841,11 +866,65 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Sona Systems"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Linking to REDCap</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>You can add parameters to REDCap links to automatically grant extra credit to SONA participants after they complete a survey. To do so, you'll need to add &amp;sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA. The full link should look like this: https://redcap.icts.uiowa.edu/redcap/surveys/?s=xxxx&amp;sona_id=%SURVEY_CODE%&amp;src=sona with the xxxx swapped out for the REDCap survey URL. You can find the REDCap survey URL in REDCap. This video shows were to put the link in SONA:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/Embedding%20Link%20to%20Survey%20in%20SONA.mp4)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>You'll also need to add these two fields to the landing page of your REDCap questionnaire if they aren't already there:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/sona_id_field.png)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/sonaid_field.png)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># Linking to cognitive tasks</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>You can also link from LAMP server tasks to SONA, but this is more complex. You'll need to redirect the participant to the cognitive tasks and pipe the SONA parameters. It's easiest to put these at the end, after they finish the questionnaires. This video shows where to put the link:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/Linking%20from%20Questionnaire%20to%20Tasks.mp4)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Please do note that the link in the screen recording contains the parameters &amp;subid=<span class="sc">\[</span>subid<span class="sc">\]</span>&amp;sonaid=<span class="sc">\[</span>sonaid<span class="sc">\]</span>. This is how you pipe the SONA ID back to SONA to award credit, and uses the two fields created in those screenshots above. Last but not least, you'll need to alter the task script with your local SONA experiment ID, credit token, and the SONA ID parameter. This video shows how to do this:</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/Embedding%20Parameters%20in%20Tasks.mp4)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/sona.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/sona.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/sona.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/sona.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>

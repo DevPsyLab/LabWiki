@@ -358,6 +358,7 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
   <li><a href="#sec-labUniversalNotations" id="toc-sec-labUniversalNotations" class="nav-link" data-scroll-target="#sec-labUniversalNotations"><span class="header-section-number">2.7</span> Lab Universal Notations</a></li>
   <li><a href="#sec-dataDictionary" id="toc-sec-dataDictionary" class="nav-link" data-scroll-target="#sec-dataDictionary"><span class="header-section-number">2.8</span> Editing the Data Dictionary</a></li>
   </ul></li>
+  <li><a href="#adding-linking-parameters-across-cognitive-tasks-and-sona" id="toc-adding-linking-parameters-across-cognitive-tasks-and-sona" class="nav-link" data-scroll-target="#adding-linking-parameters-across-cognitive-tasks-and-sona"><span class="header-section-number">3</span> Adding linking parameters across cognitive tasks and SONA</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/redcap-manual.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/redcap-manual.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -598,7 +599,7 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 </section>
 <section id="sec-smartVariables" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="sec-smartVariables"><span class="header-section-number">2.4</span> Adding Smart Variables to Questionnaires</h2>
-<p>In every surey, we want to add the following “Smart Variables”. These variables automatically calculate the survey start time, survey start date, and duration survey was completed. Variable names should follow the appropriate naming convention that is used for each survey. After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review. <strong>Do not add variables to more than three surveys at a time.</strong> These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables:</p>
+<p>In every survey, we want to add the following “Smart Variables”. These variables automatically calculate the survey start time, survey start date, and duration survey was completed. Variable names should follow the appropriate naming convention that is used for each survey. After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review. <strong>Do not add variables to more than three surveys at a time.</strong> These variables should be entered at the end of each survey. For each survey, follow the instructions below to add the required smart variables:</p>
 <section id="sec-timestamps" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="sec-timestamps"><span class="header-section-number">2.4.1</span> Timestamps</h3>
 <ol type="1">
@@ -796,11 +797,29 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <li>Instead, use LibreOffice with UTF-8 encoding</li>
 </ul></li>
 </ul>
+</section>
+</section>
+<section id="adding-linking-parameters-across-cognitive-tasks-and-sona" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Adding linking parameters across cognitive tasks and SONA</h1>
+<p>The parameters &amp;subid=9999&amp;sonaid=99999 auto-populate with the participant’s ID. For that to function, you’ll need to add the &amp;sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA. The full link should look like this: https://redcap.icts.uiowa.edu/redcap/surveys/?s=xxxx&amp;sona_id=%SURVEY_CODE%&amp;src=sona with the xxxx swapped out for the REDCap survey URL.</p>
+<p>The following screen recording shows where to put the link in SONA:</p>
+<video controls="" width="100%">
+<source src="images/Embedding Link to Survey in SONA.mp4" type="video/mp4">
+</video>
+<p>You’ll also need to add these two fields to the landing page of your REDCap questionnaire if they aren’t already there: <img src="images/sona_id_field.png" class="img-fluid" alt="RedcapImage1"> <img src="images/sonaid_field.png" class="img-fluid" alt="RedcapImage2"></p>
+<p>And then, you’ll need to redirect the participant to the cognitive tasks. It’s easiest to put these at the end, after they finish the questionnaires. The following screen recording shows you where to put the link:</p>
+<video controls="" width="100%">
+<source src="images/Linking from Questionnaires to Tasks.mp4" type="video/mp4">
+</video>
+<p>Please do note that the link in the screen recording contains the parameters &amp;subid=[subid]&amp;sonaid=[sonaid]. This is how you pipe the SONA ID back to SONA to award credit, and uses the two fields created in those screenshots above.</p>
+<p>Last but not least, you’ll need to alter the task script with your local SONA experiment ID, credit token, and the SONA ID parameter. The following screen recording shows you how to do this:</p>
+<video controls="" width="100%">
+<source src="images/Embedding Parameters in Tasks.mp4" type="video/mp4">
+</video>
 
 
 <!-- -->
 
-</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
@@ -1466,7 +1485,7 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding Smart Variables to Questionnaires {#sec-smartVariables}</span></span>
 <span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>In every survey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.</span>
 <span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>Variable names should follow the appropriate naming convention that is used for each survey.</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review.</span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>**Do not add variables to more than three surveys at a time.**</span>
@@ -1603,7 +1622,41 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## Editing the Data Dictionary {#sec-dataDictionary}</span></span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If editing the data dictionary, do not use Excel!—Excel truncates values in cells</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Instead, use LibreOffice with UTF-8 encoding</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Instead, use LibreOffice with UTF-8 encoding</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu"># Adding linking parameters across cognitive tasks and SONA</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>The parameters &amp;subid=9999&amp;sonaid=99999 auto-populate with the participant's ID.</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>For that to function, you'll need to add the &amp;sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA.</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>The full link should look like this: https://redcap.icts.uiowa.edu/redcap/surveys/?s=xxxx&amp;sona_id=%SURVEY_CODE%&amp;src=sona with the xxxx swapped out for the REDCap survey URL.</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>The following screen recording shows where to put the link in SONA:</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> controls width</span><span class="op">=</span><span class="st">"100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">"images/Embedding Link to Survey in SONA.mp4"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"video/mp4"</span><span class="dt">&gt;</span></span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>You'll also need to add these two fields to the landing page of your REDCap questionnaire if they aren't already there:</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="al">![RedcapImage1](images/sona_id_field.png)</span></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="al">![RedcapImage2](images/sonaid_field.png)</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>And then, you'll need to redirect the participant to the cognitive tasks. </span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>It's easiest to put these at the end, after they finish the questionnaires. </span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>The following screen recording shows you where to put the link:</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> controls width</span><span class="op">=</span><span class="st">"100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">"images/Linking from Questionnaires to Tasks.mp4"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"video/mp4"</span><span class="dt">&gt;</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>Please do note that the link in the screen recording contains the parameters &amp;subid=<span class="co">[</span><span class="ot">subid</span><span class="co">]</span>&amp;sonaid=<span class="co">[</span><span class="ot">sonaid</span><span class="co">]</span>. </span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>This is how you pipe the SONA ID back to SONA to award credit, and uses the two fields created in those screenshots above.</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>Last but not least, you'll need to alter the task script with your local SONA experiment ID, credit token, and the SONA ID parameter. </span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>The following screen recording shows you how to do this:</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">video</span><span class="ot"> controls width</span><span class="op">=</span><span class="st">"100%"</span><span class="dt">&gt;</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">source</span><span class="ot"> src</span><span class="op">=</span><span class="st">"images/Embedding Parameters in Tasks.mp4"</span><span class="ot"> type</span><span class="op">=</span><span class="st">"video/mp4"</span><span class="dt">&gt;</span></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">video</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
