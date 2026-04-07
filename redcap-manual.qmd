@@ -179,7 +179,7 @@ However, an instrument will not show up for entry until:
 
 ## Adding Smart Variables to Questionnaires {#sec-smartVariables}
 
-In every surey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
+In every survey, we want to add the following "Smart Variables". These variables automatically calculate the survey start time, survey start date, and duration survey was completed.
 Variable names should follow the appropriate naming convention that is used for each survey.
 After you have added variables, send a (team-facing) message in Discord to the Lab Coordinator for review.
 **Do not add variables to more than three surveys at a time.**
@@ -317,3 +317,37 @@ For Likert scales:
 
 - If editing the data dictionary, do not use Excel!—Excel truncates values in cells
    - Instead, use LibreOffice with UTF-8 encoding
+   
+## Adding linking parameters across cognitive tasks and SONA
+
+The parameters &subid=9999&sonaid=99999 auto-populate with the participant's ID.
+For that to function, you'll need to add the &sona_id=%SURVEY_CODE% parameter to the link to the questionnaires in SONA.
+The full link should look like this: https://redcap.icts.uiowa.edu/redcap/surveys/?s=xxxx&sona_id=%SURVEY_CODE%&src=sona with the xxxx swapped out for the REDCap survey URL.
+
+The following screen recording shows where to put the link in SONA:
+
+<video controls width="100%">
+  <source src="images/Embedding Link to Survey in SONA.mp4" type="video/mp4">
+</video>
+
+You'll also need to add these two fields to the landing page of your REDCap questionnaire if they aren't already there:
+![RedcapImage1](images/sona_id_field.png)
+![RedcapImage2](images/sonaid_field.png)
+
+And then, you'll need to redirect the participant to the cognitive tasks. 
+It's easiest to put these at the end, after they finish the questionnaires. 
+The following screen recording shows you where to put the link:
+
+<video controls width="100%">
+  <source src="images/Linking from Questionnaires to Tasks.mp4" type="video/mp4">
+</video>
+
+Please do note that the link in the screen recording contains the parameters &subid=[subid]&sonaid=[sonaid]. 
+This is how you pipe the SONA ID back to SONA to award credit, and uses the two fields created in those screenshots above.
+
+Last but not least, you'll need to alter the task script with your local SONA experiment ID, credit token, and the SONA ID parameter. 
+The following screen recording shows you how to do this:
+
+<video controls width="100%">
+  <source src="images/Embedding Parameters in Tasks.mp4" type="video/mp4">
+</video>
