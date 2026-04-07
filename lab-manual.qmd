@@ -128,23 +128,55 @@ Therefore, if your parents/roommates/friends/etc. are in the room with you and c
 
 ## Regular Credit {#sec-regularCredit}
 
-Students who wish to receive credit for time spent in the lab may register for "`PSY:3994:01IND – Research Practicum in Psychology`", "[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)", or "`URES:3992`".
-Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#sec-honorsCredit), "[`HONR:3994`](#sec-honorsCredit)".
+Students who wish to receive credit for time spent in the lab may register for credit. 
 
-`URES:3992` is 0-hour and has no tuition or fees associated.
+"`PSY:3994:01IND – Research Practicum in Psychology`" 
+
+- Small-group participation in faculty research projects; literature review, study planning, data collection, analysis, interpretation, write-up.
+- *Recommended for students' first two semesters in lab (except summer semester).* 
+
+"`PSY:3995:01IND – Advanced Research Practicum in Psychology`"
+
+- Individual participation in faculty research projects; significant reading and writing. Requirements: two semesters of PSY:3994 or HONR:3994. 
+- *Recommended for students after completing their first two semesters in lab.*
+
+"`PSY:3999:01IND – Independent Research in Neuroscience`"
+
+- Independent scientific research related to the field of neuroscience.
+
+"[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)"
+
+- Individual research performed in conjunction with a faculty member's research.
+
+"[`PSY:4990:01IND – Honors Thesis Research`](#sec-honorsCredit)"
+
+- Supervised original project; leads to written thesis, oral defense.
+
+"`URES:3992 – Undergraduate Research and Creative Projects`"
+
+- A 0-hour and has no tuition or fees associated.
 It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
-`URES:3992` is also useful for students in the summer so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
+`URES:3992` is also useful for students in the **summer** so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
+
+
+Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#sec-honorsCredit), "[`HONR:3994`](#sec-honorsCredit)". After two semesters in the lab, students are able to register for "`PSY:3995`".
 
 Keep in mind that some courses differ in the way that they are graded.
 
-- Students receive a letter grade (see the section on [Honors Credit](#sec-honorsCredit)) for `PSY:4990` and `HONR:3994`.
-- Students receive a Pass/Fail grade for `PSY:3994`.
+- Students receive a **letter grade** (see the section on [Honors Credit](#sec-honorsCredit)) for `PSY:4990`, `HONR:3994`, `PSY:3995`, and `PSY:3999`. 
+- Students receive a **Pass/Fail grade** for `PSY:3994`.
 
 There are several advantages to registering for course credit:
 
 - Your participation in lab will be included on your transcript, which can look good when you apply to graduate/professional school and jobs
 - If you meet the hours and expectations, it can also help your GPA
 - The 10 hours per week you spend in lab will be accounted for in your course schedule
+
+Important note on registering for Pass/Fail credit:
+
+- A maximum of 15 P ("Pass") credits is accepted toward your bachelor's degree.
+- We recommend consulting with your advisor when deciding to register for Pass/Fail credit or a letter grade, and regarding which course designation to register for.
+
 
 ![PSY:3994 Step 1](images/psy3994_1.png)
 ![PSY:3994 Step 2](images/psy3994_2.png)
@@ -1062,6 +1094,10 @@ We provide many professional development-related resources on the lab drive in t
 The resources include resources on applying to graduate school, internships, postbacs, and medical school, comparing different mental health fields (e.g., clinical psychology, counseling psychology, school psychology, clinical mental health counseling, marriage and family therapy, social work), how to find programs, and resources on academic skills (e.g., reading scientific articles), cover letters, CVs/resumes, personal statements, standardized tests (e.g., GRE), and prior lab workshops on topics such as statistics and interviews.
 Please take advantage of the many resources available to help you succeed.
 And, if you have helpful resources, please give back by sharing them on the lab drive.
+
+# AI {#sec-ai}
+
+Please read and follow the lab's [AI policy](ai-policy.qmd).
 
 # Lab Organizational Chart {#sec-organizationalChart}
 

@@ -63,6 +63,7 @@ As described by [Patrick Curran](https://quantitudepod.org/s2e13-you-want-me-to-
       - minus sign (−): 2212
       - en dash (–): 2013
       - em dash (—): 2014
+    - If you want an easy way to type these or other frequent characters/words/phrases/sentences, see [espanso](https://espanso.org).
 1. When submitting a manuscript to a journal, submit any supplemental appendices as a PDF (not as a Word file).
 1. When submitting a manuscript to a journal, follow the lab's [open science](openScience.qmd) guidelines.
     - For instance, see the section on "[Manuscript Submission to a Journal](openScience.qmd#sec-journal)."
