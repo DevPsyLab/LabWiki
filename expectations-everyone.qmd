@@ -62,17 +62,29 @@ Please upload the PDF of the poster, abstract, and/or paper to the lab repositor
 While in lab and on days when you do *not* have lab-related meetings outside of the Department:
 
 Everyone is expected to follow a "casual professional" (i.e., "business casual") dress code while in lab.
+Pants should be presentable and appropriate for working in a professional environment and with families.
 Jeans and denim capris are acceptable when in lab, as long as they are not ripped or frayed.
-T-shirts without inappropriate graphics, text, cut-outs, etc. are acceptable.
-Leggings are permitted if they are worn as tights (i.e., under a skirt, dress, shorts, or long shirt that fully covers the bottom).
+Joggers (loose, tapered pants) are permitted provided they are clean and reasonably fitted. 
+Joggers should not be excessively baggy or resembling sleepwear. 
+If you choose to wear joggers, your outfit ensemble should be casual professional (e.g., not wearing sweatshirt as well). 
+Sweatpants are not permitted, including pants made from fleece or traditional sweatshirt material, or pants primarily intended for sleeping or lounging. 
+Leggings (tight, form-fitting workout clothes) are permitted if they are worn as tights (i.e., under a skirt, dress, shorts, or long shirt that fully covers the bottom). 
 Shorts are permitted if they are twill or chino material and reach *at least* to your mid-thigh (Bermuda-length shorts, however, are more appropriate).
+T-shirts without inappropriate graphics, text, cut-outs, etc. are acceptable.
+Sweatshirts are acceptable when paired with jeans or more professional pants (i.e., not when paired with joggers).
 The following are NOT allowed: short-shorts, low-cut shirts, strapless tops, visible undergarments (including bralettes, sports bras, or underwear/boxers), or workout/gym clothes (e.g., sweatpants, yoga pants).
 Additionally, clothing that reveals the stomach or midriff area of the body are not allowed.
 Strapped tops are not allowed unless they are considered business casual/professional (e.g., sleeveless blouse).
 For guidance on shorts guidelines, see the [DevPsy Lab Summerwear Guide](#sec-summerwear) (below).
 
 You are expected to dress more nicely on days that you have meetings outside of the department (such as with community partners).
-On these days, you should wear a nice pair of pants/dress/skirt and shirt; you should not wear jeans or shorts.
+On these days, you should wear a nice pair of pants/dress/skirt and shirt; you should not wear jeans, joggers, or shorts.
+
+<details><summary>Guidance on Joggers vs. Sweatpants & Leggings</summary>
+
+![Dress Code: Joggers](images/dressCode_joggers.png)
+
+</details>
 
 ## DevPsy Lab Summerwear Guide {#sec-summerwear}
 
