@@ -183,6 +183,9 @@ Create a component in the OSF project repository for the following components:
 
 ### Data {#sec-osfData}
 
+When sharing data, make sure to share only <u>***deidentified***</u> data.
+For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.
+
 To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
 To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
 
