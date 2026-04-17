@@ -642,6 +642,7 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 </section>
 <section id="sec-osfData" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="sec-osfData"><span class="header-section-number">6.1.2</span> Data</h3>
+<p>When sharing data, make sure to share only <u><strong><em>deidentified</em></strong></u> data. For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.</p>
 <p>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers. To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</p>
 <p><a href="https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID" class="uri">https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID</a></p>
 </section>
@@ -1369,62 +1370,65 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data {#sec-osfData}</span></span>
 <span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>When sharing data, make sure to share only <span class="dt">&lt;</span><span class="kw">u</span><span class="dt">&gt;</span>***deidentified***<span class="dt">&lt;/</span><span class="kw">u</span><span class="dt">&gt;</span> data.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID&gt;</span></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Dictionary {#sec-osfDataDictionary}</span></span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>For each paper project, we export a <span class="in">`.csv`</span> file with the subset of the <span class="co">[</span><span class="ot">Data Dictionary</span><span class="co">](#sec-dataDictionary)</span> variables used for that specific paper.</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>We upload that <span class="in">`.csv`</span> file to the OSF.</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>The formatting of the Data Dictionary is described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-dataDictionary)</span>.</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Analysis Code {#sec-osfAnalysisCode}</span></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research Materials {#sec-osfMaterials}</span></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preprint {#sec-osfPreprint}</span></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="fu">## Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}</span></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>With your project open, go to Settings (top-right) → View-Only Links → Add.</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>Then check "Anonymize".</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>Then you can share that URL.</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>For detailed instructions, see here: <span class="ot">&lt;https://help.osf.io/article/201-create-a-view-only-link-for-a-project&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/AGJ9-V487&gt;</span>)</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu"># Manuscript Submission to a Journal {#sec-journal}</span></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>Before submitting a manuscript to a journal, make sure to post the relevant materials on the <span class="co">[</span><span class="ot">OSF</span><span class="co">](#sec-osf)</span>, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-osf)</span>, and post the preprint, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-preprint)</span>.</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>Include the link to the preprint in the cover letter to the journal.</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc.</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>For example:</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses and measures for the School Readiness Study were pre-registered: </span><span class="ot">&lt;https://osf.io/jzxb8&gt;</span><span class="at">.</span></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses methods, and a data analysis plan for the present study were also pre-registered: </span><span class="ot">&lt;https://osf.io/pny26&gt;</span><span class="at">.</span></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: </span><span class="ot">&lt;https://osf.io/zs2bn&gt;</span><span class="at">.</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>In the manuscript submission, create and use <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span> (for blind review).</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>In the preprint submission, use the general OSF links (not the <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span>) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID&gt;</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Dictionary {#sec-osfDataDictionary}</span></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>For each paper project, we export a <span class="in">`.csv`</span> file with the subset of the <span class="co">[</span><span class="ot">Data Dictionary</span><span class="co">](#sec-dataDictionary)</span> variables used for that specific paper.</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>We upload that <span class="in">`.csv`</span> file to the OSF.</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>The formatting of the Data Dictionary is described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-dataDictionary)</span>.</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="fu">### Analysis Code {#sec-osfAnalysisCode}</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">### Research Materials {#sec-osfMaterials}</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="fu">### Preprint {#sec-osfPreprint}</span></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">## Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>With your project open, go to Settings (top-right) → View-Only Links → Add.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>Then check "Anonymize".</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>Then you can share that URL.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>For detailed instructions, see here: <span class="ot">&lt;https://help.osf.io/article/201-create-a-view-only-link-for-a-project&gt;</span> (archived at <span class="ot">&lt;https://perma.cc/AGJ9-V487&gt;</span>)</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="fu"># Manuscript Submission to a Journal {#sec-journal}</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>Before submitting a manuscript to a journal, make sure to post the relevant materials on the <span class="co">[</span><span class="ot">OSF</span><span class="co">](#sec-osf)</span>, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-osf)</span>, and post the preprint, as described <span class="co">[</span><span class="ot">here</span><span class="co">](#sec-preprint)</span>.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>Include the link to the preprint in the cover letter to the journal.</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc.</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>For example:</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses and measures for the School Readiness Study were pre-registered: </span><span class="ot">&lt;https://osf.io/jzxb8&gt;</span><span class="at">.</span></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Hypotheses methods, and a data analysis plan for the present study were also pre-registered: </span><span class="ot">&lt;https://osf.io/pny26&gt;</span><span class="at">.</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: </span><span class="ot">&lt;https://osf.io/zs2bn&gt;</span><span class="at">.</span></span>
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="fu"># When the Manuscript is Accepted for Publication {#sec-accepted}</span></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>When the manuscript is accepted for publication:</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Let all of the authors know, and send them the full, (in-press) APA-style reference</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make the OSF repo public and <span class="co">[</span><span class="ot">create a DOI link</span><span class="co">](https://help.osf.io/article/220-create-dois)</span> for the repository that can be used for citing it</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <span class="ot">&lt;https://www.nihms.nih.gov/submission/create/&gt;</span></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>    We are required to report published papers to funding agences.</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu"># Adapting Open Science to Longitudinal Research {#sec-longitudinal}</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>See our paper on adapting open science to longitudinal research: <span class="ot">&lt;https://onlinelibrary.wiley.com/doi/10.1002/icd.2315&gt;</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Ask Dr. Petersen to give you access.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>In the manuscript submission, create and use <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span> (for blind review).</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>In the preprint submission, use the general OSF links (not the <span class="co">[</span><span class="ot">anonymous view-only OSF links</span><span class="co">](#sec-anonymousViewOnlyLink)</span>) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="fu"># When the Manuscript is Accepted for Publication {#sec-accepted}</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>When the manuscript is accepted for publication:</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Let all of the authors know, and send them the full, (in-press) APA-style reference</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make the OSF repo public and <span class="co">[</span><span class="ot">create a DOI link</span><span class="co">](https://help.osf.io/article/220-create-dois)</span> for the repository that can be used for citing it</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <span class="ot">&lt;https://www.nihms.nih.gov/submission/create/&gt;</span></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.</span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>    We are required to report published papers to funding agences.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the <span class="co">[</span><span class="ot">preprint</span><span class="co">](#sec-preprint)</span> on <span class="co">[</span><span class="ot">PsyArXiv</span><span class="co">](https://psyarxiv.com)</span>.</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="fu"># Adapting Open Science to Longitudinal Research {#sec-longitudinal}</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>See our paper on adapting open science to longitudinal research: <span class="ot">&lt;https://onlinelibrary.wiley.com/doi/10.1002/icd.2315&gt;</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Ask Dr. Petersen to give you access.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
