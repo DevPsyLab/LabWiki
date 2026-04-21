@@ -2,3 +2,23 @@
 title: "ResearchMatch"
 ---
 
+# Distributing surveys
+
+1. To distribute REDCap surveys to participants, first click on the survey project in REDCap.
+1. Go to "Survey Distribution Tools".
+1. Click the optino to create a survey URL. 
+1. You can disseminate the public survey URL, or you can modify the URL under "Custom Public Survey URL".
+1. In order to keep track of recruitment sources, add a field to your landing page.
+  - This field should be a text box named "src".
+  - It should have the following Action Tags / Field Annotation: @HIDDEN-SURVEY @READONLY
+  - Then add &src="initials", and replace "initials" with initials representing each recruitment source.
+  - For example, the link https://redcap.icts.uiowa.edu/redcap/surveys/?s=999999&src=rm is appended with &src=rm to represent recruitment from ResearchMatch.
+
+## Automatic personalized links
+
+1. You can send automated follow-up surveys to participants who have completed an initial survey, such as a screening survey.
+1. Go to Designer and click on the instrument that you want to come first in your follow-up survey (e.g., Week 2 Landing Page).
+1. Customize the content of the automated email in Step 1.
+1. In Step 2, indicate the condition for triggering the email invitation to the follow-up survey.
+  - For example, select the closing instrument for the first survey under "When the following survey is completed" to send the follow-up survey after completion of the first survey.
+1. In Step 3, indicate the length of time after the Step 2 criterion is met before sending the automated follow-up survey. 
