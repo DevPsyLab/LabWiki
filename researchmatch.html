@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-cad2a2f8a56dfe71ee895a68e79c9b9a.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6f6d4dc81e9bc622e57b251f11a22821.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-416c138a283511d6fa1dc56032c21f03.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -327,8 +327,17 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#distributing-surveys" id="toc-distributing-surveys" class="nav-link active" data-scroll-target="#distributing-surveys"><span class="header-section-number">1</span> Distributing surveys</a>
+  <ul>
+  <li><a href="#automatic-personalized-links" id="toc-automatic-personalized-links" class="nav-link" data-scroll-target="#automatic-personalized-links"><span class="header-section-number">1.1</span> Automatic personalized links</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/researchmatch.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/researchmatch.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -352,10 +361,41 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
 </header>
 
 
+<section id="distributing-surveys" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Distributing surveys</h1>
+<ol type="1">
+<li>To distribute REDCap surveys to participants, first click on the survey project in REDCap.</li>
+<li>Go to “Survey Distribution Tools”.</li>
+<li>Click the optino to create a survey URL.</li>
+<li>You can disseminate the public survey URL, or you can modify the URL under “Custom Public Survey URL”.</li>
+<li>In order to keep track of recruitment sources, add a field to your landing page.</li>
+</ol>
+<ul>
+<li>This field should be a text box named “src”.</li>
+<li>It should have the following Action Tags / Field Annotation: <span class="citation" data-cites="HIDDEN-SURVEY">@HIDDEN-SURVEY</span> <span class="citation" data-cites="READONLY">@READONLY</span></li>
+<li>Then add &amp;src=“initials”, and replace “initials” with initials representing each recruitment source.</li>
+<li>For example, the link https://redcap.icts.uiowa.edu/redcap/surveys/?s=999999&amp;src=rm is appended with &amp;src=rm to represent recruitment from ResearchMatch.</li>
+</ul>
+<section id="automatic-personalized-links" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="automatic-personalized-links"><span class="header-section-number">1.1</span> Automatic personalized links</h2>
+<ol type="1">
+<li>You can send automated follow-up surveys to participants who have completed an initial survey, such as a screening survey.</li>
+<li>Go to Designer and click on the instrument that you want to come first in your follow-up survey (e.g., Week 2 Landing Page).</li>
+<li>Customize the content of the automated email in Step 1.</li>
+<li>In Step 2, indicate the condition for triggering the email invitation to the follow-up survey.</li>
+</ol>
+<ul>
+<li>For example, select the closing instrument for the first survey under “When the following survey is completed” to send the follow-up survey after completion of the first survey.</li>
+</ul>
+<ol type="1">
+<li>In Step 3, indicate the length of time after the Step 2 criterion is met before sending the automated follow-up survey.</li>
+</ol>
 
 
 <!-- -->
 
+</section>
+</section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section></div></main> <!-- /main -->
 <br>
@@ -841,11 +881,32 @@ gtag('config', 'G-8JSDTYMH7P', { 'anonymize_ip': true});
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "ResearchMatch"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Distributing surveys</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To distribute REDCap surveys to participants, first click on the survey project in REDCap.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to "Survey Distribution Tools".</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Click the optino to create a survey URL. </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>You can disseminate the public survey URL, or you can modify the URL under "Custom Public Survey URL".</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In order to keep track of recruitment sources, add a field to your landing page.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>This field should be a text box named "src".</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>It should have the following Action Tags / Field Annotation: @HIDDEN-SURVEY @READONLY</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Then add &amp;src="initials", and replace "initials" with initials representing each recruitment source.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>For example, the link https://redcap.icts.uiowa.edu/redcap/surveys/?s=999999&amp;src=rm is appended with &amp;src=rm to represent recruitment from ResearchMatch.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Automatic personalized links</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>You can send automated follow-up surveys to participants who have completed an initial survey, such as a screening survey.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Go to Designer and click on the instrument that you want to come first in your follow-up survey (e.g., Week 2 Landing Page).</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Customize the content of the automated email in Step 1.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In Step 2, indicate the condition for triggering the email invitation to the follow-up survey.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>For example, select the closing instrument for the first survey under "When the following survey is completed" to send the follow-up survey after completion of the first survey.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>In Step 3, indicate the length of time after the Step 2 criterion is met before sending the automated follow-up survey. </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/researchmatch.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/researchmatch.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/DevPsyLab/LabWiki/edit/main/researchmatch.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/blob/main/researchmatch.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/DevPsyLab/LabWiki/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
