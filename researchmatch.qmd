@@ -21,6 +21,7 @@ title: "ResearchMatch"
 The Sincerity Filter was designed to assist the research in selecting volunteers to message about your study.
 This filter is optional to use, but when applied will exclude volunteers that ResearchMatch believes to exhibit indicators of insincere intent from your recruitment search (e.g., implausible or inconsistent profile information).
 This filter aims to promote reliable recruitment and quality research from ResearchMatch participants. 
+To use this filter, you need to add it as a feature when setting up the study.
 
 ## Automatic personalized links
 
