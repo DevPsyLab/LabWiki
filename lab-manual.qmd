@@ -677,9 +677,12 @@ However, regardless of which email you use, make sure that your notifications ar
 1. Channels: All channels are a certain category or topic of conversation so that it is easier to locate previous discussions relevant to that topic
     a. To notify specific people in your message, type "@" and then enter in their username before typing your message (usernames are located on the left side of the screen) 
         1. `@everyone` notifies everyone (only admins can use)
-        1. `@channel` notifies everyone in the channel 
+        1. `@channel` notifies everyone in the channel
+        1. `@RA` notifies all RAs 
     b. `#random`: Use this channel if you are running late to lab, or if you have a question or comment that does not fall within the other channel categories; can also put memes or random funny things here!
 1. Attachments: Send pictures and attachments by clicking the plus sign next to the message
+1. Pinned messages: Important pinned messages are available in each channel by clicking the thumb tack icon.
+For example, the semester schedule and link to OpenTimeClock are pinned in the main `#announcements` channel for easy team access.
 1. Direct Messages: Do not use direct messages or private threads in Discord.
 All Discord communication should be in team-facing channels so others can benefit from the information and so we can go back and reference it later.
 If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#sec-labCommunication) for more information)
