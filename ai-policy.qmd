@@ -62,10 +62,12 @@ Here is an example attestation that did not use AI:
 - Having AI rewrite your work
 - Claiming AI-generated writing as your own
 - Replacing reading of the empirical literature
+- Searching for references using AI (including AI reference/database tools) before having conducted a literature search using databases or library resources
 
 <u>Permitted Use:</u>
 
-- Learning about a topic
+- Using AI to define or provide examples of constructs or theories
+  - To learn about associations between constructs, you should do a literature review
 - Receiving feedback on outlining or writing quality (typos, clarity, etc.) under four conditions:
   1. You complete the first draft of the writing independently
   1. You disclose how you use AI
