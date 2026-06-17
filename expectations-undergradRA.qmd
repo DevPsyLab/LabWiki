@@ -48,6 +48,10 @@ Lab hours must be scheduled/arranged with the Lab Coordinator in advance.
 You are NOT expected to be in lab for regularly scheduled lab hours on university holidays.
 If holidays occur during the week when lab hours are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter hours for that day.
 
+You are expected to schedule non-lab activities (course-related, therapy/medical appointments, extra-curricular, etc.) outside of your scheduled lab hours.
+However, we understand that this is occasionally not possible.
+If scheduling an outside activity during your regular lab hours is necessary, you are expected to first discuss this with the Lab Coordinator, to mark yourself as unavailable on the calendar (RES-DPL-Busy), and to work with the Lab Coordinator to determine when to make up the missed hours.
+
 If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
 If you have concerns making up these hours, please reach out to the Lab Coordinator.
 
