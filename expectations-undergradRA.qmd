@@ -2,7 +2,7 @@
 title: "Lab Expectations for Undergraduate Research Assistants"
 ---
 
-# Scheduling Expectations {#sec-schedulingExpectations}
+# Scheduling {#sec-scheduling}
 
 ## At a Glance {#sec-atAGlance}
 
@@ -28,27 +28,18 @@ We want to ensure that RAs get the most value out of their experience with our l
     - *This does not mean you will always run visits on these days, it simply means that you are available to if need be.*
     - *RAs will be notified of a weekend visit no later than 24 hours before the scheduled visit.*
 
-## Your responsibilities as an RA {#sec-yourSchedulingResponsibilities}
+## Lab Hours {#sec-labHours}
 
+With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
+We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits. 
 You are expected to be in lab for 10 regularly scheduled hours per week, on average, during the semester (excluding university holidays, breaks, and finals week).
 If you exceed 10 hours during any given week (e.g., helping run lab visits outside of your normal hours), you should work with the Lab Coordinator to determine when you may cut back your lab hours in later weeks. 
-Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person, by phone call (319-353-1977), or via email to the lab email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)) by 4:00 pm the day prior to the requested time off.
-Please give as much advance notice as possible.
-In case of same-day requests (or requests after 4pm the day prior), please reach out to the Lab Coordinator in person or by phone call (319-353-1977) if making the request during business hours; if making the request outside of business hours, reach out to the Lab Coordinator via email to the lab email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)).
-Requests must first be approved by the Lab Coordinator.
-It is your responsibility to follow up with the Lab Coordinator regarding requests.
-Do not send requests to change your schedule via Discord.
-If the request is approved, create a calendar entry on the Busy calendar, as described [here](lab-manual.qmd#sec-sharedCalendar).
-
-Unless otherwise stated, running lab visits is always the top priority.
-You are expected to arrive 45 minutes before the scheduled start time of visits.
-If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.
-If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.
-
-You are responsible for keeping the "RES-DPL-Busy" calendar up to date, including evenings and weekends, and to keep the Lab Coordinator informed of any changes as they occur.
 
 You are expected to track your lab hours honestly using the electronic scheduling system.
 You should diligently clock in and clock out every time you are in lab, and should only be "on the clock" while you are doing scheduled lab-related work or activities.
+
+If you do not complete your 10 scheduled hours in any given week, you are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until you have fully made up your hours.
+If you work more than your scheduled hours in a given week (e.g., if you work during a weekend or evening), you are expected to cut back on your scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.
 
 If you come into lab to help run lab visits during university breaks, the hours can count as hours for either the current semester (if you are "under hours" for the semester), or toward the following semester (if you are "over hours" for the semester).
 Completed lab-related hours count as lab hours no matter when they occur as long as they occur when they are scheduled.
@@ -57,25 +48,82 @@ Lab hours must be scheduled/arranged with the Lab Coordinator in advance.
 You are NOT expected to be in lab for regularly scheduled lab hours on university holidays.
 If holidays occur during the week when lab hours are scheduled (e.g., Labor Day), the Lab Coordinator will manually enter hours for that day.
 
-You are expected to schedule non-lab activities (course-related, therapy/medical appointments, extra-curricular, etc.) outside of your scheduled lab hours.
-However, we understand that this is occasionally not possible.
-If scheduling an outside activity during your regular lab hours is necessary, you are expected to first discuss this with the Lab Coordinator, to mark yourself as unavailable on the calendar (RES-DPL-Busy), and to work with the Lab Coordinator to determine when to make up the missed hours.
+If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
+If you have concerns making up these hours, please reach out to the Lab Coordinator.
 
-You are expected to be available at least two weekday evenings (M–F) per week and at least 8 weekend days per semester to run lab visits that may extend or be scheduled outside of the lab's normal business hours, which are 9:00am to 5:00pm Monday through Friday.
+### Lab Visits {#sec-labVisits}
+
+We expect you to have flexibility to accommodate participants' schedules for lab visits.
+For instance, you are expected to be available to run lab visits on evenings and weekends (see the section on [Scheduling Expectations](#sec-atAGlance) above).
+In order to meet the needs of our families, you are expected to be available at least **two weekday evenings (M–F) per week** and at least **8 weekend days per semester** (three weekend days per month) to run lab visits that may extend or be scheduled outside of the lab's normal business hours, which are 9:00am to 5:00pm Monday through Friday.
 You will be considered "on call" the evenings and weekend days you mark as available (i.e., your scheduled "on-call days").
 It is unlikely you will run a lab visit on all of your on-call days, but we may schedule a lab visit on any of your on-call days, in which case you would be expected to help run the lab visit.
-You are expected to hold your scheduled on-call days available until 24 hours beforehand.
+**You are expected to hold your scheduled on-call days available until 24 hours beforehand.**
 If you can no longer help run a visit you have been scheduled for, it is your responsibility to find another RA to trade with you.
 Both parties are then required to inform the Lab Coordinator of the trade before it is finalized.
 We will do our best to schedule families during your regular lab hours, however this may not always be possible.
 We want to ensure, as much as possible, (a) adequate coverage to accommodate families' schedules and (b) equitable distribution of "after-hours" lab visits.
 These are the minimum expectations for evening and weekend availability.
+We will do our best to fairly distribute the evening and weekend hours across the team.
 You are welcome to make yourself available more than two evenings per week and three weekend days per month to help us better meet families' needs.
 
-If you miss lab for an acute illness, the missed hours should be made up during the same semester the missing hours occurred.
-If you have concerns making up these hours, please reach out to the Lab Coordinator.
+## Schedule Adjustments {#sec-scheduleAdjustments}
 
-## Our responsibilities to you {#sec-ourResponsibilitiesToYou}
+Any request to cut back on hours or change your schedule should be submitted to the Lab Coordinator in person, by phone call (319-353-1977), or via email to the lab email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)) by 4:00 pm the day prior to the requested time off. 
+Please give as much advance notice as possible.
+In case of same-day requests (or requests after 4pm the day prior), please reach out to the Lab Coordinator in person or by phone call (319-353-1977) if making the request during business hours; if making the request outside of business hours, reach out to the Lab Coordinator via email to the lab email (devpsy-lab@uiowa.edu).
+Requests must first be approved by the Lab Coordinator.
+It is your responsibility to follow up with the Lab Coordinator regarding requests.
+Do not send requests to change your schedule via Discord.
+If the request is approved, create a calendar entry on the Busy calendar, as described [here](lab-manual.qmd#sec-sharedCalendar).
+
+*If you are experiencing an emergency and are unable to make it into the lab for your regularly scheduled hours or a visit, please inform the Lab Coordinator via email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)) or phone (319-353-1977) as soon as possible.*
+
+We expect you to let the Lab Coordinator and relevant team members know, as soon as possible and by Discord, if you are running late to a scheduled shift, visit, or meeting.
+The changes to your shifts and deviations from your regularly scheduled hours (described below) should be rare—other team members count on you being there during your scheduled shift.
+**You are responsible for keeping the "RES-DPL-Busy" calendar up to date, including evenings and weekends, and to keep the Lab Coordinator informed of any changes as they occur.**
+
+# Lab work {#sec-labWork}
+
+## RA Duties
+
+The undergraduate RA will participate in ongoing research within the Developmental Psychopathology Lab.
+The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
+Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
+Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
+Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
+Instructions for lab reports are described in the lab manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
+Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
+The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
+
+## RA Work Expectations
+
+We expect you to take personal responsibility for the work you are assigned.
+Assigned work will always coincide with the 10 hours you are already scheduled for.
+
+Unless otherwise stated, running lab visits is always the top priority.
+You are expected to arrive 45 minutes before the scheduled start time of visits.
+If you are asked to help run a lab visit in a given week, then running the lab visit is the prioritized use of your allotted weekly hours.
+If you are able to run a lab visit, and are asked to do so, we expect that you run the lab visit, even if it means not completing other lab responsibilities for the week; for example, it is okay for coding and entry duties to "pile up" if you are running lab visits.
+
+With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as you are meeting your expectation for lab hours.
+We expect you to ask the PI or Lab Coordinator if you have questions about your assigned work or expectations.
+Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.
+
+We expect you to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research.
+After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr. Petersen to discuss the possibility of doing an [Honor's thesis](honors.qmd) in conjunction with lab participation.
+
+We expect all RAs to contribute to each weekly lab meeting discussion.
+We expect all RAs to submit their lab report by the deadline and in the correct location.
+
+We expect RAs to [register](lab-manual.qmd#sec-courseRegistration) for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.
+
+# Communication {#sec-communication}
+
+We expect you to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](lab-manual.qmd#sec-labCommunication) section of the Lab Manual.
+Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
+
+# Our responsibilities to you {#sec-ourResponsibilitiesToYou}
 
 We appreciate that your classes—including exams and course prep—come first.
 We will work with you so that your lab schedule does not interfere with your other classes.
@@ -96,49 +144,6 @@ We will only schedule families outside regular lab hours (e.g., evenings/weekend
 We will never schedule a lab visit outside of normal lab hours with less than 24 hours' notice to the RAs scheduled to run it.
 
 We will work with you to help you identify when you can "cut back" when you let us know that you are over the expected number of hours for that point in the semester.
-
-# RA Duties: What Does Work as a Research Assistant Entail? {#sec-ra}
-
-The undergraduate research assistant (RA) will participate in ongoing research within the Developmental Psychopathology Lab.
-The RA will work in lab for 10 hours per week during the semester (9 hours of work in the lab plus a one-hour weekly lab meeting).
-Work assigned may include (but is not limited to): making the lab space child and family friendly, helping with recruitment, running participants, video coding, database management, data entry, and developing new procedures/devices.
-Each week, the RA is expected to read critically an empirical research article for lab meeting and come prepared to contribute to the discussion with questions and comments.
-Every other week, the RA will submit a report of their progress in lab, tasks they found interesting, and any questions or suggestions they have.
-Instructions for lab reports are described in the lab manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
-Throughout the course of their time in lab, the RA will have meetings with and work closely with the Principal Investigator (PI), Lab Coordinator, graduate students, and/or undergraduate students to ensure assigned work is completed as requested with the highest quality performance possible.
-The RA will be encouraged to contribute to both the formulation of research questions as well as research implementation.
-
-# Lab Expectations {#sec-expectations}
-
-With the exception of running participants or recruitment activities, lab hours will be regularly scheduled and will take place during regular business hours: between 9am–5pm Monday through Friday.
-We expect the RA to be reliable and consistently arrive on time for scheduled lab hours and visits.
-Any changes to an RA's weekly lab schedule need to be arranged with the Lab Coordinator, in advance, and in person, by phone call (319-353-1977), or via email to the lab email ([devpsy-lab@uiowa.edu](mailto:devpsy-lab@uiowa.edu)).
-We expect RAs to let the Lab Coordinator and relevant team members know, as soon as possible and by Discord, if they are running late to a scheduled shift, visit, or meeting.
-The changes to your shifts and deviations from your regularly scheduled hours (that are described above) should be rare—other team members count on you being there during your scheduled shift.
-If the RA does not complete their 10 scheduled hours in any given week, they are expected to make up missed hours later in the semester in arrangement with the Lab Coordinator, and will not be given a passing grade until they have fully made up their hours.
-If the RA works more than their scheduled hours in a given week (e.g., if they work during a weekend or evening), they are expected to cut back on their scheduled hours (in accordance with the availability described above); however, these cuts must be approved by the Lab Coordinator in advance.
-
-We expect the RA to have flexibility to accommodate participants' schedules for lab visits.
-For instance, the RA is expected to be available to run lab visits on evenings and weekends (see the section on [Scheduling Expectations](#sec-schedulingExpectations) below).
-We expect that the RA keeps eight weekend days available per semester (three weekend days per month) for the purposes of working with families.
-In addition, we expect that each RA keeps two weekday evenings available for the purposes of working with families.
-We will do our best to fairly distribute the evening and weekend hours across the team.
-
-We expect RAs to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](lab-manual.qmd#sec-labCommunication) section of the Lab Manual.
-Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
-We expect the RA to take personal responsibility for the work they are assigned.
-Assigned work will always coincide with the 10 hours the RA is already scheduled for.
-With the exception of lab visits, we will not assign work beyond the 10 hours per week expectation as long as the RA is meeting their expectation for lab hours.
-We expect the RA to ask the PI or Lab Coordinator if they have questions about their assigned work or expectations.
-Any non-assigned work (e.g., independent research projects, Honors projects, etc.) is expected to take place outside of scheduled hours, unless given explicit permission from the PI.
-
-We expect the RA to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research.
-After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr. Petersen to discuss the possibility of doing an Honor's thesis in conjunction with lab participation.
-
-We expect RAs to contribute to each weekly lab meeting discussion.
-We expect RAs to submit their lab report by the deadline and in the correct location.
-
-We expect RAs to register for the Research Practicum in Psychology course (PSY:3994 or HONR:3994) to account for the time demands of lab participation in their schedule.
 
 # Grading Scale {#sec-grading}
 
