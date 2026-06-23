@@ -126,6 +126,7 @@ We expect RAs to [register](lab-manual.qmd#sec-courseRegistration) for the Resea
 
 We expect you to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](lab-manual.qmd#sec-labCommunication) section of the Lab Manual.
 Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
+Lab members are expected to treat one another with respect, kindness, and professionalism, and this lab maintains a zero-tolerance policy for harassment, discrimination, or any demeaning or aggressive behavior (see [Expectations for Interactions with Others](expectations-everyone.qmd#sec-interactions)).
 
 # Our responsibilities to you {#sec-ourResponsibilitiesToYou}
 
