@@ -117,6 +117,9 @@ Any non-assigned work (e.g., independent research projects, Honors projects, etc
 We expect you to show an interest in the work and to, throughout the course of the semester, gain greater independence in the laboratory, to take on a greater leadership role, and to contribute to the overall improvement of the lab and its research.
 After an extended display of commitment and dedication to the lab, RAs are welcome to meet with Dr. Petersen to discuss the possibility of doing an [Honor's thesis](honors.qmd) in conjunction with lab participation.
 
+If you are interested in pursuing a [funding opportunity](opportunities.qmd), please reach out to the Lab Coordinator and Dr. Petersen to discuss the application and funding requirements. 
+If an opportunity requires an RA to work more than the required 10 hours per week, you can work with Dr. Petersen to set up expectations for additional lab hours and lab work.
+
 We expect all RAs to contribute to each weekly lab meeting discussion.
 We expect all RAs to submit their lab report by the deadline and in the correct location.
 
@@ -126,6 +129,7 @@ We expect RAs to [register](lab-manual.qmd#sec-courseRegistration) for the Resea
 
 We expect you to regularly communicate with the team, using the appropriate methods of communication, as described in the [Lab Communication](lab-manual.qmd#sec-labCommunication) section of the Lab Manual.
 Methods for resolving conflicts and personnel issues are described in the Lab Communication section of the Lab Manual (click [here](lab-manual.qmd#sec-resolvingConflicts)).
+Lab members are expected to treat one another with respect, kindness, and professionalism, and this lab maintains a zero-tolerance policy for harassment, discrimination, or any demeaning or aggressive behavior (see [Expectations for Interactions with Others](expectations-everyone.qmd#sec-interactions)).
 
 # Our responsibilities to you {#sec-ourResponsibilitiesToYou}
 
