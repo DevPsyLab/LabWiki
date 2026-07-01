@@ -1,0 +1,72 @@
+---
+title: "Notion"
+---
+
+For more information about Notion's features, visit the Notion help center for tutorials and other documentation here: <https://www.notion.com/help/category/new-to-notion>
+
+# Lab Workspaces
+
+- Coding
+- Scoring
+- Entry
+- Training Progress
+- Projects
+- Recruitment/Retention
+- Tasks for Anyone
+- Personal Tasks
+
+# Editing Notion {#sec-editing-notion}
+
+## Commands
+
+Press `/` to view a list of command options, such as:
+
+- Bulleted list
+- To-do list
+- Numbered list
+- Toggle list
+- Table
+- Divider
+- File
+- Web bookmark
+- Database
+
+## Databases
+
+You can create a new in-line database from the command list.
+
+1. Name your database
+    - To add/edit a database icon, select the 6 dots next to the database header and click `edit icon`
+1. Define the name column (for example, TCID_wave or Project Name)
+1. Add properties to the right of the name column that are relevant to your database (the property will exist in each new page of the database)
+    - Common properties to include:
+        - Person
+        - URL
+        - Text
+    - You can customize the name of the property column by clicking on the column header and changing the name
+1. Add a new page and name it
+1. Click `Open in side peek` to view and add content to the page
+    - Pre-defined page properties appear at the top
+1. Add relevant content about the page (i.e. notes, tables, to-do lists) using commands
+    - Click the 6 dots next to the page line to add a page icon
+
+### Duplicating and moving databases
+
+You can duplicate a database or a database page by clicking the 6 dots next to the item and clicking `duplicate`.
+Pages will duplicate with all of the content from the original page.
+You can duplicate whole databases with or without content.
+
+Click the 6 dots to move your database or database page to a different section of your workspace. 
+If you want to move an item (page, database, etc.) within the section, hover over the 6 dots and click to drag.
+
+## Reverting a change
+
+Please alert the lab coordinator before you attempt to restore a previous version of a page.
+If you accidentally delete a page or there is something that you need to undo, you can recover content from version history.
+
+1. Navigate to the specific page you need to restore
+1. Click the 3 dots in the right upper corner of Notion
+1. Click `version history`
+1. Find the edit/version that you want to undo
+    - Make sure you verify all information that will change if you decide to restore that version (there may have been other changes that you want to keep made during the timeframe of the previous version)
+1. Click `Restore`
