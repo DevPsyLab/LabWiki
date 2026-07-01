@@ -55,6 +55,8 @@ website:
           href: honors.qmd
         - text: Mediation and Moderation
           href: mediationModeration.qmd
+        - text: Notion
+          href: notion.qmd
         - text: Open Science
           href: openScience.qmd
         - text: Opportunities
