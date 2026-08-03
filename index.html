@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -14,10 +14,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -76,10 +79,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-33269adcf1721b81efc5ea7fcfe7f0ee.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3419ea62b3ca2d77d3d547f86109e84e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-020ce37fa69337bbd3936d95c33187a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-331c01ae5bcb8b1def0474f38323fa04.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -367,18 +370,15 @@ Office: 111 Spence Labs (SLP)<br>
 Lab Email (preferred for lab-relevant communication): <a href="mailto:devpsy-lab@uiowa.edu">devpsy-lab@uiowa.edu</a><br>
 Personal Email: <a href="mailto:madeline-metz@uiowa.edu">madeline-metz@uiowa.edu</a></p>
 <p><strong>Graduate Students</strong><br>
-<a href="https://developmental-psychopathology.lab.uiowa.edu/people/jordan-harris">Jordan Harris, M.A.</a><br>
+<a href="https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko">Zachary Demko, M.A.</a><br>
 Office: 109 Spence Labs (SLP)<br>
-Email: <a href="mailto:jordan-l-harris@uiowa.edu">jordan-l-harris@uiowa.edu</a></p>
-<p><a href="https://developmental-psychopathology.lab.uiowa.edu/people/alexis-hosch">Alexis Hosch, M.A.</a><br>
-Office: 109 Spence Labs (SLP)<br>
-Email: <a href="mailto:alexis-hosch@uiowa.edu">alexis-hosch@uiowa.edu</a></p>
-<p><a href="https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko">Zachary Demko, M.A.</a><br>
-Office: 119 Spence Labs (SLP)<br>
 Email: <a href="mailto:zachary-demko@uiowa.edu">zachary-demko@uiowa.edu</a></p>
 <p><a href="https://developmental-psychopathology.lab.uiowa.edu/people/megan-schumer">Megan Schumer, B.S.</a><br>
 Office: 119 Spence Labs (SLP)<br>
 Email: <a href="mailto:megan-schumer@uiowa.edu">megan-schumer@uiowa.edu</a></p>
+<p><a href="https://developmental-psychopathology.lab.uiowa.edu/people/nour-kanaan">Nour Kanaan, B.S.</a><br>
+Office: 119 Spence Labs (SLP)<br>
+Email: <a href="mailto:nour-kanaan@uiowa.edu">nour-kanaan@uiowa.edu</a></p>
 <p><strong>Location</strong>:</p>
 <p>Developmental Psychopathology Lab<br>
 Spence Labs 109–119<br>
@@ -516,16 +516,16 @@ Iowa City, IA 52242</p>
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -898,37 +898,33 @@ Iowa City, IA 52242</p>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Personal Email: <span class="co">[</span><span class="ot">madeline-metz@uiowa.edu</span><span class="co">](mailto:madeline-metz@uiowa.edu)</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>**Graduate Students**\</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Jordan Harris, M.A.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/jordan-harris)</span>\</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Zachary Demko, M.A.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko)</span>\</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Office: 109 Spence Labs (SLP)\</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">jordan-l-harris@uiowa.edu</span><span class="co">](mailto:jordan-l-harris@uiowa.edu)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">zachary-demko@uiowa.edu</span><span class="co">](mailto:zachary-demko@uiowa.edu)</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Alexis Hosch, M.A.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/alexis-hosch)</span>\</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Office: 109 Spence Labs (SLP)\</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">alexis-hosch@uiowa.edu</span><span class="co">](mailto:alexis-hosch@uiowa.edu)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Megan Schumer, B.S.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/megan-schumer)</span>\</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Office: 119 Spence Labs (SLP)\</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">megan-schumer@uiowa.edu</span><span class="co">](mailto:megan-schumer@uiowa.edu)</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Zachary Demko, M.A.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/zachary-demko)</span>\</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Nour Kanaan, B.S.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/nour-kanaan)</span>\</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Office: 119 Spence Labs (SLP)\</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">zachary-demko@uiowa.edu</span><span class="co">](mailto:zachary-demko@uiowa.edu)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">nour-kanaan@uiowa.edu</span><span class="co">](mailto:nour-kanaan@uiowa.edu)</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Megan Schumer, B.S.</span><span class="co">](https://developmental-psychopathology.lab.uiowa.edu/people/megan-schumer)</span>\</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Office: 119 Spence Labs (SLP)\</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Email: <span class="co">[</span><span class="ot">megan-schumer@uiowa.edu</span><span class="co">](mailto:megan-schumer@uiowa.edu)</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>**Location**:</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Developmental Psychopathology Lab\</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>Spence Labs 109–119\</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>308 East Iowa Avenue\</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>University of Iowa\</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Iowa City, IA 52242</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>**Location**:</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>Developmental Psychopathology Lab\</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Spence Labs 109–119\</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>308 East Iowa Avenue\</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>University of Iowa\</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Iowa City, IA 52242</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>**Lab Email**: <span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span>\</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>**Website**: <span class="ot">&lt;https://developmental-psychopathology.lab.uiowa.edu&gt;</span>\</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>**Social Media**:</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>**Lab Email**: <span class="co">[</span><span class="ot">devpsy-lab@uiowa.edu</span><span class="co">](mailto:devpsy-lab@uiowa.edu)</span>\</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>**Website**: <span class="ot">&lt;https://developmental-psychopathology.lab.uiowa.edu&gt;</span>\</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>**Social Media**:</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Facebook: <span class="ot">&lt;https://www.facebook.com/DevPsyLab&gt;</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Twitter: <span class="ot">&lt;https://twitter.com/devpsylab&gt;</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Instagram: <span class="ot">&lt;https://www.instagram.com/devpsylab&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Facebook: <span class="ot">&lt;https://www.facebook.com/DevPsyLab&gt;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Twitter: <span class="ot">&lt;https://twitter.com/devpsylab&gt;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Instagram: <span class="ot">&lt;https://www.instagram.com/devpsylab&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
