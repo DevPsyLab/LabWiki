@@ -211,7 +211,7 @@ We, as a lab, value and strive to advance the mission of [open science](https://
 As such, all lab members are expected to conduct research transparently and to promote reproducibility.
 This includes, but is not limited to, pre- or co-registering studies, sharing analysis scripts and data, using version control (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
 We use GitLab for version control.
-Our lab's template for GitLab repositories can be found here: <https://research-git.uiowa.edu/PetersenLab/Template>.
+Our lab's template for GitLab (and GitHub) repositories can be found here[^2]: <https://research-git.uiowa.edu/PetersenLab/Template>.
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^2]: <https://osf.io/4w9sv>.
 Follow our [lab's guide for open science](openScience.qmd).
 

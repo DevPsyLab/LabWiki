@@ -65,7 +65,7 @@ The Data Dictionary should have the following columns:
 - Description
     - conceptual description of the variable
 - Definition
-    - definitions of abbreviations, conceptual defintions of terms, mathematical definitions of how a variable is calculated, etc.
+    - definitions of abbreviations, conceptual definitions of terms, mathematical definitions of how a variable is calculated, etc.
 - Notes
     - additional notes about the variable and how it is calculated
 - References
@@ -162,22 +162,26 @@ Our lab's template for GitLab repositories is located here[^1]: <https://researc
 When submitting a manuscript to a journal, also submit a preprint to [PsyArXiv](https://psyarxiv.com).
 Combine the supplemental material and manuscript into one PDF file when posting.
 
-# OSF {#sec-osf}
+# Services {#sec-services}
 
-The [Open Science Framework](https://osf.io) (OSF) is a website for hosting pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
-For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen.
+## OSF {#sec-osf}
+
+The [Open Science Framework](https://osf.io) (OSF) is a website for hosting pre-registrations—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
+<!-- For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen. -->
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: <https://osf.io/4w9sv>.
 
-## Components {#sec-components}
+### Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}
 
-Create a component in the OSF project repository for the following components:
+With your project open, go to Settings (top-right) → View-Only Links → Add.
+Then check "Anonymize".
+Then you can share that URL.
+For detailed instructions, see here: <https://help.osf.io/article/201-create-a-view-only-link-for-a-project> (archived at <https://perma.cc/AGJ9-V487>)
 
-- Pre-registration (or Co-registration)
-- Data
-- Data Dictionary
-- Analysis Code
-- Research Materials
-- Preprint
+## GitHub {#sec-github}
+
+GitHub is a website for hosting and sharing pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
+For each paper project, create a new repository on GitHub and add the relevant contributors, including Dr. Petersen.
+Our lab's template for projects on GitHub can be found here[^1]: <https://research-git.uiowa.edu/PetersenLab/Template>.
 
 ### Pre-registration {#sec-osfPreregistration}
 
@@ -189,7 +193,7 @@ For any variables that have participant-identifying information, make sure to re
 To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
 To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
 
-<https://devpsylab.github.io/DataAnalysis/osf.html#sec-anonymizedID>
+<https://devpsylab.github.io/DataAnalysis/openScience.html#sec-anonymizedID>
 
 ### Data Dictionary {#sec-osfDataDictionary}
 
@@ -203,12 +207,9 @@ The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
 ### Preprint {#sec-osfPreprint}
 
-## Create Anonymous View-Only Links for Anonymous Peer Review {#sec-anonymousViewOnlyLink}
+## Zenodo {#sec-zenodo}
 
-With your project open, go to Settings (top-right) → View-Only Links → Add.
-Then check "Anonymize".
-Then you can share that URL.
-For detailed instructions, see here: <https://help.osf.io/article/201-create-a-view-only-link-for-a-project> (archived at <https://perma.cc/AGJ9-V487>)
+For instructions how to share and preserve research materials and code via GitHub with a DOI, see here: <https://www.lib.uiowa.edu/data/share-and-preserve-your-code/> (archived at: <https://perma.cc/ND4B-W2JF>).
 
 # Manuscript Submission to a Journal {#sec-journal}
 
@@ -231,11 +232,11 @@ In the preprint submission, use the general OSF links (not the [anonymous view-o
 When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
-1. Make the OSF repo public and [create a DOI link](https://help.osf.io/article/220-create-dois) for the repository that can be used for citing it
-1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
+1. Make the GitHub repo public and [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
+1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public GitHub link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
-    We are required to report published papers to funding agences.
-1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public OSF link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
+    We are required to report published papers to funding agencies.
+1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public GitHub link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
 
 # Adapting Open Science to Longitudinal Research {#sec-longitudinal}
 
