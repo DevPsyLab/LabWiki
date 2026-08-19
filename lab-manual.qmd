@@ -688,7 +688,7 @@ All Discord communication should be in team-facing channels so others can benefi
 If you need to communicate privately with the Lab Coordinator or Dr. Petersen, please use email (see the section on [Lab Communication](#sec-labCommunication) for more information)
 
 Discord channels are meant to organize conversations within broad overarching topics, but within each channel we want diverse conversation to span the gamut of each topic.
-For example, the `#coding` channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between.
+For example, the `#coding-scoring` channel should include conversations ranging from discrepancies between two coders on a given task, to technical discussions about Datavyu, to general questions to the Lab Coordinator and Dr. Petersen about the constructs measured in a given task, to all of the procedures, systems, and programs in between.
 Think of each channel as a "theme" rather than a specific "topic of conversation."
 You should simply choose the channel that seems most relevant to the question or comment you want to share and have at it!
 It is important to remember that, even though different team members are assigned different tasks within the lab, it does not mean that it is any less important for the whole team to stay informed about the general projects of the lab.
