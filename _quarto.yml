@@ -51,7 +51,7 @@ website:
           href: ai-policy.qmd
         - text: Data Analysis Guides
           href: https://devpsylab.github.io/DataAnalysis
-        - text: Honors Projects
+        - text: Independent Projects and Honors Projects
           href: honors.qmd
         - text: Mediation and Moderation
           href: mediationModeration.qmd

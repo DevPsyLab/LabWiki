@@ -1,20 +1,6 @@
 ---
-title: "Honors In Psychology: Expectations and Resources"
+title: "Independent Projects and Honors Projects: Expectations and Resources"
 ---
-
-# Independent Projects {#sec-independentProjects}
-
-Anyone in the lab is able (and encouraged!) to pursue an independent project—or a collaborative project with others, as long as they are on the IRB for that project and are meeting their regular lab expectations.
-You are encouraged to think about what research questions you have, what you are curious about, and what you want to know the answer to.
-If you are unsure what are the kinds of questions you could ask, you are encouraged to examine prior [lab publications](https://developmental-psychopathology.lab.uiowa.edu/publications) and prior Honors theses by students in the lab (located at the following location on the lab drive: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\`).
-You may also meet with other members of the lab, including undergraduate RAs, graduate students, lab staff, and Dr. Petersen, to hone your research question(s) and hypotheses, to learn how to conduct and interpret the analyses, and to learn how to write about/present your findings, etc.
-Note: work related to independent projects is expected to take place \*outside\* of your regular 10 hours in the lab.
-
-If you are interested, you may pursue an Honors project and thesis, as long as you have a full year available (and the time necessary) to conduct the project and you meet the other expectations for Honors projects described [here](#sec-expectations-thesis).
-However, you may also pursue an independent project without pursuing an Honors project/thesis.
-Regardless of which path your pursue, you are encouraged to present your findings at the UI Undergraduate Research Festival or other [conferences](#sec-conferences).
-
-Please read all of the sections below; they provide resources to help you succeed in your independent project and provide important expectations regarding data confidentiality etc.
 
 # Overview of Honors Options {#sec-options}
 
@@ -26,9 +12,7 @@ Because the non-thesis capstones requires additional coursework, students may pu
 Please meet with Dr. Petersen to help decide which might make the most sense given your goals.
 You are also encouraged to meet with the Lab Coordinator and graduate students.
 
-# Expectations {#sec-expectations}
-
-## Non-Thesis Honors {#sec-expectations-nonThesis}
+# Non-Thesis Honors {#sec-expectations-nonThesis}
 
 If you are interested in conducting a non-thesis Honors, it is your responsibility to contact Dr. Petersen.
 You are expected to send Dr. Petersen a draft of the Pre-Launch Agreement for approval, and to incorporate any edits/feedback from Dr. Petersen before submitting.
@@ -39,7 +23,21 @@ Dr. Petersen's decision whether to approve your proposal will depend on factors 
 You are expected to follow the Department requirements for Honors in Psychology, including meeting all deadlines:
 <https://psychology.uiowa.edu/undergraduate/honors-psychology>
 
-## Honors Thesis {#sec-expectations-thesis}
+# Independent Projects {#sec-independentProjects}
+
+Anyone in the lab is able (and encouraged!) to pursue an independent project—or a collaborative project with others, as long as they are on the IRB for that project and are meeting their regular lab expectations.
+You are encouraged to think about what research questions you have, what you are curious about, and what you want to know the answer to.
+If you are unsure what are the kinds of questions you could ask, you are encouraged to examine prior [lab publications](https://developmental-psychopathology.lab.uiowa.edu/publications) and prior Honors theses by students in the lab (located at the following location on the lab drive: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\`).
+You may also meet with other members of the lab, including undergraduate RAs, graduate students, lab staff, and Dr. Petersen, to hone your research question(s) and hypotheses, to learn how to conduct and interpret the analyses, and to learn how to write about/present your findings, etc.
+Note: work related to independent projects is expected to take place \*outside\* of your regular 10 hours in the lab.
+
+If you are interested, you may pursue an <u>Honors project and thesis</u>, as long as you have a full year available (and the time necessary) to conduct the project and you meet the other expectations for Honors projects described [here](#sec-expectations-thesis).
+However, you may also pursue an <u>independent poster project</u> without pursuing an Honors project/thesis.
+Regardless of which path your pursue, you are encouraged to present your findings at the UI Undergraduate Research Festival or other [conferences](#sec-conferences).
+
+Please read all of the sections below; they provide resources to help you succeed in your independent project and provide important expectations regarding data confidentiality etc.
+
+## Honors Project/Thesis {#sec-expectations-thesis}
 
 The Honors Thesis process is (at least) a year-long process (including summer) that must be initiated in collaboration with Dr. Petersen.
 During this process, you are encouraged to register for PSY:4990 or HONR:4990 (*Honors Thesis or Project*) to account for the time commitment this project requires.
@@ -80,6 +78,15 @@ You should work with your committee to schedule your thesis defense.
 Your defense should take place no later than Finals week so you can get Honors credit when you graduate etc.
 You must send the completed final draft of your thesis to both Dr. Petersen and the second reader at least one week prior to your defense.
 Read the Cover Page Instructions for how to create your cover page, what you need to have signed at your defense, and what you need to submit.
+
+## Independent Research Projects {#sec-expectations-posterProject}
+
+Students may also pursue an independent research project (including posters and presentations).
+Unlike Honors Projects, the timeline for an independent research project is determined by the student.
+Students may pursue independent research projects individually or in groups under the mentorship of graduate students, lab staff, or Dr. Petersen.
+Work related to an independent research project is expected to take place outside of your regular 10 hours in the lab.
+You will spend time conducting a literature review, formulating a research question, performing data analysis, interpreting your results, and designing your poster/presentation.
+
 
 # Resources {#sec-resources}
 
@@ -126,6 +133,20 @@ Please talk with Dr. Petersen if these resources would be a financial barrier.
 
 Before you meet with Dr. Petersen, send Dr. Petersen a draft of your pre-launch agreement form.
 
+## Formulating a Research Question {#sec-researchQuestion}
+
+When deciding what topic you want to research for an independent project, you should consider what you are curious about and then narrow down the scope of your topic.
+Consider some of the following guiding questions:
+
+- What **population** are you interested in learning about?
+- Are you interested in **mechanisms** that explain development? (*mediation*)
+- What are potential causes or effects of a behavior/environmental factor?
+- Are you interested in associations over time (i.e. longitudinal questions)?
+- What is already known on the topic, and what is missing from existing literature?
+- Does an effect depend on another variable? (*moderation*)
+
+You can explore your topic and formulate a more focused research question by [accessing research articles](#sec-articles) and conducting a literature review.
+
 ## Honors Thesis {#sec-getstarted-thesis}
 
 Before you meet with Dr. Petersen to come up with a thesis idea, (1) think about what you would like to study, (2) begin to read up on it, and (3) send Dr. Petersen a short document (1–2 paragraphs) describing the following:
@@ -141,6 +162,17 @@ Do not spend too much time on the preliminary document, because it will importan
 Following the steps above will help structure your conversation with Dr. Petersen in the most efficient way.
 
 In addition, send Dr. Petersen a draft of your pre-launch agreement form before you meet with him.
+
+## Independent Poster Projects {#sec-getStarted-posterProjects}
+
+To get started on an independent poster/presentation project, (1) think about what you would like to study, (2) begin to read up on it, and (3) take preliminary notes on:
+
+a) what you are interested in studying
+b) why you are interested in studying it
+c) what you have learned in doing reading on the topic
+d) what specific research question(s) you have
+
+Then, set up a meeting with graduate students or lab staff to discuss your idea and next steps.
 
 # Accessing the Lab Drive {#sec-labdrive}
 
@@ -174,10 +206,15 @@ For instance, here is a search for the journal `Developmental Neuropsychology`:\
 
 If the university does not have access to the journal, you can access the PDF of any article, book chapter, or even the inter-library loan of any book through the [UI Document Delivery System](https://uiowa-illiad-oclc-org.proxy.lib.uiowa.edu/illiad/illiad.dll).
 
-# Working on Your Thesis {#sec-working}
+## Reference Managers {sec-referenceManagers}
 
-The easiest way to work on your thesis is to work on it in the lab.
-If you must work on your thesis outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.qmd#sec-remoteAccess).
+As a UIowa student, you have access to several reference managers that will help you organize and keep track of research articles.
+You can learn more about reference managers available to you here: <https://guides.lib.uiowa.edu/citationmanagement>
+
+# Working on Your Project {#sec-working}
+
+The easiest way to work on your thesis or independent project is to work on it in the lab.
+If you must work on your thesis or independent project outside of the lab, you may either 1) [VPN into the lab drive](documentation-remote.html#vpn) or 2) ["remote in" to a lab computer](documentation-remote.qmd#sec-remoteAccess).
 For instructions how to do each, see the [RA Remote Participation page](documentation-remote.qmd).
 
 # Statistical Analysis Software {#sec-software}
@@ -223,7 +260,7 @@ Once you have selected your data file, click "Open."
 
 # Important {#sec-confidentiality}
 
-Lab data must remain on the lab drive.
+**Lab data must remain on the lab drive.**
 Please make sure NOT to move lab data off the lab drive or onto a personal computer.
 It is important that you do not save any visit videos or lab files of any kind to your personal computer, or take screenshots, Snapchats, etc. of any lab-related documents.
 
@@ -231,6 +268,13 @@ It is important that you do not save any visit videos or lab files of any kind t
 
 Make sure to follow the lab's [writing guidelines](writing.qmd).
 You are also encouraged to take advantage of the [UI Writing Center](https://writingcenter.uiowa.edu).
+
+# Poster Design
+
+UIowa has many resources available that can help you design an effective research poster.
+You can review the Design Center's poster guidelines here: <https://designcenter.uiowa.edu/creating-effective-posters>
+
+You can also access poster templates in the lab drive here: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Publications\Posters\Templates`
 
 # Presenting Work at Conferences {#sec-conferences}
 
