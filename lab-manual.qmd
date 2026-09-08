@@ -144,6 +144,10 @@ Students who wish to receive credit for time spent in the lab may register for c
 
 - Independent scientific research related to the field of neuroscience.
 
+"`BIOL:3999:01IND – Independent Research in Neuroscience`"
+
+- Independent scientific research related to the field of neuroscience, for neuroscience/biology majors.
+
 "[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)"
 
 - Individual research performed in conjunction with a faculty member's research.
@@ -152,14 +156,19 @@ Students who wish to receive credit for time spent in the lab may register for c
 
 - Supervised original project; leads to written thesis, oral defense.
 
+"`URES:3991 – Undergraduate Research and Creative Projects`"
+
+- A 0-hour and has no tuition or fees associated.
+It is recommended to enroll in `URES:3991` <u>during the academic year</u> when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
+
 "`URES:3992 – Undergraduate Research and Creative Projects`"
 
 - A 0-hour and has no tuition or fees associated.
-It is recommended to enroll in `URES:3992` when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
+It is recommended to enroll in `URES:3992` <u>during the summer</u> when you cannot take credit-bearing courses (e.g., if you are getting paid, if you do not have the ability to maintain a regular schedule, etc.).
 `URES:3992` is also useful for students in the **summer** so you do not have to pay the tuition and fees (which you will have to pay if you take a credit-bearing course).
 
-
-Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#sec-honorsCredit), "[`HONR:3994`](#sec-honorsCredit)". After two semesters in the lab, students are able to register for "`PSY:3995`".
+Generally, students enroll in "`PSY:3994`" or, if they want [Honors credit](#sec-honorsCredit), "[`HONR:3994`](#sec-honorsCredit)".
+After two semesters in the lab, students are able to register for "`PSY:3995`".
 
 Keep in mind that some courses differ in the way that they are graded.
 
@@ -176,7 +185,6 @@ Important note on registering for Pass/Fail credit:
 
 - A maximum of 15 P ("Pass") credits is accepted toward your bachelor's degree.
 - We recommend consulting with your advisor when deciding to register for Pass/Fail credit or a letter grade, and regarding which course designation to register for.
-
 
 ![PSY:3994 Step 1](images/psy3994_1.png)
 ![PSY:3994 Step 2](images/psy3994_2.png)
