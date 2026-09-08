@@ -148,6 +148,10 @@ Students who wish to receive credit for time spent in the lab may register for c
 
 - Independent scientific research related to the field of neuroscience, for neuroscience/biology majors.
 
+"`HHP:3994:0IND – Undergraduate Research`"
+
+- Laboratory research in health, human physiology, or related science fields.
+
 "[`HONR:3994:01IND – Honors Research Practicum`](#sec-honorsCredit)"
 
 - Individual research performed in conjunction with a faculty member's research.
