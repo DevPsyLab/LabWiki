@@ -721,6 +721,34 @@ The primary purpose of our Notion board is to have a shared space to organize on
 - RAs may use the `Personal Tasks` teamspace to keep track of their own to-do list related to lab work
 - RAs may choose to keep track of their training progress in the `Training Progress` teamspace
 
+### Supervision of Coding & Scoring Teams {#sec-supervisingCodingScoring}
+
+The lab coordinator, lab staff, and graduate students will serve as supervisors for one or more coding/scoring tasks in the lab.
+The individual supervising the task will serve as the primary point of contact for the RA team assigned to the task.
+
+<u>Supervisor responsibilities:<u>
+
+- Maintain frequent communication with the RA team
+- Lead at least one formal check-in with the RA team at the beginning of the semester
+    - Check-in meetings should include:
+        - Review of task goals and progress
+        - Discussion of training for new coders/scorers
+        - Opportunity to address questions or concerns
+    - Additional check-in meetings may be necessary depending on the needs of the task
+    - Some tasks will require a meeting with Dr. Petersen in addition to routine check-in meetings
+- Establish reasonable expectations for task progress (e.g. number of videos coded/scored per week, end-of-semester goals, etc.)
+- Monitor task progress and provide feedback or guidance as needed
+- Assist with troubleshooting technical difficulties and conceptual challenges
+- Communicate any changes to task expectations, procedures, or priorities to the RA team
+
+<u>RA team responsibilities:<u>
+
+- Maintain frequent communication with the task supervisor
+- Come to task check-in meetings prepared with questions, examples, and progress updates
+- Work toward established task progress expectations and communicate with the supervisor if there are concerns about meeting those expectations
+- Attempt to troubleshoot technical or conceptual challenges within the team first before reaching out to the supervisor
+- Communicate questions or concerns to the supervisor when challenges cannot be resolved within the team 
+
 ### Social Media {#sec-socialMedia}
 
 The purpose of our social media pages is to inform the outside world of our research.
