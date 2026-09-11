@@ -726,7 +726,7 @@ The primary purpose of our Notion board is to have a shared space to organize on
 The lab coordinator, lab staff, and graduate students will serve as supervisors for one or more coding/scoring tasks in the lab.
 The individual supervising the task will serve as the primary point of contact for the RA team assigned to the task.
 
-<u>Supervisor responsibilities:<u>
+<u>Supervisor responsibilities:</u>
 
 - Maintain frequent communication with the RA team
 - Lead at least one formal check-in with the RA team at the beginning of the semester
@@ -741,7 +741,7 @@ The individual supervising the task will serve as the primary point of contact f
 - Assist with troubleshooting technical difficulties and conceptual challenges
 - Communicate any changes to task expectations, procedures, or priorities to the RA team
 
-<u>RA team responsibilities:<u>
+<u>RA team responsibilities:</u>
 
 - Maintain frequent communication with the task supervisor
 - Come to task check-in meetings prepared with questions, examples, and progress updates
