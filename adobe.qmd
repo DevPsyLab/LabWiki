@@ -515,6 +515,18 @@ if (v15 == 2) {
 event.value = total + total2 + total3 + total4 + total5 + total6 + total7 + total8 + total9 + total10 + total11 + total12 + total13 + total14 + total15
 ```
 
+## Set Order of Calculated Fields
+
+In order to ensure proper calculation after you have implemented a calculation script, you need to also check the calculation order.
+
+1. Open Prepare a Form in Adobe
+1. Click the three dots `...` next to `Fields`
+1. Click `Set field calculation order`
+1. Adjust the order of the calculated fields
+   - Individual column calculations should come BEFORE total point calculated fields and total score calculated fields
+
+![Calculation Order](images/calculationOrder.png)
+
 ## Creating Calculated Fields with Conditional Formatting
 
 For cases where a calculated total can change from a manually-input variable, an altered script must be used.
@@ -901,7 +913,7 @@ The conditional formatting calculation script features two major alterations:
       Which outcome is selected is dependent on the definition of `Y` in `if(v == Y){`.
       - Thus, for the example script above, if `v17 == Y1`, then the first outcome of "if `v1 == X2` then `total = 1`" will be the result, but if `v17` equals anything else besides `Y1`, then the second outcome of "if `v1 == X1` then `total = 1`" will be the result
       - The final result is conditional formatting as the calculated total for each trial of Variable X is ultimately dependent on the value of Variable Y
-   
+
 
 ## Conditional Formatting Calculation Script: An Example
 
