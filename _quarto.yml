@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Lab Wiki for the Developmental Psychopathology Lab"
+  site-url: https://devpsylab.github.io/LabWiki/
   repo-url: https://github.com/DevPsyLab/LabWiki
   repo-actions: [edit, source, issue]
   google-analytics: G-8JSDTYMH7P
