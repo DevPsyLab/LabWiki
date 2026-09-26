@@ -198,8 +198,8 @@ Where possible (e.g., when it does not violate copyright), we prefer to share re
 
 # Version Control {#sec-versionControl}
 
-We use [GitLab](https://research-git.uiowa.edu) for version control.
-See our [lab's guide for using GitLab](https://devpsylab.github.io/DataAnalysis/git.html).
+For projects involving human subjects data, we use the [UI Enterprise Instance of GitLab](https://research-git.uiowa.edu) for version control.
+See our [lab's guide for using git/GitLab](https://devpsylab.github.io/DataAnalysis/git.html).
 Our lab's template for GitLab repositories is located here[^1]: <https://research-git.uiowa.edu/PetersenLab/Template>.
 
 # Preprint {#sec-preprint}
@@ -221,7 +221,7 @@ Our lab's template for projects on the Open Science Framework (OSF) can be found
 With your project open, go to Settings (top-right) → View-Only Links → Add.
 Then check "Anonymize".
 Then you can share that URL.
-For detailed instructions, see here: <https://help.osf.io/article/201-create-a-view-only-link-for-a-project> (archived at <https://perma.cc/AGJ9-V487>)
+For detailed instructions, see here: <https://help.osf.io/article/201-create-a-view-only-link-for-a-project> (archived at <https://perma.cc/AGJ9-V487>).
 
 ## GitHub {#sec-github}
 
