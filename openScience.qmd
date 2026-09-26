@@ -30,12 +30,38 @@ Here are elements of a study that can be registered:
 When analysis decisions are contingent upon prior steps that may influence which decision to take, the analysis plan can include decision trees (e.g., if X, then Y; if A, then B).
 For example, you can specify how you would proceed if the measures do not demonstrate longitudinal factorial invariance, or how you would handle poorly fitting models.
 
-# Sharing Data, Analysis Scripts, and Research Materials {#sec-sharing}
+For templates of pre-registrations, see [here](https://help.osf.io/article/330-welcome-to-registrations#Select-a-Registration-Template-1g4YO) (archived at: <https://perma.cc/6DWT-YPXW>).
+For guidance on selecting a template, see [here](https://www.cos.io/blog/choosing-preregistration-template-guide-for-researchers) (archived at: <https://perma.cc/773X-F9H4>).
+When you have a pre-registration for a project, post it on one of the following services:
+
+- [Open Science Framework](#sec-osf) (OSF)
+    - either via their [registration platform](https://osf.io/registries/osf/new) or via a PDF of a Word document
+- In the [GitHub](#sec-github) repository associated with the project
+- [AsPredicted](https://aspredicted.org)
+- [PROSPERO](https://www.crd.york.ac.uk/prospero) (for systematic reviews)
+- [ClinicalTrials.gov](https://clinicaltrials.gov)
+
+We most commonly post pre-registrations on the [OSF](#sec-osf).
+
+# Sharing Data, Analysis Code, and Research Materials {#sec-sharing}
+
+## Data {#sec-data}
+
+When sharing data, make sure to share only <u>***deidentified***</u> data.
+For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.
+
+To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
+To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
+
+<https://devpsylab.github.io/DataAnalysis/openScience.html#sec-anonymizedID>
 
 ## Data Dictionary {#sec-dataDictionary}
 
 For each study, we create a Data Dictionary.
 A Data Dictionary is a metadata file that tells people the meaning of variables in the data file and how to interpret them.
+
+For each paper project, we export a `.csv` file with the subset of the Data Dictionary variables used for that specific paper.
+We upload that `.csv` file to the [GitHub](#sec-github) repository.
 
 ### Style Guide {#sec-styleGuide}
 
@@ -151,6 +177,25 @@ Measurement Units include:
 - percentile
 - item
 
+### Analysis Code {#sec-analysisCode}
+
+We can share analysis code for any text-based files, such as: 
+
+- `R`: `.R`, `.qmd`, `.rmd`
+- `Python`: `.py`, `.ipynb`
+- `MATLAB`: `.m`
+- `SPSS`: `.sps`
+
+When sharing analysis code, where possible, it is helpful to share computational notebooks—i.e., analysis code in line with output.
+That way, anyone can see what the output was of each line of code without having to run it themselves.
+For instance, it can be helpful to share [Quarto](https://quarto.org) (`.qmd`) documents and the associated `.html` file with the output inline.
+Our lab's template for Quarto documents is here[^1]: <https://research-git.uiowa.edu/PetersenLab/Template/-/blob/master/Analyses/quartoNotebook.qmd>.
+Make sure the computational notebook does not include participant-identifying information as output.
+
+### Research Materials {#sec-researchMaterials}
+
+Where possible (e.g., when it does not violate copyright), we prefer to share research materials (e.g., stimuli, tasks, procedure manuals, coding manuals, etc.).
+
 # Version Control {#sec-versionControl}
 
 We use [GitLab](https://research-git.uiowa.edu) for version control.
@@ -161,6 +206,7 @@ Our lab's template for GitLab repositories is located here[^1]: <https://researc
 
 When submitting a manuscript to a journal, also submit a preprint to [PsyArXiv](https://psyarxiv.com).
 Combine the supplemental material and manuscript into one PDF file when posting.
+When submitting the manuscript to the journal, make sure to indicate in the cover letter that the manuscript was posted as a preprint, and provide the link to the preprint.
 
 # Services {#sec-services}
 
@@ -186,43 +232,33 @@ The GitHub repository can be linked to [Zenodo](#sec-zenodo) to obtain a DOI, as
 The [Zenodo](#sec-zenodo) project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
 Individual files in GitHub repositories cannot exceed 100 MB in size.
 
-### Pre-Registration {#sec-preregistration}
+### Pre-Registration {#sec-githubPreregistration}
 
-For templates of pre-registrations, see [here](https://help.osf.io/article/330-welcome-to-registrations#Select-a-Registration-Template-1g4YO) (archived at: <https://perma.cc/6DWT-YPXW>).
-For guidance on selecting a template, see [here](https://www.cos.io/blog/choosing-preregistration-template-guide-for-researchers) (archived at: <https://perma.cc/773X-F9H4>).
-When you have a pre-registration for a project, post it on one of the following services:
+For information on posting a [pre-registration](#sec-preregistration), see [here](#sec-preregistration).
 
-- [Open Science Framework](#sec-osf) (OSF)
-    - either via their [registration platform](https://osf.io/registries/osf/new) or via a PDF of a Word document
-- In the [GitHub](#sec-github) repository associated with the project
-- [AsPredicted](https://aspredicted.org)
-- [PROSPERO](https://www.crd.york.ac.uk/prospero) (for systematic reviews)
-- [ClinicalTrials.gov](https://clinicaltrials.gov)
+### Data {#sec-githubData}
 
-### Data {#sec-data}
+For information on sharing [data](#sec-data), see [here](#sec-data).
 
-When sharing data, make sure to share only <u>***deidentified***</u> data.
-For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.
+### Data Dictionary {#sec-githubDataDictionary}
 
-To help protect participant anonymity, it is important to anonymize participant IDs so their data cannot be stitched together across papers.
-To anonymize participant IDs, use the following script and change the seed for every paper so that a given participant gets a different anonymized code each time.
-
-<https://devpsylab.github.io/DataAnalysis/openScience.html#sec-anonymizedID>
-
-### Data Dictionary {#sec-dataDictionary}
-
+For information on creating and sharing a [data dictionary](#sec-dataDictionary), see [here](#sec-dataDictionary).
 For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#sec-dataDictionary) variables used for that specific paper.
 We upload that `.csv` file to the [GitHub](#sec-github) repository.
 The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
-### Analysis Code {#sec-analysisCode}
+### Analysis Code {#sec-githubAnalysisCode}
 
-### Research Materials {#sec-researchMaterials}
+For information on sharing [analysis code](#sec-analysisCode), see [here](#sec-analysisCode).
 
-### Preprint {#sec-preprint}
+### Research Materials {#sec-githubResearchMaterials}
 
-Before submitting a manuscript, we submit it as a preprint on [PsyArXiv](http://www.psyarxiv.com).
-When submitting the manuscript to the journal, make sure to indicate in the cover letter that the manuscript was posted as a preprint, and provide the link to the preprint.
+For information on sharing [research materials](#sec-researchMaterials), see [here](#sec-researchMaterials).
+
+### Preprint {#sec-githubPreprint}
+
+For information on sharing [preprints](#sec-researchMaterials), see [here](#sec-preprint).
+A preprint can also be included in a [GitHub](#sec-github) repository.
 
 ## Zenodo {#sec-zenodo}
 
