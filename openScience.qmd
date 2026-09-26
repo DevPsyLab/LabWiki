@@ -166,7 +166,7 @@ Combine the supplemental material and manuscript into one PDF file when posting.
 
 ## OSF {#sec-osf}
 
-The [Open Science Framework](https://osf.io) (OSF) is a website for hosting pre-registrations—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
+The [Open Science Framework](https://osf.io) (OSF) is a website for hosting [pre-registrations](#sec-osfPreregistration)—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
 <!-- For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen. -->
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: <https://osf.io/4w9sv>.
 
@@ -182,10 +182,22 @@ For detailed instructions, see here: <https://help.osf.io/article/201-create-a-v
 GitHub is a website for hosting and sharing pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
 For each paper project, create a new repository on GitHub and add the relevant contributors, including Dr. Petersen.
 Our lab's template for projects on GitHub can be found here: <https://github.com/DevPsyLab/ZenodoTemplate>.
-The GitHub repository can be linked to Zenodo to obtain a DOI.
-The Zenodo project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
+The GitHub repository can be linked to [Zenodo](#sec-zenodo) to obtain a DOI.
+The [Zenodo](#sec-zenodo) project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
+Individual files in GitHub repositories cannot exceed 100 MB in size.
 
-### Pre-registration {#sec-osfPreregistration}
+### Pre-Registration {#sec-osfPreregistration}
+
+For templates of pre-registrations, see [here](https://help.osf.io/article/330-welcome-to-registrations#Select-a-Registration-Template-1g4YO) (archived at: <https://perma.cc/6DWT-YPXW>).
+For guidance on selecting a template, see [here](https://www.cos.io/blog/choosing-preregistration-template-guide-for-researchers) (archived at: <https://perma.cc/773X-F9H4>).
+When you have a pre-registration for a project, post it on one of the following services:
+
+- [Open Science Framework](#sec-osf) (OSF)
+    - either via their [registration platform](https://osf.io/registries/osf/new) or via a PDF of a Word document
+- In the [GitHub](#sec-github) repository associated with the project
+- [AsPredicted](https://aspredicted.org)
+- [PROSPERO](https://www.crd.york.ac.uk/prospero) (for systematic reviews)
+- [ClinicalTrials.gov](https://clinicaltrials.gov)
 
 ### Data {#sec-osfData}
 
@@ -211,8 +223,11 @@ The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
 ## Zenodo {#sec-zenodo}
 
-We use Zenodo to create a DOI for GitHub repositories.
-For instructions how to share and preserve research materials and code via GitHub with a DOI, see here: <https://www.lib.uiowa.edu/data/share-and-preserve-your-code/> (archived at: <https://perma.cc/ND4B-W2JF>).
+We use Zenodo to create a DOI for [GitHub](#sec-github) repositories.
+For instructions how to share and preserve research materials and code via [GitHub](#sec-github) with a DOI, see here: <https://www.lib.uiowa.edu/data/share-and-preserve-your-code/> (archived at: <https://perma.cc/ND4B-W2JF>).
+If you upload files manually to a Zenodo record (rather than via [GitHub](#sec-github) integration), Zenodo allows up to 100 files per record.
+If you have more than 100 files, you can either put them in a zip file or can add them by connecting Zenodo to a [GitHub](#sec-github) repo.
+Collectively, the files in a Zenodo record cannot exceed 50 GB.
 
 # Manuscript Submission to a Journal {#sec-journal}
 
@@ -235,11 +250,11 @@ In the preprint submission, use the general OSF links (not the [anonymous view-o
 When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
-1. Make the GitHub repo public and [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
-1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public GitHub link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
+1. Make the [GitHub](#sec-github) repo public and [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
+1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github) link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agencies.
-1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public GitHub link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
+1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github) link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
 
 # Adapting Open Science to Longitudinal Research {#sec-longitudinal}
 
