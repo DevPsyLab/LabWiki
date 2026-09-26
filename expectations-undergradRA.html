@@ -642,7 +642,7 @@ F: &lt;= 50 attendance, or frequent late cancellations for visits for which you 
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/DevPsyLab\.github\.io\/LabWiki\/");
+        var filterRegex = new RegExp("https:\/\/devpsylab\.github\.io\/LabWiki\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

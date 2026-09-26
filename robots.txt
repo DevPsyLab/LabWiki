@@ -1,1 +1,1 @@
-Sitemap: https://DevPsyLab.github.io/LabWiki/sitemap.xml
+Sitemap: https://devpsylab.github.io/LabWiki/sitemap.xml
