@@ -166,7 +166,7 @@ Combine the supplemental material and manuscript into one PDF file when posting.
 
 ## OSF {#sec-osf}
 
-The [Open Science Framework](https://osf.io) (OSF) is a website for hosting [pre-registrations](#sec-osfPreregistration)—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
+The [Open Science Framework](https://osf.io) (OSF) is a website for hosting [pre-registrations](#sec-preregistration)—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
 <!-- For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen. -->
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: <https://osf.io/4w9sv>.
 
@@ -182,11 +182,11 @@ For detailed instructions, see here: <https://help.osf.io/article/201-create-a-v
 GitHub is a website for hosting and sharing pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
 For each paper project, create a new repository on GitHub and add the relevant contributors, including Dr. Petersen.
 Our lab's template for projects on GitHub can be found here: <https://github.com/DevPsyLab/ZenodoTemplate>.
-The GitHub repository can be linked to [Zenodo](#sec-zenodo) to obtain a DOI.
+The GitHub repository can be linked to [Zenodo](#sec-zenodo) to obtain a DOI, as described [here](#sec-zenodo).
 The [Zenodo](#sec-zenodo) project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
 Individual files in GitHub repositories cannot exceed 100 MB in size.
 
-### Pre-Registration {#sec-osfPreregistration}
+### Pre-Registration {#sec-preregistration}
 
 For templates of pre-registrations, see [here](https://help.osf.io/article/330-welcome-to-registrations#Select-a-Registration-Template-1g4YO) (archived at: <https://perma.cc/6DWT-YPXW>).
 For guidance on selecting a template, see [here](https://www.cos.io/blog/choosing-preregistration-template-guide-for-researchers) (archived at: <https://perma.cc/773X-F9H4>).
@@ -199,7 +199,7 @@ When you have a pre-registration for a project, post it on one of the following 
 - [PROSPERO](https://www.crd.york.ac.uk/prospero) (for systematic reviews)
 - [ClinicalTrials.gov](https://clinicaltrials.gov)
 
-### Data {#sec-osfData}
+### Data {#sec-data}
 
 When sharing data, make sure to share only <u>***deidentified***</u> data.
 For any variables that have participant-identifying information, make sure to remove them from the data object before sharing.
@@ -209,17 +209,20 @@ To anonymize participant IDs, use the following script and change the seed for e
 
 <https://devpsylab.github.io/DataAnalysis/openScience.html#sec-anonymizedID>
 
-### Data Dictionary {#sec-osfDataDictionary}
+### Data Dictionary {#sec-dataDictionary}
 
 For each paper project, we export a `.csv` file with the subset of the [Data Dictionary](#sec-dataDictionary) variables used for that specific paper.
-We upload that `.csv` file to the OSF.
+We upload that `.csv` file to the [GitHub](#sec-github) repository.
 The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
-### Analysis Code {#sec-osfAnalysisCode}
+### Analysis Code {#sec-analysisCode}
 
-### Research Materials {#sec-osfMaterials}
+### Research Materials {#sec-researchMaterials}
 
-### Preprint {#sec-osfPreprint}
+### Preprint {#sec-preprint}
+
+Before submitting a manuscript, we submit it as a preprint on [PsyArXiv](http://www.psyarxiv.com).
+When submitting the manuscript to the journal, make sure to indicate in the cover letter that the manuscript was posted as a preprint, and provide the link to the preprint.
 
 ## Zenodo {#sec-zenodo}
 
@@ -231,11 +234,11 @@ Collectively, the files in a Zenodo record cannot exceed 50 GB.
 
 # Manuscript Submission to a Journal {#sec-journal}
 
-Before submitting a manuscript to a journal, make sure to post the relevant materials on the [OSF](#sec-osf), as described [here](#sec-osf), and post the preprint, as described [here](#sec-preprint).
+Before submitting a manuscript to a journal, make sure the [pre-registration](#sec-preregistration) is posted and make sure to post the relevant materials on a [GitHub](#sec-github), as described [here](#sec-github), and post the [preprint](#sec-preprint), as described [here](#sec-preprint).
 When preparing a manuscript for submission to a journal, make sure to follow the Author Guidelines for each journal.
 After finalizing the manuscript in accordance with journal guidelines and when you are ready to submit the paper to the journal (but before submission), post the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
-Include the link to the preprint in the cover letter to the journal.
-In the method section and on the title page, include the relevant OSF links to the pre-registration, data, data dictionary, analysis code, computational notebook, and research materials, etc.
+Include the link to the [preprint](#sec-preprint) in the cover letter to the journal.
+In the Method section and on the title page, include the relevant links to the [pre-registration](#sec-preregistration), [data](#sec-data), [data dictionary](#sec-dataDictionary), [analysis code](#sec-analysisCode), computational notebook, and [research materials](#sec-researchMaterials), etc.
 For example:
 
 > Hypotheses and measures for the School Readiness Study were pre-registered: <https://osf.io/jzxb8>.
@@ -243,18 +246,18 @@ For example:
 > Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: <https://osf.io/zs2bn>.
 
 In the manuscript submission, create and use [anonymous view-only OSF links](#sec-anonymousViewOnlyLink) (for blind review).
-In the preprint submission, use the general OSF links (not the [anonymous view-only OSF links](#sec-anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
+In the [preprint](#sec-preprint) submission, use the general [OSF](#sec-osf)/[Zenodo](#sec-zenodo)/[GitHub](#sec-github) links (not the [anonymous view-only OSF links](#sec-anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
 
 # When the Manuscript is Accepted for Publication {#sec-accepted}
 
 When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
-1. Make the [GitHub](#sec-github) repo public and [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
+1. Make the [GitHub](#sec-github) repo public and link the repository to [Zenodo](#sec-zenodo) to [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
 1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github) link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agencies.
-1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github) link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
+1. Make sure the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github)/[Zenodo](#sec-zenodo) link; removing any highlighting or tracked changes) is uploaded as an updated version of the [preprint](#sec-preprint) on [PsyArXiv](https://psyarxiv.com).
 
 # Adapting Open Science to Longitudinal Research {#sec-longitudinal}
 
