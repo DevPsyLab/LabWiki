@@ -181,7 +181,9 @@ For detailed instructions, see here: <https://help.osf.io/article/201-create-a-v
 
 GitHub is a website for hosting and sharing pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
 For each paper project, create a new repository on GitHub and add the relevant contributors, including Dr. Petersen.
-Our lab's template for projects on GitHub can be found here[^1]: <https://research-git.uiowa.edu/PetersenLab/Template>.
+Our lab's template for projects on GitHub can be found here: <https://github.com/DevPsyLab/ZenodoTemplate>.
+The GitHub repository can be linked to Zenodo to obtain a DOI.
+The Zenodo project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
 
 ### Pre-registration {#sec-osfPreregistration}
 
@@ -209,6 +211,7 @@ The formatting of the Data Dictionary is described [here](#sec-dataDictionary).
 
 ## Zenodo {#sec-zenodo}
 
+We use Zenodo to create a DOI for GitHub repositories.
 For instructions how to share and preserve research materials and code via GitHub with a DOI, see here: <https://www.lib.uiowa.edu/data/share-and-preserve-your-code/> (archived at: <https://perma.cc/ND4B-W2JF>).
 
 # Manuscript Submission to a Journal {#sec-journal}
