@@ -725,7 +725,7 @@
     "href": "openScience.html#sec-osf",
     "title": "Open Science",
     "section": "6.1 OSF",
-    "text": "6.1 OSF\nThe Open Science Framework (OSF) is a website for hosting pre-registrations—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.  Our lab’s template for projects on the Open Science Framework (OSF) can be found here4: https://osf.io/4w9sv.\n\n6.1.1 Create Anonymous View-Only Links for Anonymous Peer Review\nWith your project open, go to Settings (top-right) → View-Only Links → Add. Then check “Anonymize”. Then you can share that URL. For detailed instructions, see here: https://help.osf.io/article/201-create-a-view-only-link-for-a-project (archived at https://perma.cc/AGJ9-V487)"
+    "text": "6.1 OSF\nThe Open Science Framework (OSF) is a website for hosting pre-registrations—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.  Our lab’s template for projects on the Open Science Framework (OSF) can be found here4: https://osf.io/4w9sv.\n\n6.1.1 Create Anonymous View-Only Links for Anonymous Peer Review\nWith your project open, go to Settings (top-right) → View-Only Links → Add. Then check “Anonymize”. Then you can share that URL. For detailed instructions, see here: https://help.osf.io/article/201-create-a-view-only-link-for-a-project (archived at https://perma.cc/AGJ9-V487)."
   },
   {
     "objectID": "openScience.html#sec-github",
