@@ -212,7 +212,7 @@ When submitting the manuscript to the journal, make sure to indicate in the cove
 
 ## OSF {#sec-osf}
 
-The [Open Science Framework](https://osf.io) (OSF) is a website for hosting [pre-registrations](#sec-preregistration)—and formerly data, analysis code, research-related materials, and pre-prints—to improve replicability and reproducibility of findings.
+The [Open Science Framework](https://osf.io) (OSF) is a website for hosting [pre-registrations](#sec-preregistration)—and formerly data, analysis code, research-related materials, and preprints—to improve replicability and reproducibility of findings.
 <!-- For each paper project, create a new repository on the OSF and add the relevant contributors, including Dr. Petersen. -->
 Our lab's template for projects on the Open Science Framework (OSF) can be found here[^1]: <https://osf.io/4w9sv>.
 
@@ -225,10 +225,14 @@ For detailed instructions, see here: <https://help.osf.io/article/201-create-a-v
 
 ## GitHub {#sec-github}
 
-GitHub is a website for hosting and sharing pre-registrations, data, analysis code, research-related materials, and pre-prints to improve replicability and reproducibility of findings.
+GitHub is a website for hosting and sharing files, and can be used to share [pre-registrations](#sec-preregistration), (deidentified) [data](#sec-data), [analysis code](#sec-analysisCode), [research-related materials](#sec-researchMaterials), and [preprints](#sec-preprint) to improve replicability and reproducibility of findings.
+For projects involving human subjects data, we use the [UI Enterprise Instance of GitLab](https://research-git.uiowa.edu) (not GitHub) for [version control](#sec-versionControl), as described in @sec-versionControl.
+Then, for sharing (deidentified) [data](#sec-data) (and [data dictionary](#sec-dataDictionary)), [analysis code](#sec-analysisCode) (and computational notebooks), [research-related materials](#sec-researchMaterials), and [preprints](#sec-preprint), we use GitHub paired with [Zenodo](#sec-zenodo) (to obtain a persistent link via DOI).
+That is, you will copy deidentified [data](#sec-data) and [analysis code](#sec-analysisCode) from the GitLab repository to a new GitHub repository (along with adding a [data dictionary](#sec-dataDictionary), other [research-related materials], [preprints](#sec-preprint), etc.), for purposes of sharing.
+
 For each paper project, create a new repository on GitHub and add the relevant contributors, including Dr. Petersen.
 Our lab's template for projects on GitHub can be found here: <https://github.com/DevPsyLab/ZenodoTemplate>.
-The GitHub repository can be linked to [Zenodo](#sec-zenodo) to obtain a DOI, as described [here](#sec-zenodo).
+When we are ready to share the files (which may depend on whether the journal uses a blind review process), make the GitHub repository public and link the GitHub repository to [Zenodo](#sec-zenodo) to obtain a DOI, as described [here](#sec-zenodo).
 The [Zenodo](#sec-zenodo) project for the lab's template project is here: <https://doi.org/10.5281/zenodo.22967623>.
 Individual files in GitHub repositories cannot exceed 100 MB in size.
 
@@ -282,14 +286,14 @@ For example:
 > Data files, a data dictionary, analysis scripts, and a computational notebook for the present study are published online: <https://osf.io/zs2bn>.
 
 In the manuscript submission, create and use [anonymous view-only OSF links](#sec-anonymousViewOnlyLink) (for blind review).
-In the [preprint](#sec-preprint) submission, use the general [OSF](#sec-osf)/[Zenodo](#sec-zenodo)/[GitHub](#sec-github) links (not the [anonymous view-only OSF links](#sec-anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repo public).
+In the [preprint](#sec-preprint) submission, use the general [OSF](#sec-osf)/[Zenodo](#sec-zenodo)/[GitHub](#sec-github) links (not the [anonymous view-only OSF links](#sec-anonymousViewOnlyLink)) that will become viewable when the manuscript is accepted for publication (i.e., when you make the OSF repository public).
 
 # When the Manuscript is Accepted for Publication {#sec-accepted}
 
 When the manuscript is accepted for publication:
 
 1. Let all of the authors know, and send them the full, (in-press) APA-style reference
-1. Make the [GitHub](#sec-github) repo public and link the repository to [Zenodo](#sec-zenodo) to [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
+1. Make the [GitHub](#sec-github) repository public and link the repository to [Zenodo](#sec-zenodo) to [create a DOI link](https://www.lib.uiowa.edu/data/share-and-preserve-your-code/) (archived at: <https://perma.cc/ND4B-W2JF>) for the repository that can be used for citing it
 1. Submit the finalized, unblinded manuscript (and any tables, figures, and the supplement; with the public [GitHub](#sec-github) link; removing any highlighting or tracked changes) to the NIHMS system: <https://www.nihms.nih.gov/submission/create/>
     - After you submit the manuscript to NIHMS, send Dr. Petersen the NIHMS ID for the submission.
     We are required to report published papers to funding agencies.
