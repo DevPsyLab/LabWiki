@@ -704,7 +704,7 @@
     "href": "openScience.html",
     "title": "Open Science",
     "section": "",
-    "text": "We, as a lab, value and strive to advance the mission of open science to improve the accessibility, reproducibility, and replicability of science. As such, all lab members are expected to conduct research transparently and to promote reproducibility. This includes, but is not limited to, pre- or co-registering studies, sharing analysis scripts and data, using version control (GitLab), submitting preprints when submitting a manuscript to a journal, and providing support for other labs’ attempts to replicate and reproduce our findings. Our lab’s template for projects on the Open Science Framework (OSF) is located here1: https://osf.io/4w9sv.\nHere is a shcematic depicting the overall process before and after writing a manuscript:"
+    "text": "We, as a lab, value and strive to advance the mission of open science to improve the accessibility, reproducibility, and replicability of science. As such, all lab members are expected to conduct research transparently and to promote reproducibility. This includes, but is not limited to, pre- or co-registering studies, sharing analysis scripts and data, using version control (GitLab), submitting preprints when submitting a manuscript to a journal, and providing support for other labs’ attempts to replicate and reproduce our findings. Our lab’s template for projects on the Open Science Framework (OSF) is located here1: https://osf.io/4w9sv.\nHere is a schematic depicting the overall process before and after writing a manuscript:"
   },
   {
     "objectID": "openScience.html#sec-data",
