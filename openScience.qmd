@@ -9,6 +9,9 @@ As such, all lab members are expected to conduct research transparently and to p
 This includes, but is not limited to, [pre- or co-registering](#sec-preregistration) studies, [sharing analysis scripts and data](#sec-sharing), using [version control](#sec-versionControl) (GitLab), submitting [preprints](https://psyarxiv.com) when submitting a manuscript to a journal, and providing support for other labs' attempts to replicate and reproduce our findings.
 Our lab's template for projects on the [Open Science Framework](https://osf.io) (OSF) is located here[^1]: <https://osf.io/4w9sv>.
 
+Here is a shcematic depicting the overall process before and after writing a manuscript:
+![](images/openScienceProcess.png)
+
 # Pre-Registration (or Co-Registration) {#sec-preregistration}
 
 There is a continuum of registration approaches.
