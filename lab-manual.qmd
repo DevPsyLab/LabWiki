@@ -585,8 +585,10 @@ If there are fewer days available than there are RAs, priority is given to newer
 **All lab members are expected to contribute to each discussion.**
 
 By Monday of the week the article will be discussed, the RA picking the article should post 1) the article PDF (the actual PDF file of the article, not the URL link to the PDF) and 2) the full APA-style reference in the `#lab-meetings` channel on Discord.
-For more information on how to find and access articles, see [here](honors.qmd#sec-articles).
-For more information on APA formatting, see the resources on the lab drive:
+
+- For more information on how to find and access articles, see [here](honors.qmd#sec-articles).
+- For more information on developing discussion questions, see the resources on the lab drive: `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\Reading and Critiquing Articles\`
+- For more information on APA formatting, see the resources on the lab drive:
 `\\lc-rs-store24.hpc.uiowa.edu\lss_itpetersen\Lab\Miscellaneous\Professional Development\General ProfDev Materials\APA Formatting\`
 
 The RA who is leading the discussion of the article should structure the discussion following the format below:
