@@ -94,7 +94,7 @@ To see a list of measures available for the School Readiness Study (organized by
 # Videos of Procedures
 
 To see example videos of our lab tasks and procedures, see here (you must register for and sign into [Databrary](https://nyu.databrary.org) to access):
-<https://nyu.databrary.org/volume/1559>
+<https://doi.org/10.17910/B7.1559> (<https://nyu.databrary.org/volume/1559>)
 
 # Data Dictionary
 
