@@ -26,7 +26,7 @@ In short, you can use the work as long as you cite it.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23398900.svg)](https://doi.org/10.5281/zenodo.23398900)
 
-Petersen, I. T. (2026). *Lab wiki for the Developmental Psychopathology Lab*. <https://devpsylab.github.io/LabWiki> <https://doi.org/10.5281/zenodo.23398900>
+Petersen, I. T. (2026). *Lab wiki for the Developmental Psychopathology Lab*. <https://devpsylab.github.io/LabWiki>; <https://doi.org/10.5281/zenodo.23398900>
 
 # Session Info
 
