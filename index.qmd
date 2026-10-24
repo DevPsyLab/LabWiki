@@ -2,7 +2,7 @@
 title: "Lab Wiki for the Developmental Psychopathology Lab"
 ---
 
-<u>Lab Contacts</u>
+# Lab Contacts {#sec-labContacts}
 
 **Principal Investigator**\
 [Dr. Isaac Petersen, Ph.D.](https://psychology.uiowa.edu/people/isaac-petersen)\
@@ -43,3 +43,7 @@ Iowa City, IA 52242
 - Facebook: <https://www.facebook.com/DevPsyLab>
 - Twitter: <https://twitter.com/devpsylab>
 - Instagram: <https://www.instagram.com/devpsylab>
+
+# Network Map of Lab Publications {#sec-labPublicationsNetworkMap}
+
+<iframe src="https://embed.kumu.io/9c2e2198063f971fa62003338d91d9aa" width="940" height="600" frameborder="0"></iframe>
