@@ -48,7 +48,7 @@ Iowa City, IA 52242
 
 ```{=html}
 <iframe
-  src="https://embed.kumu.io/23f6d7fb4a75cac188b4ac90f4630c0d"
+  src="https://embed.kumu.io/0756a6e5020756d41b3645becb149961"
   title="Network map of lab publications"
   width="100%"
   height="600"
