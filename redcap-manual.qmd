@@ -4,14 +4,15 @@ title: "REDCap Manual"
 
 # REDCap Data Management
 
-REDCap Support Contact: redcap@icts.uiowa.edu 
+REDCap Support Contact: [redcap@icts.uiowa.edu](mailto:redcap@icts.uiowa.edu) 
 
 REDCap also hosts virtual office hours.
 See [here](https://its.uiowa.edu/services/redcap-research-electric-data-capture) for schedule and additional information. 
 
 ## Updating instruments in REDCap {#sec-updates}
 
-1. Should you need to make any ***IMMEDIATE*** changes on RedCap, create those alterations and then notify Dr. Petersen to push changes. 
+- If you need to make any changes on REDCap, make those alterations and then notify Dr. Petersen to push changes.
+- If any changes you make would need to be approved by an administrator (e.g., if they would result in data loss), please let Dr. Petersen know (before any changes get submitted).
 
 ## Adding new RAs to REDCap/tasks {#sec-addPersonnel}
 
@@ -162,7 +163,7 @@ However, an instrument will not show up for entry until:
          - minutes (text box), italicized
             - Validation: integer (minimum 0; maximum 59)
 
-## Creating Variables  {#sec-creatingVariables}
+## Creating Variables {#sec-creatingVariables}
 
 - Variable names follow the lab conventions (measure_item): use abbreviated measure name, all lowercase, less than 26 characters
 - **Validation is used wherever possible**

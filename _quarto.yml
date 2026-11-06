@@ -62,10 +62,10 @@ website:
           href: openScience.qmd
         - text: Opportunities
           href: opportunities.qmd
-        - text: REDCap
-          href: redcap-manual.qmd
         - text: Qualtrics
           href: qualtrics-manual.qmd
+        - text: REDCap
+          href: redcap-manual.qmd
         - text: Remote Participation
           href: documentation-remote.qmd
         - text: ResearchMatch
