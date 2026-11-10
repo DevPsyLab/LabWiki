@@ -111,7 +111,7 @@ We want **all element types** to appear on the map.
 
 <details><summary>Code comments for Publication Network</summary>
 
-```r
+```css
 
 # The controls section is going to define all of the interactive controls of the map, including the filters and cluster connection buttons.
 
