@@ -54,6 +54,8 @@ website:
           href: https://devpsylab.github.io/DataAnalysis
         - text: Independent Projects and Honors Projects
           href: honors.qmd
+        - text: Kumu Network Mapping
+          href: kumu.qmd
         - text: Mediation and Moderation
           href: mediationModeration.qmd
         - text: Notion

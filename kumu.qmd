@@ -1,0 +1,367 @@
+---
+title: Kumu Network Mapping
+---
+
+# Introduction to Kumu (#sec-kumu-introduction)
+
+# Creating Kumu Project (#sec-kumu-createProject)
+
+**[Kumu Projects in the Wild](https://kumu.io/kumu/projects-in-the-wild#projects-in-the-wild)**
+
+## Creating Data File (#sec-kumu-createData)
+
+### Linking Data File to Kumu (#sec-kumu-linkData)
+
+## Basic Editor (#sec-kumu-basicEditor)
+
+### Map Overview Tab (#sec-kumu-overviewTab)
+
+### Setting the Legend (#sec-kumu-legend)
+
+### Running basic metrics (#sec-kumu-metrics)
+
+## Advanced Editor (#sec-kumu-advancedEditor)
+
+**Kumu Documentation: [Advanced Editor Hub](https://docs.kumu.io/overview/advanced-editor-hub)**
+
+### Controls (#sec-kumu-controls)
+
+**Kumu Documentation: [Controls](https://docs.kumu.io/guides/controls)**
+
+### Clustering (#sec-kumu-cluster)
+
+**Kumu Documentation: [Clustering](https://docs.kumu.io/guides/controls/cluster-control)**
+
+### Filtering (#sec-kumu-filter)
+
+**Kumu Documentation: [Filtering](https://docs.kumu.io/guides/controls/filter-control)**
+
+### Settings (#sec-kumu-settings)
+
+**Kumu Documentation: [@settings](https://docs.kumu.io/overview/advanced-editor-hub/settings-reference)**
+
+*Note:* Some settings change dynamically as an individual interacts with the map.
+For example, as you cluster or connect by different elements, the elements that appear in setting `cluster:` will change.
+
+### Adding Images (#sec-kumu-images)
+
+**Kumu Documentation: [Image controls](https://docs.kumu.io/guides/controls/image-control)**
+
+**Kumu Documentation: [Image Decorations](https://docs.kumu.io/guides/decorate/images)**
+
+### Decoration (#sec-kumu-decoration)
+
+For broad accessibility of the network map, pick element colors from color-blind friendly color palettes.
+Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/markdown.html#sec-links).
+
+**Kumu Documentation: [Color Legends](https://docs.kumu.io/guides/controls/color-legend-control)**
+
+**Kumu Documentation: [Icons](https://docs.kumu.io/guides/decorate/icons)**
+
+**Kumu Documentation: [Popovers](https://docs.kumu.io/guides/decorate/popovers)**
+
+### Titles (#sec-kumu-titles)
+
+**Kumu Documentation: [Titles](https://docs.kumu.io/guides/controls/title-control)**
+
+## Forking a Project (#sec-kumu-forkProject)
+
+## Distributing Kumu Project (#sec-kumu-distributeProject)
+
+**Kumu Documentation: [Share and Embed Maps](https://docs.kumu.io/guides/controls/title-control)**
+
+# Publication Network Maintenance (#sec-kumu-pubMap)
+
+**Elements:** The publications (i.e. each row of the dataset because there is only one value for "Type")
+
+**Type:** There is one type of element in the dataset, which are publications
+
+**Tags/Element Type** The columns that are used to categorize information about the elements, can contain multiple descriptors (i.e. method, theme)
+
+## Adding Column in linked data (#sec-kumu-pubAddColumn)
+
+1. Add the column in the main spreadsheet
+1. Refresh network map page
+1. Open the hamburger menu in the top left corner and go to `fields`
+1. Under Relevance > Element Types > Publication, click edit at the bottom of the list and select the added column titles
+1. [Re-run metrics](#sec-kumu-pubMetrics)
+
+## Adding Pub Type (#sec-kumu-pubAddPubType)
+
+1. Open advanced editor
+
+## Adding Filter Category (#sec-kumu-pubAddFilter)
+
+## Running Updated Metrics (#sec-kumu-pubMetrics)
+
+Once the kumu_publication_network google sheets has been updated, you will need to re-run the metrics that scale the elements according to their frequency in the dataset.
+
+1. Refresh the Kumu Map
+1. Select all button under `Connect by...`.
+We want **all element types** to appear on the map.
+1. Click the erlenmeyer flask icon in the bottom right corner that is labeled `Metrics`
+1. Click `Social Network Analysis`
+1. Choose `indegree` as the metric and click `Discover the Influencers`
+1. Now deselect all buttons under `Connect by...` so that the only the publication elements appear on the map
+1. Choose `indegree` and again click `Discover the Influencers`
+    1. This process resets the indegree value (i.e. how many connections between elements) to zero for the publications so that they have a standard element size.
+    The recalculated metrics for the other element types (method, theme, etc.) will be retained and rescaled accorting to the dataset updates.
+
+## Advanced editor code guide (#sec-kumu-pubCode)
+
+<details><summary>Code comments for Publication Network</summary>
+
+```r
+
+# The controls section is going to define all of the interactive controls of the map, including the filters and cluster connection buttons.
+
+@controls {
+  top { #Sets location of next function, text, etc.
+    title { #Sets the title of the map at the top. Important for accessibility!
+      value: "Developmental Psychopathology Lab Publication Network"; #the title
+      text-align: center; #title alignment
+      font-size: 30; #title size
+    }
+
+    filter { #sets a filter at the top of the page for publication type (which is a column in dataset)
+      target: element; #this is targeting the publications
+      by: "Publication Type"; #options for filtering by "Publication Type" column in the dataset
+      as: buttons; #Filter appears buttons instead of a dropdown
+      multiple: true; #can select multiple filters at once, i.e. book and book chapter both appear
+      default: show-all; #defaults to showing all of the publications types
+      font-weight: bold;
+      font-size: 15;
+      padding: 15; #adjusts spacing around the filter bar
+    }
+  }
+
+  bottom-right { #specify location for control is bottom right
+    image { #adds the devpsy logo
+      src: "https://developmental-psychopathology.lab.uiowa.edu/sites/developmental-psychopathology.lab.uiowa.edu/files/2022-07/Final%20Medium%20Line%20Logo%20Small.jpeg"; #this is the link to the logo on the lab website, update this link if that changes
+      height: 140;
+    }
+  }
+
+  top-left { #specify controls in the top left corner
+    search {} #search bar will appear in top left
+
+    text { #text header for filters
+      value: "Filter by..."; #text to appear on map
+      font-weight: bold;
+      font-size: 20;
+      padding: 0;
+    }
+
+    filter { #This will create a filter control
+      target: element; #element is each publication (because there is only one "Type" in the dataset)
+      by: "Theme"; #column to filter by from dataset
+      as: dropdown; #sets filter to a dropdown format
+      placeholder: "Theme"; #the text that appears on the filter
+      multiple: true; #allows for selecting multiple filter categories (tags)
+      default: show-all; #defaults to showing all themes in dataset
+      font-size: 15;
+      padding: 5; #helps create visual space between filters
+    }
+
+    filter {
+      target: element;
+      by: "Construct";
+      as: dropdown;
+      placeholder: "Construct";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+
+    filter {
+      target: element;
+      by: "Sample/Population";
+      as: dropdown;
+      placeholder: "Sample/Population";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+
+    filter {
+      target: element;
+      by: "Method";
+      as: dropdown;
+      placeholder: "Method";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+
+    filter {
+      target: element;
+      by: "Open Science";
+      as: dropdown;
+      placeholder: "Open Science";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+
+    filter {
+      target: element;
+      by: "Year";
+      as: dropdown;
+      placeholder: "Publication Year";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+
+    filter {
+      target: element;
+      by: "Student Author";
+      as: dropdown;
+      placeholder: "Student Author";
+      multiple: true;
+      default: show-all;
+      font-size: 15;
+      padding: 5;
+    }
+  }
+
+  bottom { #specifies that control is appearing at the bottom
+    text { #text header for connection cluster buttons
+      value: "Connect by..."; #text to appear on map
+      font-weight: bold;
+      font-size: 20;
+      padding: 0;
+    }
+
+    cluster { #this function will generate the dynamic connections between publications based on the specified columns below
+      by: "Theme", "Construct", "Open Science", "Sample/Population", "Method"; #specify the columns that will define the connections 
+      as: buttons; #appear as buttons
+      multiple: true; #allows you to connect by multiple columns (element types/tags), i.e. both theme and construct can appear
+      default: "Theme"; #sets the default connection to appear, can set to * or show-all for all clusters to appear by default
+      font-weight: bold;
+      font-size: 15;
+    }
+  }
+}
+
+#The settings are going to specify the default view settings of the map. Refer to Kumu's guide on the @settings reference to see available specification options.
+
+@settings {
+  element-size: 400; #this is a larger than default element size to help with accessible visibility
+  element-font-size: 400; #larger than defauly font size (under map bubbles) to help with accessible visibility
+  background-color: white; #map background is white
+  font-cutoff: 1;
+  layout-preset: hairball; #part of the force-directed layout (bouncy instead of a static layout)
+  layout-particle-charge: 4000; #repels elements from each other to create more visual space on the map
+  connection-length: 400; #forces longer connection lines to create visual space/avoid tight overlapped clusters
+  element-scale: scale("indegree", 0.5, 3); #this map is scaled by the indegree metric, which is specified here; can change the range of element sizes if you want the scale more/less visually drastic
+  template: 0;
+  connection-curvature: 0.25; #sets slight curve to gray connection lines
+  selection-color: red; #sets the colored ring that will appear on a selected element (default is red!)
+  cluster: "Theme"; #his will dynamically shift as you interact with the cluster buttons on the button, don't need to edit this line ever
+}
+
+#Sets the text box popup that appears when you hover over a publication. Intended to help with accessibility/visibility
+["element type"="Publication"] { #specify that popover is intended for the publications (i.e. all rows)
+  popover: "#### {{label}}"; #the text that pops up is the in-text citation (which is specified in the "label" column of the dataset); the #### sets it to fourth-level header size
+}
+
+#Specify the appearance of element types that are used to connect/filter publications 
+element["element type"="Method"] { #use element function to tweak specifics about the elements (here we specify how the method elements will appear)
+  icon: wrench; #select icon from standard css icon list
+  icon-color: white; #this is why the icon appears white
+  color: transparent; #removes the default circle around element so that we can add transparent shadow behind the icon below
+  border-width: 0;
+  shadow-color: #CC6677; #specifies to add a shadow in this color (choose color-blind friendly colors!)
+  shadow-opacity: 0.4; #set opacity of shadow
+  shadow-size: 1; #sets how big the shadow border around the icon, 1 is ideal
+}
+
+element["element type"="Construct"] {
+  icon: star;
+  icon-color: white;
+  color: transparent;
+  border-width: 0;
+  shadow-color: #C4451C;
+  shadow-opacity: 0.4;
+  shadow-size: 1;
+}
+
+element["element type"="Open Science"] {
+  icon: share-alt;
+  icon-color: white;
+  color: transparent;
+  border-width: 0;
+  shadow-color: grey;
+  shadow-opacity: 0.6;
+  shadow-size: 1;
+}
+
+element["element type"="Sample/Population"] {
+  icon: user;
+  icon-color: white;
+  color: transparent;
+  border-width: 0;
+  shadow-color: red;
+  shadow-opacity: 0.4;
+  shadow-size: 1;
+}
+
+element["element type"="Theme"] {
+  icon: comment;
+  icon-color: white;
+  color: transparent;
+  shadow-color: green;
+  shadow-opacity: 0.4;
+  shadow-size: 1;
+}
+
+#Specify that network connections lines are "undirected" so they have no arrows. Also area to specify width and color of connection lines (currently set to default)
+connection {
+  arrow-visibility: hidden; 
+  color: grey;
+  size: 6;
+}
+
+#Specify color of each type of publication (relevant for map appearance and the legend)
+/* Journal Publication */
+element["publication type"="journal publication"] {
+  color: #0072B2;
+}
+
+/* R Package */
+element["publication type"="r package"] {
+  color: #009E73;
+}
+
+/* Book Chapter */
+element["publication type"="book chapter"] {
+  color: #E69F00;
+}
+
+/* Book */
+element["publication type"="book"] {
+  color: #56B4E9;
+}
+
+/* Documentation */
+element["publication type"="documentation"] {
+  color: #D55E00;
+}
+
+#specify shadow ring around the publications that have a student author 
+/* Student Author */
+element["student author"="YES"] { #refers to the "student author" column in the dataset
+  shadow-color: #8a2be2;
+  shadow-opacity: 0.3;
+  shadow-size: 1.5;
+}
+```
+
+
+</details>
