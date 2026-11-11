@@ -2,54 +2,54 @@
 title: Kumu Network Mapping
 ---
 
-# Introduction to Kumu (#sec-kumu-introduction)
+# Introduction to Kumu {#sec-kumu-introduction}
 
-# Creating Kumu Project (#sec-kumu-createProject)
+# Creating Kumu Project {#sec-kumu-createProject}
 
 **[Kumu Projects in the Wild](https://kumu.io/kumu/projects-in-the-wild#projects-in-the-wild)**
 
-## Creating Data File (#sec-kumu-createData)
+## Creating Data File {#sec-kumu-createData}
 
-### Linking Data File to Kumu (#sec-kumu-linkData)
+### Linking Data File to Kumu {#sec-kumu-linkData}
 
-## Basic Editor (#sec-kumu-basicEditor)
+## Basic Editor {#sec-kumu-basicEditor}
 
-### Map Overview Tab (#sec-kumu-overviewTab)
+### Map Overview Tab {#sec-kumu-overviewTab}
 
-### Setting the Legend (#sec-kumu-legend)
+### Setting the Legend {#sec-kumu-legend}
 
-### Running basic metrics (#sec-kumu-metrics)
+### Running basic metrics {#sec-kumu-metrics}
 
-## Advanced Editor (#sec-kumu-advancedEditor)
+## Advanced Editor {#sec-kumu-advancedEditor}
 
 **Kumu Documentation: [Advanced Editor Hub](https://docs.kumu.io/overview/advanced-editor-hub)**
 
-### Controls (#sec-kumu-controls)
+### Controls {#sec-kumu-controls}
 
 **Kumu Documentation: [Controls](https://docs.kumu.io/guides/controls)**
 
-### Clustering (#sec-kumu-cluster)
+### Clustering {#sec-kumu-cluster}
 
 **Kumu Documentation: [Clustering](https://docs.kumu.io/guides/controls/cluster-control)**
 
-### Filtering (#sec-kumu-filter)
+### Filtering {#sec-kumu-filter}
 
 **Kumu Documentation: [Filtering](https://docs.kumu.io/guides/controls/filter-control)**
 
-### Settings (#sec-kumu-settings)
+### Settings {#sec-kumu-settings}
 
 **Kumu Documentation: [@settings](https://docs.kumu.io/overview/advanced-editor-hub/settings-reference)**
 
 *Note:* Some settings change dynamically as an individual interacts with the map.
 For example, as you cluster or connect by different elements, the elements that appear in setting `cluster:` will change.
 
-### Adding Images (#sec-kumu-images)
+### Adding Images {#sec-kumu-images}
 
 **Kumu Documentation: [Image controls](https://docs.kumu.io/guides/controls/image-control)**
 
 **Kumu Documentation: [Image Decorations](https://docs.kumu.io/guides/decorate/images)**
 
-### Decoration (#sec-kumu-decoration)
+### Decoration {#sec-kumu-decoration}
 
 For broad accessibility of the network map, pick element colors from color-blind friendly color palettes.
 Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/markdown.html#sec-links).
@@ -60,17 +60,17 @@ Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.g
 
 **Kumu Documentation: [Popovers](https://docs.kumu.io/guides/decorate/popovers)**
 
-### Titles (#sec-kumu-titles)
+### Titles {#sec-kumu-titles}
 
 **Kumu Documentation: [Titles](https://docs.kumu.io/guides/controls/title-control)**
 
-## Forking a Project (#sec-kumu-forkProject)
+## Forking a Project {#sec-kumu-forkProject}
 
-## Distributing Kumu Project (#sec-kumu-distributeProject)
+## Distributing Kumu Project {#sec-kumu-distributeProject}
 
 **Kumu Documentation: [Share and Embed Maps](https://docs.kumu.io/guides/controls/title-control)**
 
-# Publication Network Maintenance (#sec-kumu-pubMap)
+# Publication Network Maintenance {#sec-kumu-pubMap}
 
 **Elements:** The publications (i.e. each row of the dataset because there is only one value for "Type")
 
@@ -78,7 +78,7 @@ Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.g
 
 **Tags/Element Type** The columns that are used to categorize information about the elements, can contain multiple descriptors (i.e. method, theme)
 
-## Adding Column in linked data (#sec-kumu-pubAddColumn)
+## Adding Column in linked data {#sec-kumu-pubAddColumn}
 
 1. Add the column in the main spreadsheet
 1. Refresh network map page
@@ -86,13 +86,13 @@ Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.g
 1. Under Relevance > Element Types > Publication, click edit at the bottom of the list and select the added column titles
 1. [Re-run metrics](#sec-kumu-pubMetrics)
 
-## Adding Pub Type (#sec-kumu-pubAddPubType)
+## Adding Pub Type {#sec-kumu-pubAddPubType}
 
 1. Open advanced editor
 
-## Adding Filter Category (#sec-kumu-pubAddFilter)
+## Adding Filter Category {#sec-kumu-pubAddFilter}
 
-## Running Updated Metrics (#sec-kumu-pubMetrics)
+## Running Updated Metrics {#sec-kumu-pubMetrics}
 
 Once the kumu_publication_network google sheets has been updated, you will need to re-run the metrics that scale the elements according to their frequency in the dataset.
 
@@ -107,7 +107,7 @@ We want **all element types** to appear on the map.
     1. This process resets the indegree value (i.e. how many connections between elements) to zero for the publications so that they have a standard element size.
     The recalculated metrics for the other element types (method, theme, etc.) will be retained and rescaled according to the dataset updates.
 
-## Advanced editor code guide (#sec-kumu-pubCode)
+## Advanced editor code guide {#sec-kumu-pubCode}
 
 <details><summary>Code comments for Publication Network</summary>
 
