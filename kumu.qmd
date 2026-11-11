@@ -97,7 +97,7 @@ Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.g
 Once the kumu_publication_network google sheets has been updated, you will need to re-run the metrics that scale the elements according to their frequency in the dataset.
 
 1. Refresh the Kumu Map
-1. Select all button under `Connect by...`.
+1. Select all buttons under `Connect by...`.
 We want **all element types** to appear on the map.
 1. Click the erlenmeyer flask icon in the bottom right corner that is labeled `Metrics`
 1. Click `Social Network Analysis`
@@ -105,7 +105,7 @@ We want **all element types** to appear on the map.
 1. Now deselect all buttons under `Connect by...` so that the only the publication elements appear on the map
 1. Choose `indegree` and again click `Discover the Influencers`
     1. This process resets the indegree value (i.e. how many connections between elements) to zero for the publications so that they have a standard element size.
-    The recalculated metrics for the other element types (method, theme, etc.) will be retained and rescaled accorting to the dataset updates.
+    The recalculated metrics for the other element types (method, theme, etc.) will be retained and rescaled according to the dataset updates.
 
 ## Advanced editor code guide (#sec-kumu-pubCode)
 
