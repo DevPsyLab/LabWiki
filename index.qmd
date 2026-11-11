@@ -48,7 +48,7 @@ Iowa City, IA 52242
 
 ```{=html}
 <iframe
-  src="https://embed.kumu.io/6010a0cd4fd6432ff5b086585f1580ab?scroll=1"
+  src="https://embed.kumu.io/1ffd20503b45c901674237701f54fd1a?scroll=1"
   title="Network map of lab publications"
   width="100%"
   height="600"
@@ -57,4 +57,4 @@ Iowa City, IA 52242
 </iframe>
 ```
 
-View the publication map in [full screen](https://embed.kumu.io/6010a0cd4fd6432ff5b086585f1580ab#devpsy-publication-map).
+View the publication map in [full screen](https://embed.kumu.io/1ffd20503b45c901674237701f54fd1a).
