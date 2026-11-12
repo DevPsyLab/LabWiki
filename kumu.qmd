@@ -52,7 +52,7 @@ For example, as you cluster or connect by different elements, the elements that 
 ### Decoration {#sec-kumu-decoration}
 
 For broad accessibility of the network map, pick element colors from color-blind friendly color palettes.
-Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/markdown.html#sec-links).
+Multiple palettes can be found in the [Data Analysis Guides](https://devpsylab.github.io/DataAnalysis/figures.html#sec-colorPalettes).
 
 **Kumu Documentation: [Color Legends](https://docs.kumu.io/guides/controls/color-legend-control)**
 
